@@ -1,0 +1,2117 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head class="at-element-marker">
+  <title>NetApp HCI でアラート監視を設定する</title>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge,chrome=1">
+  <meta http-equiv="language" content="en">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta property="og:title" content="NetApp HCI でアラート監視を設定する" />
+	<meta property="og:type" content="website" />
+	<meta property="og:url" content="https://docs.netapp.com/ja-jp/hci19/docs/task_mnode_enable_alerts.html" />
+	<meta property="og:description" content="NetApp HCI システムでアラートを監視するように設定を行うことができます。" />
+  <meta property="og:image" content="https://docs.netapp.com/ja-jp/hci19/images/logo-tophat-social.png" />
+  <meta property="og:image:alt" content="NetApp Logo" />
+  <meta name="format-detection" content="telephone=no">
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta http-equiv="encoding" content="utf-8">
+  <meta http-equiv="nss-type" content="Product Documentation"/>
+  <meta http-equiv="nss-subtype" content="User Guide"/><meta name="description" content="NetApp HCI システムでアラートを監視するように設定を行うことができます。">
+  <meta name="keywords" content=" netapp, element, management node, mnode, ui, alerts, alert monitoring"><!-- Icons -->
+  <link rel="icon" href="/ja-jp/hci19/images/favicon.ico" type="image/x-icon">
+
+  <!-- RSS Feed --><!-- CSS Definitions: NetApp CSS should be defined after generic css -->
+
+  <!-- Elastic Search -->
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/searchkit/0.10.0/theme.css">
+
+  <!-- Controls AsciiDoctor Admonition Blocks -->
+  <link rel="stylesheet" type="text/css" href="/ja-jp/hci19/css/font-awesome.min.css">
+
+  <!-- Controls the shadow effect for search dropdown menu -->
+  <link rel="stylesheet" href="/ja-jp/hci19/css/boxshadowproperties.css">
+
+  <!-- NetApp CSS controls the technical content -->
+  <link rel="stylesheet" type="text/css" href="/ja-jp/hci19/css/netapp.css">
+
+  <!-- WWW CSS Content -->
+  <link rel="stylesheet" type="text/css" href="/ja-jp/hci19/css/www-luci-dotcom.min.css">
+  <link rel="stylesheet" type="text/css" href="/ja-jp/hci19/css/www-netapp-dotcom.css">
+  <link rel="stylesheet" href="/ja-jp/hci19/css/www-netapp-library-critical.min.css" media="all" >
+  <link rel="stylesheet" href="/ja-jp/hci19/css/www-netapp-library-non-critical.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <link rel="stylesheet" href="/ja-jp/hci19/css/www-netapp-library-global-header-footer.min.css">
+
+  <!-- NetApp IE Customizations -->
+  <link rel="stylesheet" href='/ja-jp/hci19/css/na-utility.css' type='text/css'>
+  <link rel="stylesheet" href='/ja-jp/hci19/css/na-sidebar.css' type='text/css'>
+  <link rel='stylesheet' href='/ja-jp/hci19/css/clouddocs.css' type='text/css'>
+  <link rel='stylesheet' href='/ja-jp/hci19/css/custom-dropdown.css' type='text/css'>
+  <link rel='stylesheet' href='/ja-jp/hci19/css/na-pagenav.css' type='text/css'>
+
+  
+  <link rel="stylesheet" href="/ja-jp/hci19/css/landing-page.css" type="text/css">
+  <link rel="stylesheet" href="/ja-jp/hci19/css/tabbed-blocks.css" type="text/css">
+  <!-- Canonical url -->
+  <link rel='stylesheet' href='/ja-jp/hci19/css/na-feature.css' type='text/css'><!-- Top level site integrations --><script>
+    if (document.location.hostname === "docs.netapp.com") {
+      var head = document.getElementsByTagName('head')[0];
+      var onetrustConsent = document.createElement("script");
+      onetrustConsent.type = "text/javascript";
+      onetrustConsent.src = "https://cdn.cookielaw.org/consent/72570c5c-fe30-465f-b0e0-b77f7fb4ae34/OtAutoBlock.js";
+      head.appendChild(onetrustConsent);
+
+      var onetrustScript = document.createElement("script");
+      onetrustScript.type = "text/javascript";
+      onetrustScript.src = "https://cdn.cookielaw.org/scripttemplates/otSDKStub.js";
+      onetrustScript.charset = "UTF-8";
+      onetrustScript.dataset.documentLanguage = "true";
+      onetrustScript.dataset.domainScript = "72570c5c-fe30-465f-b0e0-b77f7fb4ae34";
+      head.appendChild(onetrustScript);
+    }
+
+    function OptanonWrapper() { }
+
+    if (document.location.hostname === "docs.netapp.com") {
+      var adobe = document.createElement("script");
+      adobe.type = "text/plain";
+      adobe.className = "optanon-category-C0002";
+      adobe.src = "//assets.adobedtm.com/60287eadf1ee/c284da483c83/launch-e9ff3acac59f.min.js";
+      head.appendChild(adobe);
+
+      var google = document.createElement("script");
+      google.type = "text/plain";
+      google.className = "optanon-category-C0002";
+      google.src = "https://www.googletagmanager.com/gtag/js?id=UA-81697994-3";
+      head.appendChild(google);
+
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'UA-81697994-3');
+    }
+  </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
+
+  <!-- Used for Product Family Page Sidebar Visibility --><!-- Used to import Promise for IE. Required for SearchKit -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bluebird/3.3.5/bluebird.min.js"></script><script src='/ja-jp/hci19/js/na-search.js'></script><script src='/ja-jp/hci19/js/na-pagenav.js'></script><link rel='stylesheet' href='/ja-jp/hci19/css/prism.css' type='text/css'>
+  <link rel='stylesheet' href='/ja-jp/hci19/css/prism-netapp.css' type='text/css'>
+
+
+  <script src='/ja-jp/hci19/js/na-utility.js'></script>
+  <script src='/ja-jp/hci19/js/clouddocs.js'></script>
+  <script src='/ja-jp/hci19/js/jquery.navgoco.min.js'></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+  <script src='/ja-jp/hci19/js/toc.js'></script>
+  <script src='/ja-jp/hci19/js/customscripts.js'></script><script>
+      $(document).ready(function() {
+          
+          var collapseOnInit = true;
+          
+
+          var navSettings = {
+              "caretHtml": '',
+              "accordion": collapseOnInit,
+              "openClass": 'active', // open
+              "save": false, // leave false or nav highlighting doesn't work right
+              "cookie": {
+                  "name": 'navgoco',
+                  "expires": false,
+                  "path": '/'
+              },
+              "slide": {
+                  "duration": 400,
+                  "easing": 'swing'
+              }
+          };
+
+          // Initialize navgoco with default options
+          $("#mysidebar").navgoco(navSettings);
+          
+
+          $("#collapseAll").click(function(e) {
+              e.preventDefault();
+              $("#mysidebar").navgoco('toggle', false);
+          });
+
+          $("#expandAll").click(function(e) {
+              e.preventDefault();
+              $("#mysidebar").navgoco('toggle', true);
+          });
+
+      });
+
+  </script>
+  <script>
+      $(document).ready(function() {
+          $("#tg-sb-link").click(function() {
+              $("#tg-sb-sidebar").toggle();
+              $("#tg-sb-content").toggleClass('col-md-9');
+              $("#tg-sb-content").toggleClass('col-md-12');
+              $("#tg-sb-icon").toggleClass('fa-toggle-on');
+              $("#tg-sb-icon").toggleClass('fa-toggle-off');
+          });
+      });
+  </script>
+  <script src='/ja-jp/hci19/js/custom-dropdown.js'></script>
+  <script src='/ja-jp/hci19/js/FileSaver.min.js'></script>
+  <script src='/ja-jp/hci19/js/jszip-utils.min.js'></script>
+  <script src='/ja-jp/hci19/js/jszip.min.js'></script>
+  <script src='/ja-jp/hci19/js/pdf-ux.js'></script>
+</head>
+
+
+  <body class role="document" data-flavor="">
+    <div id="page" class="n-off-canvas-menu">
+      <div class="n-off-canvas-menu__menu"><!--TODO: Add offcanvas code --></div>
+      <div class="n-off-canvas-menu__content-wrap">
+        <header class="site-header" id="banner">
+  
+  <!-- Start Page Toolbar -->
+  
+  <div class="page-nav-toolbar"><div class="page-nav-contribute"><a target="_blank" href="https://github.com/NetAppDocs/hci19/issues/new?body=Page%3A%20[NetApp HCI でアラート監視を設定する](https://docs.netapp.com/ja-jp/hci19/docs/task_mnode_enable_alerts.html)" class="page-nav-contribute-link" role="button"><img src="/ja-jp/hci19/images/discuss-sm.svg" class="github-icon" />ドキュメントの変更をリクエスト</a><a target="_blank" href="https://github.com/NetAppDocs/hci19/blob/main/docs/task_mnode_enable_alerts.adoc" class="page-nav-contribute-link" role="button"><img src="/ja-jp/hci19/images/edit-sm.svg" class="github-icon" />GitHub で編集</a><a target="_blank" href="https://docs.netapp.com/us-en/contribute/" class="page-nav-contribute-link"  ><img src="/ja-jp/hci19/images/article-sm.svg" class="github-icon" />寄稿者向けガイド</a></div>
+    <div class="page-nav-container">
+      <nav class="page-nav-fixed">
+        <div class="page-nav-title">このページ</div>
+        <div class="page-nav-links">
+          <ul class="page-nav-inner" id="page-menu"></ul>
+        </div>
+      </nav>
+    </div>
+  </div>
+  
+  
+  <!-- Start top_hat -->
+  <div class="n-top-hat">
+    <div class="n-container">
+      <div class="n-top-hat__cross-property-nav">
+        <ul class="n-top-hat__list">
+          <li class="n-top-hat__list-item">
+            <a href="https://www.netapp.com/products-a-z/" class="n-top-hat__link">製品とソリューション</a>
+          </li>
+          <li class="n-top-hat__list-item">
+            <a href="https://www.netapp.com/support-and-training/netapp-university/" class="n-top-hat__link">サポートとトレーニング</a>
+          </li>
+          <li class="n-top-hat__list-item">
+            <a href="https://cloud.netapp.com" class="n-top-hat__link">Cloud Central</a>
+          </li>
+          <li class="n-top-hat__list-item">
+            <a href="https://community.netapp.com/" class="n-top-hat__link">コミュニティ</a>
+          </li>
+          <li class="n-top-hat__list-item">
+            <a href="https://blog.netapp.com/" class="n-top-hat__link">ブログ</a>
+          </li>
+          <li class="n-top-hat__list-item">
+            <a href="https://customers.netapp.com/en/" class="n-top-hat__link">ユーザ事例</a>
+          </li>
+          <li class="n-top-hat__list-item">
+            <a href="https://www.netapp.com/us/contact-us/index.aspx" target="_self" class="n-top-hat__link" data-ntap-ui="contact-us">お問い合わせ</a>
+          </li>
+        </ul>
+      </div>
+      <div class="n-top-hat__utils">
+        <ul class="n-top-hat__list">
+          <li class="n-top-hat__list-item">
+            <a href="https://www.netapp.com/us/contact-us/index.aspx" target="_self" class="n-top-hat__link" data-ntap-ui="contact-us">お問い合わせ</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <!-- End top_hat -->
+
+  <!-- Start property bar -->
+  <style>
+    .n-property-navigation-bar__menus--desktop-experience .n-menu--mega__default-content__heading span {
+    color: #34B0FF;
+    }
+  </style>
+  <div class="n-property-bar " data-ntap-ui="sticky-nav">
+    <div class="n-property-bar__inner-wrap">
+      <div class="n-property-bar__menu-toggle">
+        <a href="#" class="n-property-bar__menu-toggle-link">
+          <span class="n-property-bar__menu-toggle-text">Menu</span>
+          <svg class="n-icon-bars n-property-bar__menu-toggle-icon" aria-labelledby="title">
+            <title>bars</title>
+            <use xlink:href="/ja-jp/hci19/common/svg/sprite.svg#bars"></use>
+          </svg>
+        </a>
+      </div>
+      <div class="n-property-bar__property-mark ">
+        <a href="https://www.netapp.com" class="n-property-bar__property-link">
+          <div class="n-property-bar__logo">
+            <svg class="n-icon-netapp-mark n-icon-netapp-mark n-property-bar__netapp-mark-icon" aria-labelledby="title">
+              <title>netapp-mark</title>
+              <use xlink:href="/ja-jp/hci19/common/svg/sprite.svg#netapp-mark"></use>
+            </svg>
+            <svg class="n-icon-netapp-logo n-property-bar__logo-svg" aria-labelledby="title">
+              <title>netapp-logo</title>
+              <use xlink:href="/ja-jp/hci19/common/svg/sprite.svg#netapp-logo"></use>
+            </svg>
+          </div>
+        </a>
+      </div>
+
+      
+      <div class="search-property-bar">
+        <div id="search-demo-container" class="searchbox n-property-bar__search">
+          <div id="react-search" 
+          data-search-html="/ja-jp/hci19/search.html"
+          data-type="widget" 
+          data-placeholder="ドキュメントを検索" 
+          data-no-results-found="{query}に該当する結果はありません" 
+          data-did-you-mean="{suggestion} を検索" 
+          data-no-results-found-did-you-mean="{query} に該当する結果はありません。{suggestion} の間違いではありませんか?" 
+          data-results-found="{hitCount} 件見つかりました"  
+          data-sk-es-pf-indexes=""
+          data-flavor=""></div>
+          <button class="n-property-bar__search-toggle-button" type="button">
+            <svg class="n-icon-search n-property-bar__search-toggle-button-icon" aria-labelledby="title">
+              <title>search</title>
+              <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/ja-jp/hci19/common/svg/sprite.svg#search"></use>
+            </svg>
+          </button>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+  <div class="n-property-bar__toolbar">
+    <!-- Start Language Selector --><div id="ie-i18n" class="n-property-bar__lang-selector">
+      <div id="ie-i18n-menu">
+      <span class="ie-i18n-lang">日本語</span>
+        <button class="ie-i18n-icon-container" type="button">
+          <svg class="n-globe__icon" aria-labelledby="title">
+            <title>globe</title>
+            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/ja-jp/hci19/common/svg/sprite.svg#globe"></use>
+          </svg>
+        </button>
+      </div>
+      <div id="n-property-navigation-bar__menu--language-selector" class="ie-i18n-results-container n-menu n-menu--v3 n-menu--is-active" style="display: none;">
+        <div class="n-language-selector-menu">
+          <ul class="n-menu__list">
+            <li class="n-menu__list-column">
+              <ul class="n-menu__list"><li class="n-menu__list-item n-menu__list-item--level-1">
+                  <a href="https://docs.netapp.com/us-en/hci19/docs/task_mnode_enable_alerts.html" class="n-menu__header-text"><span translate="no" class="notranslate">English</span></a>
+                </li><li class="n-menu__list-item n-menu__list-item--level-1">
+                  <a href="https://docs.netapp.com/ja-jp/hci19/docs/task_mnode_enable_alerts.html" class="n-menu__header-text"><span translate="no" class="notranslate">日本語</span></a>
+                </li><li class="n-menu__list-item n-menu__list-item--level-1">
+                  <a href="https://docs.netapp.com/ko-kr/hci19/docs/task_mnode_enable_alerts.html" class="n-menu__header-text"><span translate="no" class="notranslate">한국어</span></a>
+                </li><li class="n-menu__list-item n-menu__list-item--level-1">
+                  <a href="https://docs.netapp.com/zh-cn/hci19/docs/task_mnode_enable_alerts.html" class="n-menu__header-text"><span translate="no" class="notranslate">简体中文</span></a>
+                </li><li class="n-menu__list-item n-menu__list-item--level-1">
+                  <a href="https://docs.netapp.com/zh-tw/hci19/docs/task_mnode_enable_alerts.html" class="n-menu__header-text"><span translate="no" class="notranslate">繁體中文</span></a>
+                </li></ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div><!-- End Language Selector -->
+
+    <div class="n-property-bar__cta"></div>
+  </div>
+  <script>
+    $(function(){
+        var currentLocalization = $('html').attr('lang');
+
+        var localizationsDictionary = {
+            "en-CA" : "https://www.netapp.com/search/index.aspx?for_cr=canada&",
+            "en-IN" : "https://www.netapp.com/search/index.aspx?for_cr=india&",
+            "nl-NL" : "https://www.netapp.com/search/index.aspx?for_cr=netherlands&",
+            "ru-RU" : "https://www.netapp.com/search/index.aspx?for_cr=russia&",
+            "sv-SE" : "https://www.netapp.com/search/index.aspx?for_cr=sweden&",
+            "it-IT" : "https://www.netapp.com/search/index.aspx?for_cr=italy&",
+            "he-IL" : "https://www.netapp.com/search/index.aspx?for_cr=israel&",
+            "ko-KR" : "https://www.netapp.com/search/index.aspx?for_cr=korea&",
+            "zh-TW" : "https://www.netapp.com/search/index.aspx?for_cr=taiwan&",
+            "en-GB" : "https://www.netapp.com/search/index.aspx?for_cr=unitedkingdom&",
+            "en-SG" : "https://www.netapp.com/search/index.aspx?for_cr=asean&",
+            "en-AU" : "https://www.netapp.com/search/index.aspx?for_cr=australia&",
+            "pt-BR" : "https://www.netapp.com/search/index.aspx?for_cr=brasil&",
+            "de-CH" : "https://www.netapp.com/search/index.aspx?for_cr=switzerland&",
+            "es-MX" : "https://www.netapp.com/search/index.aspx?for_cr=mexico&"
+        };
+
+        if($('html').hasClass('ntap-whitelisted') && localizationsDictionary.hasOwnProperty(currentLocalization)) {
+            $('.n-property-bar__property-link').attr('href', '/');
+        }
+    });
+  </script>
+  <!-- End property bar -->
+</header>
+
+
+        <main id="n-main-content" class="n-main-content">
+          <!-- Start Documentation Content -->
+<div class="ie-main">
+  <!-- Sidebar Column -->
+  
+  <div class="col-md-3" id="sidebar-height">
+      <div class="n-pdf-header">
+  <a id="toggleButtonPdf" class="n-pdf-button" type="button">
+    <img src="/ja-jp/hci19/images/pdf.png" width="16" height="16"/>利用可能なPDF<span>
+    </span>
+  </a>
+</div>
+<div class="n-pdf-body-container">
+  <ul id="toggleContainerPdf" class="n-pdf-body" style="display:none;"><li class="pdf-ux-container">
+        
+        
+        
+        <a target="_blank" href="/ja-jp/hci19/pdfs/fullsite-sidebar/NetApp_HCI_のドキュメント.pdf" >
+          <img src="/ja-jp/hci19/images/pdf.png" width="16" height="16"/>このドキュメントサイトのPDF</a>
+
+
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" 
+            
+              href="/ja-jp/hci19/pdfs/sidebar/リリースノート.pdf" 
+            
+          >
+            <img src="/ja-jp/hci19/images/pdf.png" width="16" height="16"/>
+            リリースノート
+          </a>
+          
+
+
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" 
+            
+              href="/ja-jp/hci19/pdfs/sidebar/概念.pdf" 
+            
+          >
+            <img src="/ja-jp/hci19/images/pdf.png" width="16" height="16"/>
+            概念
+          </a>
+          
+
+
+
+
+
+
+
+
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" 
+            
+              href="/ja-jp/hci19/pdfs/sidebar/ストレージ.pdf" 
+            
+          >
+            <img src="/ja-jp/hci19/images/pdf.png" width="16" height="16"/>
+            ストレージ
+          </a>
+          
+
+
+
+
+
+
+
+
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+
+
+
+
+
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" 
+            
+              href="/ja-jp/hci19/pdfs/sidebar/要件と導入前のタスク.pdf" 
+            
+          >
+            <img src="/ja-jp/hci19/images/pdf.png" width="16" height="16"/>
+            要件と導入前のタスク
+          </a>
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" 
+            
+              href="/ja-jp/hci19/pdfs/sidebar/ネットワーク構成_.pdf" 
+            
+          >
+            <img src="/ja-jp/hci19/images/pdf.png" width="16" height="16"/>
+            ネットワーク構成：
+          </a>
+          
+
+
+
+
+
+
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+
+
+
+
+
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" 
+            
+              href="/ja-jp/hci19/pdfs/sidebar/NetApp_HCI_の利用を開始しましょう.pdf" 
+            
+          >
+            <img src="/ja-jp/hci19/images/pdf.png" width="16" height="16"/>
+            NetApp HCI の利用を開始しましょう
+          </a>
+          
+
+
+
+
+
+
+
+
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" 
+            
+              href="/ja-jp/hci19/pdfs/sidebar/NetApp_HCI_を導入します.pdf" 
+            
+          >
+            <img src="/ja-jp/hci19/images/pdf.png" width="16" height="16"/>
+            NetApp HCI を導入します
+          </a>
+          
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" 
+            
+              href="/ja-jp/hci19/pdfs/sidebar/NetApp_Deployment_Engine_にアクセスします.pdf" 
+            
+          >
+            <img src="/ja-jp/hci19/images/pdf.png" width="16" height="16"/>
+            NetApp Deployment Engine にアクセスします
+          </a>
+          
+
+
+
+
+
+
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" 
+            
+              href="/ja-jp/hci19/pdfs/sidebar/VMware_vSphere_を設定します.pdf" 
+            
+          >
+            <img src="/ja-jp/hci19/images/pdf.png" width="16" height="16"/>
+            VMware vSphere を設定します
+          </a>
+          
+
+
+
+
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" 
+            
+              href="/ja-jp/hci19/pdfs/sidebar/在庫の選択.pdf" 
+            
+          >
+            <img src="/ja-jp/hci19/images/pdf.png" width="16" height="16"/>
+            在庫の選択
+          </a>
+          
+
+
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" 
+            
+              href="/ja-jp/hci19/pdfs/sidebar/導入後のタスク.pdf" 
+            
+          >
+            <img src="/ja-jp/hci19/images/pdf.png" width="16" height="16"/>
+            導入後のタスク
+          </a>
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" 
+            
+              href="/ja-jp/hci19/pdfs/sidebar/NetApp_HCI_を管理します.pdf" 
+            
+          >
+            <img src="/ja-jp/hci19/images/pdf.png" width="16" height="16"/>
+            NetApp HCI を管理します
+          </a>
+          
+
+
+
+
+
+
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" 
+            
+              href="/ja-jp/hci19/pdfs/sidebar/NetApp_HCI_ストレージを管理します.pdf" 
+            
+          >
+            <img src="/ja-jp/hci19/images/pdf.png" width="16" height="16"/>
+            NetApp HCI ストレージを管理します
+          </a>
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" 
+            
+              href="/ja-jp/hci19/pdfs/sidebar/管理ノードを操作します.pdf" 
+            
+          >
+            <img src="/ja-jp/hci19/images/pdf.png" width="16" height="16"/>
+            管理ノードを操作します
+          </a>
+          
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" 
+            
+              href="/ja-jp/hci19/pdfs/sidebar/管理ノードをインストールまたはリカバリします.pdf" 
+            
+          >
+            <img src="/ja-jp/hci19/images/pdf.png" width="16" height="16"/>
+            管理ノードをインストールまたはリカバリします
+          </a>
+          
+
+
+
+
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" 
+            
+              href="/ja-jp/hci19/pdfs/sidebar/管理ノード_UI_の操作.pdf" 
+            
+          >
+            <img src="/ja-jp/hci19/images/pdf.png" width="16" height="16"/>
+            管理ノード UI の操作
+          </a>
+          
+
+
+    <ul class="subfolders" style="display:none;"><li class="active pdf-hide">
+  <a target="_blank" href="/ja-jp/hci19/pdfs/pages/docs/task_mnode_enable_alerts.pdf" >
+    <img src="/ja-jp/hci19/images/pdf.png" width="16" height="16"/>
+    PDF of this page
+  </a>
+</li>
+
+</ul>
+  
+
+
+
+
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" 
+            
+              href="/ja-jp/hci19/pdfs/sidebar/管理ノード_REST_API_の操作.pdf" 
+            
+          >
+            <img src="/ja-jp/hci19/images/pdf.png" width="16" height="16"/>
+            管理ノード REST API の操作
+          </a>
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" 
+            
+              href="/ja-jp/hci19/pdfs/sidebar/サポート接続を管理します.pdf" 
+            
+          >
+            <img src="/ja-jp/hci19/images/pdf.png" width="16" height="16"/>
+            サポート接続を管理します
+          </a>
+          
+
+
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" 
+            
+              href="/ja-jp/hci19/pdfs/sidebar/NetApp_HCI_システムの電源をオフまたはオンにします.pdf" 
+            
+          >
+            <img src="/ja-jp/hci19/images/pdf.png" width="16" height="16"/>
+            NetApp HCI システムの電源をオフまたはオンにします
+          </a>
+          
+
+
+
+
+
+
+
+
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" 
+            
+              href="/ja-jp/hci19/pdfs/sidebar/NetApp_Hybrid_Cloud_Control_を使用して_NetApp_HCI_システムを監視します.pdf" 
+            
+          >
+            <img src="/ja-jp/hci19/images/pdf.png" width="16" height="16"/>
+            NetApp Hybrid Cloud Control を使用して NetApp HCI システムを監視します
+          </a>
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" 
+            
+              href="/ja-jp/hci19/pdfs/sidebar/NetApp_HCI_システムのバージョン_1_9_または_1_9P1_をアップグレードします.pdf" 
+            
+          >
+            <img src="/ja-jp/hci19/images/pdf.png" width="16" height="16"/>
+            NetApp HCI システムのバージョン 1.9 または 1.9P1 をアップグレードします
+          </a>
+          
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" 
+            
+              href="/ja-jp/hci19/pdfs/sidebar/システムのアップグレード手順.pdf" 
+            
+          >
+            <img src="/ja-jp/hci19/images/pdf.png" width="16" height="16"/>
+            システムのアップグレード手順
+          </a>
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" 
+            
+              href="/ja-jp/hci19/pdfs/sidebar/NetApp_HCI_システムを拡張します.pdf" 
+            
+          >
+            <img src="/ja-jp/hci19/images/pdf.png" width="16" height="16"/>
+            NetApp HCI システムを拡張します
+          </a>
+          
+
+
+
+
+
+
+
+
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" 
+            
+              href="/ja-jp/hci19/pdfs/sidebar/NetApp_HCI_で_Rancher_を使用します.pdf" 
+            
+          >
+            <img src="/ja-jp/hci19/images/pdf.png" width="16" height="16"/>
+            NetApp HCI で Rancher を使用します
+          </a>
+          
+
+
+
+
+
+
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" 
+            
+              href="/ja-jp/hci19/pdfs/sidebar/導入後のタスク.pdf" 
+            
+          >
+            <img src="/ja-jp/hci19/images/pdf.png" width="16" height="16"/>
+            導入後のタスク
+          </a>
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" 
+            
+              href="/ja-jp/hci19/pdfs/sidebar/H_シリーズハードウェアのメンテナンス.pdf" 
+            
+          >
+            <img src="/ja-jp/hci19/images/pdf.png" width="16" height="16"/>
+            H シリーズハードウェアのメンテナンス
+          </a>
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+
+
+
+</li></ul>
+  <div class="zip-pdf-link-container" style="display: none;">   
+    <a href="#" id="zipPdf">
+      <img src="/ja-jp/hci19/images/pdf-zip.png" width="16" height="16"/>
+      <pre>個別のPDFドキュメントのコレクション<span class="zip-size"></span></pre>
+    </a><div id="zip-link-popup" class="hide">
+    <div class="inner-modal">
+        <div class="downloading-progress">
+            <div class="spinner"></div>
+            <h1>Creating your file...</h1>
+            <div>This may take a few minutes. Thanks for your patience.</div>
+            <button class="cancel-download-btn" type="button">Cancel</button>
+        </div>
+        <div class="download-complete hide">
+            <div class="done-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M20.285 2l-11.285 11.567-5.286-5.011-3.714 3.716 9 8.728 15-15.285z"/></svg>
+            </div>
+            <div>Your file is ready</div>
+            <button class="cancel-download-btn" type="button">OK</button>
+        </div>
+    </div>
+</div>
+<script>
+    $(".cancel-download-btn").click(function(){
+        $("#zip-link-popup").addClass("hide");
+        $("#zip-link-popup .downloading-progress").removeClass("hide");
+        $("#zip-link-popup .download-complete").addClass("hide");
+    });
+</script></div>
+</div>
+<script>
+  $("#toggleContainerPdf li.active:last-child").parents('ul.subfolders').toggle('display');
+  $("#toggleButtonPdf").click(function () {
+    $("#toggleContainerPdf").toggle('display');
+    $(".n-pdf-body-container .zip-pdf-link-container").toggle('display');
+  });
+</script><div class="sidebar-nav-container">
+  <ul id="mysidebar" class="nav"><li class=" "><a class="na-navbar-padding" href="/ja-jp/hci19/index.html">
+        NetApp HCI のドキュメント
+      </a></li><li class=" "><a class="na-navbar-padding" href="https://docs.netapp.com/us-en/hci-solutions/index.html">
+        NetApp HCI ソリューション
+      </a></li><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> リリースノート</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/ja-jp/hci19/docs/rn_whatsnew.html">
+        NetApp HCI の新機能
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/hci19/docs/rn_relatedrn.html">
+        その他のリリース情報
+      </a></li></ul></li><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> 概念</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/ja-jp/hci19/docs/concept_hci_product_overview.html">
+        製品の概要
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/hci19/docs/concept_cg_hci_accounts.html">
+        アカウント
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/hci19/docs/concept_hci_dataprotection.html">
+        データ保護
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/hci19/docs/concept_hci_clusters.html">
+        クラスタ
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/hci19/docs/concept_hci_nodes.html">
+        ノード
+      </a></li><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> ストレージ</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/ja-jp/hci19/docs/concept_hci_storage_maintenance_mode.html">
+        メンテナンスモード
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/hci19/docs/concept_hci_volumes.html">
+        個のボリューム
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/hci19/docs/concept_hci_volume_access_groups.html">
+        ボリュームアクセスグループ
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/hci19/docs/concept_hci_initiators.html">
+        イニシエータ
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/hci19/docs/concept_hcc_custom_protection_domains.html">
+        カスタムの保護ドメイン
+      </a></li></ul></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/hci19/docs/concept_cg_hci_licensing.html">
+        ライセンス
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/hci19/docs/reference_hcc_config_maximums.html">
+        NetApp Hybrid Cloud Control の最大構成数
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/hci19/docs/concept_cg_hci_security.html">
+        セキュリティ
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/hci19/docs/concept_hci_performance.html">
+        パフォーマンス
+      </a></li></ul></li><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> 要件と導入前のタスク</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/ja-jp/hci19/docs/hci_prereqs_overview.html">
+        NetApp HCI 導入の要件
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/hci19/docs/hci_prereqs_management_node.html">
+        管理ノードの要件
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/hci19/docs/hci_prereqs_required_network_ports.html">
+        ネットワークポートの要件
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/hci19/docs/hci_prereqs_network_switch.html">
+        ネットワークとスイッチの要件
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/hci19/docs/hci_prereqs_network_cables.html">
+        ネットワークケーブルの要件
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/hci19/docs/hci_prereqs_ip_address.html">
+        IP アドレスの要件
+      </a></li><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> ネットワーク構成：</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/ja-jp/hci19/docs/hci_prereqs_network_configuration.html">
+        ネットワーク構成オプションの概要
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/hci19/docs/hci_prereqs_network_configuration_option_A.html">
+        ネットワーク構成オプション A
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/hci19/docs/hci_prereqs_network_configuration_option_B.html">
+        ネットワーク構成オプション B
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/hci19/docs/hci_prereqs_network_configuration_option_C.html">
+        ネットワーク構成オプション C
+      </a></li></ul></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/hci19/docs/hci_prereqs_timekeeping.html">
+        DNS とタイムキーパー機能の要件
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/hci19/docs/hci_prereqs_environmental.html">
+        環境要件
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/hci19/docs/hci_prereqs_protection_domains.html">
+        保護ドメイン
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/hci19/docs/hci_prereqs_witness_nodes.html">
+        2 ノードストレージクラスタの場合は、監視ノードのリソース要件が必要です
+      </a></li></ul></li><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> NetApp HCI の利用を開始しましょう</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/ja-jp/hci19/docs/task_hci_getstarted.html">
+        NetApp HCI のインストールと導入の概要
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/hci19/docs/task_hci_installhw.html">
+        H シリーズハードウェアを設置
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/hci19/docs/hci_prereqs_LACP_configuration.html">
+        ストレージパフォーマンスを最適化するために LACP を設定します
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/hci19/docs/hci_prereqs_task_validate_config_advisor.html">
+        Active IQ Config Advisor で環境を検証
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/hci19/docs/hci_prereqs_final_prep.html">
+        各ノードに IPMI を設定します
+      </a></li></ul></li><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> NetApp HCI を導入します</div>
+      </a>
+      <ul><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> NetApp Deployment Engine にアクセスします</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/ja-jp/hci19/docs/concept_nde_access_overview.html">
+        NetApp Deployment Engine のアクセスオプションの概要
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/hci19/docs/task_nde_access_no_dhcp.html">
+        DHCP を使用していない環境では、 NetApp Deployment Engine にアクセスします
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/hci19/docs/task_nde_access_dhcp.html">
+        DHCP を使用している環境で NetApp Deployment Engine にアクセスします
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/hci19/docs/task_nde_access_manual_ip.html">
+        NetApp Deployment Engine にアクセスするには、 IP アドレスを手動で割り当ててください
+      </a></li></ul></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/hci19/docs/task_nde_start_deployment.html">
+        導入を開始
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/hci19/docs/task_nde_import_installation_profile.html">
+        インストールプロファイルをインポートします
+      </a></li><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> VMware vSphere を設定します</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/ja-jp/hci19/docs/concept_nde_config_vsphere_overview.html">
+        vSphere の設定の概要
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/hci19/docs/task_nde_configure_new_vsphere.html">
+        新しい VMware vSphere 環境を設定します
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/hci19/docs/task_nde_join_existing_vsphere.html">
+        既存の VMware vSphere 環境に参加します
+      </a></li></ul></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/hci19/docs/task_nde_configure_credentials.html">
+        NetApp HCI クレデンシャルを設定する
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/hci19/docs/task_nde_select_net_topology.html">
+        ネットワークトポロジを選択してください
+      </a></li><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> 在庫の選択</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/ja-jp/hci19/docs/concept_nde_node_compatibility.html">
+        インベントリの選択とノードの互換性
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/hci19/docs/task_nde_select_inventory.html">
+        インベントリを選択します
+      </a></li></ul></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/hci19/docs/task_nde_configure_net_settings.html">
+        ネットワークの設定を行います
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/hci19/docs/task_nde_review_deploy.html">
+        レビューと導入
+      </a></li><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> 導入後のタスク</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/ja-jp/hci19/docs/concept_nde_post_deployment_overview.html">
+        導入後のタスクの概要
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/hci19/docs/task_nde_supported_net_changes.html">
+        サポートされるネットワーク変更
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/hci19/docs/task_nde_disable_smartd.html">
+        NetApp HCI コンピューティングノードで smartd サービスを無効にします
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/hci19/docs/task_nde_disable_lacp_individual.html">
+        設定済みのスイッチで「 lacp-individual 」コマンドを無効にします
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/hci19/docs/task_mnode_create_netapp_hcc_role_vcenter.html">
+        vCenter で NetApp HCC ロールを作成します
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/hci19/docs/task_nde_update_vsphere.html">
+        VMware vSphere を最新の状態に維持
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/hci19/docs/task_nde_install_GPU_drivers.html">
+        GPU 対応のコンピューティングノード用の GPU ドライバをインストールします
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/hci19/docs/task_nde_access_hcc.html">
+        NetApp Hybrid Cloud Control にアクセスします
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/hci19/docs/task_reduce_boot_media_wear.html">
+        NetApp HCI コンピューティングノードのブートメディアの摩耗度を低減します
+      </a></li></ul></li></ul></li><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> NetApp HCI を管理します</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/ja-jp/hci19/docs/task_hci_manage_overview.html">
+        Manage NetApp HCI の概要
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/hci19/docs/task_nde_access_ui_fqdn.html">
+        完全修飾ドメイン名 Web UI アクセスを設定します
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/hci19/docs/task_post_deploy_credentials.html">
+        NetApp HCI でクレデンシャルを変更します
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/hci19/docs/task_hci_credentials_vcenter_esxi.html">
+        vCenter および ESXi のクレデンシャルを更新します
+      </a></li><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> NetApp HCI ストレージを管理します</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/ja-jp/hci19/docs/task_hcc_manage_storage_overview.html">
+        Manage NetApp HCI storage の概要を参照してください
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/hci19/docs/task_hcc_manage_accounts.html">
+        ユーザアカウントを作成および管理します
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/hci19/docs/task_hcc_manage_storage_clusters.html">
+        ストレージクラスタを追加および管理する
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/hci19/docs/task_hcc_manage_vol_management.html">
+        ボリュームを作成および管理する
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/hci19/docs/task_hcc_manage_vol_access_groups.html">
+        ボリュームアクセスグループを作成および管理します
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/hci19/docs/task_hcc_manage_initiators.html">
+        イニシエータを作成および管理する
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/hci19/docs/task_hcc_qos_policies.html">
+        ボリュームの QoS ポリシーの作成と管理
+      </a></li></ul></li><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> 管理ノードを操作します</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/ja-jp/hci19/docs/task_mnode_work_overview.html">
+        管理ノードの概要
+      </a></li><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> 管理ノードをインストールまたはリカバリします</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/ja-jp/hci19/docs/task_mnode_install.html">
+        管理ノードをインストール
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/hci19/docs/task_mnode_install_add_storage_NIC.html">
+        ストレージネットワークインターフェイスコントローラ（ NIC ）の設定
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/hci19/docs/task_mnode_recover.html">
+        管理ノードをリカバリ
+      </a></li></ul></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/hci19/docs/task_mnode_access_ui.html">
+        管理ノードにアクセスします
+      </a></li><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> 管理ノード UI の操作</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/ja-jp/hci19/docs/task_mnode_work_overview_UI.html">
+        管理ノード UI の概要
+      </a></li><li class="  active "><a class="na-navbar-padding" href="/ja-jp/hci19/docs/task_mnode_enable_alerts.html">
+        NetApp HCI でアラート監視を設定する
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/hci19/docs/task_mnode_settings.html">
+        管理ノードのネットワーク、クラスタ、およびシステムの設定を変更してテストする
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/hci19/docs/task_mnode_run_system_utilities.html">
+        管理ノードからシステムユーティリティを実行します
+      </a></li></ul></li><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> 管理ノード REST API の操作</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/ja-jp/hci19/docs/task_mnode_work_overview_API.html">
+        管理ノードの REST API UI の概要
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/hci19/docs/task_mnode_api_get_authorizationtouse.html">
+        REST API を使用するための許可を取得する
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/hci19/docs/task_mnode_enable_activeIQ.html">
+        Active IQ と NetApp HCI の監視を有効にします
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/hci19/docs/task_mnode_multi_vcenter_config.html">
+        NetApp Hybrid Cloud Control を複数の vCenter に設定する
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/hci19/docs/task_mnode_add_assets.html">
+        管理ノードにコンピューティングアセットとコントローラアセットを追加します
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/hci19/docs/task_mnode_locate_hardware_tag.html">
+        コンピューティングノードのハードウェアタグを確認する方法
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/hci19/docs/task_mnode_manage_storage_cluster_assets.html">
+        ストレージクラスタアセットを作成および管理する
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/hci19/docs/task_mnode_edit_vcenter_assets.html">
+        既存のコントローラアセットを表示または編集する
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/hci19/docs/task_mnode_remove_assets.html">
+        管理ノードからアセットを削除します
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/hci19/docs/task_mnode_configure_proxy_server.html">
+        管理ノード用のプロキシサーバを設定します
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/hci19/docs/task_mnode_api_find_mgmt_svcs_version.html">
+        管理ノードの OS とサービスのバージョンを確認
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/hci19/docs/task_mnode_logs.html">
+        管理サービスからログを取得しています
+      </a></li></ul></li><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> サポート接続を管理します</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/ja-jp/hci19/docs/task_mnode_enable_remote_support_connections.html">
+        リモートのネットアップサポートセッションを開始します
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/hci19/docs/task_mnode_ssh_management.html">
+        管理ノードで SSH 機能を管理します
+      </a></li></ul></li></ul></li><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> NetApp HCI システムの電源をオフまたはオンにします</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/ja-jp/hci19/docs/concept_nde_hci_power_off_on.html">
+        NetApp HCI の電源の概要
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/hci19/docs/task_nde_hci_power_off_compute.html">
+        NetApp HCI システムのコンピューティングリソースの電源をオフにします
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/hci19/docs/task_nde_hci_power_off_storage.html">
+        NetApp HCI システムのストレージリソースの電源をオフにします
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/hci19/docs/task_nde_hci_power_on_storage.html">
+        NetApp HCI システムのストレージリソースの電源をオンにします
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/hci19/docs/task_nde_hci_power_on_compute.html">
+        NetApp HCI システムのコンピューティングリソースの電源をオンにします
+      </a></li></ul></li></ul></li><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> NetApp Hybrid Cloud Control を使用して NetApp HCI システムを監視します</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/ja-jp/hci19/docs/task_hcc_dashboard.html">
+        NetApp Hybrid Cloud Control のダッシュボードでリソースを確認します
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/hci19/docs/task_hcc_nodes.html">
+        インベントリは、 NetApp Hybrid のノードのページで確認します Cloud Control の略
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/hci19/docs/task_hcc_edit_bmc_info.html">
+        NetApp Hybrid Cloud Control を使用して BMC の接続情報を編集します
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/hci19/docs/task_hcc_volumes.html">
+        ネットアップハイブリッドクラウドでストレージクラスタのボリュームを監視します 制御
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/hci19/docs/task_hcc_activeiq.html">
+        NetApp Hybrid Cloud Control から Active IQ への接続を使用して、パフォーマンス、容量、クラスタの健全性を監視します
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/hci19/docs/task_hcc_collectlogs.html">
+        トラブルシューティング用にログを収集する
+      </a></li></ul></li><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> NetApp HCI システムのバージョン 1.9 または 1.9P1 をアップグレードします</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/ja-jp/hci19/docs/concept_hci_upgrade_overview.html">
+        アップグレード手順の概要
+      </a></li><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> システムのアップグレード手順</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/ja-jp/hci19/docs/task_hcc_update_management_services.html">
+        管理サービスを更新
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/hci19/docs/task_upgrade_element_latest_healthtools.html">
+        最新の HealthTools にアップグレードします
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/hci19/docs/task_hcc_upgrade_element_prechecks.html">
+        ストレージをアップグレードする前に、 Element ストレージの健全性チェックを実行します
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/hci19/docs/task_hcc_upgrade_element_software.html">
+        Element ソフトウェアをアップグレードします
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/hci19/docs/task_hcc_upgrade_storage_firmware.html">
+        ストレージファームウェアをアップグレードします
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/hci19/docs/task_hcc_upgrade_management_node.html">
+        管理ノードをアップグレードします
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/hci19/docs/task_vcp_upgrade_plugin.html">
+        NetApp Element Plug-in for vCenter Server をアップグレードします
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/hci19/docs/task_upgrade_compute_prechecks.html">
+        コンピューティングノードの健全性チェックは、コンピューティングファームウェアをアップグレードする前に実行します
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/hci19/docs/task_hcc_upgrade_compute_node_drivers.html">
+        コンピューティングノードのドライバを更新
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/hci19/docs/task_hcc_upgrade_compute_node_firmware.html">
+        コンピューティングノードのファームウェアをアップグレードします
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/hci19/docs/task_hcc_upgrade_compute_firmware_ansible.html">
+        Ansible によるコンピューティングノードのファームウェアアップグレードの自動化
+      </a></li></ul></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/hci19/docs/task_hci_upgrade_all_vsphere.html">
+        を使用して、 NetApp HCI システムの vSphere コンポーネントをアップグレードします vCenter Server 向け Element プラグイン
+      </a></li></ul></li><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> NetApp HCI システムを拡張します</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/ja-jp/hci19/docs/concept_hcc_expandoverview.html">
+        概要を展開します
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/hci19/docs/task_hcc_expand_storage.html">
+        NetApp HCI ストレージリソースを展開します
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/hci19/docs/task_hcc_expand_compute.html">
+        NetApp HCI コンピューティングリソースを展開します
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/hci19/docs/task_hcc_expand_compute_and_storage.html">
+        ネットアップストレージとコンピューティングのリソースを拡張
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/hci19/docs/task_hci_removewn.html">
+        クラスタの拡張後に監視ノードを削除します
+      </a></li></ul></li><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> NetApp HCI で Rancher を使用します</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/ja-jp/hci19/docs/concept_rancher_product_overview.html">
+        NetApp HCI の Rancher の概要
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/hci19/docs/concept_rancher_concepts.html">
+        概念
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/hci19/docs/rancher_prereqs_overview.html">
+        NetApp HCI の Rancher の要件
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/hci19/docs/task_rancher_deploy.html">
+        NetApp HCI に Rancher を導入します
+      </a></li><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> 導入後のタスク</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/ja-jp/hci19/docs/concept_rancher_post_deployment_overview.html">
+        導入後のタスクの概要
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/hci19/docs/task_rancher_ensure_rancher_support_parity.html">
+        Rancher サポートパリティを確認します
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/hci19/docs/task_rancher_config_anti_affinity.html">
+        VM の耐障害性を向上
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/hci19/docs/task_rancher_enable_monitoring.html">
+        監視を設定
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/hci19/docs/task_rancher_trident.html">
+        Trident をインストール
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/hci19/docs/task_trident_configure_networking.html">
+        ユーザクラスタで Trident のサポートを有効にします
+      </a></li></ul></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/hci19/docs/task_rancher_deploy_user_clusters.html">
+        ユーザクラスタとアプリケーションを導入
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/hci19/docs/task_rancher_manage.html">
+        NetApp HCI でランチ元を管理します
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/hci19/docs/task_rancher_monitor.html">
+        NetApp HCI でランチをモニターします
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/hci19/docs/task_rancher_upgrades.html">
+        NetApp HCI の Rancher をアップグレードします
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/hci19/docs/task_rancher_remove_deployment.html">
+        NetApp HCI でランチツールをインストールした場合は、取り外します
+      </a></li></ul></li><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> H シリーズハードウェアのメンテナンス</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/ja-jp/hci19/docs/task_hci_hwmainoverview.html">
+        H シリーズハードウェアのメンテナンスの概要
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/hci19/docs/task_hci_hserieschassisrepl.html">
+        2U H シリーズシャーシを交換
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/hci19/docs/task_hci_dcpsurepl.html">
+        H615C および H610S ノードの DC 電源装置を交換してください
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/hci19/docs/task_hci_dimmcomputerepl.html">
+        コンピューティングノードの DIMM を交換します
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/hci19/docs/task_hci_driverepl.html">
+        ストレージノードのドライブを交換
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/hci19/docs/task_hci_h410crepl.html">
+        H410C ノードを交換してください
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/hci19/docs/task_hci_h410srepl.html">
+        H410S ノードを交換します
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/hci19/docs/task_hci_h610ch615crepl.html">
+        H610C ノードと H615C ノードを交換してください
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/hci19/docs/task_hci_h610srepl.html">
+        H610S ノードを交換してください
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/hci19/docs/task_hci_psurepl.html">
+        電源装置を交換してください
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/hci19/docs/task_hci_snswitches.html">
+        SN2010 、 SN2100 、および SN2700 の各スイッチを交換してください
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/hci19/docs/task_hci_2noderepl.html">
+        2 ノードクラスタのストレージノードを交換
+      </a></li></ul></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/hci19/docs/reference_earlier_versions.html">
+        以前のバージョン
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/hci19/docs/reference_notices_hci.html">
+        法的通知
+      </a></li></ul>
+</div>
+<script>
+  window.onscroll = () => {
+    const value = -40 - (document.body.scrollHeight - (window.innerHeight + document.scrollingElement.scrollTop));
+    
+    document.getElementById("sidebar-height").style.bottom = Math.max(0,value) + "px";
+};
+</script>
+<!-- this highlights the active parent class in the navgoco sidebar. this is critical so that the parent expands when you're viewing a page. This must appear below the sidebar code above. Otherwise, if placed inside customscripts.js, the script runs before the sidebar code runs and the class never gets inserted.-->
+<script>$("li.active").parents('li').toggleClass("active");</script>
+
+
+  </div>
+  
+
+  <div class="ie-content-pane n-doc__component-detail-content n-doc__component-detail-content--show-code">
+    <!-- Begin of page container --><article class="page-content">
+      <div class="ie-utility">
+  <div class="ie-menu">
+    <div class="n-breadcrumb">
+      <ul class="n-breadcrumb__list">
+        <li class="n-breadcrumb__list-item">
+          <a href="https://docs.netapp.com">docs.netapp.com</a>
+        </li>
+        
+
+        
+
+        <li class="n-breadcrumb__list-item">
+          <a href="/ja-jp/hci19/">HCI</a>
+        </li>
+
+      </ul>
+    </div>
+    <div style="clear: both"></div><!-- Main needs to have height -->
+  </div>
+</div>
+
+      <div class="ie-nmt-disclaimer">
+  <span>
+    <div class="ie-nmt-disclaimer-container">
+      <div class="ie-nmt-disclaimer-icon">
+        <svg class="luci-icon" aria-hidden="true">
+          <use xlink:href="/ja-jp/hci19/common/svg/sprite.svg#circle-info">
+        </svg>
+      </div>
+      <div class="ie-nmt-disclaimer-content">
+        <span> 日本語は機械翻訳による参考訳です。内容に矛盾や不一致があった場合には、英語の内容が優先されます。 </span>
+      </div>
+      <div style="clear:both;"></div>
+    </div>
+  </span>
+</div><div class="n-doc__component-detail-heading-wrap">
+  <h1 class="n-doc__component-detail-heading">NetApp HCI でアラート監視を設定する</h1>
+</div>
+
+
+<p class="page-details">
+  
+    
+    <time datetime="2022-05-13 19:08:41 +0000">05/13/2022</time>
+    
+  
+
+
+</p>
+
+<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph lead">
+<p>NetApp HCI システムでアラートを監視するように設定を行うことができます。</p>
+</div>
+<div class="paragraph">
+<p>NetApp HCI のアラート監視は、 NetApp HCI ストレージクラスタのシステムアラートを vCenter Server に転送して、 vSphere Web Client インターフェイスで NetApp HCI のすべてのアラートを表示できるようにします。</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<img src="/us-en/hci19/images/note.svg" alt="注記">
+</td>
+<td class="content">
+これらのツールは、 SolidFire オールフラッシュストレージなどのストレージ専用クラスタでは設定も使用もされません。これらのクラスタに対してツールを実行すると、「 webUIParseError ： Invalid response from server 」のような 405 エラーが表示されますが、これは想定される設定です。405`
+</td>
+</tr>
+</table>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>ノード単位の管理ノード UI を開きます (`https://[IP address:442')</p>
+</li>
+<li>
+<p>[* Alert Monitor*] タブをクリックします。</p>
+</li>
+<li>
+<p>アラート監視オプションを設定します。</p>
+</li>
+</ol>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="アラート監視オプション">アラート監視オプション</h2>
+<div class="sectionbody">
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">オプション（ Options ）</th>
+<th class="tableblock halign-left valign-top">説明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Alert Monitor テストを実行します</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>モニタシステムテストを実行して次の項目を確認します。</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>NetApp HCI と VMware vCenter の接続</p>
+</li>
+<li>
+<p>データストア情報を使用した NetApp HCI と VMware vCenter のペアリング QoSSIOC サービスによって提供されます</p>
+</li>
+<li>
+<p>現在の NetApp HCI アラームと vCenter アラームのリスト</p>
+</li>
+</ul>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">アラートを収集します</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">NetApp HCI ストレージアラームの vCenter への転送を有効または無効にします。ドロップダウンリストからターゲットのストレージクラスタを選択できます。このオプションのデフォルト設定は「 enabled 」です。</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">ベストプラクティスアラートを収集</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">NetApp HCI ストレージのベストプラクティスアラートの vCenter への転送を有効または無効にします。ベストプラクティスアラートは、最適化されていないシステム構成によってトリガーされた障害です。このオプションのデフォルト設定は「ディセーブル」です。無効にすると、 NetApp HCI ストレージのベストプラクティスアラートは vCenter に表示されません。</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">サポートデータを AIQ に送信</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>VMware vCenter から NetApp SolidFire Active IQ へのサポートデータと監視データのフローを制御します。</p>
+</div>
+<div class="paragraph">
+<p>オプションは次のとおりです。</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Enabled ： vCenter アラーム、 NetApp HCI ストレージアラーム、およびサポートデータがすべて NetApp SolidFire Active IQ に送信されます。ネットアップによる NetApp HCI インストールのプロアクティブなサポートと監視が可能となるため、システムに影響が及ぶ前に問題を検出して解決できます。</p>
+</li>
+<li>
+<p>Disabled ： vCenter アラーム、 NetApp HCI ストレージアラーム、サポートデータはいずれも NetApp SolidFire Active IQ に送信されません。</p>
+</li>
+</ul>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<img src="/us-en/hci19/images/note.svg" alt="注記">
+</td>
+<td class="content">
+NetApp Deployment Engine を使用して AIQ へのデータの送信 * オプションをオフにした場合は、が必要です <a href="task_mnode_enable_activeIQ.html">"テレメータを有効にします"</a> このページから、管理ノードの REST API を使用してサービスを設定し直してください。
+</td>
+</tr>
+</table>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">コンピューティングノードのデータを AIQ に送信</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>コンピューティングノードから NetApp SolidFire Active IQ へのサポートデータと監視データのフローを制御します。</p>
+</div>
+<div class="paragraph">
+<p>オプションは次のとおりです。</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Enabled ：コンピューティングノードに関するサポートデータと監視データが NetApp SolidFire Active IQ に転送されるため、コンピューティングノードのハードウェアをプロアクティブにサポートできます。</p>
+</li>
+<li>
+<p>Disabled ：コンピューティングノードに関するサポートデータと監視データは NetApp SolidFire Active IQ に転送されません。</p>
+</li>
+</ul>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<img src="/us-en/hci19/images/note.svg" alt="注記">
+</td>
+<td class="content">
+NetApp Deployment Engine を使用して AIQ へのデータの送信 * オプションをオフにした場合は、が必要です <a href="task_mnode_enable_activeIQ.html">"テレメータを有効にします"</a> このページから、管理ノードの REST API を使用してサービスを設定し直してください。
+</td>
+</tr>
+</table>
+</div></div></td>
+</tr>
+</tbody>
+</table>
+<h2 id="詳細はこちら" class="discrete">詳細はこちら</h2>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://docs.netapp.com/us-en/vcp/index.html" target="_blank" rel="noopener">"vCenter Server 向け NetApp Element プラグイン"</a></p>
+</li>
+<li>
+<p><a href="https://www.netapp.com/hybrid-cloud/hci-documentation/" target="_blank" rel="noopener">"NetApp HCI のリソースページ"</a></p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+
+    </article>
+    <!-- Page Container -->
+  </div>
+
+  <div style="clear: both"></div><!-- Main needs to have height --></div>
+
+        </main>
+
+        <footer class="n-footer">
+  <div class="n-footer__bottom">
+    <div class="n-container">
+      <div class="n-footer__bottom-left">
+        <div class="n-footer__copyright">
+          <ul class="n-footer__copyright-list">
+            <li class="n-footer__copyright-link">
+              <a href="https://www.netapp.com/us/legal/copyright.aspx">© 2022 NetApp, Inc.</a>
+            </li>
+            <li class="n-footer__copyright-link">
+              <a href="https://www.netapp.com/company/legal/terms-of-use/">利用条件</a>
+            </li>
+            <li class="n-footer__copyright-link">
+              <a href="https://www.netapp.com/company/legal/privacy-policy/">プライバシー ポリシー</a>
+            </li>
+            <li class="n-footer__copyright-link">
+              <a href="https://www.netapp.com/company/legal/cookie-policy/">クッキー ポリシー</a>
+            </li>
+            <li class="n-footer__copyright-link">
+              <a class="ot-sdk-show-settings">クッキーの設定</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="n-footer__bottom-right">
+        <div class="n-footer__copyright">
+          <ul class="n-footer__copyright-list">
+            <li class="n-footer__copyright-link">
+              <span class="n-footer__fine-print">Web サイトについてのフィードバックを</span>
+              <a target="_self" href="javascript:netapp_mailto()">お寄せください</a>
+            </li>
+            <li class="n-footer__copyright-link">
+              <a href="https://docs.netapp.com/ja-jp/announcements/">お知らせ</a>
+            </li>
+          </ul>
+        </div>
+        <div class="n-footer__social-links">
+          <ul class="n-footer__social-link-list">
+            <li class="n-footer__social-link-list-item">
+              <a class="n-footer__social-link" data-ntap-social="follow-blog" href="https://blog.netapp.com"
+                target="_blank" title="blog" alt="blog">
+                <span class="n-footer__social-link-text">blog</span>
+                <svg class="n-icon-blog n-footer__social-link-icon" aria-labelledby="title">
+                  <title>blog@</title>
+                  <use xmlns:xlink="http://www.w3.org/1999/xlink"
+                    xlink:href="/ja-jp/hci19/common/svg/sprite.svg#blog"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="n-footer__social-link-list-item">
+              <a class="n-footer__social-link" data-ntap-social="follow-community" href="https://community.netapp.com/"
+                target="_blank" title="community" alt="community">
+                <span class="n-footer__social-link-text">community</span>
+                <svg class="n-icon-community n-footer__social-link-icon" aria-labelledby="title">
+                  <title>community@</title>
+                  <use xmlns:xlink="http://www.w3.org/1999/xlink"
+                    xlink:href="/ja-jp/hci19/common/svg/sprite.svg#comments"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="n-footer__social-link-list-item">
+              <a class="n-footer__social-link" data-ntap-social="follow-twitter" href="https://twitter.com/netapp"
+                target="_blank" title="twitter" alt="twitter">
+                <span class="n-footer__social-link-text">twitter</span>
+                <svg class="n-icon-twitter n-footer__social-link-icon" aria-labelledby="title">
+                  <title>twitter@</title>
+                  <use xmlns:xlink="http://www.w3.org/1999/xlink"
+                    xlink:href="/ja-jp/hci19/common/svg/sprite.svg#twitter"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="n-footer__social-link-list-item">
+              <a class="n-footer__social-link" data-ntap-social="follow-facebook" href="https://www.facebook.com/NetApp"
+                target="_blank" title="facebook" alt="facebook">
+                <span class="n-footer__social-link-text">facebook</span>
+                <svg class="n-icon-facebook n-footer__social-link-icon" aria-labelledby="title">
+                  <title>facebook@</title>
+                  <use xmlns:xlink="http://www.w3.org/1999/xlink"
+                    xlink:href="/ja-jp/hci19/common/svg/sprite.svg#facebook"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="n-footer__social-link-list-item">
+              <a class="n-footer__social-link" data-ntap-social="follow-linkedin"
+                href="https://www.linkedin.com/company/netapp" target="_blank" title="linkedin" alt="linkedin">
+                <span class="n-footer__social-link-text">linkedin</span>
+                <svg class="n-icon-linkedin n-footer__social-link-icon" aria-labelledby="title">
+                  <title>linkedin@</title>
+                  <use xmlns:xlink="http://www.w3.org/1999/xlink"
+                    xlink:href="/ja-jp/hci19/common/svg/sprite.svg#linkedin"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="n-footer__social-link-list-item">
+              <a class="n-footer__social-link" data-ntap-social="follow-youtube"
+                href="https://www.youtube.com/user/NetAppTV" target="_blank" title="youtube" alt="youtube">
+                <span class="n-footer__social-link-text">youtube</span>
+                <svg class="n-icon-youtube n-footer__social-link-icon" aria-labelledby="title">
+                  <title>youtube@</title>
+                  <use xmlns:xlink="http://www.w3.org/1999/xlink"
+                    xlink:href="/ja-jp/hci19/common/svg/sprite.svg#youtube"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="n-footer__social-link-list-item">
+              <a class="n-footer__social-link" data-ntap-social="follow-slideshare"
+                href="https://www.slideshare.net/NetApp" target="_blank" title="slideshare" alt="slideshare">
+                <span class="n-footer__social-link-text">slideshare</span>
+                <svg class="n-icon-slideshare n-footer__social-link-icon" aria-labelledby="title">
+                  <title>slideshare@</title>
+                  <use xmlns:xlink="http://www.w3.org/1999/xlink"
+                    xlink:href="/ja-jp/hci19/common/svg/sprite.svg#slideshare"></use>
+                </svg>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+      </div><!-- Elasticsearch JS -->
+      <script type="text/javascript" src='/ja-jp/hci19/js/bundle.js'></script>
+
+      <!-- Syntax Highlighting -->
+      <script type="text/javascript" src='/ja-jp/hci19/js/prism.js'></script>
+      <script type="text/javascript" src='/ja-jp/hci19/js/prism-curl.js'></script>
+    </div>
+    <script>
+      document.body.offsetWidth=1903;
+      cookieLaw = {}
+      cookieLaw.euCountry = "US";
+      cookieLaw.invoke = function(){return false;}
+    </script>
+    <script src='/ja-jp/hci19/js/www-ntap.js'></script>
+    <script src='/ja-jp/hci19/js/tabbed-blocks.js'></script>
+  </body></html>
