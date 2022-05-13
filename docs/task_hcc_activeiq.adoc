@@ -1,0 +1,60 @@
+---
+sidebar: sidebar 
+permalink: docs/task_hcc_activeiq.html 
+summary: SolidFire Active IQ を使用してクラスタの健常性を監視できます。 
+keywords: netapp, hci, on premise, activeiq, active iq, cluster, performance 
+---
+= SolidFire Active IQ を使用して、パフォーマンス、容量、クラスタの健全性を監視できます
+:allow-uri-read: 
+
+
+[role="lead"]
+SolidFire Active IQ を使用して、クラスタのイベント、パフォーマンス、容量を監視できます。SolidFire Active IQ には、 NetApp Hybrid Cloud Control Dashboard からアクセスできます。
+
+* 始める前に *
+
+* このサービスを利用するには、ネットアップサポートアカウントが必要です。
+* 管理ノード REST API を使用するための許可が必要です。
+* バージョン 12.0 以降を実行する管理ノードを導入しておきます。
+* クラスタバージョンで NetApp Element ソフトウェア 12.0 以降が実行されています。
+* インターネットにアクセスできる。Active IQ コレクタサービスをダークサイトから使用することはできません。
+
+
+* このタスクについて * クラスタ全体の統計の履歴ビューを継続的に更新できます。クラスタで指定したイベント、しきい値、または指標について、通知を設定して迅速に対処できるようにすることができます。
+
+ネットアップサポートは、通常のサポート契約の一環として、このデータを監視し、潜在的なシステムの問題をユーザに警告します。
+
+* 手順 *
+
+. Webブラウザで管理ノードのIPアドレスを開きます。例：
++
+[listing]
+----
+https://<ManagementNodeIP>
+----
+. NetApp HCI ストレージクラスタ管理者のクレデンシャルを指定して NetApp Hybrid Cloud Control にログインします。
+. ダッシュボードの右上にあるメニューをクリックします。
+. 「 * View Active IQ * 」を選択します。
++
+。 link:https://activeiq.solidfire.com["SolidFire Active IQ ダッシュボード"^] 表示されます。
+
+. SolidFire Active IQ の詳細については、ダッシュボードで右上のメニューアイコンをクリックし、 * Documentation * をクリックしてください。
+. SolidFire Active IQ インターフェイスで、 NetApp HCI のコンピューティングノードとストレージノードから Active IQ にテレメトリが正しく報告されていることを確認します。
++
+.. 複数の NetApp HCI がインストールされている場合は、 * クラスタの選択 * をクリックして、リストからクラスタを選択します。
+.. 左側のナビゲーションペインで、 * ノード * をクリックします。
+
+
+. リストに表示されないノードがある場合は、ネットアップサポートにお問い合わせください。
+
+
+
+TIP: ストレージリソースとコンピューティングリソースの数を表示するには、 Hybrid Cloud Control （ HCC ）ダッシュボードを参照します。を参照してください link:task_hcc_dashboard.html["HCC ダッシュボードを使用してストレージリソースとコンピューティングリソースを監視する"]。
+
+[discrete]
+== 詳細については、こちらをご覧ください
+
+* https://help.monitoring.solidfire.com["NetApp SolidFire Active IQ のドキュメント"^]
+* https://docs.netapp.com/us-en/vcp/index.html["vCenter Server 向け NetApp Element プラグイン"^]
+* https://www.netapp.com/hybrid-cloud/hci-documentation/["NetApp HCI のリソースページ"^]
+

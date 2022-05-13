@@ -1,0 +1,51 @@
+---
+sidebar: sidebar 
+permalink: docs/concept_rancher_concepts.html 
+summary: NetApp HCI に Rancher をインストールした後に実行する必要があるタスクについて説明します。 
+keywords: netapp, hci, rancher, control plane, catalog, cluster, kubernetes 
+---
+= NetApp HCI の概念に関する Rancher
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ../media/
+
+
+[role="lead"]
+NetApp HCI の Rancher に関連する基本的な概念を学びます。
+
+* * Rancher サーバー * または * コントロールプレーン * ： Rancher コントロールプレーン（ _ ランチエージェントサーバー _ と呼ばれることもあります）は、開発および運用チームが使用する Kubernetes クラスタをプロビジョニング、管理、監視します。
+* * カタログ * ：カタログは GitHub リポジトリまたは Helm Chart リポジトリで、すぐに導入できるアプリケーションがいっぱいになっています。Rancher では、 Helm チャートのカタログを使用して、アプリケーションを繰り返し簡単に導入できます。Rancher には、組み込みのグローバルカタログとカスタムカタログの 2 種類のカタログが含まれています。Trident はカタログとして導入されています。を参照してください https://rancher.com/docs/rancher/v2.x/en/helm-charts/legacy-catalogs/["カタログに関する Rancher のドキュメント"]。
+* * 管理クラスタ * ： NetApp HCI の Rancher は、 Rancher 管理クラスタに 3 台の仮想マシンを導入します。 Rancher 、 Hybrid Cloud Control 、および vCenter Plug-in を使用して確認できます。管理クラスタの仮想マシンは、 Rancher サーバ、 Rancher Kubernetes Engine （ RKE ）、および Linux OS をホストします。
+* * ユーザクラスタ * ：これらのダウンストリーム Kubernetes クラスタは、アプリケーションとサービスを実行します。ランチサーバの Kubernetes 環境では、管理クラスタをユーザクラスタから分離する必要があります。Rancher ユーザーが rancher から展開するか、または rancher にインポートするクラスタは、ユーザークラスタと見なされます。
+* * ランチャノードテンプレート * ： Hybrid Cloud Control では、ランチャノードテンプレートを使用して導入を簡易化しています。
++
+を参照してください  https://rancher.com/docs/rancher/v2.x/en/user-settings/node-templates/["ノードテンプレートに関する Rancher のドキュメント"]。
+
+
+
+
+
+== Trident ソフトウェアと永続的ストレージの概念
+
+Trident は Kubernetes ネイティブのアプリケーションであり、 Kubernetes クラスタ内で直接実行されます。Trident を使用すると、 Kubernetes のユーザ（開発者、データサイエンティスト、 Kubernetes 管理者など）は、使い慣れた標準的な Kubernetes 形式で永続ストレージボリュームを作成、管理、操作できます。Trident を使用すると、 Kubernetes クラスタが作成した永続的ボリュームに対する要求をネットアップのソリューションで満たすことができます。
+
+Rancher を使用すると、どのポッドからも独立して存在し、独自の有効期間を持つ永続ボリュームを使用できます。Trident を使用して Persistent Volume Claim （ PVC ；永続ボリューム要求）を管理することで、ポッドを作成する開発者は、アクセス対象のストレージの細かな実装作業から解放されます。
+
+コンテナ化されたアプリケーションが永続的ボリューム要求（ PVC ）要求を発行すると、 Trident は要求されたパラメータを使用して、 NetApp HCI の NetApp Element ソフトウェアストレージレイヤにストレージを動的にプロビジョニングします。
+
+Trident カタログは、 NetApp HCI 上の Rancher で利用でき、ユーザクラスタ内で実行されます。NetApp HCI 実装の Rancher の一部として、 Trident インストーラはデフォルトで rancher カタログから入手できます。このカタログが含まれているため、ユーザクラスタへの Trident の導入が簡単になります。
+
+を参照してください link:task_rancher_trident.html["Trident を NetApp HCI に Rancher とともにインストール"]。
+
+詳細については、を参照してください https://netapp-trident.readthedocs.io/en/stable-v20.10/introduction.html["Trident のドキュメント"]。
+
+[discrete]
+== 詳細については、こちらをご覧ください
+
+* https://rancher.com/docs/rancher/v2.x/en/overview/architecture/["アーキテクチャに関する Rancher ドキュメント"^]
+* https://rancher.com/docs/rancher/v2.x/en/overview/concepts/["Rancher 用の Kubernetes 用語"]
+* https://www.netapp.com/us/documentation/hci.aspx["NetApp HCI のリソースページ"^]
+

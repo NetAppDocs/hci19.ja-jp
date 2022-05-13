@@ -1,0 +1,76 @@
+---
+sidebar: sidebar 
+permalink: docs/hci_prereqs_ip_address.html 
+summary: NetApp HCI の IP アドレス要件について説明します。 
+keywords: netapp, hci, IP address, requirements 
+---
+= IP アドレスの要件
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ../media/
+:keywords: netapp, hci, IP address, requirements
+
+
+[role="lead"]
+NetApp HCI には、導入の規模に応じた IP アドレスの要件があります。NetApp Deployment Engine を使用してシステムを導入する前に各ノードに割り当てた初期 IP アドレスは、デフォルトでは一時的な IP アドレスであり、再利用することはできません。最終的な導入時に割り当て可能な、未使用かつ永続的な IP アドレスのセットをもう 1 つ確保しておく必要があります。
+
+
+
+== NetApp HCI の導入ごとに必要な IP アドレスの数
+
+NetApp HCI ストレージネットワークと管理ネットワークでは、それぞれ連続した IP アドレス範囲を使用する必要があります。次の表を参照して、導入に必要な IP アドレスの数を確認してください。
+
+|===
+| システムコンポーネント | 管理ネットワーク IP アドレスが必要です | 必要なストレージネットワーク IP アドレス | 必要な vMotion ネットワーク IP アドレス | コンポーネントごとに必要な合計 IP アドレス 
+
+
+| コンピューティングノード | 1. | 2. | 1. | 4. 
+
+
+| ストレージノード | 1. | 1. |  | 2. 
+
+
+| ストレージクラスタ | 1. | 1. |  | 2. 
+
+
+| VMware vCenter | 1. |  |  | 1. 
+
+
+| 管理ノード | 1. | 1. |  | 2. 
+
+
+| 監視ノード | 1. | 1. |  | 監視ノードあたり 2 （ 2 ノードまたは 3 ノードごとに 2 つの監視ノードが導入されます ストレージクラスタ） 
+|===
+
+
+== NetApp HCI で予約されている IP アドレス
+
+NetApp HCI では、システムコンポーネント用に次の IP アドレス範囲が予約されます。ネットワークを計画するときは、次の IP アドレスは使用しないでください。
+
+|===
+| IP アドレス範囲 | 説明 
+
+
+| 10.0.0.0/24 | Docker overlay ネットワーク 
+
+
+| 10.0.1.0/24 のようになります | Docker overlay ネットワーク 
+
+
+| 10.255.0.0/16 | Docker Swarm Ingress ネットワーク 
+
+
+| 169.254.100.1/22 | Docker bridge ネットワーク 
+
+
+| 169.254.104.0/22 | Docker bridge ネットワーク 
+|===
+[discrete]
+== 詳細については、こちらをご覧ください
+
+* https://www.netapp.com/hybrid-cloud/hci-documentation/["NetApp HCI のリソースページ"^]
+* https://docs.netapp.com/us-en/vcp/index.html["vCenter Server 向け NetApp Element プラグイン"^]
+

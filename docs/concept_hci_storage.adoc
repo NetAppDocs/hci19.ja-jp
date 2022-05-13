@@ -1,0 +1,35 @@
+---
+sidebar: sidebar 
+permalink: docs/concept_hci_storage.html 
+summary: NetApp HCI には、コンピューティングとストレージの両方に対応するさまざまな設定オプションがあります。NetApp HCI 1.8 以降では、最小構成で 2 つのストレージノードと 2 つのコンピューティングノードを構成できます。以前のバージョンでは、必要な最小構成は 4 つのストレージノードと 2 つのコンピューティングノードでした。 
+keywords: netapp, hci, storage nodes, volumes 
+---
+= ストレージ
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ../media/
+
+
+[role="lead"]
+NetApp HCI には、コンピューティングとストレージの両方に対応するさまざまな設定オプションがあります。NetApp HCI 1.8 以降では、最小構成で 2 つのストレージノードと 2 つのコンピューティングノードを構成できます。NetApp HCI 1.8 より前のバージョンでは、必要な最小構成はストレージノード 4 台とコンピューティングノード 2 台でした。
+
+* NetApp HCI では、 H300S 、 H500S 、 H700S 、 H410S 、 H610S など、さまざまな H シリーズストレージノードモデルがサポートされます。
++
+を参照してください https://www.netapp.com/us/products/converged-systems/hyper-converged-infrastructure.aspx#modelsAndSpecs["NetApp HCI のモデルと仕様"]
+
+* NetApp HCI のストレージレイヤは NetApp Element ソフトウェアで提供され、管理レイヤは NetApp Element Plug-in for vCenter Server で提供されます。
+* ストレージノードは、 Bond10G ネットワークインターフェイスを通じて相互に通信する一連のドライブを搭載したサーバです。
+* 各ストレージノードはストレージと管理の 2 つのネットワークに接続され、それぞれに 2 つの独立したリンクを使用して冗長性とパフォーマンスを確保します。各ノードには各ネットワークの IP アドレスが必要です。
+* 新しいストレージノードで構成されるクラスタを作成したり、既存のクラスタにストレージノードを追加してストレージの容量とパフォーマンスを拡張したりできます。
+* NetApp HCI と SolidFire のエコシステムでは、ストレージはボリュームを使用してプロビジョニングされます。
+
+
+
+
+== 詳細については、こちらをご覧ください
+
+* https://docs.netapp.com/us-en/vcp/index.html["vCenter Server 向け NetApp Element プラグイン"^]
+

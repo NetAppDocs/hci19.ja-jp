@@ -1,0 +1,119 @@
+---
+sidebar: sidebar 
+permalink: docs/task_mnode_install_add_storage_NIC.html 
+summary: 追加の NIC をストレージに使用する場合は、タグなしまたはタグ付きのネットワークインターフェイスを設定してください。 
+keywords: netapp, element, management node, mnode, network, nic, storage nic 
+---
+= ストレージネットワークインターフェイスコントローラ（ NIC ）の設定
+:allow-uri-read: 
+
+
+[role="lead"]
+ストレージに追加の NIC を使用している場合は、 SSH で管理ノードに接続するか、 vCenter コンソールを使用して curl コマンドを実行し、タグ付きまたはタグなしのネットワークインターフェイスをセットアップできます。
+
+.作業を開始する前に
+* eth0 の IP アドレスを確認しておきます。
+* クラスタで NetApp Element ソフトウェア 11.3 以降を実行している必要があります。
+* 管理ノード 11.3 以降を導入しておきます。
+
+
+環境に適したオプションを選択します。
+
+* <<Configure a storage Network Interface Controller (NIC) for an untagged network interface>>
+* <<Configure a storage Network Interface Controller (NIC) for a tagged network interface>>
+
+
+
+
+== タグなしのストレージネットワークインターフェイスコントローラ（ NIC ）を設定します ネットワークインターフェイス
+
+.手順
+. SSH または vCenter コンソールを開きます。
+. 次のコマンドテンプレートの値を置き換え、コマンドを実行します。
++
+
+NOTE: 新しいストレージ・ネットワーク・インターフェイスに必要なパラメータごとに値は「 $ 」で表されます。次のテンプレート内の 'cluster' オブジェクトは必須であり ' 管理ノードのホスト名の変更に使用できます`-- 非セキュアなオプションや '-k オプションは ' 本番環境では使用しないでください
+
++
+[listing]
+----
+curl -u $mnode_user_name:$mnode_password --insecure -X POST \
+https://$mnode_IP:442/json-rpc/10.0 \
+-H 'Content-Type: application/json' \
+-H 'cache-control: no-cache' \
+-d ' {
+     "params": {
+               "network": {
+                          "$eth1": {
+                                   "#default" : false,
+                                   "address" : "$storage_IP",
+                                   "auto" : true,
+                                   "family" : "inet",
+                                   "method" : "static",
+                                   "mtu" : "9000",
+                                   "netmask" : "$subnet_mask",
+                                   "status" : "Up"
+                                   }
+                          },
+               "cluster": {
+                         "name": "$mnode_host_name"
+                         }
+             },
+    "method": "SetConfig"
+}
+'
+----
+
+
+
+
+== タグ付きのストレージネットワークインターフェイスコントローラ（ NIC ）を設定します ネットワークインターフェイス
+
+.手順
+. SSH または vCenter コンソールを開きます。
+. 次のコマンドテンプレートの値を置き換え、コマンドを実行します。
++
+
+NOTE: 新しいストレージ・ネットワーク・インターフェイスに必要なパラメータごとに値は「 $ 」で表されます。次のテンプレート内の 'cluster' オブジェクトは必須であり ' 管理ノードのホスト名の変更に使用できます`-- 非セキュアなオプションや '-k オプションは ' 本番環境では使用しないでください
+
++
+[listing]
+----
+curl -u $mnode_user_name:$mnode_password --insecure -X POST \
+https://$mnode_IP:442/json-rpc/10.0 \
+-H 'Content-Type: application/json' \
+-H 'cache-control: no-cache' \
+-d ' {
+     "params": {
+               "network": {
+                          "$eth1": {
+                                   "#default" : false,
+                                   "address" : "$storage_IP",
+                                   "auto" : true,
+                                   "family" : "inet",
+                                   "method" : "static",
+                                   "mtu" : "9000",
+                                   "netmask" : "$subnet_mask",
+                                   "status" : "Up",
+                                   "virtualNetworkTag" : "$vlan_id"
+                                   }
+                          },
+               "cluster": {
+                         "name": "$mnode_host_name",
+                         "cipi": "$eth1.$vlan_id",
+                         "sipi": "$eth1.$vlan_id"
+                         }
+             },
+    "method": "SetConfig"
+}
+'
+----
+
+
+[discrete]
+== 詳細はこちら
+
+* link:task_mnode_add_assets.html["管理ノードにコンピューティングアセットとコントローラアセットを追加します"]
+* https://docs.netapp.com/us-en/vcp/index.html["vCenter Server 向け NetApp Element プラグイン"^]
+* https://www.netapp.com/hybrid-cloud/hci-documentation/["NetApp HCI のリソースページ"^]
+

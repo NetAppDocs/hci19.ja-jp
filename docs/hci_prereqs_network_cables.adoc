@@ -1,0 +1,46 @@
+---
+sidebar: sidebar 
+permalink: docs/hci_prereqs_network_cables.html 
+summary: NetApp HCI ネットワークケーブルの要件について説明します。 
+keywords: netapp, hci, network, cable, requirements 
+---
+= ネットワークケーブルの要件
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ../media/
+:keywords: netapp, hci, network, cable, requirements
+
+
+[role="lead"]
+次のガイドラインを参考に、環境の規模に対応した正しい種類のネットワークケーブルを十分な数用意してください。RJ45 ポートには、 Cat 5e または Cat 6 のケーブルを使用する必要があります。
+
+* ケーブル 2 本のコンピューティングノード構成：各コンピューティングノードを、 2 つの SFP+ / SFP28 インターフェイスで 10 / 25GbE ネットワークに接続する必要があります（もう 1 本の Cat 5e / 6 ケーブルはオプションで、アウトオブバンド管理用です）。
+* ケーブル 6 本のコンピューティングノード構成：各コンピューティングノードを、 4 つの SFP+ / SFP28 インターフェイスで 10 / 25GbE ネットワークに接続し、 2 本の Cat 5e / 6 ケーブルで 1 / 10GbE ネットワークに接続する必要があります（もう 1 本の Cat 5e / 6 ケーブルはオプションで、アウトオブバンド管理用です）。
+* 各ストレージノードを、 2 つの SFP+ / SFP28 インターフェイスで 10 / 25GbE ネットワークに接続し、 2 本の Cat 5e / 6 ケーブルで 1 / 10GbE ネットワークに接続する必要があります（もう 1 本の Cat 5e / 6 ケーブルはオプションで、アウトオブバンド管理用です）。
+* NetApp HCI システムをネットワークに接続するためのネットワークケーブルが、スイッチに届く十分な長さであることを確認します。
+
+
+たとえば、 4 つのストレージノードと 3 つのコンピューティングノード（ケーブル 6 本の構成を使用）がある環境では、次の本数のネットワークケーブルが必要になります。
+
+* RJ45 コネクタ付属の Cat 5e / 6 ケーブル × 14 （さらに必要に応じて IPMI トラフィック用のケーブル × 7 ）
+* SFP28 / SFP+ コネクタ付属の Twinax ケーブル × 20
+
+
+これは、次の理由によるものです。
+
+* 4 つのストレージノードに Cat 5e / 6 ケーブルと Twinax ケーブルがそれぞれ 8 本必要です。
+* ケーブル 6 本の構成を使用する 3 つのコンピューティングノードに Cat 5e / 6 ケーブルが 6 本、 Twinax ケーブルが 12 本必要です。
+
+
+
+NOTE: ケーブルを 6 本使用する構成では、 2 つのポートが VMware ESXi 用に予約されており、 NetApp Deployment Engine によってセットアップおよび管理されます。Element の TUI または Element Web GUI を使用して、これらの ESXi 専用ポートにアクセスしたり管理したりすることはできません。
+
+[discrete]
+== 詳細については、こちらをご覧ください
+
+* https://www.netapp.com/hybrid-cloud/hci-documentation/["NetApp HCI のリソースページ"^]
+* https://docs.netapp.com/us-en/vcp/index.html["vCenter Server 向け NetApp Element プラグイン"^]
+

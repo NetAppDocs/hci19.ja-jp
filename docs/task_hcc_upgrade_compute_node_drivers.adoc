@@ -1,0 +1,63 @@
+---
+sidebar: sidebar 
+permalink: docs/task_hcc_upgrade_compute_node_drivers.html 
+summary: NetApp HCI システムのアップグレードの一環として、コンピューティングノードのドライバをアップグレードします。 
+keywords: netapp, hci, on premise, cluster, element, compute node 
+---
+= コンピューティングノードのドライバを更新
+:allow-uri-read: 
+
+
+[role="lead"]
+H シリーズのコンピューティングノードでは、ノードで使用されているドライバを VMware Update Manager を使用して更新できます。
+
+のハードウェアのファームウェアとドライバのマトリックスを参照してください https://kb.netapp.com/Advice_and_Troubleshooting/Hybrid_Cloud_Infrastructure/NetApp_HCI/Firmware_and_driver_versions_in_NetApp_HCI_and_NetApp_Element_software["ネットアップの技術情報アーティクル"^] （ログインが必要です）。
+
+以下の更新処理は一度に 1 つずつ実行します。
+
+ファームウェアのアップグレードを実行する前に、 ESXi ドライバの現在のバージョンを確認する必要があります。ドライバが最新でない場合は、まずドライバをアップグレードします。その後、コンピューティングノードのコンピューティングファームウェアをアップグレードします。
+
+.手順
+. を参照します https://mysupport.netapp.com/site/products/all/details/netapp-hci/downloads-tab["NetApp HCI ソフトウェアのダウンロード"^] ページに移動し、正しいバージョンの NetApp HCI のダウンロードリンクを選択します。
+. ドロップダウンリストから * esxi_drivers * を選択します。
+. エンドユーザライセンス契約に同意します。
+. 使用しているノードタイプと ESXi バージョンに対応したドライバパッケージをダウンロードします。
+. ダウンロードしたドライババンドルをローカルコンピュータに展開します。
++
+
+NOTE: ネットアップのドライババンドルには、 VMware オフラインバンドルの ZIP ファイルが 1 つ以上含まれています。これらの ZIP ファイルは展開しないでください。
+
+. VMware vCenter の * VMware Update Manager * にアクセスします。
+. コンピューティングノードのドライバオフラインバンドルファイルを * パッチリポジトリ * にインポートします。
++
+** VMware ESXi 7.0 では、 NetApp H610C 、 H615C 、 H410C 、および Hx00E コンピューティングノードとそのビルドインシステムコンポーネントに必要なすべてのドライバが、 VMware ESXi 7.0 の標準のインストール ISO イメージに含まれています。VMware ESXi 7.0 （および更新）を実行する NetApp HCI コンピューティングノードのドライバを追加または更新する必要はありません。
+** VMware ESXi 6.x の場合、次の手順を実行して、ドライバのオフラインバンドルファイルをインポートします。
++
+... [* アップデート * （ Updates * ） ] タブを選択します。
+... 「 * ファイルからアップロード」を選択します。
+... 以前にダウンロードしたオフラインバンドルを参照し、 * import * を選択します。
+
+
+
+
+. コンピューティングノードの新しいホストベースラインを作成します。
+. 名前とタイプに * Host Extension * を選択し、インポートされたすべてのドライバパッケージを新しいベースラインに含めるように選択します。
+. vCenter の * Host and Clusters * メニューで、更新するコンピュートノードを含むクラスタを選択し、 * Update Manager * タブに移動します。
+. [* 修正（ Remediate* ） ] を選択し、新しく作成したホストベースラインを選択します。ベースラインに含まれるドライバが選択されていることを確認します。
+. ウィザードの指示に従って、 * Host Remediation Options * に進み、ドライバの更新中に仮想マシンをオンラインの状態に保つために、 * Do Not Change VM Power State * オプションが選択されていることを確認します。
++
+
+NOTE: クラスタで VMware DRS （ Distributed Resource Scheduler ）が有効になっている場合（ NetApp HCI 環境のデフォルト）、仮想マシンはクラスタ内の他のノードに自動的に移行されます。
+
+. ウィザードの [*Ready to Complete] ページに進み、 [*Finish] を選択します。
++
+クラスタ内のすべてのコンピューティングノードのドライバが、仮想マシンはオンラインのまま、一度に 1 ノードずつ更新されます。
+
+
+
+[discrete]
+== 詳細については、こちらをご覧ください
+
+* https://docs.netapp.com/us-en/vcp/index.html["vCenter Server 向け NetApp Element プラグイン"^]
+* https://www.netapp.com/hybrid-cloud/hci-documentation/["NetApp HCI のリソースページ"^]
+

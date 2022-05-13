@@ -1,0 +1,60 @@
+---
+sidebar: sidebar 
+permalink: docs/task_mnode_api_get_authorizationtouse.html 
+summary: REST API UI で管理サービス用の API を使用するには、事前に承認が必要です。 
+keywords: netapp, hci, management node, mnode, api, token 
+---
+= REST API を使用するための許可を取得する
+:allow-uri-read: 
+
+
+[role="lead"]
+REST API UI で管理サービス用の API を使用するには、事前に承認が必要です。アクセストークンを取得します。
+
+トークンを取得するには、クラスタ管理者のクレデンシャルとクライアント ID を指定します。各トークンの有効期間は約 10 分です。トークンの期限が切れたら、再度承認して新しいアクセストークンを取得できます。
+
+許可機能は管理ノードのインストールおよび導入時に設定します。トークンサービスは、セットアップ時に定義したストレージクラスタに基づいています。
+
+.作業を開始する前に
+* クラスタで NetApp Element ソフトウェア 11.3 以降を実行している必要があります。
+* バージョン 11.3 以降を実行する管理ノードを導入しておく必要があります。
+
+
+.API コマンド
+[listing]
+----
+TOKEN=`curl -k -X POST https://MVIP/auth/connect/token -F client_id=mnode-client -F grant_type=password -F username=CLUSTER_ADMIN -F password=CLUSTER_PASSWORD|awk -F':' '{print $2}'|awk -F',' '{print $1}'|sed s/\"//g`
+----
+.REST API の UI の手順
+. サービスの REST API UI にアクセスするには、管理ノードの IP アドレスのあとにサービス名を入力します。例：「 /mnode/` ：
++
+[listing]
+----
+https://<ManagementNodeIP>/mnode/
+----
+. 「 * 許可」をクリックします。
++
+
+NOTE: または、任意のサービス API の横にあるロックアイコンをクリックすることもできます。
+
+. 次の手順を実行します。
++
+.. クラスタのユーザ名とパスワードを入力します。
+.. クライアント ID を「 m node-client 」として入力します。
+.. クライアントシークレットの値は入力しないでください。
+.. セッションを開始するには、 * Authorize * をクリックします。
+
+
+. [*Available Authorizations ( 使用可能な承認 )*] ダイアログボックスを閉じます。
++
+
+NOTE: トークンの期限が切れた後にコマンドを実行しようとすると、「 401 Error: Unauthorized 」というメッセージが表示されます。このメッセージが表示された場合は、再度承認してください。
+
+
+
+[discrete]
+== 詳細については、こちらをご覧ください
+
+* https://docs.netapp.com/us-en/vcp/index.html["vCenter Server 向け NetApp Element プラグイン"^]
+* https://www.netapp.com/hybrid-cloud/hci-documentation/["NetApp HCI のリソースページ"^]
+

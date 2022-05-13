@@ -1,0 +1,335 @@
+---
+sidebar: sidebar 
+permalink: docs/task_rancher_upgrades.html 
+summary: NetApp Hybrid Cloud Control を使用して、 HCC を使用して以前にインストールした NetApp HCI 上のランチャ導入環境のコンポーネントをアップグレードできます。 
+keywords: netapp, hci, rancher, upgrade, hcc 
+---
+= NetApp HCI の Rancher をアップグレードします
+:allow-uri-read: 
+
+
+[role="lead"]
+rancher ソフトウェアをアップグレードするには、 NetApp Hybrid Cloud Control （ HCC ） UI または REST API を使用します。HCC は、 Rancher サーバ、 Rancher Kubernetes Engine （ RKE ）、および管理クラスタのノード OS （セキュリティアップデート用）など、 Rancher 導入環境のコンポーネントをアップグレードするための簡単なボタンプロセスを提供します。また、 API を使用してアップグレードを自動化することもできます。
+
+アップグレードは、累積パッケージではなくコンポーネント単位で実行できます。このため、 Ubuntu OS などの一部のコンポーネントのアップグレードを、より迅速に行うことができます。アップグレードは、 Rancher サーバインスタンスと Rancher サーバが配置されている管理クラスタにのみ影響します。管理クラスタノードの Ubuntu OS へのアップグレードは、重要なセキュリティパッチのみを対象としており、オペレーティングシステムはアップグレードしません。ユーザクラスタは NetApp Hybrid Cloud Control からアップグレードできません。
+
+.必要なもの
+* * admin 権限 * ：アップグレードを実行する権限がストレージクラスタ管理者に付与されています。
+* * 管理サービス * ：管理サービスバンドルを最新バージョンに更新しました。
+
+
+
+IMPORTANT: Rancher 機能を使用するには、最新の管理サービスバンドル 2.17 以降にアップグレードする必要があります。
+
+* * システムポート * ： NetApp Hybrid Cloud Control をアップグレードに使用している場合は、必要なポートが開いていることを確認しておきます。を参照してください link:rancher_prereqs_overview.html#required-ports["ネットワークポート"] を参照してください。
+* *エンドユーザライセンス契約（EULA）*：管理サービス2.20以降では、NetApp Hybrid Cloud ControlのUIまたはAPIを使用してランチャの導入環境をアップグレードする前に、EULAに同意して保存する必要があります。
++
+.. Webブラウザで管理ノードのIPアドレスを開きます。
++
+[listing]
+----
+https://<ManagementNodeIP>
+----
+.. ストレージクラスタ管理者のクレデンシャルを指定して NetApp Hybrid Cloud Control にログインします。
+.. インターフェイスの右上にある [* Upgrade] を選択します。
+.. EULAがポップアップ表示されます。下にスクロールして、[現在および今後のすべての更新を許可する*]を選択し、[保存*]を選択します。
++
+
+NOTE: EULAに同意すると、以後のすべての更新についてそのEULAが記録され、自動ダウンロード機能が有効になります。ネットアップのソフトウェアの更新とアップグレードに関する最新情報が提供されます。この情報はお客様の自由裁量と利便性に基づいてインストールすることができます。ネットアップオンラインソフトウェアリポジトリへのネットワーク接続を無効にすることで、自動ダウンロード機能を無効にできます。
+
+
+
+
+
+次のいずれかのアップグレードプロセスを選択します。
+
+* <<Use NetApp Hybrid Cloud Control UI to upgrade a Rancher deployment>>
+* <<Use NetApp Hybrid Cloud Control API to upgrade a Rancher deployment>>
+
+
+
+
+== NetApp Hybrid Cloud Control の UI を使用してランチャをアップグレード 導入
+
+NetApp Hybrid Cloud Control の UI を使用して、ランチャ環境の以下のコンポーネントをアップグレードできます。
+
+* Rancher サーバ
+* Rancher Kubernetes Engine （ RKE ）
+* ノード OS のセキュリティ更新
+
+
+.必要なもの
+* インターネット接続が良好です。ダークサイトのアップグレード（外部接続のないサイトでのアップグレード）は利用できません。
+
+
+.手順
+. Webブラウザで管理ノードのIPアドレスを開きます。
++
+[listing]
+----
+https://<ManagementNodeIP>
+----
+. ストレージクラスタ管理者のクレデンシャルを指定して NetApp Hybrid Cloud Control にログインします。
+. インターフェイスの右上にある [* Upgrade] を選択します。
+. [* アップグレード * （ Upgrades * ） ] ページで、 [* ランチー * （ * rancher * ） ] を選択
+. アップグレードするソフトウェアの [* アクション * ] メニューを選択します。
++
+** Rancher サーバ
+** Rancher Kubernetes Engine （ RKE ）
+** ノード OS のセキュリティ更新
+
+
+. Rancher サーバまたは RKE アップグレードの場合は * Upgrade * を、ノード OS のセキュリティアップデートの場合は * Apply Upgrade * を選択します。
++
+
+NOTE: ノード OS の場合、セキュリティパッチの無人アップグレードは日単位で実行されますが、ノードは自動的にはリブートされません。アップグレードを適用すると、各ノードをリブートしてセキュリティ更新を有効にできます。
+
+
+
+コンポーネントのアップグレードが正常に完了したことを示すバナーが表示されます。NetApp Hybrid Cloud Control の UI で更新後のバージョン番号が表示されるまでに最大 2 分かかる場合があります。
+
+
+
+== NetApp Hybrid Cloud Control API を使用してランチャをアップグレード 導入
+
+API を使用して、 Rancher 展開内の次のコンポーネントをアップグレードできます。
+
+* Rancher サーバ
+* Rancher Kubernetes Engine （ RKE ）
+* ノード OS （セキュリティ更新用）
+
+
+任意の自動化ツールを使用して、管理ノードで使用可能な API または REST API UI を実行できます。
+
+.オプション（ Options ）
+* <<Upgrade Rancher Server>>
+* <<Upgrade RKE>>
+* <<Apply node OS security updates>>
++
+
+NOTE: ノード OS の場合、セキュリティパッチの無人アップグレードは日単位で実行されますが、ノードは自動的にはリブートされません。アップグレードを適用すると、各ノードをリブートしてセキュリティ更新を有効にできます。
+
+
+
+
+
+=== Rancher サーバをアップグレードします
+
+.API コマンド
+. アップグレードバージョンリストの要求を開始します。
++
+[listing]
+----
+curl -X POST "https://<managementNodeIP>/k8sdeployer/1/upgrade/rancher-versions" -H "accept: application/json" -H "Authorization: Bearer ${TOKEN}"
+----
++
+
+NOTE: API コマンドで使用されるベアラー '$ ｛ token ｝ ' を検索できます link:task_mnode_api_get_authorizationtouse.html["許可します"]。ベアラー '$ ｛ token ｝ ' は curl 応答に含まれています。
+
+. 前のコマンドのタスク ID を使用してタスクステータスを取得し、応答から最新のバージョン番号をコピーします。
++
+[listing]
+----
+curl -X GET "https://<mNodeIP>/k8sdeployer/1/task/<taskID>" -H "accept: application/json" -H "Authorization: Bearer ${TOKEN}"
+----
+. Rancher サーバのアップグレード要求を開始します。
++
+[listing]
+----
+curl -X PUT "https://<mNodeIP>/k8sdeployer/1/upgrade/rancher/<version number>" -H "accept: application/json" -H "Authorization: Bearer"
+----
+. アップグレードコマンドの応答からタスク ID を使用してタスクステータスを取得します。
++
+[listing]
+----
+curl -X GET "https://<mNodeIP>/k8sdeployer/1/task/<taskID>" -H "accept: application/json" -H "Authorization: Bearer ${TOKEN}"
+----
+
+
+.REST API の UI の手順
+. 管理ノードで管理ノード REST API UI を開きます。
++
+[listing]
+----
+https://<ManagementNodeIP>/k8sdeployer/api/
+----
+. 「 * Authorize * 」（認証）を選択して、次の手順を実行
++
+.. クラスタのユーザ名とパスワードを入力します。
+.. クライアント ID を「 m node-client 」として入力します。
+.. セッションを開始するには、 * Authorize * を選択します。
+.. 承認ウィンドウを閉じます。
+
+
+. 最新のアップグレードパッケージを確認します。
++
+.. REST API UI から * POST/upgradeRunce/rancher-versions * を実行します。
+.. 応答から、タスク ID をコピーします。
+.. 前の手順で確認したタスク ID で * Get/taskTouled/{taskID}* を実行します。
+
+
+. /tasksuses/{taskID}* 応答から、アップグレードに使用する最新バージョン番号をコピーします。
+. Rancher Server アップグレードを実行します。
++
+.. REST API UI から、前の手順の最新バージョン番号を使用して * PUT / upgrade/Pedries/rancherRunce/ ｛ version ｝ * を実行します。
+.. 応答から、タスク ID をコピーします。
+.. 前の手順で確認したタスク ID で * Get/taskTouled/{taskID}* を実行します。
+
+
+
+
+アップグレードが正常に完了したのは、「 PercentComplete 」が「 100 」を示し、「結果」がアップグレードされたバージョン番号を示している場合です。
+
+
+
+=== RKE をアップグレードします
+
+.API コマンド
+. アップグレードバージョンリストの要求を開始します。
++
+[listing]
+----
+curl -X POST "https://<mNodeIP>/k8sdeployer/1/upgrade/rke-versions" -H "accept: application/json" -H "Authorization: Bearer ${TOKEN}"
+----
++
+
+NOTE: API コマンドで使用されるベアラー '$ ｛ token ｝ ' を検索できます link:task_mnode_api_get_authorizationtouse.html["許可します"]。ベアラー '$ ｛ token ｝ ' は curl 応答に含まれています。
+
+. 前のコマンドのタスク ID を使用してタスクステータスを取得し、応答から最新のバージョン番号をコピーします。
++
+[listing]
+----
+curl -X GET "https://<mNodeIP>/k8sdeployer/1/task/<taskID>" -H "accept: application/json" -H "Authorization: Bearer ${TOKEN}"
+----
+. RKE アップ・リクエストを開始します
++
+[listing]
+----
+curl -X PUT "https://<mNodeIP>/k8sdeployer/1/upgrade/rke/<version number>" -H "accept: application/json" -H "Authorization: Bearer"
+----
+. アップグレードコマンドの応答からタスク ID を使用してタスクステータスを取得します。
++
+[listing]
+----
+curl -X GET "https://<mNodeIP>/k8sdeployer/1/task/<taskID>" -H "accept: application/json" -H "Authorization: Bearer ${TOKEN}"
+----
+
+
+.REST API の UI の手順
+. 管理ノードで管理ノード REST API UI を開きます。
++
+[listing]
+----
+https://<ManagementNodeIP>/k8sdeployer/api/
+----
+. 「 * Authorize * 」（認証）を選択して、次の手順を実行
++
+.. クラスタのユーザ名とパスワードを入力します。
+.. クライアント ID を「 m node-client 」として入力します。
+.. セッションを開始するには、 * Authorize * を選択します。
+.. 承認ウィンドウを閉じます。
+
+
+. 最新のアップグレードパッケージを確認します。
++
+.. REST API UI から、 * POST/upgradeRunce/RKE -versions * を実行します。
+.. 応答から、タスク ID をコピーします。
+.. 前の手順で確認したタスク ID で * Get/taskTouled/{taskID}* を実行します。
+
+
+. /tasksuses/{taskID}* 応答から、アップグレードに使用する最新バージョン番号をコピーします。
+. RKE アップグレードを実行します。
++
+.. REST API UI から、前の手順の最新バージョン番号を使用して * PUT / upgrade / RKE / ｛ version ｝ * を実行します。
+.. 応答からタスク ID をコピーします。
+.. 前の手順で確認したタスク ID で * Get/taskTouled/{taskID}* を実行します。
+
+
+
+
+アップグレードが正常に完了したのは、「 PercentComplete 」が「 100 」を示し、「結果」がアップグレードされたバージョン番号を示している場合です。
+
+
+
+=== ノード OS のセキュリティ更新を適用
+
+.API コマンド
+. アップグレードチェック要求を開始します。
++
+[listing]
+----
+curl -X GET "https://<mNodeIP>/k8sdeployer/1/upgrade/checkNodeUpdates" -H "accept: application/json" -H "Authorization: Bearer ${TOKEN}"
+----
++
+
+NOTE: API コマンドで使用されるベアラー '$ ｛ token ｝ ' を検索できます link:task_mnode_api_get_authorizationtouse.html["許可します"]。ベアラー '$ ｛ token ｝ ' は curl 応答に含まれています。
+
+. 前のコマンドのタスク ID を使用してタスクステータスを取得し、応答から新しいバージョン番号を取得できることを確認します。
++
+[listing]
+----
+curl -X GET "https://<mNodeIP>/k8sdeployer/1/task/<taskID>" -H "accept: application/json" -H "Authorization: Bearer ${TOKEN}"
+----
+. ノードの更新を適用します。
++
+[listing]
+----
+curl -X POST "https://<mNodeIP>/k8sdeployer/1/upgrade/applyNodeUpdates" -H "accept: application/json" -H "Authorization: Bearer"
+----
++
+
+NOTE: ノード OS の場合、セキュリティパッチの無人アップグレードは日単位で実行されますが、ノードは自動的にはリブートされません。アップグレードを適用すると、各ノードを順番にリブートし、セキュリティ更新を有効にすることができます。
+
+. アップグレードの「 applyNodeUpdates 」応答からタスク ID を使用してタスクステータスを取得します。
++
+[listing]
+----
+curl -X GET "https://<mNodeIP>/k8sdeployer/1/task/<taskID>" -H "accept: application/json" -H "Authorization: Bearer ${TOKEN}"
+----
+
+
+.REST API の UI の手順
+. 管理ノードで管理ノード REST API UI を開きます。
++
+[listing]
+----
+https://<ManagementNodeIP>/k8sdeployer/api/
+----
+. 「 * Authorize * 」（認証）を選択して、次の手順を実行
++
+.. クラスタのユーザ名とパスワードを入力します。
+.. クライアント ID を「 m node-client 」として入力します。
+.. セッションを開始するには、 * Authorize * を選択します。
+.. 承認ウィンドウを閉じます。
+
+
+. アップグレードパッケージがあるかどうかを確認します。
++
+.. REST API UI から * get/upgrade/checkNodeUpdates * を実行します。
+.. 応答から、タスク ID をコピーします。
+.. 前の手順で確認したタスク ID で * Get/taskTouled/{taskID}* を実行します。
+.. * /tasksanges/｛ taskID ｝ * 応答から、ノードに現在適用されているバージョン番号よりも新しいバージョン番号があることを確認してください。
+
+
+. ノード OS のアップグレードを適用します。
++
+
+NOTE: ノード OS の場合、セキュリティパッチの無人アップグレードは日単位で実行されますが、ノードは自動的にはリブートされません。アップグレードを適用すると、各ノードを順番にリブートし、セキュリティ更新を有効にすることができます。
+
++
+.. REST API UI から * POST/upgrade投入 / applyNodeUpdates * を実行します。
+.. 応答から、タスク ID をコピーします。
+.. 前の手順で確認したタスク ID で * Get/taskTouled/{taskID}* を実行します。
+.. /tasksanges/{taskID}* 応答から、アップグレードが適用されたことを確認します。
+
+
+
+
+アップグレードが正常に完了したのは、「 PercentComplete 」が「 100 」を示し、「結果」がアップグレードされたバージョン番号を示している場合です。
+
+[discrete]
+== 詳細については、こちらをご覧ください
+
+* https://docs.netapp.com/us-en/vcp/index.html["vCenter Server 向け NetApp Element プラグイン"^]
+* https://www.netapp.com/hybrid-cloud/hci-documentation/["NetApp HCI のリソースページ"^]
+

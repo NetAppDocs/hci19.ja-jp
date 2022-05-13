@@ -1,0 +1,30 @@
+---
+sidebar: sidebar 
+permalink: docs/task_rancher_ensure_rancher_support_parity.html 
+summary: Rancher で使用しているライセンスが購入したライセンスと一致していることを確認する方法について説明します。 
+keywords: netapp, hci, Rancher, licensing 
+---
+= Rancher サポートパリティを確認します
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ../media/
+
+
+[role="lead"]
+NetApp HCI に Rancher を導入したら、購入した Rancher サポートコアの数が、 Rancher 管理 VM およびユーザクラスタに使用している CPU コアの数と一致していることを確認する必要があります。
+
+NetApp HCI コンピューティングリソースの一部のみを対象に Rancher サポートを購入した場合は、 NetApp HCI の Rancher とその管理対象ユーザクラスタが Rancher サポートを購入したホストでのみ実行されるようにするために、 VMware vSphere でアクションを実行する必要があります。コンピューティングワークロードを特定のホストに限定することでこのような制限を実現する方法については、 VMware vSphere のドキュメントを参照してください。
+
+[discrete]
+== 詳細については、こちらをご覧ください
+
+* https://docs.vmware.com/en/VMware-vSphere/6.5/com.vmware.vsphere.avail.doc/GUID-E137A9F8-17E4-4DE7-B986-94A0999CF327.html["vSphere HA と DRS アフィニティルール"]
+* https://docs.vmware.com/en/VMware-vSphere/6.7/com.vmware.vsphere.resmgmt.doc/GUID-FBE46165-065C-48C2-B775-7ADA87FF9A20.html["VM 非アフィニティルールを作成します"]
+* https://rancher.com/docs/rancher/v2.x/en/overview/architecture/["アーキテクチャに関する Rancher ドキュメント"^]
+* https://rancher.com/docs/rancher/v2.x/en/overview/concepts/["Rancher 用の Kubernetes 用語"]
+* https://docs.netapp.com/us-en/vcp/index.html["vCenter Server 向け NetApp Element プラグイン"^]
+* https://www.netapp.com/us/documentation/hci.aspx["NetApp HCI のリソースページ"^]
+

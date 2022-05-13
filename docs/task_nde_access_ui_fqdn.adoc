@@ -1,0 +1,221 @@
+---
+sidebar: sidebar 
+permalink: docs/task_nde_access_ui_fqdn.html 
+summary: システム FQDN Web UI アクセスを設定、削除、およびトラブルシューティングする方法について説明します。 
+keywords: netapp, hci, fqdn, ui, access, web, administration 
+---
+= 完全修飾ドメイン名 Web UI アクセスを設定します
+:allow-uri-read: 
+
+
+[role="lead"]
+Element ソフトウェア 12.2 以降を搭載した NetApp HCI では、 Fully Qualified Domain Name （ FQDN ；完全修飾ドメイン名）を使用してストレージクラスタの Web インターフェイスにアクセスできます。FQDN を使用して、 Element Web UI 、ノード UI 、管理ノード UI などの Web ユーザインターフェイスにアクセスする場合は、クラスタで使用される FQDN を特定するストレージクラスタ設定を最初に追加する必要があります。
+
+Fully Qualified Domain Name （ FQDN ；完全修飾ドメイン名）を使用してストレージクラスタの Web インターフェイスにアクセスできるようになりました。FQDN を使用して、 Element Web UI 、ノード UI 、管理ノード UI などの Web ユーザインターフェイスにアクセスする場合は、クラスタで使用される FQDN を特定するストレージクラスタ設定を最初に追加する必要があります。これにより、クラスタはログインセッションを適切にリダイレクトできるようになり、キー管理ツールやアイデンティティプロバイダなどの外部サービスとの統合が強化されて、多要素認証に対応できるようになります。
+
+.必要なもの
+* この機能を使用するには、 Element 12.2 以降が必要です。
+* NetApp Hybrid Cloud Control REST API を使用してこの機能を設定するには、管理サービス 2.15 以降が必要です。
+* NetApp Hybrid Cloud Control の UI を使用してこの機能を設定するには、管理サービス 2.19 以降が必要です。
+* REST API を使用するには、バージョン 11.5 以降を実行する管理ノードを導入しておく必要があります。
+* 管理ノードおよび各ストレージクラスタの IP アドレスに正しく解決されるように、管理ノードと各ストレージクラスタの IP アドレスを完全修飾ドメイン名する必要があります。
+
+
+NetApp Hybrid Cloud Control と REST API を使用して、 FQDN Web UI アクセスを設定または削除できます。正しく設定されていない FQDN をトラブルシューティングすることもできます。
+
+* <<Configure FQDN web UI access using NetApp Hybrid Cloud Control>>
+* <<Configure FQDN web UI access using the REST API>>
+* <<Remove FQDN web UI access using NetApp Hybrid Cloud Control>>
+* <<Remove FQDN web UI access using the REST API>>
+* <<Troubleshooting>>
+
+
+
+
+== NetApp Hybrid Cloud Control を使用して、 FQDN Web UI アクセスを設定します
+
+.手順
+. Webブラウザで管理ノードのIPアドレスを開きます。
++
+[listing]
+----
+https://<ManagementNodeIP>
+----
+. ストレージクラスタ管理者のクレデンシャルを指定して NetApp Hybrid Cloud Control にログインします。
+. ページの右上にあるメニューアイコンを選択します。
+. 「 * Configure * 」を選択します。
+. [ 完全修飾ドメイン名 *] ペインで、 [ セットアップ *] を選択します。
+. 表示されたウィンドウで、管理ノードおよび各ストレージクラスタの FQDN を入力します。
+. [ 保存（ Save ） ] を選択します。
++
+「 * Fully Qualified Domain Names * 」ペインには、各ストレージクラスタとその MVIP および FQDN が表示されます。
+
++
+
+NOTE: FQDN が設定されている接続されたストレージクラスタのみが、「 * Fully Qualified Domain Names * 」ペインに表示されます。
+
+
+
+
+
+== REST API を使用して FQDN Web UI アクセスを設定します
+
+.手順
+. 環境で FQDN が解決されるように、 Element ストレージノードと管理ノードの DNS がネットワーク環境に対して正しく設定されていることを確認します。DNS を設定するには、ストレージノードのノード UI および管理ノードに移動し、 * Network Settings * > * Management Network * を選択します。
++
+.. ストレージ・ノードのノード単位の UI ： https://<storage_node_management_IP>:442`
+.. 管理ノード用のノード単位の UI ： https://<management_node_IP>:442`
+
+
+. Element API を使用してストレージクラスタの設定を変更します。
++
+.. Element API にアクセスし、「 CreateClusterInterfacePreference 」 API メソッドを使用して次のクラスタインターフェイス設定を作成し、設定値としてクラスタ MVIP FQDN を挿入します。
++
+*** 名前 : 「 mvip 」
+*** Value ： < クラスタ MVIP の完全修飾ドメイン名 >
++
+たとえば、 FQDN は「 toragecluster.my.org`: 」です
+
++
+[listing]
+----
+https://<Cluster_MVIP>/json-rpc/12.2?method=CreateClusterInterfacePreference&name=mvip_fqdn&value=storagecluster.my.org
+----
+
+
+
+
+. 管理ノードで REST API を使用して管理ノードの設定を変更します。
++
+.. 管理ノードの REST API UI にアクセスするには、管理ノードの IP アドレスに「 /mnode/2/」 を続けて入力します。例：
++
+[listing]
+----
+https://<management_node_IP>/mnode/2/
+----
+.. 「 * Authorize * 」またはロックアイコンを選択し、 Element クラスタのユーザ名とパスワードを入力します。
+.. クライアント ID を「 m node-client 」として入力します。
+.. セッションを開始するには、 * Authorize * を選択します。
+.. ウィンドウを閉じます。
+.. 「 * GET / SETTINGS * 」を選択します。
+.. [* 試してみてください * ] を選択します。
+.. [* Execute] を選択します。
+.. プロキシが 'Use_proxy' では 'true' または 'false' で示されているように使用されているかどうかに注意してください
+.. 「 * PUT / SETTINGS * 」を選択します。
+.. [* 試してみてください * ] を選択します。
+.. 要求の本文領域で、管理ノードの FQDN を「 `m node_name 」パラメータの値として入力します。また 'use_proxy' パラメータにプロキシを使用するかどうかを指定します ( 前の手順の「 true 」または「 false 」 )
++
+[listing]
+----
+{
+  "mnode_fqdn": "mnode.my.org",
+  "use_proxy": false
+}
+----
+.. [* Execute] を選択します。
+
+
+
+
+
+
+== NetApp Hybrid Cloud Control を使用して、 FQDN Web UI アクセスを削除します
+
+この手順を使用して、管理ノードとストレージクラスタの FQDN Web アクセスを削除できます。
+
+.手順
+. [ 完全修飾ドメイン名 *] ペインで、 [ 編集 *] を選択します。
+. 表示されたウィンドウで、 *FQDN* テキストフィールドの内容を削除します。
+. [ 保存（ Save ） ] を選択します。
++
+ウィンドウが閉じ、 [*Fully Qualified Domain Names] ペインに FQDN が表示されなくなります。
+
+
+
+
+
+== REST API を使用して FQDN Web UI アクセスを削除します
+
+.手順
+. Element API を使用してストレージクラスタの設定を変更します。
++
+.. Element API にアクセスし、「 D eleteClusterInterfacePreference 」 API メソッドを使用して次のクラスタインターフェイス設定を削除します。
++
+*** 名前 : 「 mvip 」
++
+例：
+
++
+[listing]
+----
+https://<Cluster_MVIP>/json-rpc/12.2?method=DeleteClusterInterfacePreference&name=mvip_fqdn
+----
+
+
+
+
+. 管理ノードで REST API を使用して管理ノードの設定を変更します。
++
+.. 管理ノードの REST API UI にアクセスするには、管理ノードの IP アドレスに「 /mnode/2/」 を続けて入力します。例：
++
+[listing]
+----
+https://<management_node_IP>/mnode/2/
+----
+.. 「 * Authorize * 」またはロックアイコンを選択し、 Element クラスタのユーザ名とパスワードを入力します。
+.. クライアント ID を「 m node-client 」として入力します。
+.. セッションを開始するには、 * Authorize * を選択します。
+.. ウィンドウを閉じます。
+.. 「 * PUT / SETTINGS * 」を選択します。
+.. [* 試してみてください * ] を選択します。
+.. 要求の本文領域では、「 m node_fqdn 」パラメータに値を入力しないでください。また 'use_proxy' パラメータにプロキシを使用するかどうかを指定します ('true' または 'false')
++
+[listing]
+----
+{
+  "mnode_fqdn": "",
+  "use_proxy": false
+}
+----
+.. [* Execute] を選択します。
+
+
+
+
+
+
+== トラブルシューティング
+
+FQDN が正しく設定されていないと、管理ノード、ストレージクラスタ、またはその両方へのアクセスで問題が発生する可能性があります。問題のトラブルシューティングを行うには、次の情報を参照してください。
+
+|===
+| 問題 | 原因 | 解決策： 
+
+
+ a| 
+* FQDN を使用して管理ノードまたはストレージクラスタにアクセスしようとするとブラウザエラーが表示されます。
+* IP アドレスを使用して管理ノードまたはストレージクラスタにログインすることはできません。
+
+| 管理ノードの FQDN とストレージクラスタ FQDN の両方が正しく設定されていません。 | このページの REST API の手順を使用して、管理ノードとストレージクラスタの FQDN 設定を削除して設定し直します。 
+
+
+ a| 
+* ストレージクラスタ FQDN にアクセスしようとするとブラウザエラーが表示されます。
+* IP アドレスを使用して管理ノードまたはストレージクラスタにログインすることはできません。
+
+| 管理ノード FQDN が正しく設定されていますが、ストレージクラスタ FQDN が正しく設定されていません。 | このページの REST API の手順を使用して、ストレージクラスタの FQDN 設定を削除して再度設定します。 
+
+
+ a| 
+* 管理ノード FQDN にアクセスしようとするとブラウザエラーが表示されます。
+* IP アドレスを使用して管理ノードとストレージクラスタにログインできます。
+
+| 管理ノード FQDN の設定に誤りがありますが、ストレージクラスタ FQDN が正しく設定されています。 | NetApp Hybrid Cloud Control にログインして UI で管理ノードの FQDN 設定を修正するか、このページの REST API の手順を使用して設定を修正します。 
+|===
+[discrete]
+== 詳細については、こちらをご覧ください
+
+* https://docs.netapp.com/us-en/element-software/api/reference_element_api_createclusterinterfacepreference.html["SolidFire および Element ドキュメントの CreateClusterInterfacePreference API 情報"^]
+* https://www.netapp.com/us/documentation/hci.aspx["NetApp HCI のリソースページ"^]
+* https://docs.netapp.com/us-en/element-software/index.html["SolidFire および Element ソフトウェアのドキュメント"^]
+

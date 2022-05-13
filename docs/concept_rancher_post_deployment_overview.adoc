@@ -1,0 +1,33 @@
+---
+sidebar: sidebar 
+permalink: docs/concept_rancher_post_deployment_overview.html 
+summary: NetApp HCI に Rancher をインストールした後に実行する必要があるタスクについて説明します。 
+keywords: netapp, hci, Rancher, install, post installation, requirements, tasks 
+---
+= 導入後のタスクの概要
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ../media/
+
+
+[role="lead"]
+NetApp HCI に Rancher を導入したら、展開後の作業を続行する必要があります。
+
+* link:task_rancher_ensure_rancher_support_parity.html["Rancher サポートパリティを確認します"]
+* link:task_rancher_config_anti_affinity.html["VM の耐障害性を向上"]
+* link:task_rancher_enable_monitoring.html["監視を設定"]
+* link:task_rancher_trident.html["Trident をインストール"]
+* link:task_trident_configure_networking.html["ユーザクラスタで Trident のサポートを有効にします"]
+
+
+[discrete]
+== 詳細については、こちらをご覧ください
+
+* https://rancher.com/docs/rancher/v2.x/en/overview/architecture/["アーキテクチャに関する Rancher ドキュメント"^]
+* https://rancher.com/docs/rancher/v2.x/en/overview/concepts/["Rancher 用の Kubernetes 用語"]
+* https://docs.netapp.com/us-en/vcp/index.html["vCenter Server 向け NetApp Element プラグイン"^]
+* https://www.netapp.com/us/documentation/hci.aspx["NetApp HCI のリソースページ"^]
+

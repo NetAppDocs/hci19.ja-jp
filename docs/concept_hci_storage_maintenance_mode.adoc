@@ -1,0 +1,58 @@
+---
+sidebar: sidebar 
+permalink: docs/concept_hci_storage_maintenance_mode.html 
+summary: ソフトウェアのアップグレードやホストの修復などのメンテナンスのためにストレージノードをオフラインにする必要がある場合は、そのノードのメンテナンスモードを有効にすることで、ストレージクラスタの残りの部分への I/O の影響を最小限に抑えることができます。メンテナンスモードは、アプライアンスノードと SolidFire エンタープライズ SDS ノードの両方で使用できます。 
+keywords: netapp, hci, storage nodes, maintenance, mode 
+---
+= メンテナンスモード
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ../media/
+
+
+[role="lead"]
+ソフトウェアのアップグレードやホストの修復などのメンテナンスのためにストレージノードをオフラインにする必要がある場合は、そのノードのメンテナンスモードを有効にすることで、ストレージクラスタの残りの部分への I/O の影響を最小限に抑えることができます。メンテナンスモードは、アプライアンスノードと SolidFire エンタープライズ SDS ノードの両方で使用できます。
+
+
+NOTE: ストレージノードの電源をオフにすると、 HCC のストレージページのノードステータス列に「使用不可」と表示されます。これは、クラスタ側から見たノードのステータスを示します。ノードの電源オフステータスは、ノードのホスト名の横にある * オフライン * アイコンで示されます。
+
+ストレージノードを保守モードに移行できるのは、ノードが正常で（クラスタエラーがブロックされていない）、かつストレージクラスタが単一ノード障害に対応している場合のみです。正常なトレラントノードに対してメンテナンスモードをイネーブルにすると、ノードはすぐには移行されません。このノードは、次の条件が満たされるまで監視されます。
+
+* ノードでホストされているすべてのボリュームがフェイルオーバーされました
+* ノードはのプライマリではなくなりました 任意のボリューム
+* 一時スタンバイノードは、対象のすべてのボリュームに割り当てられます フェイルオーバーしました
+
+
+これらの条件を満たすと、ノードは保守モードに移行します。5 分以内に上記の条件が満たされないと、ノードは保守モードになりません。
+
+ストレージノードのメンテナンスモードを無効にすると、次の条件が満たされるまでノードが監視されます。
+
+* すべてのデータがノードに完全にレプリケートされます
+* ブロックしているクラスタのすべての障害が解決されます
+* ホストされているボリュームに対する一時的なスタンバイノードの割り当て ノードが非アクティブ化されました
+
+
+これらの条件を満たしている場合、ノードはメンテナンスモードから移行されます。1 時間以内に上記の条件を満たしていないと、ノードのメンテナンスモードからの移行が失敗します。
+
+メンテナンスモードで作業する際のメンテナンスモード処理の状態は、 Element API で確認できます。
+
+* * 無効 *: メンテナンスが要求されていません。
+* * FailedToRecover * ：ノードのメンテナンスからのリカバリに失敗しました。
+* *RecoveringFromMaintenance *: ノードはメンテナンスからリカバリ中です
+* *PreparingForMaintenance *: ノードのメンテナンスを実行できるようにするためのアクションが実行されています。
+* * ReadyForMaintenance * ：ノードはメンテナンスの準備ができています。
+
+
+
+
+== 詳細については、こちらをご覧ください
+
+* https://docs.netapp.com/us-en/element-software/api/reference_element_api_enablemaintenancemode.html["Element API のメンテナンスモードを有効にします"^]
+* https://docs.netapp.com/us-en/element-software/api/reference_element_api_disablemaintenancemode.html["Element API のメンテナンスモードを無効にします"^]
+* https://docs.netapp.com/us-en/element-software/api/concept_element_api_about_the_api.html["NetApp Element API ドキュメント"^]
+* https://www.netapp.com/hybrid-cloud/hci-documentation/["NetApp HCI のリソースページ"^]
+* https://docs.netapp.com/us-en/vcp/index.html["vCenter Server 向け NetApp Element プラグイン"^]
+

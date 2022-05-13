@@ -1,0 +1,69 @@
+---
+sidebar: sidebar 
+permalink: docs/task_mnode_configure_proxy_server.html 
+summary: REST API UI を使用して、管理ノードの構成にコンピューティングアセットとコントローラアセットを追加できます。 
+keywords: netapp, hci, mnode, api, management node, add proxy, proxy server 
+---
+= プロキシサーバを設定します
+:allow-uri-read: 
+
+
+[role="lead"]
+クラスタがプロキシサーバの背後にある場合、パブリックネットワークに接続できるようにプロキシを設定する必要があります。
+
+プロキシサーバは、テレメトリコレクタとリバーストンネル接続に使用されます。インストールまたはアップグレード時にプロキシサーバを設定しなかった場合は、 REST API UI を使用してプロキシサーバを有効にして設定することができます。既存のプロキシサーバ設定を変更したり、プロキシサーバを無効にしたりすることもできます。
+
+プロキシサーバの更新を設定するコマンド。管理ノードの現在のプロキシ設定を返します。プロキシ設定は、 Active IQ 、 NetApp Deployment Engine によって導入される NetApp HCI 監視サービス、およびネットアップサポート用のリバースサポートトンネルなど、管理ノードにインストールされるその他の Element ソフトウェアユーティリティで使用されます。
+
+.作業を開始する前に
+* 設定するプロキシサーバのホストとクレデンシャルの情報を確認しておく必要があります。
+* クラスタで NetApp Element ソフトウェア 11.3 以降を実行していることを確認します。
+* バージョン 11.3 以降を実行する管理ノードを導入しておきます。
+* （管理ノード 12.0 以降）プロキシサーバを設定する前に、 NetApp Hybrid Cloud Control を管理サービスバージョン 2.16 に更新しました。
+
+
+.手順
+. 管理ノードの IP アドレスに「 /mnode 」を続けて入力し、管理ノードの REST API UI にアクセスします。
++
+[listing]
+----
+https://<ManagementNodeIP>/mnode
+----
+. [* Authorize * （認証） ] または任意のロックアイコンをクリックして、次の手順を実行します。
++
+.. クラスタのユーザ名とパスワードを入力します。
+.. クライアント ID を「 m node-client 」として入力します。
+.. セッションを開始するには、 * Authorize * をクリックします。
+.. ウィンドウを閉じます。
+
+
+. [* PUT / settings] をクリックします。
+. [* 試してみてください * ] をクリックします。
+. プロキシ・サーバを有効にするには 'use_proxy' を true に設定する必要がありますIP またはホスト名とプロキシポートの宛先を入力します。
++
+プロキシユーザ名、プロキシパスワード、および SSH ポートはオプションです。使用しない場合は省略してください。
+
++
+[listing]
+----
+{
+"proxy_ip_or_hostname": "[IP or name]",
+"use_proxy": [true/false],
+"proxy_username": "[username]",
+"proxy_password": "[password]",
+"proxy_port": [port value],
+"proxy_ssh_port": [port value: default is 443]
+}
+----
+. [* Execute] をクリックします。
+
+
+
+NOTE: 環境によっては、管理ノードのリブートが必要になることがあります。
+
+[discrete]
+== 詳細については、こちらをご覧ください
+
+* https://docs.netapp.com/us-en/vcp/index.html["vCenter Server 向け NetApp Element プラグイン"^]
+* https://www.netapp.com/hybrid-cloud/hci-documentation/["NetApp HCI のリソースページ"^]
+

@@ -1,0 +1,179 @@
+---
+sidebar: sidebar 
+permalink: docs/task_hcc_edit_bmc_info.html 
+summary: NetApp Hybrid Cloud Control を使用して、 NetApp HCI が接続できるようにベースボード管理コントローラ（ BMC ）の接続情報を編集できます。 
+keywords: netapp, hci, BMC, connection, credentials, monitor 
+---
+= ベースボード管理コントローラの接続情報を編集します
+:allow-uri-read: 
+
+
+[role="lead"]
+ベースボード管理コントローラ（ BMC ）の管理者クレデンシャルは、各コンピューティングノードの NetApp Hybrid Cloud Control で変更できます。BMC ファームウェアをアップグレードする前に資格情報を変更したり、 NetApp Hybrid Cloud Control に表示される「 Hardware ID not available 」（ハードウェア ID が利用できません）または「 Unable to detect 」（検出できません）のエラーを解決したりする必要があります。
+
+BMC クレデンシャルを変更するためのクラスタ管理者の権限。
+
+
+NOTE: ヘルスチェック時に BMC クレデンシャルを設定した場合、変更が * Nodes * ページに反映されるまでに最大 2 分かかることがあります。
+
+BMC クレデンシャルを変更するには、次のいずれかのオプションを選択します。
+
+* <<Use NetApp Hybrid Cloud Control to edit BMC information>>
+* <<Use the REST API to edit BMC information>>
+
+
+
+
+== NetApp Hybrid Cloud Control を使用して BMC の情報を編集します
+
+保存されている BMC クレデンシャルは、 NetApp Hybrid Cloud Control Dashboard を使用して編集できます。
+
+.手順
+. Webブラウザで管理ノードのIPアドレスを開きます。例：
++
+[listing]
+----
+https://<ManagementNodeIP>
+----
+. NetApp HCI ストレージクラスタ管理者のクレデンシャルを指定して NetApp Hybrid Cloud Control にログインします。
+. 左側のナビゲーション青いボックスで、 NetApp HCI のインストールを選択します。
++
+NetApp Hybrid Cloud Control Dashboard が表示されます。
+
+. 左側のナビゲーションで、 * ノード * をクリックします。
+. コンピューティングインベントリ情報を表示するには、 * Compute * をクリックします。
++
+コンピューティングノードのリストが表示されます。「 * BMC Connection Status * 」列には、各コンピューティングノードでの BMC 接続試行の結果が表示されます。コンピューティングノードの接続試行が失敗した場合は、そのノードのエラーメッセージがこの列に表示されます。
+
+. BMC 接続エラーが発生しているコンピューティングノード用に保存されている BMC クレデンシャルを追加または編集するには、エラーメッセージテキストで * 接続設定の編集 * をクリックします。
+. 表示されるダイアログで、このコンピューティングノードの BMC に対応する正しい管理者ユーザ名とパスワードを追加します。
+. [ 保存（ Save ） ] をクリックします。
+. 保存されている BMC クレデンシャルが不足しているコンピューティングノードまたは正しくないコンピューティングノードに対して、手順 6~8 を繰り返します。
+
+
+
+NOTE: BMC の情報を更新すると、インベントリが更新され、管理ノードのサービスで、アップグレードの完了に必要なすべてのハードウェアパラメータが認識されるようになります。
+
+
+
+== BMC の情報を編集するには、 REST API を使用します
+
+保存されている BMC クレデンシャルは、 NetApp Hybrid Cloud Control REST API を使用して編集できます。
+
+.手順
+. コンピューティングノードのハードウェアタグと BMC の情報を確認します。
++
+.. 管理ノードでインベントリサービス REST API UI を開きます。
++
+[listing]
+----
+https://<ManagementNodeIP>/inventory/1/
+----
+.. 「 * Authorize * 」（認証）をクリックして、次の手順を実行
++
+... クラスタのユーザ名とパスワードを入力します。
+... クライアント ID を「 m node-client 」として入力します。
+... セッションを開始するには、 * Authorize * をクリックします。
+... 承認ウィンドウを閉じます。
+
+
+.. REST API UI で、 * GET / Installations * をクリックします。
+.. [* 試してみてください * ] をクリックします。
+.. [* Execute] をクリックします。
+.. 応答から ' インストール資産 ID (id`) をコピーします
+.. REST API UI で、 * GET / Installations / ｛ id ｝ * をクリックします。
+.. [* 試してみてください * ] をクリックします。
+.. インストールアセット ID を *id* フィールドに貼り付けます。
+.. [* Execute] をクリックします。
+.. 応答から、後の手順で使用するために、ノードのアセット ID （「 id` 」）、 BMC の IP アドレス（「 bmcAddress 」）、ノードのシリアル番号（「 chassisSerialNumber 」）をコピーして保存します。
++
+[listing, subs="+quotes"]
+----
+"nodes": [
+  {
+    "bmcDetails": {
+      *"bmcAddress": "10.117.1.111",*
+      "credentialsAvailable": false,
+      "credentialsValidated": false
+    },
+    *"chassisSerialNumber": "221111019323",*
+    "chassisSlot": "C",
+    "hardwareId": null,
+    "hardwareTag": "00000000-0000-0000-0000-ac1f6ab4ecf6",
+    *"id": "8cd91e3c-1b1e-1111-b00a-4c9c4900b000",*
+----
+
+
+. 管理ノードでハードウェアサービス REST API UI を開きます。
++
+[listing]
+----
+https://<ManagementNodeIP>/hardware/2/
+----
+. 「 * Authorize * 」（認証）をクリックして、次の手順を実行
++
+.. クラスタのユーザ名とパスワードを入力します。
+.. 値がまだ入力されていない場合は、クライアント ID を「 m node-client 」として入力します。
+.. セッションを開始するには、 * Authorize * をクリックします。
+.. ウィンドウを閉じます。
+
+
+. PUT /nodes / ｛ hardware_id ｝ * をクリックします。
+. [* 試してみてください * ] をクリックします。
+. 先ほど保存したノードアセット ID を 'hardware_id' パラメータに入力します
+. ペイロードに次の情報を入力します。
++
+|===
+| パラメータ | 説明 
+
+
+| 「 assetid="" 」と入力します | 手順 1 (f) で保存したインストール資産 ID (id') 
+
+
+| 「 BMCIP 」 | 手順 1 （ k ）で保存した BMC の IP アドレス（「 bmcAddress 」）。 
+
+
+| bmcPassword | BMC にログインするための更新されたパスワード。 
+
+
+| 「 bmcUsername 」と入力します | BMC にログインするために更新されたユーザ名。 
+
+
+| 'erialNumber' | ハードウェアのシャーシのシリアル番号。 
+|===
++
+ペイロードの例：
+
++
+[listing]
+----
+{
+  "assetId": "7bb41e3c-2e9c-2151-b00a-8a9b49c0b0fe",
+  "bmcIp": "10.117.1.111",
+  "bmcPassword": "mypassword1",
+  "bmcUsername": "admin1",
+  "serialNumber": "221111019323"
+}
+----
+. [* Execute] をクリックして、 BMC クレデンシャルを更新します。成功すると、次のような応答が返されます。
++
+[listing]
+----
+{
+  "credentialid": "33333333-cccc-3333-cccc-333333333333",
+  "host_name": "hci-host",
+  "id": "8cd91e3c-1b1e-1111-b00a-4c9c4900b000",
+  "ip": "1.1.1.1",
+  "parent": "abcd01y3-ab30-1ccc-11ee-11f123zx7d1b",
+  "type": "BMC"
+}
+----
+
+
+[discrete]
+== 詳細については、こちらをご覧ください
+
+* https://kb.netapp.com/Advice_and_Troubleshooting/Hybrid_Cloud_Infrastructure/NetApp_HCI/Known_issues_and_workarounds_for_Compute_Node_upgrades["コンピューティングノードのアップグレードに関する既知の問題と対処方法"^]
+* https://docs.netapp.com/us-en/vcp/index.html["vCenter Server 向け NetApp Element プラグイン"^]
+* https://www.netapp.com/hybrid-cloud/hci-documentation/["NetApp HCI のリソースページ"^]
+

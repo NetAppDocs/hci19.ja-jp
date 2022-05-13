@@ -1,0 +1,27 @@
+---
+sidebar: sidebar 
+permalink: docs/task_reduce_boot_media_wear.html 
+summary: NetApp HCI コンピューティングノードのブートメディアの摩耗を減らす方法について説明します。 
+keywords: netapp, hci, deployment, review, deploy, boot, drive, wear 
+---
+= NetApp HCI コンピューティングノードのブートメディアの摩耗度を低減します
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ../media/
+
+
+[role="lead"]
+NetApp HCI コンピューティングノードでフラッシュメモリまたは NVDIMM ブートメディアを使用する場合、システムログをそのメディアに保存しておくと、そのメディアに頻繁に書き込まれます。これにより、最終的にフラッシュメモリが劣化する可能性があります。ホストロギングとコアダンプファイルを共有ストレージの場所に移動するには、次の技術情報アーティクルの手順に従います。これは、ブートメディアのパフォーマンスが低下しないようにし、ブートディスクのフルエラーを回避するのに役立ちます。
+
+https://kb.netapp.com/Advice_and_Troubleshooting/Hybrid_Cloud_Infrastructure/NetApp_HCI/How_to_reduce_wear_on_the_boot_drive_of_a_Netapp_HCI_compute_node["のブートドライブの摩耗を低減する方法 NetApp HCI コンピューティングノード"]
+
+
+
+== 詳細については、こちらをご覧ください
+
+* https://docs.netapp.com/us-en/vcp/index.html["vCenter Server 向け NetApp Element プラグイン"^]
+* https://www.netapp.com/us/documentation/hci.aspx["NetApp HCI のリソースページ"^]
+

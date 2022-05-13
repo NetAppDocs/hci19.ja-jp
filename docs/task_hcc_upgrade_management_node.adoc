@@ -1,0 +1,682 @@
+---
+sidebar: sidebar 
+permalink: docs/task_hcc_upgrade_management_node.html 
+summary: NetApp HCI システムのアップグレードの一環として、管理ノードをアップグレードします。 
+keywords: netapp, hci, on premise, cluster, management node, mNode, upgrade, 10, 11.0, 11.1, 11.3, 11.5, 11.7, 12.0, 12.2, 12.3, 12.3.1, 12.3.2, 12.3.x 
+---
+= 管理ノードをアップグレードします
+:allow-uri-read: 
+
+
+[role="lead"]
+管理ノードをバージョン 11.0 以降からバージョン 12.3.x にアップグレードできます。
+
+ストレージクラスタ上の Element ソフトウェアをアップグレードするために、管理ノードのオペレーティングシステムをアップグレードする必要がなくなりました。管理ノードがバージョン 11.3 以降である場合は、 NetApp Hybrid Cloud Control を使用して管理サービスを最新バージョンにアップグレードするだけで Element をアップグレードできます。管理ノードのオペレーティングシステムをアップグレードする理由がほかにもある場合は、セキュリティの修正など、管理ノードのアップグレード手順に従ってください。
+
+
+NOTE: vCenter Plug-in 4.4 以降では、モジュラアーキテクチャで作成された管理ノード 11.3 以降が必要であり、個々のサービスを提供します。
+
+次のいずれかの管理ノードアップグレードオプションを選択します。
+
+[NOTE]
+====
+* 管理ノード 12.3.2 には、 Virtual Volumes （ VVol ）機能が有効になっている場合に、ストレージクラスタのセキュリティを軽減する機能が含まれています。ストレージクラスタがすでに Element 12.3 にあり、 VVol 機能が有効になっている場合は、 12.3.2 にアップグレードすることを強く推奨します。
+* 管理ノード 12..1 では、機能の変更やバグの修正は行われていません。管理ノード 12.3 をすでに実行している場合は、これを 12.3.1 にアップグレードする必要はありません。
+
+
+====
+* 管理ノード 12.3 からアップグレードする場合：管理ノード 12..1 には、追加の機能変更やバグ修正はありません。管理ノード 12.3 をすでに実行している場合は、これを 12.3.1 にアップグレードする必要はありません。
+
+
+
+NOTE: NDE を使用して導入した管理ノード 12.3 でアップグレードを続行するように選択すると、 12.3.x へのアップグレードが完了します。ただし、アップグレードの再開時にエラーが発生する場合があります。この場合は、管理ノードをリブートして、 12.3.x が正しく表示されるようにします
+
+* 管理ノード 12.2 からアップグレードする場合は、次の手順を実行します。<<Upgrade a management node to version 12.3.x from 12.2>>
+* 管理ノード 12.0 からアップグレードする場合は、次の手順を実行します。<<Upgrade a management node to version 12.3.x from 12.0>>
+* 管理ノード 11.3 、 11.5 、 11.7 、または 11.8 からアップグレードする場合は、次の手順を実行します。<<Upgrade a management node to version 12.3.x from 11.3 through 11.8>>
+* 管理ノード 11.0 または 11.1 からアップグレードする場合は、次の手順を実行します。<<Upgrade a management node to version 12.3.x from 11.1 or 11.0>>
+* 管理ノードバージョン 10.x からアップグレードする場合は、次の手順を実行します。<<Migrating from management node version 10.x to 11.x>>
+
+
+管理サービスのバージョンがシーケンシャルに * 更新されている（ 1 ）場合、および（ 2 ） Element ストレージのバージョンが既存の管理ノードを * 保持する場合は、次のオプションを選択します。
+
+
+NOTE: 管理サービスと Element ストレージを順番に更新しないと、この手順で再認証を再設定することはできません。代わりに、該当するアップグレード手順を実行してください。
+
+* 既存の管理ノードを保持する場合：<<Reconfigure authentication using the management node REST API>>
+
+
+
+
+== 12.2 から管理ノードをバージョン 12.3.x にアップグレードします
+
+新しい管理ノード仮想マシンをプロビジョニングすることなく、バージョン 12.2 からバージョン 12.3.x への管理ノードのインプレースアップグレードを実行できます。
+
+
+NOTE: Element 12.3.x 管理ノードはオプションのアップグレードです。既存の環境では必要ありません。
+
+.必要なもの
+* 管理ノード VM の RAM は 24GB です。
+* アップグレードする管理ノードのバージョンが 12.0 で、 IPv4 ネットワークを使用している。管理ノードバージョン 12.3.x は IPv6 をサポートしていません。
++
+
+TIP: 管理ノードのバージョンを確認するには、管理ノードにログインし、ログインバナーに表示される Element のバージョン番号を確認します。
+
+* NetApp Hybrid Cloud Control （ HCC ）を使用して管理サービスバンドルを最新バージョンに更新しておく必要があります。HCC には、次の IP アドレスからアクセスできます。 https://<ManagementNodeIP>`
+* 管理ノードをバージョン 12.3.x に更新する場合は、続行するには管理サービス 2.14.60 以降が必要です。
+* 追加のネットワークアダプタを設定しておきます（必要な場合）。 の手順に従ってください link:task_mnode_install_add_storage_NIC.html["追加のストレージ NIC の設定"]。
++
+
+NOTE: eth0 を SVIP にルーティングできない場合は、永続ボリュームに追加のネットワークアダプタが必要になることがあります。永続ボリュームを設定できるように、 iSCSI ストレージネットワークに新しいネットワークアダプタを設定してください。
+
+* ストレージノードで Element 11.3 以降が実行されていることを確認します。
+
+
+.手順
+. SSH またはコンソールアクセスを使用して管理ノード仮想マシンにログインします。
+. をダウンロードします https://mysupport.netapp.com/site/products/all/details/netapp-hci/downloads-tab["管理ノード ISO"^] NetApp HCI の場合は、ネットアップサポートサイトから管理ノード仮想マシンへ。
++
+
+NOTE: ISO の名前は 'olidfire-fdva-<Element release>-patchX-XXX.X.XXXX.iso' と似ています
+
+. ダウンロードしたファイルに対して md5sum を実行し、その出力を、ネットアップサポートサイトにある NetApp HCI または Element ソフトウェア用の md5sum と比較することで、ダウンロードの整合性を確認します。
++
+「 sudo md5sum -b 」 <path to ISO>/solidfire-fdva-<Element release > -patchX-XXX.X.XXXX.iso 」を参照してください
+
+. 次のコマンドを使用して、管理ノードの ISO イメージをマウントし、ファイルシステムに内容をコピーします。
++
+[listing]
+----
+sudo mkdir -p /upgrade
+----
++
+[listing]
+----
+sudo mount <solidfire-fdva-<Element release>-patchX-XX.X.X.XXXX.iso> /mnt
+----
++
+[listing]
+----
+sudo cp -r /mnt/* /upgrade
+----
+. ホーム・ディレクトリに移動し 'ISO ファイルを /mnt/' からアンマウントします
++
+[listing]
+----
+sudo umount /mnt
+----
+. 管理ノードのスペースを節約するために ISO を削除します。
++
+[listing]
+----
+sudo rm <path to iso>/solidfire-fdva-<Element release>-patchX-XX.X.X.XXXX.iso
+----
+. アップグレードする管理ノードで次のコマンドを実行して管理ノードの OS バージョンをアップグレードします。Active IQ コレクタやプロキシの設定など、必要な設定ファイルはすべてアップグレード後も保持されます。
++
+[listing]
+----
+sudo /sf/rtfi/bin/sfrtfi_inplace file:///upgrade/casper/filesystem.squashfs sf_upgrade=1
+----
++
+アップグレードプロセスが完了すると、管理ノードが新しい OS でリブートします。
+
++
+
+NOTE: この手順で説明した sudo コマンドを実行すると、 SSH セッションが強制終了されます。継続的な監視を行うには、コンソールアクセスが必要です。アップグレードの実行中にコンソールにアクセスできない場合は、 SSH ログインを再試行し、 15~30 分後に接続を確認します。ログイン後、アップグレードが正常に完了したことを示す SSH バナーで新しい OS バージョンを確認できます。
+
+. 管理ノードで「 redeploy -mnode 」スクリプトを実行して、以前の管理サービスの設定を保持します。
++
+
+NOTE: 設定に応じて、 Active IQ コレクタサービス、コントローラ（ vCenter ）、プロキシなどの以前の管理サービスの設定が適用されます。
+
++
+[listing]
+----
+sudo /sf/packages/mnode/redeploy-mnode -mu <mnode user>
+----
+
+
+
+IMPORTANT: 管理ノードで SSH 機能を無効にしていた場合は、が必要です link:task_mnode_ssh_management.html["SSH を再度無効にします"] リカバリされた管理ノード。提供する SSH 機能 link:task_mnode_enable_remote_support_connections.html["ネットアップサポートの Remote Support Tunnel （ RST ）セッションアクセス"] 管理ノードではデフォルトで有効になっています。
+
+
+
+== バージョン 12.0 から管理ノードをバージョン 12.3.x にアップグレードします
+
+新しい管理ノード仮想マシンをプロビジョニングすることなく、管理ノードバージョン 12.0 からバージョン 12.3.x へのインプレースアップグレードを実行できます。
+
+
+NOTE: Element 12.3.x 管理ノードはオプションのアップグレードです。既存の環境では必要ありません。
+
+.必要なもの
+* アップグレードする管理ノードのバージョンが 12.0 で、 IPv4 ネットワークを使用している。管理ノードバージョン 12.3.x は IPv6 をサポートしていません。
++
+
+TIP: 管理ノードのバージョンを確認するには、管理ノードにログインし、ログインバナーに表示される Element のバージョン番号を確認します。
+
+* NetApp Hybrid Cloud Control （ HCC ）を使用して管理サービスバンドルを最新バージョンに更新しておく必要があります。HCC には、次の IP アドレスからアクセスできます。 https://<ManagementNodeIP>`
+* 管理ノードをバージョン 12.3.x に更新する場合は、続行するには管理サービス 2.14.60 以降が必要です。
+* 追加のネットワークアダプタを設定しておきます（必要な場合）。 の手順に従ってください link:task_mnode_install_add_storage_NIC.html["追加のストレージ NIC の設定"]。
++
+
+NOTE: eth0 を SVIP にルーティングできない場合は、永続ボリュームに追加のネットワークアダプタが必要になることがあります。永続ボリュームを設定できるように、 iSCSI ストレージネットワークに新しいネットワークアダプタを設定してください。
+
+* ストレージノードで Element 11.3 以降が実行されていることを確認します。
+
+
+.手順
+. 管理ノードの VM RAM を設定します。
++
+.. 管理ノード VM の電源をオフにします。
+.. 管理ノード VM の RAM を 12GB から 24GB RAM に変更します。
+.. 管理ノード VM の電源をオンにします。
+
+
+. SSH またはコンソールアクセスを使用して管理ノード仮想マシンにログインします。
+. をダウンロードします https://mysupport.netapp.com/site/products/all/details/netapp-hci/downloads-tab["管理ノード ISO"^] NetApp HCI の場合は、ネットアップサポートサイトから管理ノード仮想マシンへ。
++
+
+NOTE: ISO の名前は 'olidfire-fdva-<Element release>-patchX-XXX.X.XXXX.iso' と似ています
+
+. ダウンロードしたファイルに対して md5sum を実行し、その出力を、ネットアップサポートサイトにある NetApp HCI または Element ソフトウェア用の md5sum と比較することで、ダウンロードの整合性を確認します。
++
+「 sudo md5sum -b 」 <path to ISO>/solidfire-fdva-<Element release > -patchX-XXX.X.XXXX.iso 」を参照してください
+
+. 次のコマンドを使用して、管理ノードの ISO イメージをマウントし、ファイルシステムに内容をコピーします。
++
+[listing]
+----
+sudo mkdir -p /upgrade
+----
++
+[listing]
+----
+sudo mount <solidfire-fdva-<Element release>-patchX-XX.X.X.XXXX.iso> /mnt
+----
++
+[listing]
+----
+sudo cp -r /mnt/* /upgrade
+----
+. ホーム・ディレクトリに移動し 'ISO ファイルを /mnt/' からアンマウントします
++
+[listing]
+----
+sudo umount /mnt
+----
+. 管理ノードのスペースを節約するために ISO を削除します。
++
+[listing]
+----
+sudo rm <path to iso>/solidfire-fdva-<Element release>-patchX-XX.X.X.XXXX.iso
+----
+. アップグレードする管理ノードで次のコマンドを実行して管理ノードの OS バージョンをアップグレードします。Active IQ コレクタやプロキシの設定など、必要な設定ファイルはすべてアップグレード後も保持されます。
++
+[listing]
+----
+sudo /sf/rtfi/bin/sfrtfi_inplace file:///upgrade/casper/filesystem.squashfs sf_upgrade=1
+----
++
+アップグレードプロセスが完了すると、管理ノードが新しい OS でリブートします。
+
++
+
+NOTE: この手順で説明した sudo コマンドを実行すると、 SSH セッションが強制終了されます。継続的な監視を行うには、コンソールアクセスが必要です。アップグレードの実行中にコンソールにアクセスできない場合は、 SSH ログインを再試行し、 15~30 分後に接続を確認します。ログイン後、アップグレードが正常に完了したことを示す SSH バナーで新しい OS バージョンを確認できます。
+
+. 管理ノードで「 redeploy -mnode 」スクリプトを実行して、以前の管理サービスの設定を保持します。
++
+
+NOTE: 設定に応じて、 Active IQ コレクタサービス、コントローラ（ vCenter ）、プロキシなどの以前の管理サービスの設定が適用されます。
+
++
+[listing]
+----
+sudo /sf/packages/mnode/redeploy-mnode -mu <mnode user>
+----
+
+
+
+IMPORTANT: 提供する SSH 機能 link:task_mnode_enable_remote_support_connections.html["ネットアップサポートの Remote Support Tunnel （ RST ）セッションアクセス"] 管理サービス 2.18 以降を実行する管理ノードでは、はデフォルトで無効になっています。以前に管理ノードで SSH 機能を有効にしていた場合は、が必要になることがあります link:task_mnode_ssh_management.html["SSH を再度無効にします"] をクリックします。
+
+
+
+== 管理ノードをバージョン 11.3 から 11.8 にアップグレードします
+
+新しい管理ノード仮想マシンをプロビジョニングすることなく、管理ノードバージョン 11.3 、 11.5 、 11.7 、または 11.8 からバージョン 12.3.x へのインプレースアップグレードを実行できます。
+
+
+NOTE: Element 12.3.x 管理ノードはオプションのアップグレードです。既存の環境では必要ありません。
+
+.必要なもの
+* アップグレードする管理ノードのバージョンが 11.3 、 11.5 、 11.7 、または 11.8 で、 IPv4 ネットワークを使用していることを確認します。管理ノードバージョン 12.3.x は IPv6 をサポートしていません。
++
+
+TIP: 管理ノードのバージョンを確認するには、管理ノードにログインし、ログインバナーに表示される Element のバージョン番号を確認します。
+
+* NetApp Hybrid Cloud Control （ HCC ）を使用して管理サービスバンドルを最新バージョンに更新しておく必要があります。HCC には、次の IP アドレスからアクセスできます。 https://<ManagementNodeIP>`
+* 管理ノードをバージョン 12.3.x に更新する場合は、続行するには管理サービス 2.14.60 以降が必要です。
+* 追加のネットワークアダプタを設定しておきます（必要な場合）。 の手順に従ってください link:task_mnode_install_add_storage_NIC.html["追加のストレージ NIC の設定"]。
++
+
+NOTE: eth0 を SVIP にルーティングできない場合は、永続ボリュームに追加のネットワークアダプタが必要になることがあります。永続ボリュームを設定できるように、 iSCSI ストレージネットワークに新しいネットワークアダプタを設定してください。
+
+* ストレージノードで Element 11.3 以降が実行されていることを確認します。
+
+
+.手順
+. 管理ノードの VM RAM を設定します。
++
+.. 管理ノード VM の電源をオフにします。
+.. 管理ノード VM の RAM を 12GB から 24GB RAM に変更します。
+.. 管理ノード VM の電源をオンにします。
+
+
+. SSH またはコンソールアクセスを使用して管理ノード仮想マシンにログインします。
+. をダウンロードします https://mysupport.netapp.com/site/products/all/details/netapp-hci/downloads-tab["管理ノード ISO"^] NetApp HCI の場合は、ネットアップサポートサイトから管理ノード仮想マシンへ。
++
+
+NOTE: ISO の名前は 'olidfire-fdva-<Element release>-patchX-XXX.X.XXXX.iso' と似ています
+
+. ダウンロードしたファイルに対して md5sum を実行し、その出力を、ネットアップサポートサイトにある NetApp HCI または Element ソフトウェア用の md5sum と比較することで、ダウンロードの整合性を確認します。
++
+「 sudo md5sum -b 」 <path to ISO>/solidfire-fdva-<Element release > -patchX-XXX.X.XXXX.iso 」を参照してください
+
+. 次のコマンドを使用して、管理ノードの ISO イメージをマウントし、ファイルシステムに内容をコピーします。
++
+[listing]
+----
+sudo mkdir -p /upgrade
+----
++
+[listing]
+----
+sudo mount <solidfire-fdva-<Element release>-patchX-XX.X.X.XXXX.iso> /mnt
+----
++
+[listing]
+----
+sudo cp -r /mnt/* /upgrade
+----
+. ホーム・ディレクトリに移動し 'ISO ファイルを /mnt/' からアンマウントします
++
+[listing]
+----
+sudo umount /mnt
+----
+. 管理ノードのスペースを節約するために ISO を削除します。
++
+[listing]
+----
+sudo rm <path to iso>/solidfire-fdva-<Element release>-patchX-XX.X.X.XXXX.iso
+----
+. 11.3 、 11.5 、 11.7 、または 11.8 の管理ノードで、次のコマンドを実行して管理ノードの OS バージョンをアップグレードします。Active IQ コレクタやプロキシの設定など、必要な設定ファイルはすべてアップグレード後も保持されます。
++
+[listing]
+----
+sudo /sf/rtfi/bin/sfrtfi_inplace file:///upgrade/casper/filesystem.squashfs sf_upgrade=1
+----
++
+アップグレードプロセスが完了すると、管理ノードが新しい OS でリブートします。
+
++
+
+NOTE: この手順で説明した sudo コマンドを実行すると、 SSH セッションが強制終了されます。継続的な監視を行うには、コンソールアクセスが必要です。アップグレードの実行中にコンソールにアクセスできない場合は、 SSH ログインを再試行し、 15~30 分後に接続を確認します。ログイン後、アップグレードが正常に完了したことを示す SSH バナーで新しい OS バージョンを確認できます。
+
+. 管理ノードで「 redeploy -mnode 」スクリプトを実行して、以前の管理サービスの設定を保持します。
++
+
+NOTE: 設定に応じて、 Active IQ コレクタサービス、コントローラ（ vCenter ）、プロキシなどの以前の管理サービスの設定が適用されます。
+
++
+[listing]
+----
+sudo /sf/packages/mnode/redeploy-mnode -mu <mnode user>
+----
+
+
+
+IMPORTANT: 提供する SSH 機能 link:task_mnode_enable_remote_support_connections.html["ネットアップサポートの Remote Support Tunnel （ RST ）セッションアクセス"] 管理サービス 2.18 以降を実行する管理ノードでは、はデフォルトで無効になっています。以前に管理ノードで SSH 機能を有効にしていた場合は、が必要になることがあります link:task_mnode_ssh_management.html["SSH を再度無効にします"] をクリックします。
+
+
+
+== 管理ノードをバージョン 12.3.x にアップグレードします。 11.1 または 11.0 からアップグレードします
+
+新しい管理ノード仮想マシンをプロビジョニングすることなく、管理ノード 11.0 または 11.1 からバージョン 12.3.x へのインプレースアップグレードを実行できます。
+
+.必要なもの
+* ストレージノードで Element 11.3 以降が実行されていることを確認します。
++
+
+NOTE: 最新の HealthTools を使用して Element ソフトウェアをアップグレードしてください。
+
+* アップグレードする管理ノードのバージョンが 11.0 または 11.1 で、 IPv4 ネットワークを使用していることを確認します。管理ノードバージョン 12.3.x は IPv6 をサポートしていません。
++
+
+TIP: 管理ノードのバージョンを確認するには、管理ノードにログインし、ログインバナーに表示される Element のバージョン番号を確認します。
+
+* 管理ノード 11.0 の場合、 VM メモリを手動で 12GB に増やす必要があります。
+* 必要に応じて、管理ノードユーザガイドに記載されているストレージ NIC （ eth1 ）の設定手順に従って追加のネットワークアダプタを設定しておきます。
++
+
+NOTE: eth0 を SVIP にルーティングできない場合は、永続ボリュームに追加のネットワークアダプタが必要になることがあります。永続ボリュームを設定できるように、 iSCSI ストレージネットワークに新しいネットワークアダプタを設定してください。
+
+
+
+.手順
+. 管理ノードの VM RAM を設定します。
++
+.. 管理ノード VM の電源をオフにします。
+.. 管理ノード VM の RAM を 12GB から 24GB RAM に変更します。
+.. 管理ノード VM の電源をオンにします。
+
+
+. SSH またはコンソールアクセスを使用して管理ノード仮想マシンにログインします。
+. をダウンロードします https://mysupport.netapp.com/site/products/all/details/netapp-hci/downloads-tab["管理ノード ISO"^] NetApp HCI の場合は、ネットアップサポートサイトから管理ノード仮想マシンへ。
++
+
+NOTE: ISO の名前は 'olidfire-fdva-<Element release>-patchX-XXX.X.XXXX.iso' と似ています
+
+. ダウンロードしたファイルに対して md5sum を実行し、その出力を、ネットアップサポートサイトにある NetApp HCI または Element ソフトウェア用の md5sum と比較することで、ダウンロードの整合性を確認します。
++
+[listing]
+----
+sudo md5sum -b <path to iso>/solidfire-fdva-<Element release>-patchX-XX.X.X.XXXX.iso
+----
+. 次のコマンドを使用して、管理ノードの ISO イメージをマウントし、ファイルシステムに内容をコピーします。
++
+[listing]
+----
+sudo mkdir -p /upgrade
+----
++
+[listing]
+----
+sudo mount solidfire-fdva-<Element release>-patchX-XX.X.X.XXXX.iso /mnt
+----
++
+[listing]
+----
+sudo cp -r /mnt/* /upgrade
+----
+. ホームディレクトリに移動し、 ISO ファイルを /mnt からアンマウントします。
++
+[listing]
+----
+sudo umount /mnt
+----
+. 管理ノードのスペースを節約するために ISO を削除します。
++
+[listing]
+----
+sudo rm <path to iso>/solidfire-fdva-<Element release>-patchX-XX.X.X.XXXX.iso
+----
+. 次のいずれかのスクリプトを実行して、管理ノードの OS バージョンをアップグレードします。使用しているバージョンに適したスクリプトのみを実行してください。各スクリプトでは、 Active IQ コレクタやプロキシの設定など、必要な設定ファイルはすべてアップグレード後も保持されます。
++
+.. 11.1 （ 11.1.0.73 ）の管理ノードの場合は次のコマンドを実行します。
++
+[listing]
+----
+sudo /sf/rtfi/bin/sfrtfi_inplace file:///upgrade/casper/filesystem.squashfs sf_upgrade=1 sf_keep_paths="/sf/packages/solidfire-sioc-4.2.3.2288 /sf/packages/solidfire-nma-1.4.10/conf /sf/packages/sioc /sf/packages/nma"
+----
+.. 11.1 （ 11.1.0.72 ）の管理ノードの場合は次のコマンドを実行します。
++
+[listing]
+----
+sudo /sf/rtfi/bin/sfrtfi_inplace file:///upgrade/casper/filesystem.squashfs sf_upgrade=1 sf_keep_paths="/sf/packages/solidfire-sioc-4.2.1.2281 /sf/packages/solidfire-nma-1.4.10/conf /sf/packages/sioc /sf/packages/nma"
+----
+.. 11.0 （ 11.0.0.781 ）の管理ノードの場合は次のコマンドを実行します。
++
+[listing]
+----
+sudo /sf/rtfi/bin/sfrtfi_inplace file:///upgrade/casper/filesystem.squashfs sf_upgrade=1 sf_keep_paths="/sf/packages/solidfire-sioc-4.2.0.2253 /sf/packages/solidfire-nma-1.4.8/conf /sf/packages/sioc /sf/packages/nma"
+----
++
+アップグレードプロセスが完了すると、管理ノードが新しい OS でリブートします。
+
++
+
+NOTE: この手順で説明した sudo コマンドを実行すると、 SSH セッションが強制終了されます。継続的な監視を行うには、コンソールアクセスが必要です。アップグレードの実行中にコンソールにアクセスできない場合は、 SSH ログインを再試行し、 15~30 分後に接続を確認します。ログイン後、アップグレードが正常に完了したことを示す SSH バナーで新しい OS バージョンを確認できます。
+
+
+
+. 12.3.x 管理ノードで、「 upgrade-mnode 」スクリプトを実行して、以前の設定を保持します。
++
+
+NOTE: 11.0 または 11.1 の管理ノードから移行している場合、 Active IQ コレクタが新しい形式にコピーされます。
+
++
+.. 既存の管理ノード 11.0 または 11.1 で単一のストレージクラスタを管理しており、永続ボリュームがある場合：
++
+[listing]
+----
+sudo /sf/packages/mnode/upgrade-mnode -mu <mnode user> -pv <true - persistent volume> -pva <persistent volume account name - storage volume account>
+----
+.. 既存の管理ノード 11.0 または 11.1 で単一のストレージクラスタを管理しており、永続ボリュームがない場合：
++
+[listing]
+----
+sudo /sf/packages/mnode/upgrade-mnode -mu <mnode user>
+----
+.. 既存の管理ノード 11.0 または 11.1 で複数のストレージクラスタを管理しており、永続ボリュームがある場合：
++
+[listing]
+----
+sudo /sf/packages/mnode/upgrade-mnode -mu <mnode user> -pv <true - persistent volume> -pva <persistent volume account name - storage volume account> -pvm <persistent volumes mvip>
+----
+.. 既存の管理ノード 11.0 または 11.1 で複数のストレージクラスタを管理しており、永続ボリュームがない場合（「 -pvm 」フラグでクラスタのいずれかの MVIP アドレスを指定）：
++
+[listing]
+----
+sudo /sf/packages/mnode/upgrade-mnode -mu <mnode user> -pvm <mvip for persistent volumes>
+----
+
+
+. （ NetApp Element Plug-in for vCenter Server を使用するすべての NetApp HCI インストールの場合）で、の手順に従って、 12.3.x 管理ノードの vCenter Plug-in を更新します link:task_vcp_upgrade_plugin.html["Element Plug-in for vCenter Server をアップグレードします"] トピック：
+. 管理ノード API を使用して、インストール環境のアセット ID を確認します。
++
+.. ブラウザから、管理ノードの REST API UI にログインします。
++
+... ストレージの MVIP にアクセスしてログインします。次の手順で証明書が承認されます。
+
+
+.. 管理ノードでインベントリサービス REST API UI を開きます。
++
+[listing]
+----
+https://<ManagementNodeIP>/inventory/1/
+----
+.. 「 * Authorize * 」（認証）を選択して、次の手順を実行
++
+... クラスタのユーザ名とパスワードを入力します。
+... クライアント ID を「 m node-client 」として入力します。
+... セッションを開始するには、 * Authorize * を選択します。
+... ウィンドウを閉じます。
+
+
+.. REST API UI で、 * 一部のユーザに一時的な処理を開始 / インストール * を選択します。
+.. [* 試してみてください * ] を選択します。
+.. [* Execute] を選択します。
+.. コード 200 の応答本文から ' インストールの ID をコピーします
++
+インストール環境には、インストールまたはアップグレード時に作成されたベースアセットの構成が含まれています。
+
+
+
+. vSphere でコンピューティングノードのハードウェアタグを確認します。
++
+.. vSphere Web Client ナビゲータでホストを選択します。
+.. [*Monitor*] タブを選択し、 [*Hardware Health*] を選択します。
+.. ノードの BIOS のメーカーとモデル番号が表示されます。後の手順で使用するために 'tag' の値をコピーして保存します
+
+
+. HCI の監視と Hybrid Cloud Control 用の vCenter コントローラアセットを管理ノードの既知のアセットに追加します。
++
+.. コントローラサブアセットを追加する場合は、「 * POST /assets/｛ asset_id ｝ /controllers * 」を選択します。
+.. [* 試してみてください * ] を選択します。
+.. クリップボードにコピーした親ベースアセットの ID を * asset_id * フィールドに入力します。
+.. 必要なペイロード値を「 vcenter 」タイプと「 vcenter 」クレデンシャルタイプで入力します。
+.. [* Execute] を選択します。
+
+
+. コンピューティングノードアセットを管理ノードの既知のアセットに追加します。
++
+.. コンピューティングノードアセットのクレデンシャルを使用してコンピューティングノードサブアセットを追加する場合は、「 * POST/assets/｛ asset_id ｝ /compute-nodes 」を選択します。
+.. [* 試してみてください * ] を選択します。
+.. クリップボードにコピーした親ベースアセットの ID を * asset_id * フィールドに入力します。
+.. ペイロードで、 Model タブで定義されているとおりに必要なペイロード値を入力します。「タイプ」として「 ESXi ホスト」と入力し、「 hardware_tag 」の前の手順で保存したハードウェアタグを貼り付けます。
+.. [* Execute] を選択します。
+
+
+
+
+
+
+== 管理ノードバージョン 10.x から 11.x への移行
+
+管理ノードのバージョンが 10.x の場合、 10.x から 11.x にアップグレードすることはできません代わりに、ここに記載する移行手順を使用して、新しく導入した 11.1 の管理ノードに 10.x から設定をコピーします。現在の管理ノードが 11.0 以降の場合は、この手順は省略してください。管理ノード 11.0 または 11.1 とが必要です link:task_upgrade_element_latest_healthtools.html["最新の HealthTools"] Element ソフトウェアを 10.3 以降から 11.x にアップグレードします
+
+.手順
+. VMware vSphere インターフェイスで、管理ノード 11.1 OVA を導入し、電源をオンにします。
+. 管理ノードの VM コンソールを開きます。ターミナルユーザインターフェイス（ TUI ）が起動します。
+. TUI を使用して新しい管理者の ID を作成し、パスワードを割り当てます。
+. 管理ノードの TUI で、新しい ID とパスワードを使用して管理ノードにログインし、動作を確認します。
+. vCenter または管理ノードの TUI で、管理ノード 11.1 の IP アドレスを取得し、ポート 9443 でこの IP アドレスにアクセスして管理ノード UI を開きます。
++
+[listing]
+----
+https://<mNode 11.1 IP address>:9443
+----
+. vSphere で、 * NetApp Element Configuration * > * mNode Settings * の順に選択します。（旧バージョンでは、最上位のメニューは * NetApp SolidFire 構成 * です）。
+. * アクション * > * クリア * を選択します。
+. 確認するには、 * はい * を選択します。mNode Status フィールドに Not Configured と表示されるはずです。
++
+
+NOTE: 最初に「 * mNode Settings * 」タブに移動すると、 mNode の Status フィールドに、想定される「 Up * 」ではなく「 * Not Configured * 」と表示されることがあります。 * Actions * > * Clear * を選択できない場合があります。ブラウザの表示を更新します。mNode の Status フィールドには、最終的に *up* と表示されます。
+
+. vSphere からログアウトします。
+. Web ブラウザで、管理ノード登録ユーティリティを開き、 * QoSSIOC サービス管理 * を選択します。
++
+[listing]
+----
+https://<mNode 11.1 IP address>:9443
+----
+. QoSSIOC の新しいパスワードを設定します。
++
+
+NOTE: デフォルトのパスワードは SolidFire ですこのパスワードは、新しいパスワードを設定するために必要です。
+
+. [* vCenter Plug-in Registration * （ vCenter Plug-in の登録 * ） ] タブを選択します。
+. [ プラグインの更新 ] を選択します。
+. 必要な値を入力します。完了したら、 * アップデート * を選択します。
+. vSphere にログインし、 * NetApp Element 構成 * > * mNode 設定 * を選択します。
+. * アクション * > * 設定 * を選択します。
+. 管理ノードの IP アドレス、管理ノードのユーザ ID （ユーザ名は「 admin 」）、登録ユーティリティの「 QoSSIOC サービス管理 * 」タブで設定したパスワード、および vCenter のユーザ ID とパスワードを入力します。
++
+vSphere で、 mNode 設定 * タブに mNode ステータスが * up * と表示されます。これは、管理ノード 11.1 が vCenter に登録されていることを示します。
+
+. 管理ノード登録ユーティリティ（「 https://<mNode 11.1 IP アドレス > ： 9443 」）から SIOC サービスを再起動します。
+. 1 分ほど待ってから、「 * NetApp Element Configuration * > * mNode Settings * 」タブを確認します。mNode のステータスが「 * up 」と表示されるはずです。
++
+ステータスが「 * down 」の場合は、「 /sf/packages/sioc/app.properties` 」の権限を確認します。ファイル所有者には、読み取り、書き込み、および実行の各権限が必要です。正しい権限は次のように表示されます。
+
++
+[listing]
+----
+-rwx------
+----
+. SIOC プロセスが開始され、 vCenter で mNode のステータスが「 up 」と表示されたら、管理ノードの「 f--hci-nma 」サービスのログを確認します。エラーメッセージは表示されません。
+. （管理ノード 11.1 の場合のみ） root 権限で管理ノードバージョン 11.1 に SSH 接続し、次のコマンドを使用して NMA サービスを開始します。
++
+[listing]
+----
+# systemctl enable /sf/packages/nma/systemd/sf-hci-nma.service
+----
++
+[listing]
+----
+# systemctl start sf-hci-nma21
+----
+. vCenter から、ドライブの削除、ドライブの追加、またはノードのリブートを実行します。これによりストレージアラートがトリガーされ、 vCenter で報告されます。アラートが生成されれば、 NMA システムアラートは想定どおりに機能しています。
+. ONTAP Select が vCenter に設定されている場合、前の管理ノードの「 .ots.properties` 」ファイルを管理ノードバージョン 11.1x/sf/packages/NMA /conf/.ots.properties` ファイルにコピーして NMA で ONTAP Select アラートを設定し、次のコマンドを使用して NMA サービスを再起動します。
++
+[listing]
+----
+systemctl restart sf-hci-nma
+----
+. 次のコマンドを使用してログを表示し、 ONTAP Select が動作していることを確認します。
++
+[listing]
+----
+journalctl -f | grep -i ots
+----
+. 次の手順で Active IQ を設定します。
++
+.. 管理ノードバージョン 11.1 に SSH 接続し ''/sf/packages/collector' ディレクトリに移動します
+.. 次のコマンドを実行します。
++
+[listing]
+----
+sudo ./manage-collector.py --set-username netapp --set-password --set-mvip <MVIP>
+----
+.. プロンプトが表示されたら、管理ノード UI のパスワードを入力します。
+.. 次のコマンドを実行します。
++
+[listing]
+----
+./manage-collector.py --get-all
+----
++
+[listing]
+----
+sudo systemctl restart sfcollector
+----
+.. 「 fcollector 」ログを確認し、正常に動作していることを確認します。
+
+
+. vSphere で、 * NetApp Element Configuration * > * mNode Settings * タブに mNode ステータスが * up * と表示される必要があります。
+. NMA からシステムアラートと ONTAP Select アラートが報告されていることを確認します。
+. すべての動作が想定どおりであることを確認したら、管理ノード 10.x の VM をシャットダウンして削除します。
+
+
+
+
+== 管理ノード REST API を使用して認証を再設定します
+
+既存の管理ノードは、（ 1 ）管理サービスと（ 2 ） Element ストレージを順番にアップグレードした場合でも維持できます。別のアップグレード順序を使用した場合は、インプレース管理ノードのアップグレード手順を参照してください。
+
+.作業を開始する前に
+* 管理サービスを 2.10.29 以降に更新しておきます。
+* ストレージクラスタで Element 12.0 以降が実行されている。
+* 管理ノードは 11.3 以降です。
+* 管理サービスを順番に更新し、 Element ストレージをアップグレードしておきます。この手順を使用して認証を再設定するには、説明されている順序でアップグレードを完了する必要があります。
+
+
+.手順
+. 管理ノードで管理ノード REST API UI を開きます。
++
+[listing]
+----
+https://<ManagementNodeIP>/mnode
+----
+. 「 * Authorize * 」（認証）を選択して、次の手順を実行
++
+.. クラスタのユーザ名とパスワードを入力します。
+.. 値がまだ入力されていない場合は、クライアント ID を「 m node-client 」として入力します。
+.. セッションを開始するには、 * Authorize * を選択します。
+
+
+. REST API UI から、 * POST /services/reconfigure -auth* を選択します。
+. [* 試してみてください * ] を選択します。
+. *LOAD_images * パラメータでは 'TRUE' を選択します
+. [* Execute] を選択します。
++
+応答の本文は、再設定が正常に完了したことを示します。
+
+
+
+[discrete]
+== 詳細については、こちらをご覧ください
+
+* https://docs.netapp.com/us-en/vcp/index.html["vCenter Server 向け NetApp Element プラグイン"^]
+* https://www.netapp.com/hybrid-cloud/hci-documentation/["NetApp HCI のリソースページ"^]
+

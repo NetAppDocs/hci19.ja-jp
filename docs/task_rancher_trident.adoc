@@ -1,0 +1,80 @@
+---
+sidebar: sidebar 
+permalink: docs/task_rancher_trident.html 
+summary: NetApp HCI に Rancher をインストールしたあとに Trident をインストールする方法をご確認ください。Trident を使用すると、使い慣れた標準の Kubernetes 形式で永続的ストレージボリュームを作成、管理、操作できます。 
+keywords: netapp, hci, rancher, install, trident, persistent volumes, pv 
+---
+= Trident をインストール
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ../media/
+
+
+[role="lead"]
+NetApp HCI に Rancher をインストールしたあとに Trident をインストールする方法をご確認ください。Trident は、 Docker と Kubernetes に統合されるストレージオーケストレーションツールであり、 Red Hat OpenShift 、 Rancher 、 IBM Cloud Private などのこれらのテクノロジを基盤に構築されたプラットフォームです。Trident の目的は、アプリケーションに対して、ストレージのプロビジョニング、接続、利用を透過的かつスムーズに行うことです。Trident は、ネットアップが管理する、完全にサポートされているオープンソースプロジェクトです。Trident を使用すると、使い慣れた標準の Kubernetes 形式で永続的ストレージボリュームを作成、管理、操作できます。
+
+
+TIP: Trident の詳細については、を参照してください https://netapp-trident.readthedocs.io/en/stable-v20.10/introduction.html["Trident のドキュメント"^]。
+
+.必要なもの
+* NetApp HCI に Rancher をインストールしておきます。
+* ユーザクラスタを導入しておきます。
+* Trident のユーザクラスタネットワークを設定しておきます。を参照してください link:task_trident_configure_networking.html["ユーザクラスタで Trident のサポートを有効にします"^] 手順については、を参照し
+* Trident の作業ノードを準備するために必要な準備手順を完了しておきます。を参照してください https://netapp-trident.readthedocs.io/en/stable-v20.10/kubernetes/operations/tasks/worker.html["Trident のドキュメント"]。
+
+
+Trident インストーラカタログは、 NetApp Hybrid Cloud Control を使用してランチャインストールの一部としてインストールされます。このタスクでは、インストーラカタログを使用して Trident をインストールおよび設定します。ランチシートインストールの一環として、ネットアップではノードテンプレートを提供しています。ネットアップが提供するノードテンプレートを使用せずに RHEL または CentOS でプロビジョニングする場合は、追加の要件がある可能性があります。ワーカーノードを RHEL または CentOS に変更する場合は、いくつかの前提条件を満たす必要があります。を参照してください https://netapp-trident.readthedocs.io/en/stable-v20.10/kubernetes/operations/tasks/worker.html["Trident のドキュメント"]。
+
+.手順
+. Rancher UI から、ユーザークラスタのプロジェクトを選択します。
++
+
+TIP: プロジェクトと名前空間については、を参照してください https://rancher.com/docs/rancher/v2.x/en/cluster-admin/projects-and-namespaces/["Rancher の文書"^]。
+
+. 「 * Apps * 」を選択し、「 * Launch * 」を選択します。
++
+image::rancher-install-trident.jpg[に、 Trident インストーラを起動するためのナビゲーションを示します。]
+
+. [*Catalog*] ページで、 Trident インストーラを選択します。
++
+image::rancher-trident.jpg[Rancher のカタログページにある Trident インストーラ。]
+
++
+
+NOTE: 表示されたページで、「詳しい説明」の矢印を選択して Trident アプリの詳細を確認したり、へのリンクを確認したりできます https://netapp-trident.readthedocs.io/en/stable-v20.10/introduction.html["Trident のドキュメント"]。
+
+. [* 構成オプション * （ Configurations Options ） ] 矢印を選択し、クレデンシャルとストレージ構成情報を入力します。
++
+image::rancher-trident-config.jpg[Trident に入力する必要があるストレージ構成情報が表示されます。]
+
++
+
+NOTE: デフォルトのストレージテナントは NetApp HCI です。この値は変更できます。バックエンド名を変更することもできます。ただし、デフォルトのストレージドライバの値である * solidfire-san-* という値は変更しないでください。
+
+. [* 起動 * ] を選択します。
++
+これにより、 Trident ワークロードが *trident * 名前空間にインストールされます。
+
+. リソース > ワークロード * を選択し、 * Trident * ネームスペースに次のコンポーネントが含まれていることを確認します。
++
+image::rancher-trident-workload.jpg[に、 Trident のネームスペースコンポーネントを示します。]
+
+. （オプション）永続ボリュームに使用できるストレージクラスを表示するには、ユーザクラスタに対して * Storage * を選択します。
++
+
+NOTE: 3 つのストレージクラスは、 * solidfire-cold* 、 * solidfire-plugin-2.* 、および * solidfire-plugin-2.銅 色 * です。これらのストレージ・クラスのいずれかをデフォルトにするには ' デフォルトの * カラムの下にあるアイコンを選択します
+
+
+
+[discrete]
+== 詳細については、こちらをご覧ください
+
+* link:task_trident_configure_networking.html["ユーザクラスタで Trident のサポートを有効にします"]
+* https://rancher.com/docs/rancher/v2.x/en/overview/architecture/["アーキテクチャに関する Rancher ドキュメント"^]
+* https://rancher.com/docs/rancher/v2.x/en/overview/concepts/["Rancher 用の Kubernetes 用語"]
+* https://docs.netapp.com/us-en/vcp/index.html["vCenter Server 向け NetApp Element プラグイン"^]
+* https://www.netapp.com/us/documentation/hci.aspx["NetApp HCI のリソースページ"^]
+

@@ -1,0 +1,91 @@
+---
+sidebar: sidebar 
+permalink: docs/task_rancher_remove_deployment.html 
+summary: 再導入できるように、 NetApp HCI 展開でランチツールのインストールを削除する方法について説明します。 
+keywords: netapp, hci, api, REST, remove, Rancher, redeploy 
+---
+= NetApp HCI でランチツールをインストールした場合は、取り外します
+:allow-uri-read: 
+
+
+[role="lead"]
+誤った情報（不正な Rancher サーバ FQDN など）を使用して NetApp HCI に Rancher を誤って展開した場合は、インストールを削除してから再展開する必要があります。NetApp HCI インスタンス上の Rancher インストールを削除するには、次の手順を実行します。
+
+ユーザクラスタは削除されません。
+
+
+TIP: ユーザクラスタを保持しなければならない場合があります。これらを保持しておくと、後で別の Rancher 実装に移行できます。ユーザクラスタを削除する場合は、最初に rancher サーバを削除する前に、削除する必要があります。削除しないと、 rancher サーバの削除後にユーザクラスタを削除するのが難しくなります。
+
+.オプション（ Options ）
+* <<Remove Rancher on NetApp HCI using NetApp Hybrid Cloud Control>> （推奨）
+* <<Remove Rancher on NetApp HCI using the REST API>>
+
+
+
+
+== ネットアップのハイブリッドクラウドコントロールを使用して NetApp HCI のランチャを削除
+
+NetApp Hybrid Cloud Control Web UI を使用して、ランチサーバをホストするために導入時に設定した 3 つの仮想マシンを削除できます。
+
+.手順
+. Webブラウザで管理ノードのIPアドレスを開きます。
++
+[listing]
+----
+https://<ManagementNodeIP>
+----
+. ストレージクラスタ管理者のクレデンシャルを指定して NetApp Hybrid Cloud Control にログインします。
+. ダッシュボードの右上にあるメニューをクリックします。
+. 「 * Configure * 」を選択します。
++
+image::hcc_configure.png[Rancher Configuration ページ]
+
+. [* Rancher Server Clusters] ペインで、 [* Rancher Server Clusters] をクリックします。
+. 削除する必要があるランチャのインストールの * アクション * メニューを選択します。
++
+
+CAUTION: 削除 * をクリックすると、 NetApp HCI 管理クラスタのランチ元がすぐに削除されます。
+
+. 「 * 削除」を選択します。
+
+
+
+
+== REST API を使用して NetApp HCI のランチツールを削除します
+
+NetApp Hybrid Cloud Control REST API を使用して、ランチサーバをホストするために導入時に設定した 3 つの仮想マシンを削除できます。
+
+.手順
+. 管理ノードの IP アドレスのあとに「 /k8sdeployer/api/` 」を入力します。
++
+[listing]
+----
+https://[IP address]/k8sdeployer/api/
+----
+. Authorize * または任意のロックアイコンをクリックし、 API を使用する権限を付与するクラスタ管理者クレデンシャルを入力します。
++
+.. クラスタのユーザ名とパスワードを入力します。
+.. 値が選択されていない場合は、タイプドロップダウンリストから * リクエスト本文 * を選択します。
+.. 値がまだ入力されていない場合は、クライアント ID を「 m node-client 」として入力します。
+.. クライアントシークレットの値は入力しないでください。
+.. セッションを開始するには、 * Authorize * をクリックします。
+.. ウィンドウを閉じます。
+
+
+. [*Available Authorizations ( 使用可能な承認 )*] ダイアログボックスを閉じます。
+. [POST/destroy] をクリックします。
+. [* 試してみてください * ] をクリックします。
+. [request body （要求の本文） ] テキストボックスに、 [erverURL] 値として rancher サーバ FQDN を入力します。
+. [* Execute] をクリックします。
++
+数分後、ランチサーバの仮想マシンが vSphere Client のホストおよびクラスタリストに表示されなくなります。削除後は、 NetApp Hybrid Cloud Control を使用して NetApp HCI にランチシートを再導入できます。
+
+
+
+[discrete]
+== 詳細はこちら
+
+* https://kb.netapp.com/Advice_and_Troubleshooting/Data_Storage_Software/Management_services_for_Element_Software_and_NetApp_HCI/NetApp_HCI_and_Rancher_troubleshooting["Rancher 展開のトラブルシューティング"]
+* https://docs.netapp.com/us-en/vcp/index.html["vCenter Server 向け NetApp Element プラグイン"^]
+* https://www.netapp.com/hybrid-cloud/hci-documentation/["NetApp HCI のリソースページ"^]
+

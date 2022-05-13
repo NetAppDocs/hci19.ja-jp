@@ -1,0 +1,42 @@
+---
+sidebar: sidebar 
+permalink: docs/task_nde_hci_power_off_storage.html 
+summary: NetApp HCI コンピューティングノードの電源をオフにする方法について説明します。 
+keywords: netapp, hci, netapp deployment engine, deployment, vsphere 
+---
+= NetApp HCI システムのストレージリソースの電源をオフにします
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ../media/
+:keywords: netapp, hci, netapp deployment engine, deployment, vsphere
+
+
+[role="lead"]
+NetApp HCI のストレージリソースの電源をオフにする場合は、「 Element API メソッド」を使用してストレージノードを適切に停止する必要があります。
+
+コンピューティングリソースの電源をオフにしたら、 Web ブラウザを使用して、 NetApp HCI ストレージクラスタのすべてのノードをシャットダウンします。
+
+. ストレージクラスタにログインし、正しい MVIP に接続していることを確認します。
+. iSCSI セッション数が 0 であることを確認します。
+. クラスタ > ノード > アクティブ * と進み、クラスタ内のすべてのアクティブノードのノード ID を記録します。
+. NetApp HCI ストレージクラスタの電源をオフにするには、 Web ブラウザを開き、次の URL を使用して電源オフおよび停止の手順を実行します。 '{MVIP}' は NetApp HCI ストレージ・システムの管理 IP アドレスで 'nodes=[]' アレイには ' 手順 2 で記録したノード ID が含まれています例：
++
+[listing]
+----
+https://{MVIP}/json-rpc/1.0?method=Shutdown&nodes=[1,2,3,4]&option=halt
+----
+. クラスタ管理者のユーザ名とパスワードを入力します。
+. すべてのストレージクラスタノードが API 結果の「必要」セクションに含まれていることを確認して、 API 呼び出しが正常に返されたことを検証します。
++
+すべての NetApp HCI ストレージノードの電源がオフになりました。
+
+
+
+[discrete]
+== 詳細については、こちらをご覧ください
+
+* https://kb.netapp.com/Advice_and_Troubleshooting/Hybrid_Cloud_Infrastructure/NetApp_HCI/Firmware_and_driver_versions_in_NetApp_HCI_and_NetApp_Element_software["NetApp HCI および NetApp Element のファームウェアとドライバのバージョン ソフトウェア"^]
+

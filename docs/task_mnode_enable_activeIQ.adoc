@@ -1,0 +1,135 @@
+---
+sidebar: sidebar 
+permalink: docs/task_mnode_enable_activeIQ.html 
+summary: 管理ノード（ mNode ）を使用して、 NetApp Active IQ と NetApp HCI テレメトリを有効にすることができます。 
+keywords: netapp, hci, api, enable, active iq, activeiq, hci monitoring 
+---
+= Active IQ と NetApp HCI の監視を有効にします
+:allow-uri-read: 
+
+
+[role="lead"]
+インストールまたはアップグレード時に Active IQ ストレージの監視（ SolidFire オールフラッシュストレージおよび NetApp HCI 用）と NetApp HCI コンピューティングの監視（ NetApp HCI のみ）を有効にしていない場合、有効にすることができます。この手順は、 NetApp HCI 導入エンジンを使用してテレメトリを無効にした場合、または SolidFire オールフラッシュストレージシステムのインストール時に SolidFire Active IQ を設定しなかった場合に必要になることがあります。
+
+Active IQ コレクタサービスは、履歴データのレポートおよびほぼリアルタイムのパフォーマンス監視用に、設定データと Element ソフトウェアベースのクラスタパフォーマンス指標を NetApp Active IQ に転送します。NetApp HCI 監視サービスを使用すると、ストレージクラスタのエラーを vCenter に転送してアラート通知を送信できます。
+
+.作業を開始する前に
+* ストレージクラスタで NetApp Element ソフトウェア 11.3 以降が実行されている必要があります。
+* バージョン 11.3 以降を実行する管理ノードを導入しておきます。
+* インターネットにアクセスできる。外部接続のないダークサイトからは、 Active IQ コレクタサービスを使用できません。
+
+
+.手順
+. インストールのベースアセット ID を取得します。
++
+.. 管理ノードでインベントリサービス REST API UI を開きます。
++
+[listing]
+----
+https://<ManagementNodeIP>/inventory/1/
+----
+.. 「 * Authorize * 」（認証）をクリックして、次の手順を実行
++
+... クラスタのユーザ名とパスワードを入力します。
+... クライアント ID を「 m node-client 」として入力します。
+... セッションを開始するには、 * Authorize * をクリックします。
+... ウィンドウを閉じます。
+
+
+.. REST API UI で、 * 一部のユーザに適用 / インストール * をクリックします。
+.. [* 試してみてください * ] をクリックします。
+.. [* Execute] をクリックします。
+.. コード 200 の応答本文から ' インストールの ID をコピーします
++
+[listing, subs="+quotes"]
+----
+{
+  "installations": [
+    {
+      "_links": {
+        "collection": "https://10.111.211.111/inventory/1/installations",
+        "self": "https://10.111.217.111/inventory/1/installations/abcd01e2-ab00-1xxx-91ee-12f111xxc7x0x"
+      },
+      *"id": "abcd01e2-ab00-1xxx-91ee-12f111xxc7x0x",*
+----
++
+
+NOTE: インストール環境には、インストールまたはアップグレード時に作成されたベースアセットの構成が含まれています。
+
+
+
+. テレメータの有効化：
++
+.. 管理ノードの mNode サービス API UI にアクセスします。管理ノードの IP アドレスに「 /mnode 」を続けて入力します。
++
+[listing]
+----
+https://<ManagementNodeIP>/mnode
+----
+.. [* Authorize * （認証） ] または任意のロックアイコンをクリックして、次の手順を実行します。
++
+... クラスタのユーザ名とパスワードを入力します。
+... クライアント ID を「 m node-client 」として入力します。
+... セッションを開始するには、 * Authorize * をクリックします。
+... ウィンドウを閉じます。
+
+
+.. ベースアセットを設定します。
++
+... [* PUT / assets/｛ asset_id ｝ * ] をクリックします。
+... [* 試してみてください * ] をクリックします。
+... JSON ペイロードに次のコマンドを入力します。
++
+[listing]
+----
+{
+"telemetry_active": true
+"config": {}
+}
+----
+... 前の手順のベース ID を * asset_ID * に入力します。
+... [* Execute] をクリックします。
++
+Active IQ サービスは、アセットが変更されるたびに自動的に再起動されます。アセットを変更すると、設定が適用されるまで短時間の遅延が発生します。
+
+
+
+
+
+. 管理ノードの既知のアセットに、 NetApp HCI 監視用の vCenter コントローラアセット（ NetApp HCI インストールのみ）と Hybrid Cloud Control 用の vCenter コントローラアセット（すべてのインストール環境）を追加しておきます。
++
+
+NOTE: NetApp HCI 監視サービスにはコントローラアセットが必要です。
+
++
+.. コントローラサブアセットを追加する場合は、 * POST /assets/｛ asset_id ｝ /controllers * をクリックします。
+.. [* 試してみてください * ] をクリックします。
+.. クリップボードにコピーした親ベースアセットの ID を * asset_id * フィールドに入力します。
+.. 必要なペイロード値を「 type 」に「 vcenter 」、 vCenter クレデンシャルを指定して入力します。
++
+[listing]
+----
+{
+"username": "string",
+"password": "string",
+"ip": "string",
+"type": "vCenter",
+"host_name": "string",
+"config": {}
+}
+----
++
+
+NOTE: 「 ip 」は vCenter の IP アドレスです。
+
+.. [* Execute] をクリックします。
+
+
+
+
+[discrete]
+== 詳細については、こちらをご覧ください
+
+* https://docs.netapp.com/us-en/vcp/index.html["vCenter Server 向け NetApp Element プラグイン"^]
+* https://www.netapp.com/hybrid-cloud/hci-documentation/["NetApp HCI のリソースページ"^]
+

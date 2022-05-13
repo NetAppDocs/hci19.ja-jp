@@ -1,0 +1,34 @@
+---
+sidebar: sidebar 
+permalink: docs/task_rancher_config_anti_affinity.html 
+summary: ホストの耐障害性を高めるために、ランチ元 VM に非アフィニティルールを設定する方法について説明します。 
+keywords: netapp, hci, rancher, deploy, cluster, kubernetes, anti, affinity, resiliency 
+---
+= VM の耐障害性を向上
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ../media/
+
+
+[role="lead"]
+NetApp HCI に Rancher を導入すると、 vSphere 環境に 3 つの新しいノードが仮想マシンとして含まれ、 Rancher 環境をホストできるようになります。Rancher Web UI は、これらの各ノードから使用できます。完全な耐障害性を実現するには、電源再投入やフェイルオーバーなどのイベントが発生したあと、 3 台の仮想マシンと対応する仮想ディスクをそれぞれ別の物理ホストに配置する必要があります。
+
+各 VM とそのリソースを別々の物理ホストに維持するために、 VMware vSphere Distributed Resource Scheduler （ DRS ）の非アフィニティルールを作成できます。これは、 NetApp HCI の導入で Rancher の一部として自動化されているわけではありません。
+
+DRS 非アフィニティルールの設定方法については、次の VMware ドキュメントを参照してください。
+
+https://docs.vmware.com/en/VMware-vSphere/7.0/com.vmware.vsphere.resmgmt.doc/GUID-FBE46165-065C-48C2-B775-7ADA87FF9A20.html["VM 非アフィニティルールを作成します"]
+
+https://docs.vmware.com/en/VMware-vSphere/7.0/com.vmware.vsphere.avail.doc/GUID-E137A9F8-17E4-4DE7-B986-94A0999CF327.html["vSphere HA と DRS アフィニティルール"]
+
+[discrete]
+== 詳細については、こちらをご覧ください
+
+* https://rancher.com/docs/rancher/v2.x/en/overview/architecture/["アーキテクチャに関する Rancher ドキュメント"^]
+* https://rancher.com/docs/rancher/v2.x/en/overview/concepts/["Rancher 用の Kubernetes 用語"]
+* https://docs.netapp.com/us-en/vcp/index.html["vCenter Server 向け NetApp Element プラグイン"^]
+* https://www.netapp.com/us/documentation/hci.aspx["NetApp HCI のリソースページ"^]
+

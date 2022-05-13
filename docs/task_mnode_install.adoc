@@ -1,0 +1,354 @@
+---
+sidebar: sidebar 
+permalink: docs/task_mnode_install.html 
+summary: NetApp Element ソフトウェアを実行しているクラスタの管理ノードをインストールできます。 
+keywords: netapp, element, management node, mnode, storage, install 
+---
+= 管理ノードをインストール
+:allow-uri-read: 
+
+
+[role="lead"]
+NetApp Element ソフトウェアを実行しているクラスタの管理ノードは、構成に応じたイメージを使用して手動でインストールできます。
+
+この手動プロセスは、管理ノードのインストールに NetApp Deployment Engine を使用していない SolidFire オールフラッシュストレージ管理者および NetApp HCI 管理者を対象としています。
+
+.必要なもの
+* クラスタで NetApp Element ソフトウェア 11.3 以降を実行している必要があります。
+* インストール環境では IPv4 を使用します。管理ノード 11.3 では IPv6 がサポートされません。
++
+
+NOTE: IPv6 のサポートが必要な場合は、管理ノード 11.1 を使用してください。
+
+* ネットアップサポートサイトからソフトウェアをダウンロードする権限が必要です。
+* 使用するプラットフォームに適した管理ノードイメージのタイプを特定しておきます。
++
+[cols="30,30"]
+|===
+| プラットフォーム | インストールイメージのタイプ 
+
+
+| Microsoft Hyper-V | .iso 
+
+
+| KVM の略 | .iso 
+
+
+| VMware vSphere の場合 | .iso 、 .ova のいずれかです 
+
+
+| Citrix XenServer | .iso 
+
+
+| OpenStack の機能を使用 | .iso 
+|===
+* （管理ノード 12.0 以降にプロキシサーバを使用） NetApp Hybrid Cloud Control を管理サービスバージョン 2.16 に更新してから、プロキシサーバを設定しておきます。
+
+
+Element 12.2 管理ノードはオプションのアップグレードです。既存の環境では必要ありません。
+
+この手順を実行する前に、を理解しておく必要があります link:concept_hci_volumes.html#persistent-volumes["永続ボリューム"] 使用するかどうかを指定します。永続ボリュームはオプションですが、 VM が失われた場合の管理ノードの設定データのリカバリには推奨されます。
+
+.手順
+. <<Download ISO or OVA and deploy the VM>>
+. <<Create the management node admin and configure the network>>
+. <<Configure time sync>>
+. <<Set up the management node>>
+. <<Configure controller assets>>
+. <<Configure compute node assets,（ NetApp HCI のみ）コンピューティングノードアセットを設定します>>
+
+
+
+
+== ISO または OVA をダウンロードし、 VM を導入します
+
+. から、インストール環境に対応した OVA または ISO をダウンロードします https://mysupport.netapp.com/site/products/all/details/netapp-hci/downloads-tab["NetApp HCI"^] ネットアップサポートサイトのページ：
++
+.. Download Latest Release * を選択し、 EULA に同意します。
+.. ダウンロードする管理ノードのイメージを選択します。
+
+
+. OVA をダウンロードした場合は、次の手順を実行します。
++
+.. OVA を導入します。
+.. ストレージクラスタが管理ノード（ eth0 ）とは別のサブネット上にある環境で永続ボリュームを使用する場合は、ストレージサブネット（ eth1 など）上の VM に 2 つ目のネットワークインターフェイスコントローラ（ NIC ）を追加するか、管理ネットワークからストレージネットワークへルーティング可能なことを確認します。
+
+
+. ISO をダウンロードした場合は、次の手順を実行します。
++
+.. 以下の構成でハイパーバイザーから新しい 64 ビットの仮想マシンを作成します。
++
+*** 仮想 CPU × 6
+*** 24GB の RAM
+*** ストレージアダプタのタイプが LSI Logic Parallel に設定されています
++
+
+IMPORTANT: 管理ノードのデフォルトは LSI Logic SAS になる場合があります。[ * 新しい仮想マシン * ] ウィンドウで、 [ * ハードウェアのカスタマイズ * > * 仮想ハードウェア * ] を選択して、ストレージ・アダプターの構成を確認します。必要に応じて、 LSI Logic SAS を * LSI Logic Parallel * に変更します。
+
+*** 400GB の仮想ディスク、シンプロビジョニング
+*** インターネットアクセスとストレージ MVIP へのアクセスが可能な仮想ネットワークインターフェイス × 1
+*** （ SolidFire オールフラッシュストレージの場合はオプション）ストレージクラスタへの管理ネットワークアクセスが可能な仮想ネットワークインターフェイス × 1 。ストレージクラスタが管理ノード（ eth0 ）とは別のサブネット上にある環境で永続ボリュームを使用する場合は、ストレージサブネット（ eth1 ）上の VM に 2 つ目のネットワークインターフェイスコントローラ（ NIC ）を追加するか、管理ネットワークからストレージネットワークへルーティング可能なことを確認します。
++
+
+IMPORTANT: このあとの手順で指示があるまでは、仮想マシンの電源をオンにしないでください。
+
+
+
+.. 仮想マシンに ISO を接続し、 .iso インストールイメージでブートします。
++
+
+NOTE: イメージを使用して管理ノードをインストールすると、スプラッシュ画面が表示されるまでに 30 秒程度かかることがあります。
+
+
+
+. インストールが完了したら、管理ノードの仮想マシンの電源をオンにします。
+
+
+
+
+== 管理ノード管理者を作成し、ネットワークを設定
+
+. ターミナルユーザインターフェイス（ TUI ）を使用して、管理ノードの管理ユーザを作成します。
++
+
+TIP: メニューオプションを移動するには、上矢印キーまたは下矢印キーを押します。ボタン間を移動するには、 Tab キーを押します。ボタンからフィールドに移動するには、 Tab キーを押します。フィールド間を移動するには、上矢印キーまたは下矢印キーを押します。
+
+. 管理ノードネットワーク（ eth0 ）を設定します。
++
+
+NOTE: ストレージトラフィックを分離するために NIC を追加する必要がある場合は、別の NIC の設定手順を参照してください。 link:task_mnode_install_add_storage_NIC.html["ストレージネットワークインターフェイスコントローラ（ NIC ）の設定"]。
+
+
+
+
+
+== 時刻同期を設定します
+
+. NTP を使用して管理ノードとストレージクラスタの間で時刻が同期されていることを確認します。
++
+
+NOTE: Element 12..1 以降では、手順（ a ） ～ （ e ）が自動的に実行されます。管理ノード 12..1 の場合は、に進みます <<substep_f_install_config_time_sync,サブステップ (f)>> 時刻同期の設定を完了します。
+
++
+.. SSH またはハイパーバイザーが提供するコンソールを使用して、管理ノードにログインします。
+.. NTPD を停止：
++
+[listing]
+----
+sudo service ntpd stop
+----
+.. NTP 構成ファイル /etc/ntp.conf を編集します
++
+... 各サーバの前に # を追加して ' デフォルト・サーバ（サーバ 0.gentoo.pool.ntp.org ）をコメントアウトします
+... 追加するデフォルトのタイムサーバごとに新しい行を追加します。デフォルトのタイムサーバは、同じ NTP サーバである必要があります で使用するストレージクラスタで使用します A link:task_mnode_install.html#set-up-the-management-node["後の手順"]。
++
+[listing]
+----
+vi /etc/ntp.conf
+
+#server 0.gentoo.pool.ntp.org
+#server 1.gentoo.pool.ntp.org
+#server 2.gentoo.pool.ntp.org
+#server 3.gentoo.pool.ntp.org
+server <insert the hostname or IP address of the default time server>
+----
+... 完了したら構成ファイルを保存します。
+
+
+.. 新しく追加したサーバと NTP 同期を強制します。
++
+[listing]
+----
+sudo ntpd -gq
+----
+.. NTPD を再起動します。
++
+[listing]
+----
+sudo service ntpd start
+----
+.. [[[[suf_install_config_time_sync]] ハイパーバイザーを介したホストとの時間同期を無効にします（ VMware の例を次に示します）。
++
+
+NOTE: OpenStack 環境の .iso イメージなどで、 VMware 以外のハイパーバイザー環境に mNode を導入する場合は、同等のコマンドについてハイパーバイザーのドキュメントを参照してください。
+
++
+... 定期的な時刻同期を無効にします。
++
+[listing]
+----
+vmware-toolbox-cmd timesync disable
+----
+... サービスの現在のステータスを表示して確認します。
++
+[listing]
+----
+vmware-toolbox-cmd timesync status
+----
+... vSphere で、 [VM オプション ] の [ ゲスト時刻をホストと同期する ] チェックボックスがオフになっていることを確認します。
++
+
+NOTE: 今後 VM を変更する場合は、このオプションを有効にしないでください。
+
+
+
+
+
+
+
+
+NOTE: の実行時は NTP に影響するため、時刻の同期設定の完了後は NTP を編集しないでください link:task_mnode_install.html#set-up-the-management-node["Setup コマンド"] 管理ノード。
+
+
+
+== 管理ノードをセットアップ
+
+. 管理ノードのセットアップコマンドを設定して実行します。
++
+
+NOTE: セキュアプロンプトにパスワードを入力するように求められます。クラスタがプロキシサーバの背後にある場合、パブリックネットワークに接続できるようにプロキシを設定する必要があります。
+
++
+[listing]
+----
+/sf/packages/mnode/setup-mnode --mnode_admin_user [username] --storage_mvip [mvip] --storage_username [username] --telemetry_active [true]
+----
++
+.. 次の各必須パラメータについて、 [] ブラケット（ブラケットを含む）の値を置き換えます。
++
+
+NOTE: 内はコマンドの省略名で、正式な名前の代わりに使用できます。
+
++
+*** * --mnode_admin_user （ -mu ） [username] * ：管理ノードの管理者アカウントのユーザ名。一般には、管理ノードへのログインに使用したユーザアカウントのユーザ名です。
+*** * --storage_mvip （ -SM ） [MVIP アドレス ] * ： Element ソフトウェアを実行しているストレージクラスタの管理仮想 IP アドレス（ MVIP ）。同じストレージクラスタを使用して管理ノードを設定します の間に使用しました link:task_mnode_install.html#configure-time-sync["NTP サーバの設定"]。
+*** *--storage_username(-su )[username] * ：「 --storage_mvip 」パラメータで指定したクラスタのストレージクラスタ管理者のユーザ名。
+*** * --metal_active （ -t ） [true]* ： Active IQ による分析のためのデータ収集を有効にする値を true のままにします。
+
+
+.. （オプション）： Active IQ エンドポイントのパラメータをコマンドに追加します。
++
+*** * --remote_host （ -RH ） [AIQ _endpoint]* ： Active IQ のテレメトリデータの処理が行われるエンドポイント。このパラメータを指定しない場合は、デフォルトのエンドポイントが使用されます。
+
+
+.. （推奨）：永続ボリュームに関する以下のパラメータを追加します。永続ボリューム機能用に作成されたアカウントとボリュームを変更または削除しないでください。変更または削除すると、管理機能が失われます。
++
+*** * --use_persistent_volumes （ -pv ） [true/false 、デフォルト： false]* ：永続ボリュームを有効または無効にします。永続ボリューム機能を有効にするには、 true を入力します。
+*** *--persistent_volume_account (-pVA) [account_name]*:`--use_persistent_volumes が true に設定されている場合 ' このパラメータを使用して ' 永続ボリュームに使用するストレージ・アカウント名を入力します
++
+
+NOTE: 永続ボリュームには、クラスタ上の既存のアカウント名とは異なる一意のアカウント名を使用してください。永続ボリュームのアカウントを他の環境から切り離すことが非常に重要です。
+
+*** * - persistent_volumes _mvip （ -pvm ） [mvip ] * ：永続ボリュームで使用する Element ソフトウェアを実行しているストレージクラスタの管理仮想 IP アドレス（ MVIP ）を入力します。このパラメータは、管理ノードで複数のストレージクラスタが管理されている場合にのみ必要です。複数のクラスタを管理していない場合は、デフォルトのクラスタ MVIP が使用されます。
+
+
+.. プロキシサーバを設定します。
++
+*** * --use_proxy （ -up ） [true/false 、 default ： false]* ：プロキシの使用を有効または無効にします。このパラメータは、プロキシサーバを設定する場合に必要です。
+*** * --proxy_hostname_or_IP （ -pi ） [-host] * ：プロキシのホスト名または IP 。プロキシを使用する場合は必須です。これを指定すると '--proxy_port' の入力を求めるプロンプトが表示されます
+*** *--proxy_username （ -pu ） [username]*: プロキシユーザ名。このパラメータはオプションです。
+*** *--proxy_password (-pp)[password]*: プロキシパスワード。このパラメータはオプションです。
+*** * --proxy_port （ -pq ） [port 、 default ： 0]*: プロキシポート。これを指定すると ' プロキシ・ホスト名または IP (--proxy_hostname_or_ip`) の入力を求めるプロンプトが表示されます
+*** * --proxy_ssh_port （ -ps ） [port 、 default ： 443] * ： SSH プロキシポート。デフォルト値はポート 443 です。
+
+
+.. （オプション）各パラメータに関する追加情報が必要な場合は、 help パラメータを使用します。
++
+*** *--help(-h)*: 各パラメータに関する情報を返します。パラメータは、初期導入時に必須またはオプションとして定義します。アップグレードと再導入ではパラメータの要件が異なる場合があります。
+
+
+.. 「 etup-mnode 」コマンドを実行します。
+
+
+
+
+
+
+== コントローラアセットを設定する
+
+. インストール ID を確認します。
++
+.. ブラウザから、管理ノードの REST API UI にログインします。
+.. ストレージの MVIP にアクセスしてログインします。次の手順で証明書が承認されます。
+.. 管理ノードでインベントリサービス REST API UI を開きます。
++
+[listing]
+----
+https://<ManagementNodeIP>/inventory/1/
+----
+.. 「 * Authorize * 」（認証）を選択して、次の手順を実行
++
+... クラスタのユーザ名とパスワードを入力します。
+... クライアント ID を「 m node-client 」として入力します。
+... セッションを開始するには、 * Authorize * を選択します。
+
+
+.. REST API UI で、 * 一部のユーザに一時的な処理を開始 / インストール * を選択します。
+.. [* 試してみてください * ] を選択します。
+.. [* Execute] を選択します。
+.. コード 200 の応答本文から 'id' をコピーして保存し ' 後の手順で使用できるようにします
++
+インストール環境には、インストールまたはアップグレード時に作成されたベースアセットの構成が含まれています。
+
+
+
+. （ NetApp HCI のみ） vSphere でコンピューティングノードのハードウェアタグを確認します。
++
+.. vSphere Web Client ナビゲータでホストを選択します。
+.. [*Monitor*] タブを選択し、 [*Hardware Health*] を選択します。
+.. ノードの BIOS のメーカーとモデル番号が表示されます。後の手順で使用するために 'tag' の値をコピーして保存します
+
+
+. 管理ノードの既知のアセットに、 NetApp HCI 監視用の vCenter コントローラアセット（ NetApp HCI 環境のみ）と Hybrid Cloud Control （すべての環境）を追加します。
++
+.. 管理ノードの mNode サービス API UI にアクセスします。管理ノードの IP アドレスに「 /mnode 」を続けて入力します。
++
+[listing]
+----
+https:/<ManagementNodeIP>/mnode
+----
+.. 「 * Authorize * （認証）」または任意のロックアイコンを選択し、次の手順を実行します。
++
+... クラスタのユーザ名とパスワードを入力します。
+... クライアント ID を「 m node-client 」として入力します。
+... セッションを開始するには、 * Authorize * を選択します。
+... ウィンドウを閉じます。
+
+
+.. コントローラサブアセットを追加する場合は、「 * POST /assets/｛ asset_id ｝ /controllers * 」を選択します。
++
+
+NOTE: コントローラサブアセットを追加する場合は、 vCenter で新しい NetApp HCC ロールを作成することを推奨します。この新しい NetApp HCC ロールにより、管理ノードのサービス表示がネットアップ専用のアセットに制限されます。を参照してください link:task_mnode_create_netapp_hcc_role_vcenter.html["vCenter で NetApp HCC ロールを作成します"]。
+
+.. [* 試してみてください * ] を選択します。
+.. クリップボードにコピーした親ベースアセットの ID を * asset_id * フィールドに入力します。
+.. 必要なペイロード値を「 vcenter 」タイプと「 vcenter 」クレデンシャルタイプで入力します。
+.. [* Execute] を選択します。
+
+
+
+
+
+
+== （ NetApp HCI のみ）コンピューティングノードアセットを設定します
+
+. （ NetApp HCI のみ）管理ノードの既知のアセットにコンピューティングノードのアセットを追加します。
++
+.. コンピューティングノードアセットのクレデンシャルを使用してコンピューティングノードサブアセットを追加する場合は、「 * POST/assets/｛ asset_id ｝ /compute-nodes 」を選択します。
+.. [* 試してみてください * ] を選択します。
+.. クリップボードにコピーした親ベースアセットの ID を * asset_id * フィールドに入力します。
+.. ペイロードで、 Model タブで定義されているとおりに必要なペイロード値を入力します。「タイプ」として「 ESXi ホスト」と入力し、「 hardware_tag 」の前の手順で保存したハードウェアタグを入力します。
+.. [* Execute] を選択します。
+
+
+
+
+[discrete]
+== 詳細はこちら
+
+* link:concept_hci_volumes.html#persistent-volumes["永続ボリューム"]
+* link:task_mnode_add_assets.html["管理ノードにコンピューティングアセットとコントローラアセットを追加します"]
+* link:task_mnode_install_add_storage_NIC.html["ストレージ NIC を設定します"]
+* https://docs.netapp.com/us-en/vcp/index.html["vCenter Server 向け NetApp Element プラグイン"^]
+* https://www.netapp.com/hybrid-cloud/hci-documentation/["NetApp HCI のリソースページ"^]
+

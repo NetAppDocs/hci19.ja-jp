@@ -1,0 +1,56 @@
+---
+sidebar: sidebar 
+permalink: docs/task_mnode_work_overview.html 
+summary: 管理ノード（ mNode ）は、システムサービスの使用、クラスタのアセットと設定の管理、システムのテストとユーティリティの実行、システム監視用の Active IQ の設定、トラブルシューティング用のネットアップサポートアクセスの有効化に使用できます。 
+keywords: netapp, mnode, api, rest api, mnode ui, management node ui 
+---
+= 管理ノードの概要
+:allow-uri-read: 
+
+
+[role="lead"]
+管理ノード（ mNode ）は、システムサービスの使用、クラスタのアセットと設定の管理、システムのテストとユーティリティの実行、システム監視用の Active IQ の設定、トラブルシューティング用のネットアップサポートアクセスの有効化に使用できます。
+
+
+NOTE: ベストプラクティスとして、 1 つの管理ノードを 1 つの VMware vCenter インスタンスに関連付けるだけで、同じストレージリソースおよびコンピューティングリソースまたは vCenter インスタンスを複数の管理ノードに定義することは避けてください。
+
+Element ソフトウェアバージョン 11.3 以降を実行するクラスタでは、次のいずれかのインターフェイスを使用して管理ノードを操作できます。
+
+* 管理ノード UI (`https://[mNode ip:442') を使用すると ' ネットワークとクラスタの設定を変更したり ' システムテストを実行したり ' システムユーティリティを使用したりできます
+* 組み込みの REST API UI （「 https://[mNode ip ｝ /mnode 」）を使用すると、プロキシサーバの設定、サービスレベルの更新、アセット管理など、管理ノードサービスに関連する API を実行したり、理解したりできます。
+
+
+管理ノードをインストールまたはリカバリします。
+
+* link:task_mnode_install.html["管理ノードをインストール"]
+* link:task_mnode_install_add_storage_NIC.html["ストレージネットワークインターフェイスコントローラ（ NIC ）の設定"]
+* link:task_mnode_recover.html["管理ノードをリカバリ"]
+
+
+管理ノードにアクセスします。
+
+* link:task_mnode_access_ui.html["管理ノード（ UI または REST API ）へのアクセス"]
+
+
+管理ノード UI を使用してタスクを実行します。
+
+* link:task_mnode_work_overview_UI.html["管理ノード UI の概要"]
+
+
+管理ノード REST API を使用してタスクを実行します。
+
+* link:task_mnode_work_overview_API.html["管理ノードの REST API UI の概要"]
+
+
+リモート SSH 機能を無効または有効にするか、ネットアップサポートとのリモートサポートトンネルセッションを開始して、トラブルシューティングに役立ててください。
+
+* link:task_mnode_enable_remote_support_connections.html["ネットアップサポートによるリモート接続を有効にする"]
+* link:task_mnode_ssh_management.html["管理ノードで SSH 機能を管理します"]
+
+
+[discrete]
+== 詳細については、こちらをご覧ください
+
+* https://docs.netapp.com/us-en/vcp/index.html["vCenter Server 向け NetApp Element プラグイン"^]
+* https://www.netapp.com/hybrid-cloud/hci-documentation/["NetApp HCI のリソースページ"^]
+

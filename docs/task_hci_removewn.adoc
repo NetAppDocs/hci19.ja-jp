@@ -1,0 +1,47 @@
+---
+sidebar: sidebar 
+permalink: docs/task_hci_removewn.html 
+summary: 2 ノードストレージクラスタを 4 つ以上のノードに拡張したら、監視ノードのペアを削除して、 NetApp HCI 環境のコンピューティングリソースを解放できます。 
+keywords: netapp, hci, witness nodes, two-node cluster, four-node cluster, compute nodes, virtual machine, vm 
+---
+= クラスタの拡張後に監視ノードを削除します
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ../media/
+
+
+[role="lead"]
+2 ノードストレージクラスタを 4 つ以上のノードに拡張したら、監視ノードのペアを削除して、 NetApp HCI 環境のコンピューティングリソースを解放できます。以前ストレージクラスタで使用されていた監視ノードは、引き続き vSphere Web Client でスタンバイ仮想マシン（ VM ）として表示されます。
+
+監視ノードは、ストレージノードが 5 つ以上あるクラスタでは必要ありません。2 ノードクラスタを 4 つ以上のノードに拡張したあとに CPU とメモリを解放する場合は、この手順はオプションです。
+
+
+TIP: クラスタの障害やエラーが報告されていないことを確認します。システムアラートに関する情報は、 vSphere の NetApp Element Management 拡張ポイントで、 * Reporting > Alerts * をクリックすると確認できます。
+
+.手順
+. vSphere から、 NetApp Element Management 拡張ポイントにアクセスするには、 * Shortcuts * タブまたはサイドパネルからアクセスします。
+. NetApp Element Management > Cluster > Nodes * の順に選択します。
++
+image::vcp-witnessnode.gif[に、 NetApp Element の管理 > クラスタページとノードのリストを示します。]
+
+. 削除する監視ノードのチェックボックスを選択し、 * Actions > Remove * をクリックします。
+. プロンプトで操作を確認します。
+. [*Hosts and Clusters*] をクリックします。
+. 削除した監視ノード VM に移動します。
+. VM を右クリックして電源をオフにします。
+. 電源をオフにした VM を右クリックし、 * ディスクから削除 * をクリックします。
+. プロンプトで操作を確認します。
+
+
+
+
+== 詳細については、こちらをご覧ください
+
+* https://www.netapp.com/us/media/tr-4823.pdf["NetApp HCI 2 ノードストレージクラスタ | TR-4823"]
+* https://docs.netapp.com/us-en/vcp/index.html["vCenter Server 向け NetApp Element プラグイン"^]
+* https://www.netapp.com/us/documentation/hci.aspx["NetApp HCI のリソースページ"^]
+* http://docs.netapp.com/sfe-122/index.jsp["SolidFire と Element ソフトウェアドキュメントセンター"^]
+

@@ -1,0 +1,57 @@
+---
+sidebar: sidebar 
+permalink: docs/task_nde_disable_lacp_individual.html 
+summary: NetApp HCI の導入後に、構成済みスイッチ上で「 lacp-individual 」コマンドをディセーブルにする方法について説明します。 
+keywords: netapp, hci, deployment, review, deploy 
+---
+= 設定済みのスイッチで lacp-individual コマンドをディセーブルにします
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ../media/
+
+
+[role="lead"]
+デフォルトでは、 Mellanox スイッチ 'lacp-individual' コマンドと Cisco スイッチ 'LACP suspend-individual' コマンドは導入後も設定されたままになりますこのコマンドはインストール後には必要ありません。設定を維持すると、スイッチのトラブルシューティングまたはリブート時に原因ボリュームにアクセスできなくなる可能性があります。導入後は ' 各 Mellanox スイッチと Cisco スイッチの構成を確認し 'lacp-individual' または LACP suspend-individual コマンドを削除する必要があります
+
+.手順
+. SSH を使用して、スイッチへのセッションを開きます。
+. 実行コンフィギュレーションを表示します。
++
+'how running-config'
+
+. 「 lacp-individual 」コマンドまたは「 lacp suspend-individual 」コマンドのスイッチ設定出力を確認します。
++
+
+NOTE: 「 xxx-xxx 」は、ユーザが指定したインターフェイス番号です。必要に応じて、 Multi-chassis Link Aggregation Group インターフェイス「 show MLAG interfaces 」を表示して、インターフェイス番号にアクセスできます
+
++
+.. Mellanox スイッチの場合は、出力に次の行が含まれているかを確認します。
++
+'interface MLAG -port - channel xxx-xxx lacp-individual enable force
+
+.. Cisco スイッチの場合は、出力に次の行が含まれているかどうかを確認します。
++
+インターフェイス MLAG ポートチャネル xxx-xxx lacp suspend-individual enable force
+
+
+
+. コマンドが存在する場合は、そのコマンドをコンフィギュレーションから削除します。
++
+.. Mellanox スイッチの場合：
++
+no interface MLAG-PORe-channel xxx-xxx lacp-individual enable force
+
+.. シスコ製スイッチの場合： no interface MLAG-PORe-channel xxx-xxx lacp suspend-individual enable force
+
+
+. 構成内のスイッチごとに上記の手順を繰り返します。
+
+
+[discrete]
+== 詳細については、こちらをご覧ください
+
+* https://kb.netapp.com/Advice_and_Troubleshooting/Flash_Storage/SF_Series/SolidFire_Bond10G_goes_down_when_flapping_an_interface_during_troubleshooting["トラブルシューティング中にストレージノードが停止する"^]
+

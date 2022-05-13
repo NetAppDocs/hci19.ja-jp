@@ -1,0 +1,40 @@
+---
+sidebar: sidebar 
+permalink: docs/hci_prereqs_overview.html 
+summary: NetApp HCI の導入要件について説明します。 
+keywords: netapp, hci, deployment, requirements 
+---
+= NetApp HCI 導入の要件の概要
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ../media/
+:keywords: netapp, hci, environment, requirements
+
+
+[role="lead"]
+NetApp HCI には、データセンターで適切に運用するための物理的要件とネットワーク要件があります。導入を開始する前に、以下に示す要件および推奨事項を満たしていることを確認してください。
+
+NetApp HCI ハードウェアが届く前に、ネットアッププロフェッショナルサービスが提供する導入前ワークブックのチェック項目を必ず実施しておいてください。本ドキュメントには、 NetApp HCI の導入を成功させるためにネットワークと環境を準備するために必要な作業の包括的なリストが記載されています。
+
+要件と導入前タスクへのリンクを次に示します。
+
+* link:hci_prereqs_required_network_ports.html["ネットワークポートの要件"]
+* link:hci_prereqs_network_switch.html["ネットワークとスイッチの要件"]
+* link:hci_prereqs_network_cables.html["ネットワークケーブルの要件"]
+* link:hci_prereqs_ip_address.html["IP アドレスの要件"]
+* link:hci_prereqs_network_configuration.html["ネットワーク構成："]
+* link:hci_prereqs_timekeeping.html["DNS とタイムキーパー機能の要件"]
+* link:hci_prereqs_environmental.html["環境要件"]
+* link:hci_prereqs_protection_domains.html["保護ドメイン"]
+* link:hci_prereqs_witness_nodes.html["2 ノードストレージクラスタの場合は、監視ノードのリソース要件が必要です"]
+
+
+[discrete]
+== 詳細については、こちらをご覧ください
+
+* https://www.netapp.com/hybrid-cloud/hci-documentation/["NetApp HCI のリソースページ"^]
+* https://docs.netapp.com/us-en/vcp/index.html["vCenter Server 向け NetApp Element プラグイン"^]
+

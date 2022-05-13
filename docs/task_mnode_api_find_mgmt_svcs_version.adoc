@@ -1,0 +1,88 @@
+---
+sidebar: sidebar 
+permalink: docs/task_mnode_api_find_mgmt_svcs_version.html 
+summary: 管理ノードの OS および管理サービスのバージョンは、 REST API を使用して確認できます。 
+keywords: netapp, hci, management node, management services, version, bundle version, what is 
+---
+= 管理ノードの OS とサービスのバージョンを確認
+:allow-uri-read: 
+
+
+[role="lead"]
+管理ノードで REST API を使用して、管理ノードの OS 、管理サービスバンドル、および個々のサービスのバージョン番号を確認できます。
+
+.必要なもの
+* クラスタで NetApp Element ソフトウェア 11.3 以降が実行されている必要があります。
+* バージョン 11.3 以降を実行する管理ノードを導入しておきます。
+
+
+.オプション（ Options ）
+* <<API commands>>
+* <<REST API UI steps>>
+
+
+
+
+== API コマンド
+
+* 管理ノードで実行されている管理ノードの OS 、管理サービスバンドル、および管理ノードの API （ mnode-API ）サービスに関するバージョン情報を取得します。
++
+[listing]
+----
+curl -X GET "https://<ManagementNodeIP>/mnode/about" -H  "accept: application/json"
+----
+* 管理ノードで実行されている個々のサービスに関するバージョン情報を取得します。
++
+[listing]
+----
+curl -X GET "https://<ManagementNodeIP>/mnode/services?status=running" -H  "accept: */*" -H  "Authorization: Bearer ${TOKEN}"
+----
++
+
+NOTE: API コマンドで使用されるベアラー '$ ｛ token ｝ ' を検索できます link:task_mnode_api_get_authorizationtouse.html["許可します"]。ベアラー '$ ｛ token ｝ ' は curl 応答に含まれています。
+
+
+
+
+
+== REST API の UI の手順
+
+. 管理ノードの IP アドレスのあとに「 /mnode/ 」を入力して、サービスの REST API UI にアクセスします。
++
+[listing]
+----
+https://<ManagementNodeIP>/mnode/
+----
+. 次のいずれかを実行します。
++
+** 管理ノードで実行されている管理ノードの OS 、管理サービスバンドル、および管理ノードの API （ mnode-API ）サービスに関するバージョン情報を取得します。
++
+... [*Get/About*] を選択します。
+... [* 試してみてください * ] を選択します。
+... [* Execute] を選択します。
++
+管理サービスのバンドルバージョン（「 mnode_bundle_version 」）、管理ノードの OS バージョン（「 os_version 」）、および管理ノードの API バージョン（「 version 」）が応答の本文に示されます。
+
+
+
+** 管理ノードで実行されている個々のサービスに関するバージョン情報を取得します。
++
+... [*get/services*] を選択します。
+... [* 試してみてください * ] を選択します。
+... ステータスを「 * Running * 」と選択します。
+... [* Execute] を選択します。
++
+管理ノードで実行されているサービスは応答の本文に示されます。
+
+
+
+
+
+
+
+[discrete]
+== 詳細については、こちらをご覧ください
+
+* https://docs.netapp.com/us-en/vcp/index.html["vCenter Server 向け NetApp Element プラグイン"^]
+* https://www.netapp.com/hybrid-cloud/hci-documentation/["NetApp HCI のリソースページ"^]
+

@@ -1,0 +1,43 @@
+---
+sidebar: sidebar 
+permalink: docs/task_nde_start_deployment.html 
+summary: NetApp HCI の導入を開始します。 
+keywords: netapp, hci, netapp deployment engine, deployment, engine, deploy, access 
+---
+= 導入を開始
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ../media/
+:keywords: hci, release notes, vcp, element, management services, firmware
+
+
+[role="lead"]
+NetApp HCI の導入を続行する前に、エンドユーザライセンス契約を読んで内容を理解しておく必要があります。
+
+.手順
+. NetApp HCI へようこそ * ページで、 * はじめに * をクリックします。
+. [ 前提条件 *] ページで、次の操作を行います。
++
+.. それぞれの前提条件が満たされていることを確認し、関連する各チェックボックスをクリックして確定します。
+.. [* Continue （続行） ] をクリックします
+
+
+. [* エンドユーザーライセンス * （ End User Licenses * ） ] ページで、次の手順を実行します。
++
+.. ネットアップのエンドユーザライセンス契約を読みます
+.. 条件に同意する場合は、契約テキストの下部にある [* 同意します ] をクリックします。
+.. VMware のエンドユーザライセンス契約を読みます。
+.. 条件に同意する場合は、契約テキストの下部にある [* 同意します ] をクリックします。
+.. [* Continue （続行） ] をクリックします
+
+
+
+
+[discrete]
+== 詳細については、こちらをご覧ください
+
+* https://kb.netapp.com/Advice_and_Troubleshooting/Hybrid_Cloud_Infrastructure/NetApp_HCI/Firmware_and_driver_versions_in_NetApp_HCI_and_NetApp_Element_software["NetApp HCI および NetApp Element のファームウェアとドライバのバージョン ソフトウェア"^]
+

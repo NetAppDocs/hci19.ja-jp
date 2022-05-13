@@ -1,0 +1,124 @@
+---
+sidebar: sidebar 
+permalink: docs/task_nde_install_GPU_drivers.html 
+summary: NetApp HCI の導入後に GPU 対応のコンピューティングノード用の GPU ドライバをインストールする方法について説明します。 
+keywords: netapp, hci, deployment, review, GPU, install, driver, drivers 
+---
+= GPU 対応のコンピューティングノード用の GPU ドライバをインストールします
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ../media/
+
+
+[role="lead"]
+H610C などの NVIDIA グラフィックス処理ユニット（ GPU ）を搭載したコンピューティングノードでは、 NVIDIA ソフトウェアドライバを VMware ESXi にインストールして、強化された処理能力を活用できるようにする必要があります。GPU を搭載したコンピューティングノードを導入したら、 GPU 対応の各コンピューティングノードで以下の手順を実行して、 GPU ドライバを ESXi にインストールする必要があります。
+
+.手順
+. ブラウザを開き、次の URL から NVIDIA ライセンスポータルにアクセスします。
++
+[listing]
+----
+https://nvid.nvidia.com/dashboard/
+----
+. ご使用の環境に応じて、次のいずれかのドライバパッケージをコンピュータにダウンロードします。
++
+|===
+| vSphere のバージョン | ドライバパッケージ 
+
+
+| vSphere 6.5 の場合 | 「 nvidia -grid-vsphere-6.5-410.92-410.91-412.16.zip 」という形式のファイルがあります 
+
+
+| vSphere 6.7 | 「 nvidia -grid-vsphere-6.7-410.92-410.91-412.16.zip」 と入力します 
+|===
+. ドライバパッケージをコンピュータに展開します。
++
+圧縮されていないドライバファイル .VIB ファイルが展開されます。
+
+. コンピューターからコンピュート・ノード上で実行されている ESXi に、 `.VIB ’ドライバー・ファイルをコピーします。バージョンごとの次のコマンド例では、ドライバが管理ホストの「 $HOME/nvidia / ESX6.x/ 」ディレクトリにあることを前提としています。SCP ユーティリティはほとんどの Linux ディストリビューションに搭載されています。または、 Windows のすべてのバージョンに対応したユーティリティとしてダウンロードすることもできます。
++
+|===
+| ESXi のバージョン | 説明 
+
+
+| ESXi 6.5 の場合 | 'cp $HOME/nvidia / ESX6.5/nvidia **.vib root@<ESX_IP_addr>:/ 
+
+
+| ESXi 6.7 | 'cp $HOME/nvidia / ESX6.5/nvidia **.vib root@<ESX_IP_addr>:/ 
+|===
+. 次の手順に従って、 root として ESXi ホストにログインし、 NVIDIA vGPU Manager を ESXi にインストールします。
++
+.. 次のコマンドを実行して、 root ユーザとして ESXi ホストにログインします。
++
+[listing]
+----
+ssh root@<ESXi_IP_ADDRESS>
+----
+.. 次のコマンドを実行して、 NVIDIA GPU ドライバが現在インストールされていないことを確認します。
++
+[listing]
+----
+nvidia-smi
+----
++
+このコマンドは 'nvidia-smi: not found' というメッセージを返す必要があります
+
+.. 次のコマンドを実行して、ホストのメンテナンスモードを有効にし、 VIB ファイルから NVIDIA vGPU Manager をインストールします。
++
+[listing]
+----
+esxcli system maintenanceMode set --enable true
+esxcli software vib install -v /NVIDIA**.vib
+----
++
+「 Operation finished successfully 」というメッセージが表示されます。
+
+.. 次のコマンドを実行して、 8 つの GPU ドライバがすべてコマンド出力に表示されることを確認します。
++
+[listing]
+----
+nvidia-smi
+----
+.. 次のコマンドを実行して、 NVIDIA vGPU パッケージが正しくインストールされ、ロードされたことを確認します。
++
+[listing]
+----
+vmkload_mod -l | grep nvidia
+----
++
+コマンドは、「 nvidia 816 13808 」のような出力を返す必要があります
+
+.. 次のコマンドを実行してホストをリブートします。
++
+[listing]
+----
+reboot -f
+----
+.. 次のコマンドを実行してメンテナンスモードを終了します。
++
+[listing]
+----
+esxcli system maintenanceMode set --enable false
+----
+
+
+. 新たに導入した NVIDIA GPU 搭載の残りのコンピューティングノードについて、手順 4~6 を繰り返します。
+. NVIDIA のドキュメントサイトに記載された手順に従って、次のタスクを実行します。
++
+.. NVIDIA ライセンスサーバをインストールします。
+.. NVIDIA vGPU ソフトウェア用に仮想マシンゲストを設定します。
+.. 仮想デスクトップインフラ（ VDI ）環境で vGPU 対応のデスクトップを使用している場合は、 NVIDIA vGPU ソフトウェア用に VMware Horizon View を設定します。
+
+
+
+
+
+
+== 詳細については、こちらをご覧ください
+
+* https://www.netapp.com/us/documentation/hci.aspx["NetApp HCI のリソースページ"^]
+* https://docs.netapp.com/us-en/element-software/index.html["SolidFire および Element ソフトウェアのドキュメント"^]
+

@@ -1,0 +1,36 @@
+---
+sidebar: sidebar 
+permalink: docs/hci_prereqs_LACP_configuration.html 
+summary: 最適なストレージパフォーマンスを実現するために NetApp HCI を設定する方法について説明します。 
+keywords: netapp, hci, storage, performance, LACP 
+---
+= ストレージパフォーマンスを最適化するために LACP を設定します
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ../media/
+:keywords: netapp, hci, storage, performance, LACP
+
+
+[role="lead"]
+NetApp HCI ストレージクラスタのパフォーマンスを最適化するには、各ストレージノードに使用するスイッチポートで Link Aggregation Control Protocol （ LACP ）を設定します。
+
+.作業を開始する前に
+* NetApp HCI ストレージノードの 10 / 25GbE インターフェイスに接続されたスイッチポートを LACP ポートチャネルとして設定しておきます。
+* ストレージトラフィックを処理するスイッチの LACP タイマーを「高速モード（ 1 秒）」に設定し、フェイルオーバー検出時間を最適化しておきます。導入時に、すべてのストレージノード上の Bond1G インターフェイスが自動的にアクティブ / パッシブモードに対応するように設定されます。
+* ストレージネットワークを処理するスイッチで、 Cisco Virtual PortChannel （ vPC ）または同等のスイッチスタッキングテクノロジを設定しておきます。スイッチスタッキングテクノロジを使用することで LACP とポートチャネルを簡単に設定でき、ストレージノード上の 10 / 25GbE ポートとスイッチの間のトポロジでループが発生するのを防ぐことができます。
+
+
+.手順
+. スイッチベンダーの推奨事項に従って、 NetApp H シリーズストレージノードに使用するスイッチポートで LACP を有効にします。
+. NetApp HCI を導入する前に、ノード上のユーザインターフェイス（ターミナルユーザインターフェイスまたは TUI と呼ばれる）ですべてのストレージノードのボンディングモードを LACP に変更します。
+
+
+[discrete]
+== 詳細については、こちらをご覧ください
+
+* https://www.netapp.com/hybrid-cloud/hci-documentation/["NetApp HCI のリソースページ"^]
+* https://docs.netapp.com/us-en/vcp/index.html["vCenter Server 向け NetApp Element プラグイン"^]
+

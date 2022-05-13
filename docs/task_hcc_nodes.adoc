@@ -1,0 +1,69 @@
+---
+sidebar: sidebar 
+permalink: docs/task_hcc_nodes.html 
+summary: Hybrid Cloud Control Nodes ページを使用すると、システムのストレージアセットとコンピューティングアセットの両方を表示できます。 
+keywords: netapp, hci, on premise, cluster, inventory, nodes, storage, compute 
+---
+= ノードページでインベントリを表示します
+:allow-uri-read: 
+
+
+[role="lead"]
+システム内のストレージアセットとコンピューティングアセットの両方を表示し、それらの IP アドレス、名前、およびソフトウェアバージョンを確認することができます。
+
+複数のノードシステム、および 2 ノードまたは 3 ノードクラスタに関連付けられた NetApp HCI 監視ノードのストレージ情報を表示できます。状況 link:concept_hcc_custom_protection_domains.html["カスタムの保護ドメイン"^] が割り当てられている場合、特定のノードに割り当てられている保護ドメインを確認できます。
+
+監視ノードはクラスタ内のクォーラムを管理します。監視ノードはストレージには使用されません。監視ノードは NetApp HCI のみに該当し、オールフラッシュストレージ環境には該当しません。
+
+監視ノードの詳細については、を参照してください link:concept_hci_nodes.html["ノードの定義"]。
+
+SolidFire エンタープライズ SDS ノードの場合、 [ ストレージ ] タブでインベントリを監視できます。
+
+.手順
+. Webブラウザで管理ノードのIPアドレスを開きます。例：
++
+[listing]
+----
+https://<ManagementNodeIP>
+----
+. NetApp HCI ストレージクラスタ管理者のクレデンシャルを指定して NetApp Hybrid Cloud Control にログインします。
+. 左側のナビゲーションで、 * ノード * をクリックします。
++
+image::hcc_nodes_storage_2nodes.png[Hybrid Cloud Control Nodes ページの画像]
+
++
+
+NOTE: 新しい NetApp Hybrid Cloud Control セッションを初めて起動したときは、管理ノードで多数のクラスタを管理しているときに NetApp Hybrid Cloud Control Nodes ページのロードに時間がかかることがあります。ロードにかかる時間は、管理ノードでアクティブに管理されているクラスタの数によって異なります。その後の起動では、読み込み時間が短縮されます。
+
+. Nodes ページの * Storage * タブで、次の情報を確認します。
++
+.. 2 ノードクラスタ： [Storage] タブには [2 ノード ] ラベルが表示され、関連する監視ノードが表示されます。
+.. 3 ノードクラスタ：ストレージノードと関連する監視ノードが表示されます。3 ノードクラスタでは、ノード障害が発生した場合の高可用性を維持するために、監視ノードがスタンバイに導入されます。
+.. 4 ノード以上のクラスタ： 4 ノード以上のクラスタに関する情報が表示されます。監視ノードは適用されません。2 つまたは 3 つのストレージノードから開始してノードを追加しても、監視ノードは表示されたままです。指定しない場合、監視ノードのテーブルは表示されません。
+.. ファームウェアバンドルバージョンは 2.14 以降です。 Element 12.0 以降を実行しているクラスタがある場合は、これらのクラスタのファームウェアバンドルバージョンを確認できます。クラスタ内のノードでファームウェアバージョンが異なる場合は、「 * Firmware Bundle Version * 」列に「 * multiple * 」と表示されます。
+.. カスタム保護ドメイン：カスタムの保護ドメインがクラスタで使用されている場合、クラスタ内の各ノードのカスタムの保護ドメインの割り当てを確認できます。カスタムの保護ドメインが有効になっていない場合は、この列は表示されません。
+
+
+. コンピューティングインベントリ情報を表示するには、 * Compute * をクリックします。
+. これらのページの情報は、いくつかの方法で操作できます。
++
+.. 結果の項目のリストをフィルタするには、 * フィルタ * アイコンをクリックしてフィルタを選択します。フィルタのテキストを入力することもできます。
+.. 列を表示または非表示にするには、 * 列の表示 / 非表示 * アイコンをクリックします。
+.. テーブルをダウンロードするには、 * ダウンロード * アイコンをクリックします。
+.. BMC 接続エラーが発生しているコンピューティングノード用に保存されている BMC クレデンシャルを追加または編集するには、「 * BMC Connection Status * 」列のエラーメッセージテキストで「 * Edit connection settings * 」をクリックします。コンピューティングノードの接続試行が失敗した場合にのみ、そのノードのこの列にエラーメッセージが表示されます。
+
+
+
+
+
+TIP: ストレージリソースとコンピューティングリソースの数を表示するには、 NetApp Hybrid Cloud Control （ HCC ）ダッシュボードを参照します。を参照してください link:task_hcc_dashboard.html["HCC ダッシュボードを使用してストレージリソースとコンピューティングリソースを監視する"]。
+
+
+NOTE: NetApp Hybrid Cloud Control でコンピューティングノードを管理するには、が必要です https://kb.netapp.com/Advice_and_Troubleshooting/Data_Storage_Software/Management_services_for_Element_Software_and_NetApp_HCI/How_to_set_up_compute_node_management_in_NetApp_Hybrid_Cloud_Control["コンピューティングノードを vCenter ホストクラスタに追加します"^]。
+
+[discrete]
+== 詳細については、こちらをご覧ください
+
+* https://docs.netapp.com/us-en/vcp/index.html["vCenter Server 向け NetApp Element プラグイン"^]
+* https://www.netapp.com/hybrid-cloud/hci-documentation/["NetApp HCI のリソースページ"^]
+

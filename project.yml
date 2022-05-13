@@ -1,0 +1,440 @@
+---
+settings:
+  name: HCI
+  internal:
+    pdf_enabled: true
+  prod:
+    pdf_enabled: true
+    harmony_enabled: false
+  langs: ja-jp,us-en,zh-cn,zh-tw,ko-kr
+sidebar:
+  entries:
+  - title: NetApp HCI のドキュメント
+    url: "/index.html"
+  - title: NetApp HCI ソリューション
+    url: https://docs.netapp.com/us-en/hci-solutions/index.html
+  - title: リリースノート
+    entries:
+    - title: NetApp HCI の新機能
+      url: "/docs/rn_whatsnew.html"
+    - title: その他のリリース情報
+      url: "/docs/rn_relatedrn.html"
+  - title: 概念
+    entries:
+    - title: 製品の概要
+      url: "/docs/concept_hci_product_overview.html"
+    - title: アカウント
+      url: "/docs/concept_cg_hci_accounts.html"
+    - title: データ保護
+      url: "/docs/concept_hci_dataprotection.html"
+    - title: クラスタ
+      url: "/docs/concept_hci_clusters.html"
+    - title: ノード
+      url: "/docs/concept_hci_nodes.html"
+    - title: ストレージ
+      entries:
+      - title: メンテナンスモード
+        url: "/docs/concept_hci_storage_maintenance_mode.html"
+      - title: 個のボリューム
+        url: "/docs/concept_hci_volumes.html"
+      - title: ボリュームアクセスグループ
+        url: "/docs/concept_hci_volume_access_groups.html"
+      - title: イニシエータ
+        url: "/docs/concept_hci_initiators.html"
+      - title: カスタムの保護ドメイン
+        url: "/docs/concept_hcc_custom_protection_domains.html"
+    - title: ライセンス
+      url: "/docs/concept_cg_hci_licensing.html"
+    - title: NetApp Hybrid Cloud Control の最大構成数
+      url: "/docs/reference_hcc_config_maximums.html"
+    - title: セキュリティ
+      url: "/docs/concept_cg_hci_security.html"
+    - title: パフォーマンス
+      url: "/docs/concept_hci_performance.html"
+  - title: 要件と導入前のタスク
+    entries:
+    - title: NetApp HCI 導入の要件
+      url: "/docs/hci_prereqs_overview.html"
+    - title: 管理ノードの要件
+      url: "/docs/hci_prereqs_management_node.html"
+    - title: ネットワークポートの要件
+      url: "/docs/hci_prereqs_required_network_ports.html"
+    - title: ネットワークとスイッチの要件
+      url: "/docs/hci_prereqs_network_switch.html"
+    - title: ネットワークケーブルの要件
+      url: "/docs/hci_prereqs_network_cables.html"
+    - title: IP アドレスの要件
+      url: "/docs/hci_prereqs_ip_address.html"
+    - title: ネットワーク構成：
+      entries:
+      - title: ネットワーク構成オプションの概要
+        url: "/docs/hci_prereqs_network_configuration.html"
+      - title: ネットワーク構成オプション A
+        url: "/docs/hci_prereqs_network_configuration_option_A.html"
+      - title: ネットワーク構成オプション B
+        url: "/docs/hci_prereqs_network_configuration_option_B.html"
+      - title: ネットワーク構成オプション C
+        url: "/docs/hci_prereqs_network_configuration_option_C.html"
+    - title: DNS とタイムキーパー機能の要件
+      url: "/docs/hci_prereqs_timekeeping.html"
+    - title: 環境要件
+      url: "/docs/hci_prereqs_environmental.html"
+    - title: 保護ドメイン
+      url: "/docs/hci_prereqs_protection_domains.html"
+    - title: 2 ノードストレージクラスタの場合は、監視ノードのリソース要件が必要です
+      url: "/docs/hci_prereqs_witness_nodes.html"
+  - title: NetApp HCI の利用を開始しましょう
+    entries:
+    - title: NetApp HCI のインストールと導入の概要
+      url: "/docs/task_hci_getstarted.html"
+    - title: H シリーズハードウェアを設置
+      url: "/docs/task_hci_installhw.html"
+    - title: ストレージパフォーマンスを最適化するために LACP を設定します
+      url: "/docs/hci_prereqs_LACP_configuration.html"
+    - title: Active IQ Config Advisor で環境を検証
+      url: "/docs/hci_prereqs_task_validate_config_advisor.html"
+    - title: 各ノードに IPMI を設定します
+      url: "/docs/hci_prereqs_final_prep.html"
+  - title: NetApp HCI を導入します
+    entries:
+    - title: NetApp Deployment Engine にアクセスします
+      entries:
+      - title: NetApp Deployment Engine のアクセスオプションの概要
+        url: "/docs/concept_nde_access_overview.html"
+      - title: DHCP を使用していない環境では、 NetApp Deployment Engine にアクセスします
+        url: "/docs/task_nde_access_no_dhcp.html"
+      - title: DHCP を使用している環境で NetApp Deployment Engine にアクセスします
+        url: "/docs/task_nde_access_dhcp.html"
+      - title: NetApp Deployment Engine にアクセスするには、 IP アドレスを手動で割り当ててください
+        url: "/docs/task_nde_access_manual_ip.html"
+    - title: 導入を開始
+      url: "/docs/task_nde_start_deployment.html"
+    - title: インストールプロファイルをインポートします
+      url: "/docs/task_nde_import_installation_profile.html"
+    - title: VMware vSphere を設定します
+      entries:
+      - title: vSphere の設定の概要
+        url: "/docs/concept_nde_config_vsphere_overview.html"
+      - title: 新しい VMware vSphere 環境を設定します
+        url: "/docs/task_nde_configure_new_vsphere.html"
+      - title: 既存の VMware vSphere 環境に参加します
+        url: "/docs/task_nde_join_existing_vsphere.html"
+    - title: NetApp HCI クレデンシャルを設定する
+      url: "/docs/task_nde_configure_credentials.html"
+    - title: ネットワークトポロジを選択してください
+      url: "/docs/task_nde_select_net_topology.html"
+    - title: 在庫の選択
+      entries:
+      - title: インベントリの選択とノードの互換性
+        url: "/docs/concept_nde_node_compatibility.html"
+      - title: インベントリを選択します
+        url: "/docs/task_nde_select_inventory.html"
+    - title: ネットワークの設定を行います
+      url: "/docs/task_nde_configure_net_settings.html"
+    - title: レビューと導入
+      url: "/docs/task_nde_review_deploy.html"
+    - title: 導入後のタスク
+      entries:
+      - title: 導入後のタスクの概要
+        url: "/docs/concept_nde_post_deployment_overview.html"
+      - title: サポートされるネットワーク変更
+        url: "/docs/task_nde_supported_net_changes.html"
+      - title: NetApp HCI コンピューティングノードで smartd サービスを無効にします
+        url: "/docs/task_nde_disable_smartd.html"
+      - title: 設定済みのスイッチで「 lacp-individual 」コマンドを無効にします
+        url: "/docs/task_nde_disable_lacp_individual.html"
+      - title: vCenter で NetApp HCC ロールを作成します
+        url: "/docs/task_mnode_create_netapp_hcc_role_vcenter.html"
+      - title: VMware vSphere を最新の状態に維持
+        url: "/docs/task_nde_update_vsphere.html"
+      - title: GPU 対応のコンピューティングノード用の GPU ドライバをインストールします
+        url: "/docs/task_nde_install_GPU_drivers.html"
+      - title: NetApp Hybrid Cloud Control にアクセスします
+        url: "/docs/task_nde_access_hcc.html"
+      - title: NetApp HCI コンピューティングノードのブートメディアの摩耗度を低減します
+        url: "/docs/task_reduce_boot_media_wear.html"
+  - title: NetApp HCI を管理します
+    entries:
+    - title: Manage NetApp HCI の概要
+      url: "/docs/task_hci_manage_overview.html"
+    - title: 完全修飾ドメイン名 Web UI アクセスを設定します
+      url: "/docs/task_nde_access_ui_fqdn.html"
+    - title: NetApp HCI でクレデンシャルを変更します
+      url: "/docs/task_post_deploy_credentials.html"
+    - title: vCenter および ESXi のクレデンシャルを更新します
+      url: "/docs/task_hci_credentials_vcenter_esxi.html"
+    - title: NetApp HCI ストレージを管理します
+      entries:
+      - title: Manage NetApp HCI storage の概要を参照してください
+        url: "/docs/task_hcc_manage_storage_overview.html"
+      - title: ユーザアカウントを作成および管理します
+        url: "/docs/task_hcc_manage_accounts.html"
+      - title: ストレージクラスタを追加および管理する
+        url: "/docs/task_hcc_manage_storage_clusters.html"
+      - title: ボリュームを作成および管理する
+        url: "/docs/task_hcc_manage_vol_management.html"
+      - title: ボリュームアクセスグループを作成および管理します
+        url: "/docs/task_hcc_manage_vol_access_groups.html"
+      - title: イニシエータを作成および管理する
+        url: "/docs/task_hcc_manage_initiators.html"
+      - title: ボリュームの QoS ポリシーの作成と管理
+        url: "/docs/task_hcc_qos_policies.html"
+    - title: 管理ノードを操作します
+      entries:
+      - title: 管理ノードの概要
+        url: "/docs/task_mnode_work_overview.html"
+      - title: 管理ノードをインストールまたはリカバリします
+        entries:
+        - title: 管理ノードをインストール
+          url: "/docs/task_mnode_install.html"
+        - title: ストレージネットワークインターフェイスコントローラ（ NIC ）の設定
+          url: "/docs/task_mnode_install_add_storage_NIC.html"
+        - title: 管理ノードをリカバリ
+          url: "/docs/task_mnode_recover.html"
+      - title: 管理ノードにアクセスします
+        url: "/docs/task_mnode_access_ui.html"
+      - title: 管理ノード UI の操作
+        entries:
+        - title: 管理ノード UI の概要
+          url: "/docs/task_mnode_work_overview_UI.html"
+        - title: NetApp HCI でアラート監視を設定する
+          url: "/docs/task_mnode_enable_alerts.html"
+        - title: 管理ノードのネットワーク、クラスタ、およびシステムの設定を変更してテストする
+          url: "/docs/task_mnode_settings.html"
+        - title: 管理ノードからシステムユーティリティを実行します
+          url: "/docs/task_mnode_run_system_utilities.html"
+      - title: 管理ノード REST API の操作
+        entries:
+        - title: 管理ノードの REST API UI の概要
+          url: "/docs/task_mnode_work_overview_API.html"
+        - title: REST API を使用するための許可を取得する
+          url: "/docs/task_mnode_api_get_authorizationtouse.html"
+        - title: Active IQ と NetApp HCI の監視を有効にします
+          url: "/docs/task_mnode_enable_activeIQ.html"
+        - title: NetApp Hybrid Cloud Control を複数の vCenter に設定する
+          url: "/docs/task_mnode_multi_vcenter_config.html"
+        - title: 管理ノードにコンピューティングアセットとコントローラアセットを追加します
+          url: "/docs/task_mnode_add_assets.html"
+        - title: コンピューティングノードのハードウェアタグを確認する方法
+          url: "/docs/task_mnode_locate_hardware_tag.html"
+        - title: ストレージクラスタアセットを作成および管理する
+          url: "/docs/task_mnode_manage_storage_cluster_assets.html"
+        - title: 既存のコントローラアセットを表示または編集する
+          url: "/docs/task_mnode_edit_vcenter_assets.html"
+        - title: 管理ノードからアセットを削除します
+          url: "/docs/task_mnode_remove_assets.html"
+        - title: 管理ノード用のプロキシサーバを設定します
+          url: "/docs/task_mnode_configure_proxy_server.html"
+        - title: 管理ノードの OS とサービスのバージョンを確認
+          url: "/docs/task_mnode_api_find_mgmt_svcs_version.html"
+        - title: 管理サービスからログを取得しています
+          url: "/docs/task_mnode_logs.html"
+      - title: サポート接続を管理します
+        entries:
+        - title: リモートのネットアップサポートセッションを開始します
+          url: "/docs/task_mnode_enable_remote_support_connections.html"
+        - title: 管理ノードで SSH 機能を管理します
+          url: "/docs/task_mnode_ssh_management.html"
+    - title: NetApp HCI システムの電源をオフまたはオンにします
+      entries:
+      - title: NetApp HCI の電源の概要
+        url: "/docs/concept_nde_hci_power_off_on.html"
+      - title: NetApp HCI システムのコンピューティングリソースの電源をオフにします
+        url: "/docs/task_nde_hci_power_off_compute.html"
+      - title: NetApp HCI システムのストレージリソースの電源をオフにします
+        url: "/docs/task_nde_hci_power_off_storage.html"
+      - title: NetApp HCI システムのストレージリソースの電源をオンにします
+        url: "/docs/task_nde_hci_power_on_storage.html"
+      - title: NetApp HCI システムのコンピューティングリソースの電源をオンにします
+        url: "/docs/task_nde_hci_power_on_compute.html"
+  - title: NetApp Hybrid Cloud Control を使用して NetApp HCI システムを監視します
+    entries:
+    - title: NetApp Hybrid Cloud Control のダッシュボードでリソースを確認します
+      url: "/docs/task_hcc_dashboard.html"
+    - title: インベントリは、 NetApp Hybrid のノードのページで確認します Cloud Control の略
+      url: "/docs/task_hcc_nodes.html"
+    - title: NetApp Hybrid Cloud Control を使用して BMC の接続情報を編集します
+      url: "/docs/task_hcc_edit_bmc_info.html"
+    - title: ネットアップハイブリッドクラウドでストレージクラスタのボリュームを監視します 制御
+      url: "/docs/task_hcc_volumes.html"
+    - title: NetApp Hybrid Cloud Control から Active IQ への接続を使用して、パフォーマンス、容量、クラスタの健全性を監視します
+      url: "/docs/task_hcc_activeiq.html"
+    - title: トラブルシューティング用にログを収集する
+      url: "/docs/task_hcc_collectlogs.html"
+  - title: NetApp HCI システムのバージョン 1.9 または 1.9P1 をアップグレードします
+    entries:
+    - title: アップグレード手順の概要
+      url: "/docs/concept_hci_upgrade_overview.html"
+    - title: システムのアップグレード手順
+      entries:
+      - title: 管理サービスを更新
+        url: "/docs/task_hcc_update_management_services.html"
+      - title: 最新の HealthTools にアップグレードします
+        url: "/docs/task_upgrade_element_latest_healthtools.html"
+      - title: ストレージをアップグレードする前に、 Element ストレージの健全性チェックを実行します
+        url: "/docs/task_hcc_upgrade_element_prechecks.html"
+      - title: Element ソフトウェアをアップグレードします
+        url: "/docs/task_hcc_upgrade_element_software.html"
+      - title: ストレージファームウェアをアップグレードします
+        url: "/docs/task_hcc_upgrade_storage_firmware.html"
+      - title: 管理ノードをアップグレードします
+        url: "/docs/task_hcc_upgrade_management_node.html"
+      - title: NetApp Element Plug-in for vCenter Server をアップグレードします
+        url: "/docs/task_vcp_upgrade_plugin.html"
+      - title: コンピューティングノードの健全性チェックは、コンピューティングファームウェアをアップグレードする前に実行します
+        url: "/docs/task_upgrade_compute_prechecks.html"
+      - title: コンピューティングノードのドライバを更新
+        url: "/docs/task_hcc_upgrade_compute_node_drivers.html"
+      - title: コンピューティングノードのファームウェアをアップグレードします
+        url: "/docs/task_hcc_upgrade_compute_node_firmware.html"
+      - title: Ansible によるコンピューティングノードのファームウェアアップグレードの自動化
+        url: "/docs/task_hcc_upgrade_compute_firmware_ansible.html"
+    - title: を使用して、 NetApp HCI システムの vSphere コンポーネントをアップグレードします vCenter Server 向け
+        Element プラグイン
+      url: "/docs/task_hci_upgrade_all_vsphere.html"
+  - title: NetApp HCI システムを拡張します
+    entries:
+    - title: 概要を展開します
+      url: "/docs/concept_hcc_expandoverview.html"
+    - title: NetApp HCI ストレージリソースを展開します
+      url: "/docs/task_hcc_expand_storage.html"
+    - title: NetApp HCI コンピューティングリソースを展開します
+      url: "/docs/task_hcc_expand_compute.html"
+    - title: ネットアップストレージとコンピューティングのリソースを拡張
+      url: "/docs/task_hcc_expand_compute_and_storage.html"
+    - title: クラスタの拡張後に監視ノードを削除します
+      url: "/docs/task_hci_removewn.html"
+  - title: NetApp HCI で Rancher を使用します
+    entries:
+    - title: NetApp HCI の Rancher の概要
+      url: "/docs/concept_rancher_product_overview.html"
+    - title: 概念
+      url: "/docs/concept_rancher_concepts.html"
+    - title: NetApp HCI の Rancher の要件
+      url: "/docs/rancher_prereqs_overview.html"
+    - title: NetApp HCI に Rancher を導入します
+      url: "/docs/task_rancher_deploy.html"
+    - title: 導入後のタスク
+      entries:
+      - title: 導入後のタスクの概要
+        url: "/docs/concept_rancher_post_deployment_overview.html"
+      - title: Rancher サポートパリティを確認します
+        url: "/docs/task_rancher_ensure_rancher_support_parity.html"
+      - title: VM の耐障害性を向上
+        url: "/docs/task_rancher_config_anti_affinity.html"
+      - title: 監視を設定
+        url: "/docs/task_rancher_enable_monitoring.html"
+      - title: Trident をインストール
+        url: "/docs/task_rancher_trident.html"
+      - title: ユーザクラスタで Trident のサポートを有効にします
+        url: "/docs/task_trident_configure_networking.html"
+    - title: ユーザクラスタとアプリケーションを導入
+      url: "/docs/task_rancher_deploy_user_clusters.html"
+    - title: NetApp HCI でランチ元を管理します
+      url: "/docs/task_rancher_manage.html"
+    - title: NetApp HCI でランチをモニターします
+      url: "/docs/task_rancher_monitor.html"
+    - title: NetApp HCI の Rancher をアップグレードします
+      url: "/docs/task_rancher_upgrades.html"
+    - title: NetApp HCI でランチツールをインストールした場合は、取り外します
+      url: "/docs/task_rancher_remove_deployment.html"
+  - title: H シリーズハードウェアのメンテナンス
+    entries:
+    - title: H シリーズハードウェアのメンテナンスの概要
+      url: "/docs/task_hci_hwmainoverview.html"
+    - title: 2U H シリーズシャーシを交換
+      url: "/docs/task_hci_hserieschassisrepl.html"
+    - title: H615C および H610S ノードの DC 電源装置を交換してください
+      url: "/docs/task_hci_dcpsurepl.html"
+    - title: コンピューティングノードの DIMM を交換します
+      url: "/docs/task_hci_dimmcomputerepl.html"
+    - title: ストレージノードのドライブを交換
+      url: "/docs/task_hci_driverepl.html"
+    - title: H410C ノードを交換してください
+      url: "/docs/task_hci_h410crepl.html"
+    - title: H410S ノードを交換します
+      url: "/docs/task_hci_h410srepl.html"
+    - title: H610C ノードと H615C ノードを交換してください
+      url: "/docs/task_hci_h610ch615crepl.html"
+    - title: H610S ノードを交換してください
+      url: "/docs/task_hci_h610srepl.html"
+    - title: 電源装置を交換してください
+      url: "/docs/task_hci_psurepl.html"
+    - title: SN2010 、 SN2100 、および SN2700 の各スイッチを交換してください
+      url: "/docs/task_hci_snswitches.html"
+    - title: 2 ノードクラスタのストレージノードを交換
+      url: "/docs/task_hci_2noderepl.html"
+  - title: 以前のバージョン
+    url: "/docs/reference_earlier_versions.html"
+  - title: 法的通知
+    url: "/docs/reference_notices_hci.html"
+homepage:
+  tiles:
+  - title: はじめに
+    links:
+    - title: 製品の概要
+      url: "/docs/concept_hci_product_overview.html"
+    - title: リリースノート
+      url: "/docs/rn_relatedrn.html"
+    - title: 新機能
+      url: "/docs/rn_whatsnew.html"
+  - title: ハードウェアのメンテナンスをインストールします
+    links:
+    - title: H シリーズハードウェアの設置
+      url: "/docs/task_hci_installhw.html"
+    - title: H シリーズハードウェアのメンテナンス
+      url: "/docs/task_hci_hwmainoverview.html"
+  - title: NetApp HCI をインストールします
+    links:
+    - title: インストールと導入の概要
+      url: "/docs/task_hci_getstarted.html"
+    - title: NetApp Deployment Engine を使用して導入を開始します
+      url: "/docs/concept_nde_access_overview.html"
+    - title: 導入後のタスクを実行
+      url: "/docs/concept_nde_post_deployment_overview.html"
+  - title: NetApp HCI を使用します
+    links:
+    - title: NetApp Hybrid Cloud Control を使用して管理します
+      url: "/docs/task_nde_access_hcc.html"
+    - title: 管理ノードを操作します
+      url: "/docs/task_mnode_work_overview.html"
+    - title: NetApp Element Plug-in for vCenter Server を使用します
+      url: https://docs.netapp.com/us-en/vcp/index.html
+    - title: Rancher を使用します
+      url: "/docs/concept_rancher_product_overview.html"
+    - title: NetApp HCI を展開します
+      url: "/docs/concept_hcc_expandoverview.html"
+    - title: NetApp HCI をアップグレードします
+      url: "/docs/concept_hci_upgrade_overview.html"
+  - title: トラブルシューティングを行う
+    links:
+    - title: NetApp HCI と Rancher のトラブルシューティングを行います
+      url: https://kb.netapp.com/Advice_and_Troubleshooting/Data_Storage_Software/Management_services_for_Element_Software_and_NetApp_HCI/NetApp_HCI_and_Rancher_troubleshooting
+    - title: コンピューティングノードの BMC をリセットします
+      url: https://kb.netapp.com/Advice_and_Troubleshooting/Hybrid_Cloud_Infrastructure/NetApp_HCI/How_to_reset_BMC_on_NetApp_HCI_compute_nodes
+    - title: 技術情報に関するその他の記事
+      url: https://kb.netapp.com/Special:Search?query=netapp+hci&type=wiki
+  - title: 解決策
+    links:
+    - title: NetApp HCI のリソースページ
+      url: https://www.netapp.com/hybrid-cloud/hci-documentation/
+    - title: ネットアップのソリューション
+      url: https://docs.netapp.com/us-en/netapp-solutions/index.html
+  - title: デモチュートリアル
+    links:
+    - title: NetApp HCI ビデオライブラリ
+      url: https://tv.netapp.com/category/videos/netapp-hci
+    - title: ネットアップラーニングサービス
+      url: https://www.netapp.com/support-and-training/netapp-university/
+  - title: ブログコミュニティ
+    links:
+    - title: ネットアップコミュニティ
+      url: https://community.netapp.com/t5/forums/searchpage/tab/message?advanced=false&allow_punctuation=false&q=hci
+    - title: サポートへのアクセス
+      url: https://mysupport.netapp.com/site/products/all/details/netapp-hci/guideme-tab
+  - title: 以前のバージョン
+    links:
+    - title: NetApp HCI 1.8 に関するドキュメント
+      url: https://docs.netapp.com/us-en/hci18/index.html
+    - title: NetApp HCI ドキュメントセンター
+      url: https://docs.netapp.com/hci/index.jsp

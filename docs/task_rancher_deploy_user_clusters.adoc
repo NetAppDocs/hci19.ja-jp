@@ -1,0 +1,44 @@
+---
+sidebar: sidebar 
+permalink: docs/task_rancher_deploy_user_clusters.html 
+summary: NetApp HCI に Rancher を導入した後、ユーザクラスタを設定し、それらのクラスタにアプリケーションを追加できます。 
+keywords: netapp, hci, rancher, deploy, cluster, kubernetes, control plane,  user cluster, workload 
+---
+= ユーザクラスタとアプリケーションを導入
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ../media/
+
+
+[role="lead"]
+NetApp HCI に Rancher を導入した後、ユーザクラスタを設定し、それらのクラスタにアプリケーションを追加できます。
+
+
+
+== ユーザクラスタを導入
+
+導入後、開発チームや運用チームは、任意のランチリーダーの導入と同様に、 Kubernetes ユーザクラスタを導入してアプリケーションを導入できます。
+
+. Rancher 展開の最後に提供された URL を使用して、 rancher UI にアクセスします。
+. ユーザクラスタを作成については、 Rancher のドキュメントを参照してください https://rancher.com/docs/rancher/v2.x/en/quick-start-guide/workload/["ワークロードの導入"]。
+. NetApp HCI の Rancher でユーザクラスタをプロビジョニングする。については、 Rancher のドキュメントを参照してください https://rancher.com/docs/rancher/v2.x/en/cluster-provisioning/["Rancher で Kubernetes クラスタをセットアップする"]。
+
+
+
+
+== ユーザクラスタにアプリケーションを導入する
+
+任意のランチコンテナ環境と同様に、 Kubernetes クラスタにアプリケーションを追加します。
+
+については、 Rancher のドキュメントを参照してください https://rancher.com/docs/rancher/v2.x/en/deploy-across-clusters/["クラスタ間でのアプリケーションの導入"]。
+
+[discrete]
+== 詳細については、こちらをご覧ください
+
+* https://rancher.com/docs/rancher/v2.x/en/overview/architecture/["アーキテクチャに関する Rancher ドキュメント"^]
+* https://rancher.com/docs/rancher/v2.x/en/overview/concepts/["Rancher 用の Kubernetes 用語"]
+* https://www.netapp.com/us/documentation/hci.aspx["NetApp HCI のリソースページ"^]
+

@@ -1,0 +1,420 @@
+---
+sidebar: sidebar 
+permalink: docs/task_hcc_upgrade_element_prechecks.html 
+summary: NetApp HCI システムのアップグレードの一環として、 NetApp Element ソフトウェアの健全性チェックを実行する必要があります。 
+keywords: netapp, storage prechecks, element upgrade, healthtools, sfupgradecheck 
+---
+= ストレージをアップグレードする前に、 Element ストレージの健全性チェックを実行します
+:allow-uri-read: 
+
+
+[role="lead"]
+Element ストレージをアップグレードする前に健全性チェックを実行して、クラスタ内のすべてのストレージノードで次回の Element ストレージアップグレードの準備ができていることを確認する必要があります。
+
+.必要なもの
+* *管理サービス*：最新の管理サービスバンドル（2.10.27以降）に更新しました。
++
+
+IMPORTANT: Element ソフトウェアをアップグレードする前に、最新の管理サービスバンドルにアップグレードする必要があります。
+
+* *管理ノード*：管理ノード11.3以降を実行していることを確認します。
+* * Elementソフトウェア*：クラスタバージョンでNetApp Element ソフトウェア11.3以降が実行されている必要があります。
+* *エンドユーザライセンス契約（EULA）*：管理サービス2.20以降では、NetApp Hybrid Cloud ControlのUIまたはAPIを使用してElementストレージの健全性チェックを実行する前に、EULAに同意して保存する必要があります。
++
+.. Webブラウザで管理ノードのIPアドレスを開きます。
++
+[listing]
+----
+https://<ManagementNodeIP>
+----
+.. ストレージクラスタ管理者のクレデンシャルを指定して NetApp Hybrid Cloud Control にログインします。
+.. インターフェイスの右上にある [* Upgrade] を選択します。
+.. EULAがポップアップ表示されます。下にスクロールして、[現在および今後のすべての更新を許可する*]を選択し、[保存*]を選択します。
++
+
+NOTE: EULAに同意すると、以後のすべての更新についてそのEULAが記録され、自動ダウンロード機能が有効になります。ネットアップのソフトウェアの更新とアップグレードに関する最新情報が提供されます。この情報はお客様の自由裁量と利便性に基づいてインストールすることができます。ネットアップオンラインソフトウェアリポジトリへのネットワーク接続を無効にすることで、自動ダウンロード機能を無効にできます。
+
+
+
+
+
+健全性チェックは、 NetApp Hybrid Cloud Control （ HCC ） UI 、 HCC API 、または HealthTools スイートを使用して実行できます。
+
+* <<Use NetApp Hybrid Cloud Control to run Element storage health checks prior to upgrading storage>> （推奨方法）
+* <<Use API to run Element storage health checks prior to upgrading storage>>
+* <<Use HealthTools to run Element storage health checks prior to upgrading storage>>
+
+
+サービスで実行されるストレージ健全性チェックの詳細についても確認できます。
+
+* <<Storage health checks made by the service>>
+
+
+
+
+== NetApp Hybrid Cloud Control を使用して Element ストレージの健全性を実行します ストレージをアップグレードする前にチェックします
+
+NetApp Hybrid Cloud Control （ HCC ）を使用して、ストレージクラスタをアップグレードする準備が完了していることを確認できます。
+
+.手順
+. Webブラウザで管理ノードのIPアドレスを開きます。
++
+[listing]
+----
+https://<ManagementNodeIP>
+----
+. ストレージクラスタ管理者のクレデンシャルを指定して NetApp Hybrid Cloud Control にログインします。
+. インターフェイスの右上にある [* Upgrade] を選択します。
+. [ アップグレード * （ Upgrades * ） ] ページで、 [ * ストレージ * （ Storage * ） ] タブを選択します。
+. 健全性チェックを選択します image:hcc_healthcheck_icon.png["をクリックします。"] アップグレードの準備状況を確認するクラスタ
+. [ * ストレージヘルスチェック * ] ページで、 [ * ヘルスチェックの実行 * ] を選択します。
+. 問題がある場合は、次の手順を実行します。
++
+.. 各問題について記載されている特定の技術情報アーティクルに移動するか、指定された対処方法を実行します。
+.. KB を指定した場合は、関連する技術情報アーティクルに記載されているプロセスを完了します。
+.. クラスタの問題を解決したら、「 * Re-Run Health Check * 」を選択します。
+
+
+
+
+健全性チェックの完了後、エラーは発生しません。ストレージクラスタをアップグレードする準備は完了しています。ストレージノードのアップグレードを参照してください link:task_hcc_upgrade_element_software.html["手順"] 続行してください。
+
+
+
+== API を使用して、実行前に Element ストレージの健全性チェックを実行 ストレージをアップグレードする
+
+REST API を使用して、ストレージクラスタをアップグレードする準備が完了していることを確認できます。健全性チェックでは、保留中のノード、ディスクスペースの問題、クラスタ障害など、アップグレードが必要な障害がないことを確認します。
+
+.手順
+. ストレージクラスタ ID を確認します。
++
+.. 管理ノードで管理ノード REST API UI を開きます。
++
+[listing]
+----
+https://<ManagementNodeIP>/mnode
+----
+.. 「 * Authorize * 」（認証）を選択して、次の手順を実行
++
+... クラスタのユーザ名とパスワードを入力します。
+... 値がまだ入力されていない場合は、クライアント ID を「 m node-client 」として入力します。
+... セッションを開始するには、 * Authorize * を選択します。
+... 承認ウィンドウを閉じます。
+
+
+.. REST API UI から 'get/assets' を選択します
+.. [* 試してみてください * ] を選択します。
+.. [* Execute] を選択します。
+.. 応答から ' アップグレードの準備状況を確認するクラスタのストレージセクションから 'id' をコピーします
++
+
+NOTE: このセクションの「親」の値は、ストレージクラスタの ID ではなく、管理ノードの ID であるため使用しないでください。
+
++
+[listing, subs="+quotes"]
+----
+"config": {},
+"credentialid": "12bbb2b2-f1be-123b-1234-12c3d4bc123e",
+"host_name": "SF_DEMO",
+*"id": "12cc3a45-e6e7-8d91-a2bb-0bdb3456b789",*
+"ip": "10.123.12.12",
+"parent": "d123ec42-456e-8912-ad3e-4bd56f4a789a",
+"sshcredentialid": null,
+"ssl_certificate": null
+----
+
+
+. ストレージクラスタで健全性チェックを実行します。
++
+.. 管理ノードでストレージ REST API UI を開きます。
++
+[listing]
+----
+https://<ManagementNodeIP>/storage/1/
+----
+.. 「 * Authorize * 」（認証）を選択して、次の手順を実行
++
+... クラスタのユーザ名とパスワードを入力します。
+... 値がまだ入力されていない場合は、クライアント ID を「 m node-client 」として入力します。
+... セッションを開始するには、 * Authorize * を選択します。
+... 承認ウィンドウを閉じます。
+
+
+.. [* POST/Health-Checks （ POST / ヘルスチェック） ] を選択します。
+.. [* 試してみてください * ] を選択します。
+.. パラメータフィールドに、手順 1 で取得したストレージクラスタ ID を入力します。
++
+[listing]
+----
+{
+  "config": {},
+  "storageId": "123a45b6-1a2b-12a3-1234-1a2b34c567d8"
+}
+----
+.. 指定したストレージクラスタでヘルスチェックを実行するには、 * Execute * を選択します。
++
+応答は ' ステータスを初期化中と表示する必要があります
+
++
+[listing]
+----
+{
+  "_links": {
+    "collection": "https://10.117.149.231/storage/1/health-checks",
+    "log": "https://10.117.149.231/storage/1/health-checks/358f073f-896e-4751-ab7b-ccbb5f61f9fc/log",
+    "self": "https://10.117.149.231/storage/1/health-checks/358f073f-896e-4751-ab7b-ccbb5f61f9fc"
+  },
+  "config": {},
+  "dateCompleted": null,
+  "dateCreated": "2020-02-21T22:11:15.476937+00:00",
+  "healthCheckId": "358f073f-896e-4751-ab7b-ccbb5f61f9fc",
+  "state": "initializing",
+  "status": null,
+  "storageId": "c6d124b2-396a-4417-8a47-df10d647f4ab",
+  "taskId": "73f4df64-bda5-42c1-9074-b4e7843dbb77"
+}
+----
+.. 応答の一部である「 healthCheckID 」をコピーします。
+
+
+. 健全性チェックの結果を確認します。
++
+.. [* 一時的なもの / 正常性チェックの一時的なもの / ｛ healthCheckId ｝ * ] を選択します。
+.. [* 試してみてください * ] を選択します。
+.. パラメータフィールドにヘルスチェック ID を入力します。
+.. [* Execute] を選択します。
+.. 応答の本文の一番下までスクロールします。
++
+すべての健全性チェックが成功した場合の出力例を次に示します。
+
++
+[listing]
+----
+"message": "All checks completed successfully.",
+"percent": 100,
+"timestamp": "2020-03-06T00:03:16.321621Z"
+----
+
+
+. 「メッセージ」が「クラスタの正常性」に問題があることを示している場合は、次の手順を実行します。
++
+.. [* Get Singges/health-checksSries/｛ healthCheckId}/log* ] を選択します
+.. [* 試してみてください * ] を選択します。
+.. パラメータフィールドにヘルスチェック ID を入力します。
+.. [* Execute] を選択します。
+.. 特定のエラーを確認し、関連する KB 記事のリンクを取得します。
+.. 各問題について記載されている特定の技術情報アーティクルに移動するか、指定された対処方法を実行します。
+.. KB を指定した場合は、関連する技術情報アーティクルに記載されているプロセスを完了します。
+.. クラスタの問題を解決したら、 * Get Sedges/health-checksRunges/｛ healthCheckId ｝ /log * を再度実行します。
+
+
+
+
+
+
+== 前に HealthTools を使用して Element ストレージの健全性チェックを実行してください ストレージをアップグレードする
+
+「 fupgradecheck 」コマンドを使用して、ストレージクラスタをアップグレードする準備が完了していることを確認できます。このコマンドは、保留中のノード、ディスクスペース、クラスタ障害などの情報を検証します。
+
+管理ノードが外部に接続されていないダークサイトにある場合、アップグレードの準備状況を確認するには、ダウンロードした「 metadats.json 」ファイルが必要です link:task_upgrade_element_latest_healthtools.html["HealthTools のアップグレード"] を実行してください。
+
+ここでは、次のいずれかの結果をもたらすアップグレードチェックに対処する方法について説明します。
+
+* 「 fupgradecheck 」コマンドを実行すると、正常に実行されます。クラスタをアップグレードする準備は完了しています。
+* 「アップグレードチェック」ツールでのチェックが失敗し、エラーメッセージが表示される。クラスタをアップグレードする準備が完了しておらず、追加の手順が必要です。
+* アップグレードチェックが失敗し、 HealthTools が最新バージョンでないというエラーメッセージが表示される。
+* 管理ノードがダークサイトにあるため、アップグレードチェックが失敗する。
+
+
+.手順
+. 「 fupgradecheck 」コマンドを実行します。
++
+[listing]
+----
+sfupgradecheck -u <cluster-user-name> MVIP
+----
++
+
+NOTE: パスワードに特殊文字が含まれる場合は、各特殊文字の前にバックスラッシュ（「 \ 」）を追加します。たとえば、「 mypass ！ @1 」は「 'm ypass\ ！ \@1 」と入力する必要があります。
+
++
+サンプルの入力コマンド。エラーは表示されず、アップグレードの準備ができている場合の出力例です。
+
++
+[listing]
+----
+sfupgradecheck -u admin 10.117.78.244
+----
++
+[listing]
+----
+check_pending_nodes:
+Test Description: Verify no pending nodes in cluster
+More information: https://kb.netapp.com/support/s/article/ka11A0000008ltOQAQ/pendingnodes
+check_cluster_faults:
+Test Description: Report any cluster faults
+check_root_disk_space:
+Test Description: Verify node root directory has at least 12 GBs of available disk space
+Passed node IDs: 1, 2, 3
+More information: https://kb.netapp.com/support/s/article/ka11A0000008ltTQAQ/
+SolidFire-Disk-space-error
+check_mnode_connectivity:
+Test Description: Verify storage nodes can communicate with management node
+Passed node IDs: 1, 2, 3
+More information: https://kb.netapp.com/support/s/article/ka11A0000008ltYQAQ/mNodeconnectivity
+check_files:
+Test Description: Verify options file exists
+Passed node IDs: 1, 2, 3
+check_cores:
+Test Description: Verify no core or dump files exists
+Passed node IDs: 1, 2, 3
+check_upload_speed:
+Test Description: Measure the upload speed between the storage node and the
+management node
+Node ID: 1 Upload speed: 90063.90 KBs/sec
+Node ID: 3 Upload speed: 106511.44 KBs/sec
+Node ID: 2 Upload speed: 85038.75 KBs/sec
+----
+. エラーが発生した場合は、追加の操作が必要です。詳細については、次のサブセクションを参照してください。
+
+
+
+
+=== クラスタをアップグレードする準備が完了していません
+
+いずれかの健全性チェックに関連するエラーメッセージが表示された場合は、次の手順を実行します。
+
+. 「 fupgradecheck 」エラーメッセージを確認します。
++
+回答例：
+
+
+
+[listing]
+----
+The following tests failed:
+check_root_disk_space:
+Test Description: Verify node root directory has at least 12 GBs of available disk space
+Severity: ERROR
+Failed node IDs: 2
+Remedy: Remove unneeded files from root drive
+More information: https://kb.netapp.com/support/s/article/ka11A0000008ltTQAQ/SolidFire-
+Disk-space-error
+check_pending_nodes:
+Test Description: Verify no pending nodes in cluster
+More information: https://kb.netapp.com/support/s/article/ka11A0000008ltOQAQ/pendingnodes
+check_cluster_faults:
+Test Description: Report any cluster faults
+check_root_disk_space:
+Test Description: Verify node root directory has at least 12 GBs of available disk space
+Passed node IDs: 1, 3
+More information: https://kb.netapp.com/support/s/article/ka11A0000008ltTQAQ/SolidFire-
+Disk-space-error
+check_mnode_connectivity:
+Test Description: Verify storage nodes can communicate with management node
+Passed node IDs: 1, 2, 3
+More information: https://kb.netapp.com/support/s/article/ka11A0000008ltYQAQ/mNodeconnectivity
+check_files:
+Test Description: Verify options file exists
+Passed node IDs: 1, 2, 3
+check_cores:
+Test Description: Verify no core or dump files exists
+Passed node IDs: 1, 2, 3
+check_upload_speed:
+Test Description: Measure the upload speed between the storage node and the management node
+Node ID: 1 Upload speed: 86518.82 KBs/sec
+Node ID: 3 Upload speed: 84112.79 KBs/sec
+Node ID: 2 Upload speed: 93498.94 KBs/sec
+----
+この例では、ノード 1 のディスクスペースが少なくなっています。詳細については、を参照してください https://kb.netapp.com["ナレッジベース"^] （ KB ）エラーメッセージに記載されている記事。
+
+
+
+=== HealthTools が最新バージョンではありません
+
+HealthTools が最新バージョンではないことを示すエラーメッセージが表示された場合は、次の手順に従います。
+
+. アップグレードチェックが失敗したことをエラーメッセージで確認します。
++
+回答例：
+
++
+[listing]
+----
+sfupgradecheck failed: HealthTools is out of date:
+installed version: 2018.02.01.200
+latest version: 2020.03.01.09.
+The latest version of the HealthTools can be downloaded from: https://mysupport.netapp.com/NOW/cgi-bin/software/
+Or rerun with the -n option
+----
+. 応答に記載されている手順に従います。
+
+
+
+
+=== 管理ノードがダークサイトにあります
+
+. アップグレードチェックが失敗したことをメッセージで確認します。
++
+回答例：
+
++
+[listing]
+----
+sfupgradecheck failed: Unable to verify latest available version of healthtools.
+----
+. をダウンロードします link:https://library.netapp.com/ecm/ecm_get_file/ECMLP2840740["JSON ファイル"^] 管理ノードではないコンピュータのネットアップサポートサイトから、「 metadats.json 」に名前を変更します。
+. 次のコマンドを実行します。
++
+[listing]
+----
+sfupgradecheck -l --metadata=<path-to-metadata-json>
+----
+. 詳細については、「追加」を参照してください link:task_upgrade_element_latest_healthtools.html["HealthTools のアップグレード"] ダークサイトの情報。
+. 次のコマンドを実行して、 HealthTools スイートが最新バージョンであることを確認します。
++
+[listing]
+----
+sfupgradecheck -u <cluster-user-name> -p <cluster-password> MVIP
+----
+
+
+
+
+== サービスによるストレージの健全性チェック
+
+ストレージの健全性チェックでは、クラスタごとに以下のチェックが行われます。
+
+|===
+| [ 名前（ Name ） ] を | ノード / クラスタ | 説明 
+
+
+| check_async 結果 | クラスタ | データベースの非同期結果の数がしきい値を下回っていることを検証します。 
+
+
+| check_cluster_faults | クラスタ | （ Element ソースで定義された）アップグレードがブロックされているクラスタエラーがないことを確認します。 
+
+
+| check_upload_speed | ノード | ストレージノードと管理ノードの間のアップロード速度を測定します。 
+
+
+| connection_speed_check | ノード | ノードがアップグレードパッケージを提供する管理ノードに接続されていることを確認し、接続速度を推定します。 
+
+
+| コアをチェックします | ノード | ノード上のカーネルクラッシュダンプファイルとコアファイルをチェックします。直近の期間（しきい値 7 日）にクラッシュが発生した場合、チェックは失敗します。 
+
+
+| check_root_disk_space を選択します | ノード | ルートファイルシステムにアップグレードを実行するための十分な空きスペースがあることを確認します。 
+
+
+| var_log_disk_space を確認します | ノード | /var/log の空き領域が、空きしきい値のパーセンテージを満たしていることを確認します。サポートされていない場合は、しきい値を下回るために、古いログがローテーションされてパージされます。十分な空きスペースの作成に失敗した場合、チェックは失敗します。 
+
+
+| check_pending_nodes | クラスタ | クラスタに保留状態のノードがないことを確認します。 
+|===
+[discrete]
+== 詳細については、こちらをご覧ください
+
+* https://docs.netapp.com/us-en/vcp/index.html["vCenter Server 向け NetApp Element プラグイン"^]
+* https://www.netapp.com/hybrid-cloud/hci-documentation/["NetApp HCI のリソースページ"^]
+

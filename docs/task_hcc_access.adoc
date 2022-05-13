@@ -1,0 +1,47 @@
+---
+sidebar: sidebar 
+permalink: docs/task_hcc_access.html 
+summary: NetApp Hybrid Cloud Control にログインできます。 
+keywords: netapp, hci, on premise, hybrid cloud control, hcc 
+---
+= NetApp HCI Hybrid Cloud Control にアクセスします
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ../media/
+
+
+[role="lead"]
+NetApp Hybrid Cloud Control では NetApp HCI を管理できます。
+
+NetApp Hybrid Cloud Control にログインするには、管理ノードの IP アドレスにアクセスします。
+
+Hybrid Cloud Control を使用すると、次の操作を実行できます。
+
+* link:task_hcc_dashboard.html["NetApp HCI のインストールを監視する"]
+* link:concept_hci_upgrade_overview.html["NetApp HCI システムをアップグレードします"]
+* link:concept_hcc_expandoverview.html["NetApp HCI のストレージリソースまたはコンピューティングリソースを拡張します"]
+
+
+* 手順 *
+
+. Webブラウザで管理ノードのIPアドレスを開きます。例：
++
+[listing]
+----
+https://<ManagementNodeIP>
+----
+. NetApp HCI ストレージクラスタ管理者のクレデンシャルを指定して NetApp Hybrid Cloud Control にログインします。
++
+NetApp Hybrid Cloud Control のインターフェイスが表示されます。
+
+
+
+[discrete]
+== 詳細については、こちらをご覧ください
+
+* https://www.netapp.com/hybrid-cloud/hci-documentation/["NetApp HCI のリソースページ"^]
+* https://docs.netapp.com/us-en/vcp/index.html["vCenter Server 向け NetApp Element プラグイン"^]
+

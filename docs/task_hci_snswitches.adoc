@@ -1,0 +1,294 @@
+---
+sidebar: sidebar 
+permalink: docs/task_hci_snswitches.html 
+summary: ネットアップが提供するベストプラクティスと手順に従って、障害のある SN2000 シリーズスイッチを無停止で交換できます。 
+keywords: netapp, hci, SSDs, drives, replace drives, H410S, H610S 
+---
+= SN2010 、 SN2100 、および SN2700 の各スイッチを交換してください
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ../media/
+
+
+[role="lead"]
+ネットアップが提供するベストプラクティスと手順に従って、障害のある SN2000 シリーズスイッチを無停止で交換できます。
+
+.必要なもの
+* Putty がラップトップにインストールされていること、および出力をキャプチャしたことを確認します。このビデオでは、 Putty を設定して出力セッションをキャプチャする方法を紹介しています。
+
+
+video::2LZfWH8HffA[youtube, ]
+* 交換の前後に NetApp Config Advisor を実行していることを確認してください。これは、メンテナンスの開始前に他の問題を特定するのに役立ちます。Config Advisor をダウンロードしてインストールし、からクイックスタートガイドにアクセスします link:https://mysupport.netapp.com/site/tools/tool-eula/activeiq-configadvisor/download["こちら（ログインが必要です）"^]。
+* 電源ケーブル、基本的な手工具、およびラベルを用意します。
+* 2 時間から 4 時間のメンテナンス期間を計画していることを確認します。
+* 以下のスイッチポートを確認してください。
+
+
+[#img-sn2010]
+.SN2010 スイッチの前面プレートとポート
+image::sn2010.png[SN2010,600,400]
+
+[#img-sn2100]
+.SN2100 スイッチの前面プレートとポート
+image::sn2100.png[SN2100,600,400]
+
+[#img-sn2010/2100]
+.SN2010 および SN2100 スイッチの背面
+image::sn2010_rear.png[SN2010 および SN2100 背面,600,400]
+
+[#img-sn2700]
+.SN2700 スイッチの前面と背面
+image::SN2700.png[SN2700 フロントおよびリヤ,600,400]
+
+この手順の手順は、次の順序で実行する必要があります。これにより、スイッチの交換前にダウンタイムを最小限に抑え、交換用スイッチを事前に設定することができます。
+
+
+NOTE: ガイダンスが必要な場合は、ネットアップサポートにお問い合わせください。
+
+手順の概要を次に示します。<<Prepare to replace the faulty switch>>
+<<Create the configuration file>>
+<<Remove the faulty switch and install the replacement>>
+<<Verify the operating system version on the switch>>
+<<Configure the replacement switch>>
+<<Complete the replacement>>
+
+
+
+== 故障したスイッチを交換する準備をします
+
+障害のあるスイッチを交換する前に、次の手順を実行します。
+
+.手順
+. 交換用スイッチのモデルが障害のあるスイッチと同じであることを確認します。
+. 障害のあるスイッチに接続されているすべてのケーブルにラベルを付けます。
+. スイッチ構成ファイルが保存されている外部ファイルサーバを特定します。
+. 次の情報を入手しておきます。
++
+.. 初期設定に使用されるインターフェイス： RJ-45 ポートまたはシリアルターミナルインターフェイス。
+.. スイッチアクセスに必要なクレデンシャル。障害が発生していないスイッチの管理ポートの IP アドレスと、障害が発生したスイッチです。
+.. 管理アクセス用のパスワード。
+
+
+
+
+
+
+== 構成ファイルを作成します
+
+スイッチは、作成した構成ファイルを使用して設定できます。次のいずれかのオプションを選択して、スイッチの構成ファイルを作成します。
+
+[cols="2*"]
+|===
+| オプション | 手順 
+
+
+| 障害が発生したスイッチからバックアップ構成ファイルを作成します  a| 
+. 次の例に示すように、 SSH を使用してスイッチにリモート接続します。
++
+[listing]
+----
+ssh admin@<switch_IP_address
+----
+. 次の例に示すように、コンフィギュレーションモードを開始します。
++
+[listing]
+----
+switch > enable
+switch # configure terminal
+----
+. 使用可能な構成ファイルを次の例のように検索します。
++
+[listing]
+----
+switch (config) #
+switch (config) # show configuration files
+----
+. アクティブなビン構成ファイルを外部サーバーに保存します。
++
+[listing]
+----
+switch (config) # configuration upload my-filename scp://myusername@my-server/path/to/my/<file>
+----
+
+
+
+
+| ファイルを変更して、バックアップ構成ファイルを作成します 別のスイッチ  a| 
+. 次の例に示すように、 SSH を使用してスイッチにリモート接続します。
++
+[listing]
+----
+ssh admin@<switch_IP_address
+----
+. 次の例に示すように、コンフィギュレーションモードを開始します。
++
+[listing]
+----
+switch > enable
+switch # configure terminal
+----
+. 次の例に示すように、テキストベースの構成ファイルをスイッチから外部サーバにアップロードします。
++
+[listing]
+----
+switch (config) #
+switch (config) # configuration text file my-filename upload scp://root@my-server/root/tmp/my-filename
+----
+. 障害が発生したスイッチに合わせて、テキストファイル内の次のフィールドを変更します。
++
+[listing]
+----
+## Network interface configuration
+##
+no interface mgmt0 dhcp
+   interface mgmt0 ip address XX.XXX.XX.XXX /22
+
+##
+## Other IP configuration
+##
+   hostname oldhostname
+----
+
+
+|===
+
+
+== 障害のあるスイッチを取り外し、交換用スイッチを取り付けます
+
+手順を実行して障害のあるスイッチを取り外し、交換用スイッチを取り付けます。
+
+.手順
+. 障害が発生したスイッチの電源ケーブルを確認します。
+. スイッチの再起動後に、電源ケーブルにラベルを付けて取り外します。
+. すべてのケーブルにラベルを付けてスイッチから取り外し、スイッチ交換時の破損を防ぐために固定します。
+. ラックからスイッチを取り外します。
+. 交換用スイッチをラックに取り付けます。
+. 電源ケーブルと管理ポートケーブルを接続します。
++
+
+NOTE: AC 電源を投入すると、スイッチの電源が自動的にオンになります。電源ボタンがありません。システムステータス LED が緑色になるまで、最大 5 分かかることがあります。
+
+. RJ-45 管理ポートまたはシリアルターミナルインターフェイスを使用してスイッチに接続します。
+
+
+
+
+== スイッチのオペレーティングシステムのバージョンを確認します
+
+スイッチの OS ソフトウェアバージョンを確認します。障害が発生したスイッチと正常なスイッチのバージョンが一致している必要があります。
+
+.手順
+. SSH を使用して、スイッチにリモート接続します。
+. コンフィギュレーションモードを開始します。
+. 「 show version 」コマンドを実行します。次の例を参照してください。
++
+[listing]
+----
+SFPS-HCI-SW02-A (config) #show version
+Product name:      Onyx
+Product release:   3.7.1134
+Build ID:          #1-dev
+Build date:        2019-01-24 13:38:57
+Target arch:       x86_64
+Target hw:         x86_64
+Built by:          jenkins@e4f385ab3f49
+Version summary:   X86_64 3.7.1134 2019-01-24 13:38:57 x86_64
+
+Product model:     x86onie
+Host ID:           506B4B3238F8
+System serial num: MT1812X24570
+System UUID:       27fe4e7a-3277-11e8-8000-506b4b891c00
+
+Uptime:            307d 3h 6m 33.344s
+CPU load averages: 2.40 / 2.27 / 2.21
+Number of CPUs:    4
+System memory:     3525 MB used / 3840 MB free / 7365 MB total
+Swap:              0 MB used / 0 MB free / 0 MB total
+
+----
+. バージョンが一致しない場合は、 OS をアップグレードする必要があります。を参照してください link:https://community.mellanox.com/s/article/howto-upgrade-switch-os-software-on-mellanox-switch-systems["Mellanox ソフトウェアアップグレードガイド"^] を参照してください。
+
+
+
+
+== 交換用スイッチを設定します
+
+次の手順を実行して、交換用スイッチを設定します。を参照してください link:https://docs.mellanox.com/display/MLNXOSv381000/Configuration+Management["Mellanox の構成管理"^] を参照してください。
+
+.手順
+. 該当するオプションから選択します。
+
+
+[cols="2*"]
+|===
+| オプション | 手順 
+
+
+| bin 構成ファイルから  a| 
+. 次の例に示すように、 bin 構成ファイルを取得します。
++
+[listing]
+----
+switch (config) # configuration fetch scp://myusername@my-server/path/to/my/<file>
+----
+. 次の例に示すように、前の手順で取得した bin 構成ファイルをロードします。
++
+[listing]
+----
+switch (config) # configuration switch-to my-filename
+----
+. 再起動を確認するには 'yes' と入力します
+
+
+
+
+| テキストファイルから  a| 
+. スイッチを工場出荷時のデフォルトにリセットします。
++
+[listing]
+----
+switch (config) # reset factory keep-basic
+----
+. テキストベースの構成ファイルを適用します。
++
+[listing]
+----
+switch (config) # configuration text file my-filename apply
+----
+. 次の例に示すように、テキストベースの構成ファイルをスイッチから外部サーバにアップロードします。
++
+[listing]
+----
+switch (config) #
+switch (config) # configuration text file my-filename upload scp://root@my-server/root/tmp/my-filename
+----
++
+
+NOTE: テキストファイルの適用時にはリブートは必要ありません。
+
+
+
+|===
+
+
+== 交換を完了します
+
+手順を実行して交換手順を完了します。
+
+.手順
+. ケーブルを挿入するときは、ラベルを参考にしてください。
+. NetApp Config Advisor を実行します。からクイックスタートガイドにアクセスします link:https://mysupport.netapp.com/site/tools/tool-eula/activeiq-configadvisor/download["こちら（ログインが必要です）"^]。
+. ストレージ環境を確認します。
+. 障害が発生したスイッチをネットアップに返却します。
+
+
+
+
+== 詳細については、こちらをご覧ください
+
+* https://www.netapp.com/us/documentation/hci.aspx["NetApp HCI のリソースページ"^]
+* http://docs.netapp.com/sfe-122/index.jsp["SolidFire と Element ソフトウェアドキュメントセンター"^]
+

@@ -1,0 +1,35 @@
+---
+sidebar: sidebar 
+permalink: docs/concept_nde_config_vsphere_overview.html 
+summary: NetApp HCI の導入時に VMware vSphere を設定する方法について説明します。 
+keywords: netapp, hci, netapp deployment engine, deployment, vsphere 
+---
+= VMware vSphere の設定
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ../media/
+:keywords: netapp, hci, netapp deployment engine, deployment, vsphere
+
+
+[role="lead"]
+NetApp HCI は、 VMware vSphere の vCenter Server および ESXi コンポーネントを使用します。vCenter Server は、各コンピューティングノードにインストールされている VMware ESXi ハイパーバイザーを管理および監視するために使用されます。新しい vSphere 環境をインストールして設定することができます。この環境には NetApp Element Plug-in for vCenter Server もインストールされます。また、既存の vSphere 環境に参加して拡張することもできます。
+
+NetApp Deployment Engine を使用して vSphere を新規にインストールする場合は、次の点に注意してください。
+
+* NetApp Deployment Engine は、「小規模」の導入規模オプションを使用して新しい vCenter Server Appliance をインストールします。
+* vCenter Server ライセンスは一時的な評価ライセンスです。評価期間後も運用を継続するには、 VMware から新しいライセンスキーを取得して vCenter Server ライセンスインベントリに追加する必要があります。
+
+
+
+NOTE: vSphere のインベントリ設定がフォルダを使用して vCenter データセンター内の NetApp HCI クラスタを格納している場合、 NetApp HCI コンピューティングリソースの拡張などの一部の処理が失敗します。NetApp HCI クラスタが vSphere Web Client インベントリツリーのデータセンターの直下にあり、フォルダに格納されていないことを確認してください。詳細については、ネットアップの技術情報アーティクルを参照してください。
+
+新しい vCenter Server をインストールする場合は、ネットワーク構成時に vSphere 標準スイッチまたは vSphere Distributed Switch （ VDS ）をインストールできます。VDS を使用すると、 NetApp HCI の導入後に仮想マシンのネットワーク構成を簡単かつ一元的に管理できます。NetApp HCI のクラウドデータサービス機能には VDS が必要です。クラウドデータサービスでは vSphere Standard Switch はサポートされません。
+
+[discrete]
+== 詳細については、こちらをご覧ください
+
+* https://kb.netapp.com/Advice_and_Troubleshooting/Hybrid_Cloud_Infrastructure/NetApp_HCI/Firmware_and_driver_versions_in_NetApp_HCI_and_NetApp_Element_software["NetApp HCI および NetApp Element のファームウェアとドライバのバージョン ソフトウェア"^]
+

@@ -1,0 +1,29 @@
+---
+sidebar: sidebar 
+permalink: docs/task_rancher_load_balancing.html 
+summary: NetApp HCI に Rancher をインストールした後にロードバランシングを設定する方法について説明します。 
+keywords: netapp, hci, Rancher, install, installation, load, balance 
+---
+= ロードバランシングを設定する
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ../media/
+
+
+[role="lead"]
+NetApp HCI に Rancher をインストールした後にロードバランシングを設定する方法について説明します。NetApp HCI 上の Rancher のロードバランシングには、管理クラスタが含まれます。
+
+本番環境のワークロードでは、 Rancher URL の値にラウンドロビン DNS や L4 ロードバランサなどの手法を検討する必要があります。これらのいずれかの方法によって、 Rancher UI へのアクセスが分散され、最大限の復元力が提供されます。
+
+L4 ロードバランシングは、アプリケーションをホストする仮想マシンまたはコンテナが、管理クラスタの 3 つのノードに要求を分散するように設定されている手法です。
+
+[discrete]
+== 詳細については、こちらをご覧ください
+
+* https://rancher.com/docs/rancher/v2.x/en/overview/architecture/["アーキテクチャに関する Rancher ドキュメント"^]
+* https://rancher.com/docs/rancher/v2.x/en/overview/concepts/["Rancher 用の Kubernetes 用語"]
+* https://www.netapp.com/us/documentation/hci.aspx["NetApp HCI のリソースページ"^]
+

@@ -1,0 +1,42 @@
+---
+sidebar: sidebar 
+permalink: docs/task_nde_select_net_topology.html 
+summary: NetApp HCI の導入時に VMware vSphere を設定する方法について説明します。 
+keywords: netapp, hci, netapp deployment engine, deployment, vsphere 
+---
+= ネットワークトポロジを選択してください
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ../media/
+:keywords: netapp, hci, netapp deployment engine, deployment, vsphere
+
+
+[role="lead"]
+NetApp HCI ノードのケーブル接続には、ニーズに応じて異なるネットワークケーブル構成を使用できます。コンピューティングノードについては、 6 つのすべてのネットワークポートを使用して各ポートペアに異なるタイプのトラフィックを割り当てることも、 2 つのポートを使用してすべてのタイプのトラフィックをポートに割り当てることもできます。ストレージノードでは標準的なケーブル 4 本の構成を使用します。選択すると、インベントリでどのコンピューティングノードを選択できるかに影響します。
+
+コンピューティングノードにケーブル 2 本のネットワークトポロジを使用する場合は、次の要件を考慮してください。
+
+* 導入完了後に適用する VMware vSphere Enterprise Plus ライセンスが必要です。
+* ネットワークとネットワークスイッチの構成が正しいことを確認しておきます。
+* すべてのコンピューティングノードおよびストレージノードのストレージネットワークと vMotion ネットワークに VLAN タギングが必要です。
+
+
+.手順
+. Network Topology * ページで、 NetApp HCI 用のコンピューティングノードのインストール方法に適したコンピューティングノードトポロジを選択します。
++
+** *6 ケーブルオプション *: 6 ケーブルオプションでは、トラフィックの種類 ( 管理、仮想マシン、ストレージ ) ごとに専用ポートを提供します。必要に応じて、 vSphere Distributed Switch （ VDS ）を有効にすることができます。VDS を有効にすると、分散スイッチが構成され、 NetApp HCI の導入完了後に仮想マシンのネットワーク構成を簡単かつ一元的に管理できるようになります。有効にした場合は、導入後に適用する vSphere Enterprise Plus ライセンスが必要です。
+** * 2 Cable Option * ：管理、仮想マシン、およびストレージのトラフィックを 2 つのボンディングポートに統合します。このケーブル接続オプションでは VDS は必須で、自動的に有効になります。導入後に適用する vSphere Enterprise Plus ライセンスが必要です。
+
+
+. 一部のケーブル配線オプションでは、ノードハードウェアのタイプ別に複数の背面パネル図が表示されます。背面パネル図を順に参照して、該当するノードモデルのネットワークケーブルとケーブル配線オプションを確認してください。
+. 完了したら、 [* Continue （続行） ] をクリックします。
+
+
+[discrete]
+== 詳細については、こちらをご覧ください
+
+* https://kb.netapp.com/Advice_and_Troubleshooting/Hybrid_Cloud_Infrastructure/NetApp_HCI/Firmware_and_driver_versions_in_NetApp_HCI_and_NetApp_Element_software["NetApp HCI および NetApp Element のファームウェアとドライバのバージョン ソフトウェア"^]
+

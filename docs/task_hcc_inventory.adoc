@@ -1,0 +1,46 @@
+---
+sidebar: sidebar 
+permalink: docs/hcc_inventory.html 
+summary: システムのインベントリは Hybrid Cloud Control で確認できます。 
+keywords: netapp, hci, hcc, on premise, inventory, hybrid cloud control 
+---
+= Hybrid Cloud Control で NetApp HCI のインベントリを表示します
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ../media/
+
+
+[role="lead"]
+NetApp HCI システムのインベントリは、 Hybrid Cloud Control で確認できます。
+
+
+
+== 手順
+
+. にアクセスします https://fabric.netapp.io["NetApp Fabric Orchestrator"^] ログインページ。
+. Cloud Central のログインクレデンシャルを入力し、 * Login * をクリックします。
++
+
+TIP: システムが表示されない場合は、 NetApp HCI 管理者がネットアップクラウドセントラルアカウントに追加されていることを確認してください。
+
+. Cloud Central アカウントをお持ちでない場合は、 Cloud Central のログインページで * サインアップ * をクリックします。
++
+Cloud Central では、アカウントを個別のアカウントとしてセットアップすることも、フェデレーテッドアカウントとしてセットアップすることもできます。
+
++
+.. 名前、 E メールアドレス、パスワードを指定して新しいアカウントを作成すると、ログイン状態になります。これは最もシンプルなタイプのアカウントです。
+.. Cloud Central のフェデレーテッド組織に所属している場合は、 E メールアドレスを入力すると組織のログインページに転送されます。
+
+
+. 他の Cloud Central 製品から、「 * Products * > * NetApp Fabric Orchestrator * 」を選択します。
+
+
+[discrete]
+== 詳細については、こちらをご覧ください
+
+* https://cloud.netapp.com/home["NetApp Cloud Central"^]
+* https://docs.netapp.com/us-en/cloud/["ネットアップのクラウドに関するドキュメント"^]
+

@@ -1,0 +1,98 @@
+---
+sidebar: sidebar 
+permalink: docs/hci_prereqs_network_configuration_option_A.html 
+summary: NetApp HCI ネットワーク構成オプション A について説明します 
+keywords: netapp, hci, cabling, network configuration 
+---
+= ネットワーク構成：
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ../media/
+:keywords: netapp, hci, cabling, network configuration
+
+
+[role="lead"]
+NetApp HCI では、複数の異なるネットワークケーブル配線と VLAN 構成を使用できます。最初の構成では、オプション A でコンピューティングノードごとに 2 本のネットワークケーブルを使用します。
+
+
+
+== 構成オプション A ：ケーブル 2 本でのコンピューティングノードの構成
+
+NetApp H410C 、 H610C 、および H615C コンピューティングノードは、 2 本のネットワークケーブルを使用してすべての NetApp HCI ネットワークに接続できます。この構成では、ストレージ、 vMotion 、および仮想マシンの各ネットワークで VLAN タギングを使用する必要があります。すべてのコンピューティングノードとストレージノードで同じ VLAN ID 方式を使用する必要があります。この構成では、 VMware vSphere Enterprise Plus のライセンスが必要な vSphere Distributed Switch を使用します。
+
+NetApp HCI のドキュメントでは、 H シリーズノードの背面パネルにあるネットワークポートをアルファベットを使用して記載しています。
+
+H410C ストレージノードのネットワークポートと場所は次のとおりです。
+
+[#H35700E_H410C]
+image::HCI_ISI_compute_6cable.png[NetApp H410C ストレージノードネットワークポート]
+
+H610C コンピューティングノードのネットワークポートと場所は次のとおりです。
+
+[#H610C]
+image::H610C_node-cabling.png[NetApp H610C コンピューティングノードのネットワークポート]
+
+H615C コンピューティングノードのネットワークポートと場所は次のとおりです。
+
+[#H615C]
+image::H615C_node_cabling.png[NetApp H615C コンピューティングノードネットワークポート]
+
+この構成では、各ノードで次のネットワークポートを使用します。
+
+|===
+| ノード | 使用するネットワークポート 
+
+
+| H410C | D および E 
+
+
+| H610C | C および D 
+
+
+| H615C | A と B 
+|===
+
+
+=== VLAN の設定
+
+ベストプラクティスとして、ノードが使用しているすべてのスイッチポート上に必要なネットワークセグメントを構成することを推奨します。例：
+
+|===
+| ネットワーク名 | VLAN ID | スイッチポートの設定 
+
+
+| 管理 | 100 | ネイティブ 
+
+
+| ストレージ | 105 | タグ付き 
+
+
+| vMotion | 107 | タグ付き 
+
+
+| 仮想マシン | 200 、 201 | タグ付き 
+|===
+次の図は、ケーブル 2 本の H410C コンピューティングノードとケーブル 4 本の H410S ストレージノードの推奨されるケーブル構成を示しています。この例のスイッチポートはすべて同じ構成です。
+
+image::hci_networking_config_scenario_1.png[HCI ネットワーク構成オプション A の画像]
+
+
+
+=== スイッチコマンドの例
+
+NetApp HCI ノードで使用するすべてのスイッチポートを構成する場合には次のコマンドを使用できます。このコマンドは Cisco の構成用ですが、少しの変更で Mellanox スイッチにも使用できます。この構成を実装するために必要なコマンドについては、スイッチのマニュアルを参照してください。インターフェイス名、説明、および VLAN を環境に応じた値に置き換えて使用してください。
+
+インターフェイス { インターフェイス名、たとえば EthernetX/Y または GigabitEthernetX/Y/Z }`d 説明 { 必要な説明、たとえば NetApp-CI-nodex-porty }`````m TU9216````witchport トランクネイティブ VLAN 100````witchport トランクネイティブ VLAN 100````````witchport トランク VLAN 105,107,200,200,200,ted' エッジのようなトランクタイプ
+
+
+NOTE: 一部のスイッチでは、 VLAN の許可リストにネイティブ VLAN を含める必要があります。使用しているスイッチモデルとソフトウェアバージョンのドキュメントを参照してください。
+
+[discrete]
+== 詳細については、こちらをご覧ください
+
+* https://www.netapp.com/hybrid-cloud/hci-documentation/["NetApp HCI のリソースページ"^]
+* https://docs.netapp.com/us-en/vcp/index.html["vCenter Server 向け NetApp Element プラグイン"^]
+

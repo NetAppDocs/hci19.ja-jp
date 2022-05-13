@@ -1,0 +1,18 @@
+---
+sidebar: sidebar 
+permalink: docs/hci_prereqs_management_node.html 
+summary: NetApp HCI 管理ノードのベストプラクティスについて説明します。 
+keywords: netapp, hci, management node, mnode, best practice 
+---
+= 管理ノードの要件
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ../media/
+:keywords: netapp, hci, management node, mnode, best practice
+
+
+[role="lead"]
+ベストプラクティスとして、 1 つの管理ノードを 1 つの VMware vCenter インスタンスに関連付けるだけで、同じストレージリソースおよびコンピューティングリソースまたは vCenter インスタンスを複数の管理ノードに定義することは避けてください。複数の管理ノードで同じリソースを定義していると、ネットアップ ActiveIQ で誤ったリソースレポートなど、原因の問題が発生する可能性があります。

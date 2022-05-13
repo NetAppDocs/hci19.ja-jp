@@ -1,0 +1,27 @@
+---
+sidebar: sidebar 
+permalink: docs/task_mnode_work_overview_UI.html 
+summary: '管理ノード UI を使用 (https://<mNodeIP>:442)[]を使用して、ネットワークとクラスタの設定を変更したり、システムテストを実行したり、システムユーティリティを使用したりできます。' 
+keywords: 'netapp, management node ui, mnode ui, :442, element' 
+---
+= 管理ノード UI の概要
+:allow-uri-read: 
+
+
+[role="lead"]
+管理ノード UI （ https://<mNodeIP>:442` ）を使用すると、ネットワークおよびクラスタの設定を変更したり、システムテストを実行したり、システムユーティリティを使用したりできます。
+
+管理ノード UI で実行できるタスクは次のとおりです。
+
+* link:task_mnode_enable_alerts.html["NetApp HCI でアラート監視を設定する"]
+* link:task_mnode_settings.html["管理ノードのネットワーク、クラスタ、およびシステムの設定を変更してテストする"]
+* link:task_mnode_run_system_utilities.html["管理ノードからシステムユーティリティを実行します"]
+
+
+[discrete]
+== 詳細については、こちらをご覧ください
+
+* link:task_mnode_access_ui.html["管理ノードにアクセスします"]
+* https://docs.netapp.com/us-en/vcp/index.html["vCenter Server 向け NetApp Element プラグイン"^]
+* https://www.netapp.com/hybrid-cloud/hci-documentation/["NetApp HCI のリソースページ"^]
+

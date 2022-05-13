@@ -1,0 +1,46 @@
+---
+sidebar: sidebar 
+permalink: docs/task_nde_access_hcc.html 
+summary: NetApp HCI の導入後にネットアップハイブリッドクラウドコントロールにアクセスする方法について説明します。 
+keywords: netapp, hci, deployment, review, GPU, install, driver, drivers 
+---
+= NetApp Hybrid Cloud Control にアクセスします
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ../media/
+
+
+[role="lead"]
+NetApp Hybrid Cloud Control では NetApp HCI を管理できます。NetApp HCI の管理サービスやその他のコンポーネントをアップグレードして、インストール環境を拡張および監視できます。NetApp Hybrid Cloud Control にログインするには、管理ノードの IP アドレスにアクセスします。
+
+.必要なもの
+* * クラスタ管理者権限 * ：ストレージクラスタに対する管理者権限があります。
+* * 管理サービス * ：管理サービスをバージョン 2.1.326 以上にアップグレードしておきます。NetApp Hybrid Cloud Control は、それよりも前のバージョンのサービスバンドルでは利用できません。現在のサービスバンドルバージョンについては、を参照してください https://kb.netapp.com/Advice_and_Troubleshooting/Data_Storage_Software/Management_services_for_Element_Software_and_NetApp_HCI/Management_Services_Release_Notes["管理サービスリリースノート"^]。
+
+
+.手順
+. Webブラウザで管理ノードのIPアドレスを開きます。例：
++
+[listing]
+----
+https://<ManagementNodeIP>
+----
+. NetApp HCI ストレージクラスタ管理者のクレデンシャルを指定して NetApp Hybrid Cloud Control にログインします。
++
+NetApp Hybrid Cloud Control のインターフェイスが表示されます。
+
+
+
+
+NOTE: 十分な権限を使用してログインしないと、 HCC のリソースページ全体で「ロードできません」というメッセージが表示され、リソースを使用できなくなります。
+
+
+
+== 詳細については、こちらをご覧ください
+
+* https://www.netapp.com/us/documentation/hci.aspx["NetApp HCI のリソースページ"^]
+* https://docs.netapp.com/us-en/element-software/index.html["SolidFire および Element ソフトウェアのドキュメント"^]
+

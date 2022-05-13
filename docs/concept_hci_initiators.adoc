@@ -1,0 +1,28 @@
+---
+sidebar: sidebar 
+permalink: docs/concept_hci_initiators.html 
+summary: イニシエータの概要、およびイニシエータを使用してボリュームアクセスグループ内のストレージへのアクセスを許可する方法について説明します。 
+keywords: netapp, hci, initiator, storage volume, solidfire volume, element volume, access group 
+---
+= イニシエータ
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ../media/
+
+
+[role="lead"]
+イニシエータはクライアントとボリューム間の通信のエントリポイントとして機能し、外部クライアントからクラスタ内のボリュームへのアクセスを可能にします。ストレージボリュームへのアカウントベースのアクセスではなく、 CHAP ベースのアクセスにイニシエータを使用できます。1 つのイニシエータをボリュームアクセスグループに追加すると、ボリュームアクセスグループのメンバーは認証なしでグループに追加されたすべてのストレージボリュームにアクセスできるようになります。1 つのイニシエータは 1 つのアクセスグループにのみ属することができます。
+
+
+
+== 詳細については、こちらをご覧ください
+
+* link:task_hcc_manage_initiators.html["イニシエータを管理する"]
+* link:concept_hci_volume_access_groups.html["ボリュームアクセスグループ"]
+* link:task_hcc_manage_vol_access_groups.html["ボリュームアクセスグループを管理します"]
+* https://docs.netapp.com/us-en/vcp/index.html["vCenter Server 向け NetApp Element プラグイン"^]
+* http://docs.netapp.com/sfe-122/index.jsp["SolidFire と Element ソフトウェアドキュメントセンター"^]
+

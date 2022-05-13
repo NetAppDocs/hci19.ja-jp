@@ -1,0 +1,42 @@
+---
+sidebar: sidebar 
+permalink: docs/task_rancher_manage.html 
+summary: NetApp HCI でランチを管理する方法について説明します。 
+keywords: netapp, hci, rancher, deploy, cluster, kubernetes, control plane, monitor, user cluster, workload 
+---
+= NetApp HCI でランチ元を管理します
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ../media/
+
+
+[role="lead"]
+NetApp HCI に Rancher を展開した後、 Rancher サーバクラスタの URL とステータスを表示できます。Rancher サーバを削除することもできます。
+
+
+
+== Rancher サーバクラスタの URL とステータスを特定します
+
+Rancher サーバクラスタの URL を識別し、サーバのステータスを確認できます。
+
+. NetApp HCI または Element ストレージクラスタ管理者のクレデンシャルを指定して NetApp Hybrid Cloud Control にログインします。
+. ダッシュボードで右上のオプションアイコンを選択し、 * 構成 * を選択します。
++
+image::hcc_configure.png[Rancher Configuration ページ]
+
++
+Rancher Server Clusters ページには、展開された Rancher サーバクラスタ、関連する URL 、およびステータスのリストが表示されます。
+
+
+
+[discrete]
+== 詳細については、こちらをご覧ください
+
+* link:task_rancher_remove_deployment.html["ランチを取り外す"]
+* https://rancher.com/docs/rancher/v2.x/en/overview/architecture/["アーキテクチャに関する Rancher ドキュメント"^]
+* https://rancher.com/docs/rancher/v2.x/en/overview/concepts/["Rancher 用の Kubernetes 用語"]
+* https://www.netapp.com/us/documentation/hci.aspx["NetApp HCI のリソースページ"^]
+

@@ -1,0 +1,46 @@
+---
+sidebar: sidebar 
+permalink: docs/task_nde_join_existing_vsphere.html 
+summary: NetApp HCI の導入時に VMware vSphere を設定する方法について説明します。 
+keywords: netapp, hci, netapp deployment engine, deployment, vsphere 
+---
+= 既存の VMware vSphere 環境に参加します
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ../media/
+:keywords: netapp, hci, netapp deployment engine, deployment, vsphere
+
+
+[role="lead"]
+vCenter Server のネットワーク情報とクレデンシャルを指定すると、既存の vSphere 環境を活用するように NetApp HCI を設定できます。
+
+.必要なもの
+* 既存の vSphere 6.7 の環境に参加する場合は、 vCenter Server がバージョン 6.7 Update 1 を実行していることを確認します。
+* 既存の vSphere 6.5 環境に参加する場合は、 vCenter Server がバージョン 6.5 Update 2 以降を実行していることを確認します。
+* 既存の vSphere 環境のネットワークの詳細と管理者クレデンシャルを取得します。
+* NetApp Element Plug-in for vCenter Server が既存の vCenter インスタンスに登録されている場合は、が必要です https://docs.netapp.com/us-en/vcp/task_vcp_unregister.html["登録解除します"^] 続行する前に。NetApp HCI の導入が完了すると、プラグインが再登録されます。
+
+
+vCenter リンクモードを使用して接続されている複数の vCenter Server システムに参加した場合、 NetApp HCI は 1 つの vCenter Server システムのみを認識します。
+
+
+NOTE: NetApp Element Plug-in for vCenter Server を使用して他の vCenter Server のクラスタリソースを管理する方法については、を参照してください link:https://docs.netapp.com/us-en/vcp/vcp_concept_linkedmode.html["vCenter リンクモード"^] はローカルストレージクラスタのみに制限されます。
+
+.手順
+. 「 * Join 」をクリックして、既存の vSphere 環境を拡張します。 *
+. ドメイン名または IP アドレスを「 * vCenter Server ドメイン名または IP アドレス * 」フィールドに入力します。ドメイン名を入力する場合は、表示される *DNS Server IP Address* フィールドにアクティブな DNS サーバの IP アドレスも入力する必要があります。
+. vSphere 管理者のクレデンシャルを「 * User Name 」フィールドと「 Password * 」フィールドに入力します。
+. [* Continue （続行） ] をクリックします
+
+
+
+NOTE: この手順で NetApp Element Plug-in for vCenter Server が登録されていると、エラーメッセージが表示されて要求されます https://docs.netapp.com/us-en/vcp/task_vcp_unregister.html["登録解除します"^] プラグイン。これは、 NetApp HCI の導入を続行する前に行ってください。導入完了後、プラグインが再登録されます。
+
+[discrete]
+== 詳細については、こちらをご覧ください
+
+* https://kb.netapp.com/Advice_and_Troubleshooting/Hybrid_Cloud_Infrastructure/NetApp_HCI/Firmware_and_driver_versions_in_NetApp_HCI_and_NetApp_Element_software["NetApp HCI および NetApp Element のファームウェアとドライバのバージョン ソフトウェア"^]
+

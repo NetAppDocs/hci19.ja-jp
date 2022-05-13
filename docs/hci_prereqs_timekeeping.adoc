@@ -1,0 +1,34 @@
+---
+sidebar: sidebar 
+permalink: docs/hci_prereqs_timekeeping.html 
+summary: NetApp HCI の DNS とタイムキーパー機能の要件について説明します。 
+keywords: netapp, hci, timekeeping, NTP, DNS 
+---
+= DNS とタイムキーパー機能の要件
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ../media/
+:keywords: netapp, hci, timekeeping, NTP, DNS
+
+
+[role="lead"]
+導入前に、 NetApp HCI システムのドメインネームシステム（ DNS ）レコードを準備し、 NTP サーバの情報を収集する必要があります。NetApp HCI の導入を成功させるには、正しい DNS エントリと NTP サーバが設定された DNS サーバが必要です。
+
+NetApp HCI を導入する前に、次の DNS およびタイムサーバの準備を行ってください。
+
+* ホスト（個々のコンピューティングノードやストレージノードなど）の DNS エントリを必要に応じて作成し、そのエントリと IP アドレスの対応表を作成しておきます。導入時に、各ホストに適用されるプレフィックスをストレージクラスタに割り当てる必要があります。混乱を避けるため、 DNS の命名方法を念頭にプレフィックスを決めてください。
+* 新しい VMware vSphere と一緒に NetApp HCI を導入するときに完全修飾ドメイン名を使用する場合は、導入前に vCenter Server のポインタ（ PTR ）レコードとアドレス（ A ）レコードを 1 つずつ、使用中のすべての DNS サーバに作成しておく必要があります。
+* IP アドレスだけを使用する場合は vCenter の新しい DNS レコードを作成する必要はありません。 NetApp HCI
+* NetApp HCI には、タイムキーパー機能のための有効な NTP サーバが必要です。環境に NTP サーバがない場合は、一般に公開されているタイムサーバを使用してもかまいません。
+* ストレージノードとコンピューティングノードのすべてのクロックが相互に同期されていること、および NetApp HCI へのログインに使用するデバイスのクロックが NetApp HCI ノードと同期されていることを確認してください。
+
+
+[discrete]
+== 詳細については、こちらをご覧ください
+
+* https://www.netapp.com/hybrid-cloud/hci-documentation/["NetApp HCI のリソースページ"^]
+* https://docs.netapp.com/us-en/vcp/index.html["vCenter Server 向け NetApp Element プラグイン"^]
+

@@ -1,0 +1,28 @@
+---
+sidebar: sidebar 
+permalink: docs/task_hci_manage_overview.html 
+summary: FQDM を設定し、 NetApp HCI 、ユーザーアカウント、ストレージクラスタ、ボリューム、ボリュームアクセスグループの資格情報を管理できます。 イニシエータ、ボリュームの QoS ポリシー、および管理ノード。 
+keywords: netapp, hci, install, deploy, get started, configure, fqdn, fully qualified domain name 
+---
+= NetApp HCI の管理の概要
+:allow-uri-read: 
+
+
+[role="lead"]
+NetApp HCI 、ユーザアカウント、ストレージクラスタ、ボリューム、ボリュームアクセスグループの完全修飾ドメイン名を設定し、クレデンシャルを管理できます。 イニシエータ、ボリュームの QoS ポリシー、および管理ノード。
+
+使用できる項目は次のとおりです。
+
+* link:task_nde_access_ui_fqdn.html["完全修飾ドメイン名 Web UI アクセスを設定します"]
+* link:task_post_deploy_credentials.html["NetApp HCI でクレデンシャルを変更します"]
+* link:task_hci_credentials_vcenter_esxi.html["vCenter および ESXi のクレデンシャルを更新します"]
+* link:task_hcc_manage_storage_overview.html["NetApp HCI ストレージアセットを管理します"]
+* link:task_mnode_work_overview.html["管理ノードを操作します"]
+* link:concept_nde_hci_power_off_on.html["NetApp HCI システムの電源をオフまたはオンにします"]
+
+
+[discrete]
+== 詳細については、こちらをご覧ください
+
+* https://www.netapp.com/hybrid-cloud/hci-documentation/["NetApp HCI のリソースページ"^]
+

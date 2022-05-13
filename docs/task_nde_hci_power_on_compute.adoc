@@ -1,0 +1,46 @@
+---
+sidebar: sidebar 
+permalink: docs/task_nde_hci_power_on_compute.html 
+summary: NetApp HCI コンピューティングノードの電源をオンにする方法について説明します。 
+keywords: netapp, hci, netapp deployment engine, deployment, vsphere 
+---
+= NetApp HCI システムのコンピューティングリソースの電源をオンにします
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ../media/
+:keywords: netapp, hci, netapp deployment engine, deployment, vsphere
+
+
+[role="lead"]
+スケジュールされたシステム停止の終了後、 NetApp HCI システムのコンピューティングリソースの電源をオンにできます。
+
+.手順
+. ストレージノードの電源をオンにする場合と同じ手順で、コンピューティングノードの電源をオンにします。
+. すべてのコンピューティングノードが稼働状態になったら、 vCSA を実行していた ESXi ホストにログインします。
+. コンピューティングホストにログインし、すべての NetApp HCI データストアが表示されることを確認します。一般的な NetApp HCI システムでは、すべての ESXi ローカルデータストアと、少なくとも次の共有データストアが表示されます。
+
+
+[listing]
+----
+NetApp-HCI-Datastore-[01,02]
+----
+. すべてのストレージにアクセスできる場合は、次の手順で vCSA とその他必要な仮想マシンの電源をオンにします。
++
+.. ナビゲータで仮想マシンを選択し、パワーオンするすべての仮想マシンを選択して、 * パワーオン * ボタンをクリックします。
+
+
+. 仮想マシンの電源をオンにしたら、約 5 分待ってから Web ブラウザを使用して vCSA アプリケーションの IP アドレスまたは FQDN に移動します。
++
+この操作が早すぎると、 vSphere Client Web サーバが初期化中であることを示すメッセージが表示されます。
+
+. vSphere Client の初期化が完了したら、ログインして、すべての ESXi ホストと仮想マシンがオンラインであることを確認します。
+
+
+[discrete]
+== 詳細については、こちらをご覧ください
+
+* https://kb.netapp.com/Advice_and_Troubleshooting/Hybrid_Cloud_Infrastructure/NetApp_HCI/Firmware_and_driver_versions_in_NetApp_HCI_and_NetApp_Element_software["NetApp HCI および NetApp Element のファームウェアとドライバのバージョン ソフトウェア"^]
+

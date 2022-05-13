@@ -1,0 +1,108 @@
+---
+sidebar: sidebar 
+permalink: docs/task_vcp_upgrade_plugin.html 
+summary: NetApp HCI システムのアップグレードの一環として、 Element Plug-in for vCenter Server をアップグレードできます。 
+keywords: netapp, vcp, vCenter plug-in, upgrade, 4.4, 4.5, 4.6, 4.7, 4.8, 4.9 
+---
+= Element Plug-in for vCenter Server をアップグレードします
+:allow-uri-read: 
+
+
+[role="lead"]
+既存のvSphere環境にNetApp Element Plug-in for vCenter Serverが登録されている場合は、プラグインサービスが含まれている管理サービスパッケージを最初に更新したあとで、プラグインの登録を更新できます。
+
+登録ユーティリティを使用して、 vCenter Server Virtual Appliance （ vCSA ）または Windows でプラグインの登録を更新できます。vCenter Plug-in の登録変更は、プラグインを使用するすべての vCenter Server で行う必要があります。
+
+このアップグレード手順では、次のアップグレードシナリオについて説明します。
+
+* VMware vCenter Server 4.9、4.8、4.7、4.6、4.5、または4.4にアップグレードする。
+* 7.0 、 6.7 、または 6.5 の HTML5 vSphere Web Client にアップグレードする。
++
+
+IMPORTANT: このプラグインは、VMware vCenter Server 6.5 for Element Plug-in for VMware vCenter Server 4.6、4.7、および4.8とは互換性がありません。
+
+* 6.7 Flash vSphere Web Client にアップグレードする。
++
+
+IMPORTANT: このプラグインは、 HTML5 vSphere Web Client バージョン 6.7 U2 ビルド 13007421 および更新 2a より前にリリースされたその他の 6.7 U2 ビルド（ビルド 13643870 ）とは互換性がありません。サポートされる vSphere のバージョンの詳細については、のリリースノートを参照してください https://docs.netapp.com/us-en/vcp/rn_relatedrn_vcp.html#netapp-element-plug-in-for-vcenter-server["プラグインのバージョン"^]。
+
+
+
+.必要なもの
+* * 管理者権限 * ：プラグインをインストールするための vCenter Administrator ロールの権限があります。
+* * vSphere のアップグレード * ： NetApp Element Plug-in for vCenter Server をアップグレードする前に、必要な vCenter のアップグレードを実行しておきます。以下の手順は、 vCenter のアップグレードが完了していることを前提としています。
+* * vCenter Server * ： vCenter Plug-in バージョン 4.x が vCenter Server に登録されている。登録ユーティリティ（「 https://[management node ip: 9443 」）から「 * Registration Status * 」を選択し、必要なフィールドに入力して「 * Check Status * 」を選択し、 vCenter Plug-in がすでに登録されていること、および現在のインストールのバージョン番号を確認します。
+* * 管理サービスの更新 * ：を更新しました https://mysupport.netapp.com/site/products/all/details/mgmtservices/downloads-tab["管理サービスのバンドル"^] を最新バージョンに更新します。vCenter プラグインの更新は、 NetApp HCI のメジャー製品リリース以外でリリースされた管理サービスの更新を使用して配布されます。
+* * 管理ノードのアップグレード * ：以前に実行されていた管理ノードを実行します link:task_hcc_upgrade_management_node.html["アップグレード済み"] バージョン 11.3 以降。vCenter Plug-in 4.4 以降では、個別のサービスを提供するモジュラアーキテクチャを備えた 11.3 以降の管理ノードが必要です。管理ノードの電源をオンにして IP アドレスまたは DHCP アドレスを設定しておく必要があります。
+* * Element ストレージのアップグレード * ： NetApp Element ソフトウェア 11.3 以降を実行しているクラスタが必要です。
+* * vSphere Web Client * ：プラグインのアップグレードを開始する前に vSphere Web Client からログアウトしました。Web Client からログアウトしないと、このプロセスで行ったプラグインへの更新が認識されません。
+
+
+.手順
+. ブラウザに管理ノードの IP アドレスを入力します。登録用の TCP ポート「 https://[management node ip 」： 9443 でこのプラグインの登録ユーティリティ UI が開き、「 Manage QoSSIOC Service Credentials * 」ページが表示されます。
++
+image::vcp_registration_utility_ui_qossioc.png[は、プラグインの登録ユーティリティの UI です]
+
+. vCenter Plug-in Registration * を選択します。
++
+image::vcp_registration_utility_ui.png[は、プラグインの登録ユーティリティの UI です]
+
+. Manage vCenter Plug-in * で、 * Update Plug-in * を選択します。
+. 次の情報を確認し、必要に応じて更新します。
++
+.. プラグインを登録する vCenter サービスの IPv4 アドレスまたは FQDN 。
+.. vCenter Administrator のユーザ名。
++
+
+NOTE: vCenter Administrator ロールの権限を持つユーザのユーザ名とパスワードを入力する必要があります。
+
+.. vCenter Administrator のパスワード。
+.. （社内サーバ / ダークサイトの場合）プラグインの ZIP のカスタム URL 。
++
+
+NOTE: HTTP または HTTPS サーバ（ダークサイト）を使用している場合、または ZIP ファイル名やネットワーク設定を変更した場合は、「 * Custom URL * 」を選択して URL をカスタマイズできます。URL をカスタマイズする場合の追加の設定手順については、社内（ダークサイト）の HTTP サーバの vCenter プロパティの変更に関する Element Plug-in for vCenter Server のドキュメントを参照してください。
+
+
+
+. 「 * Update * 」を選択します。
++
+登録が完了すると、登録ユーティリティの UI にバナーが表示されます。
+
+. vSphere Web Client に vCenter Administrator としてログインします。vSphere Web Client にすでにログインしている場合は、ログアウトし、 2~3 分待ってから再度ログインする必要があります。
++
+
+NOTE: この操作により、新しいデータベースが作成され、 vSphere Web Client でのインストールが完了します。
+
+. vSphere Web Client で、タスクモニタで次のタスクが完了していることを確認します。「ダウンロードプラグイン」および「デプロイプラグイン」。
+. NetApp Element の設定および管理拡張ポイントが vSphere Web Client の * Shortcuts * タブとサイドパネルに表示されていることを確認します。
++
+image::vcp_shortcuts_page_accessing_plugin.png[は、アップグレードまたはが正常に完了したあとのプラグインの拡張ポイントを示しています をインストールします]
+
++
+[NOTE]
+====
+vCenter Plug-in のアイコンが表示されない場合は、を参照してください link:https://review.docs.netapp.com/us-en/vcp_2.19_vcp4.8_release_vcp_repo/vcp_reference_troubleshoot_vcp.html#plug-in-registration-successful-but-icons-do-not-appear-in-web-client["vCenter Server 向け Element プラグイン"^] プラグインのトラブルシューティングに関するドキュメント。
+
+VMware vCenter Server 6.7U1を使用してVCP 4.8以降にアップグレードしたあと、ストレージクラスタが表示されないか、NetApp Element 構成の「クラスタ」および「QoSSIOC設定*」のセクションにサーバエラーが表示されます。を参照してください link:https://review.docs.netapp.com/us-en/vcp_2.19_vcp4.8_release_vcp_repo/vcp_reference_troubleshoot_vcp.html#errors-after-vcp-4-8-upgrade-with-vmware-vcenter-server-6-7u1["vCenter Server 向け Element プラグイン"^] これらのエラーのトラブルシューティングに関するドキュメント。
+
+====
+. プラグインの * NetApp Element 構成 * 拡張ポイントの * バージョン情報 * タブでバージョンの変更を確認します。
++
+次のバージョンの詳細またはより新しいバージョンの詳細が表示されます。
+
+
+
+[listing]
+----
+NetApp Element Plug-in Version: 4.9
+NetApp Element Plug-in Build Number: 14
+----
+
+NOTE: vCenter Plug-in には、オンラインヘルプが用意されています。ヘルプの最新のコンテンツが読み込まれるようにするために、プラグインをアップグレードしたあとにブラウザキャッシュをクリアしてください。
+
+[discrete]
+== 詳細については、こちらをご覧ください
+
+* https://docs.netapp.com/us-en/vcp/index.html["vCenter Server 向け NetApp Element プラグイン"^]
+* https://www.netapp.com/hybrid-cloud/hci-documentation/["NetApp HCI のリソースページ"^]
+

@@ -1,0 +1,45 @@
+---
+sidebar: sidebar 
+permalink: docs/task_nde_hci_power_off_compute.html 
+summary: NetApp HCI コンピューティングノードの電源をオフにする方法について説明します。 
+keywords: netapp, hci, netapp deployment engine, deployment, vsphere 
+---
+= NetApp HCI システムのコンピューティングリソースの電源をオフにします
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ../media/
+:keywords: netapp, hci, netapp deployment engine, deployment, vsphere
+
+
+[role="lead"]
+NetApp HCI コンピューティングリソースの電源をオフにするには、個々の VMware ESXi ホストおよび VMware vCenter Server Appliance の電源を一定の順序でオフにする必要があります。
+
+.手順
+. NetApp HCI システムを制御する vCenter インスタンスにログインし、 vCenter Server Virtual Appliance （ vCSA ）をホストしている ESXi マシンを特定します。
+. vCSA を実行している ESXi ホストを特定したら、次の手順に従って、 vCSA 以外のすべての仮想マシンの電源をオフにします。
++
+.. 仮想マシンを選択します。
+.. 右クリックして、 * 電源 > ゲスト OS のシャットダウン * を選択します。
+
+
+. vCSA を実行している ESXi ホスト以外のすべての ESXi ホストの電源をオフにします。
+. vCSA の電源をオフにします。
++
+電源をオフにするまで vCSA が切断されるため、 vCenter セッションが終了します。これで、 1 台の ESXi ホストのみを電源オンにした状態ですべての仮想マシンをシャットダウンできます。
+
+. 実行中の ESXi ホストにログインします。
+. ホスト上のすべての仮想マシンの電源がオフになっていることを確認します。
+. ESXi ホストをシャットダウンします。
++
+NetApp HCI ストレージクラスタに対して開いている iSCSI セッションがすべて切断されます。
+
+
+
+[discrete]
+== 詳細については、こちらをご覧ください
+
+* https://kb.netapp.com/Advice_and_Troubleshooting/Hybrid_Cloud_Infrastructure/NetApp_HCI/Firmware_and_driver_versions_in_NetApp_HCI_and_NetApp_Element_software["NetApp HCI および NetApp Element のファームウェアとドライバのバージョン ソフトウェア"^]
+

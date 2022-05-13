@@ -1,0 +1,79 @@
+---
+sidebar: sidebar 
+permalink: docs/task_hcc_volumes.html 
+summary: Hybrid Cloud Control Volumes のページを使用して、システムのボリュームを監視できます。 
+keywords: netapp, hci, on premise, volumes, storage, access groups, initiators, capacity, data protection, QoS 
+---
+= ストレージクラスタのボリュームを監視する
+:allow-uri-read: 
+
+
+[role="lead"]
+SolidFire システムは、ボリュームを使用してストレージをプロビジョニングします。ボリュームは、 iSCSI または Fibre Channel クライアントがネットワーク経由でアクセスするブロックデバイスです。ボリュームに関連付けられているアクセスグループ、アカウント、イニシエータ、使用済み容量、 Snapshot データ保護のステータス、 iSCSI セッションの数、およびサービス品質（ QoS ）ポリシーに関する詳細を監視できます。
+
+また、アクティブボリュームと削除されたボリュームの詳細も確認できます。
+
+このビューでは、最初に使用済み容量の列を監視することを推奨します。
+
+この情報にアクセスできるのは、 NetApp Hybrid Cloud Control の管理者権限がある場合のみです。
+
+.手順
+. Webブラウザで管理ノードのIPアドレスを開きます。例：
++
+[listing]
+----
+https://<ManagementNodeIP>
+----
+. NetApp HCI ストレージクラスタ管理者のクレデンシャルを指定して NetApp Hybrid Cloud Control にログインします。
+. 左側のナビゲーション青いボックスで、 NetApp HCI のインストールを選択します。
++
+Hybrid Cloud Control Dashboard が表示されます。
+
+. 左側のナビゲーションで、クラスタを選択し、 * Storage * > * Volumes * を選択します。
++
+image::hcc_volumes_overview_active.png[HCC Volumes （ HCC ボリューム）ページ > Overview （概要）タブの画像]
+
+. Volumes （ボリューム）ページで、次のオプションを使用します。
++
+image::hcc_volumes_icons.png[HCC Volumes ページのアイコン]
+
++
+.. [ * フィルタ * （ * Filter * ） ] アイコンをクリックして、結果をフィルタ処理します。
+.. 列を非表示または表示するには、 * 非表示 / 表示 * アイコンをクリックします。
+.. [ 更新 * （ Refresh ） ] アイコンをクリックして、データを更新します。
+.. 「 * ダウンロード * 」アイコンをクリックして CSV ファイルをダウンロードします。
+
+
+. 使用済み容量の列を監視します。警告、エラー、または重大のしきい値に達すると、使用済み容量のステータスが色で示されます。
++
+.. 警告 - 黄色
+.. エラー - オレンジ
+.. Critical - 赤
+
+
+. ボリュームビューで、タブをクリックしてボリュームのその他の詳細を確認します。
++
+.. * アクセスグループ * ：イニシエータから一連のボリュームにマッピングされたボリュームアクセスグループを表示して、アクセスを保護できます。
++
+については、を参照してください link:concept_hci_volume_access_groups.html["ボリュームアクセスグループ"]。
+
+.. * アカウント * ：クライアントがノード上のボリュームに接続できるようにするユーザアカウントを表示できます。ボリュームには、作成時に特定のユーザアカウントが割り当てられます。
++
+については、を参照してください link:concept_cg_hci_accounts.html["NetApp HCI ユーザアカウント"]。
+
+.. * イニシエータ * ：ボリュームの iSCSI イニシエータ IQN または Fibre Channel WWPN を確認できます。アクセスグループに追加された各 IQN は、 CHAP 認証なしでグループ内の各ボリュームにアクセスできます。アクセスグループに追加された各 WWPN は、アクセスグループ内のボリュームへの Fibre Channel ネットワークアクセスを許可します。
+.. * QoS ポリシー * ：ボリュームに適用されている QoS ポリシーを確認できます。QoS ポリシーは、最小 IOPS 、最大 IOPS 、バースト時の IOPS の標準的な設定を複数のボリュームに適用します。
++
+については、を参照してください link:concept_hci_performance#qos-performance.html["パフォーマンスポリシーと QoS ポリシー"]。
+
+
+
+
+
+[discrete]
+== 詳細については、こちらをご覧ください
+
+* https://docs.netapp.com/us-en/element-software/index.html["SolidFire および Element のドキュメント"^]
+* https://docs.netapp.com/us-en/vcp/index.html["vCenter Server 向け NetApp Element プラグイン"^]
+* https://www.netapp.com/hybrid-cloud/hci-documentation/["NetApp HCI のリソースページ"^]
+

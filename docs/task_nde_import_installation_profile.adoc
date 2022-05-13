@@ -1,0 +1,43 @@
+---
+sidebar: sidebar 
+permalink: docs/task_nde_import_installation_profile.html 
+summary: NetApp HCI Deployment Engine ウィザードのフィールドに NetApp HCI が自動的に入力されるようにする インストールプロファイルをインポートする方法について説明します。 
+keywords: netapp, hci, deployment, compatibility, nodes, installation, profile, import, settings, auto, fill 
+---
+= インストールプロファイルをインポートします
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ../media/
+
+
+[role="lead"]
+ネットアップを入手した場合は https://configbuilder.netapp.com/["ConfigBuilder"^] 出力されたインストール環境のプロファイルは、 NetApp HCI のインストールプロセスで NetApp Deployment Engine のフィールドに自動的に入力されるようにインポートできます。これはオプションの手順です。
+
+インストールプロファイルをインポートする場合も、 NetApp Deployment Engine のクレデンシャル * ページで NetApp HCI で使用するクレデンシャルを入力する必要があります。
+
+
+NOTE: インストールプロファイルのフィールドを空白のままにするか、正しく入力しないと、 NetApp Deployment Engine のページで情報を手動で入力または修正しなければならない場合があります。情報を追加または修正する必要がある場合は、レコードおよびインストールプロファイルの情報を更新してください。
+
+.プロファイルをインポートします
+. [* インストールプロファイル * ] ページで、 [* 参照 ] をクリックしてインストールプロファイルを検索し、アップロードします。
+. ファイルダイアログで、プロファイル JSON ファイルを選択して開きます。
+. プロファイルが正常にインポートされたら、 [* Continue （続行） ] をクリックします。
++
+NetApp Deployment Engine の各ページで手順を実行して、インストールプロファイルからインポートされた設定を確認します。
+
+
+
+.プロファイルをインポートせずに続行します
+. インポート手順をスキップするには、 [* インストールプロファイル * ] ページで [* 続行 ] をクリックします。
+
+
+
+
+== 詳細については、こちらをご覧ください
+
+* https://docs.netapp.com/us-en/vcp/index.html["vCenter Server 向け NetApp Element プラグイン"^]
+* https://www.netapp.com/us/documentation/hci.aspx["NetApp HCI のリソースページ"^]
+

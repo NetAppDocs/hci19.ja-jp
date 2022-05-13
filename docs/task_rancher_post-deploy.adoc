@@ -1,0 +1,33 @@
+---
+sidebar: sidebar 
+permalink: docs/task_rancher_post-deploy.html 
+summary: NetApp HCI に Rancher をインストールした後に完了するタスクについて説明します。 
+keywords: netapp, hci, rancher, deploy, cluster, kubernetes 
+---
+= NetApp HCI の Rancher の導入後の作業を完了します
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ../media/
+
+
+[role="lead"]
+NetApp HCI に Rancher を導入したら、導入後の作業を完了して実装を成功させる必要があります。
+
+導入後、次の作業を実行できます。
+
+* link:task_rancher_trident.html["Trident を NetApp HCI に Rancher とともにインストール"]
+* link:task_rancher_load_balancing.html["ロードバランシングを設定する"]
+* link:task_rancher_resiliency.html["耐障害性を設定"]
+
+
+[discrete]
+== 詳細については、こちらをご覧ください
+
+* https://rancher.com/docs/rancher/v2.x/en/overview/architecture/["アーキテクチャに関する Rancher ドキュメント"^]
+* https://rancher.com/docs/rancher/v2.x/en/overview/concepts/["Rancher 用の Kubernetes 用語"]
+* https://docs.netapp.com/us-en/vcp/index.html["vCenter Server 向け NetApp Element プラグイン"^]
+* https://www.netapp.com/us/documentation/hci.aspx["NetApp HCI のリソースページ"^]
+

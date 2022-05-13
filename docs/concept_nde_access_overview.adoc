@@ -1,0 +1,41 @@
+---
+sidebar: sidebar 
+permalink: docs/concept_nde_access_overview.html 
+summary: 環境に応じて、いくつかの方法のいずれかを使用して NetApp HCI を導入する前に、 NetApp Deployment Engine にアクセスします。 
+keywords: netapp, hci, netapp deployment engine, deployment, engine, deploy, access 
+---
+= NetApp Deployment Engine のアクセスオプションの概要
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ../media/
+:keywords: hci, release notes, vcp, element, management services, firmware
+
+
+[role="lead"]
+NetApp HCI を導入するには、いずれかの NetApp H シリーズストレージノード上の NetApp Deployment Engine に、 Bond1G インターフェイスに割り当てられた IPv4 アドレスを使用してアクセスする必要があります。 Bond1G インターフェイスは、ストレージノードのポート A と B を組み合わせた論理インターフェイスです。このストレージノードを使用して導入プロセスを制御します。環境に応じて、 IPv4 アドレスを設定するか、またはいずれかのストレージノードから取得する必要があります。
+
+
+NOTE: NetApp Deployment Engine へのアクセスに使用できるのは、ストレージノードの Bond1G インターフェイスのみです。Bond10G インターフェイスを使用して、ストレージノードのポート C とポート D を組み合わせた論理インターフェイスはサポートされていません。
+
+NetApp Deployment Engine にアクセスするには、使用するネットワーク環境に最も近い次の方法のいずれかを使用します。
+
+|===
+| シナリオ（ Scenario ） | メソッド 
+
+
+| DHCP を使用していない | link:task_nde_access_no_dhcp.html["DHCP を使用していない環境では、 NetApp Deployment Engine にアクセスします"] 
+
+
+| 環境で DHCP を使用している | link:task_nde_access_dhcp.html["DHCP を使用している環境で NetApp Deployment Engine にアクセスします"] 
+
+
+| すべての IP アドレスを手動で割り当てる | link:task_nde_access_manual_ip.html["NetApp Deployment Engine にアクセスするには、 IP アドレスを手動で割り当ててください"] 
+|===
+[discrete]
+== 詳細については、こちらをご覧ください
+
+* link:task_nde_access_ui_fqdn.html["完全修飾ドメイン名 Web UI アクセスを設定します"^]
+

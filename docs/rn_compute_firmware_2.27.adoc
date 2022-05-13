@@ -1,0 +1,178 @@
+---
+sidebar: sidebar 
+permalink: docs/rn_compute_firmware_2.27.html 
+summary: NetApp HCI ノードにダウンロードして適用できるファームウェアパッケージのリリースノートへのリンクを入手できます。 
+keywords: netapp, hci, compute firmware 
+---
+= Compute Firmware Bundle 2.27 リリースノート
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ../media/
+:keywords: hci, release notes, vcp, element, management services, firmware
+
+
+[role="lead"]
+ダウンロード可能なコンピューティングノードファームウェアパッケージには、 BIOS と BMC の最新機能拡張、バグ修正、およびサポートされているすべての NetApp HCI コンピューティングノードに対するハードウェアサポートが含まれています。
+
+
+
+== 新機能
+
+バージョン 2.27 には一般的なバグ修正が含まれています。
+
+
+
+=== ファームウェアコンポーネントが更新されました
+
+このファームウェアパッケージには、次のファームウェアバージョンが含まれています。これらのファームウェアバージョンは、太字で更新されています。
+
+|===
+| コンポーネント | H300E 、 H500E 、 H700E の各機能をサポートします | H410C | H610C | H615C 
+
+
+| BIOS | NA2.1 | NA3.7 | * 3B03 * | *3B08. CO * 
+
+
+| BMC の場合 | 6.8400 | * 6.71.18 * | * 4.00.07 * | * 4.68.07 * 
+
+
+| NIC / Mellanox | * 14.25.1020 * | * 14.25.1020 * | * 14.25.1020 * | * 14.24.1000* 
+|===
+
+
+=== ファームウェアコンポーネントの変更
+
+以下は、新しい各ファームウェアコンポーネントの改善点と変更点の詳細です。
+
+|===
+| ノードとファームウェアコンポーネント | 改善点と変更点 
+
+
+| H300E 、 H500E 、 H700E BMC 6.84.00 | TLS 1.0 および 1.1 のサポートを無効にしました（この BMC バージョンも Compute Firmware Bundle 12.2.109 で提供されています）。 
+
+
+| H610C BIOS 3B03  a| 
+* メモリ障害の処理が改善されました
+* インテル NVM ファームウェアの最新アップデートを追加
+* RC バージョンを 602.D02 （ IPU 20.1 ）に更新
+* マイクロコードのバージョンを MCU x6906 に更新
+* SPS ME のバージョンを 04.01.04.381.0 に更新
+* AC 電源喪失時の * リストアおよび * 現在のリストアを削除 AC Power Loss * BIOS セットアップオプション
+
+
+
+
+| H615C BIOS 3B080.CO  a| 
+* メモリ障害の処理が改善されました
+* インテル NVM ファームウェアの最新アップデートを追加
+* マイクロコードのバージョンを MCU x2F01 に更新
+* RC バージョンを 602.D02 （ IPU 20.1 ）に更新
+* SPS ME のバージョンを 04.01.04.381.0 に更新
+* AC 電源喪失時の * リストアおよび * 現在のリストアを削除 AC Power Loss * BIOS セットアップオプション
+* オプション * Attempt Fast Cold Boot * のデフォルト値をに変更しました 「不可能」
+* [ 修正可能を許可する *] オプションのデフォルト値を [ 有効 ] に変更しました
+
+
+
+
+| H410C BMC 6.71.18 | ePPR メモリ SEL イベントの BMC レポートを追加します 
+
+
+| H610C BMC 4.00.07 | リモート syslog サポートを追加します 
+
+
+| H615C BMC 4.68.07 | リモート syslog サポートを追加します 
+|===
+
+
+=== Mellanox NIC ファームウェアドライバの互換性
+
+Mellanox ファームウェアのバージョン 14.25.1020 および 14.24.1000 の更新版は、次のバージョンの VMware ESXi ドライバとのみ互換性があります。
+
+* * ESXi 7.0 * ： H300E / H500E / H700E / H410C ：バージョン 4.19.16.1
+* * ESXi 7.0 * ： H610C / H615C ：バージョン 4.17.15.16
+* * ESXi 6.7 * ：バージョン 4.17.15.16
+* * ESXi 6.5 * ：バージョン 4.16.13.5
+
+
+
+NOTE: バージョン 2.27 にアップグレードする前に、 ESXi ドライバの現在のバージョンを確認します。ドライバが最新でない場合は、まずドライバをアップグレードします。次に、コンピューティングノードのコンピューティングファームウェアをバージョン 2.27 にアップグレードします。にアクセスします link:task_hcc_upgrade_compute_node_drivers.html["コンピューティングノードのドライバを更新"^] ESXi ドライバを含むコンピューティングノードのドライバを更新する手順については、を参照してください。
+
+NetApp Deployment Engine 1.8P1 では ESXi バージョン 7.0 は導入されませんが、 ESXi 7.0 はセルフインストールオプションまたは手動アップグレードオプションとしてサポートされます。ホスト OS を手動でインストールまたはアップグレードする場合、ネットアップはこれらの OS のドライバとファームウェアを制御できません。
+
+
+
+== Compute Firmware Bundle 2.27 をダウンロードします
+
+Compute Firmware Bundle をダウンロードするには、にアクセスします https://mysupport.netapp.com/site/products/all/details/netapp-hci/downloads-tab/download/62542/Compute_Firmware_Bundle["NetApp HCI Compute Firmware Bundle の略"^] ページ
+
+にアクセスします link:task_hcc_upgrade_compute_node_firmware.html#use-the-baseboard-management-controller-bmc-user-interface-ui["コンピューティングノードのファームウェアを更新します"^] コンピューティングノードのファームウェアを更新する手順については、を参照してください。
+
+
+
+== 解決済みの問題
+
+ここでは、このリリースで解決された問題を示します。
+
+|===
+| 問題 | 説明 
+
+
+| CSD-3321/CSESF-129 | BMC がハングし、「 BMC Self Test Failed 」というエラーでアクセスできなくなることがあります。この問題は、 H610C BMC 4.00.07 および H615C BMC 4.68.07 で解決されました。 
+
+
+| CSESF-234 | H610C BMC Web UI インベントリ API が誤ったメモリのシリアル番号形式を返します。この問題は、 H610C BMC 4.00.07 で解決されました。 
+
+
+| PE-6708 | ボンディングされた NIC ペアは、 NIC がダウンしたり、ポートが無効になったりしても、セカンダリにフェイルオーバーしません。この問題は、 Mellanox ファームウェア 14.24.1000 で解決されています。 
+|===
+
+
+== 既知の問題
+
+次の表に、このリリースの既知の問題のうち、一部の環境で日常の運用に影響する可能性があるものを示します。
+
+|===
+| 問題 | 説明 | 回避策 
+
+
+| CSESF-295 | ダウンロード可能なファームウェアパッケージを使用して H410C ノードのファームウェアを更新すると、コンピューティングノードのファームウェアの更新プロセスが BIOS 更新エラーで失敗します。  a| 
+BIOS を H410C ノードのバージョン NA3.7 に手動で更新します。
+
+. を参照します https://mysupport.netapp.com/site/products/all/details/netapp-hci/downloads-tab["NetApp HCI のダウンロードページ"^]。
+. ドロップダウンリストテキストフィールドに「 H410C _ BIOS_3.7 」と入力します。
+. [Go*] をクリックします。更新手順は、ダウンロードページに PDF 形式で記載されています。
+
+
+BIOS および BMC を更新したら、コンピューティングファームウェアバンドル 2.27 パッケージを使用して H410C ノードのファームウェアを更新します。
+
+
+
+| CSESF-328 | H410C ノードおよび H300E / H500E / H700E ノードで、 BMC の Mellanox NIC 用の 1 つの NIC センサーがステータスが「 NA 」と報告され、「 Not Present 」と報告されます。 | なし 
+
+
+| CSESF-309 | VMware EXSi 6.7u1 の実行時に H410C ノードと H300E / H500E / H700E ノードでポートを手動で停止したあとに、 Mellanox NIC ポートを起動できない。 | ポート esxcli network nic set -n vmnic2-a をリカバリするには、次のコマンドを実行します 
+
+
+| CSESF-303 | ネットワーク統計エラーは、 H410C ノードの Mellanox NIC について表示されます。 | なし 
+
+
+| CSESF-293/PE-10130 | Mellanox NIC ファームウェアは、 Compute Firmware Bundle バージョン 2.27 にアップグレードした後、 Bootstrap OS によってダウングレードできます。 | Compute Firmware Bundle バージョン 2.27 を再インストールします。 
+
+
+| PE-11033 | 負荷が高い状況では、想定される vmnic0 リンクメッセージが H615C ノードログファイルに表示されないことがあります。 | なし 
+
+
+| PE-11032 | 負荷が高い状況では、 H610C ノード上の Mellanox NIC で送信エラーが発生する場合があります。 | なし 
+
+
+| PE-10954 | Element ソフトウェアのターミナルユーザインターフェイス（ TUI ）を使用して MTU を設定したあとで、 H610C ノードの MTU 設定が正しくない場合があります。 | なし 
+|===
+[discrete]
+== 詳細については、こちらをご覧ください
+
+* https://kb.netapp.com/Advice_and_Troubleshooting/Hybrid_Cloud_Infrastructure/NetApp_HCI/Firmware_and_driver_versions_in_NetApp_HCI_and_NetApp_Element_software["NetApp HCI および NetApp Element のファームウェアとドライバのバージョン ソフトウェア"^]
+

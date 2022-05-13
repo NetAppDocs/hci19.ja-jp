@@ -1,0 +1,140 @@
+---
+sidebar: sidebar 
+permalink: docs/task_nde_supported_net_changes.html 
+summary: NetApp HCI の導入後に実行する必要がある導入後のタスクについて説明します。 
+keywords: netapp, hci, deployment, review, deploy 
+---
+= サポートされるネットワーク変更
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ../media/
+
+
+[role="lead"]
+NetApp HCI を導入したあとは、デフォルトのネットワーク設定に限定的な変更を加えることができます。ただし、円滑な運用と適切なネットワーク検出のために必要な設定もあります。これらの設定を変更すると予期しない動作が発生し、コンピューティングリソースとストレージリソースを拡張できなくなる可能性があります。
+
+システムの導入後、使用するネットワークの要件に応じて、 VMware vSphere のデフォルトのネットワーク構成を次の点で変更できます。
+
+* vSwitch の名前を変更します
+* ポートグループ名を変更します
+* ポートグループを追加および削除します
+* 追加のポートの vmnic インターフェイスのフェイルオーバー順序を変更します 追加したグループ
+
+
+
+
+== H300E 、 H500E 、 H700E 、 H410C の各コンピューティングノード
+
+NetApp HCI は、 H300E 、 H500E 、 H700E 、 H410C の各ノードについて、次のネットワーク構成をサポートします。
+
+VMware vSphere Distributed Switch （ VDS ）で 6 つのインターフェイスを使用する構成を次に示します。この構成は、 VMware vSphere Distributed Switch でのみサポートされ、 VMware vSphere Enterprise Plus ライセンスが必要です。
+
+|===
+| ネットワーク機能 | VMkernel | vmnic （物理インターフェイス） 
+
+
+| 管理 | vmk0 | vmnic2 （ポート A ）、 vmnic3 （ポート B ） 
+
+
+| iSCSI-A | vmk1 | vmnic5 （ポート E ） 
+
+
+| iSCSI-B | vmk2. | vmnic1 （ポート D ） 
+
+
+| vMotion | vmk3. | vmnic4 （ポート C ）、 vmnic0 （ポート F ） 
+|===
+VMware vSphere Standard Switch （ VSS ）で 6 つのインターフェイスを使用する構成を次に示します。この構成では、 VMware vSphere Standard Switch （ VSS ）を使用します。
+
+|===
+| ネットワーク機能 | VMkernel | vmnic （物理インターフェイス） 
+
+
+| 管理 | vmk0 | vmnic2 （ポート A ）、 vmnic3 （ポート B ） 
+
+
+| iSCSI-A | vmk2. | vmnic1 （ポート E ） 
+
+
+| iSCSI-B | vmk3. | vmnic5 （ポート D ） 
+
+
+| vMotion | vmk1 | vmnic4 （ポート C ）、 vmnic0 （ポート F ） 
+|===
+2 つのインターフェイスを使用する構成を次に示します。この構成は、 VMware vSphere Distributed Switch （ VDS ）でのみサポートされ、 VMware vSphere Enterprise Plus ライセンスが必要です。
+
+|===
+| ネットワーク機能 | VMkernel | vmnic （物理インターフェイス） 
+
+
+| 管理 | vmk0 | vmnic1 （ポート D ）、 vmnic5 （ポート E ） 
+
+
+| iSCSI-A | vmk1 | vmnic1 （ポート E ） 
+
+
+| iSCSI-B | vmk2. | vmnic5 （ポート D ） 
+
+
+| vMotion | vmk3. | vmnic1 （ポート C ）、 vmnic5 （ポート F ） 
+|===
+
+
+== H610C コンピューティングノード
+
+NetApp HCI は、 H610C ノードについて次のネットワーク構成をサポートします。
+
+この構成は、 VMware vSphere Distributed Switch （ VDS ）でのみサポートされ、 VMware vSphere Enterprise Plus ライセンスが必要です。
+
+
+NOTE: H610C ではポート A とポート B は使用されません。
+
+|===
+| ネットワーク機能 | VMkernel | vmnic （物理インターフェイス） 
+
+
+| 管理 | vmk0 | vmnic2 （ポート C ）、 vmnic3 （ポート D ） 
+
+
+| iSCSI-A | vmk1 | vmnic3 （ポート D ） 
+
+
+| iSCSI-B | vmk2. | vmnic2 （ポート C ） 
+
+
+| vMotion | vmk3. | vmnic2 （ポート C ）、 vmnic3 （ポート D ） 
+|===
+
+
+== H615C コンピューティングノード
+
+NetApp HCI は H615C ノードのネットワーク構成を以下に示します。
+
+この構成は、 VMware vSphere Distributed Switch （ VDS ）でのみサポートされ、 VMware vSphere Enterprise Plus ライセンスが必要です。
+
+|===
+| ネットワーク機能 | VMkernel | vmnic （物理インターフェイス） 
+
+
+| 管理 | vmk0 | vmnic0 （ポート A ）、 vmnic1 （ポート B ） 
+
+
+| iSCSI-A | vmk1 | vmnic0 （ポート B ） 
+
+
+| iSCSI-B | vmk2. | vmnic1 （ポート A ） 
+
+
+| vMotion | vmk3. | vmnic0 （ポート A ）、 vmnic1 （ポート B ） 
+|===
+
+
+== 詳細については、こちらをご覧ください
+
+* https://docs.netapp.com/us-en/vcp/index.html["vCenter Server 向け NetApp Element プラグイン"^]
+* https://www.netapp.com/us/documentation/hci.aspx["NetApp HCI のリソースページ"^]
+* https://docs.netapp.com/us-en/element-software/index.html["SolidFire および Element ソフトウェアのドキュメント"^]
+

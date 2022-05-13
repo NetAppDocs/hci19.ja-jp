@@ -1,0 +1,36 @@
+---
+sidebar: sidebar 
+permalink: docs/concept_hci_volume_access_groups.html 
+summary: ボリュームアクセスグループの概要と、グループを使用してボリュームにアクセスして管理する方法について説明します。 
+keywords: netapp, hci, storage volume, solidfire volume, element volume, persistent volume, access group 
+---
+= ボリュームアクセスグループ
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ../media/
+
+
+[role="lead"]
+ボリュームアクセスグループは、ユーザが iSCSI イニシエータまたは Fibre Channel イニシエータを使用してアクセスできるボリュームの集まりです。
+
+ボリュームアクセスグループを作成して使用することで、一連のボリュームへのアクセスを制御できます。一連のボリュームと一連のイニシエータをボリュームアクセスグループに関連付けると、アクセスグループはそれらのイニシエータにそのボリュームセットへのアクセスを許可します。
+
+ボリュームアクセスグループには次の制限があります。
+
+* ボリュームアクセスグループあたり最大 128 個のイニシエータ
+* ボリュームあたり最大 64 個のアクセスグループ。
+* 1 つのアクセスグループに含めることができるボリュームは最大 2 、 000 個です。
+* 1 つの IQN または WWPN が属することのできるボリュームアクセスグループは 1 つだけです。
+
+
+
+
+== 詳細については、こちらをご覧ください
+
+* link:task_hcc_manage_vol_access_groups.html["ボリュームアクセスグループを管理します"^]
+* https://docs.netapp.com/us-en/vcp/index.html["vCenter Server 向け NetApp Element プラグイン"^]
+* http://docs.netapp.com/sfe-122/index.jsp["SolidFire と Element ソフトウェアドキュメントセンター"^]
+

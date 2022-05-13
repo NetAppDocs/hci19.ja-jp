@@ -1,0 +1,55 @@
+---
+sidebar: sidebar 
+permalink: docs/concept_cg_hci_licensing.html 
+summary: NetApp HCI を使用する場合は、追加のライセンスが必要になることがあります。 
+keywords: netapp, hci, license 
+---
+= NetApp HCI ライセンス
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ../media/
+
+
+[role="lead"]
+NetApp HCI を使用する場合、使用する内容によっては追加のライセンスが必要になることがあります。
+
+
+
+== NetApp HCI と VMware vSphere のライセンス
+
+VMware vSphere のライセンスは、構成によって異なります。
+
+[cols="25,75"]
+|===
+| ネットワークオプション | ライセンス 
+
+
+| オプション A ：ケーブル 2 本で VLAN タギングを使用（すべてのコンピューティングノード） | vSphere Distributed Switch を使用する必要があります。これには VMware vSphere Enterprise Plus ライセンスが必要です。 
+
+
+| オプション B ：タグ付き VLAN を使用するコンピューティングノード用ケーブル 6 本（ H410C 2RU 4 ノードコンピューティングノード） | この構成では、 vSphere Standard Switch がデフォルトとして使用されます。vSphere Distributed Switch をオプションで使用するには、 VMware Enterprise Plus ライセンスが必要です。 
+
+
+| オプション C ：ネイティブ VLAN とタグ付き VLAN を使用するコンピューティングノード用ケーブル × 6 （ H410C 、 2RU 、 4 ノードコンピューティングノード） | この構成では、 vSphere Standard Switch がデフォルトとして使用されます。vSphere Distributed Switch をオプションで使用するには、 VMware Enterprise Plus ライセンスが必要です。 
+|===
+
+
+== NetApp HCI と ONTAP Select のライセンス
+
+購入した NetApp HCI システムと組み合わせて使用する ONTAP Select のバージョンを提供している場合は、次の制限事項が追加で適用されます。
+
+* NetApp HCI システム販売にバンドルされている ONTAP Select ライセンスは、 NetApp HCI コンピューティングノードと組み合わせてのみ使用できます。
+* 対象となる ONTAP Select インスタンスのストレージは、 NetApp HCI ストレージノード上にのみ存在する必要があります。
+* サードパーティ製コンピューティングノードやサードパーティ製ストレージノードの使用は禁止されています。
+
+
+
+
+== 詳細については、こちらをご覧ください
+
+* https://docs.netapp.com/us-en/vcp/index.html["vCenter Server 向け NetApp Element プラグイン"^]
+* http://docs.netapp.com/sfe-122/index.jsp["SolidFire と Element ソフトウェアドキュメントセンター"^]
+

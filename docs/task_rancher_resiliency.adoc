@@ -1,0 +1,31 @@
+---
+sidebar: sidebar 
+permalink: docs/task_rancher_resiliency.html 
+summary: NetApp HCI に Rancher をインストールしたあと、耐障害性を最適化するために VM の配置を設定する方法について説明します。 
+keywords: netapp, hci, Rancher, install, resiliency, vm, affinity 
+---
+= 耐障害性を設定
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ../media/
+
+
+[role="lead"]
+NetApp HCI に Rancher をインストールした後、仮想マシンの配置を最適な復元力に設定する方法について説明します。
+
+次の点に関して耐障害性を考慮してください。
+
+* 負荷分散またはラウンドロビンプロキシを設定すると、管理クラスタの耐障害性が向上します。
+* ユーザクラスタの場合は、ユーザクラスタをどのように設定するかに応じて、耐障害性をセットアップできます。
+
+
+[discrete]
+== 詳細については、こちらをご覧ください
+
+* https://rancher.com/docs/rancher/v2.x/en/overview/architecture/["アーキテクチャに関する Rancher ドキュメント"^]
+* https://rancher.com/docs/rancher/v2.x/en/overview/concepts/["Rancher 用の Kubernetes 用語"]
+* https://www.netapp.com/us/documentation/hci.aspx["NetApp HCI のリソースページ"^]
+

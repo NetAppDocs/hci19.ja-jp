@@ -1,0 +1,48 @@
+---
+sidebar: sidebar 
+permalink: docs/concept_nde_hci_power_off_on.html 
+summary: NetApp HCI の導入時に VMware vSphere を設定する方法について説明します。 
+keywords: netapp, hci, netapp deployment engine, deployment, vsphere 
+---
+= NetApp HCI システムの電源オン / オフを切り替えます
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ../media/
+:keywords: netapp, hci, netapp deployment engine, deployment, vsphere
+
+
+[role="lead"]
+システム停止が予定されている場合、ハードウェアのメンテナンスを実施する必要がある場合、またはシステムの拡張が必要な場合は、 NetApp HCI システムの電源をオフにしたり、オンにしたりできます。必要に応じて、次のタスクを実行して、 NetApp HCI システムの電源をオフにしたり、オンにしたりします。
+
+NetApp HCI システムの電源をオフにする状況としては、次のようなケースが考えられます。
+
+* スケジュールされたシステム停止
+* シャーシのファンの交換
+* ファームウェアのアップグレード
+* ストレージリソースまたはコンピューティングリソースの拡張
+
+
+NetApp HCI システムの電源をオフにするために必要な作業の概要を次に示します。
+
+* VMware vCenter Server （ vCSA ）を除くすべての仮想マシンの電源をオフにします。
+* vCSA をホストしているサーバ以外のすべての ESXi サーバの電源をオフにします。
+* vCSA の電源をオフにします。
+* NetApp HCI ストレージシステムの電源をオフにします。
+
+
+NetApp HCI システムの電源をオンにするために必要な作業の概要を次に示します。
+
+* すべての物理ストレージノードの電源をオンにします。
+* すべての物理コンピューティングノードの電源をオンにします。
+* vCSA の電源をオンにします。
+* システムを確認し、追加の仮想マシンの電源をオンにします。
+
+
+[discrete]
+== 詳細については、こちらをご覧ください
+
+* https://kb.netapp.com/Advice_and_Troubleshooting/Hybrid_Cloud_Infrastructure/NetApp_HCI/Firmware_and_driver_versions_in_NetApp_HCI_and_NetApp_Element_software["NetApp HCI および NetApp Element のファームウェアとドライバのバージョン ソフトウェア"^]
+

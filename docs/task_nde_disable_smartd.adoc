@@ -1,0 +1,42 @@
+---
+sidebar: sidebar 
+permalink: docs/task_nde_disable_smartd.html 
+summary: 'NetApp HCI の導入後にコンピューティングノードの「 martd" 」サービスを無効にする方法について説明します。' 
+keywords: netapp, hci, netapp deployment engine, deployment, vsphere, ESXi, compute, smartd, polling 
+---
+= NetApp HCI コンピューティングノードで smartd サービスを無効にします
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ../media/
+:keywords: netapp, hci, netapp deployment engine, deployment, vsphere
+
+
+[role="lead"]
+デフォルトでは 'martd' サービスは ' コンピューティング・ノード内のドライブを定期的にポーリングしますNetApp HCI を導入したあとに、すべてのコンピューティングノードでこのサービスを無効にする必要があります。
+
+.手順
+. SSH またはローカルコンソールセッションを使用して、コンピューティングノード上の VMware ESXi に root クレデンシャルを使用してログインします。
+. ランニングの「 martd 」サービスを停止します。
++
+[listing]
+----
+/etc/init.d/smartd stop
+----
+. 起動時に 'martd' サービスが開始されないようにします
++
+[listing]
+----
+chkconfig smartd off
+----
+. 環境内の残りのコンピューティングノードについて、上記の手順を繰り返します。
+
+
+[discrete]
+== 詳細については、こちらをご覧ください
+
+* https://kb.netapp.com/Advice_and_Troubleshooting/Flash_Storage/SF_Series/SolidFire%3A_Turning_off_smartd_on_the_ESXi_hosts_makes_the_cmd_0x85_and_subsequent_%22state_in_doubt%22_messages_stop["VMware ESXi でスマートサービスをオフにします"^]
+* https://kb.vmware.com/s/article/2133286["VMware の技術情報アーティクル 2133286"^]
+

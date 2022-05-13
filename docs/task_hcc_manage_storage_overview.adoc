@@ -1,0 +1,27 @@
+---
+sidebar: sidebar 
+permalink: docs/task_hcc_manage_storage_overview.html 
+summary: NetApp HCI では、 NetApp Hybrid Cloud Control を使用してストレージアセットを管理できます。 
+keywords: netapp, hci, on premise, cluster, element, account, user, volume, hybrid cloud control, hcc 
+---
+= Manage NetApp HCI storage の概要を参照してください
+:allow-uri-read: 
+
+
+[role="lead"]
+NetApp HCI では、 NetApp Hybrid Cloud Control を使用してこれらのストレージアセットを管理できます。
+
+* link:task_hcc_manage_accounts.html["ユーザアカウントを作成および管理します"]
+* link:task_hcc_manage_storage_clusters.html["ストレージクラスタを追加および管理する"]
+* link:task_hcc_manage_vol_management.html["ボリュームを作成および管理する"]
+* link:task_hcc_manage_vol_access_groups.html["ボリュームアクセスグループを作成および管理します"]
+* link:task_hcc_manage_initiators.html["イニシエータを作成および管理する"]
+* link:task_hcc_qos_policies.html["ボリュームの QoS ポリシーの作成と管理"]
+
+
+[discrete]
+== 詳細については、こちらをご覧ください
+
+* https://docs.netapp.com/us-en/vcp/index.html["vCenter Server 向け NetApp Element プラグイン"^]
+* https://www.netapp.com/hybrid-cloud/hci-documentation/["NetApp HCI のリソースページ"^]
+

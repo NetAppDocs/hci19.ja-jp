@@ -1,0 +1,84 @@
+---
+sidebar: sidebar 
+permalink: docs/concept_rancher_product_overview.html 
+summary: NetApp HCI に Rancher を導入すると、 Rancher コントロールプレーン（ Rancher サーバとも呼ばれます）が導入されるため、オンプレミスの Kubernetes クラスタを作成できます。 
+keywords: netapp, hci, rancher, architecture, kubernetes, cluster 
+---
+= NetApp HCI の Rancher の概要
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ../media/
+
+
+[role="lead"]
+Rancher は、チームがコンテナを採用するための完全なソフトウェアスタックです。Rancher は、さまざまなインフラにわたって複数の Kubernetes クラスタを管理することによる運用上の課題とセキュリティ上の課題に対処しながら、 DevOps チームにコンテナ化されたワークロードを実行するための統合ツールを提供しています。
+
+NetApp HCI に Rancher を導入すると、 Rancher コントロールプレーン（ _rancher server__ とも呼ばれます）が導入され、オンプレミスの Kubernetes クラスタを作成できます。Rancher コントロールプレーンを導入するには、 NetApp Hybrid Cloud Control を使用します。
+
+導入後、 Rancher コントロールプレーンを使用して、開発チームと運用チームが使用する Kubernetes クラスタをプロビジョニング、管理、監視します。開発チームと運用チームは、 Rancher を使用して、 NetApp HCI 自体、パブリッククラウドプロバイダ、またはランチ元となるその他のインフラ上に存在するユーザクラスタに対してアクティビティを実行できます。
+
+
+
+== NetApp HCI の Rancher の利点
+
+* インストールの容易さ： Rancher のインストールおよび設定方法を習得する必要はありません。NetApp HCI と Rancher が共同で開発したテンプレートベースの実装を展開できます。
+* ライフサイクル管理：手動ランチサーバの実装では、ランチサーバアプリケーションまたは Rancher Kubernetes Engine （ RKE ）クラスタのアップデートは自動化されません。NetApp HCI の Rancher は、 Rancher サーバおよび RKE を含む管理クラスタのアップデート機能を提供します。
+
+
+
+
+== NetApp HCI のランチマーでできること
+
+NetApp HCI のランチマーを使用すると、次のことが可能になります。
+
+* クラウドプロバイダとプライベートクラウドにまたがってサービスを導入できます。
+* サービスレベル契約に違反せずに、クラウドの場所に関係なくハイブリッドクラウドアーキテクチャ全体でアプリとデータを移植できます。
+* クラウドネイティブなアプリケーションを自分でスピンアップする。
+* 複数のクラスタ（新規および既存）の一元管理。
+* Kubernetes ベースのハイブリッドクラウドアプリケーションのオーケストレーションを実行
+
+
+
+
+== テクニカルサポートオプション
+
+NetApp HCI と Kubernetes オープンソースソフトウェアで Rancher を使用すれば、無償での導入と使用が可能ライセンスキーは必要ありません。
+
+ネットアップの Rancher サポートオプションを選択して、コアベースのエンタープライズサポートを入手できます。
+
+
+NOTE: Rancher サポートは、ネットアップサポートエッジ契約には含まれていません。オプションについては、ネットアップの営業担当者または代理店にお問い合わせください。ネットアップから Rancher サポートを購入された場合は、手順が記載された E メールをお送りします。
+
+
+
+== NetApp HCI のアーキテクチャとコンポーネントに関する Rancher
+
+次に、 NetApp HCI の Rancher のさまざまなコンポーネントの概要を示します。
+
+image::rancher_architecture_diagram1.png[NetApp HCI アーキテクチャの Rancher]
+
+* * NetApp Hybrid Cloud Control * ：このインターフェイスを使用すると、 NetApp HCI のランチャに必要な NetApp HCI および NetApp Element ソフトウェアにランチャを導入できます。
++
+
+TIP: NetApp Hybrid Cloud Control を使用して、管理サービスのアップグレード、システムの拡張、ログの収集、インストール環境の監視も行うことができます。
+
+* * 管理サービス * ：管理サービスは管理ノードで実行され、ネットアップハイブリッドクラウド制御を使用して NetApp HCI にランチャを導入できます。
+* * 管理クラスタ * ： NetApp HCI の Rancher は、 Rancher 管理クラスタ上に 3 つの仮想マシンを導入しています。このクラスタでは、 NetApp Hybrid Cloud Control 、 vCenter Server 、または Rancher ユーザインターフェイスを使用して確認できます。管理クラスタの仮想マシンは、 Rancher サーバ、 Rancher Kubernetes Engine （ RKE ）、および Linux OS をホストします。
+
+
+
+TIP: 最高のパフォーマンスとセキュリティを実現するために、ランチサーバ管理サーバ専用の Kubernetes クラスタを使用することを検討してください。管理クラスタではユーザワークロードを実行しないでください。
+
+* * ユーザクラスタ * ：下流の Kubernetes ユーザクラスタでは、アプリケーションとサービスを実行します。Rancher から展開するクラスタ、または Rancher にインポートするクラスタは、ユーザクラスタです。
+* * Trident * ： Trident カタログは、 NetApp HCI の Rancher で利用でき、ユーザクラスタで実行されます。このカタログが含まれているため、ユーザクラスタへの Trident の導入が簡単になります。
+
+
+[discrete]
+== 詳細については、こちらをご覧ください
+
+* https://rancher.com/docs/rancher/v2.x/en/overview/architecture/["アーキテクチャに関する Rancher ドキュメント"^]
+* https://www.netapp.com/us/documentation/hci.aspx["NetApp HCI のリソースページ"^]
+

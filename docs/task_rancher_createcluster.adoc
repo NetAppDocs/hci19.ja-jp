@@ -1,0 +1,40 @@
+---
+sidebar: sidebar 
+permalink: docs/task_rancher_createcluster.html 
+summary: Rancher の導入後、 Rancher UI を使用して Kubernetes ユーザクラスタを作成できます。 
+keywords: netapp, hci, rancher, kubernetes clusters, create cluster 
+---
+= ユーザクラスタを作成
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ../media/
+
+
+[role="lead"]
+Rancher の導入後、 Rancher UI を使用して Kubernetes ユーザクラスタを作成できます。さまざまな Kubernetes プロバイダ（ Google Kubernetes Engine など）がホストするクラスタを作成することも、 Rancher の Kubernetes インストーラである Rancher Kubernetes Engine （ RKE ）を使用することもできます。
+
+
+TIP: クラスタ作成の要件の詳細については、を参照してください https://rancher.com/docs/rancher/v2.x/en/cluster-provisioning/["Rancher の文書"^]。
+
+.必要なもの
+* NetApp HCI に Rancher をインストールしておきます。
+* 必要な静的 IP アドレスがある。各ユーザクラスタには、 3 つの静的 IP アドレスが必要です。
+* に記載されている要件を確認しておきます https://rancher.com/docs/rancher/v2.x/en/cluster-provisioning/["Rancher の文書"^]。
+
+
+.手順
+. NetApp Hybrid Cloud Control で、ランチシートの導入の最後に表示された URL を選択します。
+. Rancher UI で、ユーザクラスタを作成します。
+
+
+[discrete]
+== 詳細については、こちらをご覧ください
+
+* https://rancher.com/docs/rancher/v2.x/en/overview/architecture/["アーキテクチャに関する Rancher ドキュメント"^]
+* https://rancher.com/docs/rancher/v2.x/en/overview/concepts/["Rancher 用の Kubernetes 用語"]
+* https://docs.netapp.com/us-en/vcp/index.html["vCenter Server 向け NetApp Element プラグイン"^]
+* https://www.netapp.com/us/documentation/hci.aspx["NetApp HCI のリソースページ"^]
+

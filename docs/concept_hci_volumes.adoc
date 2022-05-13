@@ -1,0 +1,43 @@
+---
+sidebar: sidebar 
+permalink: docs/concept_hci_volumes.html 
+summary: ボリューム 
+keywords: netapp, hci, storage volume, solidfire volume, element volume, persistent volume 
+---
+= 個のボリューム
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ../media/
+
+
+[role="lead"]
+ストレージは、 NetApp Element システムではボリュームとしてプロビジョニングされます。ボリュームは、 iSCSI または Fibre Channel クライアントを使用してネットワーク経由でアクセスされるブロックデバイスです。
+
+NetApp Element Plug-in for vCenter Server では、ユーザアカウントのボリュームを作成、表示、編集、削除、クローニング、バックアップ、リストアすることができます。また、クラスタ上の各ボリュームの管理や、ボリュームアクセスグループのボリュームの追加と削除も可能です。
+
+
+
+== 永続ボリューム
+
+永続ボリュームを使用すると、管理ノードの設定データをローカルな VM ではなく指定したストレージクラスタに格納できるため、管理ノードが失われた場合や削除された場合でもデータを保持することができます。永続ボリュームは、オプションでありながら推奨される管理ノード設定です。
+
+NetApp Deployment Engine を使用して NetApp HCI の管理ノードを導入する場合、永続ボリュームは自動的に有効化されて設定されます。
+
+永続ボリュームを有効にするオプションは、新しい管理ノードの導入時のインストールスクリプトとアップグレードスクリプトに含まれています。永続ボリュームは Element ソフトウェアベースのストレージクラスタ上のボリュームであり、ホスト管理ノード VM のノード設定情報が VM が使用されなくなったあとも格納されます。管理ノードが失われた場合は、交換用の管理ノード VM を再接続して失われた VM の設定データをリカバリできます。
+
+インストールまたはアップグレード時に永続ボリューム機能を有効にすると、割り当てられたクラスタ上の名前に適用された名前の付いた複数のボリュームが自動的に作成されます。これらのボリュームは、 Element ソフトウェアベースのボリュームと同様に、 Element ソフトウェア Web UI 、 NetApp Element Plug-in for vCenter Server 、または API を使用して表示できます。リカバリに使用できる現在の設定データを保持するためには、永続ボリュームが管理ノードに iSCSI 接続された状態で稼働している必要があります。
+
+
+NOTE: 管理サービスに関連付けられた永続ボリュームが作成され、インストールまたはアップグレード時に新しいアカウントに割り当てられます。永続ボリュームを使用している場合は、ボリュームや関連付けられているアカウントを変更または削除しないでください
+
+
+
+== 詳細については、こちらをご覧ください
+
+* link:hci_task_manage_vol_management.html["ボリュームを管理します"]
+* https://docs.netapp.com/us-en/vcp/index.html["vCenter Server 向け NetApp Element プラグイン"^]
+* http://docs.netapp.com/sfe-122/index.jsp["SolidFire と Element ソフトウェアドキュメントセンター"^]
+

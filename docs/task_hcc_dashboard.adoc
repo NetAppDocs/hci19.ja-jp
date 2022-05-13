@@ -1,0 +1,184 @@
+---
+sidebar: sidebar 
+permalink: docs/task_hcc_dashboard.html 
+summary: ストレージリソースとコンピューティングリソースは、 NetApp Hybrid Cloud Control Dashboard で確認できます。また、ストレージ容量、ストレージパフォーマンス、コンピューティング利用率も監視できます。 
+keywords: netapp, hci, on premise, hcc, hybrid cloud control, storage, compute, storage performance, utilization, capacity 
+---
+= Hybrid Cloud Control でストレージリソースとコンピューティングリソースを監視します ダッシュボード
+:allow-uri-read: 
+
+
+[role="lead"]
+NetApp Hybrid Cloud Control のダッシュボードでは、すべてのストレージリソースとコンピューティングリソースを一目で確認できます。また、ストレージ容量、ストレージパフォーマンス、コンピューティング利用率も監視できます。
+
+
+NOTE: 新しい NetApp Hybrid Cloud Control セッションを初めて起動したときに、管理ノードで複数のクラスタを管理しているときに NetApp Hybrid Cloud Control のダッシュボードビューのロードに時間がかかることがあります。ロードにかかる時間は、管理ノードでアクティブに管理されているクラスタの数によって異なります。その後の起動では、読み込み時間が短縮されます。
+
+Hybrid Cloud Control Dashboard には、管理対象のコンピューティングノードと、 H シリーズハードウェアに管理対象ノードが少なくとも 1 つ含まれているクラスタだけが表示されます。
+
+* <<Access the NetApp HCC Dashboard>>
+* <<Monitor storage resources>>
+* <<Monitor compute resources>>
+* <<Monitor storage capacity>>
+* <<Monitor storage performance>>
+* <<Monitor compute utilization>>
+
+
+
+
+== NetApp HCC ダッシュボードにアクセスします
+
+. Webブラウザで管理ノードのIPアドレスを開きます。例：
++
+[listing]
+----
+https://<ManagementNodeIP>
+----
+. NetApp HCI ストレージクラスタ管理者のクレデンシャルを指定して NetApp Hybrid Cloud Control にログインします。
+. Hybrid Cloud Control Dashboard を表示します。
++
+image::hcc_dashboard_all.png[HCC ダッシュボード]
+
+
+
+
+TIP: インストール環境によっては、これらのペインの一部またはすべてが表示されます。たとえば、ストレージのみのインストールの場合、 Hybrid Cloud Control Dashboard には、 Storage ペイン、 Storage Capacity ペイン、および Storage Performance ペインのみが表示されます。
+
+
+
+== ストレージリソースを監視する
+
+「 * ストレージ * 」パネルを使用して、ストレージ環境全体を確認します。ストレージクラスタ、ストレージノード、およびボリュームの総数を監視できます。
+
+詳細を表示するには、 Storage （ストレージ）ペインで * Show Details （詳細の表示） * を選択します。
+
+image::hcc_dashboard_storage_node_number.PNG[ストレージビュー]
+
+
+NOTE: 合計ストレージノード数には、 2 ノードストレージクラスタからの監視ノードは含まれません。監視ノードは、そのクラスタの詳細セクションのノード番号に含まれます。
+
+
+TIP: 最新のストレージクラスタデータを表示するには、ストレージクラスタページを使用します。ダッシュボードよりもポーリングの頻度が高くなります。
+
+
+
+== コンピューティングリソースを監視
+
+コンピューティング環境の種類を「 * Compute * 」パネルで確認してください。コンピューティングクラスタの数とコンピューティングノードの総数を監視できます。
+
+詳細を表示するには、計算ペインで * 詳細を表示 * を選択します。
+
+
+NOTE: vCenter インスタンスは、少なくとも 1 つの NetApp HCI コンピューティングノードがそのインスタンスに関連付けられている場合にのみコンピューティングペインに表示されます。NetApp Hybrid Cloud Control にリンクされている vCenter インスタンスを一覧表示するには、を使用します link:task_mnode_edit_vcenter_assets.html["API"]。
+
+
+NOTE: NetApp Hybrid Cloud Control でコンピューティングノードを管理するには、が必要です https://kb.netapp.com/Advice_and_Troubleshooting/Data_Storage_Software/Management_services_for_Element_Software_and_NetApp_HCI/How_to_set_up_compute_node_management_in_NetApp_Hybrid_Cloud_Control["コンピューティングノードを vCenter ホストクラスタに追加します"^]。
+
+
+
+== ストレージ容量を監視
+
+環境のストレージ容量を監視することが重要です。Storage Capacity ペインを使用すると、圧縮、重複排除、シンプロビジョニングの各機能を有効または無効にして、ストレージ容量の効率化による効果を確認できます。
+
+クラスタ内で使用可能な物理ストレージの合計スペースは、 *raw* タブに表示されます。また、プロビジョニングされたストレージに関する情報は、 *Effective * タブに表示されます。
+
+image::hcc_dashboard_storage_capacity_effective.png[HCC ダッシュボード > ストレージ容量ペイン]
+
+
+TIP: クラスタの健常性を確認するには、 SolidFire Active IQ のダッシュボードも参照してください。を参照してください link:task_hcc_activeiq.html["NetApp SolidFire Active IQ で、パフォーマンス、容量、クラスタの健全性を監視します"]。
+
+.手順
+. Raw タブを選択して、クラスタ内で使用済みおよび使用可能な物理ストレージの合計容量を表示します。
++
+縦の線を見て、使用済み容量が警告、エラー、または重大のしきい値を下回っていないかどうかを確認します。行にカーソルを合わせると詳細が表示されます。
+
++
+
+NOTE: Warning のしきい値はデフォルトで Error のしきい値の 3% 下に設定できます。エラーしきい値とクリティカルしきい値は事前に設定されており、設計上の設定はできません。Error しきい値は、クラスタに容量が残っているノードが 1 つもないことを示します。しきい値の設定手順については、を参照してください https://docs.netapp.com/us-en/element-software/storage/task_system_manage_cluster_set_the_cluster_full_threshold.html["クラスタフルしきい値を設定しています"^]。
+
++
+
+TIP: 関連するクラスタのしきい値 Element API の詳細については、を参照してください https://docs.netapp.com/us-en/element-software/api/reference_element_api_getclusterfullthreshold.html["「 getClusterFullThreshold 」"^] を Element ソフトウェア API ドキュメントで参照してください。ブロック容量とメタデータ容量の詳細については、を参照してください https://docs.netapp.com/us-en/element-software/storage/concept_monitor_understand_cluster_fullness_levels.html["クラスタフルレベルの概要"^] を参照してください。
+
+. 接続されているホストにプロビジョニングされている合計ストレージの情報を表示し、効率性の評価を表示するには、 * Effective * タブを選択します。
++
+.. 必要に応じて、 [ シンプロビジョニングを含める ] をオンにして、 [ 実効容量 ] 棒グラフでシンプロビジョニングの効率化率を確認します。
+.. * 実効容量の棒グラフ * ：縦の線を見て、使用済み容量が警告、エラー、または重大のしきい値を下回っていないかどうかを確認します。「 Raw 」タブと同様に、縦線にカーソルを合わせると詳細を確認できます。
+.. * 効率性 * ：上記の評価を参考に、圧縮機能、重複排除機能、シンプロビジョニング機能を有効にした場合のストレージ容量効率化の効果を判断してください。たとえば、圧縮率が「 1.3 倍」と表示される場合、圧縮を有効にした場合のストレージ効率は、圧縮を有効にしない場合と比べて 1.3 倍向上します。
++
+
+NOTE: 総削減率は（ maxUsedSpace * efficiency factor ） /2 で、 efficiencyFactor = （ thinProvisioningFactor * deDuplicationFactor * compressionFactor ）です。このチェックボックスをオフにすると、合計効率には含まれません。
+
+.. 実効ストレージ容量が Error または Critical のしきい値に近づく場合は、システムのデータをクリアすることを検討してください。または、システムの拡張を検討してください。
++
+を参照してください link:concept_hcc_expandoverview.html["拡張の概要"]。
+
+
+
+. 詳細な分析と履歴のコンテキストについては、を参照してください https://activeiq.solidfire.com/["NetApp SolidFire Active IQ の詳細"]。
+
+
+
+
+== ストレージパフォーマンスを監視
+
+Storage Performance ペインを使用すると、クラスタから取得できる IOPS またはスループットを確認できます。このとき、リソースの有用なパフォーマンスを超過することはありません。ストレージパフォーマンスとは、レイテンシの問題が発生する前に利用率を最大限に高めるポイントです。
+
+ストレージパフォーマンスペインでは、ワークロードが増加した場合にパフォーマンスが低下する可能性があるポイントにパフォーマンスが達していないかどうかを確認できます。
+
+このペインの情報は 10 秒ごとに更新され、グラフ上のすべてのポイントの平均値が表示されます。
+
+関連付けられている Element API メソッドの詳細については、を参照してください https://docs.netapp.com/us-en/element-software/api/reference_element_api_getclusterstats.html["GetClusterStats から参照できます"^] メソッド（ _Element ソフトウェア API ドキュメント内）。
+
+.手順
+. Storage Performance ペインを表示します。詳細については、グラフのポイントにカーソルを合わせます。
++
+.. * IOPS * タブ： 1 秒あたりの現在の処理数を表示します。データや急増しているデータを探す。たとえば、最大 IOPS が 160K で、そのうち 10 万 IOPS が空き IOPS または使用可能 IOPS であることが確認された場合は、このクラスタにワークロードを追加することを検討してください。一方、使用可能な容量が 140K しかない場合は、ワークロードのオフロードやシステムの拡張を検討してください。
++
+image::hcc_dashboard_storage_perform_iops.png[Storage Performance > IOPS タブの順にクリックします]
+
+.. * Throughput * タブ：スループットのパターンまたはスパイクを監視します。また、スループットの値が継続的に高くなっていないかどうかも監視します。リソースの使用率が最大値に近づいていることを示している可能性があります。
++
+image::hcc_dashboard_storage_perform_throughput.png[Storage Performance > Throughput タブの順にクリックします]
+
+.. * Utilization * タブ： IOPS の利用率を、クラスタレベルで合計した使用可能な合計 IOPS を監視します。
++
+image::hcc_dashboard_storage_perform_utlization.png[Storage Performance > Utilization タブ]
+
+
+
+. さらに詳しい分析を行うには、 NetApp Element Plug-in for vCenter Server を使用してストレージのパフォーマンスを確認してください。
++
+https://docs.netapp.com/us-en/vcp/vcp_task_reports_volume_performance.html["NetApp Element Plug-in for vCenter Server に表示されるパフォーマンス"^]。
+
+
+
+
+
+== コンピューティング利用率を監視
+
+ストレージリソースの IOPS とスループットだけでなく、コンピューティングアセットの CPU とメモリの使用量も確認することができます。ノードで提供可能な合計 IOPS は、 CPU の数、 CPU の速度、 RAM の容量など、ノードの物理仕様に基づきます。
+
+.手順
+. [* Compute Utilization] ペインを表示します。CPU タブとメモリタブの両方を使用して、使用率のパターンまたはスパイクを探します。コンピューティングクラスタの最大利用率に近づいている可能性があることを示す、継続的な高使用率も確認します。
++
+
+NOTE: このペインには、このインストールで管理されているコンピューティングクラスタのデータのみが表示されます。
+
++
+image::hcc_dashboard_compute_util_cpu.png[[Compute Utilization] ペイン]
+
++
+.. * CPU * タブ：コンピューティングクラスタの CPU 利用率の現在の平均値を表示します。
+.. * Memory * タブ：コンピューティングクラスタの現在の平均メモリ使用量を確認します。
+
+
+. コンピューティング情報の詳細な分析については、を参照してください https://activeiq.solidfire.com["履歴データ用の NetApp SolidFire Active IQ"]。
+
+
+[discrete]
+== 詳細については、こちらをご覧ください
+
+* https://docs.netapp.com/us-en/vcp/index.html["vCenter Server 向け NetApp Element プラグイン"^]
+* https://www.netapp.com/hybrid-cloud/hci-documentation/["NetApp HCI のリソースページ"^]
+

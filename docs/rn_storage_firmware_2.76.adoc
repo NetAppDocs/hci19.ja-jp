@@ -1,0 +1,184 @@
+---
+sidebar: sidebar 
+permalink: docs/rn_storage_firmware_2.76.html 
+summary: NetApp HCI ノードにダウンロードして適用できるファームウェアパッケージのリリースノートへのリンクを入手できます。 
+keywords: netapp, hci, storage firmware 
+---
+= ストレージファームウェアバンドル 2.76 リリースノート
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ../media/
+:keywords: hci, release notes, vcp, element, management services, firmware
+
+
+[role="lead"]
+Element 12.0 以降および管理サービスバージョン 2.14 以降では、 NetApp Hybrid Cloud Control の UI と REST API を使用して、ストレージノードでファームウェアのみのアップグレードを実行できます。この手順では、 Element ソフトウェアはアップグレードされず、 Element のメジャーリリース以外のバージョンのストレージファームウェアもアップグレードできます。
+
+
+
+== 新機能
+
+ストレージファームウェアバンドルバージョン 2.76 には、セキュリティ上の脆弱性の修正など、さまざまなバグ修正と新機能が含まれています。の手順に従って、ストレージファームウェアをアップグレードできます link:task_hcc_upgrade_storage_firmware.html["ストレージファームウェアをアップグレードします"]。
+
+
+
+=== ファームウェアコンポーネントが更新されました
+
+このファームウェアパッケージには、次のファームウェアバージョンが含まれています。これらのファームウェアバージョンは、太字で更新されています。
+
+|===
+| コンポーネント | SolidFire SF シリーズ | H410S | H610S 
+
+
+| BIOS | 該当なし | NA2.1 | * 3B06 * 
+
+
+| BMC の場合 | 該当なし | 6.8400 | * 3.86.07 * 
+
+
+| NIC / Mellanox | - | * 14.25.1020 * | * 14.25.1020 * 
+
+
+| RMS200 | aeb8cc | aeb8cc | - 
+
+
+| RMS300 | 7d8422bc | 7d8422bc | - 
+
+
+| NVDIMM 、スマート | - | - | 3.1 
+
+
+| bpm 、 SMART | - | - | 2.16 
+
+
+| NVDIMM 、 Micron Gen1 | - | - | 26.2c 
+
+
+| NVDIMM 、 Micron Gen2 | - | - | 25.3c 
+
+
+| PGEM 、 Micron 社 | - | - | 1.40 
+
+
+| PM863 、 SED | GXT5404Q | GXT5404Q | - 
+
+
+| PM863 、 NSED | GXT5103Q | GXT5103Q | - 
+
+
+| PM883 、 SED | * HXT7904Q * | * HXT7904Q * | - 
+
+
+| Hawk-4 、 SED | 8ENP7101 | 8ENP7101 | - 
+
+
+| Hawk-4 、 NSED | 8ENP6101 | 8ENP6101 | - 
+
+
+| PM963 、 SED | - | - | CXV8202Q 
+
+
+| PM963 、 NSED | - | - | CXV8501Q 
+
+
+| PM983 、 SED | - | - | * EDA5402Q * 
+
+
+| PM983 、 NSED | - | - | * EDA5700Q * 
+
+
+| CD5 、 SED | - | - | * 0109 * 
+
+
+| CD5 、 NSED | - | - | * 0109 * 
+
+
+| CD5 、 FIPS | - | - | 0108. 
+|===
+
+
+== ストレージファームウェアコンポーネントの変更点
+
+|===
+
+
+| コンポーネント | 改善 / 変更 
+
+
+| H610S BIOS 3B06  a| 
+* メモリ障害の処理が改善されました
+* マイクロコードバージョンを MCU x6906 に更新
+
+
+
+
+| H610S BMC 3.86.07  a| 
+* BMC SEL に BIOS PPR イベントログ解析を追加
+* BMC がハングした場合にシステムの過熱を防止する
+* LDAP のグループドメインの長さが 64 からに変更されました 128 文字です
+
+
+
+
+| H410S / H610S NIC 、 Mellanox 14.25.1020 | 該当なし 
+
+
+| ドライブファームウェアの各種更新 | 該当なし 
+|===
+
+
+== 解決済みの問題と既知の問題
+
+を参照してください https://mysupport.netapp.com/site/bugs-online/product["Bugs Online のツール"^] 解決済みの問題と新しい問題の詳細については、を参照してください。
+
+
+
+=== BOL ツールへのアクセス
+
+. に移動します  https://mysupport.netapp.com/site/bugs-online/product["BOL ツール"^] ドロップダウンリストから * Element Software * を選択します。
++
+image::bol_dashboard.png[ストレージファームウェアバンドルのリリースノート]
+
+. キーワード検索フィールドに「 Storage Firmware Bundle 」と入力して、「 * New Search* 」をクリックします。
++
+image::storage_firmware_bundle_choice.png[ストレージファームウェアバンドルのリリースノート]
+
+. 解決済みまたはオープン状態のバグのリストが表示されます。次のように結果をさらに絞り込むことができます。
++
+image::bol_list_bugs_found.png[ストレージファームウェアバンドルのリリースノート]
+
+
+
+
+
+== セキュリティの脆弱性を解決
+
+このリリースで解決されたセキュリティの脆弱性は次のとおりです。
+
+
+
+=== H410S BMC 6.84.00
+
+* CVE-2020-0542 、 CVE-20-0532 、 CVE-20-0538 、 CVE-20-0534 、 CVE-20-0541 、 CVE-20-0533 、 CVE-20-0537 、 CVE-20-0537 、 CVE-20-0531
+* CVE-2020-0535 、 CVE-2020-0536 、 CVE-2020-0535 、 CVE-2020-0524 、 CVE-2020-0566 、 CVE-20-0539 、 CVE-20-0586 、 CVE-20-0594
+* CVE-2020-0595 、 CVE-20-0596 、 CVE-2020-05874 、 CVE-20-0543 CVE-20-0543 CVE-20-0548 、 CVE-20-0549
+
+
+
+
+=== H610S BMC 3.86.07
+
+* CVE-2016-20636
+* CVE-2017-11599 、 CVE-2018-12826 、 CVE-2018-12464 、 CVE-20120-12114
+* CVE-2016-4706 、 CVE-2011-5320 、 CVE-2015-8984 、 CVE-2015-8983 、 CVE-2015-8982 、 CVE-2006-7254 、 CVE-2005-3590
+
+
+[discrete]
+== 詳細については、こちらをご覧ください
+
+* https://docs.netapp.com/hci/index.jsp["NetApp HCI ドキュメントセンター"^]
+* https://www.netapp.com/hybrid-cloud/hci-documentation/["NetApp HCI のリソースページ"^]
+

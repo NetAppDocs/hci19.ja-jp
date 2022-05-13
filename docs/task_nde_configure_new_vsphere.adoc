@@ -1,0 +1,52 @@
+---
+sidebar: sidebar 
+permalink: docs/task_nde_configure_new_vsphere.html 
+summary: NetApp HCI の導入時に VMware vSphere を設定する方法について説明します。 
+keywords: netapp, hci, netapp deployment engine, deployment, vsphere 
+---
+= 新しい VMware vSphere 環境を設定します
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ../media/
+:keywords: netapp, hci, netapp deployment engine, deployment, vsphere
+
+
+[role="lead"]
+NetApp HCI のインストールプロセスでは、 vSphere で使用するいくつかのネットワーク情報を指定することで新しい vSphere 環境を導入できます。IP アドレスを使用して vSphere を設定する場合、インストール後にアドレスを変更することはできません。
+
+導入する vSphere 環境のネットワーク情報を入手しておきます。
+
+.手順
+. ［ * 新しい vSphere 導入の構成 * ］ をクリックします。
+. 導入時にシステムによってインストールされる vSphere のバージョンを選択します。
+. 次のいずれかの方法で新しい vSphere 環境を設定します。
++
+|===
+| オプション | 手順 
+
+
+| ドメイン名を使用します（推奨）。  a| 
+.. [ 完全修飾ドメイン名を使用して構成する *] をクリックします。
+.. vCenter Server のドメイン名を「 * vCenter Server の完全修飾ドメイン名 * 」フィールドに入力します。
+.. DNS サーバーの IP アドレスを、 *DNS サーバーの IP アドレス * フィールドに入力します。
+.. [* Continue （続行） ] をクリックします
+
+
+
+
+| IP アドレスを使用する。  a| 
+.. IP アドレスを使用して設定 * をクリックします。
+.. [* Continue （続行） ] をクリックします
+
+
+|===
+
+
+[discrete]
+== 詳細については、こちらをご覧ください
+
+* https://kb.netapp.com/Advice_and_Troubleshooting/Hybrid_Cloud_Infrastructure/NetApp_HCI/Firmware_and_driver_versions_in_NetApp_HCI_and_NetApp_Element_software["NetApp HCI および NetApp Element のファームウェアとドライバのバージョン ソフトウェア"^]
+

@@ -1,0 +1,44 @@
+---
+sidebar: sidebar 
+permalink: docs/rn_whatsnew.html 
+summary: このバージョンの NetApp HCI の新機能について説明します。 
+keywords: netapp, hci, element, new, whatsnew 
+---
+= NetApp HCI の新機能
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ../media/
+:keywords: hci, cloud, onprem, documentation, help, element
+
+
+[role="lead"]
+ネットアップでは、 NetApp HCI を定期的に更新して、新機能、拡張機能、およびバグ修正を提供しています。NetApp HCI 1.9P1 にはストレージクラスタ用の Element 12.3.2 が含まれます。
+
+* 。 <<NetApp HCI 1.9P1>> セクションでは、 NetApp HCI バージョン 1.9P1 の新機能とアップデートについて説明します。
+* 。 <<Element 12.3.2>> ここでは、 NetApp Element 12.3.2 の新機能およびアップデートについて説明します。
+
+
+
+
+== NetApp HCI 1.9P1
+
+NetApp HCI 1.9P1 では、セキュリティと安定性が向上しています。
+
+
+
+== Element 12.3.2
+
+Element ソフトウェア 12.3.2 リリースには、 Apache log4j の脆弱性に対する Element ソフトウェアの影響を軽減する機能が含まれています。Virtual Volumes （ VVol ）機能が有効になっている NetApp SolidFire ストレージクラスタは、この脆弱性の影響を受けやすくなっています。
+
+[discrete]
+== 詳細については、こちらをご覧ください
+
+* https://kb.netapp.com/Advice_and_Troubleshooting/Data_Storage_Software/Management_services_for_Element_Software_and_NetApp_HCI/Management_Services_Release_Notes["『 NetApp Hybrid Cloud Control and Management Services Release Notes 』を参照してください"^]
+* https://docs.netapp.com/us-en/vcp/index.html["vCenter Server 向け NetApp Element プラグイン"^]
+* https://www.netapp.com/us/documentation/hci.aspx["NetApp HCI のリソースページ"^]
+* https://docs.netapp.com/us-en/element-software/index.html["SolidFire および Element ソフトウェアのドキュメント"^]
+* https://kb.netapp.com/Advice_and_Troubleshooting/Hybrid_Cloud_Infrastructure/NetApp_HCI/Firmware_and_driver_versions_in_NetApp_HCI_and_NetApp_Element_software["NetApp HCI および NetApp Element のファームウェアとドライバのバージョン ソフトウェア"^]
+

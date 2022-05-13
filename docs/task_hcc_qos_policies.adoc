@@ -1,0 +1,167 @@
+---
+sidebar: sidebar 
+permalink: docs/task_hcc_qos_policies.html 
+summary: QoS ポリシーを設定および変更して、ストレージクラスタ内のボリュームに適用することができます。 
+keywords: netapp, qos policy, quality of service, qos policies, volumes, element 
+---
+= ボリュームの QoS ポリシーの作成と管理
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ../media/
+
+
+[role="lead"]
+標準的なサービス品質設定を QoS ポリシーとして作成および保存して、複数のボリュームに適用することができます。QoS ポリシーを使用するには、 Element 10.0 以降のクラスタを選択する必要があります。 10.0 より前のクラスタでは QoS ポリシーを使用できません。
+
+
+NOTE: の使用方法の詳細については、 NetApp HCI の概念に関するコンテンツを参照してください link:concept_hci_performance.html#qos-policies["QoS ポリシー"] 個々のボリュームではなく link:concept_hci_performance.html["QoS"]。
+
+NetApp Hybrid Cloud Control を使用すると、次のタスクを実行して QoS ポリシーを作成および管理できます。
+
+* <<Create a QoS policy>>
+* <<Apply a QoS policy to a volume>>
+* <<Change the QoS policy assignment of a volume>>
+* <<Edit a QoS policy>>
+* <<Delete a QoS policy>>
+
+
+
+
+== QoS ポリシーを作成する
+
+QoS ポリシーを作成し、同等のパフォーマンスが必要なボリュームに適用することができます。
+
+
+NOTE: QoS ポリシーを使用している場合は、ボリュームでカスタム QoS を使用しないでください。カスタム QoS は、ボリュームの QoS 設定に対して QoS ポリシーの値を上書きして調整します。
+
+.手順
+. NetApp HCI または Element ストレージクラスタ管理者のクレデンシャルを指定して NetApp Hybrid Cloud Control にログインします。
+. ダッシュボードで、ストレージクラスタのメニューを展開します。
+. Storage > Volumes （ストレージ）を選択します。
+. [* QoS Policies] タブをクリックします。
+. [ ポリシーの作成 *] をクリックします。
+. 「 * ポリシー名 * 」を入力します。
++
+
+TIP: わかりやすい名前のベストプラクティスを使用してください。これは、環境で複数のクラスタや vCenter Server を使用している場合に特に重要です。
+
+. 最小 IOPS 、最大 IOPS 、バースト IOPS の値を入力します。
+. [Create QoS Policy] をクリックします。
++
+ポリシーのシステム ID が生成され、そのポリシーが割り当てられた QoS 値を含む QoS ポリシーページに表示されます。
+
+
+
+
+
+== ボリュームに QoS ポリシーを適用します
+
+NetApp Hybrid Cloud Control を使用して、既存の QoS ポリシーをボリュームに割り当てることができます。
+
+割り当てようとしている QoS ポリシーが削除されました <<Create a QoS policy,作成済み>>。
+
+このタスクでは、設定を変更して個々のボリュームに QoS ポリシーを割り当てる方法について説明します。最新バージョンの NetApp Hybrid Cloud Control では、複数のボリュームに一括割り当てオプションはありません。一括割り当てする機能が今後のリリースで提供されるまでは、 Element Web UI または vCenter Plug-in UI を使用して QoS ポリシーを一括で割り当てることができます。
+
+.手順
+. NetApp HCI または Element ストレージクラスタ管理者のクレデンシャルを指定して NetApp Hybrid Cloud Control にログインします。
+. ダッシュボードで、ストレージクラスタのメニューを展開します。
+. Storage > Volumes （ストレージ）を選択します。
+. 変更するボリュームの横にある * Actions * メニューをクリックします。
+. 表示されたメニューで、「 * 編集 * 」を選択します。
+. ダイアログボックスで、 * QoS ポリシーの割り当て * を有効にし、選択したボリュームに適用する QoS ポリシーをドロップダウンリストから選択します。
++
+
+NOTE: QoS を割り当てると、以前に適用されていた個々のボリュームの QoS 値は上書きされます。
+
+. [ 保存（ Save ） ] をクリックします。
++
+更新されたボリュームが割り当てられた QoS ポリシーで概要ページに表示されます。
+
+
+
+
+
+== ボリュームの QoS ポリシーの割り当てを変更します
+
+ボリュームから QoS ポリシーの割り当てを解除したり、別の QoS ポリシーやカスタム QoS を選択したりできます。
+
+変更するボリュームはです <<Apply a QoS policy to a volume,割り当て済み>> QoS ポリシー。
+
+.手順
+. NetApp HCI または Element ストレージクラスタ管理者のクレデンシャルを指定して NetApp Hybrid Cloud Control にログインします。
+. ダッシュボードで、ストレージクラスタのメニューを展開します。
+. Storage > Volumes （ストレージ）を選択します。
+. 変更するボリュームの横にある * Actions * メニューをクリックします。
+. 表示されたメニューで、「 * 編集 * 」を選択します。
+. ダイアログボックスで、次のいずれかを実行します。
++
+** QoS ポリシーの割り当てを無効にし、個々のボリュームの QoS の最小 IOPS * 、最大 IOPS * 、バースト IOPS * の値を変更します。
++
+
+NOTE: QoS ポリシーが無効な場合、特に変更されていないかぎり、ボリュームはデフォルトの QoS IOPS 値を使用します。
+
+** 選択したボリュームに適用する別の QoS ポリシーをドロップダウンリストから選択してください。
+
+
+. [ 保存（ Save ） ] をクリックします。
++
+更新されたボリュームが概要ページに表示されます。
+
+
+
+
+
+== QoS ポリシーを編集する
+
+既存の QoS ポリシーの名前を変更したり、ポリシーに関連付けられている値を編集したりできます。QoS ポリシーのパフォーマンス値を変更すると、そのポリシーに関連付けられているすべてのボリュームの QoS に影響します。
+
+.手順
+. NetApp HCI または Element ストレージクラスタ管理者のクレデンシャルを指定して NetApp Hybrid Cloud Control にログインします。
+. ダッシュボードで、ストレージクラスタのメニューを展開します。
+. Storage > Volumes （ストレージ）を選択します。
+. [* QoS Policies] タブをクリックします。
+. 変更する QoS ポリシーの横にある * Actions * メニューをクリックします。
+. [ 編集（ Edit ） ] をクリックします。
+. [Edit QoS Policy] ダイアログボックスで、次の 1 つ以上を変更します。
++
+** * Name * ： QoS ポリシーのユーザ定義名。
+** * Min IOPS * ：ボリュームに対して保証されている最小 IOPS 。デフォルト値は 50 です。
+** * Max IOPS * ：ボリュームで許可されている最大 IOPS 。デフォルト値は 15 、 000 です。
+** * Burst IOPS * ：ボリュームに対して短期間で許可されている最大 IOPS 。デフォルト値は 15 、 000 です。
+
+
+. [ 保存（ Save ） ] をクリックします。
++
+更新された QoS ポリシーが [QoS Policies] ページに表示されます。
+
++
+
+TIP: ポリシーの「 * Active Volumes * 」列のリンクをクリックすると、そのポリシーに割り当てられているボリュームをフィルタリングして表示できます。
+
+
+
+
+
+== QoS ポリシーを削除する
+
+不要になった QoS ポリシーを削除できます。QoS ポリシーを削除しても、そのポリシーが割り当てられたすべてのボリュームで、それまでにそのポリシーで定義されていた QoS 値が個々のボリュームの QoS 値として維持されます。削除された QoS ポリシーとの関連付けがすべて削除されます。
+
+.手順
+. NetApp HCI または Element ストレージクラスタ管理者のクレデンシャルを指定して NetApp Hybrid Cloud Control にログインします。
+. ダッシュボードで、ストレージクラスタのメニューを展開します。
+. Storage > Volumes （ストレージ）を選択します。
+. [* QoS Policies] タブをクリックします。
+. 変更する QoS ポリシーの横にある * Actions * メニューをクリックします。
+. [ 削除（ Delete ） ] をクリックします。
+. 操作を確定します。
+
+
+[discrete]
+== 詳細については、こちらをご覧ください
+
+* https://docs.netapp.com/us-en/vcp/index.html["vCenter Server 向け NetApp Element プラグイン"^]
+* https://docs.netapp.com/us-en/element-software/index.html["SolidFire および Element ソフトウェアのドキュメント"^]
+

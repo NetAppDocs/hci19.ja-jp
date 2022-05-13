@@ -1,0 +1,48 @@
+---
+sidebar: sidebar 
+permalink: docs/concept_hcc_expandoverview.html 
+summary: NetApp Hybrid Cloud Control を使用して NetApp HCI システムを拡張することができます。 
+keywords: NetApp, HCI, on premise, expand, hcc, hybrid cloud control 
+---
+= 拡張の概要
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ../media/
+:keywords: hci, cloud, onprem, documentation, help
+
+
+[role="lead"]
+NetApp HCI システムは、 NetApp Hybrid Cloud Control を使用して拡張できます。ストレージリソースとコンピューティングリソースは、個別に拡張することも、同時に拡張することもできます。
+
+
+NOTE: 新規およびスペアの H610S ストレージノードには、既存の Element ソフトウェアバージョンのストレージクラスタに基づいて追加のインストール要件がある場合があります。詳細については、ネットアップサポートにお問い合わせください。
+
+NetApp HCI シャーシにノードを設置したら、 NetApp Hybrid Cloud Control を使用して、新しいリソースを使用するように NetApp HCI を設定します。NetApp HCI は既存のネットワーク設定を検出し、既存のネットワークと VLAN （存在する場合）内に設定オプションを提供します。
+
+
+NOTE: インストール環境を拡張したあとに新しいアセットが構成に自動的に追加されなかった場合は、アセットを手動で追加しなければならないことがあります。を参照してください link:task_mnode_work_overview.html["管理ノードの概要"]。
+
+NetApp HCI は、 VMware Enhanced vMotion Compatibility （ EVC ）を使用して、 vSphere クラスタに CPU 世代が異なる複数のコンピューティングノードがある場合の vMotion を可能にします。拡張に EVC が必要な場合、 NetApp HCI は可能な場合は自動的に EVC を有効にします。
+
+次の場合は、 vSphere クライアントで EVC の設定を手動で変更しなければならないことがあります。
+
+* 既存のコンピューティングノードの CPU 世代が追加するコンピューティングノードよりも新しい。
+* 制御用 vCenter インスタンスで必要な EVC レベルがサポートされていない。
+* 追加するコンピューティングノードの CPU 世代が制御用 vCenter インスタンスの EVC 設定よりも古い。
+
+
+
+NOTE: NetApp Deployment Engine で NetApp HCI のコンピューティングリソースまたはストレージリソースを拡張する場合は、既存の NetApp HCI コンピューティングノードを管理する vCenter インスタンスに接続してください。
+
+[discrete]
+== 詳細については、こちらをご覧ください
+
+* link:task_hcc_expand_compute.html["NetApp HCI コンピューティングリソースを展開します"]
+* link:task_hcc_expand_storage.html["NetApp HCI ストレージリソースを展開します"]
+* link:task_hcc_expand_compute_and_storage.html["NetApp HCI のストレージリソースとコンピューティングリソースも同時に拡張します 時間"]
+* https://www.netapp.com/hybrid-cloud/hci-documentation/["NetApp HCI のリソースページ"^]
+* https://docs.netapp.com/us-en/vcp/index.html["vCenter Server 向け NetApp Element プラグイン"^]
+

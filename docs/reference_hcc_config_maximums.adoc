@@ -1,0 +1,18 @@
+---
+sidebar: sidebar 
+permalink: docs/reference_hcc_config_maximums.html 
+summary: NetApp Hybrid Cloud Control には特定の機能があります。その中で運用することを推奨します。 
+keywords: netapp, hci, HCC, configuration, capabilities, limits, maximums 
+---
+= NetApp Hybrid Cloud Control の最大構成数
+:allow-uri-read: 
+
+
+[role="lead"]
+NetApp HCI には、コンピューティングのライフサイクルとストレージ管理を簡易化する NetApp Hybrid Cloud Control が搭載されています。NetApp HCI および NetApp SolidFire ストレージクラスタのストレージノードでの Element ソフトウェアのアップグレードや、 NetApp HCI の NetApp HCI コンピューティングノードでのファームウェアのアップグレードがサポートされます。NetApp HCI の管理ノードではデフォルトで使用できます。
+
+ネットアップが提供する NetApp HCI 環境内のハードウェアコンポーネントとソフトウェアコンポーネントの通信に加えて、 NetApp Hybrid Cloud Control は、 VMware vCenter などのお客様の環境内のサードパーティコンポーネントと通信します。ネットアップは、 NetApp Hybrid Cloud Control の機能およびお客様の環境でこれらのサードパーティコンポーネントとの連動性を、特定の規模で認定します。NetApp Hybrid Cloud Control の運用を最適化するために、構成の最大数には範囲内で設定することを推奨します。
+
+この最大数を超えると、低速のユーザインターフェイスや API 応答、機能の利用不可など、 NetApp Hybrid Cloud Control で問題が発生する可能性があります。構成の上限を超えて設定されている環境で NetApp Hybrid Cloud Control とネットアップの製品サポートを契約された場合は、構成の最大数がドキュメントに記載されている範囲内に収まるように設定を変更するように求められます。
+
+NetApp Hybrid Cloud Control では、最大 500 個のネットアップコンピューティングノードを含む VMware vSphere 環境がサポートされます。NetApp Element ソフトウェアベースのストレージクラスタを 20 個までサポートし、クラスタあたり 40 個のストレージノードで構成されます。

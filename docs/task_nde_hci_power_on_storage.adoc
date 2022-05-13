@@ -1,0 +1,30 @@
+---
+sidebar: sidebar 
+permalink: docs/task_nde_hci_power_on_storage.html 
+summary: NetApp HCI コンピューティングノードの電源をオフにする方法について説明します。 
+keywords: netapp, hci, netapp deployment engine, deployment, vsphere 
+---
+= NetApp HCI システムのストレージリソースの電源をオンにします
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ../media/
+:keywords: netapp, hci, netapp deployment engine, deployment, vsphere
+
+
+[role="lead"]
+スケジュールされたシステム停止の終了後、 NetApp HCI の電源をオンにできます。
+
+.手順
+. 電源ボタンまたは BMC を使用して、すべてのストレージノードの電源をオンにします。
+. BMC を使用している場合は、各ノードにログインし、 * Remote Control > Power Control > Power On Server * と進みます。
+. すべてのストレージノードがオンラインになったら、 NetApp HCI ストレージシステムにログインし、すべてのノードが動作していることを確認します。
+
+
+[discrete]
+== 詳細については、こちらをご覧ください
+
+* https://kb.netapp.com/Advice_and_Troubleshooting/Hybrid_Cloud_Infrastructure/NetApp_HCI/Firmware_and_driver_versions_in_NetApp_HCI_and_NetApp_Element_software["NetApp HCI および NetApp Element のファームウェアとドライバのバージョン ソフトウェア"^]
+

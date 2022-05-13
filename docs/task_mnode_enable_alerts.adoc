@@ -1,0 +1,81 @@
+---
+sidebar: sidebar 
+permalink: docs/task_mnode_enable_alerts.html 
+summary: NetApp HCI システムでアラートを監視するように設定を行うことができます。 
+keywords: netapp, element, management node, mnode, ui, alerts, alert monitoring 
+---
+= NetApp HCI でアラート監視を設定する
+:allow-uri-read: 
+
+
+[role="lead"]
+NetApp HCI システムでアラートを監視するように設定を行うことができます。
+
+NetApp HCI のアラート監視は、 NetApp HCI ストレージクラスタのシステムアラートを vCenter Server に転送して、 vSphere Web Client インターフェイスで NetApp HCI のすべてのアラートを表示できるようにします。
+
+
+NOTE: これらのツールは、 SolidFire オールフラッシュストレージなどのストレージ専用クラスタでは設定も使用もされません。これらのクラスタに対してツールを実行すると、「 webUIParseError ： Invalid response from server 」のような 405 エラーが表示されますが、これは想定される設定です。405`
+
+. ノード単位の管理ノード UI を開きます (`https://[IP address:442')
+. [* Alert Monitor*] タブをクリックします。
+. アラート監視オプションを設定します。
+
+
+
+
+== アラート監視オプション
+
+[cols="2*"]
+|===
+| オプション（ Options ） | 説明 
+
+
+| Alert Monitor テストを実行します  a| 
+モニタシステムテストを実行して次の項目を確認します。
+
+* NetApp HCI と VMware vCenter の接続
+* データストア情報を使用した NetApp HCI と VMware vCenter のペアリング QoSSIOC サービスによって提供されます
+* 現在の NetApp HCI アラームと vCenter アラームのリスト
+
+
+
+
+| アラートを収集します | NetApp HCI ストレージアラームの vCenter への転送を有効または無効にします。ドロップダウンリストからターゲットのストレージクラスタを選択できます。このオプションのデフォルト設定は「 enabled 」です。 
+
+
+| ベストプラクティスアラートを収集 | NetApp HCI ストレージのベストプラクティスアラートの vCenter への転送を有効または無効にします。ベストプラクティスアラートは、最適化されていないシステム構成によってトリガーされた障害です。このオプションのデフォルト設定は「ディセーブル」です。無効にすると、 NetApp HCI ストレージのベストプラクティスアラートは vCenter に表示されません。 
+
+
+| サポートデータを AIQ に送信  a| 
+VMware vCenter から NetApp SolidFire Active IQ へのサポートデータと監視データのフローを制御します。
+
+オプションは次のとおりです。
+
+* Enabled ： vCenter アラーム、 NetApp HCI ストレージアラーム、およびサポートデータがすべて NetApp SolidFire Active IQ に送信されます。ネットアップによる NetApp HCI インストールのプロアクティブなサポートと監視が可能となるため、システムに影響が及ぶ前に問題を検出して解決できます。
+* Disabled ： vCenter アラーム、 NetApp HCI ストレージアラーム、サポートデータはいずれも NetApp SolidFire Active IQ に送信されません。
+
+
+
+NOTE: NetApp Deployment Engine を使用して AIQ へのデータの送信 * オプションをオフにした場合は、が必要です link:task_mnode_enable_activeIQ.html["テレメータを有効にします"] このページから、管理ノードの REST API を使用してサービスを設定し直してください。
+
+
+
+| コンピューティングノードのデータを AIQ に送信  a| 
+コンピューティングノードから NetApp SolidFire Active IQ へのサポートデータと監視データのフローを制御します。
+
+オプションは次のとおりです。
+
+* Enabled ：コンピューティングノードに関するサポートデータと監視データが NetApp SolidFire Active IQ に転送されるため、コンピューティングノードのハードウェアをプロアクティブにサポートできます。
+* Disabled ：コンピューティングノードに関するサポートデータと監視データは NetApp SolidFire Active IQ に転送されません。
+
+
+
+NOTE: NetApp Deployment Engine を使用して AIQ へのデータの送信 * オプションをオフにした場合は、が必要です link:task_mnode_enable_activeIQ.html["テレメータを有効にします"] このページから、管理ノードの REST API を使用してサービスを設定し直してください。
+
+|===
+[discrete]
+== 詳細はこちら
+
+* https://docs.netapp.com/us-en/vcp/index.html["vCenter Server 向け NetApp Element プラグイン"^]
+* https://www.netapp.com/hybrid-cloud/hci-documentation/["NetApp HCI のリソースページ"^]
+

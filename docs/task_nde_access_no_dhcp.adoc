@@ -1,0 +1,55 @@
+---
+sidebar: sidebar 
+permalink: docs/task_nde_access_no_dhcp.html 
+summary: DHCP を使用していない環境で NetApp Deployment Engine にアクセスする方法について説明します。 
+keywords: netapp, hci, netapp deployment engine, deployment, engine, deploy, access 
+---
+= DHCP を使用していない環境では、 NetApp Deployment Engine にアクセスします
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ../media/
+:keywords: hci, release notes, vcp, element, management services, firmware
+
+
+[role="lead"]
+ネットワークで DHCP を使用していない場合は、 NetApp Deployment Engine へのアクセスに使用するストレージノード（制御用ストレージノード）の Bond1G インターフェイスに静的 IPv4 アドレスを設定する必要があります。制御用ストレージノードの NetApp Deployment Engine は、他のコンピューティングノードとストレージノードの Bond10G インターフェイスに自動で設定された IPv4 アドレスを使用し、これらのノードを検出して通信を確立します。ネットワークに特別な要件がないかぎり、この方法を使用してください。
+
+.必要なもの
+* 自分またはネットワーク管理者が、『セットアップガイド』ドキュメントのタスクを完了している。
+* NetApp HCI ノードに物理的にアクセスできるようにしておきます。
+* すべての NetApp HCI ノードの電源をオンにしておきます。
+* NetApp HCI ネットワークで DHCP が有効になっておらず、 NetApp HCI ノードが DHCP サーバから IP アドレスを取得していません。
+* すべてのノードの Bond1G インターフェイスと Bond10G インターフェイスについて、 NetApp HCI 管理ネットワークをネイティブ VLAN として構成しておきます。
+
+
+.手順
+. いずれかの NetApp HCI ストレージノードの背面に KVM を接続します（このノードが制御用ストレージノードになります）。
+. ユーザインターフェイスで Bond1G の IP アドレス、サブネットマスク、ゲートウェイアドレスを設定します。必要に応じて、 Bond1G ネットワークの VLAN ID を設定することもできます。
++
+
+NOTE: この IPv4 アドレスは、 NetApp Deployment Engine を使用した以降の導入時に再利用することはできません。
+
+. NetApp HCI 管理ネットワークにアクセスできるコンピュータで Web ブラウザを開きます。
+. 制御用ストレージノードに割り当てた IP アドレスにアクセスします。例：
++
+[listing]
+----
+http://<Bond1G IP address>
+----
++
+
+NOTE: ここで HTTP を使用していることを確認してください。
+
++
+NetApp Deployment Engine のユーザインターフェイスが表示されます。
+
+
+
+[discrete]
+== 詳細については、こちらをご覧ください
+
+* https://kb.netapp.com/Advice_and_Troubleshooting/Hybrid_Cloud_Infrastructure/NetApp_HCI/Firmware_and_driver_versions_in_NetApp_HCI_and_NetApp_Element_software["NetApp HCI および NetApp Element のファームウェアとドライバのバージョン ソフトウェア"^]
+

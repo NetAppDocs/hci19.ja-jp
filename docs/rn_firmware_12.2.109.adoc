@@ -1,0 +1,76 @@
+---
+sidebar: sidebar 
+permalink: docs/rn_firmware_12.2.109.html 
+summary: NetApp HCI ノードにダウンロードして適用できるファームウェアパッケージのリリースノートへのリンクを入手できます。 
+keywords: netapp, hci, compute firmware 
+---
+= Compute Firmware Bundle 12.2.109 リリースノート
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ../media/
+:keywords: hci, release notes, vcp, element, management services, firmware
+
+
+[role="lead"]
+ダウンロード可能なコンピューティングノードファームウェアパッケージには、 BIOS と BMC の最新機能拡張、バグ修正、およびサポートされているすべての NetApp HCI コンピューティングノードに対するハードウェアサポートが含まれています。
+
+
+
+== 新機能
+
+バージョン 12.2.109 では、 BMC による DMTF Redfish API のサポートが導入され、 NetApp Hybrid Cloud Control の今後の機能が有効になります。ファームウェアアップデートには、一般的なバグ修正が含まれており、メモリの問題を解決することもできます。H300E 、 H500E 、 H700E の各コンピューティングノードの BMC 更新プログラムは、 2019 年から 16649 、 2019 年から 16650 、 2019 年から 6260 など、いくつかのセキュリティの脆弱性に対処します。
+
+このファームウェアパッケージには、次のファームウェアバージョンが含まれています。これらのファームウェアバージョンは、太字で更新されています。
+
+|===
+| コンポーネント | H300E 、 H500E 、 H700E の各機能をサポートします | H410C | H610C | H615C 
+
+
+| BIOS | NA2.1 | * NA3.7 * | * 3B01 * | 3B060.CO 
+
+
+| BMC の場合 | * 6.8400 * | 6.71.06 | * 3.96.07 * | * 4.64.07 * 
+
+
+| NIC / Mellanox | 14.21.1000 | 14.21.1000 | 14.22.1002 | 14.23.1020 
+|===
+Compute Firmware Bundle をダウンロードするには、にアクセスします https://mysupport.netapp.com/site/products/all/details/netapp-hci/downloads-tab/download/62542/Compute_Firmware_Bundle["NetApp HCI Compute Firmware Bundle の略"^] ページ
+
+にアクセスします link:task_hcc_upgrade_compute_node_firmware.html#use-the-baseboard-management-controller-bmc-user-interface-ui["コンピューティングノードのファームウェアを更新します"^] コンピューティングノードのファームウェアを更新する手順については、を参照してください。
+
+
+
+== 解決済みの問題
+
+ここでは、このリリースで解決された問題を示します。
+
+|===
+| 問題 | 説明 
+
+
+| PE-10306 | Element 11.8 ストレージノード上の BMC ソフトウェアをアップグレードすると、 BMC ユーザクレデンシャルが失われます。 
+
+
+| CSESF-26 | H610C ノードでは、断続的にファンのノイズが発生することがあります。 
+
+
+| CSESF-293 | H410C 、 H610C 、 H300E 、 H500E 、 H700E の各ノードでバージョン 12.2.92 コンピューティングノードのファームウェアにアップグレードする場合、以前のバージョンでは Mellanox Network Interface Card （ NIC ；ネットワークインターフェイスカード）ファームウェアのバージョン 14.21.1000 がインストールされています。 
+
+
+| CSESF-352 | TLS バージョン 1.0 および 1.1 にはセキュリティ上の脆弱性があります。このリリースでは、 H610C および H615C コンピューティングノードで TLS 1.0 および 1.1 が無効になります。 
+|===
+
+
+== 既知の問題
+
+次の表に、このリリースの既知の問題のうち、一部の環境で日常の運用に影響する可能性があるものを示します。
+
+|===
+| 問題 | 説明 | 回避策 
+
+
+| CSESF-295 | ダウンロード可能なファームウェアパッケージを使用して H410C ノードのファームウェアを更新すると、コンピューティングノードのファームウェアの更新プロセスが BIOS 更新エラーで失敗します。 | BIOS を H410C ノードのバージョン NA3.7 に手動で更新します。 1.を参照します https://mysupport.netapp.com/site/products/all/details/netapp-hci/downloads-tab["NetApp HCI のダウンロードページ"^]。2. ドロップダウンリストのテキストフィールドに「 H410C _ BIOS_3.7 」と入力します。3. 「 * Go 」をクリックします。更新手順は、ダウンロードページに PDF 形式で記載されています。BIOS および BMC を更新したら、コンピューティングファームウェア 12.2.109 パッケージを使用して H410C ノードのファームウェアを更新します。 
+|===

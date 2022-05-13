@@ -1,0 +1,75 @@
+---
+sidebar: sidebar 
+permalink: docs/task_rancher_monitor.html 
+summary: NetApp HCI で Rancher を監視する方法について説明します。 
+keywords: netapp, hci, rancher, deploy, cluster, kubernetes, control plane, monitor, user cluster, workload 
+---
+= NetApp HCI 実装の Rancher を監視する
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ../media/
+
+
+[role="lead"]
+Rancher サーバ、管理クラスタ、およびその他の詳細を監視する方法は複数あります。
+
+* NetApp Hybrid Cloud Control の略
+* Rancher UI
+* NetApp Active IQ の略
+* vCenter Server の各サービスを提供
+
+
+
+
+== NetApp Hybrid Cloud Control を使用してランチャを監視します
+
+NetApp Hybrid Cloud Control を使用して、 rancher URL と rancher サーバクラスタのステータスを確認できます。Rancher が実行されているノードを監視することもできます。
+
+. Element ストレージクラスタ管理者のクレデンシャルを指定して NetApp Hybrid Cloud Control にログインします。
+. ダッシュボードで右上のオプションアイコンをクリックし、 * 構成 * を選択します。
++
+image::hcc_configure.png[Rancher Configuration ページ]
+
+. ノード情報を表示するには、 Hybrid Cloud Control Dashboard でストレージクラスタの名前を展開し、 * Nodes * をクリックします。
+
+
+
+
+== Rancher UI を使用して Rancher を監視します
+
+Rancher UI を使用すると、 NetApp HCI 管理クラスタおよびユーザクラスタ上の rancher に関する情報を確認できます。
+
+
+TIP: Rancher UI では、管理クラスタを「ローカルクラスタ」と呼びます。
+
+. Rancher 展開の最後に提供された URL を使用して、 rancher UI にアクセスします。
+. を参照してください https://rancher.com/docs/rancher/v2.x/en/monitoring-alerting/v2.5/["Rancher v2.5 でのモニタリング"]。
+
+
+
+
+== NetApp Active IQ を使用してランチを監視
+
+NetApp Active IQ を使用すると、インストール情報、ノード、クラスタ、ステータス、ネームスペース情報などのランチツール計測データを表示できます。
+
+. Element ストレージクラスタ管理者のクレデンシャルを指定して NetApp Hybrid Cloud Control にログインします。
+. 右上のメニューから * NetApp Active IQ * を選択します。
+
+
+
+
+== vCenter Server を使用してランチ元を監視する
+
+vCenter Server を使用すると、 Rancher 仮想マシンを監視できます。
+
+[discrete]
+== 詳細については、こちらをご覧ください
+
+* https://rancher.com/docs/rancher/v2.x/en/overview/architecture/["アーキテクチャに関する Rancher ドキュメント"^]
+* https://rancher.com/docs/rancher/v2.x/en/overview/concepts/["Rancher 用の Kubernetes 用語"]
+* https://docs.netapp.com/us-en/vcp/index.html["vCenter Server 向け NetApp Element プラグイン"^]
+* https://www.netapp.com/us/documentation/hci.aspx["NetApp HCI のリソースページ"^]
+

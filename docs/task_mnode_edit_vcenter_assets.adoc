@@ -1,0 +1,105 @@
+---
+sidebar: sidebar 
+permalink: docs/task_mnode_edit_vcenter_assets.html 
+summary: vCenter 管理ノードコントローラは、 REST API UI を使用して編集できます。 
+keywords: netapp, mnode, management node, rest api, hci 
+---
+= 既存のコントローラアセットを表示または編集する
+:allow-uri-read: 
+
+
+[role="lead"]
+REST API を使用して、管理ノード構成内の既存の VMware vCenter コントローラに関する情報を表示および編集することができます。コントローラは、 NetApp HCI 環境の管理ノードに登録されている VMware vCenter インスタンスです。
+
+.作業を開始する前に
+* クラスタで NetApp Element ソフトウェア 11.3 以降を実行していることを確認します。
+* バージョン 11.3 以降を実行する管理ノードを導入しておきます。
+
+
+
+
+== 管理サービス REST API にアクセスします
+
+.手順
+. 管理ノードの IP アドレスに続けて「 /vCenter/1/` 」を入力して、管理サービスの REST API UI にアクセスします。
++
+[listing]
+----
+https://<ManagementNodeIP>/vcenter/1/
+----
+. [* Authorize * （認証） ] または任意のロックアイコンをクリックして、次の手順を実行します。
++
+.. クラスタのユーザ名とパスワードを入力します。
+.. クライアント ID を「 m node-client 」として入力します。
+.. セッションを開始するには、 * Authorize * をクリックします。
+.. ウィンドウを閉じます。
+
+
+
+
+
+
+== 既存のコントローラについて格納されている情報を表示する
+
+管理ノードに登録されている既存の vCenter コントローラをリストし、 REST API を使用してそれらのコントローラに関する格納されている情報を表示できます。
+
+.手順
+. GET / compute / controllers * をクリックします。
+. [* 試してみてください * ] をクリックします。
+. [* Execute] をクリックします。
++
+API は、各コントローラとの通信に使用される IP アドレス、コントローラ ID 、ホスト名、およびユーザ ID とともに、認識されているすべての vCenter コントローラのリストを返します。
+
+. 特定のコントローラの接続ステータスを取得する場合は ' そのコントローラの [id] フィールドからコントローラ ID をクリップボードにコピーし ' を参照してください <<View the status of an existing controller>>。
+
+
+
+
+== 既存のコントローラのステータスを表示します
+
+管理ノードに登録されている既存の vCenter コントローラのステータスを確認できます。この API は、 NetApp Hybrid Cloud Control が vCenter コントローラに接続できるかどうか、およびそのステータスの理由を示すステータスを返します。
+
+.手順
+. GET / compute / controllers / ｛ controller_id ｝ / status * をクリックします。
+. [* 試してみてください * ] をクリックします。
+. 以前にコピーしたコントローラ ID を 'controller_id パラメータに入力します
+. [* Execute] をクリックします。
++
+API は、この vCenter コントローラのステータスとそのステータスの理由を返します。
+
+
+
+
+
+== コントローラの保存されているプロパティを編集します
+
+管理ノードに登録されている既存のすべての vCenter コントローラについて、格納されているユーザ名とパスワードを編集することができます。既存の vCenter コントローラに格納されている IP アドレスは編集できません。
+
+.手順
+. PUT / compute/controllers / ｛ controller_id ｝ * をクリックします。
+. vCenter コントローラのコントローラ ID を 'controller_id パラメータに入力します
+. [* 試してみてください * ] をクリックします。
+. [*Request body*] フィールドで次のいずれかのパラメータを変更します。
++
+|===
+| パラメータ | を入力します | 説明 
+
+
+| 「 userid` 」 | 文字列 | vCenter コントローラとの通信に使用するユーザ ID を変更します（ユーザには管理者権限が必要です）。 
+
+
+| 「 password 」と入力します | 文字列 | vCenter コントローラとの通信に使用するパスワードを変更します。 
+|===
+. [* Execute] をクリックします。
++
+API から更新されたコントローラ情報が返されます。
+
+
+
+[discrete]
+== 詳細については、こちらをご覧ください
+
+* link:task_mnode_add_assets.html["管理ノードにコンピューティングアセットとコントローラアセットを追加します"]
+* https://docs.netapp.com/us-en/vcp/index.html["vCenter Server 向け NetApp Element プラグイン"^]
+* https://www.netapp.com/hybrid-cloud/hci-documentation/["NetApp HCI のリソースページ"^]
+

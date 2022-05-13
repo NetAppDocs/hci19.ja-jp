@@ -1,0 +1,164 @@
+---
+sidebar: sidebar 
+permalink: docs/rancher_prereqs_overview.html 
+summary: NetApp HCI のインストールを成功させるための要件について説明します。 
+keywords: netapp, hci, Rancher, install, installation, requirements 
+---
+= NetApp HCI の Rancher の要件
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ../media/
+
+
+[role="lead"]
+NetApp HCI に Rancher をインストールする前に、環境および NetApp HCI システムがこれらの要件を満たしていることを確認してください。
+
+
+NOTE: 誤った情報（不正な Rancher サーバ FQDN など）を使用して NetApp HCI に Rancher を誤って展開した場合、展開を削除して再展開することなく修正する方法はありません。NetApp HCI インスタンスでランチャを削除してから、ネットアップハイブリッドクラウド制御 UI から NetApp HCI 上のランチャを再導入する必要があります。を参照してください link:task_rancher_remove_deployment.html["NetApp HCI でランチツールをインストールした場合は、取り外します"^] を参照してください。
+
+
+
+== ノード要件
+
+* NetApp HCI システムに少なくとも 3 つのコンピューティングノードがあることを確認します。耐障害性を最大限に高めるには、この設定が必要です。NetApp HCI の Rancher は、ストレージ専用の構成ではサポートされていません。
+* NetApp HCI 環境で Rancher に使用するデータストアに少なくとも 60GB の空きスペースがあることを確認してください。
+* NetApp HCI クラスタで管理サービスバージョン 2.17 以降が実行されていることを確認します。
+
+
+
+
+=== ノードの詳細
+
+NetApp HCI の Rancher は、 3 ノード管理クラスタを導入しました。
+
+すべてのノードに次の特徴があります。
+
+[cols="15,15, 15"]
+|===
+| vCPU | RAM （ GB ） | ディスク（ GB ） 
+
+
+| 2. | 8. | 20 
+|===
+
+
+== ネットワーク要件
+
+* NetApp HCI 管理クラスタにランチサーバを導入するネットワークに、管理ノード管理ネットワークへのルートがあることを確認します。
+* NetApp HCI の Rancher は、コントロールプレーン（ Rancher サーバ）およびユーザクラスタの DHCP アドレスをサポートしていますが、実稼働環境には静的 IP アドレスを推奨します。本番環境に導入する場合は、必要な静的 IP アドレスを割り当てておきます。
++
+** Rancher サーバには、 3 つのスタティック IP アドレスが必要です。
+** 各ユーザクラスタには、クラスタ内のノードと同じ数の静的 IP アドレスが必要です。たとえば、 4 つのノードからなるユーザクラスタには、静的 IP アドレスが 4 つ必要です。
+** Rancher コントロールプレーンまたはユーザクラスタに DHCP アドレッシングを使用する場合は、 DHCP リース期間が 24 時間以上であることを確認してください。
+
+
+* HTTP プロキシを使用して NetApp HCI 上の rancher のインターネットアクセスを有効にする必要がある場合は、管理ノードに展開前の変更を加える必要があります。SSH を使用して管理ノードにログインし、を実行します 。 https://docs.docker.com/config/daemon/systemd/#httphttps-proxy["手順"^] Docker のプロキシ設定を手動で更新するための Docker ドキュメント。
+* 展開時にプロキシサーバをイネーブルにして設定すると、次の IP アドレス範囲とドメインが自動的に rancher server noProxy 設定に追加されます。
++
+[listing]
+----
+127.0.0.0/8, 10.0.0.0/8, 172.16.0.0/12, 192.168.0.0/16, .svc, .cluster.local
+----
+* 管理ノードが DNS を使用してホスト名「 < 任意の IP アドレス >.nip.io 」を IP アドレスに解決できることを確認します。導入時に使用される DNS プロバイダです。管理ノードでこの URL を解決できない場合、導入は失敗します。
+* 必要な静的 IP アドレスごとに DNS レコードが設定されていることを確認します。
+
+
+
+
+== VMware vSphere の要件
+
+* 使用している VMware vSphere インスタンスがバージョン 6.5 、 6.7 、または 7.0 であることを確認します。
+* vSphere Standard Switch （ VSS ）ネットワーク構成を使用することもできますが、その場合は、ランチ元 VM に使用される仮想スイッチと物理ホストが、通常の VM の場合と同じ方法ですべての同じポートグループにアクセスできるようにします。
+
+
+
+
+== 導入に関する考慮事項
+
+必要に応じて、次の点を確認してください。
+
+* 導入のタイプ
++
+** デモ環境
+** 本番環境への導入
+
+
+* Rancher FQDN
+
+
+
+TIP: NetApp HCI の Rancher は、何らかのタイプのネットワークロードバランシングを設定しないかぎり、ノード障害に対する復元力がありません。簡単な解決策として、 rancher サーバ用に予約されている 3 つのスタティック IP アドレスのラウンドロビン DNS エントリを作成します。これらの DNS エントリは、 Rancher サーバホストにアクセスするために使用する rancher サーバ FQDN に解決する必要があります。これは、展開が完了すると rancher Web UI を提供します。
+
+
+
+=== 導入のタイプ
+
+NetApp HCI に Rancher を展開するには、次の方法があります。
+
+* * デモ展開 *: ターゲットの展開環境で DHCP が利用可能で、 NetApp HCI 機能で Rancher をデモする場合は、 DHCP 展開が最も効果的です。
++
+この配置モデルでは、管理クラスタ内の 3 つのノードのそれぞれから Rancher UI にアクセスできます。
+
++
+組織で DHCP を使用していない場合でも、本番環境の場合と同様に、導入前に割り当てられた 4 つの静的 IP アドレスを使用して DHCP を試してみることができます。
+
+* * 本番環境の導入 * ：本番環境の導入で DHCP を使用できない場合は、導入前の作業が多少必要です。最初のステップでは、連続する 3 つの IP アドレスを取得します。の導入時に最初に入力します。
++
+本番環境では、 L4 ロードバランシングまたはラウンドロビン DNS 構成を使用することを推奨します。これには、 4 番目の IP アドレスと、 DNS 構成内の個別のエントリが必要です。
+
++
+** *L4 ロードバランシング *: nginx のようなアプリケーションをホストする仮想マシンまたはコンテナが、管理クラスタの 3 つのノードに要求を分散するように設定されている手法です。
+** * ラウンドロビン DNS * ： DNS システムで単一のホスト名が設定されている手法で、管理クラスタを形成する 3 つのホスト間で要求の回転を行います。
+
+
+
+
+
+
+=== Rancher FQDN
+
+インストールには、 Rancher URL を割り当てる必要があります。これには、インストールの完了後に Rancher UI が提供されるホストの完全修飾ドメイン名（ FQDN ）が含まれます。
+
+いずれの場合も、 rancher UI には https プロトコル（ポート 443 ）経由でブラウザからアクセスできます。
+
+本番環境では、管理クラスタノード全体に負荷が分散されるように FQDN が設定されている必要があります。FQDN とロードバランシングを使用しないと耐障害性に優れないため、デモ環境にのみ適しています。
+
+
+
+== 必要なポート
+
+「のポート」に含まれるポートのリストを確認してください Rancher Nodes on RKE 」の項を参照してください 公式のセクション https://rancher.com/docs/rancher/v2.x/en/installation/requirements/ports/#ports-for-rancher-server-nodes-on-rke["Rancher の文書"^] Rancher サーバーを実行しているノードとの間でファイアウォール設定を開いている。
+
+
+
+== 必要な URL
+
+次の URL は、 Rancher コントロールプレーンが存在するホストからアクセスできる必要があります。
+
+|===
+| URL | 説明 
+
+
+| https://charts.jetstack.io/[] | Kubernetes の統合 
+
+
+| https://releases.rancher.com/server-charts/stable[] | Rancher ソフトウェアのダウンロード 
+
+
+| https://entropy.ubuntu.com/[] | 乱数生成用 Ubuntu エントロピーサービス 
+
+
+| https://raw.githubusercontent.com/vmware/cloud-init-vmware-guestinfo/v1.3.1/install.sh[] | VMware ゲストの追加 
+
+
+| https://download.docker.com/linux/ubuntu/gpg[] | Docker Ubuntu GPG 公開鍵 
+
+
+| https://download.docker.com/linux/ubuntu[] | Docker ダウンロードリンク 
+
+
+| https://hub.docker.com/[] | NetApp Hybrid Cloud Control 用 Docker Hub 
+|===

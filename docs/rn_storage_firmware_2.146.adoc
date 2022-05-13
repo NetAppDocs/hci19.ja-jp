@@ -1,0 +1,266 @@
+---
+sidebar: sidebar 
+permalink: docs/rn_storage_firmware_2.146.html 
+summary: NetApp HCI ノードにダウンロードして適用できるファームウェアパッケージのリリースノートへのリンクを入手できます。 
+keywords: netapp, hci, storage firmware 
+---
+= ストレージファームウェアバンドル 2.146 リリースノート
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ../media/
+:keywords: hci, release notes, vcp, element, management services, firmware
+
+
+[role="lead"]
+Element 12.0 以降および管理サービスバージョン 2.14 以降では、 NetApp Hybrid Cloud Control の UI と REST API を使用して、ストレージノードでファームウェアのみのアップグレードを実行できます。この手順では、 Element ソフトウェアはアップグレードされず、 Element のメジャーリリース以外のバージョンのストレージファームウェアもアップグレードできます。
+
+
+
+== 新機能
+
+ストレージファームウェアバンドルバージョン 2.146 には、セキュリティの脆弱性に対する修正など、さまざまなバグ修正と新機能が含まれています。の手順に従って、ストレージファームウェアをアップグレードできます link:task_hcc_upgrade_storage_firmware.html["ストレージファームウェアをアップグレードします"]。
+
+
+
+=== ファームウェアコンポーネントが更新されました
+
+このファームウェアパッケージには、次のファームウェアバージョンが含まれています。これらのファームウェアバージョンは、太字で更新されています。
+
+
+
+==== H610S
+
+|===
+| コンポーネント | H610S 
+
+
+| BIOS | * 3B11 * 
+
+
+| BMC の場合 | * 3.94.07 * 
+
+
+| NIC / Mellanox | 14.25.1020 
+
+
+| NVDIMM 、 Smart Gen1 | 3.1 
+
+
+| NVDIDIMM 、 Smart Gen2 | * 3.3 * 
+
+
+| BPM 、 Smart Gen1 | 2.16 
+
+
+| bpm 、 SMART Gen2 | 2.16 
+
+
+| NVDIMM 、 Micron Gen1 | 26.2c 
+
+
+| NVDIMM 、 Micron Gen2 | 25.3c 
+
+
+| PGEM 、 Micron 社 | 1.40 
+
+
+| PM963 、 SED | CXV8202Q 
+
+
+| PM963 、 N-SED | CXV8501Q 
+
+
+| PM983 、 SED | * EDA5602Q * 
+
+
+| PM983 、 N-SED | * EDA5900Q * 
+
+
+| * PM9A3 、 SED * | * GDC5502Q * 
+
+
+| CD5 、 SED | 0109 
+
+
+| CD5 、 N-SED | 0109 
+
+
+| CD5 、 FIPS | 0108. 
+
+
+| * PE8010 、 SED * | * 11092A10 * 
+
+
+| * PE8010 、 N-SED * | * 110B2A10 * 
+|===
+
+
+==== H410S
+
+|===
+| コンポーネント | H410S 
+
+
+| BIOS | * NAT3.4 * 
+
+
+| BMC の場合 | * 6.98.00 * 
+
+
+| NIC / Mellanox | 14.25.1020 
+
+
+| RMS200 | aeb8cc 
+
+
+| RMS300 | 7d8422bc 
+
+
+| PM863 、 SED | GXT5404Q 
+
+
+| PM863 、 N-SED | GXT5103Q 
+
+
+| PM883 、 SED | * HXT7A04Q * 
+
+
+| Hawk-4 、 SED | 8ENP7101 
+
+
+| Hawk-4 、 N-SED | 8ENP6101 
+|===
+
+
+==== SF38410 、 SF19210 、 SF9605 、および SF4805
+
+|===
+| コンポーネント | SF38410 、 SF19210 、 SF9605 、および SF4805 
+
+
+| Broadcom NIC | 7.10.18 
+
+
+| RMS200 | aeb8cc 
+
+
+| RMS300 | 7d8422bc 
+
+
+| SAS アダプタ | 16.00.01.00 
+
+
+| PM863 、 SED | GXT5404Q 
+
+
+| PM863 、 N-SED | GXT5103Q 
+
+
+| PM883 、 SED | * HXT7A04Q * 
+
+
+| Hawk-4 、 SED | 8ENP7101 
+
+
+| Hawk-4 、 N-SED | 8ENP6101 
+|===
+
+NOTE: 次の表に、この Storage Firmware Bundle リリースでサポートされる SF38410 、 SFG19210 、 SF9605 、および SF4805 のコンポーネントファームウェアのバージョンを示します。ただし、これらのコンポーネントファームウェアをストレージファームウェアバンドル経由で更新することはできません。
+
+|===
+| コンポーネント | SF38410 、 SF19210 、 SF9605 、および SF4805 
+
+
+| BIOS | 2.8.0 
+
+
+| iDRAC | 2.75.75.75 
+|===
+
+
+== ストレージファームウェアコンポーネントの変更点
+
+|===
+| コンポーネント | 改善 / 変更 
+
+
+| * H610S 3B11 *  a| 
+* IPU 2020.2 マイクロコード
+* SEL での PPR イベントのロギングの強化
+* NVDIMM を解除し、 UECC が NVDIMM で発生したときに ADR を無効にします
+* SEL ログで NVDIMM ARM のステータスを報告します
+
+
+
+
+| * H610S 3.94.07 *  a| 
+* NVDIMM ログのサポートが Web UI で追加されました
+* BMC SEL の BIOS PPR イベントログ解析
+
+
+
+
+| * H410S NA3.4 *  a| 
+* パケット後修復（ PPR ）を有効にする
+* IPU 2020.2 マイクロコード
+
+
+
+
+| * H410S 6.98.00 *  a| 
+* LDAP バインド ID フィールドの長さは 128 文字です
+* TLS 1.0 および TLS 1.1 を無効にします
+
+
+|===
+
+
+== 解決済みの問題と既知の問題
+
+を参照してください https://mysupport.netapp.com/site/bugs-online/product["Bugs Online のツール"^] 解決済みの問題と新しい問題の詳細については、を参照してください。
+
+
+
+=== Bugs Online のツールへのアクセス
+
+. に移動します  https://mysupport.netapp.com/site/bugs-online/product["Bugs Online のツール"^] ドロップダウンリストから * Element Software * を選択します。
++
+image::bol_dashboard.png[ストレージファームウェアバンドルのリリースノート]
+
+. キーワード検索フィールドに「 Storage Firmware Bundle 」と入力して、「 * New Search* 」をクリックします。
++
+image::storage_firmware_bundle_choice.png[ストレージファームウェアバンドルのリリースノート]
+
+. 解決済みまたはオープン状態のバグのリストが表示されます。次のように結果をさらに絞り込むことができます。
++
+image::bol_list_bugs_found.png[ストレージファームウェアバンドルのリリースノート]
+
+
+
+
+
+== セキュリティの脆弱性を解決
+
+このリリースで解決されたセキュリティの脆弱性は次のとおりです。
+
+* CVE-2012-2840 、 CVE-2011-23841
+* CVE-2021-20265
+* CVE-2011-2650
+* CVE-20120-14386 、 CVE-20120-14314 、 CVE-20120-25641
+* CVE-20120-3508 、 CVE-20-36312
+* CVE-20120-20811 、 CVE-20120-20812
+* CVE-20-15436
+* CVE-20-29372
+* CVE-2015-0151 、 CVE-2015-0123 、 CVE-20119-0117
+
+
+[discrete]
+== 詳細については、こちらをご覧ください
+
+* https://docs.netapp.com/hci/index.jsp["NetApp HCI ドキュメントセンター"^]
+* https://www.netapp.com/hybrid-cloud/hci-documentation/["NetApp HCI のリソースページ"^]
+* https://kb.netapp.com/Advice_and_Troubleshooting/Flash_Storage/SF_Series/How_to_update_iDRAC%2F%2FBIOS_firmware_on_SF_Series_nodes["KB ： SF シリーズノードで IDRAC / BIOS ファームウェアを更新する方法"^]
+

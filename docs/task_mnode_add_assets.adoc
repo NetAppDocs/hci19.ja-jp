@@ -1,0 +1,175 @@
+---
+sidebar: sidebar 
+permalink: docs/task_mnode_add_assets.html 
+summary: REST API UI を使用して、管理ノードの構成にコンピューティングアセットとコントローラアセットを追加できます。 
+keywords: netapp, mnode, management node, rest api, hci 
+---
+= 管理ノードにコンピューティングアセットとコントローラアセットを追加します
+:allow-uri-read: 
+
+
+[role="lead"]
+REST API UI を使用して、管理ノードの構成にコンピューティングアセットとコントローラアセットを追加できます。
+
+アセットの追加は、環境を拡張したあとに、新しいアセットが構成に自動的に追加されなかった場合などに必要になります。これらの API を使用して、最近追加されたアセットを環境に追加します。
+
+.必要なもの
+* クラスタで NetApp Element ソフトウェア 11.3 以降を実行している必要があります。
+* バージョン 11.3 以降を実行する管理ノードを導入しておきます。
+* これで完了です link:task_mnode_create_netapp_hcc_role_vcenter.html["vCenter で新しい NetApp HCC ロールを作成しました"] 管理ノードのサービス表示をネットアップ専用のアセットに制限します。
+* vCenter の管理 IP アドレスとクレデンシャルが必要です。
+* コンピューティングノード（ ESXi ）の管理 IP アドレスとルートクレデンシャルが必要です。
+* ハードウェア（ BMC ）の管理 IP アドレスと管理者のクレデンシャルが必要です。
+
+
+（ NetApp HCI のみ） NetApp HCI システムの拡張後に Hybrid Cloud Control （ HCC ）にコンピューティングノードが表示されない場合は、この手順で説明する「 POST /assets/｛ asset_id ｝ /compute-nodes 」を使用してコンピューティングノードを追加できます。
+
+
+NOTE: コンピューティングノードを手動で追加する場合は、 BMC アセットも追加するようにしてください。追加しないとエラーが返されます。
+
+.手順
+. インストールのベースアセット ID を取得します。
++
+.. 管理ノードでインベントリサービス REST API UI を開きます。
++
+[listing]
+----
+https://<ManagementNodeIP>/inventory/1/
+----
+.. 「 * Authorize * 」（認証）を選択して、次の手順を実行
++
+... クラスタのユーザ名とパスワードを入力します。
+... クライアント ID を「 m node-client 」として入力します。
+... セッションを開始するには、 * Authorize * を選択します。
+... ウィンドウを閉じます。
+
+
+.. REST API UI で、 * 一部のユーザに一時的な処理を開始 / インストール * を選択します。
+.. [* 試してみてください * ] を選択します。
+.. [* Execute] を選択します。
+.. コード 200 の応答本文から ' インストールの ID をコピーします
++
+[listing, subs="+quotes"]
+----
+{
+  "installations": [
+    {
+      "_links": {
+        "collection": "https://10.111.211.111/inventory/1/installations",
+        "self": "https://10.111.217.111/inventory/1/installations/abcd01e2-ab00-1xxx-91ee-12f111xxc7x0x"
+      },
+      *"id": "abcd01e2-ab00-1xxx-91ee-12f111xxc7x0x",*
+----
++
+
+NOTE: インストール環境には、インストールまたはアップグレード時に作成されたベースアセットの構成が含まれています。
+
+.. REST API UI から、 * GET / Installations / ｛ id ｝ * を選択します。
+.. [* 試してみてください * ] を選択します。
+.. インストールアセット ID を *id* フィールドに貼り付けます。
+.. [* Execute] を選択します。
+.. 応答から、後の手順で使用するために、クラスタコントローラ ID （「 ControllerID 」）をコピーして保存します。
+
+
+. （コンピューティングノードのみ） xref:task_mnode_locate_hardware_tag.adoc[コンピューティングノードのハードウェアタグを確認します] vSphere で実行されます。
+. コントローラアセット（ vCenter ）、コンピューティングノード（ ESXi ）、またはハードウェア（ BMC ）を既存のベースアセットに追加するには、次のいずれかを選択します。
++
+[cols="40,60"]
+|===
+| オプション | 説明 
+
+
+| POST / assets / ｛ asset_id ｝ / コントローラ  a| 
+.. 管理ノードで mNode サービス REST API UI を開きます。
++
+[listing]
+----
+https://<ManagementNodeIP>/mnode
+----
++
+... 「 * Authorize * 」（認証）を選択して、次の手順を実行
++
+.... クラスタのユーザ名とパスワードを入力します。
+.... クライアント ID を「 m node-client 」として入力します。
+.... セッションを開始するには、 * Authorize * を選択します。
+.... ウィンドウを閉じます。
+
+
+
+
+.. 「 * POST /assets/｛ asset_id ｝ /controllers * 」を選択します。
+.. [* 試してみてください * ] を選択します。
+.. 親ベースアセット ID を「 * asset_id * 」フィールドに入力します。
+.. 必要な値をペイロードに追加します。
+.. [* Execute] を選択します。
+
+
+
+
+| POST / assets / ｛ asset_id ｝ / compute-nodes  a| 
+.. 管理ノードで mNode サービス REST API UI を開きます。
++
+[listing]
+----
+https://<ManagementNodeIP>/mnode
+----
++
+... 「 * Authorize * 」（認証）を選択して、次の手順を実行
++
+.... クラスタのユーザ名とパスワードを入力します。
+.... クライアント ID を「 m node-client 」として入力します。
+.... セッションを開始するには、 * Authorize * を選択します。
+.... ウィンドウを閉じます。
+
+
+
+
+.. 「 * POST /assets/｛ asset_id ｝ /compute-nodes 」を選択します。
+.. [* 試してみてください * ] を選択します。
+.. 前の手順でコピーした親ベースアセットの ID を「 * asset_id * 」フィールドに入力します。
+.. ペイロードで、次の手順を実行します。
++
+... ノードの管理 IP を [IP ] フィールドに入力します
+... 「 hardwareTag 」には、前の手順で保存したハードウェアタグ値を入力します。
+... 必要に応じて、他の値を入力します。
+
+
+.. [* Execute] を選択します。
+
+
+
+
+| POST / assets / ｛ asset_id ｝ / ハードウェアノード  a| 
+.. 管理ノードで mNode サービス REST API UI を開きます。
++
+[listing]
+----
+https://<ManagementNodeIP>/mnode
+----
++
+... 「 * Authorize * 」（認証）を選択して、次の手順を実行
++
+.... クラスタのユーザ名とパスワードを入力します。
+.... クライアント ID を「 m node-client 」として入力します。
+.... セッションを開始するには、 * Authorize * を選択します。
+.... ウィンドウを閉じます。
+
+
+
+
+.. 「 * POST /assets/｛ asset_id ｝ /hardware-nodes 」を選択します。
+.. [* 試してみてください * ] を選択します。
+.. 親ベースアセット ID を「 * asset_id * 」フィールドに入力します。
+.. 必要な値をペイロードに追加します。
+.. [* Execute] を選択します。
+
+
+|===
+
+
+[discrete]
+== 詳細については、こちらをご覧ください
+
+* https://docs.netapp.com/us-en/vcp/index.html["vCenter Server 向け NetApp Element プラグイン"^]
+* https://www.netapp.com/hybrid-cloud/hci-documentation/["NetApp HCI のリソースページ"^]
+

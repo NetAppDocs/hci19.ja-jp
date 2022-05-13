@@ -1,0 +1,65 @@
+---
+sidebar: sidebar 
+permalink: docs/task_mnode_logs.html 
+summary: REST API を使用して、管理 ndoe で実行されているサービスからログを取得できます。 
+keywords: netapp, element, management node, management services, mnode, logs 
+---
+= 管理サービスからログを取得しています
+:allow-uri-read: 
+
+
+[role="lead"]
+REST API を使用して、管理ノードで実行されているサービスからログを取得できます。すべてのパブリックサービスからログを取得したり、特定のサービスを指定したりできます。また、クエリパラメータを使用して、取得する内容を細かく絞り込むこともできます。
+
+.必要なもの
+* クラスタで NetApp Element ソフトウェア 11.3 以降を実行している必要があります。
+* バージョン 11.3 以降を実行する管理ノードを導入しておきます。
+
+
+.手順
+. 管理ノードで REST API UI を開きます。
++
+[listing]
+----
+https://<ManagementNodeIP>/mnode
+----
+. 「 * Authorize * （認証）」または任意のロックアイコンを選択し、次の手順を実行します。
++
+.. クラスタのユーザ名とパスワードを入力します。
+.. mnode-client の値がまだ入力されていない場合は、クライアント ID を入力します。
+.. セッションを開始するには、 * Authorize * を選択します。
+.. ウィンドウを閉じます。
+
+
+. 「 * get/logs * 」を選択します。
+. [* 試してみてください * ] を選択します。
+. 次のパラメータを指定します。
++
+** 「 Lines 」：ログから返される行数を入力します。このパラメータは整数で、デフォルトは 1000 です。
++
+
+TIP: Lines を 0 に設定して、ログコンテンツの履歴全体を要求しないでください。
+
+** [`ince] ：サービスログの開始時点の ISO-8601 タイムスタンプを追加します。
++
+
+TIP: より広いタイムパンのログを収集する場合は、妥当な「 ince」 パラメータを使用してください。
+
+** 「 service-name 」：サービス名を入力します。
++
+
+TIP: 管理ノード上のサービスを一覧表示するには 'get/services' コマンドを使用します
+
+** 'setp` ：停止したサービスからログを取得するには 'true' に設定します
+
+
+. [* Execute] を選択します。
+. 応答の本文から「 * Download * 」を選択して、ログ出力を保存します。
+
+
+[discrete]
+== 詳細はこちら
+
+* https://docs.netapp.com/us-en/vcp/index.html["vCenter Server 向け NetApp Element プラグイン"^]
+* https://www.netapp.com/hybrid-cloud/hci-documentation/["NetApp HCI のリソースページ"^]
+
