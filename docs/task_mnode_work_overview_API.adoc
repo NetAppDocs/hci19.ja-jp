@@ -15,14 +15,14 @@ REST API で実行できるタスクは次のとおりです。
 
 
 
-=== 承認
+== 承認
 
 * link:task_mnode_api_get_authorizationtouse.html["REST API を使用するための許可を取得する"]
 
 
 
 
-=== アセットの設定
+== アセットの設定
 
 * link:task_mnode_enable_activeIQ.html["Active IQ と NetApp HCI の監視を有効にします"]
 * link:task_mnode_configure_proxy_server.html["管理ノード用のプロキシサーバを設定します"]
@@ -33,7 +33,7 @@ REST API で実行できるタスクは次のとおりです。
 
 
 
-=== 資産管理
+== 資産管理
 
 * link:task_mnode_edit_vcenter_assets.html["既存のコントローラアセットを表示または編集する"]
 * link:task_mnode_manage_storage_cluster_assets.html["ストレージクラスタアセットを作成および管理する"]

@@ -10,7 +10,7 @@ settings:
 sidebar:
   entries:
   - title: NetApp HCI のドキュメント
-    url: "/index.html"
+    url: "/docs/index.html"
   - title: NetApp HCI ソリューション
     url: https://docs.netapp.com/us-en/hci-solutions/index.html
   - title: リリースノート
