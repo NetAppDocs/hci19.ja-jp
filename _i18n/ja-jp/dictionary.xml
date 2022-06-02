@@ -503,7 +503,6 @@
   <block id="bfc5232cd54db21b7879b3adc6550835" category="paragraph">Hybrid Cloud Control のダッシュボードでアラートを確認して対応することができます。</block>
   <block id="92f931e19caf8af4e3a31a82b06ccabd" category="summary">NetApp HCI ノードにダウンロードして適用できるファームウェアパッケージのリリースノートへのリンクを入手できます。</block>
   <block id="7a02f75af06b21c7f1cfccabab836899" category="doc">Compute Firmware Bundle 2.76 リリースノート</block>
-  <block id="c04379119f71302691848047a912bf77" category="paragraph">ダウンロード可能なコンピューティングノードファームウェアパッケージには、 BIOS と BMC の最新機能拡張、バグ修正、およびサポートされているすべての NetApp HCI コンピューティングノードに対するハードウェアサポートが含まれています。</block>
   <block id="5fef629b836b60819e0c0ce49cd2b9d7" category="section-title">新機能</block>
   <block id="5d97960a6eafabed18140433c99665c6" category="paragraph">バージョン 2.76 には一般的なバグ修正が含まれています。</block>
   <block id="692731d8e937243e33f91c14df51cf3f" category="section-title">ファームウェアコンポーネントが更新されました</block>
@@ -3505,29 +3504,21 @@
   <block id="24aff39b6c002fcae2afa707e6dba7be" category="paragraph">アップグレードシナリオに関連するオプションを選択します。</block>
   <block id="aaf077919c3a33948d4c6f6869ac6de2" category="list-text"><block ref="2f3f84c67669f9390053a8a70cc30811" category="inline-xref-macro-rx"></block> （推奨）</block>
   <block id="c2b8ce6217c717bb4cf813b9002845d8" category="list-text"><block ref="b1a3460e81a377a120ecdc0296fecd85" category="inline-xref-macro-rx"></block></block>
-  <block id="bf881b2333a1be30f9e61518fed37215" category="list-text"><block ref="e445c7a7a2b2d959ddf443369364b480" category="inline-xref-macro-rx"></block></block>
   <block id="fea8733cb5d299251fb403db55d36c8e" category="list-text"><block ref="892214ad68d853838374848e25f4a43c" category="inline-xref-macro-rx"></block></block>
   <block id="8badc716b7bb810ab4db2a05996c128e" category="section-title">NetApp Hybrid Cloud Control の UI を使用してコンピューティングをアップグレードします ノード</block>
   <block id="39298a57d99d452e16e020b7ccbd4095" category="paragraph">管理サービス 2.14 以降では、 NetApp Hybrid Cloud Control の UI を使用してコンピューティングノードをアップグレードできます。ノードのリストから、アップグレードするノードを選択する必要があります。[ 現行バージョン * ] タブには現在のファームウェアバージョンが表示され、 [ 提案されたバージョン * ] タブには利用可能なアップグレードバージョンが表示されます（存在する場合）。</block>
   <block id="9c09357fb6d5191d3a1913dd3c4401ef" category="admonition">アップグレードを成功させるには、 vSphere クラスタの健全性チェックが成功していることを確認します。</block>
-  <block id="22ff0969c4e3b2efc4c69d4132ff6e00" category="admonition">ダークサイトのアップグレードでは、アップグレードパッケージと管理ノードがどちらもローカルの場合、アップロード時間を短縮できます。</block>
   <block id="6f7ebeb72eb48d89aa2787433989b6b5" category="admonition">管理ノードと BMC ホスト間のネットワーク接続の速度によっては、 NIC 、 BIOS 、および BMC のアップグレードにノードあたり約 60 分かかることがあります。</block>
   <block id="abca9e82408ff65627f936784141931b" category="inline-xref">USB ドライブ</block>
   <block id="e06e1c211afdb87bf0364232088b0c36" category="inline-xref">BMC UI</block>
-  <block id="ee32ec3c00387e48d64d3e91709654f2" category="admonition">NetApp Hybrid Cloud Control UI を使用して、 H300E 、 H500E 、 H700E の各コンピューティングノードのコンピューティングファームウェアをアップグレードできなくなりました。をアップグレードする場合は、を使用することを推奨します <block ref="4d9d1e5487766b88d4d71ed7b5cbc3b9" category="inline-xref-macro-rx"></block> または <block ref="1f3fb96b93183df027058d51b91b7971" category="inline-xref-macro-rx"></block> コンピューティングファームウェアの ISO をマウントします。</block>
-  <block id="0402b00545fce110121d27e3e0116320" category="list-text">管理ノードがインターネットに接続されていない場合は、からコンピューティングノードのファームウェアパッケージをダウンロードしておきます<block ref="3a326a2da6806c2b958ef45116362803" category="inline-link-rx"></block>。</block>
-  <block id="2c3b3b59652bc3410e7853f9e03eb5e3" category="admonition">TAR.GZ` ファイルを TAR ファイルに抽出してから 'TAR ファイルを ISO に抽出してください</block>
   <block id="90b3d6cdea919388440a96816e53ea24" category="list-text">[ アップグレード * （ Upgrades * ） ] ページで、 [ ファームウェアの計算（ Compute firmware ） ] を選択します。</block>
   <block id="fa7063e93d956bc8344f5540bf669b09" category="list-text">アップグレードするクラスタを選択します。</block>
   <block id="1051fa9779041ad6e9ee3beab1a5804e" category="paragraph">クラスタ内のノードは、現在のファームウェアバージョンと新しいバージョン（アップグレード可能な場合）に加えてリストに表示されます。</block>
-  <block id="1ec7d94e055dd1b38fea54a8c52a7107" category="list-text">アップグレードパッケージを選択します。</block>
   <block id="ad658e59cd09feeecf6b238e019458b8" category="paragraph">[*Begin Upgrade*] を選択すると、ウィンドウに失敗したヘルスチェックがある場合は表示されます。</block>
   <block id="a3341b6eded1e35dfa9b561f8a07b57d" category="admonition">アップグレードは開始後に一時停止できません。ファームウェアは、 NIC 、 BIOS 、および BMC の順序で順番に更新されます。アップグレード中は BMC UI にログインしないでください。BMC にログインすると、アップグレードプロセスを監視する Hybrid Cloud Control Serial-Over-LAN （ SOL ）セッションが終了します。</block>
   <block id="466e65481ab5efa6812230aeb4b69f80" category="list-text">クラスタレベルまたはノードレベルでヘルスチェックに警告が渡され、重大な障害がなければ、「 * アップグレードの準備が完了しています * 」と表示されます。[ ノードのアップグレード ] を選択します。</block>
   <block id="576792eafbabeb08a721725d8cd7f8c5" category="admonition">アップグレードの実行中は、ページを離れてあとから表示し、進捗状況の監視を続行できます。アップグレードの実行中、アップグレードのステータスに関するさまざまなメッセージが UI に表示されます。</block>
-  <block id="79df72a933d3593ef7d9131e8d7c509c" category="admonition">H610C および H615S コンピューティングノードのファームウェアをアップグレードする場合は、 BMC Web UI から Serial-Over-LAN （ SOL ）コンソールを開かないでください。これにより、アップグレードが失敗する場合があります。</block>
   <block id="f018c25e2ba6e7d9e59d6f27fbefc1d1" category="paragraph">アップグレードの完了後に、 UI にメッセージが表示されます。アップグレードの完了後にログをダウンロードできます。</block>
-  <block id="c39906efe5a223585b255a41266ea9c8" category="list-text">からダウンロードしたアップグレードパッケージをアップロードするには、 * Browse * を選択します<block ref="132031089c33792b234781a9d8501a93" category="inline-link-rx"></block>。</block>
   <block id="67986ad534a347b7de1afe60bc4bad42" category="admonition">ブラウザウィンドウから別の場所に移動すると、ファイルのアップロードがバックグラウンドで実行されます。</block>
   <block id="21ab535a80a78a0fb75c944c402b4134" category="paragraph">ファイルのアップロードと検証が完了すると、画面にメッセージが表示されます。検証には数分かかることがあります。アップグレードの完了後にログをダウンロードできます。アップグレードステータスのさまざまな変更については、を参照してください <block ref="963ffe23b927e51707381f60a050d9f4" category="inline-xref-macro-rx"></block>。</block>
   <block id="ab57fd0432e25d5b3013133a1c910d56" category="inline-link-macro">KB</block>
@@ -3547,12 +3538,8 @@
   <block id="28e250dd03d1d6c42bd639d46927b2f8" category="paragraph">API を使用して、クラスタ内の各コンピューティングノードを最新のファームウェアバージョンにアップグレードできます。API の実行には、任意の自動化ツールを使用できます。ここで説明する API ワークフローでは、例として管理ノードで使用可能な REST API UI を使用します。</block>
   <block id="571ebba046dfc62ef7155919bf315d2d" category="paragraph">vCenter やハードウェアのアセットなど、コンピューティングノードのアセットを管理ノードのアセットに認識しておく必要があります。インベントリサービス API を使用して、アセットを確認できます (`https://&lt;ManagementNodeIP&gt;/inventory/1/` ) 。</block>
   <block id="689c642c94aa6268a48bbbc19bb529c5" category="list-text">管理ノードでパッケージサービス REST API UI を開きます。</block>
-  <block id="325b3df765685b8bf7d0a291e60ff0d7" category="list-text">応答から、後の手順で使用するために、アップグレードパッケージ名（「 packageName 」）とパッケージバージョン（「 packageVersion 」）をコピーして保存します。</block>
   <block id="4876c936414c8b50876cdff810c036bd" category="inline-link">ページをダウンロードします</block>
-  <block id="aa9d5bf83f31cb6b0178cd6fca1bf339" category="list-text">NetApp HCI ソフトウェアにアクセスします<block ref="5edcf9a6caebd1bfc3b9c296487defc8" category="inline-link-rx"></block> をクリックし、管理ノードからアクセス可能なデバイスに最新のコンピューティングノードファームウェアイメージをダウンロードします。</block>
-  <block id="6020d7988dfd2e648ba586d737e1f210" category="list-text">コンピューティングファームウェアのアップグレードパッケージを管理ノードにアップロードします。</block>
   <block id="ec1ddc98a355dba89ef5b1ccc291885d" category="list-text">前の手順でコピーしたパッケージ ID を * id * で入力します。</block>
-  <block id="62924c929d970628e011c457f2df9215" category="list-text">応答から ' 後の手順で使用するために ' アップグレード・パッケージ名 (`name"') とパッケージ・バージョン (`version"') をコピーして保存します</block>
   <block id="a73185557316cb4d3140159601de085c" category="list-text">アップグレードするノードのコンピューティングコントローラ ID とノードハードウェア ID を確認します。</block>
   <block id="85c0d6693a939b1228351b83c2bc5327" category="list-text">応答から、インストールアセット ID （「 id 」）をコピーします。</block>
   <block id="c1b6479fd9c7db0471ff4d500bfa314c" category="list-text">応答から、後の手順で使用するために、クラスタコントローラ ID （「 ControllerID 」）とノードハードウェア ID （「 hardwareId 」）をコピーして保存します。</block>
@@ -3563,7 +3550,6 @@
   <block id="7271267de19060ea8c43031aa1e16351" category="list-text">ペイロード値については、次の手順を実行します。</block>
   <block id="951849308163feee05b1b4f669f83c91" category="list-text">ノードでヘルスチェックが実行され、 ESXi ホストがメンテナンスモードに設定されるように、値「 force 」： false 」および「 maintenanceMode 」： true 」を保持します。</block>
   <block id="8e9b8402fc729e5b8cf2e9a5e6d1f4a7" category="list-text">クラスタコントローラ ID （前の手順で保存した「 ControllerID 」）を入力します。</block>
-  <block id="898aa9fbdeaf861f6b63c3aee3dcac0a" category="list-text">前の手順で保存したパッケージ名とパッケージバージョンを入力します。</block>
   <block id="c658aaae7b770a779963c2f0814f7b97" category="list-text">応答内のリソースリンク ("resourceLink") URL の一部であるアップグレードタスク ID をコピーします</block>
   <block id="2af0540e1b6b59e46ab66bb3122952c5" category="list-text">「 * get/task/｛ task_id ｝ /logs * 」を選択します。</block>
   <block id="41ae3303c96aa0617f8cdc8eaf5eacba" category="list-text">前の手順のタスク ID を * TASK_ID * に入力します。</block>
@@ -3578,12 +3564,6 @@
   <block id="8cbe2759efcdf76c5f107e0ecb7b4592" category="list-text">REST API UI から、 * GET 処理対象の新規 / ノード間の処理 / ｛ hardware_id ｝ の一時的な処理 / アップグレード * を選択します。</block>
   <block id="4b441364b36bb6f4c7b059dcc366682f" category="list-text">（オプション）日付とステータスのパラメータを入力して、結果をフィルタリングします。</block>
   <block id="cc0bc3ddeb0e718be7e738b95d572af9" category="list-text">すべてのコンポーネントのファームウェアが以前のバージョンから最新のファームウェアに正常にアップグレードされたことを示す応答を確認します。</block>
-  <block id="c4c5c223d03335842a4306d18b9fe4c8" category="section-title">最新のコンピューティングノードでイメージ化された USB ドライブを使用します ファームウェアバンドル ISO</block>
-  <block id="f67b6a10eef3ca58e647dda805d94d0f" category="paragraph">コンピューティングノードの USB ポートに、最新のコンピューティングノードファームウェアの ISO をダウンロードした USB ドライブを挿入できます。この手順で説明している USB メモリを使用する代わりに、ベースボード管理コントローラ（ BMC ）インターフェイスの仮想コンソールで * Virtual CD/DVD* オプションを使用して、コンピューティングノードに ISO をマウントできます。BMC を使用する方法は、 USB メモリを使用する方法よりもかなり時間がかかります。ワークステーションまたはサーバに必要なネットワーク帯域幅があること、および BMC とのブラウザセッションがタイムアウトしないことを確認してください。</block>
-  <block id="66049ae453415635891440129594baf4" category="inline-link">ネットアップのソフトウェアダウンロード</block>
-  <block id="9db3b1bbf31a34f016b6751560d022ca" category="list-text">を参照します<block ref="faddc0b2b4da1eceb58811a395f38dc6" category="inline-link-rx"></block> ページで、 * NetApp HCI * を選択し、ダウンロードリンクを選択して正しいバージョンの NetApp HCI を入手します。</block>
-  <block id="b36befe8937b455a62256bcdbd1761e1" category="list-text">コンピューティングノードとストレージノード * のセクションで、コンピューティングノードのイメージをダウンロードします。</block>
-  <block id="6b42b239fce8e2fd9ba87948604faced" category="list-text">Etcher ユーティリティを使用して、コンピューティングノードのファームウェア ISO を USB ドライブにフラッシュします。</block>
   <block id="1cf46325f9536ec9b43713bcd791afe9" category="list-text">VMware vCenter を使用してコンピューティングノードをメンテナンスモードに切り替えて、すべての仮想マシンをホストから退避します。</block>
   <block id="b9ec44333357d23f4dfa6a74a2165dac" category="list-text">コンピューティングノードの USB ポートに USB メモリを挿入し、 VMware vCenter を使用してコンピューティングノードをリブートします。</block>
   <block id="17d898084fc0dd09fe19cbbc37846064" category="list-text">コンピューティングノードの POST サイクル中に * F11 * を押して、 Boot Manager を開きます。F11 キーを何度も押さなければならない場合があります。この操作は ' ビデオ / キーボードを接続するか 'BMC' のコンソールを使用して実行できます</block>
@@ -3594,7 +3574,6 @@
   <block id="97862762766e97a1006aa97db0c218c6" category="list-text">アップグレードしたコンピューティングノードから USB フラッシュドライブを取り外します。</block>
   <block id="d6ad7b8195e77c9db09bfad90c137fca" category="list-text">すべてのコンピューティングノードがアップグレードされるまで、 ESXi クラスタ内の他のコンピューティングノードに対してこの手順を繰り返します。</block>
   <block id="d3464dce5635d8b4ccec4750312b5df1" category="section-title">ベースボード管理コントローラ（ BMC ）のユーザインターフェイス（ UI ）を使用する</block>
-  <block id="37923f0374276dac33e16c1ee6b34231" category="paragraph">アップグレードが正常に完了するように、コンピューティングノードのファームウェア ISO をロードし、ノードを ISO でリブートする手順を順に実行する必要があります。ISO は、 Web ブラウザをホストしているシステムまたは仮想マシン（ VM ）上に配置されている必要があります。プロセスを開始する前に、 ISO をダウンロードしていることを確認してください。</block>
   <block id="ae064a1839cfc8ce34c858138e9c3966" category="admonition">システムまたは VM とノードを同じネットワークに配置することを推奨します。</block>
   <block id="802eff2bb9ea58f2a6d0da71cd0bb0e8" category="admonition">BMC UI からのアップグレードには約 25~30 分かかります。</block>
   <block id="ab38b151bd1653e9010fdaa497595497" category="list-text"><block ref="c5b8aa68ac6e93ecb14b72fa4051ba28" category="inline-xref-macro-rx"></block></block>
@@ -3614,13 +3593,9 @@
   <block id="593b9eacda7134868a2d80ea3c474ec6" category="admonition">Java のインストールまたは更新が必要になる場合があります。</block>
   <block id="086e11190936943bd47b89359cc316ab" category="list-text">コンソールが開いたら、 * バーチャル・メディア &gt; バーチャル・ストレージ * を選択します。</block>
   <block id="0d86b24c482b6af94686b61cab281a55" category="list-text">Virtual Storage （仮想ストレージ）画面で、 * Logical Drive Type （論理ドライブタイプ） * を選択し、 * ISO File （ ISO ファイル） * を選択します。</block>
-  <block id="46da4b73e077041d82cbd4b49b3a2a45" category="inline-image-macro">ISO ファイルを選択するためのナビゲーションパスを表示します。</block>
-  <block id="88bfc9e47329ab3d571f1872dc37c1fb" category="paragraph"><block ref="88bfc9e47329ab3d571f1872dc37c1fb" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="1034338dbc0cc8fb2f0061d492d27045" category="list-text">[* Open Image* （画像を開く） ] を選択して、 ISO ファイルをダウンロードしたフォルダーを参照し、 ISO ファイルを選択します。</block>
   <block id="9e02313ddd26aee118ee23b52ccb621f" category="list-text">[ * プラグイン * ] を選択します。</block>
   <block id="1ae7c00d24ffdca7598b194b2dc27dbf" category="list-text">接続ステータスに「 Device#:VM Plug-in OK!! 」と表示されたら、「 *OK* 」を選択します。</block>
   <block id="da7914315fd2c0a46bc91f4a9b89ba7a" category="list-text">ノードを再起動するには、 * F12 * を押して * Restart * を選択するか、 * Power Control &gt; Set Power Reset * を選択します。</block>
-  <block id="b96987f61d66ba1db77d5b4f1783876a" category="list-text">再起動中に *F11* を押して起動オプションを選択し 'ISO をロードしますブートメニューが表示されるまでに F11 キーを何度か押しなければならない場合があります。</block>
   <block id="a69d47f968d2fc21fb9cdec24acfbe9a" category="paragraph">次の画面が表示されます。</block>
   <block id="d0ed128bd3c8c20ecdc5eb6ff37f7d5a" category="inline-image-macro">に、仮想 ISO の起動先画面を示します。</block>
   <block id="64db04a065fe8c5683677bfa2a4efcff" category="paragraph"><block ref="64db04a065fe8c5683677bfa2a4efcff" category="inline-image-macro-rx" type="image"></block></block>
@@ -3632,7 +3607,6 @@
   <block id="6559f407fcadf1c3e1b80127774db925" category="list-text">ホストのメンテナンスモードを解除します。赤色のフラグが外れている可能性があります。すべてのステータスが解消されるまで待ちます。</block>
   <block id="b8891f5f3c9ab182d0db3fef96037d36" category="list-text">電源がオフになっていた残りの VM のいずれかの電源をオンにします。</block>
   <block id="d9007dd2676748983c400ce8ca221bb7" category="section-title">H610C / H615C ノードのファームウェアをアップグレードします</block>
-  <block id="e2cec94acacbfde7b552c83c32e84744" category="paragraph">手順は、ノードがスタンドアロンであるかクラスタの一部であるかによって異なります。この手順には約 25 分かかり、ノードの電源オフ、 ISO のアップロード、デバイスのフラッシュ、アップグレード後のノードの電源のオンとオフが含まれます。</block>
   <block id="ae2e167448f73cc45a857eeed2a38a45" category="list-text">BMC UI 「 https://BMCIP/#login` 」に移動します。ここで、 BMC IP は BMC の IP アドレスです。</block>
   <block id="d2fcf7c7acbf0658169aa81fda53c0ff" category="list-text">リモート・コントロール &gt; Launch KVM (Java)* を選択します</block>
   <block id="7d853bfef08c6d2c19333026c6a5f295" category="list-text">コンソールウィンドウで、 * Media &gt; Virtual Media Wizard* を選択します。</block>
@@ -3640,7 +3614,6 @@
   <block id="ff568983eaa948e1c45ea44fd20c3515" category="list-text">[*Browse*] を選択し ' コンピュート・ファームウェアの [.iso （ .iso ） ] ファイルを選択します</block>
   <block id="6988680d8d9db783d89d962e3a07b128" category="list-text">「 * 接続」を選択します。成功したことを示すポップアップが表示され、パスとデバイスが下部に表示されます。[ 仮想メディア *] ウィンドウを閉じることができます。</block>
   <block id="e3e72bb291b26812bea6d962e4866dab" category="image-alt">ISO アップロードが成功したことを示すポップアップウィンドウ。</block>
-  <block id="7edcc1835a80e09463c4bf3b46c42cc0" category="list-text">再起動中に *F11* を押して起動オプションを選択し 'ISO をロードします</block>
   <block id="e57c91d23315863d32587c65e08c874a" category="list-text">表示されたリストから *AMI Virtual CDROM * を選択し、 *Enter* を選択します。リストに AMI Virtual CDROM が表示されない場合は、 BIOS にアクセスして起動リストで有効にします。保存するとノードがリブートします。再起動中に * F11 * を押します。</block>
   <block id="b6c3b9c6bed53710f2cbf2c4dad9c6ef" category="image-alt">に、ブートデバイスを選択できるウィンドウを示します。</block>
   <block id="f168f35f98997ef1f6a33afa3e3be93e" category="list-text">表示された画面で、 *Enter* を選択します。</block>
@@ -6229,4 +6202,31 @@
   <block id="a310588c148d934b9b30c31802d4a30b" category="sidebar">ネットアップコミュニティ</block>
   <block id="213686afc3803be7caa09348765467fe" category="sidebar">サポートへのアクセス</block>
   <block id="389672366ff11f72a82c5c495b9b5159" category="sidebar">NetApp HCI 1.8 に関するドキュメント</block>
+  <block id="ef1e8da076ed36db7d489060adff47fb" category="paragraph">ダウンロード可能なコンピューティングファームウェアバンドルには、BIOSとBMCの最新機能拡張、バグ修正、サポートされているすべてのNetApp HCI コンピューティングノードに対するハードウェアサポートが含まれている。</block>
+  <block id="778f439c373ac0d9448a4607920b1422" category="list-text"><block ref="e2bd782e3d45140e59a9770dafcf72d8" category="inline-xref-macro-rx"></block></block>
+  <block id="c94da534f33010d7e118033321a44543" category="admonition">ダークサイトのアップグレードでは、コンピューティングファームウェアバンドルと管理ノードの両方がローカルの場合、アップロード時間を短縮できます。</block>
+  <block id="2285a7aedaa8a3012ac18addc77cb998" category="admonition">NetApp Hybrid Cloud Control UI を使用して、 H300E 、 H500E 、 H700E の各コンピューティングノードのコンピューティングファームウェアをアップグレードできなくなりました。をアップグレードする場合は、を使用することを推奨します <block ref="4d9d1e5487766b88d4d71ed7b5cbc3b9" category="inline-xref-macro-rx"></block> または <block ref="1f3fb96b93183df027058d51b91b7971" category="inline-xref-macro-rx"></block> コンピューティングファームウェアバンドルをマウントする。</block>
+  <block id="36b254200cdbd8a07ea5d268a8d6baf6" category="list-text">管理ノードがインターネットに接続されていない場合は、からコンピューティングファームウェアバンドルをダウンロードしておきます<block ref="3a326a2da6806c2b958ef45116362803" category="inline-link-rx"></block>。</block>
+  <block id="191ad55ad4891df96df5fa822849fef0" category="admonition">TAR.GZ`ファイルをTARファイルに抽出し、次にTARファイルをコンピュート・ファームウェア・バンドルに抽出します。</block>
+  <block id="59f7535fd87661a1910847bce50d4e47" category="list-text">コンピューティングファームウェアバンドルを選択します。</block>
+  <block id="73dcdf96dc4ca7f983752cea48f4c9f9" category="admonition">H610CおよびH615Cコンピューティングノードのファームウェアをアップグレードしている間は、BMC Web UIでSerial-Over-LAN（SOL）コンソールを開かないでください。これにより、アップグレードが失敗する場合があります。</block>
+  <block id="3ff050db4ec6e0f15c16e789f26e88af" category="list-text">からダウンロードしたコンピュートファームウェアバンドルをアップロードするには、* Browse *を選択します<block ref="132031089c33792b234781a9d8501a93" category="inline-link-rx"></block>。</block>
+  <block id="5ca8b1b2bf4af2fc7c663e45d817ec38" category="list-text">コンピューティングファームウェアのバンドルIDを探します。</block>
+  <block id="2e48d856cc4329ea1172aa1b12357d02" category="list-text">応答から、後の手順で使用するために、コンピューティング・ファームウェア・バンドル名（「packageName」）とバージョン（「packageVersion」）をコピーして保存します。</block>
+  <block id="f15fbee8c019557b653654608e114409" category="list-text">NetApp HCI ソフトウェアにアクセスします<block ref="5edcf9a6caebd1bfc3b9c296487defc8" category="inline-link-rx"></block> 管理ノードからアクセス可能なデバイスに最新のコンピューティングファームウェアバンドルをダウンロードします。</block>
+  <block id="f8aab403230bedc419a9f667f64433b1" category="list-text">コンピューティングファームウェアバンドルを管理ノードにアップロードします。</block>
+  <block id="e2b118423790740e16d77e176feae0c8" category="list-text">* Browse（参照）*を選択し、コンピュートファームウェアバンドルを選択します。</block>
+  <block id="4e3ab2a8327927bb040d9030052ab871" category="list-text">応答から'後の手順で使用するために'コンピュート・ファームウェア・バンドルID（「id」）をコピーして保存します</block>
+  <block id="06e01a8ccacd1b43b5fddff004e9d4b2" category="list-text">応答から'後の手順で使用するために'コンピューティング・ファームウェア・バンドル名（名前）とバージョン（バージョン）をコピーして保存します</block>
+  <block id="d82d011768fe4be99bb8567a9fc35e59" category="list-text">前の手順で保存したコンピューティングファームウェアのバンドル名とバージョンを入力します。</block>
+  <block id="dda5a90267bc798be83dbaf5789a1d11" category="section-title">最新のコンピューティングファームウェアバンドルでイメージ化されたUSBドライブを使用します</block>
+  <block id="e001a7c4060c584ed7ac0c964481b703" category="paragraph">コンピューティングノードのUSBポートにダウンロードした最新のコンピューティングファームウェアバンドルがインストールされたUSBドライブを挿入できます。この手順 に記載されているUSBメモリ方式を使用する代わりに、ベースボード管理コントローラ（BMC）インターフェイスの仮想コンソールで仮想CD/DVDオプションを使用して、コンピューティングノードにコンピューティングファームウェアバンドルをマウントできます。BMC を使用する方法は、 USB メモリを使用する方法よりもかなり時間がかかります。ワークステーションまたはサーバに必要なネットワーク帯域幅があること、および BMC とのブラウザセッションがタイムアウトしないことを確認してください。</block>
+  <block id="972fabde5f0ba99c25139d61cd7e3c9f" category="list-text">Etcherユーティリティを使用して、コンピュートファームウェアバンドルをUSBドライブにフラッシュします。</block>
+  <block id="f7ef036394a5c36769d6d2ea91d453f5" category="paragraph">アップグレードが正常に完了するように、コンピューティングファームウェアバンドルをロードし、ノードをコンピューティングファームウェアバンドルに対してリブートするには、手順を連続して実行する必要があります。コンピューティングファームウェアバンドルは、Webブラウザをホストしているシステムまたは仮想マシン（VM）に配置する必要があります。プロセスを開始する前に、コンピューティングファームウェアバンドルをダウンロードしたことを確認してください。</block>
+  <block id="a478ff55f210944ba68d37f5d911b465" category="inline-image-macro">は、コンピューティングファームウェアバンドルファイルを選択するためのナビゲーションパスを示しています。</block>
+  <block id="22384f95e35e58825d7ec3ba3865263d" category="paragraph"><block ref="22384f95e35e58825d7ec3ba3865263d" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="2e3b483e37cec1a7842f185ac98ac6cd" category="list-text">[Open Image*（イメージを開く）]を選択して、コンピュートファームウェアバンドルファイルをダウンロードしたフォルダを参照し、コンピュートファームウェアバンドルファイルを選択します。</block>
+  <block id="df8bcceb7ddee511e9494f0afd8c95a7" category="list-text">リブート中に* F11 *を押してブートオプションを選択し、コンピューティングファームウェアバンドルをロードします。ブートメニューが表示されるまでに F11 キーを何度か押しなければならない場合があります。</block>
+  <block id="b56a80b47ffbf4eda21aa52a14a1c0d9" category="paragraph">手順は、ノードがスタンドアロンであるかクラスタの一部であるかによって異なります。手順 の所要時間は約25分で、ノードの電源オフ、コンピューティングファームウェアバンドルのアップロード、デバイスのフラッシュ、アップグレード後のノードの電源のオンとオフが含まれます。</block>
+  <block id="94accfc9ce60fbdbc6b912533ff89998" category="list-text">リブート中に* F11 *を押してブートオプションを選択し、コンピューティングファームウェアバンドルをロードします。</block>
 </blocks>
