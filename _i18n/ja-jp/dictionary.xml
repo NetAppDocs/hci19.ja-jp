@@ -6229,4 +6229,5 @@
   <block id="df8bcceb7ddee511e9494f0afd8c95a7" category="list-text">リブート中に* F11 *を押してブートオプションを選択し、コンピューティングファームウェアバンドルをロードします。ブートメニューが表示されるまでに F11 キーを何度か押しなければならない場合があります。</block>
   <block id="b56a80b47ffbf4eda21aa52a14a1c0d9" category="paragraph">手順は、ノードがスタンドアロンであるかクラスタの一部であるかによって異なります。手順 の所要時間は約25分で、ノードの電源オフ、コンピューティングファームウェアバンドルのアップロード、デバイスのフラッシュ、アップグレード後のノードの電源のオンとオフが含まれます。</block>
   <block id="94accfc9ce60fbdbc6b912533ff89998" category="list-text">リブート中に* F11 *を押してブートオプションを選択し、コンピューティングファームウェアバンドルをロードします。</block>
+  <block id="baac2557431cefc749efdd1d5a826b20" category="sidebar">NetApp HCI 1.9ドキュメント</block>
 </blocks>
