@@ -20,7 +20,7 @@ keywords: netapp, hci, SSDs, drives, replace drives, H410S, H610S
 * Putty がラップトップにインストールされていること、および出力をキャプチャしたことを確認します。このビデオでは、 Putty を設定して出力セッションをキャプチャする方法を紹介しています。
 
 
-video::2LZfWH8HffA[youtube, ]
+video::2LZfWH8HffA[youtube]
 * 交換の前後に NetApp Config Advisor を実行していることを確認してください。これは、メンテナンスの開始前に他の問題を特定するのに役立ちます。Config Advisor をダウンロードしてインストールし、からクイックスタートガイドにアクセスします link:https://mysupport.netapp.com/site/tools/tool-eula/activeiq-configadvisor/download["こちら（ログインが必要です）"^]。
 * 電源ケーブル、基本的な手工具、およびラベルを用意します。
 * 2 時間から 4 時間のメンテナンス期間を計画していることを確認します。

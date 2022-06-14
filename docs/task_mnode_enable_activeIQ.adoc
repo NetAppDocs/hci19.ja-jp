@@ -9,7 +9,7 @@ keywords: netapp, hci, api, enable, active iq, activeiq, hci monitoring
 
 
 [role="lead"]
-インストールまたはアップグレード時に Active IQ ストレージの監視（ SolidFire オールフラッシュストレージおよび NetApp HCI 用）と NetApp HCI コンピューティングの監視（ NetApp HCI のみ）を有効にしていない場合、有効にすることができます。この手順は、 NetApp HCI 導入エンジンを使用してテレメトリを無効にした場合、または SolidFire オールフラッシュストレージシステムのインストール時に SolidFire Active IQ を設定しなかった場合に必要になることがあります。
+インストールまたはアップグレード時にActive IQ ストレージの監視を有効にしていない場合、NetApp HCI とNetApp HCI のコンピューティング監視を有効にすることができます。NetApp HCI Deployment Engineを使用してテレメトリを無効にした場合、この手順 の使用が必要になることがあります。
 
 Active IQ コレクタサービスは、履歴データのレポートおよびほぼリアルタイムのパフォーマンス監視用に、設定データと Element ソフトウェアベースのクラスタパフォーマンス指標を NetApp Active IQ に転送します。NetApp HCI 監視サービスを使用すると、ストレージクラスタのエラーを vCenter に転送してアラート通知を送信できます。
 

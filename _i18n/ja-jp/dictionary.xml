@@ -830,7 +830,6 @@
   <block id="77bdc785d9dab0917f6a0b8e4f7c435f" category="paragraph">vCenter Server を使用すると、 Rancher 仮想マシンを監視できます。</block>
   <block id="5950c53f8d241e1e95440d518521b075" category="summary">管理ノード（ mNode ）を使用して、 NetApp Active IQ と NetApp HCI テレメトリを有効にすることができます。</block>
   <block id="bdfb39867dffbc06698f3cbba2891fce" category="doc">Active IQ と NetApp HCI の監視を有効にします</block>
-  <block id="e97fd0a705753a7f17bccd9bf489a092" category="paragraph">インストールまたはアップグレード時に Active IQ ストレージの監視（ SolidFire オールフラッシュストレージおよび NetApp HCI 用）と NetApp HCI コンピューティングの監視（ NetApp HCI のみ）を有効にしていない場合、有効にすることができます。この手順は、 NetApp HCI 導入エンジンを使用してテレメトリを無効にした場合、または SolidFire オールフラッシュストレージシステムのインストール時に SolidFire Active IQ を設定しなかった場合に必要になることがあります。</block>
   <block id="6ac1a1d4d559f5629848b5d88e68e733" category="paragraph">Active IQ コレクタサービスは、履歴データのレポートおよびほぼリアルタイムのパフォーマンス監視用に、設定データと Element ソフトウェアベースのクラスタパフォーマンス指標を NetApp Active IQ に転送します。NetApp HCI 監視サービスを使用すると、ストレージクラスタのエラーを vCenter に転送してアラート通知を送信できます。</block>
   <block id="7ae82c07422143d84f2406fe018d3f73" category="list-text">ストレージクラスタで NetApp Element ソフトウェア 11.3 以降が実行されている必要があります。</block>
   <block id="b28e179f94097b207a2dc9172aa4b4d0" category="list-text">インターネットにアクセスできる。外部接続のないダークサイトからは、 Active IQ コレクタサービスを使用できません。</block>
@@ -2753,7 +2752,6 @@
   <block id="00229b6ae28a3c795d4220f972583794" category="list-text">24GB の RAM</block>
   <block id="ffd08ee6f575adf47c4b8596e51d4fda" category="list-text">400GB の仮想ディスク、シンプロビジョニング</block>
   <block id="950d6089bab8dc5f0af7f788b69458ce" category="list-text">インターネットアクセスとストレージ MVIP へのアクセスが可能な仮想ネットワークインターフェイス × 1</block>
-  <block id="307bf29a25a4ac6cd9b4cb744bd5901a" category="list-text">（ SolidFire オールフラッシュストレージの場合はオプション）ストレージクラスタへの管理ネットワークアクセスが可能な仮想ネットワークインターフェイス × 1 。ストレージクラスタが管理ノード（ eth0 ）とは別のサブネット上にある環境で永続ボリュームを使用する場合は、ストレージサブネット（ eth1 ）上の VM に 2 つ目のネットワークインターフェイスコントローラ（ NIC ）を追加するか、管理ネットワークからストレージネットワークへルーティング可能なことを確認します。</block>
   <block id="527b1f1493e835bb654427d120dff5ec" category="admonition">このあとの手順で指示があるまでは、仮想マシンの電源をオンにしないでください。</block>
   <block id="95772984255fd54c3458a948ba42af1a" category="list-text">仮想マシンに ISO を接続し、 .iso インストールイメージでブートします。</block>
   <block id="61106ad2e01de8b06da3caf17edacd33" category="admonition">イメージを使用して管理ノードをインストールすると、スプラッシュ画面が表示されるまでに 30 秒程度かかることがあります。</block>
@@ -2954,7 +2952,6 @@
   <block id="b796ad77b5c2d7e3b3ded4471f3198c4" category="admonition">DIMM の交換手順が完了したら、 vCenter の Hardware Status タブで警告とエラーをクリアできます。これは、交換したハードウェアに関連するエラーの履歴を消去する場合に行います。<block ref="876b9d188a711c3c2b1fe508affe9aba" category="inline-link-rx"></block>。</block>
   <block id="005c3b430cc655f7555388f91ebb3859" category="summary">NetApp HCI システムでアラートを監視するように設定を行うことができます。</block>
   <block id="fdde616d64984e5c52201bf2f1a02adc" category="paragraph">NetApp HCI のアラート監視は、 NetApp HCI ストレージクラスタのシステムアラートを vCenter Server に転送して、 vSphere Web Client インターフェイスで NetApp HCI のすべてのアラートを表示できるようにします。</block>
-  <block id="36cad81bfa070b7f125b05d13a28ba87" category="admonition">これらのツールは、 SolidFire オールフラッシュストレージなどのストレージ専用クラスタでは設定も使用もされません。これらのクラスタに対してツールを実行すると、「 webUIParseError ： Invalid response from server 」のような 405 エラーが表示されますが、これは想定される設定です。405`</block>
   <block id="97419dde0c44604b20e803f7b92bbbe3" category="list-text">ノード単位の管理ノード UI を開きます (`https://[IP address:442')</block>
   <block id="77dd0d5c839caa7098834171deb013f6" category="list-text">[* Alert Monitor*] タブをクリックします。</block>
   <block id="aba0876edc6160b9de4bd36d336440ee" category="list-text">アラート監視オプションを設定します。</block>
@@ -4496,7 +4493,6 @@
   <block id="5eca06837292fdb7aace3e8b6b16124f" category="summary">NetApp Element ソフトウェアを実行しているクラスタの管理ノードをインストールできます。</block>
   <block id="a0533a33290a803a3e4ffb6aa11b713d" category="doc">管理ノードをインストール</block>
   <block id="618b2a6a492417a6fd149f483c611dd6" category="paragraph">NetApp Element ソフトウェアを実行しているクラスタの管理ノードは、構成に応じたイメージを使用して手動でインストールできます。</block>
-  <block id="39d054f16665efd662cb5551e7cdab2f" category="paragraph">この手動プロセスは、管理ノードのインストールに NetApp Deployment Engine を使用していない SolidFire オールフラッシュストレージ管理者および NetApp HCI 管理者を対象としています。</block>
   <block id="7e6093e52119f18464fc862a969c9f6a" category="admonition">IPv6 のサポートが必要な場合は、管理ノード 11.1 を使用してください。</block>
   <block id="9385b032418674e92472a8b4a2ae5cdf" category="list-text">（管理ノード 12.0 以降にプロキシサーバを使用） NetApp Hybrid Cloud Control を管理サービスバージョン 2.16 に更新してから、プロキシサーバを設定しておきます。</block>
   <block id="0406c3e25004e3d1dddbc367d2c4010f" category="paragraph">Element 12.2 管理ノードはオプションのアップグレードです。既存の環境では必要ありません。</block>
@@ -5371,7 +5367,6 @@
   <block id="ecc55b6181f4ecb3539629bb22408890" category="section-title">タグ付きのストレージネットワークインターフェイスコントローラ（ NIC ）を設定します ネットワークインターフェイス</block>
   <block id="d40819e9e843e97335bf320aeb8d5ac1" category="summary">管理ノードを使用して、ネットアップサポートがトラブルシューティング用にアクセスできるようにします。</block>
   <block id="e606a329fd1c8e2f2543e5fd1dce6af5" category="doc">リモートのネットアップサポートセッションを開始します</block>
-  <block id="0d37152cb4d274796e3ac32a73cf3b30" category="paragraph">NetApp HCI または SolidFire オールフラッシュストレージシステムに関するテクニカルサポートが必要な場合は、ネットアップサポートがお客様のシステムにリモートで接続できます。セッションを開始してリモートアクセスを確立するために、ネットアップサポートはお客様の環境へのリバース Secure Shell （ SSH ）接続を確立します。</block>
   <block id="8e5cda5f4d9f852ba16378a9749b0fba" category="paragraph">ネットアップサポートとの SSH リバーストンネル接続用の TCP ポートを開くことができます。この接続を介して、ネットアップサポートはお客様の管理ノードにログインします。</block>
   <block id="38bfc79ee5a8c36f9e9a8af1c01ba34c" category="list-text">管理サービス 2.18 以降では、管理ノードでリモートアクセス機能がデフォルトで無効になっています。リモートアクセス機能を有効にするには、を参照してください <block ref="b699ffaa70a5cdf708fca1e6ce6761c0" category="inline-link-macro-rx"></block>。</block>
   <block id="4767b00dd0eab027ad48a79407d1aeb5" category="list-text">管理ノードがプロキシサーバの背後にある場合は、次の TCP ポートを sshd.config ファイルで設定しておく必要があります。</block>
@@ -6230,4 +6225,8 @@
   <block id="b56a80b47ffbf4eda21aa52a14a1c0d9" category="paragraph">手順は、ノードがスタンドアロンであるかクラスタの一部であるかによって異なります。手順 の所要時間は約25分で、ノードの電源オフ、コンピューティングファームウェアバンドルのアップロード、デバイスのフラッシュ、アップグレード後のノードの電源のオンとオフが含まれます。</block>
   <block id="94accfc9ce60fbdbc6b912533ff89998" category="list-text">リブート中に* F11 *を押してブートオプションを選択し、コンピューティングファームウェアバンドルをロードします。</block>
   <block id="baac2557431cefc749efdd1d5a826b20" category="sidebar">NetApp HCI 1.9ドキュメント</block>
+  <block id="1b0f1fe17217f456f0c7b1311a828304" category="paragraph">NetApp HCI システムのテクニカルサポートが必要な場合は、ネットアップサポートがお客様のシステムにリモートで接続できます。セッションを開始してリモートアクセスを確立するために、ネットアップサポートはお客様の環境へのリバース Secure Shell （ SSH ）接続を確立します。</block>
+  <block id="af6fe236a646e80d8ae873b7b19bbd32" category="paragraph">この手動プロセスは、管理ノードのインストールにNetApp Deployment Engineを使用していないNetApp HCI 管理者を対象としています。</block>
+  <block id="7de1d355aeba73e5332d59c786d355f9" category="list-text">ストレージクラスタへの管理ネットワークアクセスが可能な仮想ネットワークインターフェイス×1。ストレージクラスタが管理ノード（ eth0 ）とは別のサブネット上にある環境で永続ボリュームを使用する場合は、ストレージサブネット（ eth1 ）上の VM に 2 つ目のネットワークインターフェイスコントローラ（ NIC ）を追加するか、管理ネットワークからストレージネットワークへルーティング可能なことを確認します。</block>
+  <block id="50a6b66c3df70071e486b3d636f036b7" category="paragraph">インストールまたはアップグレード時にActive IQ ストレージの監視を有効にしていない場合、NetApp HCI とNetApp HCI のコンピューティング監視を有効にすることができます。NetApp HCI Deployment Engineを使用してテレメトリを無効にした場合、この手順 の使用が必要になることがあります。</block>
 </blocks>

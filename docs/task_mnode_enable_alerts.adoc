@@ -13,9 +13,6 @@ NetApp HCI システムでアラートを監視するように設定を行うこ
 
 NetApp HCI のアラート監視は、 NetApp HCI ストレージクラスタのシステムアラートを vCenter Server に転送して、 vSphere Web Client インターフェイスで NetApp HCI のすべてのアラートを表示できるようにします。
 
-
-NOTE: これらのツールは、 SolidFire オールフラッシュストレージなどのストレージ専用クラスタでは設定も使用もされません。これらのクラスタに対してツールを実行すると、「 webUIParseError ： Invalid response from server 」のような 405 エラーが表示されますが、これは想定される設定です。405`
-
 . ノード単位の管理ノード UI を開きます (`https://[IP address:442')
 . [* Alert Monitor*] タブをクリックします。
 . アラート監視オプションを設定します。
