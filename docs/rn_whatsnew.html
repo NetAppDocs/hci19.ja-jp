@@ -1799,7 +1799,7 @@
 <p class="page-details">
   
     
-    <time datetime="2022-05-13 19:08:41 +0000">05/13/2022</time>
+    <time datetime="2022-06-17 12:50:24 +0000">06/17/2022</time>
     
   
 
@@ -1809,7 +1809,30 @@
 <div id="preamble">
 <div class="sectionbody">
 <div class="paragraph lead">
-<p>ネットアップでは、 NetApp HCI を定期的に更新して、新機能、拡張機能、およびバグ修正を提供しています。NetApp HCI 1.9P1 にはストレージクラスタ用の Element 12.3.2 が含まれます。</p>
+<p>ネットアップでは、 NetApp HCI を定期的に更新して、新機能、拡張機能、およびバグ修正を提供しています。NetApp HCI 1.9P1には、ストレージクラスタ用のNetApp Element ソフトウェア12.3.1が含まれます。</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<img src="/us-en/hci19/images/note.svg" alt="注記">
+</td>
+<td class="content">
+<div class="paragraph">
+<p>Element 12.3.2には、Apache log4jの脆弱性に対するElementソフトウェアの影響を軽減する機能が含まれています。Virtual Volumes （ VVol ）機能が有効になっている NetApp SolidFire ストレージクラスタは、この脆弱性の影響を受けやすくなっています。</p>
+</div>
+<div class="paragraph">
+<p>ストレージクラスタがElement 12.3.1で、VVol機能が有効になっている場合は、Elementソフトウェア12.3.2にアップグレードすることを推奨します。</p>
+</div>
+<div class="paragraph">
+<p>ストレージクラスタがElement 12.3.1で、VVol機能が無効になっている場合、Elementソフトウェア12.3.2へのアップグレードはオプションです。</p>
+</div>
+<div class="paragraph">
+<p>アップグレードの実行中を除き、クラスタ内でElementのバージョンを混在させることは推奨されません。</p>
+</div>
+</td>
+</tr>
+</table>
 </div>
 <div class="ulist">
 <ul>
@@ -1817,7 +1840,7 @@
 <p>。 <a href="#netapp-hci-1-9p1">NetApp HCI 1.9P1</a> セクションでは、 NetApp HCI バージョン 1.9P1 の新機能とアップデートについて説明します。</p>
 </li>
 <li>
-<p>。 <a href="#element-12-3-2">Element 12.3.2</a> ここでは、 NetApp Element 12.3.2 の新機能およびアップデートについて説明します。</p>
+<p>。 <a href="#element-12-3-1">Element 12.3.1</a> ここでは、 NetApp Element 12..1 の新機能とアップデートについて説明します。</p>
 </li>
 </ul>
 </div>
@@ -1832,10 +1855,44 @@
 </div>
 </div>
 <div class="sect1">
-<h2 id="element-12-3-2">Element 12.3.2</h2>
+<h2 id="element-12-3-1">Element 12.3.1</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>Element ソフトウェア 12.3.2 リリースには、 Apache log4j の脆弱性に対する Element ソフトウェアの影響を軽減する機能が含まれています。Virtual Volumes （ VVol ）機能が有効になっている NetApp SolidFire ストレージクラスタは、この脆弱性の影響を受けやすくなっています。</p>
+<p>NetApp HCI 1.9P1 にはストレージクラスタ用の Element 12.3.1 が含まれます。</p>
+</div>
+<div class="sect2">
+<h3 id="ストレージファームウェアバンドル-2-99-2">ストレージファームウェアバンドル 2.99.2</h3>
+<div class="paragraph">
+<p>Element 12.3.1 リリースには、ストレージファームウェアバンドルバージョン 2.99.2 が含まれています。ストレージクラスタがすでに Element 12.3 にある場合は、新しい 2.99.2 ファームウェアバンドルをインストールするだけで済みます。</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="netapp-bugs-online-には既知の問題と解決済みの問題があります">NetApp Bugs Online には、既知の問題と解決済みの問題があります</h3>
+<div class="paragraph">
+<p>既知の問題と解決済みの問題の一覧については、 NetApp Bugs Online ツールを参照してください。これらの問題は Element およびその他の製品で参照できます から <a href="https://mysupport.netapp.com/site/products/all/details/element-software/bugsonline-tab" target="_blank" rel="noopener">"NetApp Bugs Online では"</a>。</p>
+</div>
+<div class="olist arabic">
+<div class="title">手順</div>
+<ol class="arabic">
+<li>
+<p>に進みます <a href="https://mysupport.netapp.com/site/products/all/details/element-software/bugsonline-tab" target="_blank" rel="noopener">"NetApp Bugs Online では"</a>。</p>
+</li>
+<li>
+<p>[ キーワードで検索 * ] フィールドに、製品名（「要素」など）を入力します。</p>
+</li>
+<li>
+<p>を選択します <span class="image"><img src="../media/icon_plus.PNG" alt="プラスアイコン"></span>をクリックし、 * バージョンで固定 * フィルタを選択し、 * OK * を選択します。</p>
+<div class="paragraph">
+<p><span class="image"><img src="../media/bol_filters.PNG" alt="BOL フィルタの位置合わせ = &quot;center&quot;"></span></p>
+</div>
+</li>
+<li>
+<p>[ 新規検索（ New Search ） ] を選択します。</p>
+</li>
+<li>
+<p>[ バージョン * で固定 ] フィールドにリリースバージョンを入力します。</p>
+</li>
+</ol>
 </div>
 <h2 id="詳細についてはこちらをご覧ください" class="discrete">詳細については、こちらをご覧ください</h2>
 <div class="ulist">
@@ -1856,6 +1913,7 @@
 <p><a href="https://kb.netapp.com/Advice_and_Troubleshooting/Hybrid_Cloud_Infrastructure/NetApp_HCI/Firmware_and_driver_versions_in_NetApp_HCI_and_NetApp_Element_software" target="_blank" rel="noopener">"NetApp HCI および NetApp Element のファームウェアとドライバのバージョン ソフトウェア"</a></p>
 </li>
 </ul>
+</div>
 </div>
 </div>
 </div>
