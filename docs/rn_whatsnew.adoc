@@ -15,10 +15,21 @@ keywords: netapp, hci, element, new, whatsnew
 
 
 [role="lead"]
-ネットアップでは、 NetApp HCI を定期的に更新して、新機能、拡張機能、およびバグ修正を提供しています。NetApp HCI 1.9P1 にはストレージクラスタ用の Element 12.3.2 が含まれます。
+ネットアップでは、 NetApp HCI を定期的に更新して、新機能、拡張機能、およびバグ修正を提供しています。NetApp HCI 1.9P1には、ストレージクラスタ用のNetApp Element ソフトウェア12.3.1が含まれます。
 
+[NOTE]
+====
+Element 12.3.2には、Apache log4jの脆弱性に対するElementソフトウェアの影響を軽減する機能が含まれています。Virtual Volumes （ VVol ）機能が有効になっている NetApp SolidFire ストレージクラスタは、この脆弱性の影響を受けやすくなっています。
+
+ストレージクラスタがElement 12.3.1で、VVol機能が有効になっている場合は、Elementソフトウェア12.3.2にアップグレードすることを推奨します。
+
+ストレージクラスタがElement 12.3.1で、VVol機能が無効になっている場合、Elementソフトウェア12.3.2へのアップグレードはオプションです。
+
+アップグレードの実行中を除き、クラスタ内でElementのバージョンを混在させることは推奨されません。
+
+====
 * 。 <<NetApp HCI 1.9P1>> セクションでは、 NetApp HCI バージョン 1.9P1 の新機能とアップデートについて説明します。
-* 。 <<Element 12.3.2>> ここでは、 NetApp Element 12.3.2 の新機能およびアップデートについて説明します。
+* 。 <<Element 12.3.1>> ここでは、 NetApp Element 12..1 の新機能とアップデートについて説明します。
 
 
 
@@ -29,9 +40,32 @@ NetApp HCI 1.9P1 では、セキュリティと安定性が向上しています
 
 
 
-== Element 12.3.2
+== Element 12.3.1
 
-Element ソフトウェア 12.3.2 リリースには、 Apache log4j の脆弱性に対する Element ソフトウェアの影響を軽減する機能が含まれています。Virtual Volumes （ VVol ）機能が有効になっている NetApp SolidFire ストレージクラスタは、この脆弱性の影響を受けやすくなっています。
+NetApp HCI 1.9P1 にはストレージクラスタ用の Element 12.3.1 が含まれます。
+
+
+
+=== ストレージファームウェアバンドル 2.99.2
+
+Element 12.3.1 リリースには、ストレージファームウェアバンドルバージョン 2.99.2 が含まれています。ストレージクラスタがすでに Element 12.3 にある場合は、新しい 2.99.2 ファームウェアバンドルをインストールするだけで済みます。
+
+
+
+=== NetApp Bugs Online には、既知の問題と解決済みの問題があります
+
+既知の問題と解決済みの問題の一覧については、 NetApp Bugs Online ツールを参照してください。これらの問題は Element およびその他の製品で参照できます から https://mysupport.netapp.com/site/products/all/details/element-software/bugsonline-tab["NetApp Bugs Online では"^]。
+
+.手順
+. に進みます https://mysupport.netapp.com/site/products/all/details/element-software/bugsonline-tab["NetApp Bugs Online では"^]。
+. [ キーワードで検索 * ] フィールドに、製品名（「要素」など）を入力します。
+. を選択します image:icon_plus.PNG["プラスアイコン"]をクリックし、 * バージョンで固定 * フィルタを選択し、 * OK * を選択します。
++
+image:bol_filters.PNG["BOL フィルタの位置合わせ = \"center\""]
+
+. [ 新規検索（ New Search ） ] を選択します。
+. [ バージョン * で固定 ] フィールドにリリースバージョンを入力します。
+
 
 [discrete]
 == 詳細については、こちらをご覧ください

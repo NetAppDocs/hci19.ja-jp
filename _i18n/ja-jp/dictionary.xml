@@ -794,13 +794,9 @@
   <block id="fd08f5470e2431f8e7d02ae64cbcd019" category="list-text"><block ref="fd08f5470e2431f8e7d02ae64cbcd019" category="inline-link-rx"></block></block>
   <block id="0a5712c2113fc4db522b6907519135e6" category="summary">このバージョンの NetApp HCI の新機能について説明します。</block>
   <block id="9cea15d48c9b5a9632827b358396e207" category="doc">NetApp HCI の新機能</block>
-  <block id="8ad579f12befe29ce104da3b73ad5f9e" category="paragraph">ネットアップでは、 NetApp HCI を定期的に更新して、新機能、拡張機能、およびバグ修正を提供しています。NetApp HCI 1.9P1 にはストレージクラスタ用の Element 12.3.2 が含まれます。</block>
   <block id="d6d2b79e6ba2037bd02bb8dc96a0070a" category="list-text">。 <block ref="15276d500e7181fc56781568a7378926" category="inline-xref-macro-rx"></block> セクションでは、 NetApp HCI バージョン 1.9P1 の新機能とアップデートについて説明します。</block>
-  <block id="071ecc128a953b7cb24ca890062184c9" category="list-text">。 <block ref="170a7411c50609b648767f9b69e4306b" category="inline-xref-macro-rx"></block> ここでは、 NetApp Element 12.3.2 の新機能およびアップデートについて説明します。</block>
   <block id="db4297e95de51344c8962b36e46e0558" category="section-title">NetApp HCI 1.9P1</block>
   <block id="b4f3f16bceaa5cf561ca23082b3b8f3f" category="paragraph">NetApp HCI 1.9P1 では、セキュリティと安定性が向上しています。</block>
-  <block id="46b078af9bac91704627a9aca75db024" category="section-title">Element 12.3.2</block>
-  <block id="a0e08077e5a0fd5b8a4e6778d5172eae" category="paragraph">Element ソフトウェア 12.3.2 リリースには、 Apache log4j の脆弱性に対する Element ソフトウェアの影響を軽減する機能が含まれています。Virtual Volumes （ VVol ）機能が有効になっている NetApp SolidFire ストレージクラスタは、この脆弱性の影響を受けやすくなっています。</block>
   <block id="44b0209ace608ab3332e7d7917cfc3c2" category="inline-link">『 NetApp Hybrid Cloud Control and Management Services Release Notes 』を参照してください</block>
   <block id="8c62a8856619185a333cdec6cc116a79" category="list-text"><block ref="8c62a8856619185a333cdec6cc116a79" category="inline-link-rx"></block></block>
   <block id="311f4aa48c89c4e8754b8d93a8d5c0d5" category="inline-link">NetApp HCI および NetApp Element のファームウェアとドライバのバージョン ソフトウェア</block>
@@ -6229,4 +6225,25 @@
   <block id="af6fe236a646e80d8ae873b7b19bbd32" category="paragraph">この手動プロセスは、管理ノードのインストールにNetApp Deployment Engineを使用していないNetApp HCI 管理者を対象としています。</block>
   <block id="7de1d355aeba73e5332d59c786d355f9" category="list-text">ストレージクラスタへの管理ネットワークアクセスが可能な仮想ネットワークインターフェイス×1。ストレージクラスタが管理ノード（ eth0 ）とは別のサブネット上にある環境で永続ボリュームを使用する場合は、ストレージサブネット（ eth1 ）上の VM に 2 つ目のネットワークインターフェイスコントローラ（ NIC ）を追加するか、管理ネットワークからストレージネットワークへルーティング可能なことを確認します。</block>
   <block id="50a6b66c3df70071e486b3d636f036b7" category="paragraph">インストールまたはアップグレード時にActive IQ ストレージの監視を有効にしていない場合、NetApp HCI とNetApp HCI のコンピューティング監視を有効にすることができます。NetApp HCI Deployment Engineを使用してテレメトリを無効にした場合、この手順 の使用が必要になることがあります。</block>
+  <block id="952a75d126e98ba5478f36fbc2ab0dc7" category="paragraph">ネットアップでは、 NetApp HCI を定期的に更新して、新機能、拡張機能、およびバグ修正を提供しています。NetApp HCI 1.9P1には、ストレージクラスタ用のNetApp Element ソフトウェア12.3.1が含まれます。</block>
+  <block id="0c4f4dd60edc4c07fed8b2fe182601ed" category="paragraph">Element 12.3.2には、Apache log4jの脆弱性に対するElementソフトウェアの影響を軽減する機能が含まれています。Virtual Volumes （ VVol ）機能が有効になっている NetApp SolidFire ストレージクラスタは、この脆弱性の影響を受けやすくなっています。</block>
+  <block id="d7444f9e8d44a3b8d6f94ee1b040ca60" category="paragraph">ストレージクラスタがElement 12.3.1で、VVol機能が有効になっている場合は、Elementソフトウェア12.3.2にアップグレードすることを推奨します。</block>
+  <block id="020d0c8ed47be3265d5e4d14710220c7" category="paragraph">ストレージクラスタがElement 12.3.1で、VVol機能が無効になっている場合、Elementソフトウェア12.3.2へのアップグレードはオプションです。</block>
+  <block id="9cab9a3759d7c0a148a1a18b1897acc2" category="paragraph">アップグレードの実行中を除き、クラスタ内でElementのバージョンを混在させることは推奨されません。</block>
+  <block id="4da2fe7d3e0f9133b0c002f0fa95998e" category="list-text">。 <block ref="dcde07fb2feac52febb81d62ee21fa14" category="inline-xref-macro-rx"></block> ここでは、 NetApp Element 12..1 の新機能とアップデートについて説明します。</block>
+  <block id="5b7e7ff4cde603a8e9bda3b0790603ec" category="section-title">Element 12.3.1</block>
+  <block id="c85a39cc81df7e9b9f020969762cd36c" category="paragraph">NetApp HCI 1.9P1 にはストレージクラスタ用の Element 12.3.1 が含まれます。</block>
+  <block id="04aa68617927bbc2709638a86a15ad34" category="section-title">ストレージファームウェアバンドル 2.99.2</block>
+  <block id="81686da1b9f8be4c89479031f62bbb25" category="paragraph">Element 12.3.1 リリースには、ストレージファームウェアバンドルバージョン 2.99.2 が含まれています。ストレージクラスタがすでに Element 12.3 にある場合は、新しい 2.99.2 ファームウェアバンドルをインストールするだけで済みます。</block>
+  <block id="0eb91c90051a8280b5d03272245097b3" category="section-title">NetApp Bugs Online には、既知の問題と解決済みの問題があります</block>
+  <block id="69893000f4da30e1e42922cbcf8dac0e" category="inline-link">NetApp Bugs Online では</block>
+  <block id="90b3aa3c7627f89b5c64b12976e77c56" category="paragraph">既知の問題と解決済みの問題の一覧については、 NetApp Bugs Online ツールを参照してください。これらの問題は Element およびその他の製品で参照できます から<block ref="6d0e40d4342f9a7ae6016dd8d3efbf3e" category="inline-link-rx"></block>。</block>
+  <block id="831f9400c33053df6a33bd790f76ec32" category="list-text">に進みます<block ref="6d0e40d4342f9a7ae6016dd8d3efbf3e" category="inline-link-rx"></block>。</block>
+  <block id="90b1da96c9f1642d33e56738f52872df" category="list-text">[ キーワードで検索 * ] フィールドに、製品名（「要素」など）を入力します。</block>
+  <block id="768d18144454e6cec5a96d61cb09fd9c" category="inline-image-macro">プラスアイコン</block>
+  <block id="2c23efa1ce00f1576c76b24c5e9ab950" category="list-text">を選択します <block ref="a19d2ca9325d4575f0bb4ba21ee6bc40" category="inline-image-macro-rx" type="image"></block>をクリックし、 * バージョンで固定 * フィルタを選択し、 * OK * を選択します。</block>
+  <block id="7b87660a05f8e35621177030a7288671" category="inline-image-macro">BOL フィルタの位置合わせ = "center"</block>
+  <block id="10d3c7b3b3a4c71423e2bb44802dad07" category="paragraph"><block ref="10d3c7b3b3a4c71423e2bb44802dad07" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="072a78b04ab0c87f13756a379937b4c8" category="list-text">[ 新規検索（ New Search ） ] を選択します。</block>
+  <block id="9c418128eb1df0fd522c1f98859b8896" category="list-text">[ バージョン * で固定 ] フィールドにリリースバージョンを入力します。</block>
 </blocks>
