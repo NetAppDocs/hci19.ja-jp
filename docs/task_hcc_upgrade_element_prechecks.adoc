@@ -5,7 +5,12 @@ summary: NetApp HCI システムのアップグレードの一環として、 Ne
 keywords: netapp, storage prechecks, element upgrade, healthtools, sfupgradecheck 
 ---
 = ストレージをアップグレードする前に、 Element ストレージの健全性チェックを実行します
+:hardbreaks:
 :allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ../media/
 
 
 [role="lead"]

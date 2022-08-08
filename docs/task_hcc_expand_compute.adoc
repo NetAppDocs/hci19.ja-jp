@@ -5,7 +5,12 @@ summary: NetApp HCI の導入が完了したら、ネットアップハイブリ
 keywords: netapp, hci, on premise, expand, compute, cluster 
 ---
 = NetApp HCI コンピューティングリソースを展開します
+:hardbreaks:
 :allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ../media/
 
 
 [role="lead"]

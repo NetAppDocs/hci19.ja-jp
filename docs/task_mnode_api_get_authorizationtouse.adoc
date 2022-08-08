@@ -5,7 +5,12 @@ summary: REST API UI で管理サービス用の API を使用するには、事
 keywords: netapp, hci, management node, mnode, api, token 
 ---
 = REST API を使用するための許可を取得する
+:hardbreaks:
 :allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ../media/
 
 
 [role="lead"]

@@ -5,7 +5,12 @@ summary: Hybrid Cloud Control Volumes のページを使用して、システム
 keywords: netapp, hci, on premise, volumes, storage, access groups, initiators, capacity, data protection, QoS 
 ---
 = ストレージクラスタのボリュームを監視する
+:hardbreaks:
 :allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ../media/
 
 
 [role="lead"]

@@ -36,18 +36,18 @@ image::hci_prodoverview.png[この図は、 NetApp HCI のさまざまなコン�
 * * 管理サービス * またはマイクロサービスには、 Active IQ コレクタ、 vCenter Plug-in 向け QoSSIOC 、 mNode サービスが含まれており、サービスバンドルとして頻繁に更新されます。Element 11.3 リリース以降、 * 管理サービス * は管理ノード上でホストされるようになりました。そのため、メジャーリリースを待つことなく、希望するソフトウェアサービスを更新できます。管理ノード * （ mNode ）は、 Element ソフトウェアベースの 1 つ以上のストレージクラスタと同時に実行される仮想マシンです。このサービスは、アップグレード後にシステムサービスを提供するために使用されます。これには、監視とテレメトリ、クラスタのアセットと設定の管理、システムテストとユーティリティの実行、トラブルシューティング用のネットアップサポートアクセスの有効化などが含まれます。
 +
 
-TIP: の詳細を確認してください link:https://kb.netapp.com/Advice_and_Troubleshooting/Data_Storage_Software/Management_services_for_Element_Software_and_NetApp_HCI/Management_Services_Release_Notes["管理サービスのリリース"]。
+TIP: の詳細を確認してください link:https://kb.netapp.com/Advice_and_Troubleshooting/Data_Storage_Software/Management_services_for_Element_Software_and_NetApp_HCI/Management_Services_Release_Notes["管理サービスのリリース"^]。
 
 * * NetApp Hybrid Cloud Control * を使用すると、 NetApp HCI を管理できます。NetApp SolidFire Active IQ を使用して、管理サービスのアップグレード、システムの拡張、ログの収集、インストール環境の監視を行うことができます。NetApp Hybrid Cloud Control にログインするには、管理ノードの IP アドレスにアクセスします。
-* NetApp Element Plug-in for vCenter Server * （ VCP ）は Web ベースのツールで、 vSphere のユーザインターフェイス（ UI ）に統合されています。このプラグインは、拡張性と使いやすさを備えた VMware vSphere 用のインターフェイスで、 * NetApp Element ソフトウェア * を実行しているストレージ・クラスタの管理と監視を行うことができます。このプラグインは、 Element UI の代わりに使用できます。プラグインのユーザインターフェイスを使用して、クラスタの検出と設定、ストレージの管理と監視が可能なほか、クラスタ容量からストレージを割り当ててデータストアや仮想データストア（仮想ボリュームの場合）を構成できます。クラスタはネットワーク上では 1 つのローカルグループとして認識され、仮想 IP アドレスによってホストと管理者に示されます。また、クラスタのアクティビティを監視して、さまざまな処理の実行中に発生したイベントのエラーメッセージやアラートメッセージなど、リアルタイムで通知を受け取ることができます。
+* NetApp Element Plug-in for vCenter Server*は、vSphereのユーザインターフェイス（UI）に統合されたWebベースのツールです。このプラグインは、拡張性と使いやすさを備えた VMware vSphere 用のインターフェイスで、 * NetApp Element ソフトウェア * を実行しているストレージ・クラスタの管理と監視を行うことができます。このプラグインは、 Element UI の代わりに使用できます。プラグインのユーザインターフェイスを使用して、クラスタの検出と設定、ストレージの管理と監視が可能なほか、クラスタ容量からストレージを割り当ててデータストアや仮想データストア（仮想ボリュームの場合）を構成できます。クラスタはネットワーク上では 1 つのローカルグループとして認識され、仮想 IP アドレスによってホストと管理者に示されます。また、クラスタのアクティビティを監視して、さまざまな処理の実行中に発生したイベントのエラーメッセージやアラートメッセージなど、リアルタイムで通知を受け取ることができます。
 +
 
-TIP: の詳細を確認してください https://docs.netapp.com/us-en/vcp/concept_vcp_product_overview.html["VCP"]。
+TIP: の詳細を確認してください https://docs.netapp.com/us-en/vcp/concept_vcp_product_overview.html["vCenter Server 向け NetApp Element プラグイン"^]。
 
 * デフォルトでは、 NetApp HCI はパフォーマンスとアラートの統計を * NetApp SolidFire Active IQ * サービスに送信します。ネットアップサポートは、通常のサポート契約の一環として、このデータを監視し、パフォーマンスのボトルネックや潜在的なシステムの問題をユーザに警告します。このサービスを利用するにはネットアップサポートアカウントが必要です。まだアカウントを作成していない場合（既存の SolidFire Active IQ アカウントがある場合も含む）は作成する必要があります。
 +
 
-TIP: の詳細を確認してください link:https://help.monitoring.solidfire.com/["NetApp SolidFire Active IQ の略"]。
+TIP: の詳細を確認してください link:https://help.monitoring.solidfire.com/["NetApp SolidFire Active IQ の略"^]。
 
 
 
@@ -68,7 +68,7 @@ NetApp HCI で使用する一般的な URL を次に示します。
 | https://<ManagementNodeIP>` | NetApp Hybrid Cloud Control にアクセスして、 NetApp HCI のインストール、拡張、監視、管理サービスの更新を行うことができます。 link:task_nde_access_hcc.html["詳細はこちら。"] 
 
 
-| 「 https://[IP アドレス」： 442` | ノード UI から、ネットワークとクラスタの設定にアクセスし、システムのテストとユーティリティを利用できます。 https://docs.netapp.com/us-en/hci/docs/task_mnode_access_ui.html#access-the-management-node-per-node-ui["詳細はこちら。"] 
+| 「 https://[IP アドレス」： 442` | ノード UI から、ネットワークとクラスタの設定にアクセスし、システムのテストとユーティリティを利用できます。 link:task_mnode_access_ui.html#access-the-management-node-per-node-ui["詳細はこちら。"^] 
 
 
 | 「 https://[management node IP address 」 : 9443 | vCenter Plug-in パッケージを vSphere Web Client に登録します。 

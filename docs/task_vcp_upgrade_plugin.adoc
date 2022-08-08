@@ -5,7 +5,12 @@ summary: NetApp HCI システムのアップグレードの一環として、 El
 keywords: netapp, vcp, vCenter plug-in, upgrade, 4.4, 4.5, 4.6, 4.7, 4.8, 4.9 
 ---
 = Element Plug-in for vCenter Server をアップグレードします
+:hardbreaks:
 :allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ../media/
 
 
 [role="lead"]
@@ -81,9 +86,9 @@ image::vcp_shortcuts_page_accessing_plugin.png[は、アップグレードまた
 +
 [NOTE]
 ====
-vCenter Plug-in のアイコンが表示されない場合は、を参照してください link:https://review.docs.netapp.com/us-en/vcp_2.19_vcp4.8_release_vcp_repo/vcp_reference_troubleshoot_vcp.html#plug-in-registration-successful-but-icons-do-not-appear-in-web-client["vCenter Server 向け Element プラグイン"^] プラグインのトラブルシューティングに関するドキュメント。
+vCenter Plug-in のアイコンが表示されない場合は、を参照してください link:https://docs.netapp.com/us-en/vcp/vcp_reference_troubleshoot_vcp.html#plug-in-registration-successful-but-icons-do-not-appear-in-web-client["vCenter Server 向け Element プラグイン"^] プラグインのトラブルシューティングに関するドキュメント。
 
-VMware vCenter Server 6.7U1を使用してVCP 4.8以降にアップグレードしたあと、ストレージクラスタが表示されないか、NetApp Element 構成の「クラスタ」および「QoSSIOC設定*」のセクションにサーバエラーが表示されます。を参照してください link:https://review.docs.netapp.com/us-en/vcp_2.19_vcp4.8_release_vcp_repo/vcp_reference_troubleshoot_vcp.html#errors-after-vcp-4-8-upgrade-with-vmware-vcenter-server-6-7u1["vCenter Server 向け Element プラグイン"^] これらのエラーのトラブルシューティングに関するドキュメント。
+VMware vCenter Server 6.7U1を使用してNetApp Element Plug-in for vCenter Server 4.8以降にアップグレードしたあとに、ストレージクラスタが表示されないか、NetApp Element 構成の「クラスタ」および「QoSSIOC設定*」のセクションにサーバエラーが表示される場合は、を参照してください link:https://docs.netapp.com/us-en/vcp/vcp_reference_troubleshoot_vcp.html#error_vcp48_67u1["vCenter Server 向け Element プラグイン"^] これらのエラーのトラブルシューティングに関するドキュメント。
 
 ====
 . プラグインの * NetApp Element 構成 * 拡張ポイントの * バージョン情報 * タブでバージョンの変更を確認します。

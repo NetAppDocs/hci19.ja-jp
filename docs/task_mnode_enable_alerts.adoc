@@ -5,7 +5,12 @@ summary: NetApp HCI システムでアラートを監視するように設定を
 keywords: netapp, element, management node, mnode, ui, alerts, alert monitoring 
 ---
 = NetApp HCI でアラート監視を設定する
+:hardbreaks:
 :allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ../media/
 
 
 [role="lead"]

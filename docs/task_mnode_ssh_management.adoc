@@ -5,7 +5,12 @@ summary: NetApp Hybrid Cloud ControlのUIまたはREST APIのUIを使用して�
 keywords: netapp, mnode, management node, ssh, disable, enable, rest api, hybrid, cloud, control, hcc 
 ---
 = 管理ノードで SSH 機能を管理します
+:hardbreaks:
 :allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ../media/
 
 
 [role="lead"]

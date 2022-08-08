@@ -71,7 +71,7 @@ Mellanox ファームウェアのバージョン 14.25.1020 および 14.24.1000
 
 
 
-NOTE: バージョン 2.76.10 にアップグレードする前に、 ESXi ドライバの現在のバージョンを確認してください。ドライバが最新でない場合は、まずドライバをアップグレードします。次に、コンピューティングノードのコンピューティングファームウェアをバージョン 2.99 にアップグレードします。にアクセスします link:task_hcc_upgrade_compute_node_drivers.html["コンピューティングノードのドライバを更新"^] ESXi ドライバを含むコンピューティングノードのドライバを更新する手順については、を参照してください。
+NOTE: バージョン 2.76.10 にアップグレードする前に、 ESXi ドライバの現在のバージョンを確認してください。ドライバが最新でない場合は、まずドライバをアップグレードします。次に、コンピューティングノードのコンピューティングファームウェアをバージョン 2.99 にアップグレードします。にアクセスします link:task_hcc_upgrade_compute_node_drivers.html["コンピューティングノードのドライバを更新"] ESXi ドライバを含むコンピューティングノードのドライバを更新する手順については、を参照してください。
 
 NetApp Deployment Engine 1.8P1 では ESXi バージョン 7.0 は導入されませんが、 ESXi 7.0 はセルフインストールオプションまたは手動アップグレードオプションとしてサポートされます。ホスト OS を手動でインストールまたはアップグレードする場合、ネットアップはこれらの OS のドライバとファームウェアを制御できません。
 
@@ -81,7 +81,7 @@ NetApp Deployment Engine 1.8P1 では ESXi バージョン 7.0 は導入され�
 
 Compute Firmware Bundle をダウンロードするには、にアクセスします https://mysupport.netapp.com/site/products/all/details/netapp-hci/downloads-tab/download/62542/Compute_Firmware_Bundle["NetApp HCI Compute Firmware Bundle の略"^] ページ
 
-にアクセスします link:task_hcc_upgrade_compute_node_firmware.html#use-the-baseboard-management-controller-bmc-user-interface-ui["コンピューティングノードのファームウェアを更新します"^] コンピューティングノードのファームウェアを更新する手順については、を参照してください。
+にアクセスします link:task_hcc_upgrade_compute_node_firmware.html#use-the-baseboard-management-controller-bmc-user-interface-ui["コンピューティングノードのファームウェアを更新します"] コンピューティングノードのファームウェアを更新する手順については、を参照してください。
 
 
 

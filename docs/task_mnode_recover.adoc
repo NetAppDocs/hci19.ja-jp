@@ -5,7 +5,12 @@ summary: NetApp Element ソフトウェアを実行しているクラスタの�
 keywords: netapp, element, management node, mnode, disaster recovery, redeploy, VM 
 ---
 = 管理ノードをリカバリ
+:hardbreaks:
 :allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ../media/
 
 
 [role="lead"]
@@ -238,7 +243,7 @@ NOTE: セキュアプロンプトにパスワードを入力するように求�
 NOTE: ユーザ名を追加するか、または情報の入力を求めるプロンプトをスクリプトに表示することができます。
 
 .. 「 redeploy -mnode 」コマンドを実行します。再導入が完了すると、成功メッセージが表示されます。
-.. システムの完全修飾ドメイン名（ FQDN ）を使用して Element または NetApp HCI の Web インターフェイス（管理ノードやネットアップハイブリッドクラウド制御など）にアクセスする場合は、 link:task_hcc_upgrade_management_node.html#reconfigure-authentication-using-the-management-node-rest-api["管理ノードの認証を再設定します"^]。
+.. システムの完全修飾ドメイン名（ FQDN ）を使用して Element または NetApp HCI の Web インターフェイス（管理ノードやネットアップハイブリッドクラウド制御など）にアクセスする場合は、 link:task_hcc_upgrade_management_node.html#reconfigure-authentication-using-the-management-node-rest-api["管理ノードの認証を再設定します"]。
 
 
 

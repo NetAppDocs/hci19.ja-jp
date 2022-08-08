@@ -17,7 +17,7 @@ keywords: netapp, hci, Rancher, install, installation, requirements
 NetApp HCI に Rancher をインストールする前に、環境および NetApp HCI システムがこれらの要件を満たしていることを確認してください。
 
 
-NOTE: 誤った情報（不正な Rancher サーバ FQDN など）を使用して NetApp HCI に Rancher を誤って展開した場合、展開を削除して再展開することなく修正する方法はありません。NetApp HCI インスタンスでランチャを削除してから、ネットアップハイブリッドクラウド制御 UI から NetApp HCI 上のランチャを再導入する必要があります。を参照してください link:task_rancher_remove_deployment.html["NetApp HCI でランチツールをインストールした場合は、取り外します"^] を参照してください。
+NOTE: 誤った情報（不正な Rancher サーバ FQDN など）を使用して NetApp HCI に Rancher を誤って展開した場合、展開を削除して再展開することなく修正する方法はありません。NetApp HCI インスタンスでランチャを削除してから、ネットアップハイブリッドクラウド制御 UI から NetApp HCI 上のランチャを再導入する必要があります。を参照してください link:task_rancher_remove_deployment.html["NetApp HCI でランチツールをインストールした場合は、取り外します"] を参照してください。
 
 
 

@@ -5,7 +5,12 @@ summary: NetApp HCI システムのアップグレードの一環として、コ
 keywords: netapp, hci, on premise, cluster, element, compute node 
 ---
 = コンピューティングノードのドライバを更新
+:hardbreaks:
 :allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ../media/
 
 
 [role="lead"]

@@ -5,7 +5,12 @@ summary: REST API UI を使用して、管理ノードのストレージクラ�
 keywords: netapp, mnode, management node, rest api, hci, assets 
 ---
 = ストレージクラスタアセットを作成および管理する
+:hardbreaks:
 :allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ../media/
 
 
 [role="lead"]

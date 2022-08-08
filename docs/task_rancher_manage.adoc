@@ -37,6 +37,6 @@ Rancher Server Clusters ページには、展開された Rancher サーバク�
 
 * link:task_rancher_remove_deployment.html["ランチを取り外す"]
 * https://rancher.com/docs/rancher/v2.x/en/overview/architecture/["アーキテクチャに関する Rancher ドキュメント"^]
-* https://rancher.com/docs/rancher/v2.x/en/overview/concepts/["Rancher 用の Kubernetes 用語"]
+* https://rancher.com/docs/rancher/v2.x/en/overview/concepts/["Rancher 用の Kubernetes 用語"^]
 * https://www.netapp.com/us/documentation/hci.aspx["NetApp HCI のリソースページ"^]
 

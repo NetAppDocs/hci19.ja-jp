@@ -5,7 +5,12 @@ summary: NetApp HCI システムのアップグレードの一環として、 Ne
 keywords: netapp, hci, HealthTools, cluster, element, H610S upgrade, hcc 
 ---
 = Element ソフトウェアをアップグレードします
+:hardbreaks:
 :allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ../media/
 
 
 [role="lead"]
@@ -24,7 +29,7 @@ NetApp Element ソフトウェアをアップグレードするには、 NetApp 
 IMPORTANT: Element ソフトウェアをバージョン 12.3.x にアップグレードする前に、最新の管理サービスバンドルにアップグレードする必要がありますElement ソフトウェアをバージョン 12.3.x に更新する場合は、管理サービス 2.14.60 以降が必要です。
 
 * * クラスタの健全性 * ：クラスタをアップグレードする準備が完了していることを確認しました。を参照してください link:task_hcc_upgrade_element_prechecks.html["ストレージをアップグレードする前に、 Element ストレージの健全性チェックを実行します"]。
-* * H610S ノードの BMC を更新 * ： H610S ノードの BMC バージョンをアップグレードしました。を参照してください link:rn_H610S_BMC_3.84.07.html["リリースノートおよびアップグレード手順"^]。
+* * H610S ノードの BMC を更新 * ： H610S ノードの BMC バージョンをアップグレードしました。を参照してください link:rn_H610S_BMC_3.84.07.html["リリースノートおよびアップグレード手順"]。
 * *エンドユーザライセンス契約（EULA）*：管理サービス2.20以降では、NetApp Hybrid Cloud ControlのUIまたはAPIを使用してElementソフトウェアをアップグレードする前に、EULAに同意して保存する必要があります。
 +
 .. Webブラウザで管理ノードのIPアドレスを開きます。
@@ -156,7 +161,7 @@ CAUTION: ブラウザウィンドウから別の場所に移動すると、フ�
 | エラー | アップグレード中にエラーが発生しました。エラーログをダウンロードして、ネットアップサポートに送信できます。エラーを解決したら、ページに戻って * Resume * （続行）を選択します。アップグレードを再開すると、システムが健全性チェックを実行してアップグレードの現在の状態を確認している間、進捗状況バーが数分間後方に移動します。 
 
 
-| 検出できません | オンラインのソフトウェアリポジトリにアクセスするための外部接続がない場合、 NetApp Hybrid Cloud Control では、バージョンを利用可能 * ではなくこのステータスが表示されます。外部接続を確立してもこのメッセージが表示される場合は、を確認してください link:task_mnode_configure_proxy_server.html["プロキシ設定："^]。 
+| 検出できません | オンラインのソフトウェアリポジトリにアクセスするための外部接続がない場合、 NetApp Hybrid Cloud Control では、バージョンを利用可能 * ではなくこのステータスが表示されます。外部接続を確立してもこのメッセージが表示される場合は、を確認してください link:task_mnode_configure_proxy_server.html["プロキシ設定："]。 
 
 
 | フォローアップを完了します | H610S ノードを 11.8 より前のバージョンからアップグレードした場合のみアップグレードプロセスのフェーズ 1 が完了すると、アップグレードのフェーズ 2 を実行するように求められます（を参照） https://kb.netapp.com/Advice_and_Troubleshooting/Hybrid_Cloud_Infrastructure/H_Series/NetApp_H610S_storage_node_power_off_and_on_procedure["こちらの技術情報アーティクル"^]）。フェーズ 2 を完了し、完了したことを確認すると、ステータスが「 * 最新 * 」に変わります。 
@@ -643,7 +648,7 @@ HealthTools ツールスイートを使用して、外部接続がないダー�
 
 NOTE: Element ストレージソフトウェアをアップグレードするには、最新バージョンの HealthTools が必要です。
 
-. こちらをダウンロードしてください https://library.netapp.com/ecm/ecm_get_file/ECMLP2840740["JSON ファイル"^] (https://library.netapp.com/ecm/ecm_get_file/ECMLP2840740)[] 管理ノードではないコンピュータのネットアップサポートサイトから、「 metadats.json 」に名前を変更します。
+. こちらをダウンロードしてください https://library.netapp.com/ecm/ecm_get_file/ECMLP2840740["JSON ファイル"^] 管理ノードではないコンピュータのネットアップサポートサイトから、「 metadats.json 」に名前を変更します。
 . ISO ファイルを '/tmp のようなアクセス可能な場所にある管理ノードにコピーします
 +
 

@@ -5,7 +5,12 @@ summary: 管理 UI または REST API UI にアクセスできます。
 keywords: netapp, mnode, management node, api, hci 
 ---
 = 管理ノードにアクセスします
+:hardbreaks:
 :allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ../media/
 
 
 [role="lead"]

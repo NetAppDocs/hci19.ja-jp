@@ -5,7 +5,12 @@ summary: REST API UI を使用して、管理ノードの構成にコンピュ�
 keywords: netapp, mnode, management node, rest api, hci 
 ---
 = 管理ノードにコンピューティングアセットとコントローラアセットを追加します
+:hardbreaks:
 :allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ../media/
 
 
 [role="lead"]

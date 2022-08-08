@@ -15,7 +15,7 @@ keywords: netapp, hci, element, storage, protection domains
 
 
 [role="lead"]
-NetApp Element ソフトウェアは、をサポートします https://docs.netapp.com/us-en/hci/docs/concept_hci_dataprotection.html#protection-domains["保護ドメイン"^] 機能：データの可用性を最大限に高めるために、ストレージノード上のデータレイアウトを最適化します。この機能を使用するには、 3 台以上の NetApp H シリーズシャーシにストレージ容量を均等に分割して、ストレージの信頼性を最適化する必要があります。この場合、ストレージクラスタで保護ドメインが自動的に有効になります。
+NetApp Element ソフトウェアは、をサポートします link:concept_hci_dataprotection.html#protection-domains["保護ドメイン"] 機能：データの可用性を最大限に高めるために、ストレージノード上のデータレイアウトを最適化します。この機能を使用するには、 3 台以上の NetApp H シリーズシャーシにストレージ容量を均等に分割して、ストレージの信頼性を最適化する必要があります。この場合、ストレージクラスタで保護ドメインが自動的に有効になります。
 
 [discrete]
 == 詳細については、こちらをご覧ください

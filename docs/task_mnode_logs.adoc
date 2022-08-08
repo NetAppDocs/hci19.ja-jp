@@ -5,7 +5,12 @@ summary: REST API を使用して、管理 ndoe で実行されているサー�
 keywords: netapp, element, management node, management services, mnode, logs 
 ---
 = 管理サービスからログを取得しています
+:hardbreaks:
 :allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ../media/
 
 
 [role="lead"]

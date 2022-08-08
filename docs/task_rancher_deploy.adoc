@@ -155,8 +155,8 @@ IMPORTANT: 導入が完了したら、 Rancher サーバ仮想マシンクラス
 [discrete]
 == 詳細については、こちらをご覧ください
 
-* https://kb.netapp.com/Advice_and_Troubleshooting/Data_Storage_Software/Management_services_for_Element_Software_and_NetApp_HCI/NetApp_HCI_and_Rancher_troubleshooting["Rancher 展開のトラブルシューティング"]
+* https://kb.netapp.com/Advice_and_Troubleshooting/Data_Storage_Software/Management_services_for_Element_Software_and_NetApp_HCI/NetApp_HCI_and_Rancher_troubleshooting["Rancher 展開のトラブルシューティング"^]
 * https://rancher.com/docs/rancher/v2.x/en/overview/architecture/["アーキテクチャに関する Rancher ドキュメント"^]
-* https://rancher.com/docs/rancher/v2.x/en/overview/concepts/["Rancher 用の Kubernetes 用語"]
+* https://rancher.com/docs/rancher/v2.x/en/overview/concepts/["Rancher 用の Kubernetes 用語"^]
 * https://www.netapp.com/us/documentation/hci.aspx["NetApp HCI のリソースページ"^]
 

@@ -41,9 +41,9 @@ NOTE: ネットアップサポートサイトのクレデンシャルでログ�
 * https://library.netapp.com/ecm/ecm_download_file/ECMLP2877210["NetApp Element ソフトウェア 12.2.1 リリースノート"^]
 * https://library.netapp.com/ecm/ecm_download_file/ECMLP2873789["NetApp Element ソフトウェア 12.2 リリースノート"^]
 * https://library.netapp.com/ecm/ecm_download_file/ECMLP2877208["NetApp Element ソフトウェア 12.0.1 リリースノート"^]
-* https://library.netapp.com/ecm/ecm_download_file/ECMLP2865022["NetApp Element ソフトウェア 12.0 リリースノート"]
+* https://library.netapp.com/ecm/ecm_download_file/ECMLP2865022["NetApp Element ソフトウェア 12.0 リリースノート"^]
 * https://library.netapp.com/ecm/ecm_download_file/ECMLP2864256["NetApp Element ソフトウェア 11.8 リリースノート"^]
-* https://library.netapp.com/ecm/ecm_download_file/ECMLP2861225["NetApp Element ソフトウェア 11.7 リリースノート"]
+* https://library.netapp.com/ecm/ecm_download_file/ECMLP2861225["NetApp Element ソフトウェア 11.7 リリースノート"^]
 * https://library.netapp.com/ecm/ecm_download_file/ECMLP2863854["NetApp Element ソフトウェア 11.5.1 リリースノート"^]
 * https://library.netapp.com/ecm/ecm_download_file/ECMLP2859857["NetApp Element ソフトウェア 11.3P1 リリースノート"^]
 

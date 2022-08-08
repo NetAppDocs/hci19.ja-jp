@@ -5,7 +5,12 @@ summary: REST API を使用してコンピューティングノードアセッ�
 keywords: netapp, hci, api, REST, remove, compute, asset 
 ---
 = 管理ノードからアセットを削除します
+:hardbreaks:
 :allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ../media/
 
 
 [role="lead"]

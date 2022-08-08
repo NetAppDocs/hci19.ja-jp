@@ -5,7 +5,12 @@ summary: NetApp Hybrid Cloud Control を使用して、 HCC を使用して以�
 keywords: netapp, hci, rancher, upgrade, hcc 
 ---
 = NetApp HCI の Rancher をアップグレードします
+:hardbreaks:
 :allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ../media/
 
 
 [role="lead"]

@@ -17,12 +17,12 @@ keywords: netapp, hci, rancher, control plane, catalog, cluster, kubernetes
 NetApp HCI の Rancher に関連する基本的な概念を学びます。
 
 * * Rancher サーバー * または * コントロールプレーン * ： Rancher コントロールプレーン（ _ ランチエージェントサーバー _ と呼ばれることもあります）は、開発および運用チームが使用する Kubernetes クラスタをプロビジョニング、管理、監視します。
-* * カタログ * ：カタログは GitHub リポジトリまたは Helm Chart リポジトリで、すぐに導入できるアプリケーションがいっぱいになっています。Rancher では、 Helm チャートのカタログを使用して、アプリケーションを繰り返し簡単に導入できます。Rancher には、組み込みのグローバルカタログとカスタムカタログの 2 種類のカタログが含まれています。Trident はカタログとして導入されています。を参照してください https://rancher.com/docs/rancher/v2.x/en/helm-charts/legacy-catalogs/["カタログに関する Rancher のドキュメント"]。
+* * カタログ * ：カタログは GitHub リポジトリまたは Helm Chart リポジトリで、すぐに導入できるアプリケーションがいっぱいになっています。Rancher では、 Helm チャートのカタログを使用して、アプリケーションを繰り返し簡単に導入できます。Rancher には、組み込みのグローバルカタログとカスタムカタログの 2 種類のカタログが含まれています。Trident はカタログとして導入されています。を参照してください https://rancher.com/docs/rancher/v2.x/en/helm-charts/legacy-catalogs/["カタログに関する Rancher のドキュメント"^]。
 * * 管理クラスタ * ： NetApp HCI の Rancher は、 Rancher 管理クラスタに 3 台の仮想マシンを導入します。 Rancher 、 Hybrid Cloud Control 、および vCenter Plug-in を使用して確認できます。管理クラスタの仮想マシンは、 Rancher サーバ、 Rancher Kubernetes Engine （ RKE ）、および Linux OS をホストします。
 * * ユーザクラスタ * ：これらのダウンストリーム Kubernetes クラスタは、アプリケーションとサービスを実行します。ランチサーバの Kubernetes 環境では、管理クラスタをユーザクラスタから分離する必要があります。Rancher ユーザーが rancher から展開するか、または rancher にインポートするクラスタは、ユーザークラスタと見なされます。
 * * ランチャノードテンプレート * ： Hybrid Cloud Control では、ランチャノードテンプレートを使用して導入を簡易化しています。
 +
-を参照してください  https://rancher.com/docs/rancher/v2.x/en/user-settings/node-templates/["ノードテンプレートに関する Rancher のドキュメント"]。
+を参照してください  https://rancher.com/docs/rancher/v2.x/en/user-settings/node-templates/["ノードテンプレートに関する Rancher のドキュメント"^]。
 
 
 
@@ -40,12 +40,12 @@ Trident カタログは、 NetApp HCI 上の Rancher で利用でき、ユーザ
 
 を参照してください link:task_rancher_trident.html["Trident を NetApp HCI に Rancher とともにインストール"]。
 
-詳細については、を参照してください https://netapp-trident.readthedocs.io/en/stable-v20.10/introduction.html["Trident のドキュメント"]。
+詳細については、を参照してください https://netapp-trident.readthedocs.io/en/stable-v20.10/introduction.html["Trident のドキュメント"^]。
 
 [discrete]
 == 詳細については、こちらをご覧ください
 
 * https://rancher.com/docs/rancher/v2.x/en/overview/architecture/["アーキテクチャに関する Rancher ドキュメント"^]
-* https://rancher.com/docs/rancher/v2.x/en/overview/concepts/["Rancher 用の Kubernetes 用語"]
+* https://rancher.com/docs/rancher/v2.x/en/overview/concepts/["Rancher 用の Kubernetes 用語"^]
 * https://www.netapp.com/us/documentation/hci.aspx["NetApp HCI のリソースページ"^]
 

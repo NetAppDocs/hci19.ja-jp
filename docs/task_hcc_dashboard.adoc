@@ -5,7 +5,12 @@ summary: ストレージリソースとコンピューティングリソース�
 keywords: netapp, hci, on premise, hcc, hybrid cloud control, storage, compute, storage performance, utilization, capacity 
 ---
 = Hybrid Cloud Control でストレージリソースとコンピューティングリソースを監視します ダッシュボード
+:hardbreaks:
 :allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ../media/
 
 
 [role="lead"]
@@ -115,7 +120,7 @@ NOTE: 総削減率は（ maxUsedSpace * efficiency factor ） /2 で、 efficien
 
 
 
-. 詳細な分析と履歴のコンテキストについては、を参照してください https://activeiq.solidfire.com/["NetApp SolidFire Active IQ の詳細"]。
+. 詳細な分析と履歴のコンテキストについては、を参照してください https://activeiq.solidfire.com/["NetApp SolidFire Active IQ の詳細"^]。
 
 
 
@@ -173,7 +178,7 @@ image::hcc_dashboard_compute_util_cpu.png[[Compute Utilization] ペイン]
 .. * Memory * タブ：コンピューティングクラスタの現在の平均メモリ使用量を確認します。
 
 
-. コンピューティング情報の詳細な分析については、を参照してください https://activeiq.solidfire.com["履歴データ用の NetApp SolidFire Active IQ"]。
+. コンピューティング情報の詳細な分析については、を参照してください https://activeiq.solidfire.com["履歴データ用の NetApp SolidFire Active IQ"^]。
 
 
 [discrete]

@@ -5,7 +5,12 @@ summary: ノードの交換、ストレージノードのドライブの交換�
 keywords: netapp, hci, on premise, activeiq, active iq, cluster, performance, rails, h-series, nodes 
 ---
 = H シリーズハードウェアのメンテナンスの概要
+:hardbreaks:
 :allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ../media/
 
 
 [role="lead"]
@@ -13,17 +18,17 @@ keywords: netapp, hci, on premise, activeiq, active iq, cluster, performance, ra
 
 ハードウェアメンテナンスタスクへのリンクを次に示します。
 
-* link:task_hci_hserieschassisrepl.html["2U H シリーズシャーシを交換"^]
-* link:task_hci_dcpsurepl.html["H615C および H610S ノードの DC 電源装置を交換してください"^]
-* link:task_hci_dimmcomputerepl.html["コンピューティングノードの DIMM を交換します"^]
-* link:task_hci_driverepl.html["ストレージノードのドライブを交換"^]
-* link:task_hci_h410crepl.html["H410C ノードを交換してください"^]
-* link:task_hci_h410srepl.html["H410S ノードを交換します"^]
-* link:task_hci_h610ch615crepl.html["H610C ノードと H615C ノードを交換してください"^]
-* link:task_hci_h610srepl.html["H610S ノードを交換してください"^]
-* link:task_hci_psurepl.html["電源装置を交換してください"^]
+* link:task_hci_hserieschassisrepl.html["2U H シリーズシャーシを交換"]
+* link:task_hci_dcpsurepl.html["H615C および H610S ノードの DC 電源装置を交換してください"]
+* link:task_hci_dimmcomputerepl.html["コンピューティングノードの DIMM を交換します"]
+* link:task_hci_driverepl.html["ストレージノードのドライブを交換"]
+* link:task_hci_h410crepl.html["H410C ノードを交換してください"]
+* link:task_hci_h410srepl.html["H410S ノードを交換します"]
+* link:task_hci_h610ch615crepl.html["H610C ノードと H615C ノードを交換してください"]
+* link:task_hci_h610srepl.html["H610S ノードを交換してください"]
+* link:task_hci_psurepl.html["電源装置を交換してください"]
 * link:task_hci_snswitches.html["SN2010 、 SN2100 、および SN2700 の各スイッチを交換してください"]
-* link:task_hci_2noderepl.html["2 ノードクラスタのストレージノードを交換"^]
+* link:task_hci_2noderepl.html["2 ノードクラスタのストレージノードを交換"]
 
 
 [discrete]

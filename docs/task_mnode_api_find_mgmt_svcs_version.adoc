@@ -5,7 +5,12 @@ summary: 管理ノードの OS および管理サービスのバージョンは�
 keywords: netapp, hci, management node, management services, version, bundle version, what is 
 ---
 = 管理ノードの OS とサービスのバージョンを確認
+:hardbreaks:
 :allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ../media/
 
 
 [role="lead"]

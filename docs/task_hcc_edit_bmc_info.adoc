@@ -5,7 +5,12 @@ summary: NetApp Hybrid Cloud Control を使用して、 NetApp HCI が接続で�
 keywords: netapp, hci, BMC, connection, credentials, monitor 
 ---
 = ベースボード管理コントローラの接続情報を編集します
+:hardbreaks:
 :allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ../media/
 
 
 [role="lead"]

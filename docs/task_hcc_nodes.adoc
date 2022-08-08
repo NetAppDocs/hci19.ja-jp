@@ -5,13 +5,18 @@ summary: Hybrid Cloud Control Nodes ページを使用すると、システム�
 keywords: netapp, hci, on premise, cluster, inventory, nodes, storage, compute 
 ---
 = ノードページでインベントリを表示します
+:hardbreaks:
 :allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ../media/
 
 
 [role="lead"]
 システム内のストレージアセットとコンピューティングアセットの両方を表示し、それらの IP アドレス、名前、およびソフトウェアバージョンを確認することができます。
 
-複数のノードシステム、および 2 ノードまたは 3 ノードクラスタに関連付けられた NetApp HCI 監視ノードのストレージ情報を表示できます。状況 link:concept_hcc_custom_protection_domains.html["カスタムの保護ドメイン"^] が割り当てられている場合、特定のノードに割り当てられている保護ドメインを確認できます。
+複数のノードシステム、および 2 ノードまたは 3 ノードクラスタに関連付けられた NetApp HCI 監視ノードのストレージ情報を表示できます。状況 link:concept_hcc_custom_protection_domains.html["カスタムの保護ドメイン"] が割り当てられている場合、特定のノードに割り当てられている保護ドメインを確認できます。
 
 監視ノードはクラスタ内のクォーラムを管理します。監視ノードはストレージには使用されません。監視ノードは NetApp HCI のみに該当し、オールフラッシュストレージ環境には該当しません。
 

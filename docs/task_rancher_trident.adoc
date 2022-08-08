@@ -22,11 +22,11 @@ TIP: Trident の詳細については、を参照してください https://neta
 .必要なもの
 * NetApp HCI に Rancher をインストールしておきます。
 * ユーザクラスタを導入しておきます。
-* Trident のユーザクラスタネットワークを設定しておきます。を参照してください link:task_trident_configure_networking.html["ユーザクラスタで Trident のサポートを有効にします"^] 手順については、を参照し
-* Trident の作業ノードを準備するために必要な準備手順を完了しておきます。を参照してください https://netapp-trident.readthedocs.io/en/stable-v20.10/kubernetes/operations/tasks/worker.html["Trident のドキュメント"]。
+* Trident のユーザクラスタネットワークを設定しておきます。を参照してください link:task_trident_configure_networking.html["ユーザクラスタで Trident のサポートを有効にします"] 手順については、を参照し
+* Trident の作業ノードを準備するために必要な準備手順を完了しておきます。を参照してください https://netapp-trident.readthedocs.io/en/stable-v20.10/kubernetes/operations/tasks/worker.html["Trident のドキュメント"^]。
 
 
-Trident インストーラカタログは、 NetApp Hybrid Cloud Control を使用してランチャインストールの一部としてインストールされます。このタスクでは、インストーラカタログを使用して Trident をインストールおよび設定します。ランチシートインストールの一環として、ネットアップではノードテンプレートを提供しています。ネットアップが提供するノードテンプレートを使用せずに RHEL または CentOS でプロビジョニングする場合は、追加の要件がある可能性があります。ワーカーノードを RHEL または CentOS に変更する場合は、いくつかの前提条件を満たす必要があります。を参照してください https://netapp-trident.readthedocs.io/en/stable-v20.10/kubernetes/operations/tasks/worker.html["Trident のドキュメント"]。
+Trident インストーラカタログは、 NetApp Hybrid Cloud Control を使用してランチャインストールの一部としてインストールされます。このタスクでは、インストーラカタログを使用して Trident をインストールおよび設定します。ランチシートインストールの一環として、ネットアップではノードテンプレートを提供しています。ネットアップが提供するノードテンプレートを使用せずに RHEL または CentOS でプロビジョニングする場合は、追加の要件がある可能性があります。ワーカーノードを RHEL または CentOS に変更する場合は、いくつかの前提条件を満たす必要があります。を参照してください https://netapp-trident.readthedocs.io/en/stable-v20.10/kubernetes/operations/tasks/worker.html["Trident のドキュメント"^]。
 
 .手順
 . Rancher UI から、ユーザークラスタのプロジェクトを選択します。
@@ -44,7 +44,7 @@ image::rancher-trident.jpg[Rancher のカタログページにある Trident イ
 
 +
 
-NOTE: 表示されたページで、「詳しい説明」の矢印を選択して Trident アプリの詳細を確認したり、へのリンクを確認したりできます https://netapp-trident.readthedocs.io/en/stable-v20.10/introduction.html["Trident のドキュメント"]。
+NOTE: 表示されたページで、「詳しい説明」の矢印を選択して Trident アプリの詳細を確認したり、へのリンクを確認したりできます https://netapp-trident.readthedocs.io/en/stable-v20.10/introduction.html["Trident のドキュメント"^]。
 
 . [* 構成オプション * （ Configurations Options ） ] 矢印を選択し、クレデンシャルとストレージ構成情報を入力します。
 +
@@ -74,7 +74,7 @@ NOTE: 3 つのストレージクラスは、 * solidfire-cold* 、 * solidfire-p
 
 * link:task_trident_configure_networking.html["ユーザクラスタで Trident のサポートを有効にします"]
 * https://rancher.com/docs/rancher/v2.x/en/overview/architecture/["アーキテクチャに関する Rancher ドキュメント"^]
-* https://rancher.com/docs/rancher/v2.x/en/overview/concepts/["Rancher 用の Kubernetes 用語"]
+* https://rancher.com/docs/rancher/v2.x/en/overview/concepts/["Rancher 用の Kubernetes 用語"^]
 * https://docs.netapp.com/us-en/vcp/index.html["vCenter Server 向け NetApp Element プラグイン"^]
 * https://www.netapp.com/us/documentation/hci.aspx["NetApp HCI のリソースページ"^]
 

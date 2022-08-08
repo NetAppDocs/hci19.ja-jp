@@ -5,7 +5,12 @@ summary: 以下の手順を使用して、 NetApp HCI をインストールお�
 keywords: netapp, hci, install, deploy, get started 
 ---
 = NetApp HCI のインストールと導入の概要
+:hardbreaks:
 :allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ../media/
 
 
 [role="lead"]
@@ -47,7 +52,7 @@ NOTE: ネットワークトポロジは、ここに示すものとは異なる�
 次のリソースを参照してください。
 
 * インストール前に NetApp HCI インストール検出ワークブック _ を使用してネットワークを設定してください。
-* その他のサポートされる構成の詳細については、を参照してください https://www.netapp.com/us/media/tr-4820.pdf["_TR-48820 ：『 NetApp HCI ネットワーククイックプランニングガイド』 _"] および https://library.netapp.com/ecm/ecm_download_file/ECMLP2856176["NetApp HCI のインストールとセットアップの手順 _"]。
+* その他のサポートされる構成の詳細については、を参照してください https://www.netapp.com/us/media/tr-4820.pdf["_TR-48820 ：『 NetApp HCI ネットワーククイックプランニングガイド』 _"^] および https://library.netapp.com/ecm/ecm_download_file/ECMLP2856176["NetApp HCI のインストールとセットアップの手順 _"^]。
 * 4 つのストレージノードよりも小規模な NetApp HCI 構成の詳細については、を参照してください https://www.netapp.com/us/media/tr-4823.pdf["TR-4823 ：『 NetApp HCI 2 Node Storage Cluster _ 』"^]。
 * 各ストレージノードに使用されるスイッチポートでの Link Aggregation Control Protocol （ LACP ）の設定の詳細については、を参照してください link:hci_prereqs_LACP_configuration.html["ストレージパフォーマンスを最適化するために LCAP を設定します"]。
 
@@ -82,7 +87,7 @@ NOTE: NDE プロセスでは、すべてのノードに永続的な IP アドレ
 
 ネットワークが NetApp HCI に対応していることを確認するために、 NetApp Active IQ Config Advisor 5.8.1 以降をインストールします。このネットワーク検証ツールは他のツールと一緒に配置されています link:https://mysupport.netapp.com/site/tools/tool-eula/5ddb829ebd393e00015179b2["ネットアップサポートツール"^]。このツールを使用して、接続性、 VLAN ID 、 IP アドレス要件、スイッチ接続などを検証します。
 
-詳細については、を参照してください link:hci_prereqs_task_validate_config_advisor.html["Active IQ Config Advisor で環境を検証"]
+詳細については、を参照してください link:hci_prereqs_task_validate_config_advisor.html["Active IQ Config Advisor で環境を検証"]。
 
 
 

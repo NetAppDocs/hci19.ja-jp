@@ -5,7 +5,12 @@ summary: vCenter アセットまたはコンピューティングノードを管
 keywords: netapp, mnode, management node, vcenter, hci, role 
 ---
 = vCenter で NetApp HCC ロールを作成します
+:hardbreaks:
 :allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ../media/
 
 
 [role="lead"]

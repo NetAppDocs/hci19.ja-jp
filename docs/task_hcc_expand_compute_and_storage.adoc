@@ -5,7 +5,12 @@ summary: NetApp HCI の導入が完了したら、ネットアップハイブリ
 keywords: netapp, hci, on premise, expand, storage, compute, cluster 
 ---
 = NetApp HCI のストレージリソースとコンピューティングリソースも同時に拡張します 時間
+:hardbreaks:
 :allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ../media/
 
 
 [role="lead"]
@@ -119,7 +124,7 @@ NOTE: 入力した IP アドレスの検証には時間がかかることがあ�
 . * オプション * ：新しいノードが VMware vSphere Web Client （コンピューティングノードの場合）または Element Plug-in for vCenter Server （ストレージノードの場合）に表示されることを確認します。
 +
 
-NOTE: 2 ノードストレージクラスタを 4 ノード以上に拡張した場合でも、ストレージクラスタで以前に使用されていた監視ノードのペアは、 vSphere ではスタンバイ仮想マシンとして表示されます。新しく拡張したストレージクラスタでは使用されません。 VM リソースを再利用する場合は、を実行します link:task_hci_removewn.html["手動で削除します"^] 監視ノードの仮想マシン。
+NOTE: 2 ノードストレージクラスタを 4 ノード以上に拡張した場合でも、ストレージクラスタで以前に使用されていた監視ノードのペアは、 vSphere ではスタンバイ仮想マシンとして表示されます。新しく拡張したストレージクラスタでは使用されません。 VM リソースを再利用する場合は、を実行します link:task_hci_removewn.html["手動で削除します"] 監視ノードの仮想マシン。
 
 
 

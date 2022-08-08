@@ -5,7 +5,12 @@ summary: NetApp HCI の VMware コンポーネントをアップグレードし�
 keywords: netapp, hci, vSphere components, upgrade, vCenter, ESXi 
 ---
 = を使用して、 NetApp HCI システムの vSphere コンポーネントをアップグレードします vCenter Server 向け Element プラグイン
+:hardbreaks:
 :allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ../media/
 
 
 [role="lead"]
@@ -21,7 +26,7 @@ IMPORTANT: VMware vCenter Server 7.0 U3 にアップグレードすると、す�
 
 +
 
-NOTE: 用のコンピューティングノードの ESXi をアップグレードする場合 https://www.netapp.com/us/media/tr-4823.pdf["2 ノードクラスタ"]では、一度に 1 つのコンピューティングノードのみをアップグレードして、一時的に 1 つの監視ノードのみが使用不能になり、クラスタクォーラムを維持できるようにします。
+NOTE: 用のコンピューティングノードの ESXi をアップグレードする場合 https://www.netapp.com/us/media/tr-4823.pdf["2 ノードクラスタ"^]では、一度に 1 つのコンピューティングノードのみをアップグレードして、一時的に 1 つの監視ノードのみが使用不能になり、クラスタクォーラムを維持できるようにします。
 
 . https://docs.netapp.com/us-en/vcp/vcp_task_getstarted.html#register-the-plug-in-with-vcenter["登録"^] vCenter で Element Plug-in for vCenter Server を再度実行します。
 . https://docs.netapp.com/us-en/vcp/vcp_task_getstarted.html#add-storage-clusters-for-use-with-the-plug-in["クラスタを追加"^] プラグインを使用する。

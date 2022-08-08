@@ -5,7 +5,12 @@ summary: 再導入できるように、 NetApp HCI 展開でランチツール�
 keywords: netapp, hci, api, REST, remove, Rancher, redeploy 
 ---
 = NetApp HCI でランチツールをインストールした場合は、取り外します
+:hardbreaks:
 :allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ../media/
 
 
 [role="lead"]
@@ -85,7 +90,7 @@ https://[IP address]/k8sdeployer/api/
 [discrete]
 == 詳細はこちら
 
-* https://kb.netapp.com/Advice_and_Troubleshooting/Data_Storage_Software/Management_services_for_Element_Software_and_NetApp_HCI/NetApp_HCI_and_Rancher_troubleshooting["Rancher 展開のトラブルシューティング"]
+* https://kb.netapp.com/Advice_and_Troubleshooting/Data_Storage_Software/Management_services_for_Element_Software_and_NetApp_HCI/NetApp_HCI_and_Rancher_troubleshooting["Rancher 展開のトラブルシューティング"^]
 * https://docs.netapp.com/us-en/vcp/index.html["vCenter Server 向け NetApp Element プラグイン"^]
 * https://www.netapp.com/hybrid-cloud/hci-documentation/["NetApp HCI のリソースページ"^]
 

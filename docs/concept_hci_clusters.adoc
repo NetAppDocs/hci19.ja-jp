@@ -44,7 +44,7 @@ NetApp Hybrid Cloud Control を使用してユーザを管理できます。
 
 NetApp HCI 1.8 以降では、 2 つのストレージノードでストレージクラスタをセットアップできます。
 
-* 特定のタイプのノードを使用して、 2 ノードストレージクラスタを形成できます。を参照してください https://library.netapp.com/ecm/ecm_download_file/ECMLP2865021["NetApp HCI 1.8 リリースノート"]。
+* 特定のタイプのノードを使用して、 2 ノードストレージクラスタを形成できます。を参照してください https://library.netapp.com/ecm/ecm_download_file/ECMLP2865021["NetApp HCI 1.8 リリースノート"^]。
 +
 
 NOTE: 2 ノードクラスタの場合、ストレージノードのモデルは 480GB と 960GB のドライブで構成されるノードに制限され、ノードのモデルタイプは同じである必要があります。
@@ -87,7 +87,7 @@ TIP: 3 ノードのアンサンブルに 2 つのストレージノードと 1 �
 
 == 詳細については、こちらをご覧ください
 
-* https://www.netapp.com/us/media/tr-4823.pdf["NetApp HCI 2 ノードストレージクラスタ | TR-4823"]
+* https://www.netapp.com/us/media/tr-4823.pdf["NetApp HCI 2 ノードストレージクラスタ | TR-4823"^]
 * https://docs.netapp.com/us-en/vcp/index.html["vCenter Server 向け NetApp Element プラグイン"^]
 * http://docs.netapp.com/sfe-122/index.jsp["SolidFire と Element ソフトウェアドキュメントセンター"^]
 

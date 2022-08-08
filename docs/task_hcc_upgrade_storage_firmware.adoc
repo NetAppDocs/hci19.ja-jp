@@ -5,7 +5,12 @@ summary: NetApp HCI システムのアップグレードの一環として、ス
 keywords: netapp, element, hcc, firmware, storage firmware 
 ---
 = ストレージファームウェアをアップグレードします
+:hardbreaks:
 :allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ../media/
 
 
 [role="lead"]
@@ -20,7 +25,7 @@ Element 12.0 以降および管理サービスバージョン 2.14 以降では�
 
 
 
-IMPORTANT: Element ソフトウェアバージョン 12.0 を実行している H610S ストレージノードについては、ストレージファームウェアバンドル 2.27 にアップグレードする前に「 D パッチ」「 St-909 」を適用する必要があります。アップグレード前に、ネットアップサポートに問い合わせて D パッチを入手します。を参照してください link:http://docs.netapp.com/us-en/hci/docs/rn_storage_firmware_2.27.html["ストレージファームウェアバンドル 2.27 リリースノート"^]。
+IMPORTANT: Element ソフトウェアバージョン 12.0 を実行している H610S ストレージノードについては、ストレージファームウェアバンドル 2.27 にアップグレードする前に「 D パッチ」「 St-909 」を適用する必要があります。アップグレード前に、ネットアップサポートに問い合わせて D パッチを入手します。を参照してください link:rn_storage_firmware_2.27.html["ストレージファームウェアバンドル 2.27 リリースノート"]。
 
 
 IMPORTANT: ストレージノードのファームウェアをアップグレードする前に、最新の管理サービスバンドルにアップグレードする必要があります。Element ソフトウェアをバージョン 12.2 以降に更新する場合は、管理サービス 2.14.60 以降が必要です。
@@ -29,7 +34,7 @@ IMPORTANT: ストレージノードのファームウェアをアップグレー
 IMPORTANT: iDRAC / BIOS ファームウェアを更新するには、ネットアップサポートにお問い合わせください。追加情報の場合は、を参照してください link:https://kb.netapp.com/Advice_and_Troubleshooting/Flash_Storage/SF_Series/How_to_update_iDRAC%2F%2FBIOS_firmware_on_SF_Series_nodes["こちらの技術情報アーティクル"^]。
 
 * * クラスタの健全性 * ：健全性チェックを実行しました。を参照してください link:task_hcc_upgrade_element_prechecks.html["ストレージをアップグレードする前に、 Element ストレージの健全性チェックを実行します"]。
-* * H610S ノードの BMC を更新 * ： H610S ノードの BMC バージョンをアップグレードしました。を参照してください link:rn_H610S_BMC_3.84.07.html["リリースノートおよびアップグレード手順"^]。
+* * H610S ノードの BMC を更新 * ： H610S ノードの BMC バージョンをアップグレードしました。を参照してください link:rn_H610S_BMC_3.84.07.html["リリースノートおよびアップグレード手順"]。
 
 
 

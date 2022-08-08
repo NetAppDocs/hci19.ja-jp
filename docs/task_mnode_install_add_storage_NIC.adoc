@@ -5,7 +5,12 @@ summary: 追加の NIC をストレージに使用する場合は、タグなし
 keywords: netapp, element, management node, mnode, network, nic, storage nic 
 ---
 = ストレージネットワークインターフェイスコントローラ（ NIC ）の設定
+:hardbreaks:
 :allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ../media/
 
 
 [role="lead"]

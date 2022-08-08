@@ -18,7 +18,7 @@ NetApp HCI には、コンピューティングとストレージの両方に対
 
 * NetApp HCI では、 H300S 、 H500S 、 H700S 、 H410S 、 H610S など、さまざまな H シリーズストレージノードモデルがサポートされます。
 +
-を参照してください https://www.netapp.com/us/products/converged-systems/hyper-converged-infrastructure.aspx#modelsAndSpecs["NetApp HCI のモデルと仕様"]
+を参照してください https://www.netapp.com/us/products/converged-systems/hyper-converged-infrastructure.aspx#modelsAndSpecs["NetApp HCI のモデルと仕様"^]
 
 * NetApp HCI のストレージレイヤは NetApp Element ソフトウェアで提供され、管理レイヤは NetApp Element Plug-in for vCenter Server で提供されます。
 * ストレージノードは、 Bond10G ネットワークインターフェイスを通じて相互に通信する一連のドライブを搭載したサーバです。

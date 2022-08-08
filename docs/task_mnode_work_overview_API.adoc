@@ -5,7 +5,12 @@ summary: 管理ノード（ mNode ） API を使用して、システムサー�
 keywords: netapp, mnode api, management node api, rest api 
 ---
 = 管理ノードの REST API UI の概要
+:hardbreaks:
 :allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ../media/
 
 
 [role="lead"]

@@ -5,7 +5,12 @@ summary: REST API UI を使用して複数の vCenter を使用するように N
 keywords: netapp, mnode, management node, multi-vcenter, hci 
 ---
 = NetApp Hybrid Cloud Control を複数の vCenter に設定する
+:hardbreaks:
 :allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ../media/
 
 
 [role="lead"]

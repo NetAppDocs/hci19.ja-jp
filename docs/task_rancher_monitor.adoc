@@ -46,7 +46,7 @@ Rancher UI を使用すると、 NetApp HCI 管理クラスタおよびユーザ
 TIP: Rancher UI では、管理クラスタを「ローカルクラスタ」と呼びます。
 
 . Rancher 展開の最後に提供された URL を使用して、 rancher UI にアクセスします。
-. を参照してください https://rancher.com/docs/rancher/v2.x/en/monitoring-alerting/v2.5/["Rancher v2.5 でのモニタリング"]。
+. を参照してください https://rancher.com/docs/rancher/v2.x/en/monitoring-alerting/v2.5/["Rancher v2.5 でのモニタリング"^]。
 
 
 
@@ -69,7 +69,7 @@ vCenter Server を使用すると、 Rancher 仮想マシンを監視できま�
 == 詳細については、こちらをご覧ください
 
 * https://rancher.com/docs/rancher/v2.x/en/overview/architecture/["アーキテクチャに関する Rancher ドキュメント"^]
-* https://rancher.com/docs/rancher/v2.x/en/overview/concepts/["Rancher 用の Kubernetes 用語"]
+* https://rancher.com/docs/rancher/v2.x/en/overview/concepts/["Rancher 用の Kubernetes 用語"^]
 * https://docs.netapp.com/us-en/vcp/index.html["vCenter Server 向け NetApp Element プラグイン"^]
 * https://www.netapp.com/us/documentation/hci.aspx["NetApp HCI のリソースページ"^]
 

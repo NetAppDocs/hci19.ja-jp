@@ -5,7 +5,12 @@ summary: NetApp HCI システムのアップグレードの一環として、管
 keywords: netapp, hci, on premise, cluster, management services 
 ---
 = 管理サービスを更新
+:hardbreaks:
 :allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ../media/
 
 
 [role="lead"]
@@ -18,7 +23,7 @@ Element 11.3 以降の管理ノードリリースでは、個々のサービス�
 
 
 
-NOTE: 各サービスバンドルの主要なサービス、新機能、バグ修正、および対処方法について説明した最新の管理サービスリリースノートについては、を参照してください https://kb.netapp.com/Advice_and_Troubleshooting/Data_Storage_Software/Management_services_for_Element_Software_and_NetApp_HCI/Management_Services_Release_Notes["管理サービスのリリースノート"^]
+NOTE: 各サービスバンドルの主要なサービス、新機能、バグ修正、および対処方法について説明した最新の管理サービスリリースノートについては、を参照してください https://kb.netapp.com/Advice_and_Troubleshooting/Data_Storage_Software/Management_services_for_Element_Software_and_NetApp_HCI/Management_Services_Release_Notes["管理サービスのリリースノート"^]。
 
 管理サービス2.20以降では、NetApp Hybrid Cloud ControlのUIまたはAPIを使用して管理サービスをアップグレードする前に、エンドユーザライセンス契約（EULA）に同意して保存する必要があります。
 
@@ -90,6 +95,9 @@ NOTE: インターネットにアクセスできない環境では、現在の�
 +
 .. ページの指示に従って、管理サービスのアップグレードパッケージをダウンロードし、コンピュータに保存します。
 .. 「 * 参照 * 」を選択して、保存したパッケージを検索し、アップロードします。
++
+パッケージをアップロードすると、アップグレードが自動的に開始されます。
+
 
 
 

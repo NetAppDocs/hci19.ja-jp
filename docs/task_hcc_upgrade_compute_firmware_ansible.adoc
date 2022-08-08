@@ -5,7 +5,12 @@ summary: H シリーズのコンピューティングノードには Ansible の
 keywords: netapp, hci, on premise, cluster, element, compute node, ansible upgrade, upgrade role 
 ---
 = Ansible によるコンピューティングノードのファームウェアアップグレードの自動化
+:hardbreaks:
 :allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ../media/
 
 
 [role="lead"]
@@ -18,7 +23,7 @@ NOTE: コンピューティングノードのファームウェアアップグ�
 NOTE: アップグレード用の Ansible のロールは、 NetApp HCI H シリーズのコンピューティングノードでのみ機能します。サードパーティ製コンピューティングノードのアップグレードにはこのロールを使用できません。
 
 .必要なもの
-* * ファームウェアのアップグレードの準備と前提条件 * ：の手順に従って、 NetApp HCI のインストール環境でファームウェアのアップグレードの準備ができている必要があります link:task_hcc_upgrade_compute_node_firmware.html["ファームウェアのアップグレードを実行する"^]。
+* * ファームウェアのアップグレードの準備と前提条件 * ：の手順に従って、 NetApp HCI のインストール環境でファームウェアのアップグレードの準備ができている必要があります link:task_hcc_upgrade_compute_node_firmware.html["ファームウェアのアップグレードを実行する"]。
 * * Ansible コントロールノード * で自動化を実行する準備：物理サーバまたは仮想サーバで Ansible でファームウェア更新の自動化を実行します。
 
 

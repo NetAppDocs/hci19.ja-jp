@@ -159,7 +159,7 @@ OpenStack Swift または Amazon S3 からボリュームをリストアする�
 
 
 
-手動で実行できます https://docs.netapp.com/us-en/vcp/vcp_task_clusters_manage.html#set-protection-domain-monitoring["保護ドメインの監視を有効にします"] NetApp Element Plug-in for vCenter Server を使用する。ノードドメインまたはシャーシドメインに基づいて保護ドメインのしきい値を選択できます。
+手動で実行できます https://docs.netapp.com/us-en/vcp/vcp_task_clusters_manage.html#set-protection-domain-monitoring["保護ドメインの監視を有効にします"^] NetApp Element Plug-in for vCenter Server を使用する。ノードドメインまたはシャーシドメインに基づいて保護ドメインのしきい値を選択できます。
 
 新しいクラスタの作成時に共有シャーシにあるストレージノードを使用する場合は、保護ドメイン機能を使用してシャーシレベルの障害から保護することを検討してください。
 

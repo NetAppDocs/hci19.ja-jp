@@ -5,7 +5,12 @@ summary: 管理ノードを使用して、ネットアップサポートがト�
 keywords: netapp, mnode, management node, connect to support, support tunnel, rst 
 ---
 = リモートのネットアップサポートセッションを開始します
+:hardbreaks:
 :allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ../media/
 
 
 [role="lead"]
