@@ -68,7 +68,7 @@ NetApp HCI で使用する一般的な URL を次に示します。
 | https://<ManagementNodeIP>` | NetApp Hybrid Cloud Control にアクセスして、 NetApp HCI のインストール、拡張、監視、管理サービスの更新を行うことができます。 link:task_nde_access_hcc.html["詳細はこちら。"] 
 
 
-| 「 https://[IP アドレス」： 442` | ノード UI から、ネットワークとクラスタの設定にアクセスし、システムのテストとユーティリティを利用できます。 link:task_mnode_access_ui.html#access-the-management-node-per-node-ui["詳細はこちら。"^] 
+| 「 https://[IP アドレス」： 442` | ノード UI から、ネットワークとクラスタの設定にアクセスし、システムのテストとユーティリティを利用できます。 link:task_mnode_access_ui.html#access-the-management-node-per-node-ui["詳細はこちら。"] 
 
 
 | 「 https://[management node IP address 」 : 9443 | vCenter Plug-in パッケージを vSphere Web Client に登録します。 

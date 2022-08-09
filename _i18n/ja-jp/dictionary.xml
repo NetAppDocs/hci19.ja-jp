@@ -6185,7 +6185,6 @@
   <block id="be14526a26059bab9604a4dc5056ca86" category="list-text">NetApp Element Plug-in for vCenter Server*は、vSphereのユーザインターフェイス（UI）に統合されたWebベースのツールです。このプラグインは、拡張性と使いやすさを備えた VMware vSphere 用のインターフェイスで、 * NetApp Element ソフトウェア * を実行しているストレージ・クラスタの管理と監視を行うことができます。このプラグインは、 Element UI の代わりに使用できます。プラグインのユーザインターフェイスを使用して、クラスタの検出と設定、ストレージの管理と監視が可能なほか、クラスタ容量からストレージを割り当ててデータストアや仮想データストア（仮想ボリュームの場合）を構成できます。クラスタはネットワーク上では 1 つのローカルグループとして認識され、仮想 IP アドレスによってホストと管理者に示されます。また、クラスタのアクティビティを監視して、さまざまな処理の実行中に発生したイベントのエラーメッセージやアラートメッセージなど、リアルタイムで通知を受け取ることができます。</block>
   <block id="2f071adefcac0181be5f4b8cd9a5ca38" category="admonition">の詳細を確認してください<block ref="2bff74e0d72e73a3a1bf993744683a85" category="inline-link-rx"></block>。</block>
   <block id="69f62275c49d78f7ceac9db3f0497d6e" category="admonition">の詳細を確認してください <block ref="694d6bc2c166b8de5e6f59269ef5415e" category="inline-link-macro-rx"></block>。</block>
-  <block id="9807e313c10f18c9bdc4d7afb343a6f5" category="cell">ノード UI から、ネットワークとクラスタの設定にアクセスし、システムのテストとユーティリティを利用できます。 <block ref="c351abfe0a8a9e26c97442070cd8d97d" category="inline-link-macro-rx"></block></block>
   <block id="6185d522566bca6babef053c2bc1f53d" category="list-text">* カタログ * ：カタログは GitHub リポジトリまたは Helm Chart リポジトリで、すぐに導入できるアプリケーションがいっぱいになっています。Rancher では、 Helm チャートのカタログを使用して、アプリケーションを繰り返し簡単に導入できます。Rancher には、組み込みのグローバルカタログとカスタムカタログの 2 種類のカタログが含まれています。Trident はカタログとして導入されています。を参照してください<block ref="ba870d4de503a3f035878d62b86bb946" category="inline-link-rx"></block>。</block>
   <block id="499c79030e29f88105a315c240050806" category="paragraph">を参照してください <block ref="502a349939ea68203db76329f0b74f74" category="inline-link-rx"></block>。</block>
   <block id="b8ab206de7473fae6f35c2f16c0992e0" category="paragraph">詳細については、を参照してください<block ref="9488620c3498c6d0bb53483131890d10" category="inline-link-rx"></block>。</block>
@@ -6231,7 +6230,6 @@
   <block id="94fb62d9516863316b92e2bf53911bce" category="list-text"><block ref="d6a2d8b61be866ad09b286b7f2ff7d30" category="inline-link-macro-rx"></block>。</block>
   <block id="25bc0eaf24f05f014b5a22e6cb3c3ee0" category="list-text">H410C 、 H610C 、および H615C ノードの場合、 <block ref="003405940fb11fda7caa22bbd0900a62" category="inline-link-macro-rx"></block>。</block>
   <block id="76ef55f268f9e8c537a13a8bdcff4a23" category="list-text"><block ref="a7fdda79c0d112d1e20d7aa847382277" category="inline-link-macro-rx"></block>。</block>
-  <block id="c37fb68bdd4649a813bd854818e1c4f3" category="paragraph"><block ref="ea4dcaf7581d24250ed50342116f1e20" category="inline-link-macro-rx"></block>。</block>
   <block id="0ea391471e626f95079246bfd0ab48f9" category="paragraph">NetApp Element Plug-in for vCenter ServerのSIOCパスワードは_QoSSIOCパスワードとも呼ばれます。 </block>
   <block id="0ba7ef8feca0e0b45134473e9c3182d4" category="paragraph">｛url-peak｝[ Element Plug-in for vCenter Serverの技術情報アーティクル^]を確認します。</block>
   <block id="7d25e05d224fca2eb306788617dd64c8" category="admonition">誤った情報（不正な Rancher サーバ FQDN など）を使用して NetApp HCI に Rancher を誤って展開した場合、展開を削除して再展開することなく修正する方法はありません。NetApp HCI インスタンスでランチャを削除してから、ネットアップハイブリッドクラウド制御 UI から NetApp HCI 上のランチャを再導入する必要があります。を参照してください <block ref="3121dc1b9111bb157a7a952ee2ca3268" category="inline-link-macro-rx"></block> を参照してください。</block>
@@ -6246,4 +6244,6 @@
   <block id="72bc06ff4e2b235a52b1bd8ed1e8201b" category="paragraph">手動で実行できます<block ref="51de2eecc77c7894734d39577009251b" category="inline-link-rx"></block> NetApp Element Plug-in for vCenter Server を使用する。ノードドメインまたはシャーシドメインに基づいて保護ドメインのしきい値を選択できます。</block>
   <block id="c887aa2abefbdf59345793bdbe530aa6" category="list-text">障害が発生したノードをラックから物理的に取り外します。実行する手順は、使用するストレージノードのタイプによって異なります。を参照してください <block ref="22268cae5c79b327558b5acefb524b62" category="inline-link-macro-rx"></block> および <block ref="04e6f25ecadf1d5213318ff0863162b7" category="inline-link-macro-rx"></block>。</block>
   <block id="6b488f4677081a24e52d30be5ea2fe98" category="list-text">NetApp Hybrid Cloud Control を使用して、追加した新しいストレージノードを設定します。を参照してください <block ref="f2feaea5d9b29c0df76acac116f3553b" category="inline-link-macro-rx"></block>。</block>
+  <block id="1b9cbe8bd24f138856d4a212cbd39ff3" category="cell">ノード UI から、ネットワークとクラスタの設定にアクセスし、システムのテストとユーティリティを利用できます。 <block ref="907072a6b11211e94a1d32770722061a" category="inline-link-macro-rx"></block></block>
+  <block id="bf98d31f43d10440f3b2fcae7d1772fa" category="paragraph"><block ref="5a5ec2237ded5a598f748fc2406eb309" category="inline-link-macro-rx"></block>。</block>
 </blocks>
