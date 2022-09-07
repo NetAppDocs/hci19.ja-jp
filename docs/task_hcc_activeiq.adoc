@@ -33,16 +33,19 @@ SolidFire Active IQ を使用して、クラスタのイベント、パフォー
 https://<ManagementNodeIP>
 ----
 . NetApp HCI ストレージクラスタ管理者のクレデンシャルを指定して NetApp Hybrid Cloud Control にログインします。
-. ダッシュボードの右上にあるメニューをクリックします。
+. ダッシュボードの右上にあるメニューを選択します。
 . 「 * View Active IQ * 」を選択します。
 +
 。 link:https://activeiq.solidfire.com["SolidFire Active IQ ダッシュボード"^] 表示されます。
 
-. SolidFire Active IQ の詳細については、ダッシュボードで右上のメニューアイコンをクリックし、 * Documentation * をクリックしてください。
+. SolidFire Active IQ の詳細については、を参照してください https://docs.netapp.com/us-en/solidfire-active-iq/index.html["SolidFire Active IQ のドキュメント"^]。
++
+右上のメニューアイコンを選択して「* SolidFire Active IQ 」を選択すると、ダッシュボードからのドキュメントにアクセスすることもできます。
+
 . SolidFire Active IQ インターフェイスで、 NetApp HCI のコンピューティングノードとストレージノードから Active IQ にテレメトリが正しく報告されていることを確認します。
 +
-.. 複数の NetApp HCI がインストールされている場合は、 * クラスタの選択 * をクリックして、リストからクラスタを選択します。
-.. 左側のナビゲーションペインで、 * ノード * をクリックします。
+.. 複数のNetApp HCI がインストールされている場合は、「*クラスタの選択」を選択し、リストからクラスタを選択します。
+.. 左側のナビゲーションペインで、 * ノード * を選択します。
 
 
 . リストに表示されないノードがある場合は、ネットアップサポートにお問い合わせください。
@@ -54,7 +57,7 @@ TIP: ストレージリソースとコンピューティングリソースの数
 [discrete]
 == 詳細については、こちらをご覧ください
 
-* https://help.monitoring.solidfire.com["NetApp SolidFire Active IQ のドキュメント"^]
+* https://docs.netapp.com/us-en/solidfire-active-iq/index.html["NetApp SolidFire Active IQ のドキュメント"^]
 * https://docs.netapp.com/us-en/vcp/index.html["vCenter Server 向け NetApp Element プラグイン"^]
 * https://www.netapp.com/hybrid-cloud/hci-documentation/["NetApp HCI のリソースページ"^]
 
