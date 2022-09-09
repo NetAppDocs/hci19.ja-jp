@@ -6249,4 +6249,8 @@
   <block id="8656c1812e255a290a0e3fb243bf9237" category="list-text">SolidFire Active IQ の詳細については、を参照してください<block ref="605461d6a442322fca0bcd236d381ac0" category="inline-link-rx"></block>。</block>
   <block id="5de7b59e7468f72110ca5bd9b20f7d50" category="paragraph">右上のメニューアイコンを選択して「* SolidFire Active IQ 」を選択すると、ダッシュボードからのドキュメントにアクセスすることもできます。</block>
   <block id="b742a27bbb38b6f0482e473afd7caf8e" category="list-text">複数のNetApp HCI がインストールされている場合は、「*クラスタの選択」を選択し、リストからクラスタを選択します。</block>
+  <block id="3d57c700c41601cb011883231fb4e5b8" category="summary">NetApp HCI を使用すると、複数のパブリッククラウドプロバイダとオンプレミスに クラウド サービス を導入できます。NetApp HCI を使用すると、クラウドプロバイダと同様のサービスをIT部門のサポートなしでセルフサービスモードで導入できます。</block>
+  <block id="4f8fc3e1fce78186b06dfda99cdedd17" category="paragraph">NetApp HCI ソリューションは、複数のワークロードを同じインフラに配置することで、摩擦のない大規模なパフォーマンスを実現します。</block>
+  <block id="921c0975b352bf1530a52271d2abf5c6" category="inline-link">NetApp HCI ソリューションのドキュメント</block>
+  <block id="705d4d08d5af2e9dd1c4616188dd681f" category="paragraph">NetApp HCI ソリューションの詳細については、を参照してください<block ref="80564718f738f8f02fcd8afb2a3d09de" category="inline-link-rx"></block>。</block>
 </blocks>
