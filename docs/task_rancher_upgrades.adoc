@@ -27,7 +27,7 @@ rancher ソフトウェアをアップグレードするには、 NetApp Hybrid 
 IMPORTANT: Rancher 機能を使用するには、最新の管理サービスバンドル 2.17 以降にアップグレードする必要があります。
 
 * * システムポート * ： NetApp Hybrid Cloud Control をアップグレードに使用している場合は、必要なポートが開いていることを確認しておきます。を参照してください link:rancher_prereqs_overview.html#required-ports["ネットワークポート"] を参照してください。
-* *エンドユーザライセンス契約（EULA）*：管理サービス2.20以降では、NetApp Hybrid Cloud ControlのUIまたはAPIを使用してランチャの導入環境をアップグレードする前に、EULAに同意して保存する必要があります。
+* *エンドユーザライセンス契約（EULA）*：管理サービス2.20.69以降では、NetApp Hybrid Cloud Control UIまたはAPIを使用してランチャの導入環境をアップグレードする前に、EULAに同意して保存する必要があります。
 +
 .. Webブラウザで管理ノードのIPアドレスを開きます。
 +
@@ -48,8 +48,8 @@ NOTE: EULAに同意すると、以後のすべての更新についてそのEULA
 
 次のいずれかのアップグレードプロセスを選択します。
 
-* <<Use NetApp Hybrid Cloud Control UI to upgrade a Rancher deployment>>
-* <<Use NetApp Hybrid Cloud Control API to upgrade a Rancher deployment>>
+*  NetApp Hybrid Cloud Control UI to upgrade a Rancher deployment
+*  NetApp Hybrid Cloud Control API to upgrade a Rancher deployment
 
 
 
@@ -107,9 +107,9 @@ API を使用して、 Rancher 展開内の次のコンポーネントをアッ�
 任意の自動化ツールを使用して、管理ノードで使用可能な API または REST API UI を実行できます。
 
 .オプション（ Options ）
-* <<Upgrade Rancher Server>>
-* <<Upgrade RKE>>
-* <<Apply node OS security updates>>
+*  Rancher Server
+*  RKE
+*  node OS security updates
 +
 
 NOTE: ノード OS の場合、セキュリティパッチの無人アップグレードは日単位で実行されますが、ノードは自動的にはリブートされません。アップグレードを適用すると、各ノードをリブートしてセキュリティ更新を有効にできます。

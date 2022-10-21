@@ -36,11 +36,11 @@ NOTE: vCenter Plug-in 4.4 以降では、モジュラアーキテクチャで作
 
 NOTE: NDE を使用して導入した管理ノード 12.3 でアップグレードを続行するように選択すると、 12.3.x へのアップグレードが完了します。ただし、アップグレードの再開時にエラーが発生する場合があります。この場合は、管理ノードをリブートして、 12.3.x が正しく表示されるようにします
 
-* 管理ノード 12.2 からアップグレードする場合は、次の手順を実行します。<<Upgrade a management node to version 12.3.x from 12.2>>
-* 管理ノード 12.0 からアップグレードする場合は、次の手順を実行します。<<Upgrade a management node to version 12.3.x from 12.0>>
-* 管理ノード 11.3 、 11.5 、 11.7 、または 11.8 からアップグレードする場合は、次の手順を実行します。<<Upgrade a management node to version 12.3.x from 11.3 through 11.8>>
-* 管理ノード 11.0 または 11.1 からアップグレードする場合は、次の手順を実行します。<<Upgrade a management node to version 12.3.x from 11.1 or 11.0>>
-* 管理ノードバージョン 10.x からアップグレードする場合は、次の手順を実行します。<<Migrating from management node version 10.x to 11.x>>
+* 管理ノード 12.2 からアップグレードする場合は、次の手順を実行します。 a management node to version 12.3.x from 12.2
+* 管理ノード 12.0 からアップグレードする場合は、次の手順を実行します。 a management node to version 12.3.x from 12.0
+* 管理ノード 11.3 、 11.5 、 11.7 、または 11.8 からアップグレードする場合は、次の手順を実行します。 a management node to version 12.3.x from 11.3 through 11.8
+* 管理ノード 11.0 または 11.1 からアップグレードする場合は、次の手順を実行します。 a management node to version 12.3.x from 11.1 or 11.0
+* 管理ノードバージョン 10.x からアップグレードする場合は、次の手順を実行します。 from management node version 10.x to 11.x
 
 
 管理サービスのバージョンがシーケンシャルに * 更新されている（ 1 ）場合、および（ 2 ） Element ストレージのバージョンが既存の管理ノードを * 保持する場合は、次のオプションを選択します。
@@ -48,7 +48,7 @@ NOTE: NDE を使用して導入した管理ノード 12.3 でアップグレー�
 
 NOTE: 管理サービスと Element ストレージを順番に更新しないと、この手順で再認証を再設定することはできません。代わりに、該当するアップグレード手順を実行してください。
 
-* 既存の管理ノードを保持する場合：<<Reconfigure authentication using the management node REST API>>
+* 既存の管理ノードを保持する場合： authentication using the management node REST API
 
 
 

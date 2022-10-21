@@ -15,14 +15,14 @@ keywords: netapp, hci, cluster, element, volume
 
 NetApp Hybrid Cloud Control では、次の方法でボリュームを管理できます。
 
-* <<Create a volume>>
-* <<Apply a QoS policy to a volume>>
-* <<Edit a volume>>
-* <<Clone volumes>>
-* <<Add volumes to a volume access group>>
-* <<Delete a volume>>
-* <<Restore a deleted volume>>
-* <<Purge a deleted volume>>
+*  a volume
+*  a QoS policy to a volume
+*  a volume
+*  volumes
+*  volumes to a volume access group
+*  a volume
+*  a deleted volume
+*  a deleted volume
 
 
 
@@ -71,7 +71,7 @@ NOTE: アカウント数が 50 個を超える場合、リストは表示され�
 
 == ボリュームに QoS ポリシーを適用します
 
-NetApp Hybrid Cloud Control を使用して、既存のストレージボリュームに QoS ポリシーを適用できます。ボリュームに対してカスタムの QoS 値を設定する必要がある場合は、を使用します <<Edit a volume>>。新しい QoS ポリシーを作成する手順については、を参照してください link:task_hcc_qos_policies.html["ボリュームの QoS ポリシーの作成と管理"^]。
+NetApp Hybrid Cloud Control を使用して、既存のストレージボリュームに QoS ポリシーを適用できます。ボリュームに対してカスタムの QoS 値を設定する必要がある場合は、を使用します  a volume。新しい QoS ポリシーを作成する手順については、を参照してください link:task_hcc_qos_policies.html["ボリュームの QoS ポリシーの作成と管理"^]。
 
 .手順
 . NetApp HCI または Element ストレージクラスタ管理者のクレデンシャルを指定して NetApp Hybrid Cloud Control にログインします。

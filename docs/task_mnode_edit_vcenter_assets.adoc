@@ -50,7 +50,7 @@ https://<ManagementNodeIP>/vcenter/1/
 +
 API は、各コントローラとの通信に使用される IP アドレス、コントローラ ID 、ホスト名、およびユーザ ID とともに、認識されているすべての vCenter コントローラのリストを返します。
 
-. 特定のコントローラの接続ステータスを取得する場合は ' そのコントローラの [id] フィールドからコントローラ ID をクリップボードにコピーし ' を参照してください <<View the status of an existing controller>>。
+. 特定のコントローラの接続ステータスを取得する場合は ' そのコントローラの [id] フィールドからコントローラ ID をクリップボードにコピーし ' を参照してください  the status of an existing controller。
 
 
 

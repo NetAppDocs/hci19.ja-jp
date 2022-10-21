@@ -38,8 +38,8 @@ NOTE: H610C および H615C では、ノードとシャーシが別々のコン�
 
 コンピューティングノードの DIMM の交換手順は次のとおりです。
 
-* <<Prepare to replace the DIMM>>
-* <<Replace the DIMM from the chassis>>
+*  to replace the DIMM
+*  the DIMM from the chassis
 
 
 

@@ -48,12 +48,12 @@ image::SN2700.png[SN2700 フロントおよびリヤ,600,400]
 
 NOTE: ガイダンスが必要な場合は、ネットアップサポートにお問い合わせください。
 
-手順の概要を次に示します。<<Prepare to replace the faulty switch>>
-<<Create the configuration file>>
-<<Remove the faulty switch and install the replacement>>
-<<Verify the operating system version on the switch>>
-<<Configure the replacement switch>>
-<<Complete the replacement>>
+手順の概要を次に示します。 to replace the faulty switch
+ the configuration file
+ the faulty switch and install the replacement
+ the operating system version on the switch
+ the replacement switch
+ the replacement
 
 
 

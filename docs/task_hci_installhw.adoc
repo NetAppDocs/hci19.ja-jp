@@ -19,15 +19,15 @@ NetApp HCI の使用を開始する前に、ストレージノードとコンピ
 
 TIP: を参照してください link:../media/hseries-isi.pdf["ポスター"^] 指示を視覚的に表示します。
 
-* <<Workflow diagrams>>
-* <<Prepare for installation>>
-* <<Install the rails>>
-* <<Install the node/chassis>>
-* <<Install the switches>>
-* <<Cable the nodes>>
-* <<Power on the nodes>>
-* <<Configure NetApp HCI>>
-* <<Perform post-configuration tasks>>
+*  diagrams
+*  for installation
+*  the rails
+*  the node/chassis
+*  the switches
+*  the nodes
+*  on the nodes
+*  NetApp HCI
+*  post-configuration tasks
 
 
 
@@ -36,9 +36,9 @@ TIP: を参照してください link:../media/hseries-isi.pdf["ポスター"^] 
 
 このワークフロー図は、インストール手順の概要を示しています。手順は H シリーズモデルによって多少異なります。
 
-* <<H410C and H410S>>
-* <<H610C and H615C>>
-* <<H610S>>
+*  and H410S
+*  and H615C
+* 
 
 
 
@@ -110,9 +110,9 @@ CAUTION: ハードウェアの設置時に、梱包材と包装をすべてユ�
 
 TIP: 装置が転倒しないように、ラックの下から順にハードウェアを設置してください。ラックに安定化デバイスが含まれている場合は、ハードウェアを取り付ける前に取り付けてください。
 
-* <<H410C and H410S>>
-* <<H610C>>
-* <<H610S and H615C>>
+*  and H410S
+* 
+*  and H615C
 
 
 
@@ -168,9 +168,9 @@ TIP: NetApp HCI 1.8 以降では、 2 つまたは 3 つのストレージノー
 
 CAUTION: 梱包材と包装材をすべてユニットから取り除きます。これにより、ノードの過熱やシャットダウンが防止されます。
 
-* <<H410C and H410S nodes>>
-* <<H610C node/chassis>>
-* <<H610S and H615C node/chassis>>
+*  and H410S nodes
+*  node/chassis
+*  and H615C node/chassis
 
 
 
@@ -227,10 +227,10 @@ NetApp HCI 環境で Mellanox SN2010 、 SN2100 、および SN2700 のスイッ
 
 CAUTION: シャーシ背面の通気口がケーブルやラベルで塞がれていないことを確認します。これにより、過熱によってコンポーネントで早期に障害が発生する可能性があります。
 
-* <<H410C compute node and H410S storage node>>
-* <<H610C compute node>>
-* <<H615C compute node>>
-* <<H610S storage node>>
+*  compute node and H410S storage node
+*  compute node
+*  compute node
+*  storage node
 
 
 
@@ -345,8 +345,8 @@ image::H600S_ISI_nodefront.png[に、 H610S/H615C ノード / シャーシの電
 
 次のいずれかのオプションを選択します。
 
-* <<New NetApp HCI installation>>
-* <<Expand an existing NetApp HCI installation>>
+*  NetApp HCI installation
+*  an existing NetApp HCI installation
 
 
 
@@ -396,8 +396,8 @@ NOTE: 同じネットワーク上に新しく設置した NetApp HCI ノード�
 
 使用しているノードのタイプによっては、ハードウェアを設置して NetApp HCI を設定したあとで、追加の手順を実行する必要があります。
 
-* <<H610C node>>
-* <<H615C and H610S nodes>>
+*  node
+*  and H610S nodes
 
 
 

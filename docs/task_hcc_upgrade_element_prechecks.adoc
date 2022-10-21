@@ -24,7 +24,7 @@ IMPORTANT: Element ソフトウェアをアップグレードする前に、最�
 
 * *管理ノード*：管理ノード11.3以降を実行していることを確認します。
 * * Elementソフトウェア*：クラスタバージョンでNetApp Element ソフトウェア11.3以降が実行されている必要があります。
-* *エンドユーザライセンス契約（EULA）*：管理サービス2.20以降では、NetApp Hybrid Cloud ControlのUIまたはAPIを使用してElementストレージの健全性チェックを実行する前に、EULAに同意して保存する必要があります。
+* *エンドユーザライセンス契約（EULA）*：管理サービス2.20.69以降では、NetApp Hybrid Cloud ControlのUIまたはAPIを使用してElementストレージの健全性チェックを実行する前に、EULAに同意して保存する必要があります。
 +
 .. Webブラウザで管理ノードのIPアドレスを開きます。
 +
@@ -45,14 +45,14 @@ NOTE: EULAに同意すると、以後のすべての更新についてそのEULA
 
 健全性チェックは、 NetApp Hybrid Cloud Control （ HCC ） UI 、 HCC API 、または HealthTools スイートを使用して実行できます。
 
-* <<Use NetApp Hybrid Cloud Control to run Element storage health checks prior to upgrading storage>> （推奨方法）
-* <<Use API to run Element storage health checks prior to upgrading storage>>
-* <<Use HealthTools to run Element storage health checks prior to upgrading storage>>
+*  NetApp Hybrid Cloud Control to run Element storage health checks prior to upgrading storage （推奨方法）
+*  API to run Element storage health checks prior to upgrading storage
+*  HealthTools to run Element storage health checks prior to upgrading storage
 
 
 サービスで実行されるストレージ健全性チェックの詳細についても確認できます。
 
-* <<Storage health checks made by the service>>
+*  health checks made by the service
 
 
 

@@ -25,8 +25,8 @@ keywords: netapp, hci, chassis replacement,2U chassis replacement, h-series
 * 障害が発生したシャーシの一部であるコンピューティングノードを削除する際、仮想マシン（ VM ）と ESXi クラスタでワークロードを処理できますか？
 
 
-次のいずれかのオプションを選択します。<<Replace the chassis when additional unused space is available in the rack>>
-<<Replace the chassis when additional unused space is not available in the rack>>
+次のいずれかのオプションを選択します。 the chassis when additional unused space is available in the rack
+ the chassis when additional unused space is not available in the rack
 
 
 
@@ -198,7 +198,7 @@ NOTE: 移行手順については、 VMware のドキュメントを参照して
 
 === ストレージノードをシャットダウンします
 
-手順を参照してください <<move a storage node,こちらをご覧ください>>。
+手順を参照してください  a storage node,こちらをご覧ください。
 
 
 

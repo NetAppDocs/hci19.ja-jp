@@ -22,8 +22,8 @@ keywords: netapp, hci, management node, management services, version, bundle ver
 
 
 .オプション（ Options ）
-* <<API commands>>
-* <<REST API UI steps>>
+*  commands
+*  API UI steps
 
 
 

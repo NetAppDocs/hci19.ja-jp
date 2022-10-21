@@ -18,8 +18,8 @@ Element ベースのストレージシステムでは、「管理者」または
 
 次のタイプのアカウントを管理します。
 
-* <<Manage authoritative cluster accounts>>
-* <<Manage volume accounts>>
+*  authoritative cluster accounts
+*  volume accounts
 
 
 
@@ -62,7 +62,7 @@ NetApp Hybrid Cloud Control を使用してアカウントを作成できます�
 ** LDAP を選択した場合は、 DN を入力します。
 +
 
-TIP: LDAP を使用するには、最初に LDAP または LDAPS を有効にする必要があります。を参照してください <<Enable LDAP>>。
+TIP: LDAP を使用するには、最初に LDAP または LDAPS を有効にする必要があります。を参照してください  LDAP。
 
 ** Auth Type として Cluster を選択した場合は、新しいアカウントの名前とパスワードを入力します。
 

@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: docs/task_vcp_upgrade_plugin.html 
 summary: NetApp HCI システムのアップグレードの一環として、 Element Plug-in for vCenter Server をアップグレードできます。 
-keywords: netapp, vcp, vCenter plug-in, upgrade, 4.4, 4.5, 4.6, 4.7, 4.8, 4.9 
+keywords: netapp, vcp, vCenter plug-in, upgrade, 4.4, 4.5, 4.6, 4.7, 4.8, 4.9, 4.10 
 ---
 = Element Plug-in for vCenter Server をアップグレードします
 :hardbreaks:
@@ -20,7 +20,7 @@ keywords: netapp, vcp, vCenter plug-in, upgrade, 4.4, 4.5, 4.6, 4.7, 4.8, 4.9
 
 このアップグレード手順では、次のアップグレードシナリオについて説明します。
 
-* VMware vCenter Server 4.9、4.8、4.7、4.6、4.5、または4.4にアップグレードする。
+* Element Plug-in for VMware vCenter Server 4.10、4.9、4.8、4.7、4.6にアップグレードする場合 4.5または4.4。
 * 7.0 、 6.7 、または 6.5 の HTML5 vSphere Web Client にアップグレードする。
 +
 
@@ -99,8 +99,8 @@ VMware vCenter Server 6.7U1を使用してNetApp Element Plug-in for vCenter Ser
 
 [listing]
 ----
-NetApp Element Plug-in Version: 4.9
-NetApp Element Plug-in Build Number: 14
+NetApp Element Plug-in Version: 4.10
+NetApp Element Plug-in Build Number: 12
 ----
 
 NOTE: vCenter Plug-in には、オンラインヘルプが用意されています。ヘルプの最新のコンテンツが読み込まれるようにするために、プラグインをアップグレードしたあとにブラウザキャッシュをクリアしてください。

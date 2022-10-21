@@ -23,11 +23,11 @@ Element 12.2 以降では、を使用できます link:concept_hci_storage_maint
 
 
 .オプション（ Options ）
-* <<Add a storage cluster>>
-* <<Confirm storage cluster status>>
-* <<Edit storage cluster credentials>>
-* <<Remove a storage cluster>>
-* <<Enable and disable maintenance mode>>
+*  a storage cluster
+*  storage cluster status
+*  storage cluster credentials
+*  a storage cluster
+*  and disable maintenance mode
 
 
 
@@ -111,7 +111,7 @@ CAUTION: [ はい ] をクリックすると、クラスタがインストール
 [discrete]
 == メンテナンスモードを有効または無効にします
 
-これ link:concept_hci_storage_maintenance_mode.html["メンテナンスモード"] 機能オプションを使用すると、にアクセスできます <<enable_main_mode,-- 有効にします>> および <<disable_main_mode,- 無効にします>> ストレージクラスタノードの保守モード。
+これ link:concept_hci_storage_maintenance_mode.html["メンテナンスモード"] 機能オプションを使用すると、にアクセスできます ,-- 有効にします および ,- 無効にします ストレージクラスタノードの保守モード。
 
 .必要なもの
 * * Element ソフトウェア * ：ストレージクラスタで NetApp Element ソフトウェア 12.2 以降を実行している必要があります。

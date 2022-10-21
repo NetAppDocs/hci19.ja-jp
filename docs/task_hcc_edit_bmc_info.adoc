@@ -23,8 +23,8 @@ NOTE: ヘルスチェック時に BMC クレデンシャルを設定した場合
 
 BMC クレデンシャルを変更するには、次のいずれかのオプションを選択します。
 
-* <<Use NetApp Hybrid Cloud Control to edit BMC information>>
-* <<Use the REST API to edit BMC information>>
+*  NetApp Hybrid Cloud Control to edit BMC information
+*  the REST API to edit BMC information
 
 
 

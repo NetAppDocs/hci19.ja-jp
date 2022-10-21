@@ -17,10 +17,10 @@ keywords: netapp, hci, initiator, storage, element, access group
 
 
 .オプション（ Options ）
-* <<Create an initiator>>
-* <<Add initiators to a volume access group>>
-* <<Change an initiator alias>>
-* <<Delete initiators>>
+*  an initiator
+*  initiators to a volume access group
+*  an initiator alias
+*  initiators
 
 
 

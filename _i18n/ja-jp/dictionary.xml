@@ -138,7 +138,6 @@
   <block id="fc78a25a814125bdaeb01b28be02a19d" category="list-text">クラスタで NetApp Element ソフトウェア 11.3 以降を実行している必要があります。</block>
   <block id="d95dde96d5f37c05bba91d1bff6d1a55" category="list-text">バージョン 11.3 以降を実行する管理ノードを導入しておきます。</block>
   <block id="f3a29486bed19a90f2da6d007818b427" category="list-title">手順</block>
-  <block id="4ac581155f2c6a4a3a056078e2b122a1" category="list-text">管理ノードで REST API UI を開きます。</block>
   <block id="1fca2b4a66eca3cc3857ef2cc620c7a4" category="list-text">「 * Authorize * （認証）」または任意のロックアイコンを選択し、次の手順を実行します。</block>
   <block id="e70cbab1a499d9b8977a700c05be8d8b" category="list-text">クラスタのユーザ名とパスワードを入力します。</block>
   <block id="fe5314e1f2b52008d7c6c1dc49232535" category="list-text">mnode-client の値がまだ入力されていない場合は、クライアント ID を入力します。</block>
@@ -206,7 +205,6 @@
   <block id="f6a63a9052785a40e6a7b718acb627b9" category="list-text">*管理サービス*：最新の管理サービスバンドル（2.11以降）に更新しました。</block>
   <block id="2ce38f720dba5ff083bfe1933d11eacc" category="list-text">*管理ノード*：管理ノード11.3以降を実行していることを確認します。</block>
   <block id="a141fe1c6179ed3e09aa6043ad364ac6" category="list-text">* Elementソフトウェア*：ストレージクラスタでNetApp Element ソフトウェア11.3以降が実行されている必要があります。</block>
-  <block id="53b9f06d2f4963cb4351ee247eee6fc1" category="list-text">*エンドユーザライセンス契約（EULA）*：管理サービス2.20以降では、NetApp Hybrid Cloud ControlのUIまたはAPIを使用してコンピューティングノードの健全性チェックを実行する前に、EULAに同意して保存する必要があります。</block>
   <block id="c3dfd82361c52d5d3d1551c20c83f1a6" category="list-text">Webブラウザで管理ノードのIPアドレスを開きます。</block>
   <block id="d64a6336a39c9f27c33956f187d79c87" category="list-text">ストレージクラスタ管理者のクレデンシャルを指定して NetApp Hybrid Cloud Control にログインします。</block>
   <block id="1f760966967601f6feb32cc62bb11ca3" category="list-text">インターフェイスの右上にある [* Upgrade] を選択します。</block>
@@ -1331,7 +1329,6 @@
   <block id="4a7821cd3898fc74659163d0e111cd38" category="paragraph">Element 11.3 以降の管理ノードリリースでは、個々のサービスを提供する新しいモジュラアーキテクチャに基づいて管理ノードの設計が変更されました。これらのモジュラ型サービスは、 NetApp HCI システムの一元管理機能と拡張管理機能を提供します。管理サービスには、システム計測、ロギング、更新のサービス、 Element Plug-in for vCenter Server の QoSSIOC サービス、 NetApp Hybrid Cloud Control などがあります。</block>
   <block id="1b4d7862ca62ac0691b197c1c4e48017" category="list-text">Element ソフトウェアをアップグレードする前に、最新の管理サービスバンドルにアップグレードする必要があります。</block>
   <block id="a443497b41405480f6755e35166556e7" category="inline-link">管理サービスのリリースノート</block>
-  <block id="573d529ded9f2b66a55c1d25a9498c72" category="paragraph">管理サービス2.20以降では、NetApp Hybrid Cloud ControlのUIまたはAPIを使用して管理サービスをアップグレードする前に、エンドユーザライセンス契約（EULA）に同意して保存する必要があります。</block>
   <block id="a5237c2b3436db5dc67ab53b053d3ec9" category="paragraph">管理サービスは、 NetApp Hybrid Cloud Control の UI または管理ノードの REST API を使用して更新できます。</block>
   <block id="7d6cae0c176b060b3eb918e8fc3a8a88" category="list-text"><block ref="8b810af37d36ecef3e8ce0cfd28cc60b" category="inline-xref-macro-rx"></block> （推奨方法）</block>
   <block id="45d5739efe933eabe3dda4a4ba6b61b1" category="list-text"><block ref="b795f7048c0a3127327e392f4c115728" category="inline-xref-macro-rx"></block></block>
@@ -1758,7 +1755,6 @@
   <block id="2aaad98bfcfbd95f21871cf486a3243c" category="inline-link">vCenter Server 、 ESXi 、 VM 、その他の VMware コンポーネントを含む vSphere をアップグレードします</block>
   <block id="f23d91ab86d1cf2e82bd86fd860c8585" category="list-text"><block ref="f0107c2e24795b3c47b3466dee69927b" category="inline-link-rx"></block>。</block>
   <block id="7389b01d5fe0e17f5523a7fb85295f91" category="inline-link">こちらの技術情報アーティクル</block>
-  <block id="38be14292d8d278a5d7b04a84bab839d" category="admonition">VMware vCenter Server 7.0 U3 にアップグレードすると、すべてのバージョンの NetApp Element Plug-in for vCenter Server を導入できません。この問題 を解決するには、を参照してください<block ref="770c119932f7fa962a47dc0795db1af6" category="inline-link-rx"></block>。</block>
   <block id="42baa5e1ef15c663eada13ad52636d31" category="inline-link">2 ノードクラスタ</block>
   <block id="0ba7583639a274c434bbe6ef797115a4" category="inline-link">登録</block>
   <block id="81750b82d55f7148c9a0001ed71e7dd4" category="list-text"><block ref="670ccc28c8c6a3ae1c020a0fa12ec195" category="inline-link-rx"></block> vCenter で Element Plug-in for vCenter Server を再度実行します。</block>
@@ -2562,7 +2558,6 @@
   <block id="2b25aeb8c7f6b5acc086216f641291e8" category="admonition">ネットアップサポートサイトのクレデンシャルでログインするように求められます。</block>
   <block id="08edd2123939d5309dced149763a50ee" category="section-title">NetApp HCI</block>
   <block id="54866f3f5260905d8cc6b998d85fee46" category="inline-link">NetApp HCI 1.9P1 リリースノート</block>
-  <block id="5f123fb5072e8736326c928e2de971af" category="list-text"><block ref="9676fc811bea74225536cdd128daebc0" category="inline-link-rx"></block> _ 新規 _</block>
   <block id="ad486ba7980ca0df1937d7f26f4ce12b" category="inline-link">NetApp HCI 1.9 リリースノート</block>
   <block id="633cc64117e19d8cdd0def00cc27e8f5" category="list-text"><block ref="633cc64117e19d8cdd0def00cc27e8f5" category="inline-link-rx"></block></block>
   <block id="93c90752aba7edbf5a9fd2d0543c08d3" category="inline-link">NetApp HCI 1.8P1 リリースノート</block>
@@ -2573,7 +2568,6 @@
   <block id="4eed15839b8c708f78b2b696364ff0aa" category="list-text"><block ref="4eed15839b8c708f78b2b696364ff0aa" category="inline-link-rx"></block></block>
   <block id="3938cfdbe176bad61cedb25bdb572858" category="section-title">NetApp Element ソフトウェア</block>
   <block id="56570048e2475ec7b64ee91388743714" category="inline-link">NetApp Element ソフトウェア 12.3.2 リリースノート</block>
-  <block id="3903fc6a9f0bcbe1f49608f5110cf661" category="list-text"><block ref="9de5606ae9b23ff6651244b85bd5dae8" category="inline-link-rx"></block> _ 新規 _</block>
   <block id="7199e7988a06a61dd6614783601855bd" category="inline-link">NetApp Element ソフトウェア 12.3.1 リリースノート</block>
   <block id="9add94ad0bafb6a0c0977e09efa22b79" category="list-text"><block ref="9add94ad0bafb6a0c0977e09efa22b79" category="inline-link-rx"></block></block>
   <block id="325c4db41bea4b4c5bc841d336b08e32" category="inline-link">NetApp Element ソフトウェア 12.3 リリースノート</block>
@@ -2595,7 +2589,6 @@
   <block id="3e6c92d2b92c58fc4bfb9dd99511b0d9" category="section-title">管理サービス</block>
   <block id="3b79e75f8bb7342984eec3a3fd95ccf6" category="list-text"><block ref="3b79e75f8bb7342984eec3a3fd95ccf6" category="inline-link-rx"></block></block>
   <block id="c7c27143d481078e23cd4144c0df2f10" category="inline-link">vCenter Plug-in 4.9リリースノート</block>
-  <block id="6452d1b3e56fe38fdc537aeb6fe8d1c8" category="list-text"><block ref="779aeeb0a67ee84cae70c2361654111d" category="inline-link-rx"></block>_ 新規 _</block>
   <block id="3b34803433d83528840d8e729af0e8bc" category="inline-link">vCenter Plug-in 4.8 リリースノート</block>
   <block id="c561b7d92736e6c451a661a0a5da7586" category="list-text"><block ref="c561b7d92736e6c451a661a0a5da7586" category="inline-link-rx"></block></block>
   <block id="8cf0a7fd902364db0eaa5ec60ad654f3" category="inline-link">vCenter Plug-in 4.7 リリースノート</block>
@@ -2609,8 +2602,6 @@
   <block id="e6f04bc267aa8b790e8358fbcafd13da" category="inline-link">vCenter Plug-in 4.3 リリースノート</block>
   <block id="b2a1b69fb08bccdb5677884b0a061505" category="list-text"><block ref="b2a1b69fb08bccdb5677884b0a061505" category="inline-link-rx"></block></block>
   <block id="ff87ebe2c25e682bd61568ba1a06d717" category="section-title">ファームウェアを計算します</block>
-  <block id="7d00d7b09c7fcde97c11f675daf7ae62" category="inline-link-macro">Compute Firmware Bundle 2.146 リリースノート（最新）</block>
-  <block id="e45bcf0f15e92deae2cfb38777071218" category="list-text"><block ref="e45bcf0f15e92deae2cfb38777071218" category="inline-link-macro-rx"></block></block>
   <block id="e408d2698eab83bad6a25c0414c9fccd" category="list-text"><block ref="e408d2698eab83bad6a25c0414c9fccd" category="inline-link-macro-rx"></block></block>
   <block id="add6cf39bf48bd4bb95153935993051e" category="inline-link-macro">Compute Firmware Bundle 2.27 リリースノート</block>
   <block id="8b8c8134b91716e60636957418102f63" category="list-text"><block ref="8b8c8134b91716e60636957418102f63" category="inline-link-macro-rx"></block></block>
@@ -3270,7 +3261,6 @@
   <block id="736c409b380383ee8843715d26079c63" category="list-text">* クラスタの健全性 * ：健全性チェックを実行しました。を参照してください <block ref="bdcf6db43efb3c82b174a0c4c0a65c66" category="inline-link-macro-rx"></block>。</block>
   <block id="d12abcbed858bffa82e8d643aeac1e4f" category="inline-link-macro">リリースノートおよびアップグレード手順</block>
   <block id="13c2b42759130af4400c46b2b928dc26" category="admonition">ご使用のハードウェアのファームウェアとドライバのファームウェアの一覧については、こちらを参照してください<block ref="919d0da258d2c9346bfb11f078cfd474" category="inline-link-rx"></block> （ログインが必要です）。</block>
-  <block id="07cc0d856c010a1ee3ff9ee8f5157778" category="list-text">*エンドユーザライセンス契約（EULA）*：管理サービス2.20以降では、NetApp Hybrid Cloud Control UIまたはAPIを使用してストレージファームウェアをアップグレードする前に、EULAに同意して保存する必要があります。</block>
   <block id="5212e4232f93722ce70d3ed042cd25c1" category="paragraph">次のいずれかのストレージファームウェアアップグレードオプションを選択します。</block>
   <block id="71894c0623112f371e3598666af16695" category="list-text"><block ref="c67f607f0c5a6b98a7e28e151694a09a" category="inline-xref-macro-rx"></block></block>
   <block id="b8cff0b41605e83e8a12999dd0a4ca92" category="list-text"><block ref="bd241c643056b4027f18f8f059752b73" category="inline-xref-macro-rx"></block></block>
@@ -3410,7 +3400,6 @@
   <block id="b7328847f651fa46bcdd00a86f903b6a" category="inline-link-macro">監視ノード</block>
   <block id="efcf6e02f16fc585a25b810f97e71d20" category="list-text">* 監視ノードの要件 * ： 2 ノードおよび 3 ノードのストレージクラスタでは、 1 つ <block ref="80652426a05b159dbdf64fb619693036" category="inline-link-macro-rx"></block> 常に NetApp HCI インストール環境で実行しておく必要があります。</block>
   <block id="71adfd306f433bbb5f20cd616a19fc23" category="list-text">* コンピューティングノードの健全性チェック * ：ノードをアップグレードする準備が完了していることを確認しました。を参照してください <block ref="dd829c5049f30330148dc16f26fde06c" category="inline-link-macro-rx"></block>。</block>
-  <block id="0b2f19b801c71ab42a03e5347b8302ee" category="list-text">*エンドユーザライセンス契約（EULA）*：管理サービス2.20以降では、NetApp Hybrid Cloud Control UIまたはAPIを使用してコンピューティングノードのファームウェアをアップグレードする前に、EULAに同意して保存する必要があります。</block>
   <block id="e32fcfe10328af0f3217cd5ddb0808a4" category="paragraph">本番環境では、一度に 1 つのコンピューティングノードのファームウェアをアップグレードします。</block>
   <block id="344e78ec2ad025d33ea36041579f298c" category="inline-link-macro">ESXi ホストでロックダウンモードを無効にする方法</block>
   <block id="51e2f064fae02b78d50335320fa64dee" category="inline-link-macro">VMware ロックダウンモードの動作</block>
@@ -3787,13 +3776,11 @@
   <block id="62403656f60d86891c7c9ad1ffa2f44f" category="summary">NetApp Hybrid Cloud ControlのUIまたはREST APIのUIを使用して管理ノードでSSH機能を無効にして有効にするか、REST API UIを使用してSSHサポート接続機能のステータスを確認することができます。</block>
   <block id="d6ffeb2fc4f82d1d17f906502ee07d86" category="doc">管理ノードで SSH 機能を管理します</block>
   <block id="d1cfb55513d453a2cf4188067d2cf218" category="paragraph">REST API を使用して、管理ノード（ mNode ）の SSH 機能の無効化、再有効化、ステータスの確認を行うことができます。提供する SSH 機能 <block ref="6bb28df38aa0844e287b2e23fc581879" category="inline-link-macro-rx"></block> 管理サービス 2.18 以降を実行する管理ノードでは、はデフォルトで無効になっています。</block>
-  <block id="de7e6ba1aa5db3f3ecd18e0db7533988" category="paragraph">管理サービス2.20以降では、NetApp Hybrid Cloud ControlのUIを使用して管理ノードのSSH機能を有効または無効にすることができます。</block>
   <block id="3c94e6ce915e7526e3d52ade19785a73" category="list-text">* NetApp Hybrid Cloud Controlの権限*：管理者の権限が必要です。</block>
   <block id="893af10adfc625cc78ae6b31f194e8e2" category="list-text">* クラスタ管理者権限 * ：ストレージクラスタに対する管理者権限があります。</block>
   <block id="4a8504402e610045f6f515076b209af8" category="list-text">* Element ソフトウェア * ：クラスタで NetApp Element ソフトウェア 11.3 以降が実行されている必要があります。</block>
   <block id="ac7ca17dbb21ace6afb8d4dca6cabea3" category="list-text">*管理サービスの更新*：</block>
   <block id="72b0efdaad5d469b43f79c332bb57be4" category="inline-link">管理サービスのバンドル</block>
-  <block id="b5fac2f2425ddc92784c5c7e5d8d557e" category="list-text">NetApp Hybrid Cloud ControlのUIを使用するために、を更新しておきます<block ref="f6e495ec9a99fcd5692d41358780e884" category="inline-link-rx"></block> をバージョン2.20にアップグレードします。</block>
   <block id="43fe8cb39bfeedc36b52f882e1fa6566" category="list-text">REST API UIを使用するために、を更新しておきます<block ref="f6e495ec9a99fcd5692d41358780e884" category="inline-link-rx"></block> バージョン 2.17 へ。</block>
   <block id="22b10ea78e232391f766c1d30f89f143" category="list-text"><block ref="ceecdddcb31feb92e45b5238bea4a2dd" category="inline-xref-macro-rx"></block></block>
   <block id="4dcaf58a1a6fd3555d9626cfadc42510" category="inline-link-macro">認証</block>
@@ -3846,7 +3833,6 @@
   <block id="1f530b0c76d9de4275104c651b6d5411" category="list-text">* 有効なアップグレードパス * ：アップグレード先の Element バージョンのアップグレードパス情報を確認し、アップグレードパスが有効であることを確認しておきます。<block ref="b87eae6ace29db9b17ab7b20ed6745f5" category="inline-link-rx"></block></block>
   <block id="7cccd916bcdac08ea30e7c32df58e516" category="admonition">Element ソフトウェアをバージョン 12.3.x にアップグレードする前に、最新の管理サービスバンドルにアップグレードする必要がありますElement ソフトウェアをバージョン 12.3.x に更新する場合は、管理サービス 2.14.60 以降が必要です。</block>
   <block id="eb3ef9d3145086e8447906c0ff28c122" category="list-text">* クラスタの健全性 * ：クラスタをアップグレードする準備が完了していることを確認しました。を参照してください <block ref="bdcf6db43efb3c82b174a0c4c0a65c66" category="inline-link-macro-rx"></block>。</block>
-  <block id="a3affadb8671444f8e45462ea7a0de50" category="list-text">*エンドユーザライセンス契約（EULA）*：管理サービス2.20以降では、NetApp Hybrid Cloud ControlのUIまたはAPIを使用してElementソフトウェアをアップグレードする前に、EULAに同意して保存する必要があります。</block>
   <block id="0e7647873b3166c20d4bb762ef96b543" category="paragraph">次のいずれかの Element ソフトウェアアップグレードオプションを選択します。</block>
   <block id="f04c2dffe18d2f3b135204db9355705a" category="list-text"><block ref="d671d4153cf8124770baff9fa1830cd7" category="inline-xref-macro-rx"></block></block>
   <block id="c68d0cefaf6daaa0eddd2f2ab63ba5c8" category="list-text"><block ref="910aaaa5a5f6089f423c0c681bb2f1ce" category="inline-xref-macro-rx"></block></block>
@@ -4263,7 +4249,6 @@
   <block id="0b2d8b6ff87d29566fb56d20870a7943" category="paragraph">アップグレードは、累積パッケージではなくコンポーネント単位で実行できます。このため、 Ubuntu OS などの一部のコンポーネントのアップグレードを、より迅速に行うことができます。アップグレードは、 Rancher サーバインスタンスと Rancher サーバが配置されている管理クラスタにのみ影響します。管理クラスタノードの Ubuntu OS へのアップグレードは、重要なセキュリティパッチのみを対象としており、オペレーティングシステムはアップグレードしません。ユーザクラスタは NetApp Hybrid Cloud Control からアップグレードできません。</block>
   <block id="fa6526605ff956fa699802ea347526ff" category="admonition">Rancher 機能を使用するには、最新の管理サービスバンドル 2.17 以降にアップグレードする必要があります。</block>
   <block id="ab0a7321d296fe5e16313845b6e86f0d" category="list-text">* システムポート * ： NetApp Hybrid Cloud Control をアップグレードに使用している場合は、必要なポートが開いていることを確認しておきます。を参照してください <block ref="2b8d9142e89de477f0f719fb06286d84" category="inline-link-macro-rx"></block> を参照してください。</block>
-  <block id="2620c9636e86b36feea9216102a5bec7" category="list-text">*エンドユーザライセンス契約（EULA）*：管理サービス2.20以降では、NetApp Hybrid Cloud ControlのUIまたはAPIを使用してランチャの導入環境をアップグレードする前に、EULAに同意して保存する必要があります。</block>
   <block id="69639530f6f543c75958d80c8a23f7bc" category="paragraph">次のいずれかのアップグレードプロセスを選択します。</block>
   <block id="9e618518a7acfbe695c481345087d7ab" category="list-text"><block ref="8d85d0eab3300aa3b4c83383333d291f" category="inline-xref-macro-rx"></block></block>
   <block id="a2e344ad0778d1af4ecc859cc11bf478" category="list-text"><block ref="4bf4c6160c669fd3806156a3dcc1e18c" category="inline-xref-macro-rx"></block></block>
@@ -5139,7 +5124,6 @@
   <block id="f5734d4e8acdeb186a1c22c351c4a0bf" category="paragraph">Element ストレージをアップグレードする前に健全性チェックを実行して、クラスタ内のすべてのストレージノードで次回の Element ストレージアップグレードの準備ができていることを確認する必要があります。</block>
   <block id="f4926605dca5caffd5d52e790b9eb676" category="list-text">*管理サービス*：最新の管理サービスバンドル（2.10.27以降）に更新しました。</block>
   <block id="cd87cb364b82cfd7ff555087f3e88e59" category="list-text">* Elementソフトウェア*：クラスタバージョンでNetApp Element ソフトウェア11.3以降が実行されている必要があります。</block>
-  <block id="84d8587fb67731ba50262a0ffeacb7ac" category="list-text">*エンドユーザライセンス契約（EULA）*：管理サービス2.20以降では、NetApp Hybrid Cloud ControlのUIまたはAPIを使用してElementストレージの健全性チェックを実行する前に、EULAに同意して保存する必要があります。</block>
   <block id="a42a5f062307c65656fb022b1bc38224" category="paragraph">健全性チェックは、 NetApp Hybrid Cloud Control （ HCC ） UI 、 HCC API 、または HealthTools スイートを使用して実行できます。</block>
   <block id="0096c254c62197f713da16cbb8cf17bf" category="list-text"><block ref="43e2712ac16e77262f42113e91f41bfc" category="inline-xref-macro-rx"></block> （推奨方法）</block>
   <block id="c0ce03ffdb1b2eaf2997d4b003a6c398" category="list-text"><block ref="33b5a46d5ad547c7160d2877495cd388" category="inline-xref-macro-rx"></block></block>
@@ -5979,7 +5963,6 @@
   <block id="651784e7a6ddc6534201a6e8d1fbf248" category="paragraph">既存のvSphere環境にNetApp Element Plug-in for vCenter Serverが登録されている場合は、プラグインサービスが含まれている管理サービスパッケージを最初に更新したあとで、プラグインの登録を更新できます。</block>
   <block id="e6c04958395a323ddbc02c929b4dfdf0" category="paragraph">登録ユーティリティを使用して、 vCenter Server Virtual Appliance （ vCSA ）または Windows でプラグインの登録を更新できます。vCenter Plug-in の登録変更は、プラグインを使用するすべての vCenter Server で行う必要があります。</block>
   <block id="badb045d93b6de2fe8d2a1a664b92d6f" category="paragraph">このアップグレード手順では、次のアップグレードシナリオについて説明します。</block>
-  <block id="fe7edd9e3b4efc71766ba03d23b51c44" category="list-text">VMware vCenter Server 4.9、4.8、4.7、4.6、4.5、または4.4にアップグレードする。</block>
   <block id="a6a18366932bfeffc2341cc7aa5fe09d" category="list-text">7.0 、 6.7 、または 6.5 の HTML5 vSphere Web Client にアップグレードする。</block>
   <block id="8eeabd6de4a231c731b82c27ee25bbdb" category="admonition">このプラグインは、VMware vCenter Server 6.5 for Element Plug-in for VMware vCenter Server 4.6、4.7、および4.8とは互換性がありません。</block>
   <block id="f171584692be059c88cbbda35827f299" category="list-text">6.7 Flash vSphere Web Client にアップグレードする。</block>
@@ -6253,4 +6236,26 @@
   <block id="4f8fc3e1fce78186b06dfda99cdedd17" category="paragraph">NetApp HCI ソリューションは、複数のワークロードを同じインフラに配置することで、摩擦のない大規模なパフォーマンスを実現します。</block>
   <block id="921c0975b352bf1530a52271d2abf5c6" category="inline-link">NetApp HCI ソリューションのドキュメント</block>
   <block id="705d4d08d5af2e9dd1c4616188dd681f" category="paragraph">NetApp HCI ソリューションの詳細については、を参照してください<block ref="80564718f738f8f02fcd8afb2a3d09de" category="inline-link-rx"></block>。</block>
+  <block id="edb046160eb6ed03c39de5860e72e509" category="list-text">*エンドユーザライセンス契約（EULA）*：管理サービス2.20.69以降では、NetApp Hybrid Cloud Control UIまたはAPIを使用してランチャの導入環境をアップグレードする前に、EULAに同意して保存する必要があります。</block>
+  <block id="6802ee2e6d325852973924be55003180" category="inline-link-macro">管理サービス2.2.1.61（vCenter Server 4.10.12のNetApp Element プラグイン）に関する注意事項</block>
+  <block id="ca9239bf570791b1b05bcb88781e4290" category="list-text"><block ref="ca9239bf570791b1b05bcb88781e4290" category="inline-link-macro-rx"></block></block>
+  <block id="5d8cb69408d9a6773459aa0a397a3003" category="list-text">管理ノードでREST API UIを開きます。</block>
+  <block id="4eed3af07414f10fffdba8a7ff51ca36" category="list-text">管理サービス2.2.1.61以降では、次の処理を実行します。</block>
+  <block id="880c70977a68b1ec897e498bb11c7021" category="list-text">管理サービス2.20.69以前の場合：</block>
+  <block id="2394ff28a38b482ef2918be4c8e7540c" category="list-text">*エンドユーザライセンス契約（EULA）*：管理サービス2.20.69以降では、NetApp Hybrid Cloud Control UIまたはAPIを使用してストレージファームウェアをアップグレードする前に、EULAに同意して保存する必要があります。</block>
+  <block id="47f6196d2c02469142a3352c4f8f17f5" category="list-text">*エンドユーザライセンス契約（EULA）*：管理サービス2.20.69以降では、NetApp Hybrid Cloud Control UIまたはAPIを使用してコンピューティングノードのファームウェアをアップグレードする前に、EULAに同意して保存する必要があります。</block>
+  <block id="b1dc794dd924da27c3e3280ab948e305" category="list-text">*エンドユーザライセンス契約（EULA）*：管理サービス2.20.69以降では、NetApp Hybrid Cloud ControlのUIまたはAPIを使用してコンピューティングノードの健全性チェックを実行する前に、EULAに同意して保存する必要があります。</block>
+  <block id="54c78d15a850ddddfc9da22742280908" category="list-text">*エンドユーザライセンス契約（EULA）*：管理サービス2.20.69以降では、NetApp Hybrid Cloud ControlのUIまたはAPIを使用してElementストレージの健全性チェックを実行する前に、EULAに同意して保存する必要があります。</block>
+  <block id="cf975bc9efb412ba97aeeb129f06f92a" category="paragraph">管理サービス2.20.69以降では、NetApp Hybrid Cloud Control UIを使用して管理ノードのSSH機能を有効または無効にすることができます。</block>
+  <block id="742443519c431a58e3020342bebdad42" category="list-text">NetApp Hybrid Cloud ControlのUIを使用するために、を更新しておきます<block ref="f6e495ec9a99fcd5692d41358780e884" category="inline-link-rx"></block> をバージョン2.20.69以降にアップグレードします。</block>
+  <block id="9676fc811bea74225536cdd128daebc0" category="list-text"><block ref="9676fc811bea74225536cdd128daebc0" category="inline-link-rx"></block></block>
+  <block id="9de5606ae9b23ff6651244b85bd5dae8" category="list-text"><block ref="9de5606ae9b23ff6651244b85bd5dae8" category="inline-link-rx"></block></block>
+  <block id="90e7c2277ee69a3d3ecf30fa1fe61ab1" category="inline-link">vCenter Plug-in 4.10リリースノート</block>
+  <block id="5c6c5d2c88269bcae97dbd93d213851a" category="list-text"><block ref="a9fc1ab89aaaf4e529a9e4251a8b3b33" category="inline-link-rx"></block> _ 新規 _</block>
+  <block id="779aeeb0a67ee84cae70c2361654111d" category="list-text"><block ref="779aeeb0a67ee84cae70c2361654111d" category="inline-link-rx"></block></block>
+  <block id="97107deca957b5e4a6b53d3c09cc1c16" category="list-text"><block ref="97107deca957b5e4a6b53d3c09cc1c16" category="inline-link-macro-rx"></block></block>
+  <block id="e4eccb810d78b1a07fe7514cdf52eb9f" category="admonition">VMware vCenter Server 7.0 U3にアップグレードすると、Elementプラグインの導入が失敗します。Spring Framework 4を使用してこの問題 を解決するには、を参照してください<block ref="770c119932f7fa962a47dc0795db1af6" category="inline-link-rx"></block>。</block>
+  <block id="62449609bcf95f48fbdbae6dddedcc19" category="list-text">*エンドユーザライセンス契約（EULA）*：管理サービス2.20.69以降では、NetApp Hybrid Cloud Control UIまたはAPIを使用してElementソフトウェアをアップグレードする前に、EULAに同意して保存する必要があります。</block>
+  <block id="b829058e02635e31c81abf49f37e64d2" category="list-text">Element Plug-in for VMware vCenter Server 4.10、4.9、4.8、4.7、4.6にアップグレードする場合 4.5または4.4。</block>
+  <block id="d6802e127914e53f73aa2f2db8cb5e44" category="paragraph">管理サービス2.20.69以降では、NetApp Hybrid Cloud ControlのUIまたはAPIを使用して管理サービスをアップグレードする前に、エンドユーザライセンス契約（EULA）に同意して保存する必要があります。</block>
 </blocks>

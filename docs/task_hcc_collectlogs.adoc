@@ -23,8 +23,8 @@ NetApp HCI または SolidFire オールフラッシュストレージの設置�
 
 次のいずれかのオプションを選択します。
 
-* <<Use NetApp Hybrid Cloud Control to collect logs>>
-* <<Use the REST API to collect logs>>
+*  NetApp Hybrid Cloud Control to collect logs
+*  the REST API to collect logs
 
 
 

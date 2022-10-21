@@ -16,7 +16,7 @@ keywords: netapp, mnode, management node, ssh, disable, enable, rest api, hybrid
 [role="lead"]
 REST API を使用して、管理ノード（ mNode ）の SSH 機能の無効化、再有効化、ステータスの確認を行うことができます。提供する SSH 機能 link:task_mnode_enable_remote_support_connections.html["ネットアップサポートの Remote Support Tunnel （ RST ）セッションアクセス"] 管理サービス 2.18 以降を実行する管理ノードでは、はデフォルトで無効になっています。
 
-管理サービス2.20以降では、NetApp Hybrid Cloud ControlのUIを使用して管理ノードのSSH機能を有効または無効にすることができます。
+管理サービス2.20.69以降では、NetApp Hybrid Cloud Control UIを使用して管理ノードのSSH機能を有効または無効にすることができます。
 
 .必要なもの
 * * NetApp Hybrid Cloud Controlの権限*：管理者の権限が必要です。
@@ -25,20 +25,20 @@ REST API を使用して、管理ノード（ mNode ）の SSH 機能の無効�
 * * 管理ノード * ：バージョン 11.3 以降を実行する管理ノードを導入しておきます。
 * *管理サービスの更新*：
 +
-** NetApp Hybrid Cloud ControlのUIを使用するために、を更新しておきます https://mysupport.netapp.com/site/products/all/details/mgmtservices/downloads-tab["管理サービスのバンドル"^] をバージョン2.20にアップグレードします。
+** NetApp Hybrid Cloud ControlのUIを使用するために、を更新しておきます https://mysupport.netapp.com/site/products/all/details/mgmtservices/downloads-tab["管理サービスのバンドル"^] をバージョン2.20.69以降にアップグレードします。
 ** REST API UIを使用するために、を更新しておきます https://mysupport.netapp.com/site/products/all/details/mgmtservices/downloads-tab["管理サービスのバンドル"^] バージョン 2.17 へ。
 
 
 
 
 .オプション（ Options ）
-* <<Disable or enable the SSH capability on the management node using NetApp Hybrid Cloud Control UI>>
+*  or enable the SSH capability on the management node using NetApp Hybrid Cloud Control UI
 
 
 完了後、次のいずれかのタスクを実行できます link:task_mnode_api_get_authorizationtouse.html["認証"]：
 
-* <<Disable or enable the SSH capability on the management node using APIs>>
-* <<Determine status of the SSH capability on the management node using APIs>>
+*  or enable the SSH capability on the management node using APIs
+*  status of the SSH capability on the management node using APIs
 
 
 

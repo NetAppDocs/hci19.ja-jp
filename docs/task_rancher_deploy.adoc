@@ -42,9 +42,9 @@ NOTE: Rancher サポートは、ネットアップサポートエッジ契約に
 
 == NetApp HCI に Rancher を展開する手順
 
-* <<Access the NetApp Hybrid Cloud Control>>
-* <<Deploy Rancher on NetApp HCI>>
-* <<Verify your deployment by using vCenter Server>>
+*  the NetApp Hybrid Cloud Control
+*  Rancher on NetApp HCI
+*  your deployment by using vCenter Server
 
 
 

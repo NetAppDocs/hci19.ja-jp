@@ -48,10 +48,10 @@ keywords: netapp, element, management node, mnode, disaster recovery, redeploy, 
 
 
 .手順
-. <<Download ISO or OVA and deploy the VM>>
-. <<Configure the network>>
-. <<Configure time sync>>
-. <<Configure the management node>>
+.  ISO or OVA and deploy the VM
+.  the network
+.  time sync
+.  the management node
 
 
 
@@ -119,7 +119,7 @@ NOTE: ストレージトラフィックを分離するために NIC を追加す
 
 
 
-NOTE: Element 12..1 以降では、手順（ a ） ～ （ e ）が自動的に実行されます。管理ノード 12..1 の場合は、に進みます <<substep_f_recover_config_time_sync,サブステップ (f)>> 時刻同期の設定を完了します。
+NOTE: Element 12..1 以降では、手順（ a ） ～ （ e ）が自動的に実行されます。管理ノード 12..1 の場合は、に進みます ,サブステップ (f) 時刻同期の設定を完了します。
 
 . SSH またはハイパーバイザーが提供するコンソールを使用して、管理ノードにログインします。
 . NTPD を停止：
@@ -186,7 +186,7 @@ NOTE: 今後 VM を変更する場合は、このオプションを有効にし�
 
 
 
-NOTE: の実行時は NTP に影響するため、時刻の同期設定の完了後は NTP を編集しないでください <<step_6_recover_mnode_redeploy,再導入コマンド>> 管理ノード。
+NOTE: の実行時は NTP に影響するため、時刻の同期設定の完了後は NTP を編集しないでください ,再導入コマンド 管理ノード。
 
 
 

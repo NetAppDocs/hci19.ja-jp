@@ -33,9 +33,9 @@ H410S ノードが設置された 4 ノードシャーシの前面図と各ノ�
 
 image::h410s_ssd_bays.png[は、 H410S ノードが設置された 4 ノードシャーシの各ノードに関連付けられたベイを示しています。]
 
-ここでは、この手順の概要を示します。<<Prepare to replace the storage node>>
-<<Replace the storage node in the chassis>>
-<<Add the storage node to the cluster>>
+ここでは、この手順の概要を示します。 to replace the storage node
+ the storage node in the chassis
+ the storage node to the cluster
 
 
 

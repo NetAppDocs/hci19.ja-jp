@@ -92,7 +92,7 @@ NOTE: NetApp Element Plug-in for vCenter Server を使用して他の vCenter Se
 
 +
 .. 「 vSphered.local 」または LDAP ドメインを選択します
-.. 検索を使用して、で作成した新しいユーザを検索します <<Set up a new user account in vCenter>>。
+.. 検索を使用して、で作成した新しいユーザを検索します  up a new user account in vCenter。
 .. ［ NetApp Role ］ を選択します。
 +
 
@@ -120,7 +120,7 @@ vCenter のデータセンターにユーザ権限を割り当てるには、次
 
 +
 .. 「 vSphered.local 」または LDAP ドメインを選択します。
-.. で作成した新しい HCC ユーザを検索するには、検索を使用します <<Set up a new user account in vCenter>>。
+.. で作成した新しい HCC ユーザを検索するには、検索を使用します  up a new user account in vCenter。
 .. 「 ReadOnly ロール」を選択します。
 +
 
@@ -148,7 +148,7 @@ vCenter で NetApp HCI データストアにユーザ権限を割り当てるに
 
 +
 .. 「 vSphered.local 」または LDAP ドメインを選択します。
-.. で作成した新しい HCC ユーザを検索するには、検索を使用します <<Set up a new user account in vCenter>>。
+.. で作成した新しい HCC ユーザを検索するには、検索を使用します  up a new user account in vCenter。
 .. 「管理者ロール」を選択します。
 .. * 子に伝播 * を選択する。
 
@@ -170,7 +170,7 @@ vCenter でネットアップホストクラスタにユーザ権限を割り当
 
 +
 .. 「 vSphered.local 」または LDAP ドメインを選択します。
-.. で作成した新しい HCC ユーザを検索するには、検索を使用します <<Set up a new user account in vCenter>>。
+.. で作成した新しい HCC ユーザを検索するには、検索を使用します  up a new user account in vCenter。
 .. 「 NetApp Role 」または「 Administrator 」を選択します。
 .. * 子に伝播 * を選択する。
 
@@ -199,7 +199,7 @@ NetApp ESXi ホストが vCenter ホストクラスタ内にない場合は、�
 
 +
 .. 「 vSphered.local 」または LDAP ドメインを選択します。
-.. 検索を使用して、で作成した新しいユーザを検索します <<Set up a new user account in vCenter>>。
+.. 検索を使用して、で作成した新しいユーザを検索します  up a new user account in vCenter。
 .. 「 NetApp Role 」または「 Administrator 」を選択します。
 
 
@@ -221,7 +221,7 @@ NetApp ESXi ホストが vCenter ホストクラスタ内にない場合は、�
 
 +
 .. 「 vSphered.local 」または LDAP ドメインを選択します。
-.. 検索を使用して、で作成した新しいユーザを検索します <<Set up a new user account in vCenter>>。
+.. 検索を使用して、で作成した新しいユーザを検索します  up a new user account in vCenter。
 .. ［ NetApp Role ］ を選択します。
 +
 
@@ -237,7 +237,7 @@ IMPORTANT: Do * not * select * Propagate to children * を選択します。
 
 +
 .. 「 vSphered.local 」または LDAP ドメインを選択します。
-.. 検索を使用して、で作成した新しいユーザを検索します <<Set up a new user account in vCenter>>。
+.. 検索を使用して、で作成した新しいユーザを検索します  up a new user account in vCenter。
 .. 「 NetApp Role 」または「 Administrator 」を選択します。
 .. * 子に伝播 * を選択する。
 
@@ -269,7 +269,7 @@ https://<ManagementNodeIP>/mnode`
 
 == 管理ノードにアセットまたはコンピューティングノードを追加します
 
-インストール後に新しいアセットまたはコンピューティングノード（および BMC アセット）を手動で追加する必要がある場合は、で作成した新しい HCC ユーザアカウントを使用します <<Set up a new user account in vCenter>>。詳細については、を参照してください link:task_mnode_add_assets.html["管理ノードにコンピューティングアセットとコントローラアセットを追加します"]。
+インストール後に新しいアセットまたはコンピューティングノード（および BMC アセット）を手動で追加する必要がある場合は、で作成した新しい HCC ユーザアカウントを使用します  up a new user account in vCenter。詳細については、を参照してください link:task_mnode_add_assets.html["管理ノードにコンピューティングアセットとコントローラアセットを追加します"]。
 
 
 

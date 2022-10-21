@@ -20,7 +20,7 @@ keywords: netapp, compute prechecks, compute node upgrade, netapp hci
 * *管理サービス*：最新の管理サービスバンドル（2.11以降）に更新しました。
 * *管理ノード*：管理ノード11.3以降を実行していることを確認します。
 * * Elementソフトウェア*：ストレージクラスタでNetApp Element ソフトウェア11.3以降が実行されている必要があります。
-* *エンドユーザライセンス契約（EULA）*：管理サービス2.20以降では、NetApp Hybrid Cloud ControlのUIまたはAPIを使用してコンピューティングノードの健全性チェックを実行する前に、EULAに同意して保存する必要があります。
+* *エンドユーザライセンス契約（EULA）*：管理サービス2.20.69以降では、NetApp Hybrid Cloud ControlのUIまたはAPIを使用してコンピューティングノードの健全性チェックを実行する前に、EULAに同意して保存する必要があります。
 +
 .. Webブラウザで管理ノードのIPアドレスを開きます。
 +
@@ -41,13 +41,13 @@ NOTE: EULAに同意すると、以後のすべての更新についてそのEULA
 
 健全性チェックは、NetApp Hybrid Cloud ControlのUIまたはNetApp Hybrid Cloud ControlのAPIを使用して実行できます。
 
-* <<Use NetApp Hybrid Cloud Control to run compute node health checks prior to upgrading firmware>> （推奨方法）
-* <<Use API to run compute node health checks prior to upgrading firmware>>
+*  NetApp Hybrid Cloud Control to run compute node health checks prior to upgrading firmware （推奨方法）
+*  API to run compute node health checks prior to upgrading firmware
 
 
 また、サービスで実行されるコンピューティングノードの健全性チェックの詳細も確認できます。
 
-* <<Compute node health checks made by the service>>
+*  node health checks made by the service
 
 
 
