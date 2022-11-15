@@ -14,7 +14,7 @@ keywords: netapp, mnode, management node, vcenter, hci, role
 
 
 [role="lead"]
-vCenter で NetApp HCC ロールを作成して、インストール後に vCenter アセット（コントローラ）またはコンピューティングノード（ノード）を管理ノードに手動で追加したり、既存のコントローラやノードを変更したりすることを推奨します。
+vCenterでNetApp HCCロールを作成して、インストール後にvCenterアセット（コントローラ）またはコンピューティングノード（ノード）を管理ノードに手動で追加したり、既存のコントローラやノードを変更したりする必要があります。
 
 この NetApp HCC ロールは、管理ノードのサービスビューをネットアップ専用のアセットに制限します。
 
@@ -80,9 +80,13 @@ vCenter で新しい NetApp HCC ロールを作成するには、次の手順を
 ** 最上位の vCenter 。
 ** リンクモードの場合は、必要な vCenter を選択します。
 +
+[NOTE]
+====
+*** NetApp Element Plug-in for vCenter Server 5.0以降では、を使用します https://docs.netapp.com/us-en/vcp/vcp_concept_linkedmode.html["vCenter リンクモード"^]NetApp SolidFire ストレージクラスタを管理するvCenter Serverごとに、Element Plug-inを別々の管理ノードから登録します（推奨）。
+*** NetApp Element Plug-in for vCenter Server 4.10以前を使用して、他のvCenter Serverのクラスタリソースを管理する https://docs.netapp.com/us-en/vcp/vcp_concept_linkedmode.html["vCenter リンクモード"^] はローカルストレージクラスタのみに制限されます。
 
-NOTE: NetApp Element Plug-in for vCenter Server を使用して他の vCenter Server のクラスタリソースを管理する方法については、を参照してください link:https://docs.netapp.com/us-en/vcp/vcp_concept_linkedmode.html["vCenter リンクモード"^] はローカルストレージクラスタのみに制限されます。
 
+====
 
 
 . 右のナビゲーションペインで、 * 権限 * を選択します。

@@ -26,9 +26,13 @@ vCenter Server のネットワーク情報とクレデンシャルを指定す�
 
 vCenter リンクモードを使用して接続されている複数の vCenter Server システムに参加した場合、 NetApp HCI は 1 つの vCenter Server システムのみを認識します。
 
+[NOTE]
+====
+* Element Plug-in for vCenter Server 5.0以降では、を使用します https://docs.netapp.com/us-en/vcp/vcp_concept_linkedmode.html["vCenter リンクモード"^]NetApp SolidFire ストレージクラスタを管理するvCenter Serverごとに、Element Plug-inを別々の管理ノードから登録します（推奨）。
+* Element Plug-in for vCenter Server 4.10以前を使用して、他のvCenter Serverのクラスタリソースを管理する https://docs.netapp.com/us-en/vcp/vcp_concept_linkedmode.html["vCenter リンクモード"^] はローカルストレージクラスタのみに制限されます。
 
-NOTE: NetApp Element Plug-in for vCenter Server を使用して他の vCenter Server のクラスタリソースを管理する方法については、を参照してください link:https://docs.netapp.com/us-en/vcp/vcp_concept_linkedmode.html["vCenter リンクモード"^] はローカルストレージクラスタのみに制限されます。
 
+====
 .手順
 . 「 * Join 」をクリックして、既存の vSphere 環境を拡張します。 *
 . ドメイン名または IP アドレスを「 * vCenter Server ドメイン名または IP アドレス * 」フィールドに入力します。ドメイン名を入力する場合は、表示される *DNS Server IP Address* フィールドにアクティブな DNS サーバの IP アドレスも入力する必要があります。

@@ -21,9 +21,13 @@ NetApp HCI 環境の VMware vSphere コンポーネントをアップグレー�
 . vCSA と Windows のアップグレード https://docs.netapp.com/us-en/vcp/task_vcp_unregister.html["登録解除します"^] 登録ユーティリティを使用してプラグインを関連付けられている vCenter Server からプラグインを削除します。
 . https://docs.vmware.com/en/VMware-vSphere/6.7/com.vmware.vcenter.upgrade.doc/GUID-7AFB6672-0B0B-4902-B254-EE6AE81993B2.html["vCenter Server 、 ESXi 、 VM 、その他の VMware コンポーネントを含む vSphere をアップグレードします"^]。
 +
+[IMPORTANT]
+====
+NetApp Element vCenter Server 5.0にアップグレードすると、回避策 を適用せずにVMware vCenter 7.0 Update 3でプラグインを導入できるようになります。
 
-IMPORTANT: VMware vCenter Server 7.0 U3にアップグレードすると、Elementプラグインの導入が失敗します。Spring Framework 4を使用してこの問題 を解決するには、を参照してください https://kb.netapp.com/Advice_and_Troubleshooting/Hybrid_Cloud_Infrastructure/NetApp_HCI/vCenter_plug-in_deployment_fails_after_upgrading_vCenter_to_version_7.0_U3["こちらの技術情報アーティクル"^]。
+Element Plug-in for vCenter Server 4.xでVMware vCenter Server 7.0 Update 3にアップグレードした場合、プラグイン4.xを導入できません。Spring Framework 4を使用してこの問題 を解決するには、を参照してください https://kb.netapp.com/Advice_and_Troubleshooting/Hybrid_Cloud_Infrastructure/NetApp_HCI/vCenter_plug-in_deployment_fails_after_upgrading_vCenter_to_version_7.0_U3["こちらの技術情報アーティクル"^]。
 
+====
 +
 
 NOTE: 用のコンピューティングノードの ESXi をアップグレードする場合 https://www.netapp.com/us/media/tr-4823.pdf["2 ノードクラスタ"^]では、一度に 1 つのコンピューティングノードのみをアップグレードして、一時的に 1 つの監視ノードのみが使用不能になり、クラスタクォーラムを維持できるようにします。
@@ -34,7 +38,8 @@ NOTE: 用のコンピューティングノードの ESXi をアップグレー�
 . https://docs.netapp.com/us-en/vcp/vcp_task_qossioc.html#enabling-qossioc-automation-on-datastores["QoSSIOC を有効にします"^] プラグインで制御されているすべてのデータストアが対象です。
 
 
-[discrete]
+
+
 == 詳細については、こちらをご覧ください
 
 * https://docs.netapp.com/us-en/vcp/index.html["vCenter Server 向け NetApp Element プラグイン"^]

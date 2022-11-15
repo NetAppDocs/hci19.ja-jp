@@ -323,7 +323,7 @@ https:/<ManagementNodeIP>/mnode
 .. コントローラサブアセットを追加する場合は、「 * POST /assets/｛ asset_id ｝ /controllers * 」を選択します。
 +
 
-NOTE: コントローラサブアセットを追加する場合は、 vCenter で新しい NetApp HCC ロールを作成することを推奨します。この新しい NetApp HCC ロールにより、管理ノードのサービス表示がネットアップ専用のアセットに制限されます。を参照してください link:task_mnode_create_netapp_hcc_role_vcenter.html["vCenter で NetApp HCC ロールを作成します"]。
+NOTE: コントローラサブアセットを追加する場合は、vCenterで新しいNetApp HCCロールを作成する必要があります。この新しい NetApp HCC ロールにより、管理ノードのサービス表示がネットアップ専用のアセットに制限されます。を参照してください link:task_mnode_create_netapp_hcc_role_vcenter.html["vCenter で NetApp HCC ロールを作成します"]。
 
 .. [* 試してみてください * ] を選択します。
 .. クリップボードにコピーした親ベースアセットの ID を * asset_id * フィールドに入力します。

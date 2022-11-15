@@ -21,7 +21,7 @@ keywords: netapp, hci, element, new, whatsnew
 ====
 Element 12.3.2には、Apache log4jの脆弱性に対するElementソフトウェアの影響を軽減する機能が含まれています。Virtual Volumes （ VVol ）機能が有効になっている NetApp SolidFire ストレージクラスタは、この脆弱性の影響を受けやすくなっています。
 
-ストレージクラスタがElement 12.3.1で、VVol機能が有効になっている場合は、Elementソフトウェア12.3.2にアップグレードすることを推奨します。
+ストレージクラスタがElement 12.3.1で、VVol機能が有効になっている場合は、Elementソフトウェア12.3.2をアップグレードする必要があります。
 
 ストレージクラスタがElement 12.3.1で、VVol機能が無効になっている場合、Elementソフトウェア12.3.2へのアップグレードはオプションです。
 
