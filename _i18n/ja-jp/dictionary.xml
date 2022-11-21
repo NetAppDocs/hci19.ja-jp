@@ -6246,7 +6246,6 @@
   <block id="07800d7fa4e084c955b9006d30b6eed1" category="cell">リモートプラグイン</block>
   <block id="b8ffa41d4e492f0fad2f13e29e1762eb" category="cell">8333</block>
   <block id="5b3a5766ccd94c0ef0148e61340c831e" category="cell">Remote vCenter Plug-inサービス</block>
-  <block id="286f53b31c582a023d851a7a85dcda06" category="paragraph">ストレージクラスタがElement 12.3.1で、VVol機能が有効になっている場合は、Elementソフトウェア12.3.2をアップグレードする必要があります。</block>
   <block id="ce02290d452fe7b936543abc774ea33a" category="list-text">管理ノード 12.3.2 には、 Virtual Volumes （ VVol ）機能が有効になっている場合に、ストレージクラスタのセキュリティを軽減する機能が含まれています。ストレージクラスタがすでにElement 12.3にあり、VVol機能が有効になっている場合は、12.3.2にアップグレードする必要があります。</block>
   <block id="a362557c8df01a4a86eda6338af59907" category="admonition">NetApp Hybrid Cloud Control UI を使用して、 H300E 、 H500E 、 H700E の各コンピューティングノードのコンピューティングファームウェアをアップグレードできなくなりました。をアップグレードする場合は、を使用する必要があります <block ref="4d9d1e5487766b88d4d71ed7b5cbc3b9" category="inline-xref-macro-rx"></block> または <block ref="1f3fb96b93183df027058d51b91b7971" category="inline-xref-macro-rx"></block> コンピューティングファームウェアバンドルをマウントする。</block>
   <block id="6b777567daa827d5b0665b94c630539f" category="inline-link">vCenter Plug-in 5.0リリースノート</block>
@@ -6274,18 +6273,13 @@
   <block id="924861571eeb51fd5eb1d806da0f0e5e" category="list-text">* Elementストレージのアップグレード*：</block>
   <block id="b9ad9c0000e5c2b012be9c9ba83b7cff" category="list-text">Element vCenterプラグイン5.0以降では、NetApp Element ソフトウェア12.3.x以降を実行するクラスタが必要です。</block>
   <block id="02738f63a80a594ad3ab131f3a7298f2" category="list-text">Element vCenterプラグイン4.10以前では、NetApp Element ソフトウェア11.3以降を実行するクラスタが必要です。</block>
-  <block id="e8b1bdd38a7601206cf400f05fbdc57d" category="paragraph">vCenter Server 5向けElementプラグインで始まる：0</block>
   <block id="f1b4824619210c84aa04d2783d1f908e" category="image-alt">は、リモートプラグインの登録ユーティリティのUIです</block>
-  <block id="05c0e13a813e930c3eab807f98959379" category="paragraph">vCenter Server 4.10以前のElementプラグイン：</block>
   <block id="cbe647d2b7e55a533fb2f01689441181" category="image-alt">は、ローカルプラグインの登録ユーティリティUIを示しています</block>
-  <block id="23fa7915a24406758b2d7b2b274fe1f3" category="list-text">（社内サーバ/ダークサイトの場合）Element Plug-in for vCenterのバージョンに応じて、プラグインのJSONファイルまたはプラグインのZIPのカスタムURL：</block>
   <block id="1e35767408ad5bd29ecc61c301c556ef" category="list-text">Element Plug-in for vCenter Server 5.0以降、プラグインのJSONファイルのカスタムURL。</block>
   <block id="b9d11c83e937a9ece9e8b7051bc68606" category="admonition">HTTPまたはHTTPSサーバ（ダークサイト）を使用している場合、またはJSONファイル名やネットワーク設定を変更した場合は、「* Custom URL *」を選択してURLをカスタマイズできます。URL をカスタマイズする場合の追加の設定手順については、社内（ダークサイト）の HTTP サーバの vCenter プロパティの変更に関する Element Plug-in for vCenter Server のドキュメントを参照してください。</block>
   <block id="ba85baaa049f62983a89ac7da1647abd" category="list-text">Element Plug-in for vCenter Server 4.10以前の場合は、プラグインのZIPのカスタムURL。</block>
   <block id="d471727ba1fb423986701d5307906d08" category="list-text">vSphere Web Clientの* Shortcuts *タブとサイドパネルにプラグインの拡張ポイントが表示されていることを確認します。</block>
-  <block id="290b380ec7760347344e9055b68f217d" category="paragraph">Element Plug-in for vCenter Server 5.0以降では、NetApp Element リモートプラグイン拡張ポイントは次のとおりです。</block>
   <block id="a00eed84eaa5a9a20d9aaa7f39c5e19e" category="image-alt">は、Element Plug-in 5.10以降のアップグレードまたはインストールが正常に完了したあとのプラグイン拡張ポイントを示しています</block>
-  <block id="7bf63d049a5ff0e7522ac0eb51350e50" category="paragraph">Element Plug-in for vCenter Server 4.10以前では、NetApp Element Configuration and Management拡張ポイントは次のとおりです。</block>
   <block id="85406fb94df2ff523b7477f229b1c9c8" category="image-alt">に、Element Plug-in 4.10以前のアップグレードまたはインストールが正常に完了したあとのプラグイン拡張ポイントを示します</block>
   <block id="b220ec4e47107c76be4a952b590dce4a" category="paragraph">vCenterでNetApp HCCロールを作成して、インストール後にvCenterアセット（コントローラ）またはコンピューティングノード（ノード）を管理ノードに手動で追加したり、既存のコントローラやノードを変更したりする必要があります。</block>
   <block id="89e4c8f92f7c3506781613b3dbd40e89" category="list-text">NetApp Element Plug-in for vCenter Server 5.0以降では、を使用します<block ref="b9ce345290cb228a35dd424c40eebf37" category="inline-link-rx"></block>NetApp SolidFire ストレージクラスタを管理するvCenter Serverごとに、Element Plug-inを別々の管理ノードから登録します（推奨）。</block>
@@ -6293,4 +6287,14 @@
   <block id="ec78c54d60054bc44ae2e26c00313bdb" category="list-text">管理サービス2.22.7には、リモートプラグインが含まれるNetApp Element Plug-in for VMware vCenter Server 5.0が含まれています。Elementプラグインを使用する場合は、ローカルプラグインのサポートを削除するVMwareディレクティブに従ってバージョン5.0にアップグレードする必要があります。<block ref="3eff1b8505d27ff6caa23fbbb1b7b25c" category="inline-link-rx"></block>。プラグインを使用しない場合は、これはオプションのアップグレードです。</block>
   <block id="b142e9d9b67c7c4504bd1ab09fd15db2" category="list-text">各サービスバンドルの主要なサービス、新機能、バグ修正、および対処方法について説明した最新の管理サービスリリースノートについては、を参照してください<block ref="51c56ce961e981301a44342800a6fcbd" category="inline-link-rx"></block></block>
   <block id="9db4acd10c15ec173e6516c347342e25" category="admonition">コントローラサブアセットを追加する場合は、vCenterで新しいNetApp HCCロールを作成する必要があります。この新しい NetApp HCC ロールにより、管理ノードのサービス表示がネットアップ専用のアセットに制限されます。を参照してください <block ref="8fe5279440ee3c239e840ed9b8e10ddd" category="inline-link-macro-rx"></block>。</block>
+  <block id="2e4fe9cef5b49ad23180da86877e63cb" category="cell">コンピューティングノードBMC/IPMI H410およびH600シリーズ</block>
+  <block id="59f1e3a87c5b329f2a5a951d9bf325f8" category="cell">ノードリモート制御へのHTTPS UIおよびAPIアクセス</block>
+  <block id="1381491a5bb8087f95db0601150c5c28" category="cell">ストレージノードBMC/IPMI H410およびH600シリーズ</block>
+  <block id="291dd45cc603b1047e92bf5a13259357" category="cell">RMCPポート。これはIPMI対応のシステムを管理するために必要です。</block>
+  <block id="7b62456477fe482fad0de3c51aabd5d1" category="paragraph">ストレージクラスタがElement 12.3.1で、VVol機能が有効になっている場合は、Elementソフトウェア12.3.2にアップグレードする必要があります。</block>
+  <block id="3ef00ef1af91bf9fe0b72f4052a67f59" category="list-text">Element Plug-in for vCenter Server 5.0のvCenter Plug-inの登録ページ：</block>
+  <block id="1875d143de1e9be70dc9e780b41377fe" category="list-text">Element Plug-in for vCenter Server 4.10以前のvCenter Plug-inの登録ページ：</block>
+  <block id="b8b146fd1e1ecdf074536a02bfe40871" category="list-text">（社内サーバ/ダークサイトの場合）Element Plug-in for vCenterのバージョンに応じて、プラグインのJSONファイルまたはプラグインのZIPのカスタムURL：</block>
+  <block id="1993643c12bb4ee547f04d8d85f8c4bf" category="list-text">Element Plug-in for vCenter Server 5.0以降では、NetApp Element リモートプラグイン拡張ポイントが表示されます。</block>
+  <block id="1c63b3cd9a6d3bdf8b9b31aca68672d7" category="list-text">Element Plug-in for vCenter Server 4.10以前では、NetApp Element Configuration and Management拡張ポイントが表示されます。</block>
 </blocks>

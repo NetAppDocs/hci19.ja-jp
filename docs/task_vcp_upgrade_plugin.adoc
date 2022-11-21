@@ -90,16 +90,15 @@ image::vcp_registration_utility_ui_qossioc.png[は、プラグインの登録ユ
 
 . vCenter Plug-in Registration * を選択します。
 +
-vCenter Server 5向けElementプラグインで始まる：0
-
+** Element Plug-in for vCenter Server 5.0のvCenter Plug-inの登録ページ：
 +
 image::vcp_remote_plugin_registration_ui.png[は、リモートプラグインの登録ユーティリティのUIです]
 
-+
-vCenter Server 4.10以前のElementプラグイン：
-
+** Element Plug-in for vCenter Server 4.10以前のvCenter Plug-inの登録ページ：
 +
 image::vcp_registration_utility_ui.png[は、ローカルプラグインの登録ユーティリティUIを示しています]
+
+
 
 . Manage vCenter Plug-in * で、 * Update Plug-in * を選択します。
 . 次の情報を確認し、必要に応じて更新します。
@@ -139,14 +138,11 @@ NOTE: この操作により、新しいデータベースが作成され、 vSph
 . vSphere Web Client で、タスクモニタで次のタスクが完了していることを確認します。「ダウンロードプラグイン」および「デプロイプラグイン」。
 . vSphere Web Clientの* Shortcuts *タブとサイドパネルにプラグインの拡張ポイントが表示されていることを確認します。
 +
-Element Plug-in for vCenter Server 5.0以降では、NetApp Element リモートプラグイン拡張ポイントは次のとおりです。
-
+** Element Plug-in for vCenter Server 5.0以降では、NetApp Element リモートプラグイン拡張ポイントが表示されます。
 +
 image::vcp_remote_plugin_icons_home_page.png[は、Element Plug-in 5.10以降のアップグレードまたはインストールが正常に完了したあとのプラグイン拡張ポイントを示しています]
 
-+
-Element Plug-in for vCenter Server 4.10以前では、NetApp Element Configuration and Management拡張ポイントは次のとおりです。
-
+** Element Plug-in for vCenter Server 4.10以前では、NetApp Element Configuration and Management拡張ポイントが表示されます。
 +
 image::vcp_shortcuts_page_accessing_plugin.png[に、Element Plug-in 4.10以前のアップグレードまたはインストールが正常に完了したあとのプラグイン拡張ポイントを示します]
 
@@ -158,17 +154,20 @@ vCenter Plug-in のアイコンが表示されない場合は、を参照して�
 VMware vCenter Server 6.7U1を使用してNetApp Element Plug-in for vCenter Server 4.8以降にアップグレードしたあとに、ストレージクラスタが表示されないか、NetApp Element 構成の「クラスタ」および「QoSSIOC設定*」のセクションにサーバエラーが表示される場合は、を参照してください link:https://docs.netapp.com/us-en/vcp/vcp_reference_troubleshoot_vcp.html#error_vcp48_67u1["vCenter Server 向け Element プラグイン"^] これらのエラーのトラブルシューティングに関するドキュメント。
 
 ====
+
+
 . プラグインの * NetApp Element 構成 * 拡張ポイントの * バージョン情報 * タブでバージョンの変更を確認します。
 +
 次のバージョンの詳細またはより新しいバージョンの詳細が表示されます。
 
-
-
++
 [listing]
 ----
 NetApp Element Plug-in Version: 5.0
 NetApp Element Plug-in Build Number: 37
 ----
+
+
 
 NOTE: vCenter Plug-in には、オンラインヘルプが用意されています。ヘルプの最新のコンテンツが読み込まれるようにするために、プラグインをアップグレードしたあとにブラウザキャッシュをクリアしてください。
 

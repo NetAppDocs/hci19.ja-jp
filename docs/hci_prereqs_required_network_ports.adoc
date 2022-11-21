@@ -212,13 +212,25 @@ image::network_ports.PNG[ポートの接続を確認してください]
 | システム管理者の PC | ストレージノードの MIP | 442 | NetApp Deployment Engine でのストレージノードへの HTTPS UI および API アクセス（ NetApp HCI のみ）の設定と導入の監視 
 
 
+| システム管理者の PC | コンピューティングノードBMC/IPMI H410およびH600シリーズ | 443 | ノードリモート制御へのHTTPS UIおよびAPIアクセス 
+
+
 | システム管理者の PC | 管理ノード | 443 | 管理ノードへの HTTPS UI および API アクセス 
 
 
 | システム管理者の PC | ストレージクラスタの MVIP | 443 | ストレージクラスタへの HTTPS UI および API アクセス 
 
 
+| システム管理者の PC | ストレージノードBMC/IPMI H410およびH600シリーズ | 443 | ノードリモート制御へのHTTPS UIおよびAPIアクセス 
+
+
 | システム管理者の PC | ストレージノードの MIP | 443 | HTTPS によるストレージクラスタの作成、ストレージクラスタへの導入後の UI アクセス 
+
+
+| システム管理者の PC | コンピューティングノードBMC/IPMI H410およびH600シリーズ | 623 UDP | RMCPポート。これはIPMI対応のシステムを管理するために必要です。 
+
+
+| システム管理者の PC | ストレージノードBMC/IPMI H410およびH600シリーズ | 623 UDP | RMCPポート。これはIPMI対応のシステムを管理するために必要です。 
 
 
 | システム管理者の PC | 監視ノード | 8080 です | 監視ノードのノード Web UI 
@@ -238,7 +250,8 @@ image::network_ports.PNG[ポートの接続を確認してください]
 
 | vCenter Server の各サービスを提供 | 管理ノード | ポート 1 | vCenter Plug-in の登録。登録が完了したら、ポートを閉じることができます。 
 |===
-[discrete]
+
+
 == 詳細については、こちらをご覧ください
 
 * https://www.netapp.com/hybrid-cloud/hci-documentation/["NetApp HCI のリソースページ"^]
