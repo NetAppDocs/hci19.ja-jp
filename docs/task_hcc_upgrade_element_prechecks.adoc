@@ -43,16 +43,17 @@ NOTE: EULAに同意すると、以後のすべての更新についてそのEULA
 
 
 
+.健全性チェックのオプション
 健全性チェックは、 NetApp Hybrid Cloud Control （ HCC ） UI 、 HCC API 、または HealthTools スイートを使用して実行できます。
 
-*  NetApp Hybrid Cloud Control to run Element storage health checks prior to upgrading storage （推奨方法）
-*  API to run Element storage health checks prior to upgrading storage
-*  HealthTools to run Element storage health checks prior to upgrading storage
+* <<NetApp Hybrid Cloud Control を使用して Element ストレージの健全性を実行します ストレージをアップグレードする前にチェックします>> （推奨方法）
+* <<API を使用して、実行前に Element ストレージの健全性チェックを実行 ストレージをアップグレードする>>
+* <<前に HealthTools を使用して Element ストレージの健全性チェックを実行してください ストレージをアップグレードする>>
 
 
 サービスで実行されるストレージ健全性チェックの詳細についても確認できます。
 
-*  health checks made by the service
+* <<サービスによるストレージの健全性チェック>>
 
 
 
@@ -223,6 +224,7 @@ https://<ManagementNodeIP>/storage/1/
 
 管理ノードが外部に接続されていないダークサイトにある場合、アップグレードの準備状況を確認するには、ダウンロードした「 metadats.json 」ファイルが必要です link:task_upgrade_element_latest_healthtools.html["HealthTools のアップグレード"] を実行してください。
 
+.このタスクについて
 ここでは、次のいずれかの結果をもたらすアップグレードチェックに対処する方法について説明します。
 
 * 「 fupgradecheck 」コマンドを実行すると、正常に実行されます。クラスタをアップグレードする準備は完了しています。

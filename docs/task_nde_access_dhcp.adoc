@@ -28,6 +28,7 @@ IPv4 の設定を DHCP から自動的に取得するようにサーバを構成
 
 NOTE: NetApp HCI を適切に導入するためには、環境内のすべてのノードの IPv4 アドレスを DHCP から取得したアドレスか自動で設定したアドレスのどちらかにする必要があります（ IPv4 アドレスの割り当て方法を混在させることはできません）。
 
+.このタスクについて
 DHCP をストレージネットワーク（ Bond10G インターフェイス）にのみ使用している場合は、リンクに記載されている手順を使用してください。 link:task_nde_access_no_dhcp.html["DHCP を使用していない環境では、 NetApp Deployment Engine にアクセスします"] NetApp Deployment Engine にアクセスします。
 
 .手順

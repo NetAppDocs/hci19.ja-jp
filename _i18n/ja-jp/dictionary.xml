@@ -134,7 +134,6 @@
   <block id="4890b06e0bef2ccd30ddebf19fa9e652" category="summary">REST API を使用して、管理 ndoe で実行されているサービスからログを取得できます。</block>
   <block id="a5790b06c6321c773eca064d8f8b323a" category="doc">管理サービスからログを取得しています</block>
   <block id="7eada9b3aeba75afea1bb6e56efd98a1" category="paragraph">REST API を使用して、管理ノードで実行されているサービスからログを取得できます。すべてのパブリックサービスからログを取得したり、特定のサービスを指定したりできます。また、クエリパラメータを使用して、取得する内容を細かく絞り込むこともできます。</block>
-  <block id="a711863513c11f3a6d86294acc7be0ba" category="list-title">必要なもの</block>
   <block id="fc78a25a814125bdaeb01b28be02a19d" category="list-text">クラスタで NetApp Element ソフトウェア 11.3 以降を実行している必要があります。</block>
   <block id="d95dde96d5f37c05bba91d1bff6d1a55" category="list-text">バージョン 11.3 以降を実行する管理ノードを導入しておきます。</block>
   <block id="f3a29486bed19a90f2da6d007818b427" category="list-title">手順</block>
@@ -492,7 +491,6 @@
   <block id="bfc5232cd54db21b7879b3adc6550835" category="paragraph">Hybrid Cloud Control のダッシュボードでアラートを確認して対応することができます。</block>
   <block id="92f931e19caf8af4e3a31a82b06ccabd" category="summary">NetApp HCI ノードにダウンロードして適用できるファームウェアパッケージのリリースノートへのリンクを入手できます。</block>
   <block id="7a02f75af06b21c7f1cfccabab836899" category="doc">Compute Firmware Bundle 2.76 リリースノート</block>
-  <block id="5fef629b836b60819e0c0ce49cd2b9d7" category="section-title">新機能</block>
   <block id="5d97960a6eafabed18140433c99665c6" category="paragraph">バージョン 2.76 には一般的なバグ修正が含まれています。</block>
   <block id="692731d8e937243e33f91c14df51cf3f" category="section-title">ファームウェアコンポーネントが更新されました</block>
   <block id="0a07252a3e464951db5264e4d4279d52" category="paragraph">このファームウェアパッケージには、次のファームウェアバージョンが含まれています。これらのファームウェアバージョンは、太字で更新されています。</block>
@@ -1769,7 +1767,6 @@
   <block id="0e68b38eaff7123dcc12ce395a147a48" category="summary">NetApp HCI は、ストレージリソースとコンピューティングリソースの両方を提供します。これらのリソースを組み合わせて、 NetApp Element ソフトウェアの機能を基盤とする VMware vSphere 環境を構築します。</block>
   <block id="2bfee064de23abb29a29ad16b90c3080" category="doc">NetApp HCI の設定および管理に関するドキュメント</block>
   <block id="2d2319a467144bf3a0e5baabca9ea680" category="paragraph">NetApp Element Plug-in for vCenter Server を使用して、システムのアップグレード、拡張、監視を行うことができます。また、 NetApp HCI リソースを管理することもできます。</block>
-  <block id="1fde0727b387439572ade83eecff4f68" category="section-title">新機能をご紹介します</block>
   <block id="6b51db420393cbff0d9f09dfeb229ecb" category="inline-link-macro">NetApp HCI の新機能</block>
   <block id="6709fa8e92b382825b811cdae7781d0f" category="list-text"><block ref="6709fa8e92b382825b811cdae7781d0f" category="inline-link-macro-rx"></block></block>
   <block id="858ea7ae6467e65992f082751f2c1cdf" category="inline-link">NetApp Element ソフトウェアの新機能</block>
@@ -2101,7 +2098,6 @@
   <block id="ae4ac9937fe2124bac1e8af524c0bdc6" category="list-text">[ * アクション * ] で、 [ * メンテナンスモードを有効にする * ] を選択します。</block>
   <block id="b66e6d3d140b3a6b8af0112f6c915150" category="paragraph">メンテナンスモード * を有効にしている間は、選択したノードおよび同じクラスタ上の他のすべてのノードでメンテナンスモードの操作を実行することはできません。</block>
   <block id="62ae267478305435d23b7df0f401bb38" category="paragraph">メンテナンスモードを有効にする * が完了すると、 * Node Status * 列にレンチアイコンと、メンテナンスモードになっているノードの「 * Maintenance Mode * 」というテキストが表示されます。</block>
-  <block id="093586b1f3ef758c1cea8d476b072359" category="section-title">メンテナンスモードを無効にします</block>
   <block id="a1572d68c738e66df4f2eba84768fe13" category="paragraph">ノードがメンテナンスモードになると、このノードで * メンテナンスモードを無効にする * アクションを使用できるようになります。メンテナンス中のノードでメンテナンスモードが無効になるまで、他のノードに対する処理は実行できません。</block>
   <block id="6351ccc6ed60aa5dd025a0b847793a94" category="list-text">保守モードのノードの場合は、 * アクション * で * メンテナンスモードを無効にする * を選択します。</block>
   <block id="fc081ac4444d21e696896e77aedce790" category="paragraph">メンテナンスモード * を無効にしている間は、選択したノードおよび同じクラスタ上の他のすべてのノードでメンテナンスモードの操作を実行することはできません。</block>
@@ -3640,7 +3636,6 @@
   <block id="ee04baa2ee228c73a80bcb76420c3f83" category="admonition">バージョンを確認するには、管理ノードにログインし、ログインバナーに表示される Element のバージョン番号を確認します。11.3 を使用していない場合は、を参照してください <block ref="298642ffea6db0968793883313b436ff" category="inline-link-macro-rx"></block>。</block>
   <block id="df3748edc080e7a8ed49863460584cdd" category="paragraph">NetApp Hybrid Cloud Control を使用したアップグレードは、それよりも前のバージョンのサービスバンドルでは利用できません。</block>
   <block id="ced99676ffdce11db0cf7ce2a4a812b8" category="list-text">すべてのノードのシステム時間が同期され、 NTP がストレージクラスタとノードに対して正しく設定されていることを確認しておきます。各ノードには、ノード Web UI （「 https://[IP address 」： 442 ）に DNS ネームサーバを設定する必要があります。時刻のずれに関連する未解決のクラスタ障害はありません。</block>
-  <block id="6ea7f8d4483b20144d2c82f1ed99c07a" category="section-title">システムのアップグレード順序</block>
   <block id="47f1925137d1bc975fa326ab8c3fdaba" category="paragraph">NetApp HCI システムをアップグレードするには、次の順序で操作します。</block>
   <block id="524813e84d210a04a3c005022becca08" category="inline-link-macro">Hybrid Cloud Control から管理サービスを更新します</block>
   <block id="c43409e402c491faff614694ff49b45b" category="list-text"><block ref="d96c5e393dc7f7cfcba5644a67a6ff8a" category="inline-link-macro-rx"></block>。</block>
@@ -4819,7 +4814,6 @@
   <block id="f4ad5fe6377e47eb0f1d3efd91917e13" category="section-title">vCenter Server を使用して導入を確認します</block>
   <block id="6c8f5781f8959d00ff258798ba1d4a06" category="paragraph">vSphere Client には、 3 台の仮想マシンを含むランチ元管理クラスタが表示されます。</block>
   <block id="6d5e0d8752a1244db9529c72a9402187" category="admonition">導入が完了したら、 Rancher サーバ仮想マシンクラスタの設定を変更したり、仮想マシンを削除したりしないでください。NetApp HCI の Rancher は、展開された RKE 管理クラスタの設定に依存して、正常に機能します。</block>
-  <block id="3f297ef15cde0668e93b35f2752fd4fd" category="section-title">次の手順</block>
   <block id="9ce36cf8bc97284a665ac4d465211731" category="inline-link-macro">導入後のタスクを実行</block>
   <block id="0d15f5317410136724749d58832233cd" category="list-text"><block ref="0d15f5317410136724749d58832233cd" category="inline-link-macro-rx"></block></block>
   <block id="50488dc9ca0f950ef434f471ee1a1ea1" category="list-text"><block ref="50488dc9ca0f950ef434f471ee1a1ea1" category="inline-link-macro-rx"></block></block>
@@ -6297,4 +6291,26 @@
   <block id="b8b146fd1e1ecdf074536a02bfe40871" category="list-text">（社内サーバ/ダークサイトの場合）Element Plug-in for vCenterのバージョンに応じて、プラグインのJSONファイルまたはプラグインのZIPのカスタムURL：</block>
   <block id="1993643c12bb4ee547f04d8d85f8c4bf" category="list-text">Element Plug-in for vCenter Server 5.0以降では、NetApp Element リモートプラグイン拡張ポイントが表示されます。</block>
   <block id="1c63b3cd9a6d3bdf8b9b31aca68672d7" category="list-text">Element Plug-in for vCenter Server 4.10以前では、NetApp Element Configuration and Management拡張ポイントが表示されます。</block>
+  <block id="d59db7846bd10b6d60d21543df9faa9e" category="list-title">必要なもの</block>
+  <block id="625cc9b8ccc34496dc2b3fcffb7e384a" category="paragraph-title">手順の概要</block>
+  <block id="6c7cffebdb1404e3fc10effbd8df3e0b" category="paragraph-title">監視ノードを再導入する必要があるタイミング</block>
+  <block id="91770f038cd944a1d3b9b347edeb2b10" category="section-title">新機能</block>
+  <block id="64916198004d1ee19b1b50002f51f1a8" category="paragraph-title">アップグレードオプション</block>
+  <block id="fde2050933cb4096508de5d1d771786e" category="paragraph-title">交換オプション</block>
+  <block id="8fe5279440ee3c239e840ed9b8e10ddd" category="list-text"><block ref="8fe5279440ee3c239e840ed9b8e10ddd" category="inline-link-macro-rx"></block></block>
+  <block id="01e12de62fa77fda2815719aed8ff892" category="paragraph-title">次のステップ</block>
+  <block id="e7be2be07c433bfd89cb0a290a7015a0" category="paragraph-title">設定の最大数</block>
+  <block id="2cd70ba1e2d0b294626ea7f96d25a07f" category="paragraph-title">ログ収集オプション</block>
+  <block id="e5181fceb27eb67cd4791c26a3fa9076" category="paragraph-title">ファームウェアのアップグレードの自動化を始めましょう</block>
+  <block id="492e5546e60705134bff8d7f80511a8d" category="section-title">最新情報をご確認ください</block>
+  <block id="6a31058d1e6208d43e0d620fb4953c23" category="paragraph-title">ストレージクラスタのアセット管理オプション</block>
+  <block id="50f33d14f129e4548c1c270fd6725a78" category="paragraph-title">設定オプション</block>
+  <block id="bd965e38a0c9cf27aa1bde099308e23f" category="paragraph-title">完了後</block>
+  <block id="891a52ee80600fd58bac60927df7a3a9" category="section-title">[[enable_main_mode]]メンテナンスモードを有効にします</block>
+  <block id="27404255e546058b4a4837fb07e90bbf" category="section-title">[[disable_main_mode]]メンテナンスモードを無効にします</block>
+  <block id="a31b6eafc73ca0db90a0d96e6fb9dc93" category="paragraph-title">健全性チェックのオプション</block>
+  <block id="df5820ca7f238b48987ff74db1271e4a" category="paragraph-title">オプションを更新します</block>
+  <block id="d0ce6a73cc0e7aedcf58ba0e0c96c737" category="paragraph-title">一般的な問題のトラブルシューティング</block>
+  <block id="58eaebf972358f1cf03d386a4ade1a0f" category="section-title">次の手順</block>
+  <block id="18526b4be693f8e5ed12fb2721f65eea" category="section-title">[sys_upgrade_seq]システムアップグレードシーケンス</block>
 </blocks>

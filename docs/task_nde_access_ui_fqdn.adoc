@@ -28,11 +28,11 @@ Fully Qualified Domain Name （ FQDN ；完全修飾ドメイン名）を使用�
 
 NetApp Hybrid Cloud Control と REST API を使用して、 FQDN Web UI アクセスを設定または削除できます。正しく設定されていない FQDN をトラブルシューティングすることもできます。
 
-*  FQDN web UI access using NetApp Hybrid Cloud Control
-*  FQDN web UI access using the REST API
-*  FQDN web UI access using NetApp Hybrid Cloud Control
-*  FQDN web UI access using the REST API
-* 
+* <<NetApp Hybrid Cloud Control を使用して、 FQDN Web UI アクセスを設定します>>
+* <<REST API を使用して FQDN Web UI アクセスを設定します>>
+* <<NetApp Hybrid Cloud Control を使用して、 FQDN Web UI アクセスを削除します>>
+* <<REST API を使用して FQDN Web UI アクセスを削除します>>
+* <<トラブルシューティング>>
 
 
 

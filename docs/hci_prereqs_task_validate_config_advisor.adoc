@@ -48,11 +48,13 @@ https://mysupport.netapp.com/site/tools/tool-eula/5ddb829ebd393e00015179b2["ネ�
 
 Active IQ Config Advisor はブラウザウィンドウで実行され、ネットワークと環境に関する情報を収集します。 NetApp HCI の導入に支障をきたす可能性のあるネットワークや設定の問題を解決するためのレポートを生成できます。
 
+.作業を開始する前に
 管理ネットワーク、 VMware vCenter Server のネットワークにアクセスできるデバイス（既存の VMware 環境に参加する場合）、および NetApp HCI に使用するスイッチに Active IQ Config Advisor をインストールしておきます。
 
 
 NOTE: Mellanox スイッチを使用しており、ネットアッププロフェッショナルサービスを導入の一環として設定する場合は、スイッチの情報を指定する必要はありません。
 
+.このタスクについて
 Active IQ Config Advisor は、情報収集のために読み取り専用チェックのみを実行します。コレクションの一部として変更される設定はありません。
 
 .手順

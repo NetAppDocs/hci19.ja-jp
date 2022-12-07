@@ -17,10 +17,10 @@ keywords: netapp, hci, initiator, storage, element, access group
 
 
 .オプション（ Options ）
-*  an initiator
-*  initiators to a volume access group
-*  an initiator alias
-*  initiators
+* <<イニシエータを作成します>>
+* <<ボリュームアクセスグループにイニシエータを追加します>>
+* <<イニシエータエイリアスを変更します>>
+* <<イニシエータを削除する>>
 
 
 
@@ -29,6 +29,7 @@ keywords: netapp, hci, initiator, storage, element, access group
 
 iSCSI イニシエータまたは Fibre Channel イニシエータを作成し、オプションでエイリアスを割り当てることができます。
 
+.このタスクについて
 イニシエータ IQN の有効な形式は、「 iqn.yyyy-mm 」です。 y と m は数字で、続けて任意の文字列を指定します。使用できる文字は、数字、小文字のアルファベット、ピリオド（ ` ）、コロン（ ` ）、またはダッシュ（「 - 」）だけです。形式の例を次に示します。
 
 [listing]

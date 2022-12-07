@@ -22,8 +22,8 @@ keywords: netapp, hci, api, REST, remove, Rancher, redeploy
 TIP: ユーザクラスタを保持しなければならない場合があります。これらを保持しておくと、後で別の Rancher 実装に移行できます。ユーザクラスタを削除する場合は、最初に rancher サーバを削除する前に、削除する必要があります。削除しないと、 rancher サーバの削除後にユーザクラスタを削除するのが難しくなります。
 
 .オプション（ Options ）
-*  Rancher on NetApp HCI using NetApp Hybrid Cloud Control （推奨）
-*  Rancher on NetApp HCI using the REST API
+* <<ネットアップのハイブリッドクラウドコントロールを使用して NetApp HCI のランチャを削除>> （推奨）
+* <<REST API を使用して NetApp HCI のランチツールを削除します>>
 
 
 

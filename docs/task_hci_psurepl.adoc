@@ -23,6 +23,7 @@ keywords: netapp, hci, psu, replace power supply, H410S, H610S, H410C, H610C, H6
 * 静電放電（ ESD ）リストバンドを装着するか、静電気防止処置を施しておきます。
 
 
+.このタスクについて
 交換手順は次のノードモデルに該当します。
 
 * 2 ラックユニット（ 2U ）、 4 ノード NetApp HCI シャーシ

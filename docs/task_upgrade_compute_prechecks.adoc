@@ -39,15 +39,16 @@ NOTE: EULAに同意すると、以後のすべての更新についてそのEULA
 
 
 
+.健全性チェックのオプション
 健全性チェックは、NetApp Hybrid Cloud ControlのUIまたはNetApp Hybrid Cloud ControlのAPIを使用して実行できます。
 
-*  NetApp Hybrid Cloud Control to run compute node health checks prior to upgrading firmware （推奨方法）
-*  API to run compute node health checks prior to upgrading firmware
+* <<NetApp Hybrid Cloud Control を使用して、コンピューティングノードの健全性を実行します ファームウェアをアップグレードする前にチェックします>> （推奨方法）
+* <<前にコンピューティングノードの健全性チェックを実行するには、 API を使用します ファームウェアをアップグレード中です>>
 
 
 また、サービスで実行されるコンピューティングノードの健全性チェックの詳細も確認できます。
 
-*  node health checks made by the service
+* <<コンピューティングノードの健全性チェックはサービスによる機能で>>
 
 
 

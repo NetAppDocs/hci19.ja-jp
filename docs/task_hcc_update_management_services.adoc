@@ -29,6 +29,7 @@ Element 11.3 以降の管理ノードリリースでは、個々のサービス�
 
 
 ====
+.必要なもの
 管理サービス2.20.69以降では、NetApp Hybrid Cloud ControlのUIまたはAPIを使用して管理サービスをアップグレードする前に、エンドユーザライセンス契約（EULA）に同意して保存する必要があります。
 
 . Webブラウザで管理ノードのIPアドレスを開きます。
@@ -46,11 +47,12 @@ NOTE: EULAに同意すると、以後のすべての更新についてそのEULA
 
 
 
+.オプションを更新します
 管理サービスは、 NetApp Hybrid Cloud Control の UI または管理ノードの REST API を使用して更新できます。
 
-*  management services using Hybrid Cloud Control （推奨方法）
-*  management services using the management node API
-*  management services using the management node API for dark sites
+* <<Hybrid Cloud Control を使用して管理サービスを更新します>> （推奨方法）
+* <<管理ノード API を使用して管理サービスを更新する>>
+* <<ダーク用の管理ノード API を使用して管理サービスを更新します サイト>>
 
 
 

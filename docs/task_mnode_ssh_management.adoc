@@ -32,13 +32,13 @@ REST API を使用して、管理ノード（ mNode ）の SSH 機能の無効�
 
 
 .オプション（ Options ）
-*  or enable the SSH capability on the management node using NetApp Hybrid Cloud Control UI
+* <<NetApp Hybrid Cloud ControlのUIを使用して、管理ノードのSSH機能を無効または有効にします>>
 
 
 完了後、次のいずれかのタスクを実行できます link:task_mnode_api_get_authorizationtouse.html["認証"]：
 
-*  or enable the SSH capability on the management node using APIs
-*  status of the SSH capability on the management node using APIs
+* <<APIを使用して、管理ノードのSSH機能を無効または有効にします>>
+* <<APIを使用して、管理ノードのSSH機能のステータスを確認します>>
 
 
 
@@ -62,6 +62,7 @@ NOTE: ストレージクラスタに対してSSHを使用してサポートア�
 
 管理ノードで SSH 機能を無効にしたり、再度有効にしたりできます。提供する SSH 機能 link:task_mnode_enable_remote_support_connections.html["ネットアップサポートの Remote Support Tunnel （ RST ）セッションアクセス"] 管理サービス 2.18 以降を実行する管理ノードでは、はデフォルトで無効になっています。SSH を無効にしても、管理ノードへの既存の SSH クライアントセッションは終了せず、切断もされません。SSH を無効にしたあとで再度有効にすることを選択した場合は、同じ API を使用して再度有効にすることができます。
 
+.API コマンド
 管理サービス 2.18 以降の場合：
 
 [listing]
@@ -107,6 +108,7 @@ https://<ManagementNodeIP>/mnode/
 
 管理ノードで SSH 機能が有効になっているかどうかは、管理ノードのサービス API を使用して確認できます。管理サービス 2.18 以降を実行する管理ノードでは、 SSH はデフォルトで無効になっています。
 
+.API コマンド
 管理サービス 2.18 以降の場合：
 
 [listing]

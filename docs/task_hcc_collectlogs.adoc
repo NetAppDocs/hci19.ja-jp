@@ -21,10 +21,11 @@ NetApp HCI または SolidFire オールフラッシュストレージの設置�
 * バージョン 11.3 以降を実行する管理ノードを導入しておきます。
 
 
+.ログ収集オプション
 次のいずれかのオプションを選択します。
 
-*  NetApp Hybrid Cloud Control to collect logs
-*  the REST API to collect logs
+* <<NetApp Hybrid Cloud Control を使用してログを収集します>>
+* <<REST API を使用してログを収集する>>
 
 
 

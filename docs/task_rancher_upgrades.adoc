@@ -46,10 +46,11 @@ NOTE: EULAに同意すると、以後のすべての更新についてそのEULA
 
 
 
+.アップグレードオプション
 次のいずれかのアップグレードプロセスを選択します。
 
-*  NetApp Hybrid Cloud Control UI to upgrade a Rancher deployment
-*  NetApp Hybrid Cloud Control API to upgrade a Rancher deployment
+* <<NetApp Hybrid Cloud Control の UI を使用してランチャをアップグレード 導入>>
+* <<NetApp Hybrid Cloud Control API を使用してランチャをアップグレード 導入>>
 
 
 
@@ -107,9 +108,9 @@ API を使用して、 Rancher 展開内の次のコンポーネントをアッ�
 任意の自動化ツールを使用して、管理ノードで使用可能な API または REST API UI を実行できます。
 
 .オプション（ Options ）
-*  Rancher Server
-*  RKE
-*  node OS security updates
+* <<Rancher サーバをアップグレードします>>
+* <<RKE をアップグレードします>>
+* <<ノード OS のセキュリティ更新を適用>>
 +
 
 NOTE: ノード OS の場合、セキュリティパッチの無人アップグレードは日単位で実行されますが、ノードは自動的にはリブートされません。アップグレードを適用すると、各ノードをリブートしてセキュリティ更新を有効にできます。

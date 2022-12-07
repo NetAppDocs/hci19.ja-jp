@@ -16,15 +16,17 @@ keywords: netapp, hci, BMC, connection, credentials, monitor
 [role="lead"]
 ベースボード管理コントローラ（ BMC ）の管理者クレデンシャルは、各コンピューティングノードの NetApp Hybrid Cloud Control で変更できます。BMC ファームウェアをアップグレードする前に資格情報を変更したり、 NetApp Hybrid Cloud Control に表示される「 Hardware ID not available 」（ハードウェア ID が利用できません）または「 Unable to detect 」（検出できません）のエラーを解決したりする必要があります。
 
+.必要なもの
 BMC クレデンシャルを変更するためのクラスタ管理者の権限。
 
 
 NOTE: ヘルスチェック時に BMC クレデンシャルを設定した場合、変更が * Nodes * ページに反映されるまでに最大 2 分かかることがあります。
 
+.オプション（ Options ）
 BMC クレデンシャルを変更するには、次のいずれかのオプションを選択します。
 
-*  NetApp Hybrid Cloud Control to edit BMC information
-*  the REST API to edit BMC information
+* <<NetApp Hybrid Cloud Control を使用して BMC の情報を編集します>>
+* <<BMC の情報を編集するには、 REST API を使用します>>
 
 
 

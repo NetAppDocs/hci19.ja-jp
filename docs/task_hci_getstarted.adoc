@@ -18,14 +18,14 @@ keywords: netapp, hci, install, deploy, get started
 
 プロセスの概要を以下に示します。
 
-*  for installation
-*  network readiness with NetApp Active IQ Config Advisor
-*  with your NetApp team
-*  NetApp HCI hardware
-*  optional tasks after installing hardware
-*  NetApp HCI using the NetApp Deployment Engine (NDE)
-*  NetApp HCI using the vCenter Plug-in
-*  or upgrade NetApp HCI with the Hybrid Cloud Control
+* <<設置を準備>>
+* <<NetApp Active IQ Config Advisor でネットワークの準備状況を検証>>
+* <<ネットアップチームと連携>>
+* <<NetApp HCI ハードウェアを設置>>
+* <<ハードウェアの設置後にオプションの作業を実行します>>
+* <<NetApp Deployment Engine （ NDE ）を使用した NetApp HCI の導入>>
+* <<vCenter Plug-in を使用して NetApp HCI を管理します>>
+* <<Hybrid Cloud Control を使用して NetApp HCI を監視またはアップグレードします>>
 
 
 

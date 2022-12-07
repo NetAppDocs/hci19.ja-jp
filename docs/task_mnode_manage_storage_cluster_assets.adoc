@@ -21,12 +21,13 @@ keywords: netapp, mnode, management node, rest api, hci, assets
 * バージョン 11.3 以降を実行する管理ノードを導入しておきます。
 
 
+.ストレージクラスタのアセット管理オプション
 次のいずれかのオプションを選択します。
 
-*  the installation ID and cluster ID of a storage cluster asset
-*  a new storage cluster asset
-*  the stored credentials for a storage cluster asset
-*  a storage cluster asset
+* <<ストレージのインストール ID とクラスタ ID を取得します クラスタアセット>>
+* <<新しいストレージクラスタアセットを追加します>>
+* <<ストレージクラスタアセットに保存されているクレデンシャルを編集します>>
+* <<ストレージクラスタアセットを削除します>>
 
 
 
@@ -102,7 +103,7 @@ API は、このインストール環境内のすべての既知のストレー�
 REST API を使用して、管理ノードインベントリに新しいストレージクラスタアセットを追加できます。新しいストレージクラスタアセットを追加すると、そのアセットが管理ノードに自動的に登録されます。
 
 .必要なもの
-* をコピーしました  the installation ID and cluster ID of a storage cluster asset,ストレージクラスタ ID とインストール ID をクリックします。
+* をコピーしました <<ストレージのインストール ID とクラスタ ID を取得します クラスタアセット,ストレージクラスタ ID とインストール ID>> をクリックします。
 * 複数のストレージノードを追加する場合は、の制限を確認しておく必要があります link:concept_hci_clusters.html#authoritative-storage-clusters["権限のあるクラスタです"] 複数のストレージクラスタをサポート
 +
 
@@ -167,7 +168,7 @@ API は、新しく追加したストレージクラスタアセットの名前�
 管理ノードがストレージクラスタへのログインに使用する、保存されているクレデンシャルを編集できます。選択するユーザにはクラスタ管理者アクセスが必要です。
 
 
-NOTE: の手順に従っていることを確認します  the installation ID and cluster ID of a storage cluster asset 続行する前に。
+NOTE: の手順に従っていることを確認します <<ストレージのインストール ID とクラスタ ID を取得します クラスタアセット>> 続行する前に。
 
 .手順
 . 管理ノードの IP アドレスに続けて「 /storage/1/` 」を入力して、ストレージサービスの REST API UI にアクセスします。
@@ -216,7 +217,7 @@ https://<ManagementNodeIP>/storage/1/
 ストレージクラスタが使用停止になっている場合は、ストレージクラスタアセットを削除できます。ストレージクラスタのアセットを削除すると、管理ノードから自動的に登録解除されます。
 
 
-NOTE: の手順に従っていることを確認します  the installation ID and cluster ID of a storage cluster asset 続行する前に。
+NOTE: の手順に従っていることを確認します <<ストレージのインストール ID とクラスタ ID を取得します クラスタアセット>> 続行する前に。
 
 .手順
 . 管理ノードの IP アドレスに続けて「 /storage/1/` 」を入力して、ストレージサービスの REST API UI にアクセスします。

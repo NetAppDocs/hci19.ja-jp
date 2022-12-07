@@ -24,6 +24,7 @@ keywords: netapp, hci, netapp deployment engine, deployment, engine, deploy, acc
 * NetApp HCI ネットワークで DHCP が有効になっておらず、 NetApp HCI ノードが DHCP サーバから IP アドレスを取得していません。注： NetApp Deployment Engine を使用してシステムを導入する前に手動で割り当てる IP アドレスはすべて一時的な IP アドレスであり、再利用することはできません。IP アドレスを手動で割り当てる場合は、最終的な導入時に割り当て可能な、未使用かつ永続的な IP アドレスのセットをもう 1 つ確保しておく必要があります。
 
 
+.このタスクについて
 この構成では、導入時にコンピューティングノードとストレージノードが静的 IPv4 アドレスを使用して他のノードを検出して通信を確立します。この構成は推奨されません。
 
 .手順

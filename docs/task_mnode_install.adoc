@@ -50,17 +50,18 @@ NOTE: IPv6 のサポートが必要な場合は、管理ノード 11.1 を使用
 * （管理ノード 12.0 以降にプロキシサーバを使用） NetApp Hybrid Cloud Control を管理サービスバージョン 2.16 に更新してから、プロキシサーバを設定しておきます。
 
 
+.このタスクについて
 Element 12.2 管理ノードはオプションのアップグレードです。既存の環境では必要ありません。
 
 この手順を実行する前に、を理解しておく必要があります link:concept_hci_volumes.html#persistent-volumes["永続ボリューム"] 使用するかどうかを指定します。永続ボリュームはオプションですが、 VM が失われた場合の管理ノードの設定データのリカバリには推奨されます。
 
 .手順
-.  ISO or OVA and deploy the VM
-.  the management node admin and configure the network
-.  time sync
-.  up the management node
-.  controller assets
-.  compute node assets,（ NetApp HCI のみ）コンピューティングノードアセットを設定します
+. <<ISO または OVA をダウンロードし、 VM を導入します>>
+. <<管理ノード管理者を作成し、ネットワークを設定>>
+. <<時刻同期を設定します>>
+. <<管理ノードをセットアップ>>
+. <<コントローラアセットを設定する>>
+. <<Configure compute node assets,（ NetApp HCI のみ）コンピューティングノードアセットを設定します>>
 
 
 
@@ -132,7 +133,7 @@ NOTE: ストレージトラフィックを分離するために NIC を追加す
 . NTP を使用して管理ノードとストレージクラスタの間で時刻が同期されていることを確認します。
 +
 
-NOTE: Element 12..1 以降では、手順（ a ） ～ （ e ）が自動的に実行されます。管理ノード 12..1 の場合は、に進みます ,サブステップ (f) 時刻同期の設定を完了します。
+NOTE: Element 12..1 以降では、手順（ a ） ～ （ e ）が自動的に実行されます。管理ノード 12..1 の場合は、に進みます <<substep_f_install_config_time_sync,サブステップ (f)>> 時刻同期の設定を完了します。
 
 +
 .. SSH またはハイパーバイザーが提供するコンソールを使用して、管理ノードにログインします。

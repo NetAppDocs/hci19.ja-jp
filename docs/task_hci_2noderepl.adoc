@@ -24,6 +24,7 @@ keywords: netapp, hci, H610C, H615C, chassis replacement, node replacement
 * 静電放電（ ESD ）リストバンドを装着するか、静電気防止処置を行っておきます。
 
 
+.このタスクについて
 VMware vSphere Web Client のアラームでは、ホストで障害が発生するとアラートが通知されます。VMware vSphere Web Client で障害が発生したホストのシリアル番号を、ノード背面のステッカーに記載されているシリアル番号と一致させる必要があります。
 
 .手順

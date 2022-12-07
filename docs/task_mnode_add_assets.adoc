@@ -27,6 +27,7 @@ REST API UI を使用して、管理ノードの構成にコンピューティ�
 * ハードウェア（ BMC ）の管理 IP アドレスと管理者のクレデンシャルが必要です。
 
 
+.このタスクについて
 （ NetApp HCI のみ） NetApp HCI システムの拡張後に Hybrid Cloud Control （ HCC ）にコンピューティングノードが表示されない場合は、この手順で説明する「 POST /assets/｛ asset_id ｝ /compute-nodes 」を使用してコンピューティングノードを追加できます。
 
 

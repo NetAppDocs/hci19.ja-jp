@@ -43,17 +43,18 @@ image::sn2010_rear.png[SN2010 および SN2100 背面,600,400]
 .SN2700 スイッチの前面と背面
 image::SN2700.png[SN2700 フロントおよびリヤ,600,400]
 
+.このタスクについて
 この手順の手順は、次の順序で実行する必要があります。これにより、スイッチの交換前にダウンタイムを最小限に抑え、交換用スイッチを事前に設定することができます。
 
 
 NOTE: ガイダンスが必要な場合は、ネットアップサポートにお問い合わせください。
 
-手順の概要を次に示します。 to replace the faulty switch
- the configuration file
- the faulty switch and install the replacement
- the operating system version on the switch
- the replacement switch
- the replacement
+手順の概要を次に示します。<<故障したスイッチを交換する準備をします>>
+<<構成ファイルを作成します>>
+<<障害のあるスイッチを取り外し、交換用スイッチを取り付けます>>
+<<スイッチのオペレーティングシステムのバージョンを確認します>>
+<<交換用スイッチを設定します>>
+<<交換を完了します>>
 
 
 

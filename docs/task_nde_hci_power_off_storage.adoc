@@ -17,6 +17,7 @@ keywords: netapp, hci, netapp deployment engine, deployment, vsphere
 [role="lead"]
 NetApp HCI のストレージリソースの電源をオフにする場合は、「 Element API メソッド」を使用してストレージノードを適切に停止する必要があります。
 
+.手順
 コンピューティングリソースの電源をオフにしたら、 Web ブラウザを使用して、 NetApp HCI ストレージクラスタのすべてのノードをシャットダウンします。
 
 . ストレージクラスタにログインし、正しい MVIP に接続していることを確認します。

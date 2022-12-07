@@ -21,7 +21,7 @@ NetApp Element Plug-in for vCenter Server を使用して、システムのア�
 
 
 
-== 新機能をご紹介します
+== 最新情報をご確認ください
 
 * link:rn_whatsnew.html["NetApp HCI の新機能"]
 * https://docs.netapp.com/us-en/element-software/concepts/concept_rn_whats_new_element.html["NetApp Element ソフトウェアの新機能"^]

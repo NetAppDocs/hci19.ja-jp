@@ -24,6 +24,7 @@ vCenter Server のネットワーク情報とクレデンシャルを指定す�
 * NetApp Element Plug-in for vCenter Server が既存の vCenter インスタンスに登録されている場合は、が必要です https://docs.netapp.com/us-en/vcp/task_vcp_unregister.html["登録解除します"^] 続行する前に。NetApp HCI の導入が完了すると、プラグインが再登録されます。
 
 
+.このタスクについて
 vCenter リンクモードを使用して接続されている複数の vCenter Server システムに参加した場合、 NetApp HCI は 1 つの vCenter Server システムのみを認識します。
 
 [NOTE]

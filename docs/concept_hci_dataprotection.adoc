@@ -18,12 +18,12 @@ NetApp HCI データ保護の用語には、さまざまな種類のリモート
 
 NetApp HCI データ保護の概念は次のとおりです。
 
-*  replication types
-*  snapshots for data protection
-*  clones
-*  and restore process overview for SolidFire storage
-*  domains
-*  Helix high availability
+* <<リモートレプリケーションの種類>>
+* <<データ保護用のボリューム Snapshot>>
+* <<ボリュームクローン>>
+* <<SolidFire ストレージのバックアップとリストアのプロセスの概要>>
+* <<保護ドメイン>>
+* <<Double Helix の高可用性>>
 
 
 
@@ -32,9 +32,9 @@ NetApp HCI データ保護の概念は次のとおりです。
 
 データのリモートレプリケーションには、次の形式を使用できます。
 
-*  and asynchronous replication between clusters
-*  replication
-*  between Element and ONTAP clusters using SnapMirror
+* <<クラスタ間の同期レプリケーションと非同期レプリケーション>>
+* <<Snapshot のみのレプリケーション>>
+* <<SnapMirror を使用した Element クラスタと ONTAP クラスタ間のレプリケーション>>
 
 
 を参照してください https://www.netapp.com/us/media/tr-4741.pdf["TR-4741 ：『 NetApp Element Software Remote Replication 』"^]。

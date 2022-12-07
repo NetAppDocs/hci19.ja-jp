@@ -21,12 +21,12 @@ NOTE: 新しい NetApp Hybrid Cloud Control セッションを初めて起動し
 
 Hybrid Cloud Control Dashboard には、管理対象のコンピューティングノードと、 H シリーズハードウェアに管理対象ノードが少なくとも 1 つ含まれているクラスタだけが表示されます。
 
-*  the NetApp HCC Dashboard
-*  storage resources
-*  compute resources
-*  storage capacity
-*  storage performance
-*  compute utilization
+* <<NetApp HCC ダッシュボードにアクセスします>>
+* <<ストレージリソースを監視する>>
+* <<コンピューティングリソースを監視>>
+* <<ストレージ容量を監視>>
+* <<ストレージパフォーマンスを監視>>
+* <<コンピューティング利用率を監視>>
 
 
 

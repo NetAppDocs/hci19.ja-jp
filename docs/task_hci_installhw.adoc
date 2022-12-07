@@ -19,15 +19,15 @@ NetApp HCI の使用を開始する前に、ストレージノードとコンピ
 
 TIP: を参照してください link:../media/hseries-isi.pdf["ポスター"^] 指示を視覚的に表示します。
 
-*  diagrams
-*  for installation
-*  the rails
-*  the node/chassis
-*  the switches
-*  the nodes
-*  on the nodes
-*  NetApp HCI
-*  post-configuration tasks
+* <<ワークフロー図>>
+* <<設置を準備>>
+* <<レールを取り付けます>>
+* <<ノード / シャーシを設置>>
+* <<スイッチを設置します>>
+* <<ノードをケーブル接続>>
+* <<ノードの電源をオンにします>>
+* <<NetApp HCI を設定します>>
+* <<設定後のタスクを実行>>
 
 
 
@@ -36,9 +36,9 @@ TIP: を参照してください link:../media/hseries-isi.pdf["ポスター"^] 
 
 このワークフロー図は、インストール手順の概要を示しています。手順は H シリーズモデルによって多少異なります。
 
-*  and H410S
-*  and H615C
-* 
+* <<H410C および H410S>>
+* <<H610C および H615C>>
+* <<H610S>>
 
 
 
@@ -110,9 +110,9 @@ CAUTION: ハードウェアの設置時に、梱包材と包装をすべてユ�
 
 TIP: 装置が転倒しないように、ラックの下から順にハードウェアを設置してください。ラックに安定化デバイスが含まれている場合は、ハードウェアを取り付ける前に取り付けてください。
 
-*  and H410S
-* 
-*  and H615C
+* <<H410C および H410S>>
+* <<H610C>>
+* <<H610S と H615C>>
 
 
 
@@ -168,9 +168,9 @@ TIP: NetApp HCI 1.8 以降では、 2 つまたは 3 つのストレージノー
 
 CAUTION: 梱包材と包装材をすべてユニットから取り除きます。これにより、ノードの過熱やシャットダウンが防止されます。
 
-*  and H410S nodes
-*  node/chassis
-*  and H615C node/chassis
+* <<H410C ノードと H410S ノード>>
+* <<H610C ノード / シャーシ>>
+* <<H610S および H615C ノード / シャーシ>>
 
 
 
@@ -227,10 +227,10 @@ NetApp HCI 環境で Mellanox SN2010 、 SN2100 、および SN2700 のスイッ
 
 CAUTION: シャーシ背面の通気口がケーブルやラベルで塞がれていないことを確認します。これにより、過熱によってコンポーネントで早期に障害が発生する可能性があります。
 
-*  compute node and H410S storage node
-*  compute node
-*  compute node
-*  storage node
+* <<H410C コンピューティングノードと H410S ストレージノード>>
+* <<H610C コンピューティングノード>>
+* <<H615C コンピューティングノード>>
+* <<H610S ストレージノード>>
 
 
 
@@ -345,8 +345,8 @@ image::H600S_ISI_nodefront.png[に、 H610S/H615C ノード / シャーシの電
 
 次のいずれかのオプションを選択します。
 
-*  NetApp HCI installation
-*  an existing NetApp HCI installation
+* <<新しい NetApp HCI のインストール>>
+* <<既存の NetApp HCI インストールを展開します>>
 
 
 
@@ -396,8 +396,8 @@ NOTE: 同じネットワーク上に新しく設置した NetApp HCI ノード�
 
 使用しているノードのタイプによっては、ハードウェアを設置して NetApp HCI を設定したあとで、追加の手順を実行する必要があります。
 
-*  node
-*  and H610S nodes
+* <<H610C ノード>>
+* <<H615C および H610S ノード>>
 
 
 

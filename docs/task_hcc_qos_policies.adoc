@@ -21,11 +21,11 @@ NOTE: の使用方法の詳細については、 NetApp HCI の概念に関す�
 
 NetApp Hybrid Cloud Control を使用すると、次のタスクを実行して QoS ポリシーを作成および管理できます。
 
-*  a QoS policy
-*  a QoS policy to a volume
-*  the QoS policy assignment of a volume
-*  a QoS policy
-*  a QoS policy
+* <<QoS ポリシーを作成する>>
+* <<ボリュームに QoS ポリシーを適用します>>
+* <<ボリュームの QoS ポリシーの割り当てを変更します>>
+* <<QoS ポリシーを編集する>>
+* <<QoS ポリシーを削除する>>
 
 
 
@@ -61,8 +61,10 @@ TIP: わかりやすい名前のベストプラクティスを使用してくだ
 
 NetApp Hybrid Cloud Control を使用して、既存の QoS ポリシーをボリュームに割り当てることができます。
 
-割り当てようとしている QoS ポリシーが削除されました  a QoS policy,作成済み。
+.必要なもの
+割り当てようとしている QoS ポリシーが削除されました <<QoS ポリシーを作成する,作成済み>>。
 
+.このタスクについて
 このタスクでは、設定を変更して個々のボリュームに QoS ポリシーを割り当てる方法について説明します。最新バージョンの NetApp Hybrid Cloud Control では、複数のボリュームに一括割り当てオプションはありません。一括割り当てする機能が今後のリリースで提供されるまでは、 Element Web UI または vCenter Plug-in UI を使用して QoS ポリシーを一括で割り当てることができます。
 
 .手順
@@ -88,7 +90,8 @@ NOTE: QoS を割り当てると、以前に適用されていた個々のボリ�
 
 ボリュームから QoS ポリシーの割り当てを解除したり、別の QoS ポリシーやカスタム QoS を選択したりできます。
 
-変更するボリュームはです  a QoS policy to a volume,割り当て済み QoS ポリシー。
+.必要なもの
+変更するボリュームはです <<ボリュームに QoS ポリシーを適用します,割り当て済み>> QoS ポリシー。
 
 .手順
 . NetApp HCI または Element ストレージクラスタ管理者のクレデンシャルを指定して NetApp Hybrid Cloud Control にログインします。

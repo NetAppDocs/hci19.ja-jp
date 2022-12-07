@@ -23,11 +23,11 @@ Element 12.2 以降では、を使用できます link:concept_hci_storage_maint
 
 
 .オプション（ Options ）
-*  a storage cluster
-*  storage cluster status
-*  storage cluster credentials
-*  a storage cluster
-*  and disable maintenance mode
+* <<ストレージクラスタを追加>>
+* <<ストレージクラスタのステータスを確認>>
+* <<ストレージクラスタクレデンシャルを編集します>>
+* <<ストレージクラスタを削除>>
+* <<メンテナンスモードを有効または無効にします>>
 
 
 
@@ -111,7 +111,7 @@ CAUTION: [ はい ] をクリックすると、クラスタがインストール
 [discrete]
 == メンテナンスモードを有効または無効にします
 
-これ link:concept_hci_storage_maintenance_mode.html["メンテナンスモード"] 機能オプションを使用すると、にアクセスできます ,-- 有効にします および ,- 無効にします ストレージクラスタノードの保守モード。
+これ link:concept_hci_storage_maintenance_mode.html["メンテナンスモード"] 機能オプションを使用すると、にアクセスできます <<enable_main_mode,-- 有効にします>> および <<disable_main_mode,- 無効にします>> ストレージクラスタノードの保守モード。
 
 .必要なもの
 * * Element ソフトウェア * ：ストレージクラスタで NetApp Element ソフトウェア 12.2 以降を実行している必要があります。
@@ -122,7 +122,7 @@ CAUTION: [ はい ] をクリックすると、クラスタがインストール
 
 
 
-=== メンテナンスモードを有効にします
+=== [[enable_main_mode]]メンテナンスモードを有効にします
 
 次の手順を使用して、ストレージクラスタノードのメンテナンスモードを有効にすることができます。
 
@@ -167,7 +167,7 @@ image:hcc_enable_maintenance_mode.PNG["メンテナンスモードを有効に�
 
 
 
-=== メンテナンスモードを無効にします
+=== [[disable_main_mode]]メンテナンスモードを無効にします
 
 ノードがメンテナンスモードになると、このノードで * メンテナンスモードを無効にする * アクションを使用できるようになります。メンテナンス中のノードでメンテナンスモードが無効になるまで、他のノードに対する処理は実行できません。
 

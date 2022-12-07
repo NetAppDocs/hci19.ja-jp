@@ -16,6 +16,7 @@ keywords: netapp, hci, deployment, compatibility, nodes, installation, profile, 
 [role="lead"]
 ネットアップを入手した場合は https://configbuilder.netapp.com/["ConfigBuilder"^] 出力されたインストール環境のプロファイルは、 NetApp HCI のインストールプロセスで NetApp Deployment Engine のフィールドに自動的に入力されるようにインポートできます。これはオプションの手順です。
 
+.このタスクについて
 インストールプロファイルをインポートする場合も、 NetApp Deployment Engine のクレデンシャル * ページで NetApp HCI で使用するクレデンシャルを入力する必要があります。
 
 
