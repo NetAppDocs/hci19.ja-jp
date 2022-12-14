@@ -125,6 +125,9 @@ image::network_ports.PNG[ポートの接続を確認してください]
 | 管理ノード | コンピューティングノードの BMC / IPMI | 623 UDP | Remote Management Control Protocol （ RMCP ）ポート。NetApp Hybrid Cloud Control のコンピューティングファームウェアをアップグレードする場合は必須です。 
 
 
+| 管理ノード | ストレージノードのBMC / IPMI | 623 UDP | RMCPポート。これはIPMI対応のシステムを管理するために必要です。 
+
+
 | 管理ノード | VMware vCenter | 5988-5989 | NetApp Hybrid Cloud Control の HTTPS 通信 
 
 
@@ -138,6 +141,9 @@ image::network_ports.PNG[ポートの接続を確認してください]
 
 
 | SNMP サーバ | ストレージノードの MIP | 161 UDP | SNMP ポーリング 
+
+
+| ストレージノードのBMC / IPMI | 管理ノード | 623 UDP | RMCPポート。これはIPMI対応のシステムを管理するために必要です。 
 
 
 | ストレージノードの MIP | DNS サーバ | 53 TCP/UDP | DNS ルックアップ 
