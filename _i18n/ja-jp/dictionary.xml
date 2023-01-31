@@ -543,8 +543,6 @@
   <block id="961b191a5fa207717e3fd7486bc2f230" category="image-alt">ストレージファームウェアバンドルのリリースノート</block>
   <block id="bfb172f1cb7b58a8379f32a0f790b147" category="list-text">キーワード検索フィールドに「 Compute Firmware Bundle 」と入力し、「 * New Search * ：</block>
   <block id="f9e038e210b8a9a96270c8cff92fa213" category="list-text">解決済みまたはオープン状態のバグのリストが表示されます。次のように結果をさらに絞り込むことができます。</block>
-  <block id="1040e61ff0404ab1f9d914a7e6ad51a1" category="inline-link">NetApp HCI および NetApp Element のファームウェアとドライバのバージョン ソフトウェア</block>
-  <block id="ceff8660a869547c6a911aac45d5cd47" category="list-text"><block ref="ceff8660a869547c6a911aac45d5cd47" category="inline-link-rx"></block></block>
   <block id="60a877c84f0ee48293a616d3f8e56b1c" category="summary">以下の手順を使用して、 NetApp HCI をインストールおよび導入します。</block>
   <block id="42010ec652334cb9d86c9eb725d6bbc0" category="doc">NetApp HCI のインストールと導入の概要</block>
   <block id="73dcc51ecb25aa26ad0c174b131f18bc" category="paragraph">以下の手順を使用して、 NetApp HCI をインストールおよび導入します。このガイドには、詳細へのリンクが記載されています。</block>
@@ -776,8 +774,6 @@
   <block id="b4f3f16bceaa5cf561ca23082b3b8f3f" category="paragraph">NetApp HCI 1.9P1 では、セキュリティと安定性が向上しています。</block>
   <block id="44b0209ace608ab3332e7d7917cfc3c2" category="inline-link">『 NetApp Hybrid Cloud Control and Management Services Release Notes 』を参照してください</block>
   <block id="8c62a8856619185a333cdec6cc116a79" category="list-text"><block ref="8c62a8856619185a333cdec6cc116a79" category="inline-link-rx"></block></block>
-  <block id="311f4aa48c89c4e8754b8d93a8d5c0d5" category="inline-link">NetApp HCI および NetApp Element のファームウェアとドライバのバージョン ソフトウェア</block>
-  <block id="8c47ac98e3f72388d0a7fb3d375c0441" category="list-text"><block ref="8c47ac98e3f72388d0a7fb3d375c0441" category="inline-link-rx"></block></block>
   <block id="26970fbb3ed65d1f3145c7f705874131" category="summary">NetApp HCI で Rancher を監視する方法について説明します。</block>
   <block id="a282a2ecd8d8b032df1602b6d6bfc2f4" category="doc">NetApp HCI 実装の Rancher を監視する</block>
   <block id="f29ace858b3a3a7be14330f073b42235" category="paragraph">Rancher サーバ、管理クラスタ、およびその他の詳細を監視する方法は複数あります。</block>
@@ -1078,8 +1074,6 @@
   <block id="42f1d5fbe05e1bdd25e119b9262b7dbd" category="list-text"><block ref="42f1d5fbe05e1bdd25e119b9262b7dbd" category="inline-link-rx"></block></block>
   <block id="f77963c528aa19e59cf9f7c9d5b4a19d" category="summary">NetApp HCI システムのアップグレードの一環として、コンピューティングノードのドライバをアップグレードします。</block>
   <block id="0c13e0dd6ebaa11c814ce3c5b29ab7f1" category="paragraph">H シリーズのコンピューティングノードでは、ノードで使用されているドライバを VMware Update Manager を使用して更新できます。</block>
-  <block id="bab93f378f6cea1ed1024018548e066c" category="inline-link">ネットアップの技術情報アーティクル</block>
-  <block id="de3741b094be24deccfc553754ce0a3a" category="paragraph">のハードウェアのファームウェアとドライバのマトリックスを参照してください<block ref="69b1d186a6529d94f61dae13551aa3aa" category="inline-link-rx"></block> （ログインが必要です）。</block>
   <block id="cae4b286c77e42f24641d126e94e3848" category="paragraph">以下の更新処理は一度に 1 つずつ実行します。</block>
   <block id="7f1cb6f883abc23a81f6db00c067e34f" category="paragraph">ファームウェアのアップグレードを実行する前に、 ESXi ドライバの現在のバージョンを確認する必要があります。ドライバが最新でない場合は、まずドライバをアップグレードします。その後、コンピューティングノードのコンピューティングファームウェアをアップグレードします。</block>
   <block id="3e79f2f4eea24dddb8f0e1d175482fea" category="inline-link">NetApp HCI ソフトウェアのダウンロード</block>
@@ -3253,7 +3247,6 @@
   <block id="0a4b0244a62a3d26a27fd761630e0952" category="inline-link-macro">ストレージをアップグレードする前に、 Element ストレージの健全性チェックを実行します</block>
   <block id="736c409b380383ee8843715d26079c63" category="list-text">* クラスタの健全性 * ：健全性チェックを実行しました。を参照してください <block ref="bdcf6db43efb3c82b174a0c4c0a65c66" category="inline-link-macro-rx"></block>。</block>
   <block id="d12abcbed858bffa82e8d643aeac1e4f" category="inline-link-macro">リリースノートおよびアップグレード手順</block>
-  <block id="13c2b42759130af4400c46b2b928dc26" category="admonition">ご使用のハードウェアのファームウェアとドライバのファームウェアの一覧については、こちらを参照してください<block ref="919d0da258d2c9346bfb11f078cfd474" category="inline-link-rx"></block> （ログインが必要です）。</block>
   <block id="5212e4232f93722ce70d3ed042cd25c1" category="paragraph">次のいずれかのストレージファームウェアアップグレードオプションを選択します。</block>
   <block id="71894c0623112f371e3598666af16695" category="list-text"><block ref="c67f607f0c5a6b98a7e28e151694a09a" category="inline-xref-macro-rx"></block></block>
   <block id="b8cff0b41605e83e8a12999dd0a4ca92" category="list-text"><block ref="bd241c643056b4027f18f8f059752b73" category="inline-xref-macro-rx"></block></block>
@@ -3382,7 +3375,6 @@
   <block id="7574455cfeef101402ffde3ea33bd53a" category="cell">3B08 。 CO の一酸化</block>
   <block id="f6c9b6a55fa82505a20a84fc29dd1409" category="inline-link-macro">ファームウェアバンドル 2.27 を計算します</block>
   <block id="590f0f5145e5d58d73d507c6a67aa0b2" category="admonition">H615C コンピューティングノードでは、 BMC ファームウェアをバージョン 4.68 に更新する必要があります を使用する <block ref="c58be2f499a493f0490ff81a29aa7beb" category="inline-link-macro-rx"></block> NetApp Hybrid Cloud Control で今後のファームウェアアップグレードを実行できるようにするため。</block>
-  <block id="b24f3db75077a578765967e0b8ffa295" category="admonition">ご使用のハードウェアのファームウェアとドライバのファームウェアの一覧については、を参照してください<block ref="54a79ab153742147d13ffd4ac16bf6ba" category="inline-link-rx"></block> （ログインが必要です）。</block>
   <block id="92a2b5cb9c6906035c2864fa225e1940" category="inline-link-macro">記事</block>
   <block id="a6c551bfacbff9bc6d510d240a1f729e" category="list-text">*BIOS 起動順序 *: 各ノードの BIOS セットアップで起動順序を手動で変更して、起動リストに「 USB CD/DVD」 が表示されるようにします。を参照してください <block ref="40fb6836e33e97dd94fb747393132791" category="inline-link-macro-rx"></block> を参照してください。</block>
   <block id="71ff71526d15db86eb50fcac245d183b" category="inline-link-macro">UI</block>
@@ -6314,4 +6306,243 @@
   <block id="58eaebf972358f1cf03d386a4ade1a0f" category="section-title">次の手順</block>
   <block id="18526b4be693f8e5ed12fb2721f65eea" category="section-title">[sys_upgrade_seq]システムアップグレードシーケンス</block>
   <block id="29d5a1c31c94981fab1916121b43f763" category="cell">ストレージノードのBMC / IPMI</block>
+  <block id="434d6ddb975683e537a15ac85b3f571d" category="inline-link-macro">NetApp HCI でサポートされるファームウェアとESXiドライバのバージョン、NetApp HCI ストレージノードでサポートされるファームウェアのバージョンとファームウェアのバージョン</block>
+  <block id="16b9f71cefad997cad5ec24fbb7a4db1" category="list-text"><block ref="16b9f71cefad997cad5ec24fbb7a4db1" category="inline-link-macro-rx"></block></block>
+  <block id="a61d8a4fcaa8b59b1d8f1d63aada7783" category="summary">NetApp HCI およびNetApp Element ソフトウェアでサポートされているファームウェアおよびドライバのバージョン。</block>
+  <block id="6563446976572a0b32d68f15a2be569f" category="paragraph">NetApp HCI でサポートされるファームウェアとESXiドライバのバージョン、NetApp HCI ストレージノードでサポートされるファームウェアのバージョンとファームウェアのバージョン。</block>
+  <block id="bf44a0123ec45362af49b3862557cdd8" category="paragraph"><block ref="f4e8c07388940da9080e74e50960909d" category="inline-link-macro-rx"></block>* H610S * H410S</block>
+  <block id="a82f3d9d22bfe1382d03945f3377eb65" category="paragraph"><block ref="4fe99558e9030b1914f3007a88f2f74d" category="inline-link-macro-rx"></block>* H615C * H610C * H410C * H300E / H500E / H700E</block>
+  <block id="99fb5cb075d1550b2052133c142d5726" category="inline-link-macro">サポートされているファームウェアおよびESXiドライバのバージョン</block>
+  <block id="25d337a3a47a3f167e1c18f0472e2f97" category="paragraph">お使いのハードウェアのファームウェアとドライバのマトリックスを参照してください <block ref="913963bf89b539ef788a8e09cb649658" category="inline-link-macro-rx"></block>。</block>
+  <block id="f9b8ab4f362b47d973e3a4421687f93f" category="summary">コンピューティングノードでサポートされるファームウェアとドライバのバージョン。</block>
+  <block id="ed49450e49f19333986b5262b5e1a4d4" category="paragraph">NetApp HCI コンピューティングノードでサポートされるファームウェアとESXiドライバのバージョン。</block>
+  <block id="53e431432ac4950ade485e1bb43c6f4f" category="list-text"><block ref="0c812a8da69b7d31b76f8ad80554ed9c" category="inline-xref-macro-rx"></block></block>
+  <block id="dd2004514ed5cdb9bab3af15450bc4ba" category="list-text"><block ref="68573ebd713d521e7bc0152370db4547" category="inline-xref-macro-rx"></block></block>
+  <block id="4c84f7900337f0bdad5983703b91782d" category="list-text"><block ref="6099ff797ca403d79bc0c248f2fa3635" category="inline-xref-macro-rx"></block></block>
+  <block id="467353f52d50146582f1796ce2dc32a5" category="paragraph">*モデル番号（ファミリー部分）：* H615C</block>
+  <block id="3a32371bd24d644ae7b313be014a6118" category="section-title">Compute Firmware Bundleで管理されるコンポーネントファームウェア</block>
+  <block id="3f729803517444beab075d042c1032b0" category="paragraph">11.x時間内にファームウェアをリリースする唯一の方法はElementソフトウェアでした。Element 12.0以降では、* Compute Firmware Bundle *の概念が導入され、ファームウェアの更新が独立してリリースされたCompute Firmware Bundleで可能になりました。</block>
+  <block id="4eab3896873393011964c9ec04212391" category="paragraph">10 / 25GbE NICと互換性のあるESXiドライバはCompute Firmware Bundleに含まれていません。参照用に指定されています。</block>
+  <block id="7f725124635cae9d920f527b52c91e1f" category="admonition">次の表にダッシュ（*-*）が表示されている場合は、特定のハードウェアコンポーネントがそのリリース車両でサポートされていないことを示しています。</block>
+  <block id="811756c7591f205ccf18828f4341af4a" category="cell">車両をリリースする</block>
+  <block id="6a330702a04f4b3a688f8fbfc0c9006b" category="cell">リリース日</block>
+  <block id="6529a92d6fd6230b5d98993508f29b55" category="cell">10 / 25GbE NIC</block>
+  <block id="a04ab49fbc99800499a31fd6daad50d7" category="cell">VMware ESXi 6.5ドライバのバージョン</block>
+  <block id="92dad43acf6caddcef6a11187ef43de4" category="cell">VMware ESXi 6.7ドライバのバージョン</block>
+  <block id="ebc7b9bd5df46748a021059450c652a9" category="cell">VMware ESXi 7.0ドライバのバージョン</block>
+  <block id="bea2aab7715bd285e6448fdfd2c9ef64" category="cell">* Compute Firmware Bundle 2.154.4 *</block>
+  <block id="b0c9867bdf153402438ba4d694d73ada" category="cell">06/08/2022</block>
+  <block id="aba28e7740c0a5dcdb98b111eea839a8" category="cell">3B12.CO</block>
+  <block id="b37301451c2b79b500bfd38628f1abeb" category="cell">4.72.07</block>
+  <block id="0ff7b002ad8e0963d8e5de5fcdef1b8e" category="cell">14.29.1016</block>
+  <block id="989bedd4e408d8af19987dfefb57c8ba" category="cell">4.16.71.1</block>
+  <block id="e11215e9a3c962ba326e4f7d5b37ab83" category="cell">4.17.71.1</block>
+  <block id="47b51736fc613e938e34cf9279aa080a" category="cell">4.21.71.1</block>
+  <block id="f92b215e1551241f1b580bdc46d3b4a2" category="cell">*ストレージ・ファームウェア・バンドル2.150.4～NetApp HCI 1.10 *</block>
+  <block id="0dcc10c5a615de87d1a63982b57968cb" category="cell">4.16.13.5.</block>
+  <block id="9274ed8f3da729fa3ccb9501aabe7b1e" category="cell">4.17.16.15</block>
+  <block id="c46a08345b2035ee8ab756b20e94f710" category="cell">*ストレージ・ファームウェア・バンドル2.146.2*</block>
+  <block id="732cd0edb5feb318c74c28ce5a757d94" category="cell">02/022/2022</block>
+  <block id="76e2055993b11b0b8303d0352fce7f6a" category="cell">* Compute Firmware Bundle 2.99.4～NetApp HCI 1.9P1*</block>
+  <block id="f63616bb6a8255ed08089231c746f285" category="cell">12/062021</block>
+  <block id="d432d2ccddb38f18f9cba6689d1132fe" category="cell">* Compute Firmware Bundle 2.76.10*</block>
+  <block id="f6f29f0196843fb61178f2f482110613" category="cell">2021年8月29日</block>
+  <block id="b5807adcdf666919467bb86508efe1cf" category="cell">* Compute Firmware Bundle 2.99～NetApp HCI 1.9 *</block>
+  <block id="d29a3a9a5f3d571bec079e49e182f110" category="cell">04/15/2021</block>
+  <block id="fdeda32b959afe441ba0d75a2d197a7f" category="cell">* Compute Firmware Bundle 2.76.8 *</block>
+  <block id="8138d0c3e613508050b6fec12c4322c7" category="cell">2021年2月3日</block>
+  <block id="6f7fc3f69fc0125e8437a177e551ceea" category="cell">* Compute Firmware Bundle 2.27.1 *</block>
+  <block id="4ec33c92882aef591ef68552cff88253" category="cell">2020年9月18日</block>
+  <block id="e81897a369e2e66d705879ad424b586a" category="cell">* Compute Firmware Bundle 2.21～NetApp HCI 1.8P1 *</block>
+  <block id="930f4cd13d5218dc456cb841741a958d" category="cell">2020年9月29日</block>
+  <block id="961b1987ee91e0ff9ffdc12f1245e3da" category="cell">4.64.07</block>
+  <block id="7b1650e6cf51f1a98c019399510ee4e7" category="cell">4.17.13.8.</block>
+  <block id="1151a34e0c8876ed683672e1e0ca184a" category="cell">* Compute Firmware Bundle 12.2.109*</block>
+  <block id="a0f5113e0a8fb9b1f806086655219b20" category="cell">2020年8月7日</block>
+  <block id="b1fa1e013ecef5cc89099f871c3ddc38" category="cell">* Compute Firmware Bundle 12.2.92*</block>
+  <block id="c6ce05793b4b5fa39d303c2500de956a" category="cell">2020年6月22日</block>
+  <block id="e4f6aeafaa587a81bea1da3a5139674d" category="cell">* Compute Firmware Bundle 1.2.17～NetApp HCI 1.8 *</block>
+  <block id="85022c12a4dd8eafd94aced180432a3a" category="cell">2020年3月20日</block>
+  <block id="8c4774061cee76ff66c561586df5baff" category="cell">4.60.07</block>
+  <block id="f940dfd9fcd05a61d869b743ba611872" category="cell">* NetApp HCI 1.7P1 *</block>
+  <block id="70c514eca13f69d3e578c44185effb17" category="cell">2019年11月21日</block>
+  <block id="9487cab96a779669f66620981bd38550" category="cell">* NetApp HCI 1.7 *</block>
+  <block id="65bd363094fccf3008943d6784a877b2" category="cell">2019年9月26日</block>
+  <block id="63f44f4f6d3eec70dc9ef2c47509438f" category="section-title">Compute Firmware Bundleで管理されていないコンポーネントファームウェア</block>
+  <block id="dff906ef991d36b32836ab1f825f803e" category="paragraph">次のファームウェアは、Compute Firmware Bundleで管理されていません。</block>
+  <block id="011fedf4050817b8826f95a53d9555b2" category="cell">現在のバージョン</block>
+  <block id="5ddc86a7dad161eef1cc36ffd0bea42d" category="cell">CPLD</block>
+  <block id="da4fb5c6e93e74d3df8527599fa62642" category="cell">120</block>
+  <block id="5492630e47a935421aec1248cfb29dcb" category="cell">GPU T4</block>
+  <block id="3513209b9956f12c23da2b34420a4d1b" category="cell">90.04.38.00.03（BIOS）410.48（ドライバ）</block>
+  <block id="0f672475e8fa274580ec372c5bb9616c" category="cell">起動デバイスDGSML-A28D81BCBQCA-B196</block>
+  <block id="60a9bc12f17cf6055f6132fadd1491f8" category="cell">M161225i</block>
+  <block id="39486c62ce076cf0a7f04b56e3e9ddf2" category="paragraph">*モデル番号（ファミリー部）：* H610C</block>
+  <block id="061b20e64ba80f50d9e82e2c06552222" category="paragraph">NetApp HCI 1.0 - NetApp HCI 1.7では、ファームウェアをリリースする唯一の方法はNetApp HCI です。NetApp HCI 1.8以降では、* Compute Firmware Bundle *の概念が導入され、ファームウェアのアップデートが個別にリリースされたCompute Firmware Bundleによって可能になりました。</block>
+  <block id="4ec7d13445d466c69ee100663627dc2c" category="cell">3B07</block>
+  <block id="06256e5582720eda745869273808e24a" category="cell">4.04.07</block>
+  <block id="31fcef57c9af10cef3b1dc2e7bd7361b" category="cell">2022年2月22日</block>
+  <block id="5a6beba95a03d97749a23c4e355d83fc" category="cell">3.96.07</block>
+  <block id="39f7026b2ce4e83f5c1c200f1e3299c4" category="cell">3A02</block>
+  <block id="a2ea04ad41b20e5d3b21d25d9fbf213f" category="cell">3.91.07</block>
+  <block id="0488464cefbdae0a20446603052935f3" category="cell">* NetApp HCI 1.6 *</block>
+  <block id="c610d54ccf66af2ec995761ab6da2fc0" category="cell">2019年8月19日</block>
+  <block id="6f4a77351c1876a3191f934ab742002d" category="cell">* NetApp HCI 1.4P1 *</block>
+  <block id="5375e4c8250d02c18b01238486c7450a" category="cell">2019年4月25日</block>
+  <block id="7dd203da319999c870dc6cbb5e3f09ab" category="cell">* NetApp HCI 1.4 *</block>
+  <block id="4a6d1e11e1b6d4cd924476c0dcc9be5f" category="cell">2018年11月29日</block>
+  <block id="5147d60478e41c8b69a152b88415c238" category="cell">1/10GbE NIC</block>
+  <block id="30f5362f47b8bcde317f02c78d6a5636" category="cell">3.2d 0x80000b4b</block>
+  <block id="13944b50b01e2327de5341edebe65730" category="cell">GPU M10</block>
+  <block id="54828ce671b8010c02cce5852fedb2c2" category="cell">82.07.ab.00.1282.07.ab.00.1382.07.ab.00.1482.07.ab.00.15</block>
+  <block id="09b6d08d2fc7a03e4e76863d35df5437" category="paragraph">*モデル番号（ファミリー部）：* H410C</block>
+  <block id="bdbab1d48a4851cccf015292b45adbf8" category="cell">NATP3.10</block>
+  <block id="30b0f54d1326f1e54cfb26657ac34180" category="cell">4.17.15.16</block>
+  <block id="85f50a0954cdbc89504952d949f653b2" category="cell">4.19.16.1.</block>
+  <block id="c4e6fed6d73652ddbccd0fa8464f03c6" category="cell">NA3.4</block>
+  <block id="f56ac5dcb56928e1c289ab77de3e54a1" category="cell">NA3.3</block>
+  <block id="2a175ad50f9fc94e05c7e77f185e1852" category="cell">6.53</block>
+  <block id="601344e9e1cf622b3cbfa91f56ca47e2" category="cell">NA2.2</block>
+  <block id="5e44585c355ae19a353abfc161fc21a8" category="cell">03.b0.09</block>
+  <block id="36f140c6fef39a7678033125fe4a9c6a" category="cell">SIOM 1/10 GbE NIC</block>
+  <block id="859c493e15e9bd45eb8a63b15f2282e6" category="cell">1.93</block>
+  <block id="c534d7561d213f23027bf41139e5e159" category="cell">電源装置</block>
+  <block id="0b0ec9f1cc28b3c19dc6c36dcd5af7cc" category="cell">1.3</block>
+  <block id="3e100d041a82db8371344338f4eba2f9" category="cell">Boot Device SSDSCJB240G7</block>
+  <block id="47ce9fae54593a6a3da1acdf1277ec87" category="cell">N2010121.</block>
+  <block id="005dfb275b378d65280cf215810f8dbd" category="cell">ブートデバイスMTFDDAV240TCB1AR</block>
+  <block id="3d5f5610a92e78d21998fe95e35ae2ef" category="cell">DOMU037</block>
+  <block id="5b1d1e4dbc8cd8e4ec110c7e700e056f" category="section-title">H300E / H500E / H700E</block>
+  <block id="f0f15f2c98a9ba8013c265fbf2b1874f" category="paragraph">*モデル番号（ファミリー部分）：* H300E、H500E、H700E</block>
+  <block id="1ad071257f715e496a87659f9a2669a6" category="cell">NAT3.4</block>
+  <block id="ddfac71abd839b54517b13500ce7ecbf" category="cell">6.98.00</block>
+  <block id="dd7f542392a4b31946826638316847cb" category="cell">3.25</block>
+  <block id="8b3bfab20f63e97f107866a9f6bd44cc" category="cell">14.17.2020</block>
+  <block id="a95e19455391023e27800f1a8ba4be22" category="cell">01.A1.06</block>
+  <block id="4b8861a11346d673205d074f862db70a" category="inline-link-macro">サポートされているファームウェアおよびESXiドライバのバージョン</block>
+  <block id="e5f0019a70375a2e883b7840f439118a" category="list-text"><block ref="732713df3c4c58fb19fab37e747f6f0d" category="inline-link-macro-rx"></block> _ 新規 _</block>
+  <block id="43e34bcd62fca2ef36509ec2613974a0" category="admonition">ご使用のハードウェアのファームウェアとドライバのファームウェアの一覧については、を参照してください <block ref="913963bf89b539ef788a8e09cb649658" category="inline-link-macro-rx"></block>。</block>
+  <block id="12b23b4c09d649df7ce5a85073a16761" category="inline-link-macro">NetApp HCI ストレージノードでサポートされるファームウェアのバージョン</block>
+  <block id="70e945411317a488defaf4452814955d" category="admonition">ご使用のハードウェアのファームウェアとドライバのファームウェアの一覧については、を参照してください <block ref="5044654178b92d05d74ce63fd089f27a" category="inline-link-macro-rx"></block>。</block>
+  <block id="0dc2c3036c99248e0e9f340a2cfc8fb1" category="summary">ストレージノードでサポートされるファームウェアとドライバのバージョン。</block>
+  <block id="0b50a6dd18dd8aee8ba17d59674440d3" category="paragraph">HシリーズおよびSolidFire ストレージノードでサポートされるファームウェアバージョン。</block>
+  <block id="10a16317486e698f70640e8342028ef1" category="list-text"><block ref="d02062eff89a2ae583064c32a7f5ba19" category="inline-xref-macro-rx"></block></block>
+  <block id="dd351a18764128aac11df1a1c727372c" category="list-text"><block ref="7bcb78e4fc7d97f5deaab3647840e2ea" category="inline-xref-macro-rx"></block></block>
+  <block id="64e18ac9b2149d7132eaef6563caaaf6" category="paragraph">*モデル番号（ファミリー部）：* H610S *フルモデル番号：* H610S-1、H610S-1-NE、H610S-2、H610S-2-NE、H610S-4H610S-4-NEおよびH610S-2F</block>
+  <block id="42f95ea300f7aca212452f34f3029cfc" category="section-title">ストレージファームウェアバンドルで管理されるコンポーネントファームウェア</block>
+  <block id="cbbfc38164561754239654f9b4436dfb" category="paragraph">11.x時間内にファームウェアをリリースするには、NetApp Element ソフトウェアしかありませんでした。Element 12.0以降では、「*ストレージファームウェアバンドル」という概念が導入され、Element 12.xリリースに含まれる独立してリリースされたストレージファームウェアバンドルまたはストレージファームウェアバンドルによってファームウェアの更新が可能になりました。</block>
+  <block id="2642e800ea806ba3c4a8b1b2dc29af36" category="cell">10 / 25GbE NIC CX4</block>
+  <block id="a3f7d364350371e673946634fd90659b" category="cell">10 / 25GbE NIC CX5</block>
+  <block id="d62c43bc88253f47039186c24fd2728c" category="cell">NVDIMM NVDIMMモジュールのキャッシュSMART（Gen1）</block>
+  <block id="aba0754de2a797e1308f5b7fb9d2799a" category="cell">キャッシュNVDIMMのエナジーソース（BPM）スマート（Gen1）</block>
+  <block id="9228d22003d9bf6f445bf9c657f18e3d" category="cell">NVDIMMのキャッシュNVDIMMモジュールスマート（Gen2）</block>
+  <block id="3b40e256203cd6f53e1484e8aa20a129" category="cell">キャッシュNVDIMMの電源（BPM）をスマートにする（Gen2）</block>
+  <block id="8de62d5b40d3c405e29e6952fcd8bdc4" category="cell">NVDIMM NVDIMMモジュールMicron（Gen1）のキャッシュ</block>
+  <block id="273dca175c79c4482d049e2424cb3c18" category="cell">キャッシュNVDIMMエネルギーソース（PGEM）Agigatech（Gen1）</block>
+  <block id="19540d2aaf799c340af8ebc0ad50aa58" category="cell">NVDIMMのキャッシュNVDIMMモジュールMicron（Gen2）</block>
+  <block id="af136e041d4ab6bc2dd0195414406127" category="cell">Cache NVDIMM Energy Source（PGEM）Agigatech（Gen2）</block>
+  <block id="cdeba74adf4d6e9515df9fecdc2dc9eb" category="cell">キャッシュNVDIMMエネルギーソース（PGEM）Agigatech（Gen3）</block>
+  <block id="f7cb46c3d187eb433e2cd13c57f01de3" category="cell">ドライブSamsung PM963（SED）</block>
+  <block id="bbca6a95077ef321a79b0d7b8a0acf3c" category="cell">ドライブSamsung PM963（N-SED）</block>
+  <block id="25a64f957bec02d1a907af388215f1ec" category="cell">ドライブSamsung PM983（SED）</block>
+  <block id="6ff7edde4516afbd9aa1fbc3b6f9aa4e" category="cell">ドライブSamsung PM983（N-SED）</block>
+  <block id="e9ebcc2d513e23695ccb5684ba896dd2" category="cell">ドライブキオキシアCD5（SED）</block>
+  <block id="6eadfbbc249c37cb6b951937c9145da7" category="cell">ドライブキオキシアCD5（N-SED）</block>
+  <block id="5d1d544b875e8f0e267651f3c1dc72e3" category="cell">ドライブCD5（FIPS）</block>
+  <block id="5cfd33f46dd1f74b29ddee43372c8c66" category="cell">Samsung PM9A3ドライブ（SED）</block>
+  <block id="6df3968cc040ad2cb904b1a6ba10ad7b" category="cell">ドライブSKハイニックスPE8010（SED）</block>
+  <block id="80dddcfece551adcfa2c64f7d0c7e904" category="cell">ドライブSKハイニックスPE8010（N-SED）</block>
+  <block id="2ee8e09999beeee54d2bd467af8fa223" category="cell">*ストレージ・ファームウェア・バンドル2.164.0</block>
+  <block id="d4b212557e55b6e6583c0d02ccccd6eb" category="cell">2022年10月20日</block>
+  <block id="9671fe0cd1cee15ffc6e623894e0c90c" category="cell">3B11</block>
+  <block id="d7d76e22f94a7f97f91de8b48bb8e450" category="cell">3.94.07</block>
+  <block id="a0a080f42e6f13b3a2df133f073095dd" category="cell">122</block>
+  <block id="51de44f160b8b55c4e5d2ce02998d259" category="cell">16.32.1010</block>
+  <block id="b90192b2aeb39444852ac0e41788ae24" category="cell">26.2C</block>
+  <block id="2d079c532c696d6fea892213dcc69907" category="cell">1.30</block>
+  <block id="89769faf6029849ab91bac0aeb7f672f" category="cell">25.3C</block>
+  <block id="bdca6efb043178ef172612dd1e173dde" category="cell">1.10</block>
+  <block id="bca66716b9ca2d13a4c28be69b276777" category="cell">3.3</block>
+  <block id="0150391f6be250d4938acbe27c8a6334" category="cell">EDA5602Q</block>
+  <block id="d2a3d6fbce3a3051dfc130e0011c1e3f" category="cell">EDA5900Q</block>
+  <block id="b480fd4504480e5139a20c8cc66fcf79" category="cell">GDC5602Q</block>
+  <block id="37ac0290be70b74cc8f652c94b244484" category="cell">11092A10</block>
+  <block id="223b1fa9e807b6e3241516bda5bf6d35" category="cell">110B2A10</block>
+  <block id="68ed34bb8a8f8b7d7a0942f7a94cd4f2" category="cell">*ストレージ・ファームウェア・バンドル2.164.0～NetApp Element 12.7*</block>
+  <block id="76b32d0df4efa424b2efa6728e2b5da7" category="cell">*ストレージ・ファームウェア・バンドル2.150.4 *</block>
+  <block id="f9eaf28d7f6afbf4436dc40e7bcd160d" category="cell">GDC5502Q</block>
+  <block id="096d3b928cb77d0fdc812bee8c099ba0" category="cell">*ストレージ・ファームウェア・バンドル2.150.4～NetApp Element 12.5 *</block>
+  <block id="a631cac3230223bc3f32cb5e4546a73f" category="cell">* NetApp Element 12.3-2*までのストレージ・ファームウェア・バンドル2.99.4</block>
+  <block id="4879051613c070fa9236dc2575bc2430" category="cell">09/16/2021</block>
+  <block id="2af2c7d8343fff71b5f952a344782d55" category="cell">*ストレージ・ファームウェア・バンドル2.99.4～NetApp Element 12.3.1.165*</block>
+  <block id="48b742b3c5f2b045d4754ac2dac1943c" category="cell">*ストレージ・ファームウェア・バンドル2.99.2 *</block>
+  <block id="7516a2d6734219a47964dc8f30041a07" category="cell">* NetApp Element 12.3.1.103までのストレージ・ファームウェア・バンドル2.99.1</block>
+  <block id="d188ad5f6031514053f54b5286964cda" category="cell">3.86.07</block>
+  <block id="e4f50a0789ebf08fa05023e9a61c1010" category="cell">* NetApp Element 12.3 *までのストレージファームウェアバンドル2.99</block>
+  <block id="83661d0fed3532dca9f28b44c6432605" category="cell">*ストレージ・ファームウェア・バンドル2.76.8 *</block>
+  <block id="ff42d30418d0191fc7e1fde3b771c408" category="cell">*ストレージ・ファームウェア・バンドル2.27.1 *</block>
+  <block id="9f03278b1390caf3393a9e847bbb63cb" category="cell">3.84.07</block>
+  <block id="0a18b565f699b458e27a609f888ca3ae" category="cell">14.02.1002</block>
+  <block id="63a7c6669b7e20c8ea791d6ec1763099" category="cell">EDA5302Q</block>
+  <block id="ab58765784b661fc62339a36881d8ab7" category="cell">EDA5600Q</block>
+  <block id="939a740ce586c233759b09a82948a488" category="cell">*ストレージ・ファームウェア・バンドル2.76.8～NetApp Element 12.2.1 *</block>
+  <block id="ad6403dd0d9c1d5ca86140a3666b21ff" category="cell">06/022021</block>
+  <block id="a34da37a26e88fc95a7ddca290f879ec" category="cell">* NetApp Element 12.2(2*)までのストレージ・ファームウェア・バンドル</block>
+  <block id="1c8c88c43f4a0ea652e5ddeda67ffd35" category="cell">*ストレージ・ファームウェア・バンドル2.76.8～NetApp Element 12.0.1 *</block>
+  <block id="1a82c2d5238d08e9f6332a4de5623dd0" category="cell">*ストレージファームウェアバンドル1.2.17～NetApp Element 12.0*</block>
+  <block id="95eaa3da21290a58908937827e71bc2f" category="cell">3.78.07</block>
+  <block id="159617368b583f476d64b5a98ad4595c" category="cell">EDA5202Q</block>
+  <block id="20bc65670162736a7259642647385d1f" category="cell">EDA5200Q</block>
+  <block id="728c3ef9989eafa737ef1e78fe572dd0" category="cell">* NetApp Element 11.8 *</block>
+  <block id="57e28b7186503f0ef90817241a71671e" category="cell">2020年3月11日</block>
+  <block id="13448471d89a9cd8d7f71026a0334ec8" category="cell">0107.</block>
+  <block id="4da149c2ade5335cbd24426b3eabdedc" category="cell">* NetApp Element 11.7 *</block>
+  <block id="e92261f11fe71fddea1f753d1a00b412" category="cell">31010</block>
+  <block id="0cef1f42a7dcb861df2c82f06bef5501" category="cell">3.76.07</block>
+  <block id="eb160de1de89d9058fcb0b968dbbbd68" category="cell">117.</block>
+  <block id="84a5806c4e8f0a641adabe6a947e8ea7" category="cell">2. C</block>
+  <block id="7f8a3cb21bf6c31961c634036d0cfab6" category="cell">2.07</block>
+  <block id="a3bc1e7861db287c17dc93d46a7ad1ef" category="cell">* NetApp Element 11.5.1*</block>
+  <block id="5f1cc6c37caca365f29fc5485909da3f" category="cell">2020年2月20日</block>
+  <block id="794116110959f54684d3d5415ae3f5fd" category="cell">3A08</block>
+  <block id="14d91fe96711c07272c2d7e5e15ddc49" category="cell">* NetApp Element 11.5 *</block>
+  <block id="705e6c8b665423f4d766a8501a034bfa" category="cell">* NetApp Element 11.3.0 *</block>
+  <block id="28b1849a6cd1c75972de6822a5ce0c9b" category="cell">2020年2月19日</block>
+  <block id="3c9aebf06f1243bd2184aacc5838be0b" category="cell">* NetApp Element 11.3.1.1 *</block>
+  <block id="ced64f3fd7046f3a488311d86ec38903" category="cell">* NetApp Element 11.1.1 *</block>
+  <block id="d5c20bed749ed3a53e99ac88b147cc1e" category="cell">3A06</block>
+  <block id="bcfa7ab5d9104ea28feee9f6b39e8605" category="cell">3.70.07</block>
+  <block id="dee270d34058f9a2f7487f044497fd38" category="cell">* NetApp Element 11.1 *</block>
+  <block id="48ec0ec3eae85c803f25de5e893afcd7" category="cell">* NetApp Element 11.0.2*</block>
+  <block id="c31a8fd432f03eb7157e47d995182405" category="cell">* NetApp Element 11*</block>
+  <block id="c33066dcfbd5d20e4cfb37008beaaafe" category="section-title">ストレージファームウェアバンドルで管理されていないコンポーネントファームウェア</block>
+  <block id="227c9a49d0445b0faacfdd02bf1448d8" category="paragraph">次のファームウェアはストレージファームウェアバンドルで管理されていません。</block>
+  <block id="6f6e63d50ee3fda10d779e0d7725a0fa" category="cell">ブートデバイス</block>
+  <block id="9d3a9fcb16bf4adf9bc799b6496ad0fe" category="paragraph">*モデル番号（ファミリー部）：* H410S *フルモデル番号：* SH410S -0、SH410S -1、SH410S -1、SH410S -2</block>
+  <block id="7e2c70fe26452c962e901d547afb8f0c" category="paragraph">ストレージファームウェアバンドルで管理されるコンポーネントファームウェア。</block>
+  <block id="da5cbb1097393d6916987f43b61c8c5e" category="cell">10 / 25GbE NIC SMCI Mellanox</block>
+  <block id="a7eb1ce55aedf794ba783c905c1a7995" category="cell">NVDIMM RMS200をキャッシュします</block>
+  <block id="08641da985d09dcaa0d20bf79da0d3c8" category="cell">NVDIMM RMS300をキャッシュします</block>
+  <block id="ec1068adfaa16c1deb22dd7c994f459a" category="cell">ドライブSamsung PM863（SED）</block>
+  <block id="13b894e9a8633f266b20839e2f8465b6" category="cell">ドライブSamsung PM863（N-SED）</block>
+  <block id="6b4633d853ed19436d779041f8ac3490" category="cell">ドライブ東芝ホーク-4（SED）</block>
+  <block id="60d788b5461ac876fe9e656fd99ba55a" category="cell">ドライブ東芝ホーク-4 (N-Sドライブ)</block>
+  <block id="02057cc854600d68c5fb8b16e44333cb" category="cell">ドライブSamsung PM883（SED）</block>
+  <block id="8a80462f5d95f3e749a944e16740bc37" category="cell">HXT7A04Q</block>
+  <block id="fecef1f3257db1c56b2809ab7f1d9879" category="cell">* NetApp Element 11.8.2.</block>
+  <block id="9733899a197ba17a05e1c36d76587410" category="cell">* NetApp Element 11.8.1*</block>
+  <block id="27a02e379dd2c114ce96c377013a56a3" category="cell">* NetApp Element 11.0*</block>
+  <block id="a74f6ab3a02e9ba6e5fee0ab938f75c2" category="cell">マイクロコントローラユニット（MCU）</block>
+  <block id="836eb480bf66641d4fb44675e000d22b" category="cell">1.18</block>
+  <block id="09c6b739887df91f78d60d4a00998645" category="cell">Boot Device SSDSCJB240G7</block>
+  <block id="b4b6eed26c1b7fb010effa45dbd8e250" category="cell">ブートデバイスMTFDDAV240TCB1AR</block>
+  <block id="2de79e7b8c77e4847d6bcd5a8ee879ce" category="section-title">[[sf_nodes]] SF38410、SF19210、SF9605、SF4805</block>
+  <block id="fc7b9c0546e7d4972b0e2c8495d3ed48" category="paragraph">*フルモデル番号：* SF38410、SF19210、SF9605、SF4805</block>
+  <block id="220071ab44b426f80ef21f1c552c363c" category="cell">NIC</block>
+  <block id="b7a94f3bf805dd30bc00a3663f3f2464" category="cell">NVDIMM RMS200（RMS200）のキャッシュ</block>
+  <block id="5299c51e79a24211e817dccc91a4e700" category="cell">NVDIMM RMS200（RMS300）のキャッシュ</block>
+  <block id="100ff17a6b36ad7642954c2fd974ed5f" category="cell">2021年8月3日</block>
+  <block id="55fc3b139c0a126af7257f980acb20c5" category="cell">Identity Moduleの略</block>
+  <block id="c9c5cc2efc04287e6fe8d7feebf032aa" category="cell">N41WC 1.02</block>
+  <block id="126078d2e17c3ac2589cca85b30163c7" category="cell">起動デバイス</block>
 </blocks>

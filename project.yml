@@ -374,6 +374,8 @@ homepage:
     links:
     - title: 製品の概要
       url: "/docs/concept_hci_product_overview.html"
+    - title: サポートされているファームウェアおよびESXiドライバのバージョン
+      url: docs/firmware_driver_versions.html
     - title: リリースノート
       url: "/docs/rn_relatedrn.html"
     - title: 新機能
