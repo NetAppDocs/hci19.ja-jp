@@ -2002,17 +2002,9 @@
   <block id="9cce958dcc64c232fd2c1c35b2dadde7" category="list-text"><block ref="9cce958dcc64c232fd2c1c35b2dadde7" category="inline-link-macro-rx"></block></block>
   <block id="ec44888d025d4ddae04c2461c877b1eb" category="summary">REST API UI を使用してコンピューティングノードアセットを管理ノードの構成に追加するには、ハードウェアタグが必要です。</block>
   <block id="c483f82946735c5ca5698f1fc1040122" category="doc">コンピューティングノードのハードウェアタグを確認する方法</block>
-  <block id="6dcfa9cd7840ccf3dd3b56ac2f95c517" category="paragraph">このセクションでは、コンピューティングノードのハードウェアタグを確認する方法について説明します。</block>
   <block id="7c6477f25c22d13e15a77d85b6584b69" category="list-text">vSphere Web Client ナビゲータでホストを選択します。</block>
   <block id="0c39613a4d355765e3c6e885914dd859" category="list-text">[*Monitor*] タブを選択し、 [*Hardware Health*] を選択します。</block>
-  <block id="5bda68c4fcd7a9979eccfd0348b09494" category="list-text">実行している vSphere のバージョンに応じて、ハードウェアタグは * Hardware Health * 画面の次のいずれかの場所にあります。</block>
   <block id="cff71303ad38702f3f76b04d53170202" category="list-text">タグが BIOS の製造元とモデル番号で表示されているかどうかを確認します。</block>
-  <block id="d70118c13354555917fde4b6088a9583" category="inline-image-macro">ハードウェアの健常性</block>
-  <block id="adb31c712c26ddc2a65a373961e263a9" category="paragraph"><block ref="adb31c712c26ddc2a65a373961e263a9" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="d21c4a45cbd75d1ead015e3e933158e3" category="list-text">[ * 構成 * （ Configure * ） ] タブを選択します。サイドバーから、「 * Hardware * 」および「 * Overview * 」を選択します。ハードウェアタグが「システム」テーブルに表示されているかどうかを確認します。</block>
-  <block id="dca98c8002ae66dd3c8d9ff91fb6d0d1" category="paragraph"><block ref="dca98c8002ae66dd3c8d9ff91fb6d0d1" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="c36d4c54bb2d689723c264a2d2a063fa" category="list-text">「タグ」の値をコピーして保存します。</block>
-  <block id="87f6bf2e583577f394c3f95912812d52" category="list-text">コンピューティングノードアセットを管理ノードに追加するには、に進みます <block ref="2352f3885b59ba25b5eef550a3d7cf2b" category="inline-xref-macro-rx"></block>。</block>
   <block id="c22d54980e737e20937f0c5ba6b6861f" category="summary">NetApp HCI の導入時に VMware vSphere を設定する方法について説明します。</block>
   <block id="6dce92aea91c0e0b42ccb7dbd6674b85" category="doc">NetApp HCI クレデンシャルを設定する</block>
   <block id="50b712e2a5640c669b4298ab11f145fb" category="paragraph">導入時に、新しく導入する VMware vSphere 環境、 NetApp HCI のコンピューティングリソースとストレージリソース、および管理ノードで使用する一連のクレデンシャルを定義します。既存の vSphere 環境に NetApp HCI を導入する場合、既存の vCenter Server にこれらのクレデンシャルは適用されません。</block>
@@ -6545,4 +6537,18 @@
   <block id="55fc3b139c0a126af7257f980acb20c5" category="cell">Identity Moduleの略</block>
   <block id="c9c5cc2efc04287e6fe8d7feebf032aa" category="cell">N41WC 1.02</block>
   <block id="126078d2e17c3ac2589cca85b30163c7" category="cell">起動デバイス</block>
+  <block id="23b3a48d47a3fd536d5c54ea75a7eefb" category="open-title">VMware vSphere 8.0および7.0</block>
+  <block id="ae59d381892bdaf350b92a7fff9bf580" category="paragraph">VMware vSphere Web Client 8.0および7.0でコンピューティングノードのハードウェアタグを確認します。</block>
+  <block id="80a001796e4c0f858772746a6137ef88" category="list-text">[ * 構成 * （ Configure * ） ] タブを選択します。</block>
+  <block id="e43e206ad4c35060f7e71484a5a425d1" category="list-text">サイドバーから、* Hardware *&gt;* Overview *を選択します。ハードウェアタグがに表示されているかどうかを確認します<block ref="a45da96d0bf6575970f2d27af22be28a" prefix=" " category="inline-code"></block> 表。</block>
+  <block id="a4acf8aea4cc4df444483a46a3f9a8af" category="inline-image-macro">Systemテーブルのスクリーンショット</block>
+  <block id="3e1fc8dd1a61fb9949d66fb3fec7a4f1" category="paragraph"><block ref="3e1fc8dd1a61fb9949d66fb3fec7a4f1" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="697c9a70b700f87298a22099eec56065" category="list-text">*Tag*の値をコピーして保存します。</block>
+  <block id="24ffac3237a0bbaf0c6b4da4b442f490" category="inline-xref-macro">コンピューティングアセットとコントローラアセットを管理ノードに追加します</block>
+  <block id="75d083f97a3a7e8966aca802f2dde56f" category="list-text"><block ref="4f3c676a4843a806e3db36266c9cffeb" category="inline-xref-macro-rx"></block>。</block>
+  <block id="6c4726c34859eabb5a8f79877442596b" category="open-title">VMware vSphere 6.7および6.5</block>
+  <block id="bc0fdc78d569da6b846fbab387c72daa" category="paragraph">VMware vSphere Web Client 6.7および6.5で、コンピューティングノードのハードウェアタグを確認します。</block>
+  <block id="0e8cf642a589908959f336f3b9178ba7" category="paragraph"><block ref="0e8cf642a589908959f336f3b9178ba7" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="22e88e4089c8681eb3fe26ebca3e4cc5" category="cell">* Compute Firmware Bundle 2.150.4～NetApp HCI 1.10 *</block>
+  <block id="a6bbe5a2ef47a653214029cd4a762104" category="cell">* Compute Firmware Bundle 2.146.2*</block>
 </blocks>
