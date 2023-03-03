@@ -4938,7 +4938,6 @@
   <block id="58a52fbda63276026c2618b0f43d5bfe" category="list-text">ストレージクラスタにログインし、正しい MVIP に接続していることを確認します。</block>
   <block id="5893e9a018c1b1a1d512a0185ce81928" category="list-text">iSCSI セッション数が 0 であることを確認します。</block>
   <block id="3f1291e4a033df94b729b1b4f2f98180" category="list-text">クラスタ &gt; ノード &gt; アクティブ * と進み、クラスタ内のすべてのアクティブノードのノード ID を記録します。</block>
-  <block id="4946afec1638f740d391cce22ca9d383" category="list-text">NetApp HCI ストレージクラスタの電源をオフにするには、 Web ブラウザを開き、次の URL を使用して電源オフおよび停止の手順を実行します。 '{MVIP}' は NetApp HCI ストレージ・システムの管理 IP アドレスで 'nodes=[]' アレイには ' 手順 2 で記録したノード ID が含まれています例：</block>
   <block id="c221d53c4bd8e82dbb6d5c729ae18dec" category="list-text">クラスタ管理者のユーザ名とパスワードを入力します。</block>
   <block id="df2a4b92aa65e89d6a69ac777d6e1966" category="list-text">すべてのストレージクラスタノードが API 結果の「必要」セクションに含まれていることを確認して、 API 呼び出しが正常に返されたことを検証します。</block>
   <block id="0329cdf242b826758b5f146f803697de" category="paragraph">すべての NetApp HCI ストレージノードの電源がオフになりました。</block>
@@ -6551,4 +6550,16 @@
   <block id="0e8cf642a589908959f336f3b9178ba7" category="paragraph"><block ref="0e8cf642a589908959f336f3b9178ba7" category="inline-image-macro-rx" type="image"></block></block>
   <block id="22e88e4089c8681eb3fe26ebca3e4cc5" category="cell">* Compute Firmware Bundle 2.150.4～NetApp HCI 1.10 *</block>
   <block id="a6bbe5a2ef47a653214029cd4a762104" category="cell">* Compute Firmware Bundle 2.146.2*</block>
+  <block id="811c3e17cdcbc0d2918ccd135b702fad" category="list-text">（オプション）ホストからのすべてのI/O処理が停止したことを確認します。</block>
+  <block id="49fd465e6accbc44477708b2756a0289" category="list-text">使用している1つ以上のハイパーバイザーに適したコマンドを使用して、ホスト側からのI/Oを休止します。</block>
+  <block id="47aa9240e90a7b94289f8a7cf08853f9" category="list-text">クラスタUIで、* Reporting *&gt;* Overview *を選択します。[クラスタの入出力]グラフにアクティビティが表示されていないことを確認します。</block>
+  <block id="b024a0dfe5c2df4ef82fcfbd2177b6b1" category="list-text">すべてのI/O処理が停止したら、20分待ってからクラスタをシャットダウンします。</block>
+  <block id="c8561c42a30e6fcda84bba58a5dbb84c" category="list-text">NetApp HCI ストレージクラスタの電源をオフにするには、Webブラウザを開き、次のURLを使用して電源オフおよび停止手順 を呼び出します<block ref="00aa3917f94a85909099442cdf1f914c" prefix=" " category="inline-code"></block> は、NetApp HCI ストレージシステムおよびの管理IPアドレスです<block ref="f5058d08365e441f6806289968bdd801" prefix=" " category="inline-code"></block> アレイには、手順4で記録したノードIDが含まれます。例：</block>
+  <block id="84238b2d8b7319262b2e3d61a903e693" category="admonition">シークレットウィンドウでコマンドを実行すると、保存されているURLから以降の段階でコマンドが実行されないようにすることができます。</block>
+  <block id="6eb2aff6a3f188fb6f4a2e9fa0f75cdb" category="list-text">[戻る]ボタンを選択しないようにブラウザまたはタブを閉じてAPI呼び出しを繰り返します。</block>
+  <block id="391aec42faef3b52d4eaaefa153733b2" category="paragraph">クラスタを再起動するときは、特定の手順に従ってすべてのノードがオンラインになったことを確認する必要があります。</block>
+  <block id="56312700a2d03ce6cacae049f3294807" category="list-text">すべての重大度とを確認します<block ref="945c53fff9195b4e69a31c30b6a268c6" prefix=" " category="inline-code"></block> クラスタの障害が解決されました。</block>
+  <block id="6331b65d2bb9f0f39b6e8331e5b2c669" category="list-text">クラスタが安定するまで10～15分待ちます。</block>
+  <block id="301bf6ea727a40a8d5cc8608cc0c41d7" category="list-text">データにアクセスするためのホストの起動を開始します。</block>
+  <block id="c192e3c2dbd374233d4685406db01520" category="paragraph">メンテナンス後にノードの電源をオンにして正常であることを確認する時間を長くしたい場合は、データの同期を遅らせて不要なビンの同期を回避する方法についてテクニカルサポートにお問い合わせください。</block>
 </blocks>
