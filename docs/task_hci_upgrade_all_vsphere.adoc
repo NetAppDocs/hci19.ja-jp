@@ -23,7 +23,7 @@ NetApp HCI 環境の VMware vSphere コンポーネントをアップグレー�
 +
 [IMPORTANT]
 ====
-NetApp Element vCenter Server 5.0にアップグレードすると、回避策 を適用せずにVMware vCenter 7.0 Update 3でプラグインを導入できるようになります。
+回避策 を適用せずにVMware vCenter 7.0 Update 3でプラグインを導入できるようにするには、NetApp Element Plug-in for vCenter Server 5.0以降にアップグレードしてください。
 
 Element Plug-in for vCenter Server 4.xでVMware vCenter Server 7.0 Update 3にアップグレードした場合、プラグイン4.xを導入できません。Spring Framework 4を使用してこの問題 を解決するには、を参照してください https://kb.netapp.com/Advice_and_Troubleshooting/Hybrid_Cloud_Infrastructure/NetApp_HCI/vCenter_plug-in_deployment_fails_after_upgrading_vCenter_to_version_7.0_U3["こちらの技術情報アーティクル"^]。
 

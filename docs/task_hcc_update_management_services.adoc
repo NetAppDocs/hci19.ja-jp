@@ -24,7 +24,7 @@ Element 11.3 以降の管理ノードリリースでは、個々のサービス�
 
 [NOTE]
 ====
-* 管理サービス2.22.7には、リモートプラグインが含まれるNetApp Element Plug-in for VMware vCenter Server 5.0が含まれています。Elementプラグインを使用する場合は、ローカルプラグインのサポートを削除するVMwareディレクティブに従ってバージョン5.0にアップグレードする必要があります。 https://kb.vmware.com/s/article/87880["詳細はこちら。"^]。プラグインを使用しない場合は、これはオプションのアップグレードです。
+* 管理サービス2.22.7には、リモートプラグインを含むElement Plug-in for vCenter Server 5.0が含まれています。Elementプラグインを使用する場合は、ローカルプラグインのサポートを削除するVMwareの指示に従って、管理サービス2.22.7以降にアップグレードする必要があります。 https://kb.vmware.com/s/article/87880["詳細はこちら。"^]。
 * 各サービスバンドルの主要なサービス、新機能、バグ修正、および対処方法について説明した最新の管理サービスリリースノートについては、を参照してください https://kb.netapp.com/Advice_and_Troubleshooting/Data_Storage_Software/Management_services_for_Element_Software_and_NetApp_HCI/Management_Services_Release_Notes["管理サービスのリリースノート"^]
 
 
@@ -41,10 +41,6 @@ https://<ManagementNodeIP>
 . ストレージクラスタ管理者のクレデンシャルを指定して NetApp Hybrid Cloud Control にログインします。
 . インターフェイスの右上にある [* Upgrade] を選択します。
 . EULAがポップアップ表示されます。下にスクロールして、[現在および今後のすべての更新を許可する*]を選択し、[保存*]を選択します。
-+
-
-NOTE: EULAに同意すると、以後のすべての更新についてそのEULAが記録され、自動ダウンロード機能が有効になります。ネットアップのソフトウェアの更新とアップグレードに関する最新情報が提供されます。この情報はお客様の自由裁量と利便性に基づいてインストールすることができます。ネットアップオンラインソフトウェアリポジトリへのネットワーク接続を無効にすることで、自動ダウンロード機能を無効にできます。
-
 
 
 .オプションを更新します
@@ -52,7 +48,6 @@ NOTE: EULAに同意すると、以後のすべての更新についてそのEULA
 
 * <<Hybrid Cloud Control を使用して管理サービスを更新します>> （推奨方法）
 * <<管理ノード API を使用して管理サービスを更新する>>
-* <<ダーク用の管理ノード API を使用して管理サービスを更新します サイト>>
 
 
 
@@ -89,86 +84,19 @@ https://<ManagementNodeIP>
 . ストレージクラスタ管理者のクレデンシャルを指定して NetApp Hybrid Cloud Control にログインします。
 . インターフェイスの右上にある [* Upgrade] を選択します。
 . アップグレードページで、 * 管理サービス * タブを選択します。
-+
-Management Services タブには、管理サービスソフトウェアの現在および使用可能なバージョンが表示されます。
-
-+
-
-NOTE: インターネットにアクセスできない環境では、現在のソフトウェアバージョンのみが表示されます。外部接続を使用していても、 NetApp HCI からネットアップのオンラインリポジトリにアクセスできない場合は、を確認してください link:task_mnode_configure_proxy_server.html["プロキシ設定："^]。
-
-. インターネットにアクセスできる環境で、管理サービスのアップグレードが可能な場合は、 * アップグレードの開始 * を選択します。
-. インターネットにアクセスできない場合は、次の手順を実行します。
-+
-.. ページの指示に従って、管理サービスのアップグレードパッケージをダウンロードし、コンピュータに保存します。
-.. 「 * 参照 * 」を選択して、保存したパッケージを検索し、アップロードします。
+. ページの指示に従って、管理サービスのアップグレードパッケージをダウンロードし、コンピュータに保存します。
+. 「 * 参照 * 」を選択して、保存したパッケージを検索し、アップロードします。
 +
 パッケージをアップロードすると、アップグレードが自動的に開始されます。
 
-
-
-
-
++
 アップグレードの開始後は、このページにアップグレードのステータスが表示されます。アップグレードの実行中に NetApp Hybrid Cloud Control との接続が失われ、ログインし直さないとアップグレードの結果が表示されないことがあります。
 
 
 
+
+
 == 管理ノード API を使用して管理サービスを更新する
-
-管理サービスの更新は、 NetApp Hybrid Cloud Control から実行することを推奨します。ただし、管理ノードから REST API UI を使用して管理サービスを手動で更新することはできます。
-
-.作業を開始する前に
-* 管理ノード 11.3 以降が実行されていることを確認します。
-* 管理サービスをバージョン 2.16 以降に更新する場合、管理ノード 11.3 から 11.8 を実行しているときは、管理サービスを更新する前に管理ノード VM の RAM を増やす必要があります。
-+
-.. 管理ノード VM の電源をオフにします。
-.. 管理ノード VM の RAM を 12GB から 24GB RAM に変更します。
-.. 管理ノード VM の電源をオンにします。
-
-
-* クラスタで NetApp Element ソフトウェア 11.3 以降を実行している必要があります。
-* 管理サービスをバージョン 2.1.326 以上にアップグレードしておきます。NetApp Hybrid Cloud Control のアップグレードは、それよりも前のサービスバンドルでは利用できません。
-
-
-
-NOTE: 各サービスバンドルバージョンで使用可能なサービスのリストについては、を参照してください https://kb.netapp.com/Advice_and_Troubleshooting/Data_Storage_Software/Management_services_for_Element_Software_and_NetApp_HCI/Management_Services_Release_Notes["管理サービスリリースノート"^]。
-
-.手順
-. 管理ノードで REST API UI を開きます https://<ManagementNodeIP>/mnode`
-. 「 * Authorize * 」（認証）を選択して、次の手順を実行
-+
-.. クラスタのユーザ名とパスワードを入力します。
-.. 値がまだ入力されていない場合は、クライアント ID を「 m node-client 」として入力します。
-.. セッションを開始するには、 * Authorize * を選択します。
-.. ウィンドウを閉じます。
-
-
-. （任意）利用可能な管理ノードサービスのバージョンを確認します。「 get/services/versions
-. （任意）最新バージョンの詳細情報を取得します。「 get/services/versions/latest
-. （任意）特定のバージョンに関する詳細情報を取得します。「 get/services/versions/{version}/info`
-. 次のいずれかの管理サービス更新オプションを実行します。
-+
-.. このコマンドを実行して ' 管理ノードサービスの最新バージョン (put/services/update/latest) に更新します
-.. このコマンドを実行して ' 管理ノードサービスの特定のバージョン (PUT /services/update/{version}) に更新します
-
-
-. 「 get/services/update/status 」を実行して、更新のステータスを監視します。
-+
-更新が成功すると、次の例のような結果が返されます。
-
-+
-[listing]
-----
-{
-"current_version": "2.10.29",
-"details": "Updated to version 2.14.60",
-"status": "success"
-}
-----
-
-
-
-
-== ダーク用の管理ノード API を使用して管理サービスを更新します サイト
 
 管理サービスの更新は、 NetApp Hybrid Cloud Control から実行することを推奨します。ただし、 REST API を使用して、管理サービスのサービスバンドルの更新を管理ノードに手動でアップロード、展開、および導入することができます。管理ノード用の REST API UI から各コマンドを実行できます。
 
@@ -182,7 +110,11 @@ NOTE: 各サービスバンドルバージョンで使用可能なサービス�
 
 
 * クラスタで NetApp Element ソフトウェア 11.3 以降を実行している必要があります。
-* からサービスバンドルの更新をダウンロードしておきます https://mysupport.netapp.com/site/products/all/details/mgmtservices/downloads-tab["ネットアップサポートサイト"^] ダークサイトで使用可能なデバイスへ。
+* 管理サービスをバージョン 2.1.326 以上にアップグレードしておきます。NetApp Hybrid Cloud Control のアップグレードは、それよりも前のサービスバンドルでは利用できません。
++
+
+NOTE: 各サービスバンドルバージョンで使用可能なサービスのリストについては、を参照してください https://kb.netapp.com/Advice_and_Troubleshooting/Data_Storage_Software/Management_services_for_Element_Software_and_NetApp_HCI/Management_Services_Release_Notes["管理サービスリリースノート"^]。
+
 
 
 .手順
