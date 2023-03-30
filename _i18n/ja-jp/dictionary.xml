@@ -6516,4 +6516,24 @@
   <block id="04bac97a16b610a555c29c398dc04860" category="paragraph">[* ストレージ * ] タブには、インストールの一部であるストレージクラスタが一覧表示されます。NetApp Hybrid Cloud Control からクラスタにアクセスできない場合は、 * Upgrades * ページに表示されません。Element 12.0 以降を実行しているクラスタでは、これらのクラスタの現在のファームウェアバンドルバージョンが表示されます。1 つのクラスタ内のノードでファームウェアバージョンが異なる場合やアップグレードが進むにつれて、「 * Current Firmware Bundle Version * 」列に「 * Multiple * 」と表示されます。「 * multiple * 」を選択すると、「 * Nodes * 」ページに移動してファームウェアバージョンを比較できます。すべてのクラスタで 12.0 よりも前のバージョンの Element を実行している場合、ファームウェアバンドルのバージョン番号に関する情報は表示されません。この情報は、 * Nodes * ページでも確認できます。を参照してください <block ref="4d8bfbcb84a29a1601595359b67752e6" category="inline-link-macro-rx"></block>。</block>
   <block id="df3b4418989705f2099ec054a495c6ff" category="paragraph">クラスタが最新の状態であり、アップグレードパッケージがない場合は、「 * Element * 」タブと「 * Firmware only * 」タブは表示されません。これらのタブは、アップグレードの実行中は表示されません。[ * 要素 * ] タブが表示されているが、 [ * ファームウェアのみ * ] タブが表示されていない場合は、ファームウェアパッケージは利用できません。</block>
   <block id="c7f3047b6654f1cb88fcfe6e47c92593" category="cell">このステータスは、ストレージサービスAPIがアップグレードステータスの一覧に含まれていないアップグレードステータスを返した場合に表示されます。</block>
+  <block id="f3239c80004833605a44320f76f29a78" category="paragraph">デフォルトのSSL証明書を変更します。</block>
+  <block id="00b6f5df795659d436d482ffd81033aa" category="inline-link-macro">管理ノードのデフォルトSSL証明書を変更します</block>
+  <block id="fe6a80fba2305243dd21703b873b6d51" category="list-text"><block ref="fe6a80fba2305243dd21703b873b6d51" category="inline-link-macro-rx"></block></block>
+  <block id="f6e1cbdb2c7e86d550e022623d7c9169" category="summary">NetApp Element API を使用して、クラスタ内のストレージノードのデフォルト SSL 証明書と秘密鍵を変更できます。</block>
+  <block id="96c37e9c5684e9f2a7ffd6a79512cde2" category="paragraph">NetApp Element APIを使用して、管理ノードのデフォルトのSSL証明書と秘密鍵を変更できます。</block>
+  <block id="d311117e36e090462c70d49316078938" category="paragraph">管理ノードを設定すると、一意の自己署名Secure Sockets Layer（SSL）証明書と秘密鍵が作成され、Element UI、ノードUI、またはノードAPIを使用してすべてのHTTPS通信に使用されます。Element ソフトウェアは、自己署名証明書に加え、信頼できる認証局（ CA ）が発行して検証する証明書をサポートします。</block>
+  <block id="774ce4e623f683d68865c30ea0ac37fa" category="paragraph">次の API メソッドを使用して、デフォルトの SSL 証明書に関する詳細情報を取得し、変更を加えることができます。</block>
+  <block id="8fff04b1c0c323ac1aac0d43f5e6b4f8" category="list-text">* GetNodeSSLCertificate *</block>
+  <block id="a07612f154836b90b33c91e3d4becfe8" category="inline-link">GetNodeSSLCertificateメソッド</block>
+  <block id="82dbb37b6e9a2077987c0f59bb5d915c" category="paragraph">を使用できます<block ref="6b57dff7c4826c966a42c49802a3deb0" category="inline-link-rx"></block> 現在インストールされているSSL証明書に関する情報（すべての証明書の詳細を含む）を取得します。</block>
+  <block id="58f6e4a954eca307131e675eba49accc" category="list-text">* SetNodeSSLCertificate *</block>
+  <block id="123b81eef3f2300f60e089e9078ee7c3" category="inline-link">SetNodeSSLCertificateメソッド</block>
+  <block id="ce93a023e7cdde76b41063e5fcaa191b" category="paragraph">を使用できます<block ref="da3ab47be31170d5453f00843cc9d581" category="inline-link-rx"></block> クラスタおよびノード単位のSSL証明書を、指定した証明書と秘密鍵に設定します。証明書と秘密鍵はシステムで検証されるため、無効な証明書が適用されることはありません。</block>
+  <block id="6f54d04f05c4e4a65ca53b1028d1207b" category="list-text">* RemoveNodeSSLCertificate *</block>
+  <block id="9b65a6a78c1794a21bc06b75e90962bb" category="inline-link">RemoveNodeSSLCertificateメソッド</block>
+  <block id="9e08f10312f3eaa134087c34ad076d92" category="paragraph">これ<block ref="f76e21c4f97e9ef2eb0114383d271ddf" category="inline-link-rx"></block> 現在インストールされているSSL証明書と秘密鍵を削除します。そのあと、クラスタで新しい自己署名証明書と秘密鍵が生成されます。</block>
+  <block id="f056eadecebc58790da8eb91b5211492" category="inline-link">Element SoftwareでのカスタムSSL証明書の設定に関する要件を教えてください。</block>
+  <block id="e3b4df69e2fe4e8545e5e0240eada6a2" category="list-text"><block ref="e3b4df69e2fe4e8545e5e0240eada6a2" category="inline-link-rx"></block></block>
+  <block id="631923a687ff82d68973d99b95597b47" category="inline-link">SolidFire and Element Resources ページにアクセスします</block>
+  <block id="238c5b123e3473c57e2925edccb205c2" category="list-text"><block ref="238c5b123e3473c57e2925edccb205c2" category="inline-link-rx"></block></block>
 </blocks>

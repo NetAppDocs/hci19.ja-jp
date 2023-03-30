@@ -32,6 +32,11 @@ Element ソフトウェアバージョン 11.3 以降を実行するクラスタ
 * link:task_mnode_access_ui.html["管理ノード（ UI または REST API ）へのアクセス"]
 
 
+デフォルトのSSL証明書を変更します。
+
+* link:reference_change_mnode_default_ssl_certificate.html["管理ノードのデフォルトSSL証明書を変更します"]
+
+
 管理ノード UI を使用してタスクを実行します。
 
 * link:task_mnode_work_overview_UI.html["管理ノード UI の概要"]

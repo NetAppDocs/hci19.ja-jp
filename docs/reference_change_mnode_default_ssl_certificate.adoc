@@ -1,0 +1,42 @@
+---
+permalink: mnode/reference_change_mnode_default_ssl_certificate.html 
+sidebar: sidebar 
+keywords: ssl certificate, SSL, private key, self-signed, cluster, nodes, user-defined certificate, API, change default certificate, certificate, Element API, mnode 
+summary: NetApp Element API を使用して、クラスタ内のストレージノードのデフォルト SSL 証明書と秘密鍵を変更できます。 
+---
+= 管理ノードのデフォルトSSL証明書を変更します
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+NetApp Element APIを使用して、管理ノードのデフォルトのSSL証明書と秘密鍵を変更できます。
+
+管理ノードを設定すると、一意の自己署名Secure Sockets Layer（SSL）証明書と秘密鍵が作成され、Element UI、ノードUI、またはノードAPIを使用してすべてのHTTPS通信に使用されます。Element ソフトウェアは、自己署名証明書に加え、信頼できる認証局（ CA ）が発行して検証する証明書をサポートします。
+
+次の API メソッドを使用して、デフォルトの SSL 証明書に関する詳細情報を取得し、変更を加えることができます。
+
+* * GetNodeSSLCertificate *
++
+を使用できます https://docs.netapp.com/us-en/element-software/api/reference_element_api_getnodesslcertificate.html["GetNodeSSLCertificateメソッド"^] 現在インストールされているSSL証明書に関する情報（すべての証明書の詳細を含む）を取得します。
+
+* * SetNodeSSLCertificate *
++
+を使用できます https://docs.netapp.com/us-en/element-software/api/reference_element_api_setnodesslcertificate.html["SetNodeSSLCertificateメソッド"^] クラスタおよびノード単位のSSL証明書を、指定した証明書と秘密鍵に設定します。証明書と秘密鍵はシステムで検証されるため、無効な証明書が適用されることはありません。
+
+* * RemoveNodeSSLCertificate *
++
+これ https://docs.netapp.com/us-en/element-software/api/reference_element_api_removenodesslcertificate.html["RemoveNodeSSLCertificateメソッド"^] 現在インストールされているSSL証明書と秘密鍵を削除します。そのあと、クラスタで新しい自己署名証明書と秘密鍵が生成されます。
+
+
+
+
+
+== 詳細については、こちらをご覧ください
+
+* https://docs.netapp.com/us-en/element-software/storage/reference_post_deploy_change_default_ssl_certificate.html["Element ソフトウェアのデフォルトの SSL 証明書を変更"^]
+* https://kb.netapp.com/Advice_and_Troubleshooting/Data_Storage_Software/Element_Software/What_are_the_requirements_around_setting_custom_SSL_certificates_in_Element_Software%3F["Element SoftwareでのカスタムSSL証明書の設定に関する要件を教えてください。"^]
+* https://www.netapp.com/data-storage/solidfire/documentation["SolidFire and Element Resources ページにアクセスします"^]
+* https://docs.netapp.com/us-en/vcp/index.html["vCenter Server 向け NetApp Element プラグイン"^]
+
