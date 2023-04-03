@@ -194,7 +194,7 @@ sidebar:
       - title: 管理ノードにアクセスします
         url: "/docs/task_mnode_access_ui.html"
       - title: 管理ノードのデフォルトSSL証明書を変更します
-        url: "/mnode/reference_change_mnode_default_ssl_certificate.html"
+        url: "/docs/reference_change_mnode_default_ssl_certificate.html"
       - title: 管理ノード UI の操作
         entries:
         - title: 管理ノード UI の概要

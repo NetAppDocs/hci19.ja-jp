@@ -1,5 +1,5 @@
 ---
-permalink: mnode/reference_change_mnode_default_ssl_certificate.html 
+permalink: docs/reference_change_mnode_default_ssl_certificate.html 
 sidebar: sidebar 
 keywords: ssl certificate, SSL, private key, self-signed, cluster, nodes, user-defined certificate, API, change default certificate, certificate, Element API, mnode 
 summary: NetApp Element API を使用して、クラスタ内のストレージノードのデフォルト SSL 証明書と秘密鍵を変更できます。 
