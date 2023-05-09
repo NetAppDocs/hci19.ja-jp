@@ -36,4 +36,4 @@ NOTE: カスタム保護ドメインを使用すると、ノードがシャー�
 
 == 詳細については、こちらをご覧ください
 
-link:api/index.html["Element API を使用してストレージを管理します"]
+https://docs.netapp.com/us-en/element-software/api/index.html["Element API を使用してストレージを管理します"^]

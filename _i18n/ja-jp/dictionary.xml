@@ -685,8 +685,6 @@
   <block id="85dcef363aee58216fb5391e1fe35922" category="list-text"><block ref="85dcef363aee58216fb5391e1fe35922" category="inline-link-rx"></block></block>
   <block id="da3eb0bd8c882a21931739ac39ce915a" category="inline-link">NetApp Element Plug-in for vCenter Server のドキュメント</block>
   <block id="412377cf78b07a27c835e112fdfa7507" category="list-text"><block ref="412377cf78b07a27c835e112fdfa7507" category="inline-link-rx"></block></block>
-  <block id="1f9e8829ba3f07efa25b77f1eb0d6c07" category="inline-link">NetApp Configuration Advisor</block>
-  <block id="d1ba909955f7a2392ac07c215865424a" category="list-text"><block ref="8eb8242e05dec3c7873bd909a6d9def7" category="inline-link-rx"></block> 5.8.1 以降のネットワーク検証ツール</block>
   <block id="642b57ae61fbf875dba06df638def96a" category="inline-link">NetApp SolidFire Active IQ のドキュメント</block>
   <block id="158f6a1d36f1b909e5a2856681ce6f42" category="summary">REST API UI で管理サービス用の API を使用するには、事前に承認が必要です。</block>
   <block id="223b5bfc7fd9ecabdd773228e6069bdd" category="doc">REST API を使用するための許可を取得する</block>
@@ -1273,7 +1271,6 @@
   <block id="a4da6a7298a51c03437fe8215d4cd7dc" category="admonition">管理サービスに関連付けられた永続ボリュームは、インストールまたはアップグレード時に新しいアカウントに割り当てられます。永続ボリュームを使用している場合は、ボリュームや関連付けられているアカウントを変更または削除しないでください。これらのアカウントを削除すると、管理ノードが使用できなくなる可能性があります。</block>
   <block id="b12641981b1007fecfaf498bd16ae5d5" category="list-text">テーブルの * アクション * 列で、アカウントのメニューを展開し、 * 削除 * を選択します。</block>
   <block id="1326a41ad4b26f3395b0f54dd9172b2b" category="inline-link-macro">アカウントの詳細を確認します</block>
-  <block id="469d7f183f29ad292b8937af8903b1dc" category="list-text"><block ref="469d7f183f29ad292b8937af8903b1dc" category="inline-link-macro-rx"></block></block>
   <block id="7e5784de66821e5068bc24c9a5c6d1d6" category="inline-link">ユーザアカウントを操作する</block>
   <block id="9197cc48c8ddd2d400f10cc220189fb2" category="list-text"><block ref="9197cc48c8ddd2d400f10cc220189fb2" category="inline-link-rx"></block></block>
   <block id="5fdb538f00d44b4e663cc26d707fee0d" category="doc">Compute Firmware Bundle 2.76.10 リリースノート</block>
@@ -1719,7 +1716,6 @@
   <block id="eddbea64540d3f03b2661d8ecd4ac2a7" category="list-text">SetProtectionDomainLayout - 各ノードにカスタム保護ドメインを割り当てることができます。</block>
   <block id="03540783615c6f29364ad461ea3aa641" category="paragraph">カスタム保護ドメインの使用の詳細については、ネットアップサポートにお問い合わせください。</block>
   <block id="afc48abd77915d4342bb6d52750ca477" category="inline-link-macro">Element API を使用してストレージを管理します</block>
-  <block id="8e078db9f02bd406ca631ba2825dd629" category="paragraph"><block ref="8e078db9f02bd406ca631ba2825dd629" category="inline-link-macro-rx"></block></block>
   <block id="599e1a6809dc1d900ef010f35876e742" category="summary">NetApp HCI の VMware コンポーネントをアップグレードして、 vCenter Plug-in を再インストールする手順を追加で実行できます。</block>
   <block id="7c77d1cd8cf59e7967bc28ab7e2b5510" category="doc">を使用して、 NetApp HCI システムの vSphere コンポーネントをアップグレードします vCenter Server 向け Element プラグイン</block>
   <block id="1dde7381a082a94c2b207b46bd2bcf27" category="paragraph">NetApp HCI 環境の VMware vSphere コンポーネントをアップグレードするときは、 Element Plug-in for vCenter Server についていくつかの追加の手順を実行する必要があります。</block>
@@ -3613,7 +3609,6 @@
   <block id="5a5285cbae65a3a4e6d2325887861e01" category="inline-link-macro">Ansible でコンピューティングファームウェアのアップグレードを自動化できます</block>
   <block id="7cb9171d2e41fd487907a91fb38fae31" category="list-text"><block ref="9c1d2a43cd65a3c0eacb2a0469676bce" category="inline-link-macro-rx"></block> または <block ref="ea7bc6be827f510faa492af963f76183" category="inline-link-macro-rx"></block>。</block>
   <block id="0c44c4e22a7e5a446ab9db51be083194" category="inline-link">NetApp SolidFire オールフラッシュストレージシステムをアップグレード</block>
-  <block id="0a9bb27e26601025f1f2f83ed531e6f2" category="list-text"><block ref="0a9bb27e26601025f1f2f83ed531e6f2" category="inline-link-rx"></block></block>
   <block id="65e6adcff1000b03a078e05d54c700f1" category="summary">NetApp HCI 導入の Rancher 後に監視を設定する方法について説明します。</block>
   <block id="729e3399d869de5540bc06d71a6bcf81" category="doc">監視を有効にします</block>
   <block id="aad6cd40798f943aaf25e268a77af03c" category="paragraph">NetApp HCI に Rancher を導入したあと、インストールまたはアップグレード時に Active IQ ストレージ監視機能（ SolidFire オールフラッシュストレージおよび NetApp HCI 用）と NetApp HCI コンピューティング監視機能（ NetApp HCI 専用）を有効にしていない場合、有効にすることができます。</block>
@@ -3709,7 +3704,6 @@
   <block id="6f5983880dad4e85e696acaacf3a185b" category="paragraph">インストールまたはアップグレード時に永続ボリューム機能を有効にすると、割り当てられたクラスタ上の名前に適用された名前の付いた複数のボリュームが自動的に作成されます。これらのボリュームは、 Element ソフトウェアベースのボリュームと同様に、 Element ソフトウェア Web UI 、 NetApp Element Plug-in for vCenter Server 、または API を使用して表示できます。リカバリに使用できる現在の設定データを保持するためには、永続ボリュームが管理ノードに iSCSI 接続された状態で稼働している必要があります。</block>
   <block id="055a5661c230e542ad2a37a3d951d4fd" category="admonition">管理サービスに関連付けられた永続ボリュームが作成され、インストールまたはアップグレード時に新しいアカウントに割り当てられます。永続ボリュームを使用している場合は、ボリュームや関連付けられているアカウントを変更または削除しないでください</block>
   <block id="e2439a8512b353f75391ba9c346bc84d" category="inline-link-macro">ボリュームを管理します</block>
-  <block id="9e69e35241eb196e84b4b8c5230c84b9" category="list-text"><block ref="9e69e35241eb196e84b4b8c5230c84b9" category="inline-link-macro-rx"></block></block>
   <block id="4dd2a5a1a2b6e0460ab3348dd584d1ea" category="doc">NetApp HCI ストレージリソースを展開します</block>
   <block id="9fbc65e3085421d946ed1df665334512" category="admonition">ストレージリソースを拡張する際は、最大限の信頼性を実現するためにストレージ容量をすべてのシャーシに均等に分割してください。</block>
   <block id="1ca31be899446d53a6c18003ad9bb98c" category="list-text">[ ようこそ * ] ページで、 [ * いいえ * ] をクリックし、 [ 続行 ] をクリックします。</block>
@@ -4586,7 +4580,6 @@
   <block id="091d9ffd182526624821c249c3335c90" category="list-text"><block ref="091d9ffd182526624821c249c3335c90" category="inline-link-macro-rx"></block></block>
   <block id="c9676e9b030c94e7e828a060b343f3db" category="list-text"><block ref="c9676e9b030c94e7e828a060b343f3db" category="inline-link-macro-rx"></block></block>
   <block id="b8ce529cfc2b9255a783e211ddb57996" category="list-text"><block ref="b8ce529cfc2b9255a783e211ddb57996" category="inline-link-macro-rx"></block></block>
-  <block id="d422fe7cf0f32ce6c7b8426538c06795" category="list-text"><block ref="d422fe7cf0f32ce6c7b8426538c06795" category="inline-link-macro-rx"></block></block>
   <block id="0b9f382bf593a3a25e5173264b3e45f0" category="summary">REST API UI を使用して複数の vCenter を使用するように NetApp Hybrid Cloud Control を設定できます。</block>
   <block id="28315137d10bfda5aa6175d449b196cb" category="paragraph">リンクモードを使用していない 2 つ以上の vCenter からアセットを管理するように NetApp Hybrid Cloud Control を設定できます。</block>
   <block id="0b48980124c47b4e4a60e939d9298e9d" category="paragraph">この手順は、最初のインストール後に、最近拡張した環境のアセットを追加する必要がある場合や、新しいアセットが構成に自動的に追加されない場合に使用してください。これらの API を使用して、最近追加されたアセットを環境に追加します。</block>
@@ -6174,7 +6167,6 @@
   <block id="67a13cf9dcb3321b59f28def3726ce13" category="list-text"><block ref="67a13cf9dcb3321b59f28def3726ce13" category="inline-link-macro-rx"></block></block>
   <block id="3e15463df093d30427e71f517fbcb0b0" category="paragraph">Element Plug-in for vCenter Server 4.xでVMware vCenter Server 7.0 Update 3にアップグレードした場合、プラグイン4.xを導入できません。Spring Framework 4を使用してこの問題 を解決するには、を参照してください<block ref="770c119932f7fa962a47dc0795db1af6" category="inline-link-rx"></block>。</block>
   <block id="9b50fd8de96fcf38bc35a026df14fbc4" category="paragraph">既存のvSphere環境にNetApp Element Plug-in for VMware vCenter Serverが登録されている場合は、プラグインサービスが含まれている管理サービスパッケージを最初に更新したあとで、プラグインの登録を更新できます。</block>
-  <block id="56f4bca23bb3dd45148dc7171511b7e5" category="paragraph">このアップグレード手順 では、次のアップグレードシナリオについて説明します。</block>
   <block id="04e630ae5e9700f09b6ca3715246283d" category="open-title">vCenter 5.0以降向けElementプラグイン</block>
   <block id="61517793d4523320c7cd75e303ad36ff" category="list-text">HTML5 vSphere Web Client 8.0または7.0にアップグレードする。</block>
   <block id="787e0e54cc17d9dd6bbd7cf4c4fbc14d" category="admonition">Element Plug-in for vCenter 5.0以降は、vCenter Server 6.7および6.5と互換性がありません。</block>
@@ -6536,4 +6528,12 @@
   <block id="e3b4df69e2fe4e8545e5e0240eada6a2" category="list-text"><block ref="e3b4df69e2fe4e8545e5e0240eada6a2" category="inline-link-rx"></block></block>
   <block id="631923a687ff82d68973d99b95597b47" category="inline-link">SolidFire and Element Resources ページにアクセスします</block>
   <block id="238c5b123e3473c57e2925edccb205c2" category="list-text"><block ref="238c5b123e3473c57e2925edccb205c2" category="inline-link-rx"></block></block>
+  <block id="bc2a79198b157bed1c1eaa43da985e00" category="cell">* Compute Firmware Bundle 2.174.0*</block>
+  <block id="def5f641ad1584ffe19a578902c863ee" category="cell">2023年4月12日</block>
+  <block id="0b67b64b71fa04f23305e691b81ba252" category="cell">07.02.00</block>
+  <block id="ba3433b658d56109d8826f49ee0a8064" category="list-text"><block ref="ba3433b658d56109d8826f49ee0a8064" category="inline-link-rx"></block></block>
+  <block id="d5147898f653b5500d1ba07c4204c743" category="list-text"><block ref="9d6606ad3ff5278801234da0e6746362" category="inline-link-rx"></block> 5.8.1 以降のネットワーク検証ツール</block>
+  <block id="c411aac8cf32395c454762934e85315b" category="list-text"><block ref="c411aac8cf32395c454762934e85315b" category="inline-link-macro-rx"></block></block>
+  <block id="3f8636b2ed4be15cc908d52557ffc327" category="list-text"><block ref="3f8636b2ed4be15cc908d52557ffc327" category="inline-link-macro-rx"></block></block>
+  <block id="78997922bf48b612914b49bc22e40752" category="paragraph"><block ref="78997922bf48b612914b49bc22e40752" category="inline-link-rx"></block></block>
 </blocks>

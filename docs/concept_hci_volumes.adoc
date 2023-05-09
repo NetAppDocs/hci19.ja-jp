@@ -37,7 +37,7 @@ NOTE: 管理サービスに関連付けられた永続ボリュームが作成�
 
 == 詳細については、こちらをご覧ください
 
-* link:hci_task_manage_vol_management.html["ボリュームを管理します"]
+* link:task_hcc_manage_vol_management.html["ボリュームを管理します"]
 * https://docs.netapp.com/us-en/vcp/index.html["vCenter Server 向け NetApp Element プラグイン"^]
 * http://docs.netapp.com/sfe-122/index.jsp["SolidFire と Element ソフトウェアドキュメントセンター"^]
 

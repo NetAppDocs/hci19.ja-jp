@@ -79,5 +79,5 @@ NOTE: ストレージクラスタ上の Element ソフトウェアをアップ�
 
 * https://docs.netapp.com/us-en/vcp/index.html["vCenter Server 向け NetApp Element プラグイン"^]
 * https://www.netapp.com/hybrid-cloud/hci-documentation/["NetApp HCI のリソースページ"^]
-* https://docs.netapp.com/us-en/element-software/upgrade/task_sf_upgrade_all.html["NetApp SolidFire オールフラッシュストレージシステムをアップグレード"^]
+* https://docs.netapp.com/us-en/element-software/upgrade/concept_element_upgrade_overview.html["NetApp SolidFire オールフラッシュストレージシステムをアップグレード"^]
 
