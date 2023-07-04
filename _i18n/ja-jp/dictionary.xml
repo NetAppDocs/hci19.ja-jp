@@ -1525,9 +1525,7 @@
   <block id="efa8dc8360af08490b01e617cc18cdab" category="list-text">IP アドレス、サブネットマスク、およびデフォルトゲートウェイの情報を入力し、 * Enter * キーを押します。ノードを削除する前にコピーした情報を再利用できます。ここで入力する IP アドレスは、以前にコピーした管理ネットワークの IP アドレスです。</block>
   <block id="7dd7a57b25f3cd76c8b03f1cda9ca15c" category="list-text">*Esc* を押して、 Configure Management Network （管理ネットワークの設定）セクションを終了します。</block>
   <block id="f0c303e389f48cbe1544b22e8d37e06a" category="list-text">「 * はい * 」を選択して変更を適用します。</block>
-  <block id="b6b5cbae15adb7baadb40456ef0634c2" category="list-text">クラスタにノード（ホスト）を追加し、クラスタ内の他のノードと同期されるようにネットワークを設定します。</block>
   <block id="02fb3e6c7ff39880b24310a2c60bdc15" category="list-text">VMware vSphere Web Client で、 * Hosts and Clusters * を選択します。</block>
-  <block id="ccdb65b69df39a19821108c1d1a494e0" category="list-text">ノードを追加するクラスタを右クリックし、 * ホストの追加 * を選択します。ウィザードの指示に従ってホストを追加します。</block>
   <block id="5f36dbaecca1791d115f36a406507e1d" category="admonition">ユーザ名とパスワードの入力を求められたら、次のクレデンシャルを使用します。 User name ： root Password ： NetApp HCI のセットアップ時に NetApp Deployment Engine で設定したパスワード</block>
   <block id="d35ed650bf952b589d141be4c6f788c0" category="paragraph">ノードがクラスタに追加されるまでに数分かかる場合があります。プロセスが完了すると、新しく追加したノードがクラスタの下に表示されます。</block>
   <block id="5f70e9eadb4305a05e2697c2f995e8e5" category="list-text">ノードを選択し、 * Manage &gt; Networking &gt; Virtual switches * を選択して、次の手順を実行します。</block>
@@ -6536,4 +6534,56 @@
   <block id="c411aac8cf32395c454762934e85315b" category="list-text"><block ref="c411aac8cf32395c454762934e85315b" category="inline-link-macro-rx"></block></block>
   <block id="3f8636b2ed4be15cc908d52557ffc327" category="list-text"><block ref="3f8636b2ed4be15cc908d52557ffc327" category="inline-link-macro-rx"></block></block>
   <block id="78997922bf48b612914b49bc22e40752" category="paragraph"><block ref="78997922bf48b612914b49bc22e40752" category="inline-link-rx"></block></block>
+  <block id="036abbfa45963ef13c18174a4e44a2e1" category="list-text">次のように、ノードがクラスタ内の他のノードと同期されるようにネットワークを設定します。</block>
+  <block id="3d76bb66295b6934cf67dde5bae83ad3" category="paragraph">Element Plug-in for vCenter 5.0以降では、データセンターにノード（ホスト）を追加します。</block>
+  <block id="63591c0cc8e2e73c9258b396df08b620" category="list-text">VMware vSphere Web Clientで、*[インベントリ]&gt;[ホストおよびクラスタ]*を選択します。</block>
+  <block id="ac660496ea7328cc4535c044159012b6" category="list-text">データセンターを右クリックし、*[ホストの追加]*を選択します。</block>
+  <block id="9f5ecfa6b649b1b419c20d8dd264d74e" category="paragraph">ウィザードの指示に従ってホストを追加します。</block>
+  <block id="cb1658a0f24a9492fb03111d8de57a39" category="list-text">ノードを選択し、*[設定]&gt;[ネットワーク]&gt;[仮想スイッチ]*を選択して、次の手順を実行します。</block>
+  <block id="53a674199033a5f26d0e116b778bdcd2" category="list-text">[vSwitch0]*を展開します。</block>
+  <block id="9b5ce2fc82e55a2629051893f8d8d4ff" category="inline-image-macro">メニューアイコン</block>
+  <block id="a698cb8f78d7274715cb8dc15d776ac8" category="list-text">表示された図で、[VM Network]を選択します <block ref="fefd4e06d12eaaa2e0937984b0093c4c" category="inline-image-macro-rx" type="image"></block> アイコンの後に* Remove *が表示されます。</block>
+  <block id="882aac0ca94947ea665b596320e49f2a" category="image-alt">に、VMを削除する画面を示します。</block>
+  <block id="fd27c346ccbc1eec4eeb78d8de71580c" category="list-text">vSwitch0ヘッダーで* edit *を選択します。</block>
+  <block id="8781b9e18af90e14da4fe27799c3165f" category="list-text">[Standby adapters]にvmnic3が表示されていることを確認し、*[OK]*を選択します。</block>
+  <block id="bc17da63fca20f45a5d20a429c99f190" category="list-text">表示された図で、[Management Network]を選択します <block ref="fefd4e06d12eaaa2e0937984b0093c4c" category="inline-image-macro-rx" type="image"></block> アイコンに続いて*[設定の編集]*が表示されます。</block>
+  <block id="c305f6f744366080640d1eb249562143" category="image-alt">に、管理ネットワークを編集する画面を示します。</block>
+  <block id="ba10ab5bcd1e235eefc907ce4f06edba" category="list-text">vSwitch0ヘッダーの*[Add Networking]*を選択し、表示されるウィンドウに次の詳細を入力します。</block>
+  <block id="a30d98dbf0217882984a02160769e0f1" category="list-text">ターゲット・デバイスの場合は、*新しい標準スイッチ*を選択し、*次へ*を選択します。</block>
+  <block id="8671f0a8199a0283f4398218123fb82e" category="list-text">[Create a Standard Switch]で、vmnic0とvmnic4を[Active adapters]に移動し、*[Next]*を選択します。</block>
+  <block id="fec3d5b6be656397a3c7874010b1a1d6" category="list-text">[Connection settings]で、[VM Network]がネットワークラベルであることを確認し、必要に応じてVLAN IDを入力します。</block>
+  <block id="b8028ca58a0ffdc315fe1a0daaf42691" category="list-text">[Ready to Complete]画面を確認し、*[Finish]*を選択します。</block>
+  <block id="9a99c86bbadc8d9087512e9ac1441321" category="list-text">vSwitch1を展開して* edit *を選択し、次のように設定を編集します。</block>
+  <block id="a839db2a162d055d0427c6f5ee743c4f" category="list-text">表示された図で、[VM Network]を選択します <block ref="fefd4e06d12eaaa2e0937984b0093c4c" category="inline-image-macro-rx" type="image"></block> アイコンの後に*[編集]*が表示されます。</block>
+  <block id="f975200c0fde9091513de823f8382a0b" category="list-text">vmnic0をスタンバイアダプタに移動します。</block>
+  <block id="c6d2ce42fe36bfb199a2360edb7c5029" category="list-text">vSwitch1ヘッダーで*[Add networking]*を選択し、[Add Networking]ウィンドウで次の詳細を入力します。</block>
+  <block id="c4cf1413e57d3256209b4154d9b5178e" category="list-text">[Create a Standard Switch]で、vmnic1とvmnic5を[Active adapters]に移動し、*[Next]*を選択します。</block>
+  <block id="1d59948c86cc47108b28d89a1cdef5ca" category="list-text">IPv4 設定で IPv4 情報を入力し、 * 次へ * を選択します。</block>
+  <block id="54691a122e4111b03dbfc011c91e6ce4" category="list-text">表示された図で、vMotionを選択します <block ref="fefd4e06d12eaaa2e0937984b0093c4c" category="inline-image-macro-rx" type="image"></block> アイコンの後に*[編集]*が表示されます。</block>
+  <block id="0f5d411a2e1fcb4f4e434722bd3f79ed" category="list-text">vmnic4をスタンバイアダプタに移動します。</block>
+  <block id="5d1fd538b976142fe02b836c9b5d8f60" category="list-text">vSwitch2 *を展開し、* edit *を選択します。</block>
+  <block id="597eb71768962b3956b5793f98447cfc" category="list-text">表示された図で、iSCSI-Bを選択します <block ref="fefd4e06d12eaaa2e0937984b0093c4c" category="inline-image-macro-rx" type="image"></block> アイコンの後に*[編集]*が表示されます。</block>
+  <block id="97017ed07259726b32cf4283092219d6" category="list-text">vmnic1を未使用のアダプタに移動します。</block>
+  <block id="7244c9af677a700c90e3ec90d8676bdc" category="list-text">表示された図で、[iSCSI-A]を選択します <block ref="fefd4e06d12eaaa2e0937984b0093c4c" category="inline-image-macro-rx" type="image"></block> アイコンの後に*[編集]*が表示されます。</block>
+  <block id="4c7e2ed9a1f23a00223c9c8c0edc66cd" category="list-text">新しく追加したノードを選択し、[設定]タブを開いた状態で*[ストレージ]&gt;[ストレージアダプタ]*を選択し、次の手順を実行します。</block>
+  <block id="e4f82379863daecd77fb3c8d90ebfa60" category="list-text">[ソフトウェアアダプタの追加]*リストを選択します。</block>
+  <block id="ec8fe5ffb26c1667f78058271051f7a9" category="list-text">[iSCSIアダプタの追加]*を選択し、*[OK]*を選択します。</block>
+  <block id="f22178ace11ea87c7d59f75c261a8458" category="list-text">[Storage Adapters]で、iSCSIアダプタを選択します</block>
+  <block id="9439600543d005cdd1dc468e27ed0ef7" category="list-text">[Properties]&gt;[General]で、iSCSI名をコピーします。</block>
+  <block id="e6ef8efef826617531911029f3094999" category="list-text">ターゲットインスタンスを選択します。</block>
+  <block id="db69ad9381aeaae67846d9dfee971cde" category="list-text">[Management]*を選択します。</block>
+  <block id="4cf1bee9d4da2cfd83c720264ecf95a9" category="list-text">ターゲットクラスタを選択</block>
+  <block id="b4978ef52bb77b70f01c739d12f2035c" category="list-text">[Management]&gt;[Initiators]*を選択します。</block>
+  <block id="ce5b397637ff33b276925ed4801de384" category="list-text">イニシエータの作成 * を選択します。</block>
+  <block id="0724c8cf0d32ac22dba8f08f2546c725" category="list-text">新しいイニシエータを選択します。</block>
+  <block id="deb3e04bcff0ba49c84aebd575a577fd" category="list-text">[操作]リスト&gt;[一括操作]*を選択し、*[アクセスグループに追加]*を選択します。</block>
+  <block id="98949fae581882fa05ca711731127258" category="list-text">ターゲットアクセスグループを選択し、*[追加]*を選択します。</block>
+  <block id="fe2a5ee2a2b397b15ed5c1b7f60b6c41" category="list-text">[Dynamic Discovery]&gt;[Add]*を選択します。</block>
+  <block id="e5b06ada59c18deba03f29c6ac86983f" category="list-text">[ネットワークポートバインド]*を選択し、*[追加]*を選択します。</block>
+  <block id="15dc75908330af084a79ea2ada24a934" category="list-text">[iSCSI-A]と[iSCSI-B]を選択し、*[OK]*を選択します</block>
+  <block id="166771a382a5d846482a26dbe5c7b9e3" category="list-text">[アダプタの再スキャン]*を選択します。</block>
+  <block id="73849a27a526b230f59a20c776064eb9" category="list-text">[ストレージの再スキャン]*を選択します。新しいVMFSボリュームをスキャンし、* OK *を選択します。</block>
+  <block id="bc1db729f0157876d24fd3c55560294c" category="list-text">再スキャンが完了したら、クラスタとデータストア内のボリュームが新しいコンピューティングノード（ホスト）で認識されるかどうかを確認します。</block>
+  <block id="f096b63658cb95d8f43a07e2d68c70b3" category="paragraph">Element Plug-in for vCenter 4.10以前の場合は、ノード（ホスト）をクラスタに追加します。</block>
+  <block id="fc4dbbaeabdf5700f373a65d12b45108" category="list-text">ノードを追加するクラスタを右クリックし、 * ホストの追加 * を選択します。</block>
 </blocks>
