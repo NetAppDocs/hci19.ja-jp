@@ -21,7 +21,7 @@ translate: false
 
 == 著作権
 
-http://www.netapp.com/us/legal/copyright.aspx[]
+link:https://www.netapp.com/company/legal/copyright/["https://www.netapp.com/company/legal/copyright/"^]
 
 
 
@@ -29,7 +29,7 @@ http://www.netapp.com/us/legal/copyright.aspx[]
 
 NetApp 、 NetApp のロゴ、および NetApp の商標ページに記載されているマークは、 NetApp, Inc. の商標です。その他の会社名および製品名は、それぞれの所有者の商標である場合があります。
 
-http://www.netapp.com/us/legal/netapptmlist.aspx[]
+link:https://www.netapp.com/company/legal/trademarks/["https://www.netapp.com/company/legal/trademarks/"^]
 
 
 
@@ -37,13 +37,13 @@ http://www.netapp.com/us/legal/netapptmlist.aspx[]
 
 ネットアップが所有する特許の最新リストは、次のサイトで入手できます。
 
-https://www.netapp.com/us/media/patents-page.pdf[]
+link:https://www.netapp.com/pdf.html?item=/media/11887-patentspage.pdf["https://www.netapp.com/pdf.html?item=/media/11887-patentspage.pdf"^]
 
 
 
 == プライバシーポリシー
 
-https://www.netapp.com/us/legal/privacypolicy/index.aspx[]
+link:https://www.netapp.com/company/legal/privacy-policy/["https://www.netapp.com/company/legal/privacy-policy/"^]
 
 
 
