@@ -116,7 +116,11 @@ https://<ManagementNodeIP>
 ----
 . NetApp HCI ストレージクラスタ管理者のクレデンシャルを指定して NetApp Hybrid Cloud Control にログインします。
 . [ インストールの展開 ] ペインで、 [* 展開 *] を選択します。ブラウザに NetApp Deployment Engine が表示されます。
-. NetApp HCI ストレージクラスタ管理者のクレデンシャルを指定して NetApp Deployment Engine にログインします。
+. ローカルのNetApp HCIストレージクラスタ管理者のクレデンシャルを指定してNetApp Deployment Engineにログインします。
++
+
+NOTE: Lightweight Directory Access Protocolのクレデンシャルを使用してログインすることはできません。
+
 . ようこそページで、 * はい * を選択します。
 . [End User License] ページで、次のアクションを実行します。
 +

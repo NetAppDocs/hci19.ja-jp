@@ -17,6 +17,16 @@ summary: NetApp HCI およびNetApp Element ソフトウェアでサポートさ
 [role="lead"]
 NetApp HCI でサポートされるファームウェアとESXiドライバのバージョン、NetApp HCI ストレージノードでサポートされるファームウェアのバージョンとファームウェアのバージョン。
 
-link:fw_storage_nodes.html["ストレージノード"]* H610S * H410S
+link:fw_storage_nodes.html["ストレージノード"]
 
-link:fw_compute_nodes.html["コンピューティングノード"]* H615C * H610C * H410C * H300E / H500E / H700E
+* H610S
+* H410S
+
+
+link:fw_compute_nodes.html["コンピューティングノード"]
+
+* H615C
+* H610C
+* H410C
+* H300E / H500E / H700E
+

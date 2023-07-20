@@ -55,7 +55,11 @@ https://<ManagementNodeIP>
 +
 ブラウザに NetApp Deployment Engine が表示されます。
 
-. NetApp HCI ストレージクラスタ管理者のクレデンシャルを指定して NetApp Deployment Engine にログインします。
+. ローカルのNetApp HCIストレージクラスタ管理者のクレデンシャルを指定してNetApp Deployment Engineにログインします。
++
+
+NOTE: Lightweight Directory Access Protocolのクレデンシャルを使用してログインすることはできません。
+
 . [ ようこそ * ] ページで、 [ はい ] をクリックし、 [ 続行 ] をクリックします。
 . [* エンドユーザライセンス * ] ページで、 VMware エンドユーザライセンス契約を読み、 [* I accept （同意します） ] をクリックして条項に同意し、 [* Continue （続行） ] をクリックします。
 . vCenter * ページで、次の手順を実行します。

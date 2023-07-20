@@ -157,7 +157,11 @@ https://<ManagementNodeIP>/manager/login
 ----
 . NetApp HCI ストレージクラスタ管理者のクレデンシャルを指定して NetApp Hybrid Cloud Control にログインします。
 . [ インストールの展開 ] ペインで、 [* 展開 *] を選択します。
-. NetApp HCI ストレージクラスタ管理者のクレデンシャルを指定して NetApp Deployment Engine にログインします。
+. ローカルのNetApp HCIストレージクラスタ管理者のクレデンシャルを指定してNetApp Deployment Engineにログインします。
++
+
+NOTE: Lightweight Directory Access Protocolのクレデンシャルを使用してログインすることはできません。
+
 . ようこそページで、 * いいえ * を選択します。
 . 「 * Continue * 」を選択します。
 . Available Inventory ページで、既存の NetApp HCI インストールに追加するストレージノードを選択します。
@@ -193,7 +197,11 @@ NetApp HCI のインストールでバージョン 1.4P2 、 1.4 、または 1.
 
 .手順
 . 既存のいずれかのストレージ・ノードの管理 IP アドレス（ http://<storage_node_management_IP_address>/` ）を参照します
-. NetApp HCI ストレージクラスタ管理者のクレデンシャルを指定して NetApp Deployment Engine にログインします。
+. ローカルのNetApp HCIストレージクラスタ管理者のクレデンシャルを指定してNetApp Deployment Engineにログインします。
++
+
+NOTE: Lightweight Directory Access Protocolのクレデンシャルを使用してログインすることはできません。
+
 . 「 * インストールを展開する * 」を選択します。
 . ようこそページで、 * いいえ * を選択します。
 . [* Continue （続行） ] をクリックします
