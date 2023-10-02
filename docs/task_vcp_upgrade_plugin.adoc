@@ -27,12 +27,12 @@ NOTE: 管理サービス2.22.7には、リモートプラグインを含むEleme
 --
 このアップグレード手順では、次のアップグレードシナリオについて説明します。
 
-* Element Plug-in for vCenter Server 5.1または5.0にアップグレードする。
+* Element Plug-in for vCenter Server 5.2、5.1、または5.0にアップグレードする。
 * HTML5 vSphere Web Client 8.0または7.0にアップグレードする。
 
 
 
-IMPORTANT: Element Plug-in for vCenter 5.0以降は、vCenter Server 6.7および6.5と互換性がありません。
+IMPORTANT: Element Plug-in for vCenter 5.0以降はvCenter Server 6.7および6.5と互換性がありません。
 
 
 NOTE: Element Plug-in for vCenter Server 4.xを5.xにアップグレードすると、vCenterインスタンスからリモートプラグインにデータをコピーできないため、プラグインが設定されているクラスタは失われます。クラスタをリモートプラグインに再度追加する必要があります。これは、ローカルプラグインからリモートプラグインにアップグレードする場合の1回限りのアクティビティです。
@@ -138,11 +138,11 @@ NOTE: この操作により、新しいデータベースが作成され、 vSph
 +
 ** Element Plug-in for vCenter Server 5.0以降では、NetApp Element リモートプラグイン拡張ポイントが表示されます。
 +
-image::vcp_remote_plugin_icons_home_page.png[は、Element Plug-in 5.0以降のアップグレードまたはインストールが正常に完了したあとのプラグイン拡張ポイントを示しています]
+image::vcp_remote_plugin_icons_home_page.png[は、Element Plug-in 5.0以降のアップグレードまたはインストールが完了したあとのPlug-in拡張ポイントを示しています。]
 
 ** Element Plug-in for vCenter Server 4.10以前では、NetApp Element Configuration and Management拡張ポイントが表示されます。
 +
-image::vcp_shortcuts_page_accessing_plugin.png[に、Element Plug-in 4.10以前のアップグレードまたはインストールが正常に完了したあとのプラグイン拡張ポイントを示します]
+image::vcp_shortcuts_page_accessing_plugin.png[は、Element Plug-in 4.10以前のアップグレードまたはインストールが成功したあとのプラグインの拡張ポイントを示しています。]
 
 +
 [NOTE]
@@ -161,7 +161,7 @@ VMware vCenter Server 6.7U1を使用してNetApp Element Plug-in for vCenter Ser
 +
 [listing]
 ----
-NetApp Element Plug-in Version: 5.1
+NetApp Element Plug-in Version: 5.2
 NetApp Element Plug-in Build Number: 12
 ----
 
