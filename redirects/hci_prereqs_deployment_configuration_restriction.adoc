@@ -1,0 +1,8 @@
+---
+permalink: docs/hci_prereqs_deployment_configuration_restriction.html 
+redirect: hci19/docs/hci_prereqs_overview.html 
+---
+= 
+:allow-uri-read: 
+
+

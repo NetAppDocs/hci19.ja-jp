@@ -4,7 +4,7 @@ permalink: docs/task_nde_disable_lacp_individual.html
 summary: NetApp HCI の導入後に、構成済みスイッチ上で「 lacp-individual 」コマンドをディセーブルにする方法について説明します。 
 keywords: netapp, hci, deployment, review, deploy 
 ---
-= 設定済みのスイッチで lacp-individual コマンドをディセーブルにします
+= 設定済みのスイッチで「 lacp-individual 」コマンドを無効にします
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
