@@ -1,6 +1,7 @@
 ---
 settings:
   name: HCI
+  downlevel: true
   internal:
     pdf_enabled: true
   prod:
@@ -16,7 +17,7 @@ settings:
   langs: ja-jp,us-en,ko-kr,zh-cn,zh-tw,de-de,es-es,fr-fr,it-it
 sidebar:
   entries:
-  - title: NetApp HCI 1.9ドキュメント
+  - title: NetApp HCI のドキュメント
     url: "/index.html"
   - title: NetApp HCI ソリューション
     url: "/docs/hci_solutions_index.html"
