@@ -3013,7 +3013,6 @@
   <block id="d4d6be65d679aa54296e16328ec041bf" category="list-text">*LOAD_images * パラメータでは 'TRUE' を選択します</block>
   <block id="2a1519db00ab50aa3a0e4964f93a27f8" category="paragraph">応答の本文は、再設定が正常に完了したことを示します。</block>
   <block id="38d2bb23849f828628a170b7814a5b48" category="summary">NetApp HCI の導入後に、構成済みスイッチ上で「 lacp-individual 」コマンドをディセーブルにする方法について説明します。</block>
-  <block id="f51859c5296df69766701d38fc7c8859" category="doc">設定済みのスイッチで lacp-individual コマンドをディセーブルにします</block>
   <block id="8b8fcd904806ca441f07a09ee921db7c" category="paragraph">デフォルトでは、 Mellanox スイッチ 'lacp-individual' コマンドと Cisco スイッチ 'LACP suspend-individual' コマンドは導入後も設定されたままになりますこのコマンドはインストール後には必要ありません。設定を維持すると、スイッチのトラブルシューティングまたはリブート時に原因ボリュームにアクセスできなくなる可能性があります。導入後は ' 各 Mellanox スイッチと Cisco スイッチの構成を確認し 'lacp-individual' または LACP suspend-individual コマンドを削除する必要があります</block>
   <block id="7230032f9e3f3d80f5d464534044fa7e" category="list-text">SSH を使用して、スイッチへのセッションを開きます。</block>
   <block id="ea81d6b9aaa9ef63fd80d7044e4a7dae" category="list-text">実行コンフィギュレーションを表示します。</block>
@@ -5581,13 +5580,11 @@
   <block id="f0ffe5389e0877edf8755ea82e7f1779" category="paragraph">Trident カタログは、 NetApp HCI 上の Rancher で利用でき、ユーザクラスタ内で実行されます。NetApp HCI 実装の Rancher の一部として、 Trident インストーラはデフォルトで rancher カタログから入手できます。このカタログが含まれているため、ユーザクラスタへの Trident の導入が簡単になります。</block>
   <block id="245992ff42ba518324a42fc0a5a5c00e" category="paragraph">を参照してください <block ref="e699403e446949a61b34fc895e0cd096" category="inline-link-macro-rx"></block>。</block>
   <block id="8838c26820c2bdc7ab11f616de8739d6" category="summary">NetApp HCI で使用される TCP ポートと UDP ポート。</block>
-  <block id="ba05be2241c302ce19b7534dcd611775" category="paragraph">システムをリモートから管理し、データセンターの外部のクライアントがリソースに接続できるようにし、内部サービスが適切に機能するようにするために、データセンターのエッジファイアウォールで次のポートを許可する必要があります。システムの使用方法によっては、これらのポート、 URL 、または IP アドレスの一部は不要な場合もあります。特に記載がないかぎり、ポートはすべて TCP です。</block>
   <block id="15a1051d03ca55ab79226f44fa683bbe" category="paragraph">この表では次の略語を使用します。</block>
   <block id="60175d30ed8f8459b2f835b923bb4ee5" category="list-text">mip ：管理 IP アドレス。ノードごとのアドレスです</block>
   <block id="b41c14a062a4854e04d459016f1eae73" category="list-text">sip ：ストレージ IP アドレス。ノードごとのアドレスです</block>
   <block id="416d6ad49d8853217a6bb321dc6df5aa" category="list-text">MVIP ：管理仮想 IP アドレス</block>
   <block id="c51558c5b0e3376ab979005c0eadcc9e" category="list-text">SVIP ：ストレージ仮想 IP アドレス</block>
-  <block id="96d2b8e68e9f540a05073cf66ebfb8fb" category="paragraph">特に記載がないかぎり、テーブル内のポートはすべて TCP です。</block>
   <block id="f31bbdd1b3e85bccd652680e16935819" category="cell">ソース</block>
   <block id="12007e1d59f4d09c87dbe2c438256244" category="cell">宛先</block>
   <block id="60aaf44d4b562252c04db7f98497e9aa" category="cell">ポート</block>
@@ -5986,7 +5983,6 @@
   <block id="df8bcceb7ddee511e9494f0afd8c95a7" category="list-text">リブート中に* F11 *を押してブートオプションを選択し、コンピューティングファームウェアバンドルをロードします。ブートメニューが表示されるまでに F11 キーを何度か押しなければならない場合があります。</block>
   <block id="b56a80b47ffbf4eda21aa52a14a1c0d9" category="paragraph">手順は、ノードがスタンドアロンであるかクラスタの一部であるかによって異なります。手順 の所要時間は約25分で、ノードの電源オフ、コンピューティングファームウェアバンドルのアップロード、デバイスのフラッシュ、アップグレード後のノードの電源のオンとオフが含まれます。</block>
   <block id="94accfc9ce60fbdbc6b912533ff89998" category="list-text">リブート中に* F11 *を押してブートオプションを選択し、コンピューティングファームウェアバンドルをロードします。</block>
-  <block id="baac2557431cefc749efdd1d5a826b20" category="sidebar">NetApp HCI 1.9ドキュメント</block>
   <block id="1b0f1fe17217f456f0c7b1311a828304" category="paragraph">NetApp HCI システムのテクニカルサポートが必要な場合は、ネットアップサポートがお客様のシステムにリモートで接続できます。セッションを開始してリモートアクセスを確立するために、ネットアップサポートはお客様の環境へのリバース Secure Shell （ SSH ）接続を確立します。</block>
   <block id="af6fe236a646e80d8ae873b7b19bbd32" category="paragraph">この手動プロセスは、管理ノードのインストールにNetApp Deployment Engineを使用していないNetApp HCI 管理者を対象としています。</block>
   <block id="7de1d355aeba73e5332d59c786d355f9" category="list-text">ストレージクラスタへの管理ネットワークアクセスが可能な仮想ネットワークインターフェイス×1。ストレージクラスタが管理ノード（ eth0 ）とは別のサブネット上にある環境で永続ボリュームを使用する場合は、ストレージサブネット（ eth1 ）上の VM に 2 つ目のネットワークインターフェイスコントローラ（ NIC ）を追加するか、管理ネットワークからストレージネットワークへルーティング可能なことを確認します。</block>
@@ -6577,4 +6573,6 @@
   <block id="4718467fa890cd0dcf159b3d461cedbe" category="list-text"><block ref="6bd87cf3d55c2ead3ab585e965bea4db" category="inline-link-rx"></block> _ 新規 _</block>
   <block id="410ecb079e286058eeb2bc6b56d9379c" category="list-text"><block ref="410ecb079e286058eeb2bc6b56d9379c" category="inline-link-rx"></block></block>
   <block id="732713df3c4c58fb19fab37e747f6f0d" category="list-text"><block ref="732713df3c4c58fb19fab37e747f6f0d" category="inline-link-macro-rx"></block></block>
+  <block id="7149d03eb62017e7cc5192a67ff56c1c" category="paragraph">システムをリモートで管理し、データセンター外部のクライアントがリソースに接続できるようにし、内部サービスが正常に機能するようにするために、データセンターのエッジファイアウォールで次のポートを許可する必要があります。システムの使用方法によっては、これらのポート、 URL 、または IP アドレスの一部は不要な場合もあります。</block>
+  <block id="331d6d490990c63b2cee0dc04fe2589b" category="paragraph">特に記載がないかぎり、すべてのポートがTCPであり、NetAppサポートサーバ、管理ノード、およびElementソフトウェアを実行するノードの間の3ウェイハンドシェイク通信がすべてサポートされている必要があります。たとえば、管理ノードのソースのホストはTCPポート443を介してストレージクラスタのMVIPデスティネーションのホストと通信し、デスティネーションホストは任意のポートを介してソースホストと通信します。</block>
 </blocks>
