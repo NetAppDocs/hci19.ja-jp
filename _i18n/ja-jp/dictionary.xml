@@ -1377,16 +1377,7 @@
   <block id="0d5228cf80832928fe934652a94cdf4f" category="paragraph">VMware vSphere Web Client のアラームは、ノードで障害が発生したときに通知されます。VMware vSphere Web Client で障害が発生したノードのシリアル番号を、ノード背面のステッカーに記載されているシリアル番号と照合する必要があります。</block>
   <block id="51345fe1ab5e7f7efb63a32d183cdda9" category="paragraph">H410C コンピューティングノードを交換する場合は、次の点を考慮してください。</block>
   <block id="5d6b6b077cfdeafcbe028bddcb655d4d" category="list-text">H410C コンピューティングノードは高電圧（ 200~240VAC ）でのみ動作します。既存の NetApp HCI システムに H410C ノードを追加する場合は、電源要件が満たされていることを確認しておく必要があります。</block>
-  <block id="9726e8dc43a3741dbccc204feb2a9dda" category="paragraph">ここでは、この手順の概要を示します。<block ref="417a9ef94ddd6fb6079bf181e8da50c6" category="inline-xref-macro-rx"></block>
-<block ref="450dee795ede92f968238358045ee72c" category="inline-xref-macro-rx"></block>
-<block ref="302025b37ed9a655d26cb02c1523b2a4" category="inline-xref-macro-rx"></block>
-<block ref="133c0f35bcfb7bec627508ed13eaf913" category="inline-xref-macro-rx"></block>
-<block ref="3e9667909114056c0816cabcad3091ec" category="inline-xref-macro-rx"></block></block>
   <block id="cd4a531fb438950b1b12718c24e3a003" category="inline-link-macro">コンピューティングリソースを解放するには、監視ノードを削除してください</block>
-  <block id="693ac156676e30f319b9cd3e020727f7" category="paragraph">次に、システムに固有の条件がある場合に実行する必要があるその他のタスクを示します。<block ref="6f2e0dd9461f023001b32f634a66ca39" category="inline-link-macro-rx"></block>
-<block ref="96458e97c135f9cdca1845fd2743e79f" category="inline-xref-macro-rx"></block>
-<block ref="d095c71c5d51f56f74c0c624a25acdfc" category="inline-xref-macro-rx"></block></block>
-  <block id="bdf21dc543b5ab0b0d4037a3b86f500e" category="section-title">コンピューティングノードを交換する準備をします</block>
   <block id="49de3917417cb7a9d4c88a097084490f" category="paragraph">ノードでホストされている仮想マシン（ VM ）を使用可能なホストに移行して、障害ノードをクラスタから削除する必要があります。シリアル番号やネットワークの情報など、障害が発生したノードの詳細を確認する必要があります。</block>
   <block id="d8d7c90a9eba54aa51121a64132d7c53" category="list-text">VMware vSphere Web Client で、次の手順を実行して VM を別の使用可能なホストに移行します。</block>
   <block id="e2477b6b77307705f07f9d4a9bce00f5" category="admonition">移行手順については、 VMware のドキュメントを参照してください。</block>
@@ -1402,7 +1393,6 @@
   <block id="030be96a2580787247ec3061b2771b9c" category="list-text">ノードを右クリックし、 * インベントリから削除 * を選択します。</block>
   <block id="99795f9ed04c0bb6ca3b66f13bde3f1d" category="list-text">ノード 0 のシリアル番号をメモします。シリアル番号は障害が発生したノードのシリアル番号です。これにより、ノード背面のシリアル番号がメモしたシリアル番号とステッカーで示されたシリアル番号と一致するノードを識別できます。</block>
   <block id="7a323f53d4e64c45f636ac4a7040e243" category="list-text">障害が発生したノードを選択し、 * Manage &gt; Networking &gt; VMkernel adapters * を選択して、リストされた 4 つの IP アドレスをコピーします。この情報は、 VMware ESXi でネットワークの初期設定手順を実行するときに再利用できます。</block>
-  <block id="c4aee125828819cff98e36e2ce8cb1a1" category="section-title">シャーシ内のコンピューティングノードを交換します</block>
   <block id="cf9dd3afde945016d53ec0a6ee2b2237" category="paragraph">クラスタから障害ノードを削除したら、ノードをシャーシから取り外し、交換用ノードを設置できます。</block>
   <block id="a48a58fb7b047fe3c92a6b8ef8c8b880" category="admonition">ここで説明する手順を実行する前に、静電気防止処置を施してください。</block>
   <block id="a300fbfd884ff458fb7de4f74e2cc07c" category="list-text">静電気防止処置を施します。</block>
@@ -1422,7 +1412,6 @@
   <block id="3913668fe99dfd5c0efac354d1dd57e7" category="list-text">元々ケーブルを外したポートにケーブルを再接続します。ケーブルを外したときに付けたラベルは、ガイドとして役立ちます。</block>
   <block id="2425222ca6c04a8497599ba50e5b39b1" category="admonition">シャーシ背面の通気口がケーブルやラベルで塞がれていると、過熱によってコンポーネントで早期に障害が発生する可能性があります。ケーブルをポートに無理に押し込まないでください。ケーブル、ポート、またはその両方が破損する可能性があります。</block>
   <block id="4274645a2e2667daa5122269fa953970" category="admonition">交換用ノードがシャーシ内の他のノードと同じ方法でケーブル接続されていることを確認します。</block>
-  <block id="3611828f40bf631c043f2a1f9b7d8d80" category="section-title">NetApp HCI 1.7 およびのコンピューティングノードアセットを削除します 後で</block>
   <block id="fd3ac6bf15d6190cc923c4eac0662f3a" category="paragraph">NetApp HCI 1.7 以降では、ノードを物理的に交換したあと、管理ノード API を使用してコンピューティングノードのアセットを削除します。REST API を使用するには、ストレージクラスタで NetApp Element ソフトウェア 11.5 以降が実行されていて、バージョン 11.5 以降が実行されている必要があります。</block>
   <block id="65a4d29cbb5e1c44baa414f5cf2dc489" category="list-text">管理ノードの IP アドレスに続けて「 /mnode ： https://[IP address 」 /mnode 」と入力します</block>
   <block id="49de61ab68074de5da296d48ffde4acb" category="list-text">「 * Authorize * 」またはロックアイコンを選択し、 API を使用する権限を付与するクラスタ管理者のクレデンシャルを入力します。</block>
@@ -1434,7 +1423,6 @@
   <block id="b9bc6e4f464a0c8b1538f9995b92a895" category="list-text">[* Execute] を選択します。応答の本文を下にスクロールしてコンピューティングセクションに移動し、障害が発生したコンピューティングノードの親と ID の値をコピーします。</block>
   <block id="149ab1533be009942aca64f58c4e6d19" category="list-text">削除 / アセット / ｛ asset_id ｝ / コンピュートノード / ｛ compute_id ｝ * を選択します。</block>
   <block id="79ec8a7988ef4e63af167fe84122742f" category="list-text">[* 試してみてください * ] を選択します。手順 7 で取得した親と ID の値を入力します。</block>
-  <block id="4cf099434af6b1eb3de3a02c4d7343f4" category="section-title">コンピューティングノードをクラスタに追加します</block>
   <block id="39b2525fb75e02c64814c90f2cbf3407" category="paragraph">コンピューティングノードをクラスタに再度追加する必要があります。手順は、実行している NetApp HCI のバージョンによって異なります。</block>
   <block id="870bd874847cca4294c93fdb50347662" category="section-title">NetApp HCI 1.6P1 以降</block>
   <block id="80fe8777d7b15097b7f93768f900d2f0" category="paragraph">NetApp Hybrid Cloud Control は、 NetApp HCI 環境でバージョン 1.6P1 以降が実行されている場合にのみ使用できます。</block>
@@ -1597,7 +1585,6 @@
   <block id="2d7b1bce570cfad61bcea75e56445e4c" category="list-text">[ アダプタの詳細 ] で、 [ ネットワークポートバインド *] を選択し、 [*+*] を選択します。</block>
   <block id="09814996c945834d0173335b143561ec" category="list-text">iSCSI-B と iSCSI-A のチェックボックスをオンにし、 OK をクリックします。ストレージアダプタの再スキャンを推奨するメッセージが表示されます。</block>
   <block id="aeffbcab16d409629a6f42a11f66bf51" category="list-text">再スキャンアイコンを選択します。再スキャンが完了したら、クラスタ内のボリュームが新しいコンピューティングノード（ホスト）で認識されるかどうかを確認します。</block>
-  <block id="9c9a41bc801502e6500c79ea7586ba95" category="section-title">2 ノードおよび 3 ノードのストレージクラスタの監視ノードの再導入</block>
   <block id="cec682e94e3f77f9a4e97bcc8d93f2c4" category="paragraph">障害が発生したコンピューティングノードを物理的に交換したあと、障害が発生したコンピューティングノードが監視ノードをホストしていた場合は、 NetApp HCI 監視ノード VM を再導入する必要があります。ここで説明する手順は、 2 ノードまたは 3 ノードのストレージクラスタを使用する NetApp HCI 環境に含まれるコンピューティングノードにのみ該当します。</block>
   <block id="284dc6d1de61ec5c2a96db8bc40dd3ab" category="list-text">次の情報を収集します。</block>
   <block id="0b579df7695c3410f10a561f05959978" category="list-text">ストレージクラスタからクラスタ名</block>
@@ -2323,17 +2310,11 @@
   <block id="7dc71fc1ba8b3b46bc5aa180659fd0c4" category="list-text">静電放電（ ESD ）リストバンドを装着するか、静電気防止処置を行っておきます。</block>
   <block id="4177894d92f9956a6f7250cb8b52d834" category="list-text">シャーシに接続された各ケーブルにラベルを付けておきます。</block>
   <block id="af230ec2183265faedfc900d2b43745d" category="paragraph">VMware vSphere Web Client のアラームでは、ホストで障害が発生するとアラートが通知されます。VMware vSphere Web Client で障害が発生したホストのシリアル番号を、ノード背面のステッカーに記載されているシリアル番号と一致させる必要があります。</block>
-  <block id="b1579568b723cfa21964d9882eb934fb" category="paragraph">ここでは、この手順の概要を示します。<block ref="8b400d38091051616c1c5cc1808de640" category="inline-xref-macro-rx"></block>
-<block ref="3bbd6094cc077cc68f8084464864b066" category="inline-xref-macro-rx"></block>
-<block ref="85d7ff8f1e3fd6efa440dcd74d3d3e02" category="inline-xref-macro-rx"></block>
-<block ref="74302f10271a48c9df46742d43d08db8" category="inline-xref-macro-rx"></block></block>
-  <block id="d7f6ba0367c50b236e879580284dfabe" category="section-title">ノードを交換する準備をします</block>
   <block id="597e3a12fc6d68edf2363fc3a1d9ff06" category="admonition">Dual Inline Memory Module （ DIMM ）障害など、ノードがオンラインで機能している状態で障害が発生した場合に、障害ノードを取り外す前にクラスタからドライブを取り外す必要があります。</block>
   <block id="b3cead0e8121cac5eaa77199cb96bf4b" category="list-text">障害が発生したノードのシリアル番号をメモします。次のスクリーンショットは一例です。</block>
   <block id="c52f4f387b86885b3321d0184a872a28" category="image-alt">は、 VMware vSphere Web Client で障害が発生したノードのシリアル番号です。</block>
   <block id="c2073896d66c7bb59af743cabc382009" category="paragraph">シャーシを識別するには、ノード背面のラベルに記載されているシリアル番号と同じ番号を入力する必要があります。</block>
   <block id="7ab682c31b3906d62159c2f9d858b798" category="list-text">「 * はい * 」をクリックして操作を確定します。</block>
-  <block id="4bf11adaae89a783a7925f82b81963ee" category="section-title">ノードを交換</block>
   <block id="0284c3c24e20ba25bd655bfa5902da86" category="paragraph">クラスタから障害ノードを削除したら、障害が発生したシャーシを取り外し、交換用シャーシを設置できます。</block>
   <block id="ef3f79bdcf9f4d42d419e2b9c45d5393" category="list-text">新しいシャーシを開封し、平らな場所に置きます。障害が発生したシャーシをネットアップに返却するときは、梱包材を保管しておいてください。</block>
   <block id="bfc31a5b7c0c06e46b597db93cca8594" category="list-text">取り外すシャーシの背面に挿入されている各ケーブルにラベルを付けます。新しいシャーシを設置したら、ケーブルを元のポートに戻す必要があります。</block>
@@ -2346,13 +2327,11 @@
   <block id="8daca91d830ace0c305c774cb41e9ecd" category="list-text">障害が発生したシャーシの両側にある 2 台の電源装置を取り外し、交換用シャーシに挿入します。</block>
   <block id="48609f85b6f3b162f84d5b7d5d7677ae" category="list-text">元々ケーブルを外したポートにケーブルを再接続します。ケーブルを外したときに追加したラベルは、ガイドとして役立ちます。</block>
   <block id="8d0dad879dbd06ad1f5f1f5acf51f28b" category="list-text">シャーシの電源をオンにします。</block>
-  <block id="ff29627b32e07511ae92253ec85e9e61" category="section-title">クラスタにノードを追加します</block>
   <block id="1f2c6dfe21555b473dc802e5b22a343a" category="paragraph">新しいコンピューティングノードを使用するように NetApp HCI を設定する必要があります。</block>
   <block id="c056c0bf5b425a395761cd37de9ac4e3" category="list-text">分散仮想スイッチを使用している環境にノードを追加する場合は、 vSphere インスタンス NetApp HCI で使用している vSphere Enterprise Plus ライセンスがあることを確認しておきます。</block>
   <block id="d57d6d6a586f9c13fbd97a299e3dfe3a" category="list-text">NetApp HCI で使用しているすべての vCenter インスタンスと vSphere インスタンスでライセンス期間が終了していないことを確認しておきます。</block>
   <block id="9a0e16aaba5fc23029c3fe1684661ae2" category="list-text">既存のノードと同じネットワークセグメントに未使用の空いている IPv4 アドレスが必要です（新しいノードは、同じタイプの既存のノードと同じネットワークにインストールする必要があります）。</block>
   <block id="94220c63d490d69862d0b6bd8c55bc36" category="list-text">vCenter 管理者アカウントのクレデンシャルを準備しておきます。</block>
-  <block id="81dc4810c71d7b8507b965d26011ef81" category="list-text">[ インストールの展開 ] ペインで、 [* 展開 *] を選択します。ブラウザに NetApp Deployment Engine が表示されます。</block>
   <block id="1dbe43ca80d44abbf871801ea5aefb93" category="list-text">Continue をクリックします。 .</block>
   <block id="ac9c7e2c5fd81b24c59b07707afae5c5" category="list-text">新しいコンピューティングノードを追加する既存の vSphere データセンターを選択するか、 Create New Datacenter を選択して新しいコンピューティングノードを新しいデータセンターに追加します。</block>
   <block id="923d755bd18c8099d341640f86f5615e" category="admonition">拡張対象として選択したクラスタのネットワーク設定を NetApp HCI が認識できない場合は、管理、ストレージ、 vMotion ネットワーク用の VMkernel と vmnic マッピングが導入時のデフォルトに設定されていることを確認します。</block>
@@ -2360,7 +2339,6 @@
   <block id="b8439da1d3bc0c45b81136dd3a07533a" category="list-text">[ ネットワークの設定 ] ページで、初期展開から一部のネットワーク情報が検出されました。シリアル番号順に表示された新しいコンピューティングノードのそれぞれについて、新しいネットワーク情報を割り当てる必要があります。新しいコンピューティングノードごとに、次の手順を実行します。</block>
   <block id="bdbca9155105fa70b02878fe37dcd59d" category="list-text">[ ネットワーク設定 ] セクションの [ 確認 ] ページでは、新しいノードが太字で表示されます。いずれかのセクションの情報を変更する必要がある場合は、次の手順を実行します。</block>
   <block id="e8972e60e4ed1d76df0feffb68866e46" category="list-text">オプション：新しいコンピューティングノードがすべて vCenter に表示されることを確認します。</block>
-  <block id="e8ddb30cd234af505251fddfe210e770" category="section-title">GPU ドライバをインストールします</block>
   <block id="34a9fb6a8c162efa753bd66e9b87e554" category="paragraph">H610C ノードなどの NVIDIA グラフィックス処理ユニット（ GPU ）を搭載したコンピューティングノードでは、 NVIDIA ソフトウェアドライバを VMware ESXi にインストールして、強化された処理能力を活用できるようにする必要があります。GPU ドライバをインストールするには、コンピューティングノードに GPU カードが必要です。</block>
   <block id="d7dc44e401260dbcb4fba3e3f12c02e3" category="list-text">ブラウザを開き、次の URL から NVIDIA ライセンスポータルにアクセスします。 https://nvid.nvidia.com/dashboard/`</block>
   <block id="c8d7d8b784ab1d748bdb0f7f739baeb7" category="cell">vSphere 6.0</block>
@@ -2368,7 +2346,6 @@
   <block id="77b0f9ffcb30a7f70c02e260497b2e1b" category="paragraph">NVIDIA-GRID-vSphere-6.5-410.92-410.91-412.16.zip</block>
   <block id="ba2a9a549d747a47e02e9b887742d185" category="paragraph">NVIDIA-GRID-vSphere-6.7-410.92-410.91-412.16.zip</block>
   <block id="b9e90fd8805746049212e3a607805ca8" category="list-text">ドライバパッケージをコンピュータに展開します。圧縮されていないドライバファイル .VIB ファイルが展開されます。</block>
-  <block id="69e7c0efe52761dba85359c9648bc4c6" category="list-text">コンピュータからコンピューティングノード上で実行されている ESXi に .VIB ドライバファイルをコピーします。バージョンごとの次のコマンド例では、ドライバが管理ホストの $HOME/NVIDIA/ESX6.x/ ディレクトリにあることを前提としています。SCP ユーティリティはほとんどの Linux ディストリビューションに搭載されています。または、 Windows のすべてのバージョンに対応したユーティリティとしてダウンロードすることもできます。</block>
   <block id="054b4f3ea543c990f6b125f41af6ebf7" category="cell">オプション</block>
   <block id="2b66f3a1e27f17f479018be59a0cc7d7" category="cell">ESXi 6.0</block>
   <block id="f0d858488904d8587f0a9f9286dceb97" category="paragraph">SCP $HOME/NVIDIA/ESX6.0/nvidia **.vibb root@&lt;ESX_IP_addr&gt; ： / 。</block>
@@ -6491,8 +6468,6 @@
   <block id="9e08f10312f3eaa134087c34ad076d92" category="paragraph">これ<block ref="f76e21c4f97e9ef2eb0114383d271ddf" category="inline-link-rx"></block> 現在インストールされているSSL証明書と秘密鍵を削除します。そのあと、クラスタで新しい自己署名証明書と秘密鍵が生成されます。</block>
   <block id="f056eadecebc58790da8eb91b5211492" category="inline-link">Element SoftwareでのカスタムSSL証明書の設定に関する要件を教えてください。</block>
   <block id="e3b4df69e2fe4e8545e5e0240eada6a2" category="list-text"><block ref="e3b4df69e2fe4e8545e5e0240eada6a2" category="inline-link-rx"></block></block>
-  <block id="631923a687ff82d68973d99b95597b47" category="inline-link">SolidFire and Element Resources ページにアクセスします</block>
-  <block id="238c5b123e3473c57e2925edccb205c2" category="list-text"><block ref="238c5b123e3473c57e2925edccb205c2" category="inline-link-rx"></block></block>
   <block id="ba3433b658d56109d8826f49ee0a8064" category="list-text"><block ref="ba3433b658d56109d8826f49ee0a8064" category="inline-link-rx"></block></block>
   <block id="d5147898f653b5500d1ba07c4204c743" category="list-text"><block ref="9d6606ad3ff5278801234da0e6746362" category="inline-link-rx"></block> 5.8.1 以降のネットワーク検証ツール</block>
   <block id="c411aac8cf32395c454762934e85315b" category="list-text"><block ref="c411aac8cf32395c454762934e85315b" category="inline-link-macro-rx"></block></block>
@@ -6575,4 +6550,29 @@
   <block id="732713df3c4c58fb19fab37e747f6f0d" category="list-text"><block ref="732713df3c4c58fb19fab37e747f6f0d" category="inline-link-macro-rx"></block></block>
   <block id="7149d03eb62017e7cc5192a67ff56c1c" category="paragraph">システムをリモートで管理し、データセンター外部のクライアントがリソースに接続できるようにし、内部サービスが正常に機能するようにするために、データセンターのエッジファイアウォールで次のポートを許可する必要があります。システムの使用方法によっては、これらのポート、 URL 、または IP アドレスの一部は不要な場合もあります。</block>
   <block id="331d6d490990c63b2cee0dc04fe2589b" category="paragraph">特に記載がないかぎり、すべてのポートがTCPであり、NetAppサポートサーバ、管理ノード、およびElementソフトウェアを実行するノードの間の3ウェイハンドシェイク通信がすべてサポートされている必要があります。たとえば、管理ノードのソースのホストはTCPポート443を介してストレージクラスタのMVIPデスティネーションのホストと通信し、デスティネーションホストは任意のポートを介してソースホストと通信します。</block>
+  <block id="b0c85ded726a3c8e46cbaafa60707f98" category="inline-link">NetApp HCIコンピューティングノードにESXiを手動でインストールする方法</block>
+  <block id="280e8a9497f3d56d4812b7ef2ce31fc6" category="paragraph">NetAppでは、NetApp Deployment Engineを使用して交換用コンピューティングノードを追加することを推奨しています。ESXiのインストールにNetApp Deployment Engineを使用できない場合は、NetAppナレッジベースの記事を参照してください。<block ref="d673ea2f9a1bf5256cf7dd0779becf21" category="inline-link-rx"></block>。</block>
+  <block id="4e5f0133d50930ab8acffdd21544c950" category="section-title">手順1：ノードを交換する準備</block>
+  <block id="9385a8fdfdd5ec6a7a983c13d83b5d55" category="section-title">手順2：ノードを交換する</block>
+  <block id="bf96948cb523bea2d786273b1d9e3726" category="section-title">手順3：クラスタにノードを追加する</block>
+  <block id="667494acc646db65248acfcbfe2a10ab" category="section-title">手順4：GPUドライバをインストールする</block>
+  <block id="524202cb16f1d9b45d55ae3cf01846a9" category="list-text">お使いの環境に応じて、ドライバーパッケージのバージョンをコンピューターにダウンロードします。</block>
+  <block id="cdf9b80a781028cfcd33975c9b549a66" category="paragraph">次の例は、vSphere 6.0、6.5、および6.7のドライバパッケージのバージョンを示しています。</block>
+  <block id="42531de91f94d49640c00256e0aa3ceb" category="list-text">コンピュータからコンピューティングノード上で実行されている ESXi に .VIB ドライバファイルをコピーします。Secure Copy Protocol（SCP）ユーティリティは、ほとんどのLinuxディストリビューションで簡単に使用できます。また、すべてのバージョンのWindowsでダウンロード可能なユーティリティとして使用できます。</block>
+  <block id="7a144dd231d33708e9980e0a26cb3083" category="paragraph">次の例は、ESXi 6.0、6.5、および6.7に対するコマンドを示しています。このコマンドは、ドライバが管理ホストの$HOME/nvidia/ESX6.x/ディレクトリにあることを前提としています。</block>
+  <block id="d908683c495cc5cc655f7cd09695c523" category="paragraph">ここでは、この手順の概要を示します。
+<block ref="b3fddefb8533cc7fc260062e1b11797b" category="inline-xref-macro-rx"></block>
+<block ref="7fbd89059403f3c320101b5b73d264e9" category="inline-xref-macro-rx"></block>
+<block ref="a1a1a48df94086d036719fc33e283f5e" category="inline-xref-macro-rx"></block>
+<block ref="e2315890dcab7fdfd216149d3ebc535d" category="inline-xref-macro-rx"></block>
+<block ref="f15458d9685a9671cd038c3a408d2679" category="inline-xref-macro-rx"></block></block>
+  <block id="6a1419cffec796a0cf9688c584b108e5" category="paragraph">次に、システムに固有の条件がある場合に実行する必要があるその他のタスクを示します。</block>
+  <block id="6f2e0dd9461f023001b32f634a66ca39" category="list-text"><block ref="6f2e0dd9461f023001b32f634a66ca39" category="inline-link-macro-rx"></block></block>
+  <block id="d5e0ed137993fa47f6c52eaba475f986" category="list-text"><block ref="96458e97c135f9cdca1845fd2743e79f" category="inline-xref-macro-rx"></block></block>
+  <block id="27e4d3a5ce33dd22d6512ac546804968" category="list-text"><block ref="d095c71c5d51f56f74c0c624a25acdfc" category="inline-xref-macro-rx"></block></block>
+  <block id="fefc802a17eb78beb3791d194d57c778" category="section-title">手順1：コンピューティングノードを交換する準備</block>
+  <block id="c5fe75a9a5a9f7b0e4279644ad5bba34" category="section-title">手順2：シャーシ内のコンピューティングノードを交換する</block>
+  <block id="527e6719cbc58f7527999477eaac0dd2" category="section-title">手順3：NetApp HCI 1.7以降でコンピューティングノードアセットを削除する</block>
+  <block id="714f787cf5a78abe3413cd3fa33c6c6b" category="section-title">手順4：クラスタにコンピューティングノードを追加する</block>
+  <block id="4b07d1c342b03364f7120990720b53ef" category="section-title">手順5：2ノードおよび3ノードのストレージクラスタの監視ノードを再導入する</block>
 </blocks>
