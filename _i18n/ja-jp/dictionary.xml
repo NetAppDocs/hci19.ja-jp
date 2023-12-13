@@ -6575,4 +6575,6 @@
   <block id="527e6719cbc58f7527999477eaac0dd2" category="section-title">手順3：NetApp HCI 1.7以降でコンピューティングノードアセットを削除する</block>
   <block id="714f787cf5a78abe3413cd3fa33c6c6b" category="section-title">手順4：クラスタにコンピューティングノードを追加する</block>
   <block id="4b07d1c342b03364f7120990720b53ef" category="section-title">手順5：2ノードおよび3ノードのストレージクラスタの監視ノードを再導入する</block>
+  <block id="df0f8acf74958be223bdd3dabcce5038" category="inline-link">アップグレードパッケージのアップロードエラーが原因でSolidFireとHCIのアップグレードを開始できない</block>
+  <block id="b9bbae8efe5c0f15ffba3f05d619b861" category="admonition">2023年11月以降、署名キー証明書（プライベートおよびパブリック）の有効期限が2023年11月5日に切れたため、NetApp Hybrid Cloud ControlまたはREST APIを使用してコンポーネントのアップグレードを開始することはできません。この問題を解決するには、ナレッジベースの記事に記載されている回避策を参照してください。<block ref="43e83b9864cac922c7475bad0e74a40f" category="inline-link-rx"></block>。</block>
 </blocks>
