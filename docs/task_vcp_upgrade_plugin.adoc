@@ -27,7 +27,7 @@ NOTE: 管理サービス2.22.7には、リモートプラグインを含むEleme
 --
 このアップグレード手順では、次のアップグレードシナリオについて説明します。
 
-* Element Plug-in for vCenter Server 5.2、5.1、または5.0にアップグレードする。
+* Element Plug-in for vCenter Server 5.3、5.2、5.1、または5.0にアップグレードする。
 * HTML5 vSphere Web Client 8.0または7.0にアップグレードする。
 
 
@@ -161,8 +161,8 @@ VMware vCenter Server 6.7U1を使用してNetApp Element Plug-in for vCenter Ser
 +
 [listing]
 ----
-NetApp Element Plug-in Version: 5.2
-NetApp Element Plug-in Build Number: 12
+NetApp Element Plug-in Version: 5.3
+NetApp Element Plug-in Build Number: 9
 ----
 
 

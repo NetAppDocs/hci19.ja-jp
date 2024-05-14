@@ -58,7 +58,8 @@ NOTE: ネットアップサポートサイトのクレデンシャルでログ�
 
 == vCenter Server 向け NetApp Element プラグイン
 
-* https://library.netapp.com/ecm/ecm_download_file/ECMLP2886272["vCenter Plug-in 5.2リリースノート"^] _ 新規 _
+* https://library.netapp.com/ecm/ecm_download_file/ECMLP3316480["vCenter Plug-in 5.3リリースノート"^] _ 新規 _
+* https://library.netapp.com/ecm/ecm_download_file/ECMLP2886272["vCenter Plug-in 5.2リリースノート"^]
 * https://library.netapp.com/ecm/ecm_download_file/ECMLP2885734["vCenter Plug-in 5.1リリースノート"^]
 * https://library.netapp.com/ecm/ecm_download_file/ECMLP2884992["vCenter Plug-in 5.0リリースノート"^]
 * https://library.netapp.com/ecm/ecm_download_file/ECMLP2884458["vCenter Plug-in 4.10リリースノート"^]
