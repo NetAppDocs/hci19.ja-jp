@@ -1,0 +1,78 @@
+---
+indexpage:
+  title: NetApp HCI のドキュメント
+  summary: 詳細については、 NetApp HCI の設定と管理に関するドキュメントおよび NetApp HCI ソリューションに関する情報を参照してください。
+  keywords: netapp, hci, on premise
+  lead: NetApp HCI は、ハイブリッドクラウド向けの拡張性に優れたオンプレミスハイパーコンバージドインフラです。詳細については、 NetApp HCI
+    の設定と管理に関するドキュメントおよび NetApp HCI ソリューションに関する情報を参照してください。このサイトには、NetApp HCI 1.9のドキュメントが含まれています。
+  tiles:
+  - title: はじめに
+    links:
+    - title: 製品の概要
+      url: "/docs/concept_hci_product_overview.html"
+    - title: サポートされているファームウェアおよびESXiドライバのバージョン
+      url: docs/firmware_driver_versions.html
+    - title: リリースノート
+      url: "/docs/rn_relatedrn.html"
+    - title: 新機能
+      url: "/docs/rn_whatsnew.html"
+  - title: ハードウェアの設置とメンテナンス
+    links:
+    - title: H シリーズハードウェアの設置
+      url: "/docs/task_hci_installhw.html"
+    - title: H シリーズハードウェアのメンテナンス
+      url: "/docs/task_hci_hwmainoverview.html"
+  - title: NetApp HCI をインストールします
+    links:
+    - title: インストールと導入の概要
+      url: "/docs/task_hci_getstarted.html"
+    - title: NetApp Deployment Engine を使用して導入を開始します
+      url: "/docs/concept_nde_access_overview.html"
+    - title: 導入後のタスクを実行
+      url: "/docs/concept_nde_post_deployment_overview.html"
+  - title: NetApp HCI を使用します
+    links:
+    - title: NetApp Hybrid Cloud Control を使用して管理します
+      url: "/docs/task_nde_access_hcc.html"
+    - title: 管理ノードを操作します
+      url: "/docs/task_mnode_work_overview.html"
+    - title: NetApp Element Plug-in for vCenter Server を使用します
+      url: https://docs.netapp.com/us-en/vcp/index.html
+    - title: Rancher を使用します
+      url: "/docs/concept_rancher_product_overview.html"
+    - title: NetApp HCI を展開します
+      url: "/docs/concept_hcc_expandoverview.html"
+    - title: NetApp HCI をアップグレードします
+      url: "/docs/concept_hci_upgrade_overview.html"
+  - title: トラブルシューティングを行う
+    links:
+    - title: NetApp HCI と Rancher のトラブルシューティングを行います
+      url: https://kb.netapp.com/Advice_and_Troubleshooting/Data_Storage_Software/Management_services_for_Element_Software_and_NetApp_HCI/NetApp_HCI_and_Rancher_troubleshooting
+    - title: コンピューティングノードの BMC をリセットします
+      url: https://kb.netapp.com/Advice_and_Troubleshooting/Hybrid_Cloud_Infrastructure/NetApp_HCI/How_to_reset_BMC_on_NetApp_HCI_compute_nodes
+    - title: 技術情報に関するその他の記事
+      url: https://kb.netapp.com/Special:Search?query=netapp+hci&type=wiki
+  - title: 解決策
+    links:
+    - title: NetApp HCI のリソースページ
+      url: https://www.netapp.com/hybrid-cloud/hci-documentation/
+    - title: ネットアップのソリューション
+      url: https://docs.netapp.com/us-en/netapp-solutions/index.html
+  - title: デモとチュートリアル
+    links:
+    - title: NetApp HCI ビデオライブラリ
+      url: https://media.netapp.com/category/videos/netapp-hci
+    - title: ネットアップラーニングサービス
+      url: https://www.netapp.com/support-and-training/netapp-university/
+  - title: ブログとコミュニティ
+    links:
+    - title: ネットアップコミュニティ
+      url: https://community.netapp.com/t5/forums/searchpage/tab/message?advanced=false&allow_punctuation=false&q=hci
+    - title: サポートへのアクセス
+      url: https://mysupport.netapp.com/site/products/all/details/netapp-hci/guideme-tab
+  - title: 以前のバージョン
+    links:
+    - title: NetApp HCI 1.8 に関するドキュメント
+      url: https://docs.netapp.com/us-en/hci18/index.html
+    - title: NetApp HCI ドキュメントセンター
+      url: https://docs.netapp.com/hci/index.jsp
