@@ -17,7 +17,7 @@ keywords: netapp, hci, environment, requirements
 [role="lead"]
 NetApp HCI の設置に使用するラックの電源が AC 電源コンセントから供給されること、および NetApp HCI の設置規模に応じた十分な冷却をデータセンターが提供できることを確認します。
 
-NetApp HCI の各コンポーネントの詳細な機能については、『 NetApp HCI 』を参照してください http://www.netapp.com/us/media/ds-3881.pdf["データシート"^]。
+NetApp HCIの各コンポーネントの詳細な機能については、『NetApp HCI』を参照してください https://www.netapp.com/pdf.html?item=/media/7977-ds-3881.pdf["データシート"^]。
 
 
 NOTE: H410C コンピューティングノードは高電圧（ 200~240VAC ）でのみ動作します。既存の NetApp HCI 環境に H410C ノードを追加する場合は、電源要件が満たされていることを確認しておく必要があります。

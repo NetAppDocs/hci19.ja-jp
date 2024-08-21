@@ -87,7 +87,7 @@ TIP: 3 ノードのアンサンブルに 2 つのストレージノードと 1 �
 
 == 詳細については、こちらをご覧ください
 
-* https://www.netapp.com/us/media/tr-4823.pdf["NetApp HCI 2 ノードストレージクラスタ | TR-4823"^]
+* https://www.netapp.com/pdf.html?item=/media/9489-tr-4823.pdf["NetApp HCI 2 ノードストレージクラスタ | TR-4823"^]
 * https://docs.netapp.com/us-en/vcp/index.html["vCenter Server 向け NetApp Element プラグイン"^]
 * http://docs.netapp.com/sfe-122/index.jsp["SolidFire と Element ソフトウェアドキュメントセンター"^]
 
