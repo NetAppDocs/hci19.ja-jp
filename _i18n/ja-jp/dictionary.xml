@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <blocks>
   <block id="db035ffffac30b1a95fd497625c55167" category="summary">詳細については、 NetApp HCI の設定と管理に関するドキュメントおよび NetApp HCI ソリューションに関する情報を参照してください。</block>
-  <block id="ad0a505756223d68dc11afeae3459351" category="doc">NetApp HCI のドキュメント</block>
   <block id="d1f3348004e8a355335cb19ad2503f19" category="summary">NetApp HCI または NetApp SolidFire を導入している組織内のセキュリティポリシーに応じて、クレデンシャルやパスワードの変更はセキュリティの手法の一部として一般的に行われます。パスワードを変更する前に、導入環境内の他のソフトウェアコンポーネントへの影響を確認しておく必要があります。</block>
   <block id="de55aaabf3e64f82482bfec3331b7b99" category="doc">NetApp HCI と NetApp SolidFire でクレデンシャルを変更</block>
   <block id="495c10200cf923b1c1357005661bbf33" category="paragraph">NetApp HCI 環境または NetApp SolidFire 環境のいずれかのコンポーネントのクレデンシャルを変更する場合、次の表に示すガイダンスに従って他のコンポーネントに影響を与えます。</block>
@@ -6582,4 +6581,5 @@
   <block id="a5f38386dcceecb027de7fd15fcc6aa4" category="list-text"><block ref="a5f38386dcceecb027de7fd15fcc6aa4" category="inline-link-rx"></block></block>
   <block id="0287de700b52d79d64e09aca72f4850b" category="admonition">のコンピューティングノードのESXiをアップグレードする<block ref="d6b7667dc675e8798d67d09fb8931bb2" category="inline-link-rx"></block>場合は、一度に1つのコンピューティングノードのみをアップグレードして、一時的に使用できなくなり、クラスタクォーラムを維持できるようにします。</block>
   <block id="a2f9c1250a16a7514c9d6b0865b7bf42" category="list-text"><block ref="a2f9c1250a16a7514c9d6b0865b7bf42" category="inline-link-rx"></block></block>
+  <block id="846572971d410f1d04ff53e7bfc8a84b" category="sidebar">NetApp HCIドキュメント1.9</block>
 </blocks>
