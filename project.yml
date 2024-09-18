@@ -14,7 +14,7 @@ settings:
     url: "/hci"
   - version-number: '1.8'
     url: "/hci18"
-  langs: ja-jp,us-en,ko-kr,zh-cn,zh-tw,de-de,es-es,fr-fr,it-it
+  langs: ja-jp,us-en,de-de,es-es,fr-fr,it-it,pt-br,ko-kr,zh-cn,zh-tw
 sidebar:
   entries:
   - title: NetApp HCIドキュメント1.9
