@@ -11,7 +11,6 @@ summary: NetApp HCI およびNetApp Element ソフトウェアでサポートさ
 :icons: font
 :linkattrs: 
 :imagesdir: ../media/
-:keywords: hci, earlier, documentation, versions
 
 
 [role="lead"]

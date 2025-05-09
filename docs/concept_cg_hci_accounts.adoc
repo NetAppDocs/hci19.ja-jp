@@ -79,11 +79,11 @@ NetApp Hybrid Cloud Control の多くの機能は複数のストレージクラ�
 
 ボリュームアカウントは、 NetApp Hybrid Cloud Control Volumes の表で管理されます。
 
-[discrete]
+
+
 == 詳細については、こちらをご覧ください
 
 * link:task_hcc_manage_accounts.html["ユーザアカウントを管理する"]
 * link:concept_hci_clusters.html["クラスタについて学習する"]
-* https://www.netapp.com/hybrid-cloud/hci-documentation/["NetApp HCI のリソースページ"^]
 * https://docs.netapp.com/us-en/vcp/index.html["vCenter Server 向け NetApp Element プラグイン"^]
 

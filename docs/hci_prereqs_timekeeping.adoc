@@ -11,7 +11,6 @@ keywords: netapp, hci, timekeeping, NTP, DNS
 :icons: font
 :linkattrs: 
 :imagesdir: ../media/
-:keywords: netapp, hci, timekeeping, NTP, DNS
 
 
 [role="lead"]
@@ -26,9 +25,8 @@ NetApp HCI を導入する前に、次の DNS およびタイムサーバの準�
 * ストレージノードとコンピューティングノードのすべてのクロックが相互に同期されていること、および NetApp HCI へのログインに使用するデバイスのクロックが NetApp HCI ノードと同期されていることを確認してください。
 
 
-[discrete]
+
+
 == 詳細については、こちらをご覧ください
 
-* https://www.netapp.com/hybrid-cloud/hci-documentation/["NetApp HCI のリソースページ"^]
-* https://docs.netapp.com/us-en/vcp/index.html["vCenter Server 向け NetApp Element プラグイン"^]
-
+https://docs.netapp.com/us-en/vcp/index.html["vCenter Server 向け NetApp Element プラグイン"^]

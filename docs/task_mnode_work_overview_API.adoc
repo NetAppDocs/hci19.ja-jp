@@ -48,10 +48,10 @@ REST API で実行できるタスクは次のとおりです。
 * link:task_mnode_logs.html["管理サービスからログを取得しています"]
 
 
-[discrete]
+
+
 == 詳細については、こちらをご覧ください
 
 * link:task_mnode_access_ui.html["管理ノードにアクセスします"]
 * https://docs.netapp.com/us-en/vcp/index.html["vCenter Server 向け NetApp Element プラグイン"^]
-* https://www.netapp.com/hybrid-cloud/hci-documentation/["NetApp HCI のリソースページ"^]
 

@@ -53,9 +53,8 @@ Element ソフトウェアバージョン 11.3 以降を実行するクラスタ
 * link:task_mnode_ssh_management.html["管理ノードで SSH 機能を管理します"]
 
 
-[discrete]
+
+
 == 詳細については、こちらをご覧ください
 
-* https://docs.netapp.com/us-en/vcp/index.html["vCenter Server 向け NetApp Element プラグイン"^]
-* https://www.netapp.com/hybrid-cloud/hci-documentation/["NetApp HCI のリソースページ"^]
-
+https://docs.netapp.com/us-en/vcp/index.html["vCenter Server 向け NetApp Element プラグイン"^]

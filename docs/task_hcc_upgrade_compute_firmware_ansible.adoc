@@ -32,9 +32,3 @@ NOTE: アップグレード用の Ansible のロールは、 NetApp HCI H シリ
 
 .ファームウェアのアップグレードの自動化を始めましょう
 作業を開始するには、に移動します https://github.com/NetApp-Automation/nar_compute_firmware_upgrade["GitHub 上の NetApp Ansible リポジトリ"^] および 'NAR_compute_nodes _firmware_upgrades ロールとドキュメントをダウンロードします
-
-[discrete]
-== 詳細については、こちらをご覧ください
-
-* https://www.netapp.com/hybrid-cloud/hci-documentation/["NetApp HCI のリソースページ"^]
-

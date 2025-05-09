@@ -27,9 +27,8 @@ NetApp HCI ストレージクラスタのパフォーマンスを最適化する
 . NetApp HCI を導入する前に、ノード上のユーザインターフェイス（ターミナルユーザインターフェイスまたは TUI と呼ばれる）ですべてのストレージノードのボンディングモードを LACP に変更します。
 
 
-[discrete]
+
+
 == 詳細については、こちらをご覧ください
 
-* https://www.netapp.com/hybrid-cloud/hci-documentation/["NetApp HCI のリソースページ"^]
-* https://docs.netapp.com/us-en/vcp/index.html["vCenter Server 向け NetApp Element プラグイン"^]
-
+https://docs.netapp.com/us-en/vcp/index.html["vCenter Server 向け NetApp Element プラグイン"^]

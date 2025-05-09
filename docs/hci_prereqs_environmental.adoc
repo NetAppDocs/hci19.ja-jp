@@ -11,7 +11,6 @@ keywords: netapp, hci, environment, requirements
 :icons: font
 :linkattrs: 
 :imagesdir: ../media/
-:keywords: netapp, hci, environment, requirements
 
 
 [role="lead"]
@@ -22,9 +21,8 @@ NetApp HCIの各コンポーネントの詳細な機能については、『NetA
 
 NOTE: H410C コンピューティングノードは高電圧（ 200~240VAC ）でのみ動作します。既存の NetApp HCI 環境に H410C ノードを追加する場合は、電源要件が満たされていることを確認しておく必要があります。
 
-[discrete]
+
+
 == 詳細については、こちらをご覧ください
 
-* https://www.netapp.com/hybrid-cloud/hci-documentation/["NetApp HCI のリソースページ"^]
-* https://docs.netapp.com/us-en/vcp/index.html["vCenter Server 向け NetApp Element プラグイン"^]
-
+https://docs.netapp.com/us-en/vcp/index.html["vCenter Server 向け NetApp Element プラグイン"^]

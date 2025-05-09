@@ -256,10 +256,10 @@ image::bol_list_bugs_found.png[ストレージファームウェアバンドル�
 * CVE-2015-0151 、 CVE-2015-0123 、 CVE-20119-0117
 
 
-[discrete]
+
+
 == 詳細については、こちらをご覧ください
 
 * https://docs.netapp.com/hci/index.jsp["NetApp HCI ドキュメントセンター"^]
-* https://www.netapp.com/hybrid-cloud/hci-documentation/["NetApp HCI のリソースページ"^]
 * https://kb.netapp.com/Advice_and_Troubleshooting/Flash_Storage/SF_Series/How_to_update_iDRAC%2F%2FBIOS_firmware_on_SF_Series_nodes["KB ： SF シリーズノードで IDRAC / BIOS ファームウェアを更新する方法"^]
 

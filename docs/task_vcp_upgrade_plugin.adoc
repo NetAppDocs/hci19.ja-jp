@@ -173,6 +173,4 @@ NOTE: vCenter Plug-in には、オンラインヘルプが用意されていま�
 
 == 詳細については、こちらをご覧ください
 
-* https://docs.netapp.com/us-en/vcp/index.html["vCenter Server 向け NetApp Element プラグイン"^]
-* https://www.netapp.com/hybrid-cloud/hci-documentation/["NetApp HCI のリソースページ"^]
-
+https://docs.netapp.com/us-en/vcp/index.html["vCenter Server 向け NetApp Element プラグイン"^]

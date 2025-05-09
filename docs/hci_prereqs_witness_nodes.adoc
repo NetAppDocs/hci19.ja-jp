@@ -11,7 +11,6 @@ keywords: netapp, hci, element, Witness Node
 :icons: font
 :linkattrs: 
 :imagesdir: ../media/
-:keywords: netapp, hci, element, Witness Node
 
 
 [role="lead"]
@@ -43,9 +42,8 @@ NetApp HCI では、 2 ノードまたは 3 ノードのストレージクラス
 
 NOTE: NetApp HCI のインストールプロセスで監視ノードがインストールされると、 VM テンプレートが VMware vCenter に格納されます。これを使用して、誤って削除された場合、失われた場合、または破損した場合に監視ノードを再導入できます。また、監視ノードをホストしていた障害コンピューティングノードと交換する必要がある場合は、テンプレートを使用して監視ノードを再導入することもできます。手順については、 2 ノードおよび 3 ノードのストレージクラスタに対する監視ノードの再導入 * を参照してください link:task_hci_h410crepl.html["こちらをご覧ください"^]。
 
-[discrete]
+
+
 == 詳細については、こちらをご覧ください
 
-* https://www.netapp.com/hybrid-cloud/hci-documentation/["NetApp HCI のリソースページ"^]
-* https://docs.netapp.com/us-en/vcp/index.html["vCenter Server 向け NetApp Element プラグイン"^]
-
+https://docs.netapp.com/us-en/vcp/index.html["vCenter Server 向け NetApp Element プラグイン"^]

@@ -271,10 +271,10 @@ NetApp Hybrid Cloud Control のインターフェイスが表示されます。
 
 
 
-[discrete]
+
+
 == 詳細については、こちらをご覧ください
 
-* https://www.netapp.com/hybrid-cloud/hci-documentation/["NetApp HCI のリソースページ"^]
 * link:../media/hseries-isi.pdf["NetApp HCI のセットアップガイド"^]
 * https://www.netapp.com/pdf.html?item=/media/9413-tr4820pdf.pdf["TR-48820 ：『 NetApp HCI Networking Quick Planning Guide 』"^]
 * https://docs.netapp.com/us-en/vcp/index.html["NetApp Element Plug-in for vCenter Server のドキュメント"^]

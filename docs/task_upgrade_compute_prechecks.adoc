@@ -281,9 +281,8 @@ NetApp Hybrid Cloud ControlまたはAPIのどちらのメソッドで実行し�
 
 | クラスタ内の監視ノードのステータスは何ですか。監視ノードがこの ESXi ホストで実行されており、別の監視ノードが別の ESXi ホストで実行されています。 | ノード | 監視ノードは、この ESXi ホスト上でローカルに実行されています。この ESXi ホストをアップグレードする準備ができたら、この ESXi ホストでのみ監視ノードをシャットダウンして健常性チェックを再実行してください。* HCI 環境では、監視ノードが常に 1 つ実行されている必要があります。 * | https://kb.netapp.com/Advice_and_Troubleshooting/Hybrid_Cloud_Infrastructure/NetApp_HCI/How_to_resolve_witness_node_issues_prior_to_upgrading_compute_nodes["こちらの技術情報をご覧ください"^] 
 |===
-[discrete]
+
+
 == 詳細については、こちらをご覧ください
 
-* https://docs.netapp.com/us-en/vcp/index.html["vCenter Server 向け NetApp Element プラグイン"^]
-* https://www.netapp.com/hybrid-cloud/hci-documentation/["NetApp HCI のリソースページ"^]
-
+https://docs.netapp.com/us-en/vcp/index.html["vCenter Server 向け NetApp Element プラグイン"^]

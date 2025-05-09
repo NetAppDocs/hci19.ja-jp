@@ -52,9 +52,8 @@ NetApp HCI スイッチの要件は次のとおりです。
 
 すべての NetApp HCI ノードは、専用の管理ポートを通じてアウトオブバンド管理機能を提供します。NetApp H300 、 H300E 、 H500S 、 H500E 、 H700S 、 H700E 、および H410C のノードでは、ポート A を介した IPMI アクセスも可能ですベストプラクティスとして、環境内のすべてのノードでアウトオブバンド管理を設定し、 NetApp HCI のリモート管理を容易にすることを推奨します。
 
-[discrete]
+
+
 == 詳細については、こちらをご覧ください
 
-* https://www.netapp.com/hybrid-cloud/hci-documentation/["NetApp HCI のリソースページ"^]
-* https://docs.netapp.com/us-en/vcp/index.html["vCenter Server 向け NetApp Element プラグイン"^]
-
+https://docs.netapp.com/us-en/vcp/index.html["vCenter Server 向け NetApp Element プラグイン"^]

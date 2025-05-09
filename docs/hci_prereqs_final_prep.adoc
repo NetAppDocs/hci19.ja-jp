@@ -100,10 +100,10 @@ IPMI ネットワークポートを設定したらすぐに、各コンピュー
 . デフォルトの IPMI パスワードを使用するすべての NetApp HCI H610C 、 H615C 、または H610S ノードについて、この手順を繰り返します。
 
 
-[discrete]
+
+
 == 詳細については、こちらをご覧ください
 
 * https://docs.netapp.com/us-en/solidfire-active-iq/index.html["NetApp SolidFire Active IQ のドキュメント"^]
 * https://docs.netapp.com/us-en/vcp/index.html["vCenter Server 向け NetApp Element プラグイン"^]
-* https://www.netapp.com/hybrid-cloud/hci-documentation/["NetApp HCI のリソースページ"^]
 

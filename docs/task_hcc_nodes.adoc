@@ -66,9 +66,8 @@ TIP: ストレージリソースとコンピューティングリソースの数
 
 NOTE: NetApp Hybrid Cloud Control でコンピューティングノードを管理するには、が必要です https://kb.netapp.com/Advice_and_Troubleshooting/Data_Storage_Software/Management_services_for_Element_Software_and_NetApp_HCI/How_to_set_up_compute_node_management_in_NetApp_Hybrid_Cloud_Control["コンピューティングノードを vCenter ホストクラスタに追加します"^]。
 
-[discrete]
+
+
 == 詳細については、こちらをご覧ください
 
-* https://docs.netapp.com/us-en/vcp/index.html["vCenter Server 向け NetApp Element プラグイン"^]
-* https://www.netapp.com/hybrid-cloud/hci-documentation/["NetApp HCI のリソースページ"^]
-
+https://docs.netapp.com/us-en/vcp/index.html["vCenter Server 向け NetApp Element プラグイン"^]

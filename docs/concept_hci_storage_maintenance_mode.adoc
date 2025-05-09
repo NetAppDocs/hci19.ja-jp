@@ -53,6 +53,5 @@ NOTE: ストレージノードの電源をオフにすると、 HCC のストレ
 * https://docs.netapp.com/us-en/element-software/api/reference_element_api_enablemaintenancemode.html["Element API のメンテナンスモードを有効にします"^]
 * https://docs.netapp.com/us-en/element-software/api/reference_element_api_disablemaintenancemode.html["Element API のメンテナンスモードを無効にします"^]
 * https://docs.netapp.com/us-en/element-software/api/concept_element_api_about_the_api.html["NetApp Element API ドキュメント"^]
-* https://www.netapp.com/hybrid-cloud/hci-documentation/["NetApp HCI のリソースページ"^]
 * https://docs.netapp.com/us-en/vcp/index.html["vCenter Server 向け NetApp Element プラグイン"^]
 

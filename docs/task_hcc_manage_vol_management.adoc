@@ -283,11 +283,11 @@ IMPORTANT: 管理サービスに関連付けられた永続ボリュームが作
 . [ はい ] を選択してプロセスを確認します。
 
 
-[discrete]
+
+
 == 詳細については、こちらをご覧ください
 
 * link:concept_hci_volumes.html["ボリュームについて学習する"]
 * https://docs.netapp.com/us-en/element-software/index.html["SolidFire および Element ソフトウェアのドキュメント"^]
 * https://docs.netapp.com/us-en/vcp/index.html["vCenter Server 向け NetApp Element プラグイン"^]
-* https://www.netapp.com/hybrid-cloud/hci-documentation/["NetApp HCI のリソースページ"^]
 

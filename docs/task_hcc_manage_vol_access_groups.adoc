@@ -73,11 +73,11 @@ NetApp Hybrid Cloud Control を使用してボリュームアクセスグルー�
 . [ はい ] を選択して、削除操作を確認します。
 
 
-[discrete]
+
+
 == 詳細については、こちらをご覧ください
 
 * link:concept_hci_volume_access_groups.html["ボリュームアクセスグループについて学習する"]
 * link:task_hcc_manage_initiators.html#add-initiators-to-a-volume-access-group["ボリュームアクセスグループにイニシエータを追加します"]
 * https://docs.netapp.com/us-en/vcp/index.html["vCenter Server 向け NetApp Element プラグイン"^]
-* https://www.netapp.com/hybrid-cloud/hci-documentation/["NetApp HCI のリソースページ"^]
 

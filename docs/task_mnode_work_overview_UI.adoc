@@ -18,10 +18,10 @@ keywords: 'netapp, management node ui, mnode ui, :442, element'
 * link:task_mnode_run_system_utilities.html["管理ノードからシステムユーティリティを実行します"]
 
 
-[discrete]
+
+
 == 詳細については、こちらをご覧ください
 
 * link:task_mnode_access_ui.html["管理ノードにアクセスします"]
 * https://docs.netapp.com/us-en/vcp/index.html["vCenter Server 向け NetApp Element プラグイン"^]
-* https://www.netapp.com/hybrid-cloud/hci-documentation/["NetApp HCI のリソースページ"^]
 

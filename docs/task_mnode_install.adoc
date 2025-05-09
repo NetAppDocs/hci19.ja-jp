@@ -349,12 +349,12 @@ NOTE: コントローラサブアセットを追加する場合は、vCenterで�
 
 
 
-[discrete]
+
+
 == 詳細はこちら
 
 * link:concept_hci_volumes.html#persistent-volumes["永続ボリューム"]
 * link:task_mnode_add_assets.html["管理ノードにコンピューティングアセットとコントローラアセットを追加します"]
 * link:task_mnode_install_add_storage_NIC.html["ストレージ NIC を設定します"]
 * https://docs.netapp.com/us-en/vcp/index.html["vCenter Server 向け NetApp Element プラグイン"^]
-* https://www.netapp.com/hybrid-cloud/hci-documentation/["NetApp HCI のリソースページ"^]
 

@@ -20,9 +20,3 @@ NetApp HCI 、ユーザアカウント、ストレージクラスタ、ボリュ
 * link:task_mnode_work_overview.html["管理ノードを操作します"]
 * link:concept_nde_hci_power_off_on.html["NetApp HCI システムの電源をオフまたはオンにします"]
 
-
-[discrete]
-== 詳細については、こちらをご覧ください
-
-* https://www.netapp.com/hybrid-cloud/hci-documentation/["NetApp HCI のリソースページ"^]
-

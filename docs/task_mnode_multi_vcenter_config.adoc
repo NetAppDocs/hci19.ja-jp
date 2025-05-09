@@ -63,9 +63,8 @@ NOTE: また、 NetApp Hybrid Cloud Control の UI でインベントリが更�
 . NetApp Hybrid Cloud Control のブラウザをリフレッシュして変更を確認します。
 
 
-[discrete]
+
+
 == 詳細については、こちらをご覧ください
 
-* https://docs.netapp.com/us-en/vcp/index.html["vCenter Server 向け NetApp Element プラグイン"^]
-* https://www.netapp.com/hybrid-cloud/hci-documentation/["NetApp HCI のリソースページ"^]
-
+https://docs.netapp.com/us-en/vcp/index.html["vCenter Server 向け NetApp Element プラグイン"^]

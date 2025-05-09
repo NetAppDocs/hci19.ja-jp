@@ -329,9 +329,8 @@ NOTE: ノード OS の場合、セキュリティパッチの無人アップグ�
 
 アップグレードが正常に完了したのは、「 PercentComplete 」が「 100 」を示し、「結果」がアップグレードされたバージョン番号を示している場合です。
 
-[discrete]
+
+
 == 詳細については、こちらをご覧ください
 
-* https://docs.netapp.com/us-en/vcp/index.html["vCenter Server 向け NetApp Element プラグイン"^]
-* https://www.netapp.com/hybrid-cloud/hci-documentation/["NetApp HCI のリソースページ"^]
-
+https://docs.netapp.com/us-en/vcp/index.html["vCenter Server 向け NetApp Element プラグイン"^]

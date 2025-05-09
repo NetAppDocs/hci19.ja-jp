@@ -195,6 +195,4 @@ NOTE: ノードが保守モードのときは新しいデータは受け入れ�
 
 == 詳細については、こちらをご覧ください
 
-* link:task_mnode_manage_storage_cluster_assets.html["ストレージクラスタアセットを作成および管理する"]
-* https://www.netapp.com/hybrid-cloud/hci-documentation/["NetApp HCI のリソースページ"^]
-
+link:task_mnode_manage_storage_cluster_assets.html["ストレージクラスタアセットを作成および管理する"]

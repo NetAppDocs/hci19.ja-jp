@@ -128,11 +128,11 @@ Fibre Channel イニシエータ WWPN の有効な形式は、「 :AA:BB:CC:dd:1
 
 
 
-[discrete]
+
+
 == 詳細については、こちらをご覧ください
 
 * link:concept_hci_initiators.html["イニシエータについて学習する"]
 * link:concept_hci_volume_access_groups.html["ボリュームアクセスグループについて学習する"]
 * https://docs.netapp.com/us-en/vcp/index.html["vCenter Server 向け NetApp Element プラグイン"^]
-* https://www.netapp.com/hybrid-cloud/hci-documentation/["NetApp HCI のリソースページ"^]
 

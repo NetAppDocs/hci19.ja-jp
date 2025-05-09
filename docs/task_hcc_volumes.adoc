@@ -75,10 +75,10 @@ image::hcc_volumes_icons.png[HCC Volumes ページのアイコン]
 
 
 
-[discrete]
+
+
 == 詳細については、こちらをご覧ください
 
 * https://docs.netapp.com/us-en/element-software/index.html["SolidFire および Element のドキュメント"^]
 * https://docs.netapp.com/us-en/vcp/index.html["vCenter Server 向け NetApp Element プラグイン"^]
-* https://www.netapp.com/hybrid-cloud/hci-documentation/["NetApp HCI のリソースページ"^]
 

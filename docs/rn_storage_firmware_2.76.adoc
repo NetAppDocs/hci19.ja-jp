@@ -175,9 +175,8 @@ image::bol_list_bugs_found.png[ストレージファームウェアバンドル�
 * CVE-2016-4706 、 CVE-2011-5320 、 CVE-2015-8984 、 CVE-2015-8983 、 CVE-2015-8982 、 CVE-2006-7254 、 CVE-2005-3590
 
 
-[discrete]
+
+
 == 詳細については、こちらをご覧ください
 
-* https://docs.netapp.com/hci/index.jsp["NetApp HCI ドキュメントセンター"^]
-* https://www.netapp.com/hybrid-cloud/hci-documentation/["NetApp HCI のリソースページ"^]
-
+https://docs.netapp.com/hci/index.jsp["NetApp HCI ドキュメントセンター"^]

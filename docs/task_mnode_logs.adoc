@@ -72,9 +72,8 @@ TIP: 管理ノード上のサービスを一覧表示するには 'get/services'
 . 応答の本文から「 * Download * 」を選択して、ログ出力を保存します。
 
 
-[discrete]
+
+
 == 詳細はこちら
 
-* https://docs.netapp.com/us-en/vcp/index.html["vCenter Server 向け NetApp Element プラグイン"^]
-* https://www.netapp.com/hybrid-cloud/hci-documentation/["NetApp HCI のリソースページ"^]
-
+https://docs.netapp.com/us-en/vcp/index.html["vCenter Server 向け NetApp Element プラグイン"^]

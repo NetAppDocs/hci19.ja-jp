@@ -77,10 +77,10 @@ NOTE: ストレージクラスタ上の Element ソフトウェアをアップ�
 . link:task_hcc_upgrade_compute_node_firmware.html["NetApp Hybrid Cloud Control を使用してコンピューティングノードのファームウェアを更新します"] または link:task_hcc_upgrade_compute_firmware_ansible.html["Ansible でコンピューティングファームウェアのアップグレードを自動化できます"]。
 
 
-[discrete]
+
+
 == 詳細については、こちらをご覧ください
 
 * https://docs.netapp.com/us-en/vcp/index.html["vCenter Server 向け NetApp Element プラグイン"^]
-* https://www.netapp.com/hybrid-cloud/hci-documentation/["NetApp HCI のリソースページ"^]
 * https://docs.netapp.com/us-en/element-software/upgrade/concept_element_upgrade_overview.html["NetApp SolidFire オールフラッシュストレージシステムをアップグレード"^]
 

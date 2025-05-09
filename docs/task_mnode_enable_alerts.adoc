@@ -75,9 +75,8 @@ NOTE: NetApp Deployment Engine を使用して AIQ へのデータの送信 * �
 NOTE: NetApp Deployment Engine を使用して AIQ へのデータの送信 * オプションをオフにした場合は、が必要です link:task_mnode_enable_activeIQ.html["テレメータを有効にします"] このページから、管理ノードの REST API を使用してサービスを設定し直してください。
 
 |===
-[discrete]
+
+
 == 詳細はこちら
 
-* https://docs.netapp.com/us-en/vcp/index.html["vCenter Server 向け NetApp Element プラグイン"^]
-* https://www.netapp.com/hybrid-cloud/hci-documentation/["NetApp HCI のリソースページ"^]
-
+https://docs.netapp.com/us-en/vcp/index.html["vCenter Server 向け NetApp Element プラグイン"^]

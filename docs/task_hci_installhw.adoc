@@ -418,10 +418,10 @@ NOTE: 同じネットワーク上に新しく設置した NetApp HCI ノード�
 
 H615C ノードに GPU が搭載されている場合は、設置した H615C ノードごとに ESXi に GPU ドライバをインストールし、その機能を検証します。
 
-[discrete]
+
+
 == 詳細については、こちらをご覧ください
 
-* https://www.netapp.com/hybrid-cloud/hci-documentation/["NetApp HCI のリソースページ"^]
 * https://docs.netapp.com/us-en/vcp/index.html["vCenter Server 向け NetApp Element プラグイン"^]
 * https://www.netapp.com/pdf.html?item=/media/9413-tr4820pdf.pdf["_TR-48820 ：『 NetApp HCI ネットワーククイックプランニングガイド』 _"^]
 * https://mysupport.netapp.com/site/tools["NetApp Configuration Advisor"^] 5.8.1 以降のネットワーク検証ツール

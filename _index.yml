@@ -54,8 +54,6 @@ indexpage:
       url: https://kb.netapp.com/Special:Search?query=netapp+hci&type=wiki
   - title: 解決策
     links:
-    - title: NetApp HCI のリソースページ
-      url: https://www.netapp.com/hybrid-cloud/hci-documentation/
     - title: ネットアップのソリューション
       url: https://docs.netapp.com/us-en/netapp-solutions/index.html
   - title: デモとチュートリアル

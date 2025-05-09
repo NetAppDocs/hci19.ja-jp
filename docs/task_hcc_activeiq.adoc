@@ -54,10 +54,10 @@ https://<ManagementNodeIP>
 
 TIP: ストレージリソースとコンピューティングリソースの数を表示するには、 Hybrid Cloud Control （ HCC ）ダッシュボードを参照します。を参照してください link:task_hcc_dashboard.html["HCC ダッシュボードを使用してストレージリソースとコンピューティングリソースを監視する"]。
 
-[discrete]
+
+
 == 詳細については、こちらをご覧ください
 
 * https://docs.netapp.com/us-en/solidfire-active-iq/index.html["NetApp SolidFire Active IQ のドキュメント"^]
 * https://docs.netapp.com/us-en/vcp/index.html["vCenter Server 向け NetApp Element プラグイン"^]
-* https://www.netapp.com/hybrid-cloud/hci-documentation/["NetApp HCI のリソースページ"^]
 

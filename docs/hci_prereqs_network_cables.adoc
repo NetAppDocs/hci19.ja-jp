@@ -37,9 +37,8 @@ keywords: netapp, hci, network, cable, requirements
 
 NOTE: ケーブルを 6 本使用する構成では、 2 つのポートが VMware ESXi 用に予約されており、 NetApp Deployment Engine によってセットアップおよび管理されます。Element の TUI または Element Web GUI を使用して、これらの ESXi 専用ポートにアクセスしたり管理したりすることはできません。
 
-[discrete]
+
+
 == 詳細については、こちらをご覧ください
 
-* https://www.netapp.com/hybrid-cloud/hci-documentation/["NetApp HCI のリソースページ"^]
-* https://docs.netapp.com/us-en/vcp/index.html["vCenter Server 向け NetApp Element プラグイン"^]
-
+https://docs.netapp.com/us-en/vcp/index.html["vCenter Server 向け NetApp Element プラグイン"^]
