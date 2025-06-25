@@ -128,8 +128,6 @@
   <block id="6d8cb4a54a58f9923479d4340b28d71c" category="floating-title">詳細はこちら</block>
   <block id="a881a0468246e93ae6e2c5bccd78758e" category="inline-link">vCenter Server 向け NetApp Element プラグイン</block>
   <block id="7cf5cffc3745b8348cdcfb1c3d0d472f" category="list-text"><block ref="7cf5cffc3745b8348cdcfb1c3d0d472f" category="inline-link-rx"></block></block>
-  <block id="a83404b3b2ca8b3c39459b719d7844d7" category="inline-link">NetApp HCI のリソースページ</block>
-  <block id="efb3497df51898324a04d1329dc9b9ae" category="list-text"><block ref="efb3497df51898324a04d1329dc9b9ae" category="inline-link-rx"></block></block>
   <block id="4890b06e0bef2ccd30ddebf19fa9e652" category="summary">REST API を使用して、管理 ndoe で実行されているサービスからログを取得できます。</block>
   <block id="a5790b06c6321c773eca064d8f8b323a" category="doc">管理サービスからログを取得しています</block>
   <block id="7eada9b3aeba75afea1bb6e56efd98a1" category="paragraph">REST API を使用して、管理ノードで実行されているサービスからログを取得できます。すべてのパブリックサービスからログを取得したり、特定のサービスを指定したりできます。また、クエリパラメータを使用して、取得する内容を細かく絞り込むこともできます。</block>
@@ -676,7 +674,6 @@
   <block id="01de98522477a417e0769c1c2e4840ea" category="list-text"><block ref="01de98522477a417e0769c1c2e4840ea" category="inline-link-macro-rx"></block></block>
   <block id="4839d2f25cc35b249d5db15efa1afd75" category="paragraph">* 手順 *</block>
   <block id="563b9e811f20a61bad36baf4c76bf550" category="paragraph">NetApp Hybrid Cloud Control のインターフェイスが表示されます。</block>
-  <block id="acc25bb29912a0eb99591d6397d5e11d" category="list-text"><block ref="acc25bb29912a0eb99591d6397d5e11d" category="inline-link-rx"></block></block>
   <block id="3664bb4df59eca4395d94a7c6384dfc0" category="inline-link-macro">NetApp HCI のセットアップガイド</block>
   <block id="07b021dc180c131c18c2e77e5fa1150f" category="list-text"><block ref="07b021dc180c131c18c2e77e5fa1150f" category="inline-link-macro-rx"></block></block>
   <block id="f62052d22b7c5c8f9a15b0afff504755" category="inline-link">TR-48820 ：『 NetApp HCI Networking Quick Planning Guide 』</block>
@@ -1116,37 +1113,21 @@
   <block id="c0227cef6f07a8cd2ac72f2945b031aa" category="section-title">オープンソース</block>
   <block id="9b73989307c1975dfa4d5e1581e4afe8" category="paragraph">通知ファイルには、ネットアップソフトウェアで使用されるサードパーティの著作権およびライセンスに関する情報が記載されています。</block>
   <block id="4ba16aa779bc8ad075658a848d8a534f" category="inline-link-macro">コンピューティングのアップグレードに向けた Ansible のロールに関する注意事項があります</block>
-  <block id="92650cf5badd89aace1461d0525236fd" category="list-text"><block ref="92650cf5badd89aace1461d0525236fd" category="inline-link-macro-rx"></block></block>
   <block id="24e9da091f15f10b8da793e19b340302" category="inline-link-macro">Ember OS 12.3.1 の注意</block>
-  <block id="7c37ff93ea224cdfb5fcc8ad277d67ef" category="list-text"><block ref="7c37ff93ea224cdfb5fcc8ad277d67ef" category="inline-link-macro-rx"></block></block>
   <block id="fbcc1cb0e2a70eff701965a5f3e0d76b" category="inline-link-macro">Ember OS 12.3 の注意</block>
-  <block id="b155ed748bc74699fbb05db3502ed3a6" category="list-text"><block ref="b155ed748bc74699fbb05db3502ed3a6" category="inline-link-macro-rx"></block></block>
   <block id="26c74f7a8ac6a7c8cdb0def0e876263d" category="inline-link-macro">管理ノード 12.3.1 の通知です</block>
-  <block id="cf6217d0b70c3e9e193eb51bdc471aab" category="list-text"><block ref="cf6217d0b70c3e9e193eb51bdc471aab" category="inline-link-macro-rx"></block></block>
   <block id="43551c29e9ac231743a69c265f5ef85c" category="inline-link-macro">管理ノード 12.3 についての注意</block>
-  <block id="6927fa09b89de9365631c15a2e8a8758" category="list-text"><block ref="6927fa09b89de9365631c15a2e8a8758" category="inline-link-macro-rx"></block></block>
   <block id="8824580064fbf037016d45df0afe1c64" category="inline-link-macro">NetApp HCI 1.9P1 に関する通知です</block>
-  <block id="c98c104489f4e60f30b087bb51b053ed" category="list-text"><block ref="c98c104489f4e60f30b087bb51b053ed" category="inline-link-macro-rx"></block></block>
   <block id="a994c7955992607e240e906376c847ea" category="inline-link-macro">NetApp HCI 1.9 の注意事項</block>
-  <block id="fad7d8ef106d72300d9ae8dca0665982" category="list-text"><block ref="fad7d8ef106d72300d9ae8dca0665982" category="inline-link-macro-rx"></block></block>
   <block id="a4f0b4cd8ed43da899bf23d0cc006ec8" category="inline-link-macro">ストレージファームウェアバンドル 2.146 に関する注意事項</block>
-  <block id="976f425b451919895bc3cde2d81dd6c3" category="list-text"><block ref="976f425b451919895bc3cde2d81dd6c3" category="inline-link-macro-rx"></block></block>
   <block id="7ca92aa55af86adcb8e4f02055e5d1f3" category="inline-link-macro">Compute Firmware Bundle 2.146 の注意</block>
-  <block id="070e6ce33f7ff2e60a2783c8ebb93cce" category="list-text"><block ref="070e6ce33f7ff2e60a2783c8ebb93cce" category="inline-link-macro-rx"></block></block>
   <block id="2e5993f9d970daebf225967bb1e45acc" category="inline-link-macro">ストレージファームウェアバンドル 2.99.2 に関する注意事項</block>
-  <block id="9b66050651411f30ce4e4e60cd49154f" category="list-text"><block ref="9b66050651411f30ce4e4e60cd49154f" category="inline-link-macro-rx"></block></block>
   <block id="4b07ee081088aae3fb4d0eecd6d5e33c" category="inline-link-macro">Compute Firmware Bundle 2.76 に関する注意</block>
-  <block id="620e2d12cdf5e08b9753be70962af1c2" category="list-text"><block ref="620e2d12cdf5e08b9753be70962af1c2" category="inline-link-macro-rx"></block></block>
   <block id="927feedbfb9bbc4a93e285ba9504ab0b" category="inline-link-macro">ストレージファームウェアバンドル 2.76 に関する注意</block>
-  <block id="8ef06865130f39fba4f2f1bd57b10db9" category="list-text"><block ref="8ef06865130f39fba4f2f1bd57b10db9" category="inline-link-macro-rx"></block></block>
   <block id="15eb0cb82eab0a91d0477b28cedc9e6d" category="inline-link-macro">Compute Firmware Bundle 2.27 に関する注意</block>
-  <block id="fc252c43c5ce275603b4d02a0185de6e" category="list-text"><block ref="fc252c43c5ce275603b4d02a0185de6e" category="inline-link-macro-rx"></block></block>
   <block id="30624e21224d847e1b829641269ffe3c" category="inline-link-macro">ストレージファームウェアバンドル 2.27 に関する注意</block>
-  <block id="628635daa878466322430a063a3be8a2" category="list-text"><block ref="628635daa878466322430a063a3be8a2" category="inline-link-macro-rx"></block></block>
   <block id="4ecde2684e69acd5d2c24072d2d87431" category="inline-link-macro">コンピューティングファームウェアの ISO についての通知</block>
-  <block id="d20a53f0f6934177e690e38a85903142" category="list-text"><block ref="d20a53f0f6934177e690e38a85903142" category="inline-link-macro-rx"></block></block>
   <block id="a04e943dbcdb750d041999712b0c3468" category="inline-link-macro">H610S BMC に関する注意事項が表示されます</block>
-  <block id="c0897cc71834939a3e05ac01145a60a3" category="list-text"><block ref="c0897cc71834939a3e05ac01145a60a3" category="inline-link-macro-rx"></block></block>
   <block id="6878153064f983e50fe1538332b04875" category="inline-link">NetApp HCI 1.8 の注意事項</block>
   <block id="1b5e451286af92db851650172906487b" category="list-text"><block ref="1b5e451286af92db851650172906487b" category="inline-link-rx"></block></block>
   <block id="0e93badeabe261c69b6984cdc67bfc5d" category="summary">イニシエータの概要、およびイニシエータを使用してボリュームアクセスグループ内のストレージへのアクセスを許可する方法について説明します。</block>
@@ -5950,23 +5931,14 @@
   <block id="072a78b04ab0c87f13756a379937b4c8" category="list-text">[ 新規検索（ New Search ） ] を選択します。</block>
   <block id="9c418128eb1df0fd522c1f98859b8896" category="list-text">[ バージョン * で固定 ] フィールドにリリースバージョンを入力します。</block>
   <block id="91973e8fa965f2bdba61e9b8919b4ee5" category="inline-link-macro">管理サービス2.20.69（vCenter Server 4.9.14用NetApp Element プラグイン）に関する注意事項</block>
-  <block id="55e4360e9b62728478e508dd54c47f2e" category="list-text"><block ref="55e4360e9b62728478e508dd54c47f2e" category="inline-link-macro-rx"></block></block>
   <block id="c6df14aa71e88712620087ef3c0051b8" category="inline-link-macro">管理サービス2.19.48の通知（vCenter Server 4.8.34用NetApp Element プラグイン）</block>
-  <block id="9d3d776c7146d1b002c55948105f2248" category="list-text"><block ref="9d3d776c7146d1b002c55948105f2248" category="inline-link-macro-rx"></block></block>
   <block id="e9ddfae2256b1bb9c9a0f68ff44e48e4" category="inline-link-macro">管理サービス2.18.91（NetApp Element Plug-in for vCenter Server 4.7.10）に関する注意事項</block>
-  <block id="06b9516dcd92ed07013c1b7a7a44c596" category="list-text"><block ref="06b9516dcd92ed07013c1b7a7a44c596" category="inline-link-macro-rx"></block></block>
   <block id="30d92c8789efab57b790dee431c18297" category="inline-link-macro">管理サービス2.17.56（vCenter Server 4.6.32用NetApp Element プラグイン）に関する注意事項</block>
-  <block id="24f90eb232d3a3878f274d7c771d888e" category="list-text"><block ref="24f90eb232d3a3878f274d7c771d888e" category="inline-link-macro-rx"></block></block>
   <block id="87a0fdd7b9534808231b4d6ab471ebf1" category="inline-link-macro">管理サービス2.17.52の注意事項（vCenter Server 4.6.29用NetApp Element プラグイン）</block>
-  <block id="1a0a40b3f99e65011c8e8fe0481ee7d6" category="list-text"><block ref="1a0a40b3f99e65011c8e8fe0481ee7d6" category="inline-link-macro-rx"></block></block>
   <block id="770994475f57b3ce3e40618e8d3e1705" category="inline-link-macro">管理サービス2.16の注意事項（vCenter Server 4.6.29用NetApp Element プラグイン）</block>
-  <block id="07b9c90552a4651d5faf56bc6eca9135" category="list-text"><block ref="07b9c90552a4651d5faf56bc6eca9135" category="inline-link-macro-rx"></block></block>
   <block id="1cb251dcf63c7c6b0f0f032152675c8b" category="inline-link-macro">管理サービス2.14（NetApp Element Plug-in for vCenter Server 4.5.42）に関する注意事項</block>
-  <block id="900584851315b10b766296f6df002e93" category="list-text"><block ref="900584851315b10b766296f6df002e93" category="inline-link-macro-rx"></block></block>
   <block id="a945e669932fbbe48d4794d770411d05" category="inline-link-macro">管理サービス2.13に関する注意事項（vCenter Server 4.5.42用NetApp Element プラグイン）</block>
-  <block id="d22ae1e66e46d1cfb632ed3078f04704" category="list-text"><block ref="d22ae1e66e46d1cfb632ed3078f04704" category="inline-link-macro-rx"></block></block>
   <block id="d9f3c0c9eb340c8261bfa8b95bd04b9a" category="inline-link-macro">管理サービス2.11（vCenter Server 4.4.72用NetApp Element プラグイン）に関する注意事項</block>
-  <block id="2a457438beda60d5fb52e68ed7488fc0" category="list-text"><block ref="2a457438beda60d5fb52e68ed7488fc0" category="inline-link-macro-rx"></block></block>
   <block id="757ee5041dab5c44f2d1327cd0f760ae" category="list-text"><block ref="757ee5041dab5c44f2d1327cd0f760ae" category="inline-link-rx"></block></block>
   <block id="101f6b845f71c73ac7fbf4922f825d17" category="list-text">詳細な分析と履歴のコンテキストについては、を参照してください<block ref="44afd1f3ef2498687a919e55190bfc2d" category="inline-link-rx"></block>。</block>
   <block id="ab330582aba37a305404f73f3ea56abd" category="list-text">コンピューティング情報の詳細な分析については、を参照してください<block ref="f1f077cd29c39ed6d4c812cbd32dffd4" category="inline-link-rx"></block>。</block>
@@ -6062,7 +6034,6 @@
   <block id="705d4d08d5af2e9dd1c4616188dd681f" category="paragraph">NetApp HCI ソリューションの詳細については、を参照してください<block ref="80564718f738f8f02fcd8afb2a3d09de" category="inline-link-rx"></block>。</block>
   <block id="edb046160eb6ed03c39de5860e72e509" category="list-text">*エンドユーザライセンス契約（EULA）*：管理サービス2.20.69以降では、NetApp Hybrid Cloud Control UIまたはAPIを使用してランチャの導入環境をアップグレードする前に、EULAに同意して保存する必要があります。</block>
   <block id="6802ee2e6d325852973924be55003180" category="inline-link-macro">管理サービス2.2.1.61（vCenter Server 4.10.12のNetApp Element プラグイン）に関する注意事項</block>
-  <block id="ca9239bf570791b1b05bcb88781e4290" category="list-text"><block ref="ca9239bf570791b1b05bcb88781e4290" category="inline-link-macro-rx"></block></block>
   <block id="5d8cb69408d9a6773459aa0a397a3003" category="list-text">管理ノードでREST API UIを開きます。</block>
   <block id="4eed3af07414f10fffdba8a7ff51ca36" category="list-text">管理サービス2.2.1.61以降では、次の処理を実行します。</block>
   <block id="880c70977a68b1ec897e498bb11c7021" category="list-text">管理サービス2.20.69以前の場合：</block>
@@ -6081,7 +6052,6 @@
   <block id="b829058e02635e31c81abf49f37e64d2" category="list-text">Element Plug-in for VMware vCenter Server 4.10、4.9、4.8、4.7、4.6にアップグレードする場合 4.5または4.4。</block>
   <block id="d6802e127914e53f73aa2f2db8cb5e44" category="paragraph">管理サービス2.20.69以降では、NetApp Hybrid Cloud ControlのUIまたはAPIを使用して管理サービスをアップグレードする前に、エンドユーザライセンス契約（EULA）に同意して保存する必要があります。</block>
   <block id="ef9b7df717b4686a8e22f66328c36013" category="inline-link-macro">管理サービス2.22.7（vCenter Server 5.337用NetApp Element プラグイン）に関する注意事項</block>
-  <block id="3406af7644403433d96ffd8c5eb7691b" category="list-text"><block ref="3406af7644403433d96ffd8c5eb7691b" category="inline-link-macro-rx"></block></block>
   <block id="8b34c0897e0c5a60826afa840ec4c95f" category="list-text">Element Plug-in for vCenter Server 5.0以降では、を使用します<block ref="b9ce345290cb228a35dd424c40eebf37" category="inline-link-rx"></block>NetApp SolidFire ストレージクラスタを管理するvCenter Serverごとに、Element Plug-inを別々の管理ノードから登録します（推奨）。</block>
   <block id="950d24814b375862c7bba55208f10d8c" category="list-text">Element Plug-in for vCenter Server 4.10以前を使用して、他のvCenter Serverのクラスタリソースを管理する<block ref="b9ce345290cb228a35dd424c40eebf37" category="inline-link-rx"></block> はローカルストレージクラスタのみに制限されます。</block>
   <block id="07800d7fa4e084c955b9006d30b6eed1" category="cell">リモートプラグイン</block>
@@ -6396,7 +6366,6 @@
   <block id="301bf6ea727a40a8d5cc8608cc0c41d7" category="list-text">データにアクセスするためのホストの起動を開始します。</block>
   <block id="c192e3c2dbd374233d4685406db01520" category="paragraph">メンテナンス後にノードの電源をオンにして正常であることを確認する時間を長くしたい場合は、データの同期を遅らせて不要なビンの同期を回避する方法についてテクニカルサポートにお問い合わせください。</block>
   <block id="bddb591f0b60efba3de48f954b55f287" category="inline-link-macro">管理サービス2.23.64（NetApp Element Plug-in for VMware vCenter Server 5.1.12）に関する注意事項</block>
-  <block id="adb27ccd96e9d86f5b808b75377f9b5d" category="list-text"><block ref="adb27ccd96e9d86f5b808b75377f9b5d" category="inline-link-macro-rx"></block></block>
   <block id="f77430f8b3c4f14f1dcd175dca1d54cf" category="paragraph">回避策 を適用せずにVMware vCenter 7.0 Update 3でプラグインを導入できるようにするには、NetApp Element Plug-in for vCenter Server 5.0以降にアップグレードしてください。</block>
   <block id="54db42757b5d75d2f660dc70f35850cf" category="inline-link">vCenter Plug-in 5.1リリースノート</block>
   <block id="0e051271241f0648ba45a8ad135d030c" category="list-text"><block ref="0e051271241f0648ba45a8ad135d030c" category="inline-link-rx"></block></block>
@@ -6504,7 +6473,6 @@
   <block id="2553e35e4b345db1c1e3175a10539fdf" category="image-alt">は、Element Plug-in 5.0以降のアップグレードまたはインストールが完了したあとのPlug-in拡張ポイントを示しています。</block>
   <block id="f35f89119a6374d18bd89e0103590c61" category="image-alt">は、Element Plug-in 4.10以前のアップグレードまたはインストールが成功したあとのプラグインの拡張ポイントを示しています。</block>
   <block id="faf6c38631911f7840c3498b4ec9f746" category="inline-link-macro">管理サービス2.24.40（NetApp Element Plug-in for VMware vCenter Server 5.2.12）に関するお知らせ</block>
-  <block id="1f3c662e49f317f7c70a24adc13870a1" category="list-text"><block ref="1f3c662e49f317f7c70a24adc13870a1" category="inline-link-macro-rx"></block></block>
   <block id="ce397f79b5032c3e327db3efe5a6048a" category="inline-link">vCenter Plug-in 5.2リリースノート</block>
   <block id="410ecb079e286058eeb2bc6b56d9379c" category="list-text"><block ref="410ecb079e286058eeb2bc6b56d9379c" category="inline-link-rx"></block></block>
   <block id="732713df3c4c58fb19fab37e747f6f0d" category="list-text"><block ref="732713df3c4c58fb19fab37e747f6f0d" category="inline-link-macro-rx"></block></block>
@@ -6541,7 +6509,6 @@
   <block id="0c21440ced3ddae10d1eea32870fdf02" category="list-text"><block ref="ce90fd614158a5c7e0a42a5908fa1cd7" category="inline-link-rx"></block> _ 新規 _</block>
   <block id="6bd87cf3d55c2ead3ab585e965bea4db" category="list-text"><block ref="6bd87cf3d55c2ead3ab585e965bea4db" category="inline-link-rx"></block></block>
   <block id="976b368b923346c8ea4ccc71e72749f5" category="inline-link-macro">管理サービス2.25.42（NetApp Element Plug-in for VMware vCenter Server 5.3.9）に関するお知らせ</block>
-  <block id="f7e890b0a90e234e4df04fc0c6b8c6a7" category="list-text"><block ref="f7e890b0a90e234e4df04fc0c6b8c6a7" category="inline-link-macro-rx"></block></block>
   <block id="bef71f962ff7a233f3e8439eeb8dac70" category="list-text">Element Plug-in for vCenter Server 5.3、5.2、5.1、または5.0にアップグレードする。</block>
   <block id="ac58cb3a49a7142c7e9ce40e8d7f2c4d" category="sidebar">NetApp HCI は、ハイブリッドクラウド向けの拡張性に優れたオンプレミスハイパーコンバージドインフラです。詳細については、 NetApp HCI の設定と管理に関するドキュメントおよび NetApp HCI ソリューションに関する情報を参照してください。このサイトには、NetApp HCI 1.9のドキュメントが含まれています。</block>
   <block id="be11c74c1dd7f307bb80183a90dc2067" category="sidebar">はじめに</block>
@@ -6581,5 +6548,36 @@
   <block id="a5f38386dcceecb027de7fd15fcc6aa4" category="list-text"><block ref="a5f38386dcceecb027de7fd15fcc6aa4" category="inline-link-rx"></block></block>
   <block id="0287de700b52d79d64e09aca72f4850b" category="admonition">のコンピューティングノードのESXiをアップグレードする<block ref="d6b7667dc675e8798d67d09fb8931bb2" category="inline-link-rx"></block>場合は、一度に1つのコンピューティングノードのみをアップグレードして、一時的に使用できなくなり、クラスタクォーラムを維持できるようにします。</block>
   <block id="a2f9c1250a16a7514c9d6b0865b7bf42" category="list-text"><block ref="a2f9c1250a16a7514c9d6b0865b7bf42" category="inline-link-rx"></block></block>
-  <block id="846572971d410f1d04ff53e7bfc8a84b" category="sidebar">NetApp HCIドキュメント1.9</block>
+  <block id="b691b91f1208379346de4d69f8c840f1" category="list-text"><block ref="b691b91f1208379346de4d69f8c840f1" category="inline-link-macro-rx"></block></block>
+  <block id="8b74eb38e990a669c117dfc07c60e057" category="list-text"><block ref="8b74eb38e990a669c117dfc07c60e057" category="inline-link-macro-rx"></block></block>
+  <block id="78dbd8c1ef048a06f03d1d7955165cbb" category="list-text"><block ref="78dbd8c1ef048a06f03d1d7955165cbb" category="inline-link-macro-rx"></block></block>
+  <block id="2c90719f5e85c29f2af28343febac40c" category="list-text"><block ref="2c90719f5e85c29f2af28343febac40c" category="inline-link-macro-rx"></block></block>
+  <block id="8b79de8b3b1446d9f1643c5fb66dc6fe" category="list-text"><block ref="8b79de8b3b1446d9f1643c5fb66dc6fe" category="inline-link-macro-rx"></block></block>
+  <block id="d559e64ae71faed5783e366face37603" category="list-text"><block ref="d559e64ae71faed5783e366face37603" category="inline-link-macro-rx"></block></block>
+  <block id="384b3d0806f919cd1b28678f080b83f4" category="list-text"><block ref="384b3d0806f919cd1b28678f080b83f4" category="inline-link-macro-rx"></block></block>
+  <block id="7a0a6b8351b186d782f2b5b12a09f9d1" category="list-text"><block ref="7a0a6b8351b186d782f2b5b12a09f9d1" category="inline-link-macro-rx"></block></block>
+  <block id="e0a2b3604cb7980931b047c5b79b7334" category="list-text"><block ref="e0a2b3604cb7980931b047c5b79b7334" category="inline-link-macro-rx"></block></block>
+  <block id="96d39df4d07a61aada740f0716155f51" category="list-text"><block ref="96d39df4d07a61aada740f0716155f51" category="inline-link-macro-rx"></block></block>
+  <block id="f77a37db2275406d3d7de2688fdf5293" category="list-text"><block ref="f77a37db2275406d3d7de2688fdf5293" category="inline-link-macro-rx"></block></block>
+  <block id="69b7535618573fd609dc8b4663c8b8c0" category="list-text"><block ref="69b7535618573fd609dc8b4663c8b8c0" category="inline-link-macro-rx"></block></block>
+  <block id="f1a0148c13871b8d939879c1fe67614a" category="list-text"><block ref="f1a0148c13871b8d939879c1fe67614a" category="inline-link-macro-rx"></block></block>
+  <block id="656e3f29cbe522931c455a5e233d1c6f" category="list-text"><block ref="656e3f29cbe522931c455a5e233d1c6f" category="inline-link-macro-rx"></block></block>
+  <block id="aa5c9a89f196e514e1fafba2ea4fe274" category="list-text"><block ref="aa5c9a89f196e514e1fafba2ea4fe274" category="inline-link-macro-rx"></block></block>
+  <block id="782279fa2517c048d3f08897e94b8e22" category="list-text"><block ref="782279fa2517c048d3f08897e94b8e22" category="inline-link-macro-rx"></block></block>
+  <block id="4d67cefe38dafa645f353279e4fbc37b" category="list-text"><block ref="4d67cefe38dafa645f353279e4fbc37b" category="inline-link-macro-rx"></block></block>
+  <block id="db3a980db6ffcc2055052c6c4a453020" category="list-text"><block ref="db3a980db6ffcc2055052c6c4a453020" category="inline-link-macro-rx"></block></block>
+  <block id="2926dc5780f42141aca045c0001024a5" category="list-text"><block ref="2926dc5780f42141aca045c0001024a5" category="inline-link-macro-rx"></block></block>
+  <block id="06a46768bfa91171a5396b8bcdc5d6eb" category="list-text"><block ref="06a46768bfa91171a5396b8bcdc5d6eb" category="inline-link-macro-rx"></block></block>
+  <block id="19436b0bc37e63a280dc38b80395a21d" category="list-text"><block ref="19436b0bc37e63a280dc38b80395a21d" category="inline-link-macro-rx"></block></block>
+  <block id="f0fe2934aa8d8cec985fef2e0c464532" category="list-text"><block ref="f0fe2934aa8d8cec985fef2e0c464532" category="inline-link-macro-rx"></block></block>
+  <block id="08c1b18f2bce38d2bceb61af5b8c4c6e" category="list-text"><block ref="08c1b18f2bce38d2bceb61af5b8c4c6e" category="inline-link-macro-rx"></block></block>
+  <block id="c1f2aa244c34463b7aea4f2b566f9420" category="list-text"><block ref="c1f2aa244c34463b7aea4f2b566f9420" category="inline-link-macro-rx"></block></block>
+  <block id="7e9ccbf8b1b0c9563c86eb27b32e3e73" category="list-text"><block ref="7e9ccbf8b1b0c9563c86eb27b32e3e73" category="inline-link-macro-rx"></block></block>
+  <block id="f208337694859dc09b22d6c921ec69c3" category="list-text"><block ref="f208337694859dc09b22d6c921ec69c3" category="inline-link-macro-rx"></block></block>
+  <block id="842266b8873383455019c1a1caa31921" category="list-text"><block ref="842266b8873383455019c1a1caa31921" category="inline-link-macro-rx"></block></block>
+  <block id="09445f34cd5729442e7b2de72fb58d64" category="list-text"><block ref="09445f34cd5729442e7b2de72fb58d64" category="inline-link-macro-rx"></block></block>
+  <block id="36da361c4ac55f014f982e3621e4b133" category="list-text"><block ref="36da361c4ac55f014f982e3621e4b133" category="inline-link-macro-rx"></block></block>
+  <block id="5e447c4788a02133d94738f6ce42f213" category="list-text"><block ref="5e447c4788a02133d94738f6ce42f213" category="inline-link-macro-rx"></block></block>
+  <block id="46e87a91de6f38f3b1344d05a59270dd" category="sidebar">NetApp HCI 1.9 に関するドキュメント</block>
+  <block id="4fdd77772a3c8c75f3f83d76694106d1" category="sidebar">NetApp HCI 1.9のドキュメント</block>
 </blocks>

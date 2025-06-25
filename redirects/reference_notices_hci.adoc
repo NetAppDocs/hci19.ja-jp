@@ -1,0 +1,8 @@
+---
+permalink: docs/reference_notices_hci.html 
+redirect: hci19/legal-notices.html 
+---
+= 
+:allow-uri-read: 
+
+

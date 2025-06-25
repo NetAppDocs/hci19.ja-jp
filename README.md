@@ -1,4 +1,4 @@
-# NetApp HCI Documentation
+# NetApp HCI Documentation 
 
 Welcome to the open-source documentation for NetApp HCI.
 
