@@ -32,6 +32,7 @@ keywords: netapp, mnode, management node, rest api, hci, assets
 
 
 
+[[retrieve-the-installation-id-and-cluster-id-of-a-storage-cluster-asset]]
 == ストレージのインストール ID とクラスタ ID を取得します クラスタアセット
 
 REST API のインストール ID およびストレージクラスタの ID を取得できます。インストール ID は、新しいストレージクラスタアセットを追加する場合に必要になります。クラスタ ID は、特定のストレージクラスタアセットを変更または削除する場合に必要になります。
@@ -98,6 +99,7 @@ API は、このインストール環境内のすべての既知のストレー�
 
 
 
+[[add-a-new-storage-cluster-asset]]
 == 新しいストレージクラスタアセットを追加します
 
 REST API を使用して、管理ノードインベントリに新しいストレージクラスタアセットを追加できます。新しいストレージクラスタアセットを追加すると、そのアセットが管理ノードに自動的に登録されます。
@@ -163,6 +165,7 @@ API は、新しく追加したストレージクラスタアセットの名前�
 
 
 
+[[edit-the-stored-credentials-for-a-storage-cluster-asset]]
 == ストレージクラスタアセットに保存されているクレデンシャルを編集します
 
 管理ノードがストレージクラスタへのログインに使用する、保存されているクレデンシャルを編集できます。選択するユーザにはクラスタ管理者アクセスが必要です。
@@ -212,6 +215,7 @@ https://<ManagementNodeIP>/storage/1/
 
 
 
+[[delete-a-storage-cluster-asset]]
 == ストレージクラスタアセットを削除します
 
 ストレージクラスタが使用停止になっている場合は、ストレージクラスタアセットを削除できます。ストレージクラスタのアセットを削除すると、管理ノードから自動的に登録解除されます。
@@ -245,6 +249,7 @@ https://<ManagementNodeIP>/storage/1/
 
 
 
+[[find-more-information]]
 == 詳細については、こちらをご覧ください
 
 * link:concept_hci_clusters.html#authoritative-storage-clusters["権限のあるクラスタです"]

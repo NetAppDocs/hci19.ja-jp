@@ -28,6 +28,7 @@ NetApp HCI の Rancher に関連する基本的な概念を学びます。
 
 
 
+[[trident-software-and-persistent-storage-concepts]]
 == Trident ソフトウェアと永続的ストレージの概念
 
 Trident は Kubernetes ネイティブのアプリケーションであり、 Kubernetes クラスタ内で直接実行されます。Trident を使用すると、 Kubernetes のユーザ（開発者、データサイエンティスト、 Kubernetes 管理者など）は、使い慣れた標準的な Kubernetes 形式で永続ストレージボリュームを作成、管理、操作できます。Trident を使用すると、 Kubernetes クラスタが作成した永続的ボリュームに対する要求をネットアップのソリューションで満たすことができます。

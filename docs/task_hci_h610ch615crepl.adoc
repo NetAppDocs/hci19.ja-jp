@@ -35,6 +35,7 @@ VMware vSphere Web Client のアラームでは、ホストで障害が発生す
 
 
 
+[[step-1-prepare-to-replace-the-node]]
 == 手順1：ノードを交換する準備
 
 ノードを交換する前に、ノードでホストされている仮想マシン（ VM ）を使用可能なホストに移行し、クラスタからノードを削除しておく必要があります。シリアル番号やネットワーク情報など、ノードに関する詳細を記録しておく必要があります。VMの移行とノードの詳細の記録は、Dual Inline Memory Module（DIMM；デュアルインラインメモリモジュール）の障害など、ノードがオンラインで機能しているコンポーネント障害の場合にも適用されます。
@@ -61,6 +62,7 @@ image::h610c serial number.gif[は、 VMware vSphere Web Client で障害が発�
 
 
 
+[[step-2-replace-the-node]]
 == 手順2：ノードを交換する
 
 クラスタから障害ノードを削除したら、障害が発生したシャーシを取り外し、交換用シャーシを設置できます。
@@ -94,6 +96,7 @@ CAUTION: シャーシ背面の通気口がケーブルやラベルで塞がれ�
 
 
 
+[[step-3-add-the-node-to-the-cluster]]
 == 手順3：クラスタにノードを追加する
 
 新しいコンピューティングノードを使用するように NetApp HCI を設定する必要があります。
@@ -184,6 +187,7 @@ TIP: 一部のコンピューティングノードは、使用している vCent
 
 
 
+[[step-4-install-the-gpu-drivers]]
 == 手順4：GPUドライバをインストールする
 
 H610C ノードなどの NVIDIA グラフィックス処理ユニット（ GPU ）を搭載したコンピューティングノードでは、 NVIDIA ソフトウェアドライバを VMware ESXi にインストールして、強化された処理能力を活用できるようにする必要があります。GPU ドライバをインストールするには、コンピューティングノードに GPU カードが必要です。
@@ -261,6 +265,7 @@ SCP $HOME/nvidia / ESX6.5/nvidia **.vibb root@<ESX_IP_addr> ： / 。
 
 
 
+[[find-more-information]]
 == 詳細については、こちらをご覧ください
 
 * https://www.netapp.com/us/documentation/hci.aspx["NetApp HCI のリソースページ"^]

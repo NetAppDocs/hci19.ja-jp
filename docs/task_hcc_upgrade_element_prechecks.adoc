@@ -54,6 +54,7 @@ https://<ManagementNodeIP>
 
 
 
+[[use-netapp-hybrid-cloud-control-to-run-element-storage-health-checks-prior-to-upgrading-storage]]
 == NetApp Hybrid Cloud Control を使用して Element ストレージの健全性を実行します ストレージをアップグレードする前にチェックします
 
 NetApp Hybrid Cloud Control （ HCC ）を使用して、ストレージクラスタをアップグレードする準備が完了していることを確認できます。
@@ -83,6 +84,7 @@ https://<ManagementNodeIP>
 
 
 
+[[use-api-to-run-element-storage-health-checks-prior-to-upgrading-storage]]
 == API を使用して、実行前に Element ストレージの健全性チェックを実行 ストレージをアップグレードする
 
 REST API を使用して、ストレージクラスタをアップグレードする準備が完了していることを確認できます。健全性チェックでは、保留中のノード、ディスクスペースの問題、クラスタ障害など、アップグレードが必要な障害がないことを確認します。
@@ -214,6 +216,7 @@ https://<ManagementNodeIP>/storage/1/
 
 
 
+[[use-healthtools-to-run-element-storage-health-checks-prior-to-upgrading-storage]]
 == 前に HealthTools を使用して Element ストレージの健全性チェックを実行してください ストレージをアップグレードする
 
 「 fupgradecheck 」コマンドを使用して、ストレージクラスタをアップグレードする準備が完了していることを確認できます。このコマンドは、保留中のノード、ディスクスペース、クラスタ障害などの情報を検証します。
@@ -283,6 +286,7 @@ Node ID: 2 Upload speed: 85038.75 KBs/sec
 
 
 
+[[your-cluster-is-not-upgrade-ready]]
 === クラスタをアップグレードする準備が完了していません
 
 いずれかの健全性チェックに関連するエラーメッセージが表示された場合は、次の手順を実行します。
@@ -333,6 +337,7 @@ Node ID: 2 Upload speed: 93498.94 KBs/sec
 
 
 
+[[healthtools-is-out-of-date]]
 === HealthTools が最新バージョンではありません
 
 HealthTools が最新バージョンではないことを示すエラーメッセージが表示された場合は、次の手順に従います。
@@ -355,6 +360,7 @@ Or rerun with the -n option
 
 
 
+[[your-management-node-is-on-a-dark-site]]
 === 管理ノードがダークサイトにあります
 
 . アップグレードチェックが失敗したことをメッセージで確認します。
@@ -384,6 +390,7 @@ sfupgradecheck -u <cluster-user-name> -p <cluster-password> MVIP
 
 
 
+[[storage-health-checks-made-by-the-service]]
 == サービスによるストレージの健全性チェック
 
 ストレージの健全性チェックでは、クラスタごとに以下のチェックが行われます。
@@ -417,6 +424,7 @@ sfupgradecheck -u <cluster-user-name> -p <cluster-password> MVIP
 |===
 
 
+[[find-more-information]]
 == 詳細については、こちらをご覧ください
 
 https://docs.netapp.com/us-en/vcp/index.html["vCenter Server 向け NetApp Element プラグイン"^]

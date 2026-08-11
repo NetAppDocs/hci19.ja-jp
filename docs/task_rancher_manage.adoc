@@ -18,6 +18,7 @@ NetApp HCI に Rancher を展開した後、 Rancher サーバクラスタの UR
 
 
 
+[[identify-rancher-server-cluster-urls-and-status]]
 == Rancher サーバクラスタの URL とステータスを特定します
 
 Rancher サーバクラスタの URL を識別し、サーバのステータスを確認できます。

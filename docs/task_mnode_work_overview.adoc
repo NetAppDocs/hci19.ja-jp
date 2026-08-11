@@ -55,6 +55,7 @@ Element ソフトウェアバージョン 11.3 以降を実行するクラスタ
 
 
 
+[[find-more-information]]
 == 詳細については、こちらをご覧ください
 
 https://docs.netapp.com/us-en/vcp/index.html["vCenter Server 向け NetApp Element プラグイン"^]

@@ -24,6 +24,7 @@ Element ベースのストレージシステムでは、「管理者」または
 
 
 
+[[enable-ldap]]
 == LDAP を有効にします
 
 任意のユーザアカウントで LDAP を使用するには、最初に LDAP を有効にする必要があります。
@@ -40,12 +41,14 @@ Element ベースのストレージシステムでは、「管理者」または
 
 
 
+[[manage-authoritative-cluster-accounts]]
 == 権限のあるクラスタアカウントを管理します
 
 link:concept_cg_hci_accounts.html#authoritative-user-accounts["権限のあるユーザアカウント"] NetApp Hybrid Cloud Control の右上のメニューから User Management オプションを選択して管理します。このタイプのアカウントでは、ノードおよびクラスタの NetApp Hybrid Cloud Control インスタンスに関連付けられているストレージアセットに対して認証を行うことができます。このアカウントを使用すると、すべてのクラスタのボリューム、アカウント、アクセスグループなどを管理できます。
 
 
 
+[[create-an-authoritative-cluster-account]]
 === 権限のあるクラスタアカウントを作成してください
 
 NetApp Hybrid Cloud Control を使用してアカウントを作成できます。
@@ -82,6 +85,7 @@ TIP: グループのすべての子が権限を継承するようにするには
 
 
 
+[[edit-an-authoritative-cluster-account]]
 === 権限のあるクラスタアカウントを編集してください
 
 NetApp Hybrid Cloud Control を使用して、ユーザアカウントの権限またはパスワードを変更できます。
@@ -107,6 +111,7 @@ NOTE: NetApp Hybrid Cloud Control の UI でインベントリの更新に最大
 
 
 
+[[delete-an-authoritative-user-account]]
 === 権限のあるユーザアカウントを削除します
 
 不要になったアカウントを削除できます。LDAP ユーザアカウントを削除できます。
@@ -122,6 +127,7 @@ NOTE: NetApp Hybrid Cloud Control の UI でインベントリの更新に最大
 
 
 
+[[manage-volume-accounts]]
 == ボリュームアカウントを管理する
 
 link:concept_cg_hci_accounts.html#volume-accounts["ボリュームアカウント"] NetApp Hybrid Cloud Control Volumes の表で管理します。これらのアカウントは、アカウントを作成したストレージクラスタにのみ固有です。これらのタイプのアカウントでは、ネットワーク上のボリュームにアクセス許可を設定できますが、設定したボリューム以外には影響しません。
@@ -130,6 +136,7 @@ link:concept_cg_hci_accounts.html#volume-accounts["ボリュームアカウン�
 
 
 
+[[create-a-volume-account]]
 === ボリュームアカウントを作成します
 
 このボリュームに固有のアカウントを作成します。
@@ -155,6 +162,7 @@ NOTE: いずれかのパスワードを自動生成する場合は、クレデ�
 
 
 
+[[edit-a-volume-account]]
 === ボリュームアカウントを編集します
 
 CHAP 情報を変更し、アカウントがアクティブであるかロックされているかを変更できます。
@@ -173,6 +181,7 @@ IMPORTANT: 管理ノードに関連付けられているアカウントを削除
 
 
 
+[[delete-a-volume-account]]
 === ボリュームアカウントを削除します
 
 不要になったアカウントを削除します。
@@ -195,6 +204,7 @@ NOTE: 管理サービスに関連付けられた永続ボリュームは、イ�
 
 
 
+[[find-more-information]]
 == 詳細については、こちらをご覧ください
 
 * link:concept_cg_hci_accounts.html["アカウントの詳細を確認します"]

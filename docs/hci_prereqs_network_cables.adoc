@@ -39,6 +39,7 @@ NOTE: ケーブルを 6 本使用する構成では、 2 つのポートが VMwa
 
 
 
+[[find-more-information]]
 == 詳細については、こちらをご覧ください
 
 https://docs.netapp.com/us-en/vcp/index.html["vCenter Server 向け NetApp Element プラグイン"^]

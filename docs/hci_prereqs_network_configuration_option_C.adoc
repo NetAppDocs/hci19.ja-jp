@@ -18,6 +18,7 @@ NetApp HCI では、複数の異なるネットワークケーブル配線と VL
 
 
 
+[[configuration-option-c-six-cables-for-compute-nodes-with-native-vlans]]
 == 構成オプション C ：ケーブル 6 本でのコンピューティングノードの構成 - ネイティブ VLAN を使用
 
 ストレージおよび仮想化トラフィックにタグ付けした VLAN を使用する代わりに、スイッチの設定を使用してネットワークセグメントを分離することで、 NetApp HCI を導入できます。この構成は、 vSphere Standard Switch または vSphere Distributed Switch （ VMware vSphere Enterprise Plus のライセンスが必要）で使用できます。
@@ -41,6 +42,7 @@ image::H610S_back_panel_ports.png[NetApp H610S ストレージノードのネッ
 
 
 
+[[vlan-configuration-for-h410c-h410s-and-h610s-nodes]]
 === H410C 、 H410S 、および H610S ノードの VLAN 構成
 
 このトポロジオプションは、 H410C 、 H410S 、および H610S ノードで次の VLAN 構成を使用します。
@@ -72,6 +74,7 @@ image::hci_networking_config_scenario_2.png[HCI ネットワーク構成オプ�
 
 
 
+[[example-switch-commands]]
 === スイッチコマンドの例
 
 NetApp HCI ノードで使用するスイッチポートを構成する場合には次のコマンドを使用できます。このコマンドは Cisco の構成用ですが、少しの変更で Mellanox スイッチにも使用できます。この構成を実装するために必要なコマンドについては、スイッチのマニュアルを参照してください。
@@ -93,6 +96,7 @@ NOTE: 一部のスイッチでは、 VLAN の許可リストにネイティブ V
 
 
 
+[[find-more-information]]
 == 詳細については、こちらをご覧ください
 
 https://docs.netapp.com/us-en/vcp/index.html["vCenter Server 向け NetApp Element プラグイン"^]

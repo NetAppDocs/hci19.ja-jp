@@ -32,6 +32,7 @@ Element 12.2 以降では、を使用できます link:concept_hci_storage_maint
 
 
 
+[[add-a-storage-cluster]]
 == ストレージクラスタを追加
 
 NetApp Hybrid Cloud Control を使用して、管理ノードアセットインベントリにストレージクラスタを追加できます。これにより、 HCC UI を使用してクラスタを管理および監視できます。
@@ -61,6 +62,7 @@ NOTE: ストレージクラスタを追加したあとにクラスタのイン�
 
 
 
+[[confirm-storage-cluster-status]]
 == ストレージクラスタのステータスを確認
 
 NetApp Hybrid Cloud Control の UI を使用して、ストレージクラスタアセットの接続ステータスを監視できます。
@@ -74,6 +76,7 @@ NetApp Hybrid Cloud Control の UI を使用して、ストレージクラスタ
 
 
 
+[[edit-storage-cluster-credentials]]
 == ストレージクラスタクレデンシャルを編集します
 
 NetApp Hybrid Cloud Control の UI を使用して、ストレージクラスタ管理者のユーザ名とパスワードを編集できます。
@@ -89,6 +92,7 @@ NetApp Hybrid Cloud Control の UI を使用して、ストレージクラスタ
 
 
 
+[[remove-a-storage-cluster]]
 == ストレージクラスタを削除
 
 NetApp Hybrid Cloud Control からストレージクラスタを削除すると、管理ノードインベントリからクラスタが削除されます。ストレージクラスタを削除すると、そのクラスタは HCC で管理できなくなり、クラスタの管理 IP アドレスに直接移動する場合にのみアクセスできます。
@@ -122,6 +126,7 @@ CAUTION: [ はい ] をクリックすると、クラスタがインストール
 
 
 
+[[enablemainmodeenable-maintenance-mode]]
 === [[enable_main_mode]]メンテナンスモードを有効にします
 
 次の手順を使用して、ストレージクラスタノードのメンテナンスモードを有効にすることができます。
@@ -167,6 +172,7 @@ image:hcc_enable_maintenance_mode.PNG["メンテナンスモードを有効に�
 
 
 
+[[disablemainmodedisable-maintenance-mode]]
 === [[disable_main_mode]]メンテナンスモードを無効にします
 
 ノードがメンテナンスモードになると、このノードで * メンテナンスモードを無効にする * アクションを使用できるようになります。メンテナンス中のノードでメンテナンスモードが無効になるまで、他のノードに対する処理は実行できません。
@@ -187,12 +193,14 @@ NOTE: ノードが保守モードのときは新しいデータは受け入れ�
 
 
 
+[[troubleshoot]]
 === トラブルシューティングを行う
 
 メンテナンスモードを有効または無効にしているときにエラーが発生した場合は、 nodes テーブルの上部にバナーエラーが表示されます。エラーの詳細については、バナーに表示される「 * 詳細を表示 * 」リンクを選択して、 API が返す内容を確認できます。
 
 
 
+[[find-more-information]]
 == 詳細については、こちらをご覧ください
 
 link:task_mnode_manage_storage_cluster_assets.html["ストレージクラスタアセットを作成および管理する"]

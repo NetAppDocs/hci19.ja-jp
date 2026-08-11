@@ -66,6 +66,7 @@ Element 12.2 管理ノードはオプションのアップグレードです。�
 
 
 
+[[download-iso-or-ova-and-deploy-the-vm]]
 == ISO または OVA をダウンロードし、 VM を導入します
 
 . から、インストール環境に対応した OVA または ISO をダウンロードします https://mysupport.netapp.com/site/products/all/details/netapp-hci/downloads-tab["NetApp HCI"^] ネットアップサポートサイトのページ：
@@ -112,6 +113,7 @@ NOTE: イメージを使用して管理ノードをインストールすると�
 
 
 
+[[create-the-management-node-admin-and-configure-the-network]]
 == 管理ノード管理者を作成し、ネットワークを設定
 
 . ターミナルユーザインターフェイス（ TUI ）を使用して、管理ノードの管理ユーザを作成します。
@@ -128,6 +130,7 @@ NOTE: ストレージトラフィックを分離するために NIC を追加す
 
 
 
+[[configure-time-sync]]
 == 時刻同期を設定します
 
 . NTP を使用して管理ノードとストレージクラスタの間で時刻が同期されていることを確認します。
@@ -146,7 +149,7 @@ sudo service ntpd stop
 .. NTP 構成ファイル /etc/ntp.conf を編集します
 +
 ... 各サーバの前に # を追加して ' デフォルト・サーバ（サーバ 0.gentoo.pool.ntp.org ）をコメントアウトします
-... 追加するデフォルトのタイムサーバごとに新しい行を追加します。デフォルトのタイムサーバは、同じ NTP サーバである必要があります で使用するストレージクラスタで使用します A link:task_mnode_install.html#set-up-the-management-node["後の手順"]。
+... 追加するデフォルトタイムサーバーごとに新しい行を追加してください。デフォルトタイムサーバーは、link:task_mnode_install.html#step-4-set-up-the-management-node["後の手順"]で使用するストレージクラスターで使用されるNTPサーバーと同じである必要があります。
 +
 [listing]
 ----
@@ -203,10 +206,11 @@ NOTE: 今後 VM を変更する場合は、このオプションを有効にし�
 
 
 
-NOTE: の実行時は NTP に影響するため、時刻の同期設定の完了後は NTP を編集しないでください link:task_mnode_install.html#set-up-the-management-node["Setup コマンド"] 管理ノード。
+NOTE: 時刻同期設定が完了した後は、NTP を編集しないでください。管理ノードで link:task_mnode_install.html#step-4-set-up-the-management-node["Setup コマンド"] を実行すると、NTP に影響するためです。
 
 
 
+[[set-up-the-management-node]]
 == 管理ノードをセットアップ
 
 . 管理ノードのセットアップコマンドを設定して実行します。
@@ -227,7 +231,7 @@ NOTE: 内はコマンドの省略名で、正式な名前の代わりに使用�
 
 +
 *** * --mnode_admin_user （ -mu ） [username] * ：管理ノードの管理者アカウントのユーザ名。一般には、管理ノードへのログインに使用したユーザアカウントのユーザ名です。
-*** * --storage_mvip （ -SM ） [MVIP アドレス ] * ： Element ソフトウェアを実行しているストレージクラスタの管理仮想 IP アドレス（ MVIP ）。同じストレージクラスタを使用して管理ノードを設定します の間に使用しました link:task_mnode_install.html#configure-time-sync["NTP サーバの設定"]。
+*** *--storage_mvip (-sm) [MVIPアドレス]*：Elementソフトウェアを実行しているストレージクラスタの管理仮想IPアドレス（MVIP）。管理ノードを、link:task_mnode_install.html#step-3-configure-time-sync["NTP サーバの設定"]で使用したストレージクラスタと同じ構成にします。
 *** *--storage_username(-su )[username] * ：「 --storage_mvip 」パラメータで指定したクラスタのストレージクラスタ管理者のユーザ名。
 *** * --metal_active （ -t ） [true]* ： Active IQ による分析のためのデータ収集を有効にする値を true のままにします。
 
@@ -270,6 +274,7 @@ NOTE: 永続ボリュームには、クラスタ上の既存のアカウント�
 
 
 
+[[configure-controller-assets]]
 == コントローラアセットを設定する
 
 . インストール ID を確認します。
@@ -336,6 +341,7 @@ NOTE: コントローラサブアセットを追加する場合は、vCenterで�
 
 
 
+[[netapp-hci-only-configure-compute-node-assets]]
 == （ NetApp HCI のみ）コンピューティングノードアセットを設定します
 
 . （ NetApp HCI のみ）管理ノードの既知のアセットにコンピューティングノードのアセットを追加します。
@@ -351,6 +357,7 @@ NOTE: コントローラサブアセットを追加する場合は、vCenterで�
 
 
 
+[[find-more-information]]
 == 詳細はこちら
 
 * link:concept_hci_volumes.html#persistent-volumes["永続ボリューム"]

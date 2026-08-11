@@ -18,6 +18,7 @@ REST API を使用して、管理ノード構成内の既存の VMware vCenter �
 
 
 
+[[access-the-management-services-rest-api]]
 == 管理サービス REST API にアクセスします
 
 .手順
@@ -39,6 +40,7 @@ https://<ManagementNodeIP>/vcenter/1/
 
 
 
+[[view-stored-information-about-existing-controllers]]
 == 既存のコントローラについて格納されている情報を表示する
 
 管理ノードに登録されている既存の vCenter コントローラをリストし、 REST API を使用してそれらのコントローラに関する格納されている情報を表示できます。
@@ -55,6 +57,7 @@ API は、各コントローラとの通信に使用される IP アドレス、
 
 
 
+[[view-the-status-of-an-existing-controller]]
 == 既存のコントローラのステータスを表示します
 
 管理ノードに登録されている既存の vCenter コントローラのステータスを確認できます。この API は、 NetApp Hybrid Cloud Control が vCenter コントローラに接続できるかどうか、およびそのステータスの理由を示すステータスを返します。
@@ -71,6 +74,7 @@ API は、この vCenter コントローラのステータスとそのステー�
 
 
 
+[[edit-the-stored-properties-of-a-controller]]
 == コントローラの保存されているプロパティを編集します
 
 管理ノードに登録されている既存のすべての vCenter コントローラについて、格納されているユーザ名とパスワードを編集することができます。既存の vCenter コントローラに格納されている IP アドレスは編集できません。
@@ -98,6 +102,7 @@ API から更新されたコントローラ情報が返されます。
 
 
 
+[[find-more-information]]
 == 詳細については、こちらをご覧ください
 
 * link:task_mnode_add_assets.html["管理ノードにコンピューティングアセットとコントローラアセットを追加します"]

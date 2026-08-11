@@ -88,8 +88,8 @@ TIP: DC 電源装置がオンラインになると、電源装置の LED が点�
 
 
 
+[[find-more-information]]
 == 詳細については、こちらをご覧ください
 
-* https://www.netapp.com/us/documentation/hci.aspx["NetApp HCI のリソースページ"^]
 * http://docs.netapp.com/sfe-122/index.jsp["SolidFire と Element ソフトウェアドキュメントセンター"^]
 

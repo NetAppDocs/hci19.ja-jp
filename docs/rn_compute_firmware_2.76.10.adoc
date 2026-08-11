@@ -18,12 +18,14 @@ keywords: netapp, hci, compute firmware
 
 
 
+[[whats-new]]
 == 新機能
 
 バージョン 2.76.10 には一般的なバグ修正が含まれています。
 
 
 
+[[updated-firmware-components]]
 === ファームウェアコンポーネントが更新されました
 
 このファームウェアパッケージには、次のファームウェアバージョンが含まれています。これらのファームウェアバージョンは、太字で更新されています。
@@ -42,6 +44,7 @@ keywords: netapp, hci, compute firmware
 |===
 
 
+[[changes-in-firmware-components]]
 === ファームウェアコンポーネントの変更
 
 以下は、新しい各ファームウェアコンポーネントの改善点と変更点の詳細です。
@@ -59,6 +62,7 @@ keywords: netapp, hci, compute firmware
 |===
 
 
+[[mellanox-nic-firmware-driver-compatibility]]
 === Mellanox NIC ファームウェアドライバの互換性
 
 Mellanox ファームウェアのバージョン 14.25.1020 および 14.24.1000 の更新版は、次のバージョンの VMware ESXi ドライバとのみ互換性があります。
@@ -76,6 +80,7 @@ NetApp Deployment Engine 1.8P1 では ESXi バージョン 7.0 は導入され�
 
 
 
+[[download-compute-firmware-bundle-2-76-10]]
 == Compute Firmware Bundle 2.76.10 をダウンロードします
 
 Compute Firmware Bundle をダウンロードするには、にアクセスします https://mysupport.netapp.com/site/products/all/details/netapp-hci/downloads-tab/download/62542/Compute_Firmware_Bundle["NetApp HCI Compute Firmware Bundle の略"^] ページ
@@ -84,12 +89,14 @@ Compute Firmware Bundle をダウンロードするには、にアクセスし�
 
 
 
+[[resolved-security-vulnerabilities]]
 == セキュリティの脆弱性を解決
 
 このリリースで解決されたセキュリティの脆弱性は次のとおりです。
 
 
 
+[[h410c-bmc-6-71-20]]
 === H410C BMC 6.71.20
 
 * CVE-2017-1010022 、 CVE-2019-9169 、 CVE-2017-15804 、 CVE-2018-11236 、 CVE-2017-15670 、 CVE-2015-1010023 、 CVE-2015-8982 、 CVE-2015-8983 、 CVE-2017-16997 、 CVE-2018-20838 、
@@ -99,12 +106,14 @@ Compute Firmware Bundle をダウンロードするには、にアクセスし�
 
 
 
+[[resolved-and-known-issues]]
 == 解決済みの問題と既知の問題
 
 を参照してください https://mysupport.netapp.com/site/bugs-online/product["Bugs Online のツール"^] 解決済みの問題と新しい問題の詳細については、を参照してください。
 
 
 
+[[accessing-the-bol-tool]]
 === BOL ツールへのアクセス
 
 . に移動します  https://mysupport.netapp.com/site/bugs-online/product["BOL ツール"^] ドロップダウンリストから * Element Software * を選択します。

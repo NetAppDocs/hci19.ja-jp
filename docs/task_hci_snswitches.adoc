@@ -58,6 +58,7 @@ NOTE: ガイダンスが必要な場合は、ネットアップサポートに�
 
 
 
+[[prepare-to-replace-the-faulty-switch]]
 == 故障したスイッチを交換する準備をします
 
 障害のあるスイッチを交換する前に、次の手順を実行します。
@@ -77,6 +78,7 @@ NOTE: ガイダンスが必要な場合は、ネットアップサポートに�
 
 
 
+[[create-the-configuration-file]]
 == 構成ファイルを作成します
 
 スイッチは、作成した構成ファイルを使用して設定できます。次のいずれかのオプションを選択して、スイッチの構成ファイルを作成します。
@@ -157,6 +159,7 @@ no interface mgmt0 dhcp
 |===
 
 
+[[remove-the-faulty-switch-and-install-the-replacement]]
 == 障害のあるスイッチを取り外し、交換用スイッチを取り付けます
 
 手順を実行して障害のあるスイッチを取り外し、交換用スイッチを取り付けます。
@@ -177,6 +180,7 @@ NOTE: AC 電源を投入すると、スイッチの電源が自動的にオン�
 
 
 
+[[verify-the-operating-system-version-on-the-switch]]
 == スイッチのオペレーティングシステムのバージョンを確認します
 
 スイッチの OS ソフトウェアバージョンを確認します。障害が発生したスイッチと正常なスイッチのバージョンが一致している必要があります。
@@ -210,14 +214,15 @@ System memory:     3525 MB used / 3840 MB free / 7365 MB total
 Swap:              0 MB used / 0 MB free / 0 MB total
 
 ----
-. バージョンが一致しない場合は、 OS をアップグレードする必要があります。を参照してください link:https://community.mellanox.com/s/article/howto-upgrade-switch-os-software-on-mellanox-switch-systems["Mellanox ソフトウェアアップグレードガイド"^] を参照してください。
+. バージョンが一致しない場合は、OSをアップグレードする必要があります。詳細については、link:https://community.mellanox.com/s/article/howto-upgrade-switch-os-software-on-mellanox-switch-systems["Mellanox ソフトウェアアップグレードガイド"^]を参照してください。
 
 
 
 
+[[configure-the-replacement-switch]]
 == 交換用スイッチを設定します
 
-次の手順を実行して、交換用スイッチを設定します。を参照してください link:https://docs.mellanox.com/display/MLNXOSv381000/Configuration+Management["Mellanox の構成管理"^] を参照してください。
+交換用スイッチの設定手順を実行してください。詳細については、link:https://docs.mellanox.com/display/MLNXOSv381000/Configuration+Management["Mellanox の構成管理"^]を参照してください。
 
 .手順
 . 該当するオプションから選択します。
@@ -275,6 +280,7 @@ NOTE: テキストファイルの適用時にはリブートは必要ありま�
 |===
 
 
+[[complete-the-replacement]]
 == 交換を完了します
 
 手順を実行して交換手順を完了します。
@@ -288,8 +294,8 @@ NOTE: テキストファイルの適用時にはリブートは必要ありま�
 
 
 
+[[find-more-information]]
 == 詳細については、こちらをご覧ください
 
-* https://www.netapp.com/us/documentation/hci.aspx["NetApp HCI のリソースページ"^]
 * http://docs.netapp.com/sfe-122/index.jsp["SolidFire と Element ソフトウェアドキュメントセンター"^]
 

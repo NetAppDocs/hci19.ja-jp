@@ -24,12 +24,14 @@ NetApp HCI コンピューティングノードでサポートされるファー
 
 
 
+[[h615c]]
 == H615C
 
 *モデル番号（ファミリー部分）：* H615C
 
 
 
+[[component-firmware-managed-by-a-compute-firmware-bundle]]
 === Compute Firmware Bundleで管理されるコンポーネントファームウェア
 
 11.x時間内にファームウェアをリリースする唯一の方法はElementソフトウェアでした。Element 12.0以降では、* Compute Firmware Bundle *の概念が導入され、ファームウェアの更新が独立してリリースされたCompute Firmware Bundleで可能になりました。
@@ -81,6 +83,7 @@ NOTE: 次の表にダッシュ（*-*）が表示されている場合は、特�
 |===
 
 
+[[component-firmware-not-managed-by-a-compute-firmware-bundle]]
 === Compute Firmware Bundleで管理されていないコンポーネントファームウェア
 
 次のファームウェアは、Compute Firmware Bundleで管理されていません。
@@ -100,12 +103,14 @@ NOTE: 次の表にダッシュ（*-*）が表示されている場合は、特�
 |===
 
 
+[[h610c]]
 == H610C
 
 *モデル番号（ファミリー部）：* H610C
 
 
 
+[[component-firmware-managed-by-a-compute-firmware-bundle]]
 === Compute Firmware Bundleで管理されるコンポーネントファームウェア
 
 NetApp HCI 1.0 - NetApp HCI 1.7では、ファームウェアをリリースする唯一の方法はNetApp HCI です。NetApp HCI 1.8以降では、* Compute Firmware Bundle *の概念が導入され、ファームウェアのアップデートが個別にリリースされたCompute Firmware Bundleによって可能になりました。
@@ -166,6 +171,7 @@ NOTE: 次の表にダッシュ（*-*）が表示されている場合は、特�
 |===
 
 
+[[component-firmware-not-managed-by-a-compute-firmware-bundle]]
 === Compute Firmware Bundleで管理されていないコンポーネントファームウェア
 
 次のファームウェアは、Compute Firmware Bundleで管理されていません。
@@ -188,12 +194,14 @@ NOTE: 次の表にダッシュ（*-*）が表示されている場合は、特�
 |===
 
 
+[[h410c]]
 == H410C
 
 *モデル番号（ファミリー部）：* H410C
 
 
 
+[[component-firmware-managed-by-a-compute-firmware-bundle]]
 === Compute Firmware Bundleで管理されるコンポーネントファームウェア
 
 NetApp HCI 1.0 - NetApp HCI 1.7では、ファームウェアをリリースする唯一の方法はNetApp HCI です。NetApp HCI 1.8以降では、* Compute Firmware Bundle *の概念が導入され、ファームウェアのアップデートが個別にリリースされたCompute Firmware Bundleによって可能になりました。
@@ -254,6 +262,7 @@ NOTE: 次の表にダッシュ（*-*）が表示されている場合は、特�
 |===
 
 
+[[component-firmware-not-managed-by-a-compute-firmware-bundle]]
 === Compute Firmware Bundleで管理されていないコンポーネントファームウェア
 
 次のファームウェアは、Compute Firmware Bundleで管理されていません。
@@ -282,12 +291,14 @@ NOTE: 次の表にダッシュ（*-*）が表示されている場合は、特�
 |===
 
 
+[[h300eh500eh700e]]
 == H300E / H500E / H700E
 
 *モデル番号（ファミリー部分）：* H300E、H500E、H700E
 
 
 
+[[component-firmware-managed-by-a-compute-firmware-bundle]]
 === Compute Firmware Bundleで管理されるコンポーネントファームウェア
 
 NetApp HCI 1.0 - NetApp HCI 1.7では、ファームウェアをリリースする唯一の方法はNetApp HCI です。NetApp HCI 1.8以降では、* Compute Firmware Bundle *の概念が導入され、ファームウェアのアップデートが個別にリリースされたCompute Firmware Bundleによって可能になりました。
@@ -348,6 +359,7 @@ NOTE: 次の表にダッシュ（*-*）が表示されている場合は、特�
 |===
 
 
+[[component-firmware-not-managed-by-a-compute-firmware-bundle]]
 === Compute Firmware Bundleで管理されていないコンポーネントファームウェア
 
 次のファームウェアは、Compute Firmware Bundleで管理されていません。

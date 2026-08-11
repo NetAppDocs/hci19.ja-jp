@@ -22,6 +22,7 @@ NetApp HCI に Rancher を導入すると、 Rancher コントロールプレー
 
 
 
+[[benefits-of-rancher-on-netapp-hci]]
 == NetApp HCI の Rancher の利点
 
 * インストールの容易さ： Rancher のインストールおよび設定方法を習得する必要はありません。NetApp HCI と Rancher が共同で開発したテンプレートベースの実装を展開できます。
@@ -30,6 +31,7 @@ NetApp HCI に Rancher を導入すると、 Rancher コントロールプレー
 
 
 
+[[what-you-can-do-with-rancher-on-netapp-hci]]
 == NetApp HCI のランチマーでできること
 
 NetApp HCI のランチマーを使用すると、次のことが可能になります。
@@ -43,6 +45,7 @@ NetApp HCI のランチマーを使用すると、次のことが可能になり
 
 
 
+[[technical-support-option]]
 == テクニカルサポートオプション
 
 NetApp HCI と Kubernetes オープンソースソフトウェアで Rancher を使用すれば、無償での導入と使用が可能ライセンスキーは必要ありません。
@@ -54,6 +57,7 @@ NOTE: Rancher サポートは、ネットアップサポートエッジ契約に
 
 
 
+[[rancher-on-netapp-hci-architecture-and-components]]
 == NetApp HCI のアーキテクチャとコンポーネントに関する Rancher
 
 次に、 NetApp HCI の Rancher のさまざまなコンポーネントの概要を示します。

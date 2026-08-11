@@ -33,24 +33,28 @@ Element 12.3.2には、Apache log4jの脆弱性に対するElementソフトウ�
 
 
 
+[[netapp-hci-1-9p1]]
 == NetApp HCI 1.9P1
 
 NetApp HCI 1.9P1 では、セキュリティと安定性が向上しています。
 
 
 
+[[element-12-3-1]]
 == Element 12.3.1
 
 NetApp HCI 1.9P1 にはストレージクラスタ用の Element 12.3.1 が含まれます。
 
 
 
+[[storage-firmware-bundle-2-99-2]]
 === ストレージファームウェアバンドル 2.99.2
 
 Element 12.3.1 リリースには、ストレージファームウェアバンドルバージョン 2.99.2 が含まれています。ストレージクラスタがすでに Element 12.3 にある場合は、新しい 2.99.2 ファームウェアバンドルをインストールするだけで済みます。
 
 
 
+[[netapp-bugs-online-contains-known-and-resolved-issues]]
 === NetApp Bugs Online には、既知の問題と解決済みの問題があります
 
 既知の問題と解決済みの問題の一覧については、 NetApp Bugs Online ツールを参照してください。これらの問題は Element およびその他の製品で参照できます から https://mysupport.netapp.com/site/products/all/details/element-software/bugsonline-tab["NetApp Bugs Online では"^]。
@@ -71,7 +75,6 @@ image:bol_filters.PNG["BOL フィルタの位置合わせ = \"center\""]
 
 * https://kb.netapp.com/Advice_and_Troubleshooting/Data_Storage_Software/Management_services_for_Element_Software_and_NetApp_HCI/Management_Services_Release_Notes["『 NetApp Hybrid Cloud Control and Management Services Release Notes 』を参照してください"^]
 * https://docs.netapp.com/us-en/vcp/index.html["vCenter Server 向け NetApp Element プラグイン"^]
-* https://www.netapp.com/us/documentation/hci.aspx["NetApp HCI のリソースページ"^]
 * https://docs.netapp.com/us-en/element-software/index.html["SolidFire および Element ソフトウェアのドキュメント"^]
 * link:firmware_driver_versions.html["NetApp HCI でサポートされるファームウェアとESXiドライバのバージョン、NetApp HCI ストレージノードでサポートされるファームウェアのバージョンとファームウェアのバージョン"]
 

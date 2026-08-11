@@ -65,6 +65,7 @@ NetApp HCI は、これらのページに入力した情報をチェックしま
 |===
 
 
+[[configure-dns-and-ntp-settings]]
 == DNS と NTP を設定
 
 .手順
@@ -89,6 +90,7 @@ NetApp HCI は、これらのページに入力した情報をチェックしま
 
 
 
+[[assign-vlan-ids]]
 == VLAN ID を割り当てます
 
 [VLAN ID*] ページでは、 NetApp HCI ネットワークに VLAN ID を割り当てることができます。VLAN ID を使用しないように選択することもできます。コンピューティングノードにケーブル 2 本のネットワークトポロジを使用する場合は、導入するすべてのコンピューティングノードおよびストレージノードの vMotion ネットワークとストレージネットワークに VLAN ID を使用する必要があります（管理ネットワークの VLAN ID は任意です）。
@@ -122,6 +124,7 @@ NOTE: VLAN ID を割り当てる場合は、 NetApp HCI がネットワークト
 |===
 
 
+[[configure-the-management-network]]
 == 管理ネットワークを設定
 
 [* Management*] ページでは、開始 IP アドレスに基づいて NetApp HCI が管理ネットワークの IP アドレス範囲を自動的に設定するか、すべての IP アドレス情報を手動で入力するかを選択できます。
@@ -158,6 +161,7 @@ NetApp HCI では、ホストまたはホストグループごとに終了 IP �
 |===
 
 
+[[configure-the-vmotion-network]]
 == vMotion ネットワークを設定します
 
 [*vMotion *] ページでは、開始 IP アドレスに基づいて NetApp HCI が自動的に vMotion ネットワークの IP アドレス範囲を入力するか、またはすべての IP アドレス情報を手動で入力するかを選択できます。
@@ -193,6 +197,7 @@ NetApp HCI では、ホストまたはホストグループごとに終了 IP �
 |===
 
 
+[[configure-the-iscsi-network]]
 == iSCSI ネットワークを設定
 
 [*iSCSI*] ページでは、 NetApp HCI が開始 IP アドレスに基づいて iSCSI ネットワークの IP アドレス範囲を自動的に入力するように選択することも、すべての IP アドレス情報を手動で入力することもできます。
@@ -231,6 +236,7 @@ NetApp HCI では、ホストまたはホストグループごとに終了 IP �
 |===
 
 
+[[assign-cluster-and-host-names]]
 == クラスタ名とホスト名を割り当て
 
 ネーミング * ページでは、 NetApp HCI によってクラスタ名およびクラスタ内のノード名が命名プレフィックスに基づいて自動的に入力されるようにするか、またはクラスタとノードのすべての名前を手動で入力するように選択できます。
@@ -263,9 +269,9 @@ NetApp HCI では、ノードのタイプに基づいてホスト名が自動的
 |===
 
 
+[[find-more-information]]
 == 詳細については、こちらをご覧ください
 
 * https://docs.netapp.com/us-en/vcp/index.html["vCenter Server 向け NetApp Element プラグイン"^]
-* https://www.netapp.com/us/documentation/hci.aspx["NetApp HCI のリソースページ"^]
 * https://docs.netapp.com/us-en/element-software/index.html["SolidFire および Element ソフトウェアのドキュメント"^]
 

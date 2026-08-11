@@ -54,6 +54,7 @@ NOTE: 管理サービスと Element ストレージを順番に更新しない�
 
 
 
+[[upgrade-a-management-node-to-version-12-3-x-from-12-2]]
 == 12.2 から管理ノードをバージョン 12.3.x にアップグレードします
 
 新しい管理ノード仮想マシンをプロビジョニングすることなく、バージョン 12.2 からバージョン 12.3.x への管理ノードのインプレースアップグレードを実行できます。
@@ -147,6 +148,7 @@ IMPORTANT: 管理ノードで SSH 機能を無効にしていた場合は、が�
 
 
 
+[[upgrade-a-management-node-to-version-12-3-x-from-12-0]]
 == バージョン 12.0 から管理ノードをバージョン 12.3.x にアップグレードします
 
 新しい管理ノード仮想マシンをプロビジョニングすることなく、管理ノードバージョン 12.0 からバージョン 12.3.x へのインプレースアップグレードを実行できます。
@@ -246,6 +248,7 @@ IMPORTANT: 提供する SSH 機能 link:task_mnode_enable_remote_support_connect
 
 
 
+[[upgrade-a-management-node-to-version-12-3-x-from-11-3-through-11-8]]
 == 管理ノードをバージョン 11.3 から 11.8 にアップグレードします
 
 新しい管理ノード仮想マシンをプロビジョニングすることなく、管理ノードバージョン 11.3 、 11.5 、 11.7 、または 11.8 からバージョン 12.3.x へのインプレースアップグレードを実行できます。
@@ -345,6 +348,7 @@ IMPORTANT: 提供する SSH 機能 link:task_mnode_enable_remote_support_connect
 
 
 
+[[upgrade-a-management-node-to-version-12-3-x-from-11-1-or-11-0]]
 == 管理ノードをバージョン 12.3.x にアップグレードします。 11.1 または 11.0 からアップグレードします
 
 新しい管理ノード仮想マシンをプロビジョニングすることなく、管理ノード 11.0 または 11.1 からバージョン 12.3.x へのインプレースアップグレードを実行できます。
@@ -537,6 +541,7 @@ https://<ManagementNodeIP>/inventory/1/
 
 
 
+[[migrating-from-management-node-version-10-x-to-11-x]]
 == 管理ノードバージョン 10.x から 11.x への移行
 
 管理ノードのバージョンが 10.x の場合、 10.x から 11.x にアップグレードすることはできません代わりに、ここに記載する移行手順を使用して、新しく導入した 11.1 の管理ノードに 10.x から設定をコピーします。現在の管理ノードが 11.0 以降の場合は、この手順は省略してください。管理ノード 11.0 または 11.1 とが必要です link:task_upgrade_element_latest_healthtools.html["最新の HealthTools"] Element ソフトウェアを 10.3 以降から 11.x にアップグレードします
@@ -646,6 +651,7 @@ sudo systemctl restart sfcollector
 
 
 
+[[reconfigure-authentication-using-the-management-node-rest-api]]
 == 管理ノード REST API を使用して認証を再設定します
 
 既存の管理ノードは、（ 1 ）管理サービスと（ 2 ） Element ストレージを順番にアップグレードした場合でも維持できます。別のアップグレード順序を使用した場合は、インプレース管理ノードのアップグレード手順を参照してください。
@@ -682,6 +688,7 @@ https://<ManagementNodeIP>/mnode
 
 
 
+[[find-more-information]]
 == 詳細については、こちらをご覧ください
 
 https://docs.netapp.com/us-en/vcp/index.html["vCenter Server 向け NetApp Element プラグイン"^]

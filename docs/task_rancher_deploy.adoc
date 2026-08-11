@@ -24,6 +24,7 @@ NOTE: Rancher サポートは、ネットアップサポートエッジ契約に
 
 
 
+[[what-happens-when-you-deploy-rancher-on-netapp-hci]]
 == NetApp HCI に Rancher を導入するとどうなりますか。
 
 の導入では、以下の手順を実行します。各手順についてさらに説明します。
@@ -40,6 +41,7 @@ NOTE: Rancher サポートは、ネットアップサポートエッジ契約に
 
 
 
+[[steps-to-deploy-rancher-on-netapp-hci]]
 == NetApp HCI に Rancher を展開する手順
 
 * <<NetApp Hybrid Cloud Control にアクセスします>>
@@ -49,6 +51,7 @@ NOTE: Rancher サポートは、ネットアップサポートエッジ契約に
 
 
 
+[[access-the-netapp-hybrid-cloud-control]]
 === NetApp Hybrid Cloud Control にアクセスします
 
 導入を開始するには、 NetApp Hybrid Cloud Control にアクセスしてください。
@@ -67,6 +70,7 @@ NetApp Hybrid Cloud Control のインターフェイスが表示されます。
 
 
 
+[[deploy-rancher-on-netapp-hci]]
 === NetApp HCI に Rancher を導入します
 
 . Hybrid Cloud Control のナビゲーションバーの左下にある * ランチャ * アイコンをクリックします。
@@ -132,6 +136,7 @@ image::rancher_deploy_complete_url.png[Rancher 展開の完了と URL]
 
 
 
+[[verify-your-deployment-by-using-vcenter-server]]
 === vCenter Server を使用して導入を確認します
 
 vSphere Client には、 3 台の仮想マシンを含むランチ元管理クラスタが表示されます。
@@ -141,6 +146,7 @@ IMPORTANT: 導入が完了したら、 Rancher サーバ仮想マシンクラス
 
 
 
+[[whats-next]]
 == 次の手順
 
 導入後、次の作業を実行できます。

@@ -28,6 +28,7 @@ TIP: ユーザクラスタを保持しなければならない場合がありま
 
 
 
+[[remove-rancher-on-netapp-hci-using-netapp-hybrid-cloud-control]]
 == ネットアップのハイブリッドクラウドコントロールを使用して NetApp HCI のランチャを削除
 
 NetApp Hybrid Cloud Control Web UI を使用して、ランチサーバをホストするために導入時に設定した 3 つの仮想マシンを削除できます。
@@ -56,6 +57,7 @@ CAUTION: 削除 * をクリックすると、 NetApp HCI 管理クラスタの�
 
 
 
+[[remove-rancher-on-netapp-hci-using-the-rest-api]]
 == REST API を使用して NetApp HCI のランチツールを削除します
 
 NetApp Hybrid Cloud Control REST API を使用して、ランチサーバをホストするために導入時に設定した 3 つの仮想マシンを削除できます。
@@ -89,6 +91,7 @@ https://[IP address]/k8sdeployer/api/
 
 
 
+[[find-more-information]]
 == 詳細はこちら
 
 * https://kb.netapp.com/Advice_and_Troubleshooting/Data_Storage_Software/Management_services_for_Element_Software_and_NetApp_HCI/NetApp_HCI_and_Rancher_troubleshooting["Rancher 展開のトラブルシューティング"^]

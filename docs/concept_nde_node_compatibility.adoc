@@ -18,6 +18,7 @@ keywords: netapp, hci, deployment, compatibility, nodes
 
 
 
+[[storage-node-compatibility]]
 == ストレージノードの互換性
 
 NetApp HCI では、 SED （自己暗号化ドライブ）および FIPS 140-2 ドライブ暗号化機能を備えたストレージノードとドライブがサポートされます。NetApp HCI を導入または拡張する際 NetApp HCI には異なる暗号化レベルのノードを混在させることができますが、サポートされるのはより基本的な形式の暗号化のみです。たとえば、 FIPS 暗号化対応のストレージノードと SED 暗号化のみをサポートするノードが混在している場合、 SED 暗号化はサポートされますが、 FIPS ドライブ暗号化はサポートされません。
@@ -37,6 +38,7 @@ NOTE: 2 ノードのストレージクラスタ環境では、ストレージノ
 
 
 
+[[compute-node-compatibility]]
 == コンピューティングノードの互換性
 
 コンピューティングノードをインベントリとして選択できるためには、ノードが次の要件を満たしている必要があります。
@@ -50,6 +52,7 @@ NOTE: 2 ノードのストレージクラスタ環境では、ストレージノ
 
 
 
+[[find-more-information]]
 == 詳細については、こちらをご覧ください
 
 * https://docs.netapp.com/us-en/vcp/index.html["vCenter Server 向け NetApp Element プラグイン"^]

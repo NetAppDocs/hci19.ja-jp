@@ -50,6 +50,7 @@ NOTE: この時点では、クラスタからノードを削除しないでく�
 
 
 
+[[find-more-information]]
 == 詳細については、こちらをご覧ください
 
 * http://docs.netapp.com/hci/index.jsp["NetApp HCI ドキュメントセンター"^]

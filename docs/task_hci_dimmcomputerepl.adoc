@@ -17,7 +17,7 @@ keywords: netapp, hci, dimm, compute nodes
 ノード全体を交換する代わりに、 NetApp HCI コンピューティングノード内の障害のある Dual Inline Memory Module （ DIMM ）を交換することができます。
 
 .必要なもの
-* この手順を開始する前に、ネットアップサポートに連絡して交換用パーツを入手しておく必要があります。交換作業にはサポートが必要です。まだ行っていない場合は、にお問い合わせください https://www.netapp.com/us/contact-us/support.aspx["サポート"^]。
+* この手順を開始する前に、NetApp サポートに連絡し、交換部品を受け取っておく必要があります。交換品の取り付けの際には、サポート担当者が対応いたします。まだ連絡していない場合は、お問い合わせください https://www.netapp.com/company/contact-us/support/["サポート"^]。
 * ノードの電源をオフにするか再投入して NetApp セーフモードでノードをブートしてターミナルユーザインターフェイス（ TUI ）にアクセスする必要があるため、システムを停止することを検討しておきます。
 
 
@@ -45,6 +45,7 @@ NOTE: H610C および H615C では、ノードとシャーシが別々のコン�
 
 
 
+[[prepare-to-replace-the-dimm]]
 == DIMM を交換する準備をします
 
 DIMM に問題が発生すると、 VMware ESXi は「メモリ構成エラー」、「メモリ訂正不能 ECC 」、「重大への移行」、「メモリ重大な過熱」などのアラートを表示します。しばらくするとアラートが消えた場合でも、ハードウェアの問題が解決しないことがあります。障害が発生した DIMM の診断と対処を行う必要があります。障害のある DIMM に関する情報は vCenter Server から入手できます。vCenter Server で確認できる情報よりも多くの情報が必要な場合は、 TUI でハードウェアチェックを実行する必要があります。
@@ -145,6 +146,7 @@ Size: 32 GB`
 
 
 
+[[replace-the-dimm-from-the-chassis]]
 == シャーシから DIMM を交換します
 
 シャーシ内の障害のある DIMM を物理的に取り外して交換する前に、すべての作業が完了していることを確認します link:task_hci_dimmcomputerepl.html#prepare-to-replace-the-dimm["準備手順"]。
@@ -276,8 +278,8 @@ TIP: DIMM の交換手順が完了したら、 vCenter の Hardware Status タ�
 
 
 
+[[find-more-information]]
 == 詳細については、こちらをご覧ください
 
-* https://www.netapp.com/us/documentation/hci.aspx["NetApp HCI のリソースページ"^]
 * http://docs.netapp.com/sfe-122/index.jsp["SolidFire と Element ソフトウェアドキュメントセンター"^]
 

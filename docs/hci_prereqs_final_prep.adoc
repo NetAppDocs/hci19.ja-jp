@@ -18,6 +18,7 @@ NetApp HCI ハードウェアをラックに設置してケーブル接続し、
 
 
 
+[[prerequisites]]
 == 前提条件
 
 環境が NetApp HCI をサポートできる状態になっていることを確認し、潜在的な問題を解決したら、導入前にいくつかの最終的なタスクを完了する必要があります。
@@ -29,6 +30,7 @@ NetApp HCI ハードウェアをラックに設置してケーブル接続し、
 
 
 
+[[manually-assign-the-ipmi-port-ip-address]]
 == IPMI ポートの IP アドレスを手動で割り当てます
 
 各 NetApp HCI ノードの IPMI ポートでは、動的ホスト構成プロトコル（ DHCP ）がデフォルトで有効になっています。IPMI ネットワークで DHCP を使用しない場合は、 IPMI ポートに静的 IPv4 アドレスを手動で割り当てることができます。
@@ -59,6 +61,7 @@ BIOS 内を移動するには、矢印キーを使用します。タブまたは
 
 
 
+[[change-the-default-ipmi-password-for-h410c-and-h410s-nodes]]
 == H410C ノードと H410S ノードのデフォルトの IPMI パスワードを変更します
 
 IPMI ネットワークポートを設定したらすぐに、各コンピューティングノードとストレージノードで IPMI 管理者アカウントのデフォルトパスワードを変更する必要があります。
@@ -80,6 +83,7 @@ IPMI ネットワークポートを設定したらすぐに、各コンピュー
 
 
 
+[[change-the-default-ipmi-password-for-h610c-h615c-and-h610s-nodes]]
 == H610C 、 H615C 、および H610S ノードのデフォルトの IPMI パスワードを変更します
 
 IPMI ネットワークポートを設定したらすぐに、各コンピューティングノードとストレージノードで IPMI 管理者アカウントのデフォルトパスワードを変更する必要があります。
@@ -102,6 +106,7 @@ IPMI ネットワークポートを設定したらすぐに、各コンピュー
 
 
 
+[[find-more-information]]
 == 詳細については、こちらをご覧ください
 
 * https://docs.netapp.com/us-en/solidfire-active-iq/index.html["NetApp SolidFire Active IQ のドキュメント"^]

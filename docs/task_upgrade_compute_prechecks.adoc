@@ -49,6 +49,7 @@ https://<ManagementNodeIP>
 
 
 
+[[use-netapp-hybrid-cloud-control-to-run-compute-node-health-checks-prior-to-upgrading-firmware]]
 == NetApp Hybrid Cloud Control を使用して、コンピューティングノードの健全性を実行します ファームウェアをアップグレードする前にチェックします
 
 NetApp Hybrid Cloud Controlを使用して、コンピューティングノードでファームウェアをアップグレードする準備ができているかどうかを確認できます。
@@ -81,6 +82,7 @@ https://<ManagementNodeIP>/hcc
 
 
 
+[[use-api-to-run-compute-node-health-checks-prior-to-upgrading-firmware]]
 == 前にコンピューティングノードの健全性チェックを実行するには、 API を使用します ファームウェアをアップグレード中です
 
 REST API を使用して、クラスタ内のコンピューティングノードをアップグレードする準備ができているかどうかを確認できます。健全性チェックでは、 ESXi ホストの問題や vSphere のその他の問題など、アップグレード時の問題がないことを確認します。環境内の各コンピューティングクラスタについて、コンピューティングノードの健全性チェックを実行する必要があります。
@@ -214,6 +216,7 @@ https://<ManagementNodeIP>/vcenter/1/
 
 
 
+[[compute-node-health-checks-made-by-the-service]]
 == コンピューティングノードの健全性チェックはサービスによる機能で
 
 NetApp Hybrid Cloud ControlまたはAPIのどちらのメソッドで実行したかに関係なく、ノードごとに次のチェックを実行します。環境によっては、一部のチェックが省略されることがあります。検出された問題を解決したあとに、健全性チェックを再実行する必要があります。
@@ -283,6 +286,7 @@ NetApp Hybrid Cloud ControlまたはAPIのどちらのメソッドで実行し�
 |===
 
 
+[[find-more-information]]
 == 詳細については、こちらをご覧ください
 
 https://docs.netapp.com/us-en/vcp/index.html["vCenter Server 向け NetApp Element プラグイン"^]

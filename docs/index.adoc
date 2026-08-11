@@ -21,6 +21,7 @@ NetApp Element Plug-in for vCenter Server を使用して、システムのア�
 
 
 
+[[discover-whats-new]]
 == 最新情報をご確認ください
 
 * link:rn_whatsnew.html["NetApp HCI の新機能"]
@@ -31,6 +32,7 @@ NetApp Element Plug-in for vCenter Server を使用して、システムのア�
 
 
 
+[[get-started-with-netapp-hci]]
 == NetApp HCI の利用を開始しましょう
 
 * link:task_hci_getstarted.html["NetApp HCI のインストールと導入の概要"]
@@ -41,5 +43,4 @@ NetApp Element Plug-in for vCenter Server を使用して、システムのア�
 == 詳細については、こちらをご覧ください
 
 * https://docs.netapp.com/us-en/vcp/index.html["vCenter Server 向け NetApp Element プラグイン"^]
-* https://www.netapp.com/us/documentation/hci.aspx["NetApp HCI のリソースページ"^]
 

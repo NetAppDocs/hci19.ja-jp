@@ -18,6 +18,7 @@ NetApp HCI を使用する場合、使用する内容によっては追加のラ
 
 
 
+[[netapp-hci-and-vmware-vsphere-licensing]]
 == NetApp HCI と VMware vSphere のライセンス
 
 VMware vSphere のライセンスは、構成によって異なります。
@@ -37,6 +38,7 @@ VMware vSphere のライセンスは、構成によって異なります。
 |===
 
 
+[[netapp-hci-and-ontap-select-licensing]]
 == NetApp HCI と ONTAP Select のライセンス
 
 購入した NetApp HCI システムと組み合わせて使用する ONTAP Select のバージョンを提供している場合は、次の制限事項が追加で適用されます。
@@ -48,6 +50,7 @@ VMware vSphere のライセンスは、構成によって異なります。
 
 
 
+[[find-more-information]]
 == 詳細については、こちらをご覧ください
 
 * https://docs.netapp.com/us-en/vcp/index.html["vCenter Server 向け NetApp Element プラグイン"^]

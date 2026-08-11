@@ -52,6 +52,7 @@ https://<ManagementNodeIP>
 
 
 
+[[update-management-services-using-hybrid-cloud-control]]
 == Hybrid Cloud Control を使用して管理サービスを更新します
 
 NetApp Hybrid Cloud Control を使用してネットアップの管理サービスを更新できます。
@@ -96,6 +97,7 @@ https://<ManagementNodeIP>
 
 
 
+[[update-management-services-using-the-management-node-api]]
 == 管理ノード API を使用して管理サービスを更新する
 
 管理サービスの更新は、 NetApp Hybrid Cloud Control から実行することを推奨します。ただし、 REST API を使用して、管理サービスのサービスバンドルの更新を管理ノードに手動でアップロード、展開、および導入することができます。管理ノード用の REST API UI から各コマンドを実行できます。
@@ -146,6 +148,7 @@ NOTE: 各サービスバンドルバージョンで使用可能なサービス�
 
 
 
+[[find-more-information]]
 == 詳細については、こちらをご覧ください
 
 https://docs.netapp.com/us-en/vcp/index.html["vCenter Server 向け NetApp Element プラグイン"^]

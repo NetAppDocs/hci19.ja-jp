@@ -56,11 +56,12 @@ H410C コンピューティングノードを交換する場合は、次の点�
 
 * link:task_hci_removewn.html["コンピューティングリソースを解放するには、監視ノードを削除してください"]
 * <<交換用ノードを受け取った場合は、パスワードを変更します BMC の標準以外のパスワード>>
-* <<ノードの BMC ファームウェアをアップグレードします>>
+* link:task_hcc_upgrade_compute_node_firmware.html["ノードの BMC ファームウェアをアップグレードします"]
 
 
 
 
+[[step-1-prepare-to-replace-the-compute-node]]
 == 手順1：コンピューティングノードを交換する準備
 
 ノードでホストされている仮想マシン（ VM ）を使用可能なホストに移行して、障害ノードをクラスタから削除する必要があります。シリアル番号やネットワークの情報など、障害が発生したノードの詳細を確認する必要があります。
@@ -101,6 +102,7 @@ NOTE: 移行手順については、 VMware のドキュメントを参照して
 
 
 
+[[step-2-replace-the-compute-node-in-the-chassis]]
 == 手順2：シャーシ内のコンピューティングノードを交換する
 
 クラスタから障害ノードを削除したら、ノードをシャーシから取り外し、交換用ノードを設置できます。
@@ -148,6 +150,7 @@ TIP: 交換用ノードがシャーシ内の他のノードと同じ方法でケ
 
 
 
+[[step-3-remove-the-compute-node-asset-in-netapp-hci-1-7-and-later]]
 == 手順3：NetApp HCI 1.7以降でコンピューティングノードアセットを削除する
 
 NetApp HCI 1.7 以降では、ノードを物理的に交換したあと、管理ノード API を使用してコンピューティングノードのアセットを削除します。REST API を使用するには、ストレージクラスタで NetApp Element ソフトウェア 11.5 以降が実行されていて、バージョン 11.5 以降が実行されている必要があります。
@@ -177,12 +180,14 @@ NOTE: 承認しようとしたあとに「 Auth Error TypeError: Failed to fetch
 
 
 
+[[step-4-add-the-compute-node-to-the-cluster]]
 == 手順4：クラスタにコンピューティングノードを追加する
 
 コンピューティングノードをクラスタに再度追加する必要があります。手順は、実行している NetApp HCI のバージョンによって異なります。
 
 
 
+[[netapp-hci-1-6p1-and-later]]
 === NetApp HCI 1.6P1 以降
 
 NetApp Hybrid Cloud Control は、 NetApp HCI 環境でバージョン 1.6P1 以降が実行されている場合にのみ使用できます。
@@ -272,6 +277,7 @@ TIP: 一部のコンピューティングノードは、使用している vCent
 
 
 
+[[netapp-hci-1-4-p2-1-4-and-1-3]]
 === NetApp HCI 1.4 P2 、 1.4 、および 1.3
 
 NetApp HCI のインストールでバージョン 1.4P2 、 1.4 、または 1.3 を実行している場合は、ネットアップ導入エンジンを使用してクラスタにノードを追加できます。
@@ -349,6 +355,7 @@ TIP: 一部のコンピューティングノードは、使用している vCent
 
 
 
+[[netapp-hci-1-2-1-1-and-1-0]]
 === NetApp HCI 1.2 、 1.1 、および 1.0
 
 ノードを物理的に交換したら、そのノードを VMware ESXi クラスタに再度追加して、使用可能なすべての機能を使用できるようにいくつかのネットワーク構成を実行する必要があります。
@@ -780,6 +787,7 @@ image::rescan.gif[に、ストレージアダプタの再スキャンアイコ�
 
 
 
+[[step-5-redeploy-witness-nodes-for-two-and-three-node-storage-clusters]]
 == 手順5：2ノードおよび3ノードのストレージクラスタの監視ノードを再導入する
 
 障害が発生したコンピューティングノードを物理的に交換したあと、障害が発生したコンピューティングノードが監視ノードをホストしていた場合は、 NetApp HCI 監視ノード VM を再導入する必要があります。ここで説明する手順は、 2 ノードまたは 3 ノードのストレージクラスタを使用する NetApp HCI 環境に含まれるコンピューティングノードにのみ該当します。
@@ -899,6 +907,7 @@ NOTE: クラスタに監視ノードを追加する前に MTU が設定されて
 
 
 
+[[change-the-password-if-you-received-a-replacement-node-with-a-non-standard-bmc-password]]
 == 交換用ノードを受け取った場合は、パスワードを変更します BMC の標準以外のパスワード
 
 一部の交換用ノードには、 Baseboard Management Controller （ BMC ；ベースボード管理コントローラ） UI 用の標準以外のパスワードが搭載されたものがあります。BMC の標準以外のパスワードを使用して交換用ノードを受け取った場合は、パスワードを default Admin に変更する必要があります。
@@ -921,6 +930,7 @@ image::bmc pw sticker.png[は、 IPMI ポートの下にステッカーが貼ら
 
 
 
+[[upgrade-the-bmc-firmware-on-your-node]]
 == ノードの BMC ファームウェアをアップグレードします
 
 コンピューティングノードを交換したあとで、ファームウェアのバージョンのアップグレードが必要になる場合があります。最新のファームウェアファイルはドロップダウンからダウンロードできます のメニュー link:https://mysupport.netapp.com/site/products/all/details/netapp-hci/downloads-tab["ネットアップサポートサイト（ログインが必要）"^]。
@@ -947,8 +957,8 @@ image::h410c-bmc3.png[は、 BMC UI のファームウェア更新画面を示�
 
 
 
+[[find-more-information]]
 == 詳細については、こちらをご覧ください
 
-* https://www.netapp.com/us/documentation/hci.aspx["NetApp HCI のリソースページ"^]
 * http://docs.netapp.com/sfe-122/index.jsp["SolidFire と Element ソフトウェアドキュメントセンター"^]
 

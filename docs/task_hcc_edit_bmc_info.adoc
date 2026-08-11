@@ -31,6 +31,7 @@ BMC クレデンシャルを変更するには、次のいずれかのオプシ�
 
 
 
+[[use-netapp-hybrid-cloud-control-to-edit-bmc-information]]
 == NetApp Hybrid Cloud Control を使用して BMC の情報を編集します
 
 保存されている BMC クレデンシャルは、 NetApp Hybrid Cloud Control Dashboard を使用して編集できます。
@@ -63,6 +64,7 @@ NOTE: BMC の情報を更新すると、インベントリが更新され、管�
 
 
 
+[[use-the-rest-api-to-edit-bmc-information]]
 == BMC の情報を編集するには、 REST API を使用します
 
 保存されている BMC クレデンシャルは、 NetApp Hybrid Cloud Control REST API を使用して編集できます。
@@ -179,6 +181,7 @@ https://<ManagementNodeIP>/hardware/2/
 
 
 
+[[find-more-information]]
 == 詳細については、こちらをご覧ください
 
 * https://kb.netapp.com/Advice_and_Troubleshooting/Hybrid_Cloud_Infrastructure/NetApp_HCI/Known_issues_and_workarounds_for_Compute_Node_upgrades["コンピューティングノードのアップグレードに関する既知の問題と対処方法"^]

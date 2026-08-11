@@ -18,6 +18,7 @@ keywords: netapp, hci, on premise, administrator, user account, cloud services, 
 
 
 
+[[user-account-management]]
 == ユーザアカウント管理
 
 ユーザアカウントは、 NetApp Element ソフトウェアベースのネットワーク上のストレージリソースへのアクセスを制御するために使用します。ボリュームを作成するには、ユーザアカウントが少なくとも 1 つ必要です。
@@ -40,6 +41,7 @@ NetApp Hybrid Cloud Control を使用して、次のタイプのアカウント�
 
 
 
+[[storage-cluster-administrator-accounts]]
 == ストレージクラスタ管理者アカウント
 
 NetApp Element ソフトウェアを実行するストレージクラスタには、次の 2 種類の管理者アカウントがあります。
@@ -55,6 +57,7 @@ NOTE: ノード UI からクラスタ内のアクティブノードにアクセ�
 
 
 
+[[authoritative-user-accounts]]
 == 権限のあるユーザアカウント
 
 権限のあるユーザアカウントは、ノードおよびクラスタの NetApp Hybrid Cloud Control インスタンスに関連付けられているどのストレージアセットに対しても認証できます。このアカウントを使用すると、すべてのクラスタのボリューム、アカウント、アクセスグループなどを管理できます。
@@ -73,6 +76,7 @@ NetApp Hybrid Cloud Control の多くの機能は複数のストレージクラ�
 
 
 
+[[volume-accounts]]
 == ボリュームアカウント
 
 ボリューム固有のアカウントは、アカウントを作成したストレージクラスタにのみ固有です。これらのアカウントには、ネットワーク全体で特定のボリュームに対する権限を設定できますが、設定したボリューム以外に影響はありません。
@@ -81,6 +85,7 @@ NetApp Hybrid Cloud Control の多くの機能は複数のストレージクラ�
 
 
 
+[[find-more-information]]
 == 詳細については、こちらをご覧ください
 
 * link:task_hcc_manage_accounts.html["ユーザアカウントを管理する"]

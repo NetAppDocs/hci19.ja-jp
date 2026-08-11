@@ -56,6 +56,7 @@ keywords: netapp, element, management node, mnode, disaster recovery, redeploy, 
 
 
 
+[[download-iso-or-ova-and-deploy-the-vm]]
 == ISO または OVA をダウンロードし、 VM を導入します
 
 . から、インストール環境に対応した OVA または ISO をダウンロードします https://mysupport.netapp.com/site/products/all/details/netapp-hci/downloads-tab["NetApp HCI"^] ネットアップサポートサイトのページ：
@@ -97,6 +98,7 @@ NOTE: イメージを使用して管理ノードをインストールすると�
 
 
 
+[[configure-the-network]]
 == ネットワークを設定します
 
 . ターミナルユーザインターフェイス（ TUI ）を使用して、管理ノードの管理ユーザを作成します。
@@ -113,6 +115,7 @@ NOTE: ストレージトラフィックを分離するために NIC を追加す
 
 
 
+[[configure-time-sync]]
 == 時刻同期を設定します
 
 . NTP を使用して管理ノードとストレージクラスタの間で時刻が同期されていることを確認します。
@@ -186,10 +189,11 @@ NOTE: 今後 VM を変更する場合は、このオプションを有効にし�
 
 
 
-NOTE: の実行時は NTP に影響するため、時刻の同期設定の完了後は NTP を編集しないでください <<step_6_recover_mnode_redeploy,再導入コマンド>> 管理ノード。
+NOTE: 時刻同期設定が完了した後は、NTP を編集しないでください。管理ノードで <<step-6,再導入コマンド>> を実行すると、NTP に影響するためです。
 
 
 
+[[configure-the-management-node]]
 == 管理ノードを設定
 
 . 管理サービスバンドルの内容を保存する一時的なデスティネーションディレクトリを作成します。
@@ -226,7 +230,7 @@ echo '{"trident": true, "mvip": "[mvip IP address]", "account_name": "[persisten
 
 
 
-. クラスタでホストされている永続ボリュームに接続し、以前の管理ノードの設定データを使用してサービスを開始するには、管理ノードの再導入コマンドを設定して実行します。
+. [[ステップ6]] クラスター上でホストされている永続ボリュームに接続し、以前の管理ノード構成データを使用してサービスを開始するように、管理ノード再デプロイコマンドを設定して実行します：
 +
 
 NOTE: セキュアプロンプトにパスワードを入力するように求められます。クラスタがプロキシサーバの背後にある場合、パブリックネットワークに接続できるようにプロキシを設定する必要があります。
@@ -253,6 +257,7 @@ IMPORTANT: 提供する SSH 機能 link:task_mnode_enable_remote_support_connect
 
 
 
+[[find-more-information]]
 == 詳細はこちら
 
 * link:concept_hci_volumes.html#persistent-volumes["永続ボリューム"]

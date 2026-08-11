@@ -21,12 +21,14 @@ IMPORTANT: Element ソフトウェアバージョン 12.0 を実行している 
 
 
 
+[[whats-new]]
 == 新機能
 
 ストレージファームウェアバンドルバージョン 2.27 には、セキュリティ脆弱性の修正など、さまざまなバグ修正と新機能が含まれています。の手順に従って、ストレージファームウェアをアップグレードできます link:task_hcc_upgrade_storage_firmware.html["ストレージファームウェアをアップグレードします"]。
 
 
 
+[[updated-firmware-components]]
 === ファームウェアコンポーネントが更新されました
 
 このファームウェアパッケージには、次のファームウェアバージョンが含まれています。これらのファームウェアバージョンは、太字で更新されています。
@@ -102,6 +104,7 @@ IMPORTANT: Element ソフトウェアバージョン 12.0 を実行している 
 |===
 
 
+[[new-bmc-features]]
 == BMC の新機能
 
 このリリースで追加された BMC の新機能と変更点を次に示します。
@@ -116,6 +119,7 @@ IMPORTANT: Element ソフトウェアバージョン 12.0 を実行している 
 
 
 
+[[resolved-issues]]
 == 解決済みの問題
 
 このリリースで解決された問題は次のとおりです。
@@ -146,12 +150,14 @@ IMPORTANT: Element ソフトウェアバージョン 12.0 を実行している 
 |===
 
 
+[[resolved-security-vulnerabilities]]
 == セキュリティの脆弱性を解決
 
 このリリースで解決されたセキュリティの脆弱性は次のとおりです。
 
 
 
+[[h410s-bmc-6-84-00]]
 === H410S BMC 6.84.00
 
 * CVE-2016-16649
@@ -161,6 +167,7 @@ IMPORTANT: Element ソフトウェアバージョン 12.0 を実行している 
 
 
 
+[[h610s-bmc-3-84-07]]
 === H610S BMC 3.84.07
 
 * CVE-2018-1552
@@ -180,12 +187,14 @@ IMPORTANT: Element ソフトウェアバージョン 12.0 を実行している 
 
 
 
+[[known-issues]]
 == 既知の問題
 
 このリリースで確認されている既知の問題はありません。
 
 
 
+[[find-more-information]]
 == 詳細については、こちらをご覧ください
 
 https://docs.netapp.com/us-en/vcp/index.html["vCenter Server 向け NetApp Element プラグイン"^]

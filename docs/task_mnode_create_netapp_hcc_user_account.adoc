@@ -33,12 +33,14 @@ vCenterでNetApp HCCロールを作成して、インストール後にvCenter�
 
 
 
+[[create-a-new-netapp-hcc-role]]
 == 新しい NetApp HCC ロールを作成します
 
 vCenter で新しいユーザアカウントをセットアップし、 NetApp HCC ロールを作成してユーザ権限を割り当てます。
 
 
 
+[[set-up-a-new-user-account-in-vcenter]]
 === vCenter で新しいユーザアカウントを設定します
 
 vCenter で新しいユーザアカウントを設定するには、次の手順を実行します。
@@ -54,6 +56,7 @@ vCenter で新しいユーザアカウントを設定するには、次の手順
 
 
 
+[[create-a-new-netapp-hcc-role-in-vcenter]]
 === vCenter で新しい NetApp HCC ロールを作成します
 
 vCenter で新しい NetApp HCC ロールを作成するには、次の手順を実行します。
@@ -69,6 +72,7 @@ vCenter で新しい NetApp HCC ロールを作成するには、次の手順を
 
 
 
+[[assign-user-permissions-to-vcenter]]
 === vCenter にユーザ権限を割り当てます
 
 次の手順を実行して、 vCenter の新しい NetApp HCC ロールにユーザ権限を割り当てます。
@@ -111,6 +115,7 @@ image::mnode_new_HCC_role_vcenter.PNG[は、権限の追加ウィンドウを示
 
 
 
+[[assign-user-permissions-to-the-datacenter]]
 === データセンターにユーザ権限を割り当てます
 
 vCenter のデータセンターにユーザ権限を割り当てるには、次の手順を実行します。
@@ -136,6 +141,7 @@ IMPORTANT: Do * not * select * Propagate to children * を選択します。
 
 
 
+[[assign-user-permissions-to-netapp-hci-datastores]]
 === NetApp HCI データストアにユーザ権限を割り当てます
 
 vCenter で NetApp HCI データストアにユーザ権限を割り当てるには、次の手順を実行します。
@@ -161,6 +167,7 @@ vCenter で NetApp HCI データストアにユーザ権限を割り当てるに
 
 
 
+[[assign-user-permissions-to-a-netapp-host-cluster]]
 === ネットアップホストクラスタにユーザ権限を割り当てます
 
 vCenter でネットアップホストクラスタにユーザ権限を割り当てるには、次の手順を実行します。
@@ -183,12 +190,14 @@ vCenter でネットアップホストクラスタにユーザ権限を割り当
 
 
 
+[[netapp-esxi-host-configurations]]
 == NetApp ESXi ホスト構成
 
 ネットアップ ESXi ホスト構成の場合は、 NDE で作成されたユーザアカウントを新しいネットアップ HCC ロールに更新する必要があります。
 
 
 
+[[netapp-esxi-host-does-not-exist-in-a-vcenter-host-cluster]]
 === NetApp ESXi ホストが vCenter ホストクラスタに存在しません
 
 NetApp ESXi ホストが vCenter ホストクラスタ内にない場合は、次の手順を使用して vCenter でネットアップ HCC ロールとユーザ権限を割り当てることができます。
@@ -212,6 +221,7 @@ NetApp ESXi ホストが vCenter ホストクラスタ内にない場合は、�
 
 
 
+[[netapp-esxi-host-exists-in-a-vcenter-host-cluster]]
 === NetApp ESXi ホストが vCenter ホストクラスタに存在する
 
 ネットアップ ESXi ホストが他のベンダーの ESXi ホストを含む vCenter ホストクラスタ内にある場合は、次の手順を使用してネットアップの HCC ロールとユーザ権限を vCenter で割り当てることができます。
@@ -251,6 +261,7 @@ IMPORTANT: Do * not * select * Propagate to children * を選択します。
 
 
 
+[[controller-asset-already-exists-on-the-management-node]]
 == 管理ノードにはすでにコントローラアセットが存在します
 
 コントローラアセットが管理ノードにすでに存在する場合は、次の手順を実行して、「 PUT /assets/{asset_id }/controllers /{controller_id } 」を使用してコントローラを設定します。
@@ -271,12 +282,14 @@ https://<ManagementNodeIP>/mnode`
 
 
 
+[[add-an-asset-or-a-compute-node-to-the-management-node]]
 == 管理ノードにアセットまたはコンピューティングノードを追加します
 
 インストール後に新しいアセットまたはコンピューティングノード（および BMC アセット）を手動で追加する必要がある場合は、で作成した新しい HCC ユーザアカウントを使用します <<vCenter で新しいユーザアカウントを設定します>>。詳細については、を参照してください link:task_mnode_add_assets.html["管理ノードにコンピューティングアセットとコントローラアセットを追加します"]。
 
 
 
+[[find-more-information]]
 == 詳細については、こちらをご覧ください
 
 https://docs.netapp.com/us-en/vcp/index.html["vCenter Server 向け NetApp Element プラグイン"^]

@@ -31,6 +31,7 @@ Hybrid Cloud Control Dashboard には、管理対象のコンピューティン�
 
 
 
+[[access-the-netapp-hcc-dashboard]]
 == NetApp HCC ダッシュボードにアクセスします
 
 . Webブラウザで管理ノードのIPアドレスを開きます。例：
@@ -51,6 +52,7 @@ TIP: インストール環境によっては、これらのペインの一部ま
 
 
 
+[[monitor-storage-resources]]
 == ストレージリソースを監視する
 
 「 * ストレージ * 」パネルを使用して、ストレージ環境全体を確認します。ストレージクラスタ、ストレージノード、およびボリュームの総数を監視できます。
@@ -67,6 +69,7 @@ TIP: 最新のストレージクラスタデータを表示するには、スト
 
 
 
+[[monitor-compute-resources]]
 == コンピューティングリソースを監視
 
 コンピューティング環境の種類を「 * Compute * 」パネルで確認してください。コンピューティングクラスタの数とコンピューティングノードの総数を監視できます。
@@ -81,6 +84,7 @@ NOTE: NetApp Hybrid Cloud Control でコンピューティングノードを管�
 
 
 
+[[monitor-storage-capacity]]
 == ストレージ容量を監視
 
 環境のストレージ容量を監視することが重要です。Storage Capacity ペインを使用すると、圧縮、重複排除、シンプロビジョニングの各機能を有効または無効にして、ストレージ容量の効率化による効果を確認できます。
@@ -125,6 +129,7 @@ NOTE: 総削減率は（ maxUsedSpace * efficiency factor ） /2 で、 efficien
 
 
 
+[[monitor-storage-performance]]
 == ストレージパフォーマンスを監視
 
 Storage Performance ペインを使用すると、クラスタから取得できる IOPS またはスループットを確認できます。このとき、リソースの有用なパフォーマンスを超過することはありません。ストレージパフォーマンスとは、レイテンシの問題が発生する前に利用率を最大限に高めるポイントです。
@@ -160,6 +165,7 @@ https://docs.netapp.com/us-en/vcp/vcp_task_reports_volume_performance.html["NetA
 
 
 
+[[monitor-compute-utilization]]
 == コンピューティング利用率を監視
 
 ストレージリソースの IOPS とスループットだけでなく、コンピューティングアセットの CPU とメモリの使用量も確認することができます。ノードで提供可能な合計 IOPS は、 CPU の数、 CPU の速度、 RAM の容量など、ノードの物理仕様に基づきます。
@@ -183,6 +189,7 @@ image::hcc_dashboard_compute_util_cpu.png[[Compute Utilization] ペイン]
 
 
 
+[[find-more-information]]
 == 詳細については、こちらをご覧ください
 
 * https://docs.netapp.com/us-en/vcp/index.html["vCenter Server 向け NetApp Element プラグイン"^]

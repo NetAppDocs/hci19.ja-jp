@@ -21,6 +21,7 @@ NOTE: SolidFire Active IQ には、最適な設定と QoS 設定に関するア�
 
 
 
+[[quality-of-service-parameters]]
 == QoS パラメータ
 
 IOPS パラメータは、次のように定義します。
@@ -56,6 +57,7 @@ Burst IOPS には 2 つの制限があります。
 
 
 
+[[qos-value-limits]]
 == QoS 値の制限
 
 QoS の最小値と最大値を次に示します。
@@ -77,6 +79,7 @@ QoS の最小値と最大値を次に示します。
 
 
 
+[[qos-performance]]
 == QoS パフォーマンス
 
 QoS パフォーマンス曲線は、ブロックサイズと IOPS の割合の関係を示しています。
@@ -91,6 +94,7 @@ image::hci_performance_curve.png[QoS パフォーマンス曲線]
 
 
 
+[[qos-policies]]
 == QoS ポリシー
 
 標準的な QoS 設定を QoS ポリシーとして作成および保存して、複数のボリュームに適用することができます。
@@ -106,5 +110,5 @@ NOTE: QoS ポリシーを使用するには、 Element 10.0 以降のクラス�
 == 詳細については、こちらをご覧ください
 
 * https://docs.netapp.com/us-en/vcp/index.html["vCenter Server 向け NetApp Element プラグイン"^]
-* https://www.netapp.com/us/documentation/hci.aspx["NetApp HCI のリソースページ"^]
+* https://www.netapp.com/us/documentation/hci.aspx["ソースページ"^]
 

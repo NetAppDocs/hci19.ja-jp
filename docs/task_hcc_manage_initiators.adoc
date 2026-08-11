@@ -25,6 +25,7 @@ keywords: netapp, hci, initiator, storage, element, access group
 
 
 
+[[create-an-initiator]]
 == イニシエータを作成します
 
 iSCSI イニシエータまたは Fibre Channel イニシエータを作成し、オプションでエイリアスを割り当てることができます。
@@ -76,6 +77,7 @@ Fibre Channel イニシエータ WWPN の有効な形式は、「 :AA:BB:CC:dd:1
 
 
 
+[[add-initiators-to-a-volume-access-group]]
 == ボリュームアクセスグループにイニシエータを追加します
 
 ボリュームアクセスグループにイニシエータを追加できます。イニシエータをボリュームアクセスグループに追加すると、そのイニシエータはそのボリュームアクセスグループ内のすべてのボリュームにアクセスできるようになります。
@@ -93,6 +95,7 @@ Fibre Channel イニシエータ WWPN の有効な形式は、「 :AA:BB:CC:dd:1
 
 
 
+[[change-an-initiator-alias]]
 == イニシエータエイリアスを変更します
 
 既存のイニシエータのエイリアスを変更するか、既存のエイリアスがない場合はエイリアスを追加できます。
@@ -110,6 +113,7 @@ Fibre Channel イニシエータ WWPN の有効な形式は、「 :AA:BB:CC:dd:1
 
 
 
+[[delete-initiators]]
 == イニシエータを削除する
 
 1 つ以上のイニシエータを削除できます。イニシエータを削除すると、関連付けられているすべてのボリュームアクセスグループから削除されます。イニシエータを使用した接続は、接続をリセットするまでは有効なままです。
@@ -130,6 +134,7 @@ Fibre Channel イニシエータ WWPN の有効な形式は、「 :AA:BB:CC:dd:1
 
 
 
+[[find-more-information]]
 == 詳細については、こちらをご覧ください
 
 * link:concept_hci_initiators.html["イニシエータについて学習する"]

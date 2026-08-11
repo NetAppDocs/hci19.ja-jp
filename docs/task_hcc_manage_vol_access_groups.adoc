@@ -19,6 +19,7 @@ NetApp Hybrid Cloud Control を使用して、新しいボリュームアクセ�
 
 
 
+[[add-a-volume-access-group]]
 == ボリュームアクセスグループを追加
 
 NetApp Hybrid Cloud Control を使用して、ストレージクラスタにボリュームアクセスグループを追加できます。
@@ -40,6 +41,7 @@ NetApp Hybrid Cloud Control を使用して、ストレージクラスタにボ�
 
 
 
+[[edit-a-volume-access-group]]
 == ボリュームアクセスグループを編集します
 
 NetApp Hybrid Cloud Control を使用して、既存のボリュームアクセスグループのプロパティを編集できます。アクセスグループの名前、関連付けられているイニシエータ、または関連付けられているボリュームを変更できます。
@@ -58,6 +60,7 @@ NetApp Hybrid Cloud Control を使用して、既存のボリュームアクセ�
 
 
 
+[[delete-a-volume-access-group]]
 == ボリュームアクセスグループを削除する
 
 NetApp Hybrid Cloud Control を使用してボリュームアクセスグループを削除し、同時にこのアクセスグループに関連付けられているイニシエータをシステムから削除することができます。
@@ -75,6 +78,7 @@ NetApp Hybrid Cloud Control を使用してボリュームアクセスグルー�
 
 
 
+[[find-more-information]]
 == 詳細については、こちらをご覧ください
 
 * link:concept_hci_volume_access_groups.html["ボリュームアクセスグループについて学習する"]

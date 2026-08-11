@@ -21,6 +21,7 @@ NOTE: 誤った情報（不正な Rancher サーバ FQDN など）を使用し�
 
 
 
+[[node-requirements]]
 == ノード要件
 
 * NetApp HCI システムに少なくとも 3 つのコンピューティングノードがあることを確認します。耐障害性を最大限に高めるには、この設定が必要です。NetApp HCI の Rancher は、ストレージ専用の構成ではサポートされていません。
@@ -30,6 +31,7 @@ NOTE: 誤った情報（不正な Rancher サーバ FQDN など）を使用し�
 
 
 
+[[node-details]]
 === ノードの詳細
 
 NetApp HCI の Rancher は、 3 ノード管理クラスタを導入しました。
@@ -45,6 +47,7 @@ NetApp HCI の Rancher は、 3 ノード管理クラスタを導入しました
 |===
 
 
+[[network-requirements]]
 == ネットワーク要件
 
 * NetApp HCI 管理クラスタにランチサーバを導入するネットワークに、管理ノード管理ネットワークへのルートがあることを確認します。
@@ -68,6 +71,7 @@ NetApp HCI の Rancher は、 3 ノード管理クラスタを導入しました
 
 
 
+[[vmware-vsphere-requirements]]
 == VMware vSphere の要件
 
 * 使用している VMware vSphere インスタンスがバージョン 6.5 、 6.7 、または 7.0 であることを確認します。
@@ -76,6 +80,7 @@ NetApp HCI の Rancher は、 3 ノード管理クラスタを導入しました
 
 
 
+[[deployment-considerations]]
 == 導入に関する考慮事項
 
 必要に応じて、次の点を確認してください。
@@ -94,6 +99,7 @@ TIP: NetApp HCI の Rancher は、何らかのタイプのネットワークロ�
 
 
 
+[[types-of-deployments]]
 === 導入のタイプ
 
 NetApp HCI に Rancher を展開するには、次の方法があります。
@@ -118,6 +124,7 @@ NetApp HCI に Rancher を展開するには、次の方法があります。
 
 
 
+[[rancher-fqdn]]
 === Rancher FQDN
 
 インストールには、 Rancher URL を割り当てる必要があります。これには、インストールの完了後に Rancher UI が提供されるホストの完全修飾ドメイン名（ FQDN ）が含まれます。
@@ -128,12 +135,14 @@ NetApp HCI に Rancher を展開するには、次の方法があります。
 
 
 
+[[required-ports]]
 == 必要なポート
 
 「のポート」に含まれるポートのリストを確認してください Rancher Nodes on RKE 」の項を参照してください 公式のセクション https://rancher.com/docs/rancher/v2.x/en/installation/requirements/ports/#ports-for-rancher-server-nodes-on-rke["Rancher の文書"^] Rancher サーバーを実行しているノードとの間でファイアウォール設定を開いている。
 
 
 
+[[required-urls]]
 == 必要な URL
 
 次の URL は、 Rancher コントロールプレーンが存在するホストからアクセスできる必要があります。

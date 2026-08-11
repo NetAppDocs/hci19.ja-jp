@@ -25,6 +25,7 @@ NetApp HCI のアラート監視は、 NetApp HCI ストレージクラスタの
 
 
 
+[[alert-monitoring-options]]
 == アラート監視オプション
 
 [cols="2*"]
@@ -77,6 +78,7 @@ NOTE: NetApp Deployment Engine を使用して AIQ へのデータの送信 * �
 |===
 
 
+[[find-more-information]]
 == 詳細はこちら
 
 https://docs.netapp.com/us-en/vcp/index.html["vCenter Server 向け NetApp Element プラグイン"^]

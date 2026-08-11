@@ -39,8 +39,8 @@ NOTE: 十分な権限を使用してログインしないと、 HCC のリソー
 
 
 
+[[find-more-information]]
 == 詳細については、こちらをご覧ください
 
-* https://www.netapp.com/us/documentation/hci.aspx["NetApp HCI のリソースページ"^]
 * https://docs.netapp.com/us-en/element-software/index.html["SolidFire および Element ソフトウェアのドキュメント"^]
 

@@ -18,12 +18,14 @@ Element 12.0 以降および管理サービスバージョン 2.14 以降では�
 
 
 
+[[whats-new]]
 == 新機能
 
 ストレージファームウェアバンドルバージョン 2.99.2 には、セキュリティ脆弱性の修正など、さまざまなバグ修正と新機能が含まれています。の手順に従って、ストレージファームウェアをアップグレードできます link:task_hcc_upgrade_storage_firmware.html["ストレージファームウェアをアップグレードします"]。
 
 
 
+[[updated-firmware-components]]
 === ファームウェアコンポーネントが更新されました
 
 このファームウェアパッケージには、次のファームウェアバージョンが含まれています。これらのファームウェアバージョンは、太字で更新されています。
@@ -99,6 +101,7 @@ Element 12.0 以降および管理サービスバージョン 2.14 以降では�
 |===
 
 
+[[changes-in-storage-firmware-components]]
 == ストレージファームウェアコンポーネントの変更点
 
 |===
@@ -114,12 +117,14 @@ Element 12.0 以降および管理サービスバージョン 2.14 以降では�
 |===
 
 
+[[resolved-and-known-issues]]
 == 解決済みの問題と既知の問題
 
 を参照してください https://mysupport.netapp.com/site/bugs-online/product["Bugs Online のツール"^] 解決済みの問題と新しい問題の詳細については、を参照してください。
 
 
 
+[[accessing-the-bugs-online-tool]]
 === Bugs Online のツールへのアクセス
 
 . に移動します  https://mysupport.netapp.com/site/bugs-online/product["Bugs Online のツール"^] ドロップダウンリストから * Element Software * を選択します。
@@ -138,12 +143,14 @@ image::bol_list_bugs_found.png[ストレージファームウェアバンドル�
 
 
 
+[[resolved-security-vulnerabilities]]
 == セキュリティの脆弱性を解決
 
 このリリースで解決されたセキュリティの脆弱性は次のとおりです。
 
 
 
+[[h610s-bmc-3-91-07]]
 === H610S BMC 3.91.07
 
 * CVE-2016-20636
@@ -153,6 +160,7 @@ image::bol_list_bugs_found.png[ストレージファームウェアバンドル�
 
 
 
+[[find-more-information]]
 == 詳細については、こちらをご覧ください
 
 * https://docs.netapp.com/hci/index.jsp["NetApp HCI ドキュメントセンター"^]

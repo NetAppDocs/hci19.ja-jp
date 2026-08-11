@@ -40,6 +40,7 @@ NetApp Hybrid Cloud Control を使用したアップグレードは、それよ�
 
 
 
+[[sysupgradeseqsystem-upgrade-sequence]]
 == [sys_upgrade_seq]システムアップグレードシーケンス
 
 NetApp HCI システムをアップグレードするには、次の順序で操作します。
@@ -79,6 +80,7 @@ NOTE: ストレージクラスタ上の Element ソフトウェアをアップ�
 
 
 
+[[find-more-information]]
 == 詳細については、こちらをご覧ください
 
 * https://docs.netapp.com/us-en/vcp/index.html["vCenter Server 向け NetApp Element プラグイン"^]

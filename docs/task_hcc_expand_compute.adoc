@@ -115,6 +115,7 @@ IMPORTANT: 一部のコンピューティングノードでは、 vCenter のバ
 
 
 
+[[find-more-information]]
 == 詳細については、こちらをご覧ください
 
 * https://library.netapp.com/ecm/ecm_download_file/ECMLP2856176["NetApp HCI コンピューティングノードとストレージノードの設置とセットアップの手順"^]

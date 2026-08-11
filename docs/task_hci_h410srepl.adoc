@@ -41,6 +41,7 @@ image::h410s_ssd_bays.png[は、 H410S ノードが設置された 4 ノード�
 
 
 
+[[prepare-to-replace-the-storage-node]]
 == ストレージノードを交換する準備をします
 
 交換用ノードを設置する前に、障害が発生したストレージノードをクラスタから正しく削除する必要があります。これは、サービスを中断することなく実行できます。障害ストレージノードのシリアル番号は、 Element UI から取得し、ノード背面のステッカーに記載されているシリアル番号と一致する必要があります。
@@ -81,6 +82,7 @@ NOTE: Dual Inline Memory Module （ DIMM ）障害など、ノードがオンラ
 
 
 
+[[replace-the-storage-node-in-the-chassis]]
 == シャーシ内のストレージノードを交換します
 
 障害が発生したノードを取り外すシャーシの同じスロットに交換用ノードを設置する必要があります。UI からメモしたシリアル番号を使用して、ノードの背面にあるシリアル番号と照合します。
@@ -121,6 +123,7 @@ TIP: 交換用ノードがシャーシ内の他のノードと同じ方法でケ
 
 
 
+[[add-the-storage-node-to-the-cluster]]
 == クラスタにストレージノードを追加します
 
 ストレージノードをクラスタに再度追加する必要があります。手順は、実行している NetApp HCI のバージョンによって異なります。
@@ -144,6 +147,7 @@ TIP: 最大限の信頼性を実現するために、ストレージ容量がす
 
 
 
+[[netapp-hci-1-6p1-and-later]]
 === NetApp HCI 1.6P1 以降
 
 NetApp Hybrid Cloud Control は、 NetApp HCI 環境でバージョン 1.6P1 以降が実行されている場合にのみ使用できます。
@@ -191,6 +195,7 @@ NOTE: 入力した IP アドレスの検証には時間がかかることがあ�
 
 
 
+[[netapp-hci-1-4-p2-1-4-and-1-3]]
 === NetApp HCI 1.4 P2 、 1.4 、および 1.3
 
 NetApp HCI のインストールでバージョン 1.4P2 、 1.4 、または 1.3 を実行している場合は、ネットアップ導入エンジンを使用してクラスタにノードを追加できます。
@@ -232,6 +237,7 @@ NOTE: Lightweight Directory Access Protocolのクレデンシャルを使用し�
 
 
 
+[[netapp-hci-1-2-1-1-and-1-0]]
 === NetApp HCI 1.2 、 1.1 、および 1.0
 
 ノードをインストールすると、ノードの設定に必要なフィールドがターミナルユーザインターフェイス（ TUI ）に表示されます。ノードをクラスタに追加する前に、ノードに必要な設定情報を入力する必要があります。
@@ -282,8 +288,8 @@ IMPORTANT: ドライブを一度に追加するとシステムが停止する可
 
 
 
+[[find-more-information]]
 == 詳細については、こちらをご覧ください
 
-* https://www.netapp.com/us/documentation/hci.aspx["NetApp HCI のリソースページ"^]
 * http://docs.netapp.com/sfe-122/index.jsp["SolidFire と Element ソフトウェアドキュメントセンター"^]
 

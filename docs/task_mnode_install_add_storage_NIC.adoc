@@ -31,6 +31,7 @@ keywords: netapp, element, management node, mnode, network, nic, storage nic
 
 
 
+[[configure-a-storage-network-interface-controller-nic-for-an-untagged-network-interface]]
 == タグなしのストレージネットワークインターフェイスコントローラ（ NIC ）を設定します ネットワークインターフェイス
 
 .手順
@@ -73,6 +74,7 @@ https://$mnode_IP:442/json-rpc/10.0 \
 
 
 
+[[configure-a-storage-network-interface-controller-nic-for-a-tagged-network-interface]]
 == タグ付きのストレージネットワークインターフェイスコントローラ（ NIC ）を設定します ネットワークインターフェイス
 
 .手順
@@ -118,6 +120,7 @@ https://$mnode_IP:442/json-rpc/10.0 \
 
 
 
+[[find-more-information]]
 == 詳細はこちら
 
 * link:task_mnode_add_assets.html["管理ノードにコンピューティングアセットとコントローラアセットを追加します"]

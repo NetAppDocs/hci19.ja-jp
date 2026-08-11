@@ -18,6 +18,7 @@ NetApp HCI ハードウェアを設置して NetApp HCI をインストールす
 
 
 
+[[install-active-iq-config-advisor]]
 == Active IQ Config Advisor をインストールします
 
 NetApp HCI ネットワークにアクセスできる PC に Active IQ Config Advisor をダウンロードしてインストールします。
@@ -43,6 +44,7 @@ https://mysupport.netapp.com/site/tools/tool-eula/5ddb829ebd393e00015179b2["ネ�
 
 
 
+[[use-active-iq-config-advisor]]
 == Active IQ Config Advisor を使用します
 
 Active IQ Config Advisor はブラウザウィンドウで実行され、ネットワークと環境に関する情報を収集します。 NetApp HCI の導入に支障をきたす可能性のあるネットワークや設定の問題を解決するためのレポートを生成できます。
@@ -125,6 +127,7 @@ NOTE: PDF と Microsoft Word のドキュメント出力には、導入環境の
 
 
 
+[[find-more-information]]
 == 詳細については、こちらをご覧ください
 
 https://docs.netapp.com/us-en/vcp/index.html["vCenter Server 向け NetApp Element プラグイン"^]

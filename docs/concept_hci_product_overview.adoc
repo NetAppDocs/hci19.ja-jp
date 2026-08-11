@@ -25,6 +25,7 @@ NetApp HCI は、ストレージ、コンピューティング、ネットワー
 
 
 
+[[components-of-netapp-hci]]
 == NetApp HCI のコンポーネント
 
 次に、 NetApp HCI 環境のさまざまなコンポーネントについて、その概要を示します。
@@ -52,6 +53,7 @@ TIP: の詳細を確認してください link:https://docs.netapp.com/us-en/sol
 
 
 
+[[netapp-hci-urls]]
 == NetApp HCI の URL
 
 NetApp HCI で使用する一般的な URL を次に示します。
@@ -85,5 +87,4 @@ NetApp HCI で使用する一般的な URL を次に示します。
 == 詳細については、こちらをご覧ください
 
 * https://docs.netapp.com/us-en/vcp/index.html["vCenter Server 向け NetApp Element プラグイン"^]
-* https://www.netapp.com/us/documentation/hci.aspx["NetApp HCI のリソースページ"^]
 

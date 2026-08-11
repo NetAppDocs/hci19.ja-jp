@@ -18,6 +18,7 @@ NetApp HCI では、複数の異なるネットワークケーブル配線と VL
 
 
 
+[[required-network-segments]]
 == 必要なネットワークセグメント
 
 NetApp HCI には、管理トラフィック、ストレージトラフィック、仮想化トラフィック（仮想マシンと VMware vMotion のトラフィックを含む）の少なくとも 3 つのネットワークセグメントが必要です。仮想マシンと vMotion のトラフィックを分けることもできます。これらのネットワークセグメントは、通常、 NetApp HCI ネットワークインフラ内で論理的に分離された VLAN として存在します。
@@ -48,6 +49,7 @@ NOTE: 仮想マシンのネットワークは vCenter を使用して設定し�
 
 
 
+[[network-configuration-and-cabling-options]]
 == ネットワーク構成とケーブル配線のオプション
 
 H410C コンピューティングノードには、シンプルな配線の 2 ケーブルネットワーク構成を使用できます。この構成では、 2 つの SFP+ / SFP28 インターフェイスに加え、 IPMI 通信用にオプションで RJ45 インターフェイス（必須ではありませんが使用することを推奨）を使用します。これらのノードでは、 2 つの RJ45 インターフェイスと 4 つの SFP28 / SFP+ インターフェイスを備えた 6 ケーブル構成を使用することもできます。
@@ -90,6 +92,7 @@ NOTE: NetApp HCI のネットワーク設定は、導入後にインフラのニ
 
 
 
+[[find-more-information]]
 == 詳細については、こちらをご覧ください
 
 https://docs.netapp.com/us-en/vcp/index.html["vCenter Server 向け NetApp Element プラグイン"^]

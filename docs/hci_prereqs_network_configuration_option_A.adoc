@@ -18,6 +18,7 @@ NetApp HCI では、複数の異なるネットワークケーブル配線と VL
 
 
 
+[[configuration-option-a-two-cables-for-compute-nodes]]
 == 構成オプション A ：ケーブル 2 本でのコンピューティングノードの構成
 
 NetApp H410C 、 H610C 、および H615C コンピューティングノードは、 2 本のネットワークケーブルを使用してすべての NetApp HCI ネットワークに接続できます。この構成では、ストレージ、 vMotion 、および仮想マシンの各ネットワークで VLAN タギングを使用する必要があります。すべてのコンピューティングノードとストレージノードで同じ VLAN ID 方式を使用する必要があります。この構成では、 VMware vSphere Enterprise Plus のライセンスが必要な vSphere Distributed Switch を使用します。
@@ -55,6 +56,7 @@ image::H615C_node_cabling.png[NetApp H615C コンピューティングノード�
 |===
 
 
+[[vlan-configuration]]
 === VLAN の設定
 
 ベストプラクティスとして、ノードが使用しているすべてのスイッチポート上に必要なネットワークセグメントを構成することを推奨します。例：
@@ -80,6 +82,7 @@ image::hci_networking_config_scenario_1.png[HCI ネットワーク構成オプ�
 
 
 
+[[example-switch-commands]]
 === スイッチコマンドの例
 
 NetApp HCI ノードで使用するすべてのスイッチポートを構成する場合には次のコマンドを使用できます。このコマンドは Cisco の構成用ですが、少しの変更で Mellanox スイッチにも使用できます。この構成を実装するために必要なコマンドについては、スイッチのマニュアルを参照してください。インターフェイス名、説明、および VLAN を環境に応じた値に置き換えて使用してください。
@@ -91,6 +94,7 @@ NOTE: 一部のスイッチでは、 VLAN の許可リストにネイティブ V
 
 
 
+[[find-more-information]]
 == 詳細については、こちらをご覧ください
 
 https://docs.netapp.com/us-en/vcp/index.html["vCenter Server 向け NetApp Element プラグイン"^]

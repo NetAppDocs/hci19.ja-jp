@@ -18,6 +18,7 @@ NetApp HCI に Rancher を導入した後、ユーザクラスタを設定し、
 
 
 
+[[deploy-user-clusters]]
 == ユーザクラスタを導入
 
 導入後、開発チームや運用チームは、任意のランチリーダーの導入と同様に、 Kubernetes ユーザクラスタを導入してアプリケーションを導入できます。
@@ -29,6 +30,7 @@ NetApp HCI に Rancher を導入した後、ユーザクラスタを設定し、
 
 
 
+[[deploy-applications-on-user-clusters]]
 == ユーザクラスタにアプリケーションを導入する
 
 任意のランチコンテナ環境と同様に、 Kubernetes クラスタにアプリケーションを追加します。

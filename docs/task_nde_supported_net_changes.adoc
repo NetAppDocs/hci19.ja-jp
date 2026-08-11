@@ -26,6 +26,7 @@ NetApp HCI を導入したあとは、デフォルトのネットワーク設定
 
 
 
+[[h300e-h500e-h700e-and-h410c-compute-nodes]]
 == H300E 、 H500E 、 H700E 、 H410C の各コンピューティングノード
 
 NetApp HCI は、 H300E 、 H500E 、 H700E 、 H410C の各ノードについて、次のネットワーク構成をサポートします。
@@ -83,6 +84,7 @@ VMware vSphere Standard Switch （ VSS ）で 6 つのインターフェイス�
 |===
 
 
+[[h610c-compute-nodes]]
 == H610C コンピューティングノード
 
 NetApp HCI は、 H610C ノードについて次のネットワーク構成をサポートします。
@@ -109,6 +111,7 @@ NOTE: H610C ではポート A とポート B は使用されません。
 |===
 
 
+[[h615c-compute-nodes]]
 == H615C コンピューティングノード
 
 NetApp HCI は H615C ノードのネットワーク構成を以下に示します。
@@ -132,9 +135,9 @@ NetApp HCI は H615C ノードのネットワーク構成を以下に示しま�
 |===
 
 
+[[find-more-information]]
 == 詳細については、こちらをご覧ください
 
 * https://docs.netapp.com/us-en/vcp/index.html["vCenter Server 向け NetApp Element プラグイン"^]
-* https://www.netapp.com/us/documentation/hci.aspx["NetApp HCI のリソースページ"^]
 * https://docs.netapp.com/us-en/element-software/index.html["SolidFire および Element ソフトウェアのドキュメント"^]
 

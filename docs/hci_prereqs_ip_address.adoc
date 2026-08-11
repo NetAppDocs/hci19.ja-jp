@@ -18,6 +18,7 @@ NetApp HCI には、導入の規模に応じた IP アドレスの要件があ�
 
 
 
+[[number-of-ip-addresses-needed-per-netapp-hci-deployment]]
 == NetApp HCI の導入ごとに必要な IP アドレスの数
 
 NetApp HCI ストレージネットワークと管理ネットワークでは、それぞれ連続した IP アドレス範囲を使用する必要があります。次の表を参照して、導入に必要な IP アドレスの数を確認してください。
@@ -45,6 +46,7 @@ NetApp HCI ストレージネットワークと管理ネットワークでは、
 |===
 
 
+[[ip-addresses-reserved-by-netapp-hci]]
 == NetApp HCI で予約されている IP アドレス
 
 NetApp HCI では、システムコンポーネント用に次の IP アドレス範囲が予約されます。ネットワークを計画するときは、次の IP アドレスは使用しないでください。
@@ -69,6 +71,7 @@ NetApp HCI では、システムコンポーネント用に次の IP アドレ�
 |===
 
 
+[[find-more-information]]
 == 詳細については、こちらをご覧ください
 
 https://docs.netapp.com/us-en/vcp/index.html["vCenter Server 向け NetApp Element プラグイン"^]

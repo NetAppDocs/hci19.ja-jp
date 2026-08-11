@@ -51,6 +51,7 @@ https://<ManagementNodeIP>
 
 
 
+[[use-netapp-hybrid-cloud-control-ui-to-upgrade-a-rancher-deployment]]
 == NetApp Hybrid Cloud Control の UI を使用してランチャをアップグレード 導入
 
 NetApp Hybrid Cloud Control の UI を使用して、ランチャ環境の以下のコンポーネントをアップグレードできます。
@@ -92,6 +93,7 @@ NOTE: ノード OS の場合、セキュリティパッチの無人アップグ�
 
 
 
+[[use-netapp-hybrid-cloud-control-api-to-upgrade-a-rancher-deployment]]
 == NetApp Hybrid Cloud Control API を使用してランチャをアップグレード 導入
 
 API を使用して、 Rancher 展開内の次のコンポーネントをアップグレードできます。
@@ -115,6 +117,7 @@ NOTE: ノード OS の場合、セキュリティパッチの無人アップグ�
 
 
 
+[[upgrade-rancher-server]]
 === Rancher サーバをアップグレードします
 
 .API コマンド
@@ -184,6 +187,7 @@ https://<ManagementNodeIP>/k8sdeployer/api/
 
 
 
+[[upgrade-rke]]
 === RKE をアップグレードします
 
 .API コマンド
@@ -253,6 +257,7 @@ https://<ManagementNodeIP>/k8sdeployer/api/
 
 
 
+[[apply-node-os-security-updates]]
 === ノード OS のセキュリティ更新を適用
 
 .API コマンド
@@ -331,6 +336,7 @@ NOTE: ノード OS の場合、セキュリティパッチの無人アップグ�
 
 
 
+[[find-more-information]]
 == 詳細については、こちらをご覧ください
 
 https://docs.netapp.com/us-en/vcp/index.html["vCenter Server 向け NetApp Element プラグイン"^]

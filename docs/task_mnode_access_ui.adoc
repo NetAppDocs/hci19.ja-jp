@@ -24,6 +24,7 @@ Element ソフトウェアバージョン 11.3 以降を実行するクラスタ
 
 
 
+[[access-the-management-node-per-node-ui]]
 == 管理ノードのノード UI にアクセスします
 
 ノード UI からは、ネットワークとクラスタの設定にアクセスし、システムのテストとユーティリティを利用できます。
@@ -43,6 +44,7 @@ image::mnode_per_node_442_ui.png[管理ノードのノード UI]
 
 
 
+[[access-the-management-node-rest-api-ui]]
 == 管理ノードの REST API UI にアクセスします
 
 REST API UI からは、管理ノード上の管理サービスを制御するサービス関連 API のメニューにアクセスできます。
@@ -62,6 +64,7 @@ image::mnode_swagger_ui.png[管理ノードの REST API UI]
 
 
 
+[[find-more-information]]
 == 詳細はこちら
 
 * link:task_mnode_enable_activeIQ.html["Active IQ と NetApp HCI の監視を有効にします"]

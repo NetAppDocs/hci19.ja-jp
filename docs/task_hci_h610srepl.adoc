@@ -24,6 +24,7 @@ TIP: H610S は、 1 ラックユニット（ 1U ）シャーシで、「ノー�
 
 
 
+[[best-practices-for-adding-and-removing-drives]]
 == ドライブの追加と取り外しを行う際のベストプラクティス
 
 クラスタにドライブを追加する際は、次のベストプラクティスに従う必要があります。
@@ -90,8 +91,8 @@ NOTE: スイッチがケーブルを認識しない場合は、スイッチベ�
 
 
 
+[[find-more-information]]
 == 詳細については、こちらをご覧ください
 
-* https://www.netapp.com/us/documentation/hci.aspx["NetApp HCI のリソースページ"^]
 * http://docs.netapp.com/sfe-122/index.jsp["SolidFire と Element ソフトウェアドキュメントセンター"^]
 

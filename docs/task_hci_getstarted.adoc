@@ -30,12 +30,14 @@ keywords: netapp, hci, install, deploy, get started
 
 
 
+[[prepare-for-installation]]
 == 設置を準備
 
 インストールを開始する前に、ハードウェアを受け取る前に、 NetApp HCI インストレーションディスカバリーワークブックの事前チェックリストを完成させてください。
 
 
 
+[[prepare-the-network-and-installation-sites]]
 === ネットワークと設置サイトを準備
 
 NetApp HCI ネットワークトポロジを簡単にインストールするには、次の手順を実行します。
@@ -52,7 +54,7 @@ NOTE: ネットワークトポロジは、ここに示すものとは異なる�
 次のリソースを参照してください。
 
 * インストール前に NetApp HCI インストール検出ワークブック _ を使用してネットワークを設定してください。
-* 詳細およびサポートされるその他の構成については、 https://www.netapp.com/pdf.html?item=/media/9413-tr4820pdf.pdf["_TR-48820 ：『 NetApp HCI ネットワーククイックプランニングガイド』 _"^]およびを参照して https://library.netapp.com/ecm/ecm_download_file/ECMLP2856176["NetApp HCI のインストールとセットアップの手順 _"^]ください。
+* 詳細およびその他のサポートされている構成については、 https://www.netapp.com/pdf.html?item=/media/9413-tr4820.pdf["_TR-48820 ：『 NetApp HCI ネットワーククイックプランニングガイド』 _"^]および https://library.netapp.com/ecm/ecm_download_file/ECMLP2856176["NetApp HCI のインストールとセットアップの手順 _"^]を参照してください。
 * ストレージノードが4つ未満のNetApp HCI構成については、を参照してください https://www.netapp.com/pdf.html?item=/media/9489-tr-4823.pdf["TR-4823 ：『 NetApp HCI 2 Node Storage Cluster _ 』"^]。
 * 各ストレージノードに使用されるスイッチポートでの Link Aggregation Control Protocol （ LACP ）の設定の詳細については、を参照してください link:hci_prereqs_LACP_configuration.html["ストレージパフォーマンスを最適化するために LCAP を設定します"]。
 
@@ -63,6 +65,7 @@ NOTE: ネットワークトポロジは、ここに示すものとは異なる�
 
 
 
+[[networking-requirements-before-you-begin]]
 === 作業を開始する前のネットワーク要件
 
 ここでは前提条件の主な説明を示します。
@@ -83,6 +86,7 @@ NOTE: NDE プロセスでは、すべてのノードに永続的な IP アドレ
 
 
 
+[[validate-network-readiness-with-netapp-active-iq-config-advisor]]
 == NetApp Active IQ Config Advisor でネットワークの準備状況を検証
 
 ネットワークが NetApp HCI に対応していることを確認するために、 NetApp Active IQ Config Advisor 5.8.1 以降をインストールします。このネットワーク検証ツールは他のツールと一緒に配置されています link:https://mysupport.netapp.com/site/tools/tool-eula/5ddb829ebd393e00015179b2["ネットアップサポートツール"^]。このツールを使用して、接続性、 VLAN ID 、 IP アドレス要件、スイッチ接続などを検証します。
@@ -91,12 +95,14 @@ NOTE: NDE プロセスでは、すべてのノードに永続的な IP アドレ
 
 
 
+[[work-with-your-netapp-team]]
 == ネットアップチームと連携
 
 ネットアップチームは、 NetApp Active IQ Config Advisor レポートと _Discovery Workbook_ を使用して、ネットワーク環境の準備ができているかどうかを検証します。
 
 
 
+[[install-netapp-hci-hardware]]
 == NetApp HCI ハードウェアを設置
 
 NetApp HCI は、次のようなさまざまな構成にインストールできます。
@@ -123,18 +129,21 @@ CAUTION: 注意事項および詳細については、を参照してくださ�
 
 
 
+[[complete-optional-tasks-after-installing-hardware]]
 == ハードウェアの設置後にオプションの作業を実行します
 
 NetApp HCI ハードウェアを設置したら、オプションでありながら推奨されるタスクを実行する必要があります。
 
 
 
+[[manage-storage-capacity-across-all-chassis]]
 === すべてのシャーシでストレージ容量を管理
 
 ストレージ容量がストレージノードを格納したすべてのシャーシに均等に分割されていることを確認します。
 
 
 
+[[configure-ipmi-for-each-node]]
 === 各ノードに IPMI を設定します
 
 NetApp HCI ハードウェアをラックに設置してケーブル接続し、電源をオンにしたら、各ノードに Intelligent Platform Management Interface （ IPMI ）アクセスを設定できます。各 IPMI ポートに IP アドレスを割り当て、ノードへのリモート IPMI アクセスが可能になったらすぐにデフォルトの管理者 IPMI パスワードを変更します。
@@ -143,12 +152,14 @@ NetApp HCI ハードウェアをラックに設置してケーブル接続し、
 
 
 
+[[deploy-netapp-hci-using-the-netapp-deployment-engine-nde]]
 == NetApp Deployment Engine （ NDE ）を使用した NetApp HCI の導入
 
 NDE UI は、 NetApp HCI のインストールに使用するソフトウェアウィザードインターフェイスです。
 
 
 
+[[launch-the-nde-ui]]
 === NDE UI を起動します
 
 NetApp HCI では、ストレージノードの管理ネットワークの IPv4 アドレスを使用して NDE に最初にアクセスします。ベストプラクティスとして、 1 つ目のストレージノードから接続することを推奨します。
@@ -171,6 +182,7 @@ NetApp HCI では、ストレージノードの管理ネットワークの IPv4 
 
 
 
+[[deploy-netapp-hci-with-the-nde-ui]]
 === NDE UI で NetApp HCI を導入
 
 . NDE で、前提条件に同意し、 Active IQ の使用を確認して、ライセンス契約に同意します。
@@ -212,6 +224,7 @@ NOTE: 導入が完了するまでに約 45 分かかることがあります。
 
 
 
+[[verify-the-installation-using-the-vsphere-web-client]]
 === vSphere Web Client を使用してインストール環境を確認します
 
 . vSphere Web Client を起動し、 NDE の使用時に指定したクレデンシャルでログインします。
@@ -234,6 +247,7 @@ NOTE: 導入が完了するまでに約 45 分かかることがあります。
 
 
 
+[[manage-netapp-hci-using-the-vcenter-plug-in]]
 == vCenter Plug-in を使用して NetApp HCI を管理します
 
 NetApp HCI をインストールしたら、 NetApp Element Plug-in for vCenter Server を使用して、クラスタ、ボリューム、データストア、ログ、アクセスグループ、イニシエータ、およびサービス品質（ QoS ）ポリシーを設定できます。
@@ -244,6 +258,7 @@ image::vcp_shortcuts_page.png[vSphere Client のショートカットページ]
 
 
 
+[[monitor-or-upgrade-netapp-hci-with-the-hybrid-cloud-control]]
 == Hybrid Cloud Control を使用して NetApp HCI を監視またはアップグレードします
 
 必要に応じて、 NetApp HCI ハイブリッドクラウド制御を使用して、システムを監視、アップグレード、または拡張することができます。
@@ -273,6 +288,7 @@ NetApp Hybrid Cloud Control のインターフェイスが表示されます。
 
 
 
+[[find-more-information]]
 == 詳細については、こちらをご覧ください
 
 * link:../media/hseries-isi.pdf["NetApp HCI のセットアップガイド"^]

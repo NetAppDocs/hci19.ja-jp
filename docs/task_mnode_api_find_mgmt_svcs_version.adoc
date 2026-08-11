@@ -28,6 +28,7 @@ keywords: netapp, hci, management node, management services, version, bundle ver
 
 
 
+[[api-commands]]
 == API コマンド
 
 * 管理ノードで実行されている管理ノードの OS 、管理サービスバンドル、および管理ノードの API （ mnode-API ）サービスに関するバージョン情報を取得します。
@@ -50,6 +51,7 @@ NOTE: API コマンドで使用されるベアラー '$ ｛ token ｝ ' を検�
 
 
 
+[[rest-api-ui-steps]]
 == REST API の UI の手順
 
 . 管理ノードの IP アドレスのあとに「 /mnode/ 」を入力して、サービスの REST API UI にアクセスします。
@@ -87,6 +89,7 @@ https://<ManagementNodeIP>/mnode/
 
 
 
+[[find-more-information]]
 == 詳細については、こちらをご覧ください
 
 https://docs.netapp.com/us-en/vcp/index.html["vCenter Server 向け NetApp Element プラグイン"^]
