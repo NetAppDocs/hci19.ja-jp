@@ -42,5 +42,4 @@ NetApp HCI に Rancher を導入した後、ユーザクラスタを設定し、
 
 * https://rancher.com/docs/rancher/v2.x/en/overview/architecture/["アーキテクチャに関する Rancher ドキュメント"^]
 * https://rancher.com/docs/rancher/v2.x/en/overview/concepts/["Rancher 用の Kubernetes 用語"^]
-* https://www.netapp.com/us/documentation/hci.aspx["NetApp HCI のリソースページ"^]
 

@@ -362,8 +362,6 @@
   <block id="a0b4f9c60f7981b536781d55195f2939" category="list-text">VM を右クリックして電源をオフにします。</block>
   <block id="2cb0e420281b191501ae8976eb87227c" category="list-text">電源をオフにした VM を右クリックし、 * ディスクから削除 * をクリックします。</block>
   <block id="1886c33029d6a5f67a53baeb16356d18" category="inline-link">NetApp HCI 2 ノードストレージクラスタ | TR-4823</block>
-  <block id="c93817bbfc3fab71f5f7ca740a11c847" category="inline-link">NetApp HCI のリソースページ</block>
-  <block id="bc218e71c18c2f809dffb10d3bc2a6e8" category="list-text"><block ref="bc218e71c18c2f809dffb10d3bc2a6e8" category="inline-link-rx"></block></block>
   <block id="d25459b3c5acd2943fae1e5fda4cfa22" category="inline-link">SolidFire と Element ソフトウェアドキュメントセンター</block>
   <block id="024c22e90f2315636ed8d61b006ad1b5" category="list-text"><block ref="024c22e90f2315636ed8d61b006ad1b5" category="inline-link-rx"></block></block>
   <block id="497d518d6e399c2f91b16e0dec717424" category="summary">システムのインベントリは Hybrid Cloud Control で確認できます。</block>
@@ -5929,8 +5927,6 @@
   <block id="101f6b845f71c73ac7fbf4922f825d17" category="list-text">詳細な分析と履歴のコンテキストについては、を参照してください<block ref="44afd1f3ef2498687a919e55190bfc2d" category="inline-link-rx"></block>。</block>
   <block id="ab330582aba37a305404f73f3ea56abd" category="list-text">コンピューティング情報の詳細な分析については、を参照してください<block ref="f1f077cd29c39ed6d4c812cbd32dffd4" category="inline-link-rx"></block>。</block>
   <block id="d2c221d3761cc05e7a4101aee7b6ba01" category="list-text">を参照してください<block ref="8ed5ec599c1540524106641c1878ee26" category="inline-link-rx"></block>。</block>
-  <block id="921561ec262e185544490434633fed0f" category="list-text"><block ref="921561ec262e185544490434633fed0f" category="inline-link-rx"></block></block>
-  <block id="752e3c55fe31911c926d43b2b70671b4" category="list-text"><block ref="752e3c55fe31911c926d43b2b70671b4" category="inline-link-rx"></block></block>
   <block id="30b6cbdd36bc8a9bb8ba940717869b5f" category="paragraph">NetApp Element ソフトウェアは、をサポートします <block ref="a55edd10823e56dc1fbd8507c9763168" category="inline-link-macro-rx"></block> 機能：データの可用性を最大限に高めるために、ストレージノード上のデータレイアウトを最適化します。この機能を使用するには、 3 台以上の NetApp H シリーズシャーシにストレージ容量を均等に分割して、ストレージの信頼性を最適化する必要があります。この場合、ストレージクラスタで保護ドメインが自動的に有効になります。</block>
   <block id="afde714080ac1fe221a69ff664991df5" category="admonition">ドライブを一度に追加するとシステムが停止する可能性があります。ドライブの追加と取り外しに関するベストプラクティスについては、を参照してください<block ref="e5a621cb9e241baa7c2d331f853e65e6" category="inline-link-rx"></block> （ログインが必要です）。</block>
   <block id="09335542e6fb8fe91126771e47605ba2" category="list-text"><block ref="09335542e6fb8fe91126771e47605ba2" category="inline-link-macro-rx"></block></block>
@@ -6526,7 +6522,6 @@
   <block id="de9f9af3b709ace792d8704d5d9b105f" category="list-text"><block ref="de9f9af3b709ace792d8704d5d9b105f" category="inline-link-rx"></block></block>
   <block id="75f97cab9e9de14d25c05846e421361a" category="paragraph">NetApp HCIの各コンポーネントの詳細な機能については、『NetApp HCI』を参照してください<block ref="cf48105a0f3c2479f34bbdfad268bcc0" category="inline-link-rx"></block>。</block>
   <block id="8a91fe255efcffde80021047735fd330" category="list-text">ストレージノードが4つ未満のNetApp HCI構成については、を参照してください<block ref="54d37355d9369a629af27e51f6998cd4" category="inline-link-rx"></block>。</block>
-  <block id="1e4bf851d18462d626029f69f75339e4" category="list-text"><block ref="1e4bf851d18462d626029f69f75339e4" category="inline-link-rx"></block></block>
   <block id="0287de700b52d79d64e09aca72f4850b" category="admonition">のコンピューティングノードのESXiをアップグレードする<block ref="d6b7667dc675e8798d67d09fb8931bb2" category="inline-link-rx"></block>場合は、一度に1つのコンピューティングノードのみをアップグレードして、一時的に使用できなくなり、クラスタクォーラムを維持できるようにします。</block>
   <block id="a2f9c1250a16a7514c9d6b0865b7bf42" category="list-text"><block ref="a2f9c1250a16a7514c9d6b0865b7bf42" category="inline-link-rx"></block></block>
   <block id="b691b91f1208379346de4d69f8c840f1" category="list-text"><block ref="b691b91f1208379346de4d69f8c840f1" category="inline-link-macro-rx"></block></block>
@@ -6562,8 +6557,6 @@
   <block id="46e87a91de6f38f3b1344d05a59270dd" category="sidebar">NetApp HCI 1.9 に関するドキュメント</block>
   <block id="4fdd77772a3c8c75f3f83d76694106d1" category="sidebar">NetApp HCI 1.9のドキュメント</block>
   <block id="cd388508451a8326f25b9d7c5d9faa35" category="paragraph">参照してください<block ref="45dfeaa43e9f1dd00a21977e432c35a4" category="inline-link-rx"></block>。</block>
-  <block id="24507f673eef4a19fb23059cc58859ff" category="inline-link">ソースページ</block>
-  <block id="92b06659e9792623f589d67c5ff768f4" category="list-text"><block ref="92b06659e9792623f589d67c5ff768f4" category="inline-link-rx"></block></block>
   <block id="b2fc1a5e41c41b67c5bace9db877a759" category="list-text"><block ref="b2fc1a5e41c41b67c5bace9db877a759" category="inline-link-rx"></block></block>
   <block id="f4474b9e29a9baacdc9fa61fae379682" category="paragraph"><block ref="1d3de344b485dd9645e08283cd164260" category="inline-link-macro-rx"></block>を参照してください。</block>
   <block id="7cf2e19a356ede2034d8f64c67d696db" category="list-text">この手順を開始する前に、NetApp サポートに連絡し、交換部品を受け取っておく必要があります。交換品の取り付けの際には、サポート担当者が対応いたします。まだ連絡していない場合は、お問い合わせください<block ref="40d68d5ad5b72cd7b0aeb54dca582b44" category="inline-link-rx"></block>。</block>
@@ -6580,4 +6573,5 @@
   <block id="306dce65244454f104c560984a933a89" category="admonition">時刻同期設定が完了した後は、NTP を編集しないでください。管理ノードで <block ref="d4cc54860504c9dd35fa60f279389412" category="inline-xref-macro-rx"></block> を実行すると、NTP に影響するためです。</block>
   <block id="d6352877dcd2cf0801fbfb4ea843c259" category="list-text">[[ステップ6]] クラスター上でホストされている永続ボリュームに接続し、以前の管理ノード構成データを使用してサービスを開始するように、管理ノード再デプロイコマンドを設定して実行します：</block>
   <block id="b3968e53b2372d33658d13c63d05d56b" category="list-text"><block ref="a3a21bb5101c6a20e1c58197e7443000" category="inline-link-macro-rx"></block> *<block ref="370b6a48ac72103f3329504653be50fe" category="inline-link-macro-rx"></block></block>
+  <block id="d0a969cb5b779e9623c2681ca5acf913" category="list-text"><block ref="d0a969cb5b779e9623c2681ca5acf913" category="inline-link-rx"></block></block>
 </blocks>

@@ -84,5 +84,4 @@ TIP: 最高のパフォーマンスとセキュリティを実現するために
 == 詳細については、こちらをご覧ください
 
 * https://rancher.com/docs/rancher/v2.x/en/overview/architecture/["アーキテクチャに関する Rancher ドキュメント"^]
-* https://www.netapp.com/us/documentation/hci.aspx["NetApp HCI のリソースページ"^]
 
